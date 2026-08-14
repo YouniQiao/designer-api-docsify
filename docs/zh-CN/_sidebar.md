@@ -1,4 +1,4 @@
-- [Ability Kit (1378)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-ability.md)
+- [Ability Kit (1398)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-ability.md)
 - [Accessibility Kit (134)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-accessibility-kit/arkts-apis/arkts-accessibility.md)
 - [Ads Kit (27)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-ads-kit/arkts-apis/arkts-advertising.md)
 - [Arkdata (475)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-arkdata/arkts-apis/arkts-application-datashareextensionability.md)

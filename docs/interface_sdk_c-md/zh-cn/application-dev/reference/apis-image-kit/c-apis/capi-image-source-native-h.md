@@ -934,7 +934,7 @@ Image_ErrorCode OH_ImageSourceNative_CreateFromRawFile(RawFileDescriptor *rawFil
 
 | 参数项 | 描述 |
 | -- | -- |
-| [RawFileDescriptor](../LocalizationKit/capi-rawfile-rawfiledescriptor.md) *rawFile | 指示raw文件的文件描述符。 |
+| RawFileDescriptor *rawFile | 指示raw文件的文件描述符。 |
 | [OH_ImageSourceNative](capi-image-nativemodule-oh-imagesourcenative.md) **res | 指向c++本地层创建的OH_ImageSourceNative对象的指针。 |
 
 **返回：**
