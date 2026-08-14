@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { PluginComponentTemplate } from '@kit.ArkUI';
+import { PluginComponentTemplate } from 'PluginComponentTemplate';
 ```
 
 ## on_string
@@ -30,7 +30,7 @@ Listens for events of the request type and returns the requested data, or listen
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventType | string | Yes | Type of the event to listen for. The options are as follows:&lt;br&gt;**"push"**: The component provider pushes data to the component user.&lt;br&gt;**"request"**: The component user proactively requests data from the component provider. |
+| eventType | string | Yes | Type of the event to listen for. The options are as follows:<br>**"push"**: The component provider pushes data to the component user.<br>**"request"**: The component user proactively requests data from the component provider. |
 | callback | [OnPushEventCallback](../../apis-na/arkts-apis/arkts-na-plugincomponentmanager-onpusheventcallback-t.md) \| [OnRequestEventCallback](../../apis-na/arkts-apis/arkts-na-plugincomponentmanager-onrequesteventcallback-t.md) | Yes | Callback used to return the result. The type is [OnPushEventCallback](../../apis-na/arkts-apis/arkts-na-plugincomponentmanager-onpusheventcallback-t.md#OnPushEventCallback) for the push event and [OnRequestEventCallback](../../apis-na/arkts-apis/arkts-na-plugincomponentmanager-onrequesteventcallback-t.md#OnRequestEventCallback) for the request event. |
 
 ## Examples

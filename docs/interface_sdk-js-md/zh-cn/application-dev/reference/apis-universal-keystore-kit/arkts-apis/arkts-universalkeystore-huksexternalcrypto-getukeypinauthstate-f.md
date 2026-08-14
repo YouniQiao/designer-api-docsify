@@ -29,7 +29,7 @@ function getUkeyPinAuthState(resourceId: string, params?: Array<HuksExternalCryp
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[HuksExternalPinAuthState](arkts-universalkeystore-huksexternalcrypto-huksexternalpinauthstate-e.md)&gt; | Promise对象，返回认证结果。 &lt;br&gt;HUKS_EXT_CRYPTO_PIN_NO_AUTH 表示未认证；HUKS_EXT_CRYPTO_PIN_AUTH_SUCCEEDED 表示认证成功；HUKS_EXT_CRYPTO_PIN_LOCKED 表示PIN被锁定。 |
+| Promise&lt;[HuksExternalPinAuthState](arkts-universalkeystore-huksexternalcrypto-huksexternalpinauthstate-e.md)&gt; | Promise对象，返回认证结果。 <br>HUKS_EXT_CRYPTO_PIN_NO_AUTH 表示未认证；HUKS_EXT_CRYPTO_PIN_AUTH_SUCCEEDED 表示认证成功；HUKS_EXT_CRYPTO_PIN_LOCKED 表示PIN被锁定。 |
 
 **错误码：**
 

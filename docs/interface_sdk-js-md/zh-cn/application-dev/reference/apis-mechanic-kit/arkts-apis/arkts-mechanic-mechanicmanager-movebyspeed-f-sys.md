@@ -24,9 +24,9 @@ function moveBySpeed(mechId: int, params: SpeedParams, duration: int): Promise<R
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mechId | int | 是 | 具身设备ID。 &lt;br&gt;取值限定为整数。 |
+| mechId | int | 是 | 具身设备ID。 <br>取值限定为整数。 |
 | params | [SpeedParams](arkts-mechanic-mechanicmanager-speedparams-i-sys.md) | 是 | 移动参数。 |
-| duration | int | 是 | 移动时长，单位ms。 &lt;br&gt;取值限定为整数。 |
+| duration | int | 是 | 移动时长，单位ms。 <br>取值限定为整数。 |
 
 **返回值：**
 

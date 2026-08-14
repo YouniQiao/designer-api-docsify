@@ -15,7 +15,7 @@ Describes the attendees in a meeting.
 ## Modules to Import
 
 ```TypeScript
-import { calendarManager } from '@kit.CalendarKit';
+import { calendarManager } from 'calendarManager';
 ```
 
 ## email

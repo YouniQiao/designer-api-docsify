@@ -18,7 +18,7 @@
 getPixelMap(): image.PixelMap | undefined
 ```
 
-获取PixelMap实例。 > **说明：** > > DrawableDescriptor对象通过[release](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#release)释放后，本接口返回undefined。
+获取PixelMap实例。 > **说明：** > > DrawableDescriptor对象通过[release](#release)释放后，本接口返回undefined。
 
 **起始版本：** 23
 
@@ -44,7 +44,7 @@ getPixelMap(): image.PixelMap | undefined
 invalidate(): void
 ```
 
-重新绘制DrawableDescriptor。当前仅支持 [PictureDrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-picturedrawabledescriptor-c.md#PictureDrawableDescriptor)类型，其他DrawableDescriptor子类型触发后无效果。 若DrawableDescriptor未绑定任何组件，则不会执行任何操作。
+重新绘制DrawableDescriptor。当前仅支持 [PictureDrawableDescriptor](arkts-na-arkui-drawabledescriptor-picturedrawabledescriptor-c.md#PictureDrawableDescriptor)类型，其他DrawableDescriptor子类型触发后无效果。 若DrawableDescriptor未绑定任何组件，则不会执行任何操作。
 
 **起始版本：** 26.0.0
 
@@ -64,7 +64,7 @@ invalidate(): void
 isReleased(): boolean
 ```
 
-查询DrawableDescriptor是否已被释放。返回true表示已释放，此时调用 [getPixelMap](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#getPixelMap)、 [getForeground](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getForeground)、 [getBackground](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getBackground)、 [getMask](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getMask)、 [loadSync](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#loadSync)、 [load](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#load)等接口，返回undefined或默认异常值；返回false表示未释放，对象可正常使用。
+查询DrawableDescriptor是否已被释放。返回true表示已释放，此时调用 [getPixelMap](#getPixelMap)、 [getForeground](arkts-na-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getForeground)、 [getBackground](arkts-na-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getBackground)、 [getMask](arkts-na-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getMask)、 [loadSync](#loadSync)、 [load](#load)等接口，返回undefined或默认异常值；返回false表示未释放，对象可正常使用。
 
 **起始版本：** 26.0.0
 
@@ -90,7 +90,7 @@ isReleased(): boolean
 load(): Promise<DrawableDescriptorLoadedResult>
 ```
 
-发起图片资源的异步加载，并返回加载结果。使用Promise异步回调。 > **说明：** > > DrawableDescriptor对象通过[release](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#release)释放后，本接口返回imageWidth和imageHeight均为 > -1的Promise结果。
+发起图片资源的异步加载，并返回加载结果。使用Promise异步回调。 > **说明：** > > DrawableDescriptor对象通过[release](#release)释放后，本接口返回imageWidth和imageHeight均为 > -1的Promise结果。
 
 **起始版本：** 23
 
@@ -108,7 +108,7 @@ load(): Promise<DrawableDescriptorLoadedResult>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[DrawableDescriptorLoadedResult](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)&gt; | 图片资源的加载结果。 |
+| Promise&lt;[DrawableDescriptorLoadedResult](arkts-na-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md)&gt; | 图片资源的加载结果。 |
 
 **错误码：**
 
@@ -122,7 +122,7 @@ load(): Promise<DrawableDescriptorLoadedResult>
 loadSync(): DrawableDescriptorLoadedResult
 ```
 
-发起图片资源的同步加载，并返回加载结果。 > **说明：** > > DrawableDescriptor对象通过[release](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#release)释放后，本接口返回imageWidth和imageHeight均为 > -1的结果。
+发起图片资源的同步加载，并返回加载结果。 > **说明：** > > DrawableDescriptor对象通过[release](#release)释放后，本接口返回imageWidth和imageHeight均为 > -1的结果。
 
 **起始版本：** 23
 
@@ -140,7 +140,7 @@ loadSync(): DrawableDescriptorLoadedResult
 
 | 类型 | 说明 |
 | --- | --- |
-| [DrawableDescriptorLoadedResult](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md) | 图片资源的加载结果。 |
+| [DrawableDescriptorLoadedResult](arkts-na-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md) | 图片资源的加载结果。 |
 
 **错误码：**
 
@@ -154,7 +154,7 @@ loadSync(): DrawableDescriptorLoadedResult
 release(): void
 ```
 
-释放DrawableDescriptor持有的资源。调用release后，该对象将不可用，再调用 [getPixelMap](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#getPixelMap)、 [getForeground](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getForeground)、 [getBackground](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getBackground)、 [getMask](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getMask)、 [loadSync](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#loadSync)、 [load](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#load)等接口，返回undefined或默认异常值。重复调用release不会崩溃。
+释放DrawableDescriptor持有的资源。调用release后，该对象将不可用，再调用 [getPixelMap](#getPixelMap)、 [getForeground](arkts-na-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getForeground)、 [getBackground](arkts-na-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getBackground)、 [getMask](arkts-na-arkui-drawabledescriptor-layereddrawabledescriptor-c.md#getMask)、 [loadSync](#loadSync)、 [load](#load)等接口，返回undefined或默认异常值。重复调用release不会崩溃。
 
 **起始版本：** 26.0.0
 

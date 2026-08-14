@@ -1,6 +1,6 @@
 # AccessibilityFocusScene (System API)
 
-Enumeration of scenes of accessibility focus.
+Enumerates the focus scenarios for accessibility.
 
 **Since:** 26.0.0
 
@@ -20,7 +20,7 @@ Enumeration of scenes of accessibility focus.
 HOVER_FOCUS = 1
 ```
 
-Hover to move the accessibility focus.
+The current focus scenario is tap focus.
 
 **Since:** 26.0.0
 
@@ -42,7 +42,7 @@ Hover to move the accessibility focus.
 SWIPE_FOCUS = 2
 ```
 
-Swipe finger to move the accessibility focus.
+The current focus scenario is swipe focus.
 
 **Since:** 26.0.0
 
@@ -64,7 +64,7 @@ Swipe finger to move the accessibility focus.
 SCROLL_FOCUS = 3
 ```
 
-Move the accessibility focus after scrolling the component.
+The current focus scenario is scroll focus.
 
 **Since:** 26.0.0
 

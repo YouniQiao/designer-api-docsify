@@ -21,7 +21,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { InputMethodExtraConfig } from '@kit.IMEKit';
+import { InputMethodExtraConfig } from 'InputMethodExtraConfig';
 ```
 
 ## Summary

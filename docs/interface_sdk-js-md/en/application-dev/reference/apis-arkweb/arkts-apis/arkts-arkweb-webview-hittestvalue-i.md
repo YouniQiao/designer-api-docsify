@@ -15,7 +15,7 @@ Provides the element information of the area being clicked. For the sample code,
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'webview';
 ```
 
 ## extra

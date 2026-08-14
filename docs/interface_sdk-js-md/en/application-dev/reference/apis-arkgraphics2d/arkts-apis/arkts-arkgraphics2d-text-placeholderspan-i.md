@@ -15,7 +15,7 @@ Describes the placeholder style.
 ## Modules to Import
 
 ```TypeScript
-import { text } from '@kit.ArkGraphics2D';
+import { text } from 'text';
 ```
 
 ## align

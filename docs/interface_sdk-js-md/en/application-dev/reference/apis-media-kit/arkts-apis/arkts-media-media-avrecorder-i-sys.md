@@ -15,7 +15,7 @@ AVRecorder is a class for audio and video recording management. It provides APIs
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'media';
 ```
 
 ## getInputMetaSurface
@@ -54,7 +54,7 @@ Get input meta surface for specified meta source type. it must be called between
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3. Parameter verification failed. |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
 | [5400103](../errorcode-media.md#5400103-io-error) | I/O error. Return by promise. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called from Non-System applications. Return by promise. |
@@ -96,7 +96,7 @@ Get input meta surface for specified meta source type. it must be called between
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3. Parameter verification failed. |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
 | [5400103](../errorcode-media.md#5400103-io-error) | I/O error. Return by promise. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called from Non-System applications. Return by promise. |
@@ -164,7 +164,7 @@ Set metadata (key-value pairs) for the recording file of the recorder. This meta
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| metadata | Record&lt;string, string&gt; | Yes | Tag and value of the metadata in key-value pairs. &lt;br&gt;- The first string is the key.&lt;br&gt;- The second string is the value. &lt;br&gt; The key string should start with "com.openharmony.", the length of value can't be more than 256 bytes. |
+| metadata | Record&lt;string, string&gt; | Yes | Tag and value of the metadata in key-value pairs. <br>- The first string is the key.<br>- The second string is the value. <br> The key string should start with "com.openharmony.", the length of value can't be more than 256 bytes. |
 
 **Error codes:**
 

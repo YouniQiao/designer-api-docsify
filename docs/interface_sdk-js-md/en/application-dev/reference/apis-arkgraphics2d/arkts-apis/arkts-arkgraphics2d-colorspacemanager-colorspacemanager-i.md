@@ -15,7 +15,7 @@ Implements management of color space objects. Before calling any of the followin
 ## Modules to Import
 
 ```TypeScript
-import { colorSpaceManager } from '@kit.ArkGraphics2D';
+import { colorSpaceManager } from 'colorSpaceManager';
 ```
 
 ## getColorSpaceName

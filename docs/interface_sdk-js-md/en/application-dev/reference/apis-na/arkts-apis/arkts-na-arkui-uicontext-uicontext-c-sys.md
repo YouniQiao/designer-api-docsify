@@ -130,7 +130,7 @@ Set the switch for memory recycling of invisible image nodes
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | The switch for memory recycling. &lt;br&gt;Default value: false, Passing `undefined` restores the default value. |
+| enabled | boolean | Yes | The switch for memory recycling. <br>Default value: false, Passing `undefined` restores the default value. |
 
 ## setDynamicDimming
 

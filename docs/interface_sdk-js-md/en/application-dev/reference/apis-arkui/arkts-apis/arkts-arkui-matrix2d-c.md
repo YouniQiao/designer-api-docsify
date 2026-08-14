@@ -64,7 +64,7 @@ Constructs a two-dimensional transformation matrix object. The default value is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| unit | LengthMetricsUnit | Yes | Unit mode of the **Matrix2D** object. The value cannot be dynamically changed once set. The configuration method is the same as that of CanvasRenderingContext2D.&lt;br&gt;For abnormal values NaN and Infinity, the default values are used.&lt;br&gt;Default value: DEFAULT. |
+| unit | LengthMetricsUnit | Yes | Unit mode of the **Matrix2D** object. The value cannot be dynamically changed once set. The configuration method is the same as that of CanvasRenderingContext2D.<br>For abnormal values NaN and Infinity, the default values are used.<br>Default value: DEFAULT. |
 
 ## identity
 
@@ -146,7 +146,7 @@ The matrix is superimposed in right multiplication mode. When the input paramete
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| other | [Matrix2D](arkts-arkui-matrix2d-c.md) | No | Target matrix. &lt;br&gt;Invalid values **undefined** and **null** are treated as invalid inputs.&lt;br&gt;Default value: **null**. |
+| other | [Matrix2D](arkts-arkui-matrix2d-c.md) | No | Target matrix. <br>Invalid values **undefined** and **null** are treated as invalid inputs.<br>Default value: **null**. |
 
 **Return value:**
 
@@ -180,8 +180,8 @@ Adds the rotation effect of the X and Y axes to the current matrix.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rx | number | No | Horizontal coordinate of the rotation point. The value range is not limited.&lt;br&gt;Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.&lt;br&gt;Default unit: vp. |
-| ry | number | No | Vertical coordinate of the rotation point. The value range is not limited.&lt;br&gt;Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.&lt;br&gt;Default unit: vp. |
+| rx | number | No | Horizontal coordinate of the rotation point. The value range is not limited.<br>Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.<br>Default unit: vp. |
+| ry | number | No | Vertical coordinate of the rotation point. The value range is not limited.<br>Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.<br>Default unit: vp. |
 
 **Return value:**
 
@@ -217,9 +217,9 @@ Adds the rotation effect of the X and Y axes to the current matrix.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| degree | number | Yes | Rotation angle. The value range is not limited. Positive angles represent clockwise rotation. You can convert the angle to radians using the following formula: degree Math.PI/180. &lt;br&gt;Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.&lt;br&gt;Default unit: radian. |
-| rx | number | No | Horizontal coordinate of the rotation point. The value range is not limited.&lt;br&gt;Default unit: vp.&lt;br&gt;Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.&lt;br&gt;Default value: **0**. |
-| ry | number | No | Vertical coordinate of the rotation point. The value range is not limited.&lt;br&gt;Default unit: vp.&lt;br&gt;Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.&lt;br&gt;Default value: **0**. |
+| degree | number | Yes | Rotation angle. The value range is not limited. Positive angles represent clockwise rotation. You can convert the angle to radians using the following formula: degree Math.PI/180. <br>Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.<br>Default unit: radian. |
+| rx | number | No | Horizontal coordinate of the rotation point. The value range is not limited.<br>Default unit: vp.<br>Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.<br>Default value: **0**. |
+| ry | number | No | Vertical coordinate of the rotation point. The value range is not limited.<br>Default unit: vp.<br>Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.<br>Default value: **0**. |
 
 **Return value:**
 
@@ -253,8 +253,8 @@ Adds the scaling effect of the X and Y axes to the current matrix.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sx | number | No | Horizontal scaling ratio coefficient. The value range is not limited.&lt;br&gt;Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.&lt;br&gt;Default value: **1.0**. |
-| sy | number | No | Vertical scaling ratio coefficient. The value range is not limited.&lt;br&gt;Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.&lt;br&gt;Default value: **1.0**. |
+| sx | number | No | Horizontal scaling ratio coefficient. The value range is not limited.<br>Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.<br>Default value: **1.0**. |
+| sy | number | No | Vertical scaling ratio coefficient. The value range is not limited.<br>Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.<br>Default value: **1.0**. |
 
 **Return value:**
 
@@ -288,8 +288,8 @@ Performs a left multiplication translation operation on this matrix.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tx | number | No | Horizontal translation distance. The value range is not limited.&lt;br&gt;Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.&lt;br&gt;Default unit: vp.&lt;br&gt;Default value: **0**. |
-| ty | number | No | Vertical translation distance. The value range is not limited.&lt;br&gt;Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.&lt;br&gt;Default unit: vp.&lt;br&gt;Default value: **0**. |
+| tx | number | No | Horizontal translation distance. The value range is not limited.<br>Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.<br>Default unit: vp.<br>Default value: **0**. |
+| ty | number | No | Vertical translation distance. The value range is not limited.<br>Invalid values **undefined** and **null** are treated as invalid inputs. **NaN** and **Infinity** values will trigger **Matrix2D** exceptions.<br>Default unit: vp.<br>Default value: **0**. |
 
 **Return value:**
 
@@ -303,7 +303,7 @@ Performs a left multiplication translation operation on this matrix.
 rotateX?: number
 ```
 
-Horizontal skew coefficient. The value range is not limited.&lt;br&gt;If the value is undefined, it is regarded as an invalid value. If the value is NaN or Infinity, the Matrix2D will be abnormal.
+Horizontal skew coefficient. The value range is not limited.<br>If the value is undefined, it is regarded as an invalid value. If the value is NaN or Infinity, the Matrix2D will be abnormal.
 
 **Type:** number
 
@@ -327,7 +327,7 @@ Horizontal skew coefficient. The value range is not limited.&lt;br&gt;If the val
 rotateY?: number
 ```
 
-Vertical skew coefficient. The value range is not limited.&lt;br&gt;If the value is undefined, it is regarded as an invalid value. If the value is NaN or Infinity, the Matrix2D will be abnormal.
+Vertical skew coefficient. The value range is not limited.<br>If the value is undefined, it is regarded as an invalid value. If the value is NaN or Infinity, the Matrix2D will be abnormal.
 
 **Type:** number
 
@@ -351,7 +351,7 @@ Vertical skew coefficient. The value range is not limited.&lt;br&gt;If the value
 scaleX?: number
 ```
 
-Horizontal scaling coefficient. The value range is not limited.&lt;br&gt;If the value is undefined, it is regarded as an invalid value. If the value is NaN or Infinity, the Matrix2D will be abnormal.
+Horizontal scaling coefficient. The value range is not limited.<br>If the value is undefined, it is regarded as an invalid value. If the value is NaN or Infinity, the Matrix2D will be abnormal.
 
 **Type:** number
 
@@ -375,7 +375,7 @@ Horizontal scaling coefficient. The value range is not limited.&lt;br&gt;If the 
 scaleY?: number
 ```
 
-Vertical scaling coefficient. The value range is not limited.&lt;br&gt;If the value is undefined, it is regarded as an invalid value. If the value is NaN or Infinity, the Matrix2D will be abnormal.
+Vertical scaling coefficient. The value range is not limited.<br>If the value is undefined, it is regarded as an invalid value. If the value is NaN or Infinity, the Matrix2D will be abnormal.
 
 **Type:** number
 
@@ -399,7 +399,7 @@ Vertical scaling coefficient. The value range is not limited.&lt;br&gt;If the va
 translateX?: number
 ```
 
-Horizontal translation distance. The value range is unlimited. &lt;br&gt;The abnormal value undefined is processed as an invalid value. NaN and Infinity will cause Matrix2D exceptions. After the setting, the drawn content is not displayed. &lt;br&gt;Default unit: vp.
+Horizontal translation distance. The value range is unlimited. <br>The abnormal value undefined is processed as an invalid value. NaN and Infinity will cause Matrix2D exceptions. After the setting, the drawn content is not displayed. <br>Default unit: vp.
 
 **Type:** number
 
@@ -423,7 +423,7 @@ Horizontal translation distance. The value range is unlimited. &lt;br&gt;The abn
 translateY?: number
 ```
 
-Vertical translation distance. The value range is unlimited. &lt;br&gt;The abnormal value undefined is processed as an invalid value. NaN and Infinity will cause Matrix2D exceptions. After the setting, the drawn content is not displayed. &lt;br&gt;Default unit: vp.
+Vertical translation distance. The value range is unlimited. <br>The abnormal value undefined is processed as an invalid value. NaN and Infinity will cause Matrix2D exceptions. After the setting, the drawn content is not displayed. <br>Default unit: vp.
 
 **Type:** number
 

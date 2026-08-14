@@ -15,7 +15,7 @@ Provides time zone management capabilities, such as time zone name translation, 
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'i18n';
 ```
 
 ## getAppDefaultTimeZone
@@ -490,7 +490,7 @@ Sets the default time zone for the current app, the value will be used on the ap
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| zoneID | string | Yes | Time zone ID that set default for app. for example, "Asia/Shanghai". &lt;br&gt; Time zone ID supported by the system |
+| zoneID | string | Yes | Time zone ID that set default for app. for example, "Asia/Shanghai". <br> Time zone ID supported by the system |
 
 **Error codes:**
 

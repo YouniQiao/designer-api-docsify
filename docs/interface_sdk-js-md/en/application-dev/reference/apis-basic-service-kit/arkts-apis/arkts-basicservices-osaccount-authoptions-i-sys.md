@@ -17,7 +17,7 @@ Represents a set of optional parameters for [auth](arkts-basicservices-osaccount
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'osAccount';
 ```
 
 ## accountId

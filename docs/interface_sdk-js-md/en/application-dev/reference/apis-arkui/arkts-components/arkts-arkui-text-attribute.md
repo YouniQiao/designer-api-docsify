@@ -40,7 +40,7 @@ Sets the offset of the text baseline. Percentage values follow default display b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| ResourceStr | Yes | Offset of the text baseline.&lt;br&gt;Unit: fp. Default value: 0.<br>**Since:** 20 |
+| value | number \| ResourceStr | Yes | Offset of the text baseline.<br>Unit: fp. Default value: 0.<br>**Since:** 20 |
 
 ## bindSelectionMenu
 
@@ -69,9 +69,9 @@ Sets the custom selection menu. The long-press response duration of **bindSelect
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| spanType | [TextSpanType](arkts-arkui-textspantype-e.md) | Yes | Span type of the menu.&lt;br&gt;Default value: **TextSpanType.TEXT |
+| spanType | [TextSpanType](arkts-arkui-textspantype-e.md) | Yes | Span type of the menu.<br>Default value: **TextSpanType.TEXT |
 | content | CustomBuilder | Yes | Content of the menu. |
-| responseType | [TextResponseType](arkts-arkui-textresponsetype-e.md) | Yes | Response type of the menu.&lt;br&gt;Default value: **TextResponseType.LONG_PRESS |
+| responseType | [TextResponseType](arkts-arkui-textresponsetype-e.md) | Yes | Response type of the menu.<br>Default value: **TextResponseType.LONG_PRESS |
 | options | SelectionMenuOptions | No | Options of the menu. |
 
 ## caretColor
@@ -100,7 +100,7 @@ Sets the color of the text selection handle, also known as the caret, in the tex
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | ResourceColor | Yes | Color of the text selection handle.&lt;br&gt;Default value: **'#007DFF' |
+| color | ResourceColor | Yes | Color of the text selection handle.<br>Default value: **'#007DFF' |
 
 ## compressLeadingPunctuation
 
@@ -128,7 +128,7 @@ Sets whether to enable leading punctuation compression. > **NOTE：**> > - Leadi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | Optional&lt;boolean&gt; | Yes | Whether to enable leading punctuation compression.&lt;br&gt;**true**: Leading punctuation compression is enabled. **false**: Leading punctuation compression is disabled. |
+| enabled | Optional&lt;boolean&gt; | Yes | Whether to enable leading punctuation compression.<br>**true**: Leading punctuation compression is enabled. **false**: Leading punctuation compression is disabled. |
 
 ## contentTransition
 
@@ -184,7 +184,7 @@ Sets whether copy and paste operations are allowed. Since API version 20, copied
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | CopyOptions | Yes | Whether copy and paste operations are allowed.&lt;br&gt;Default value: **CopyOptions.None |
+| value | CopyOptions | Yes | Whether copy and paste operations are allowed.<br>Default value: **CopyOptions.None |
 
 ## dataDetectorConfig
 
@@ -240,7 +240,7 @@ Style and color of the text decorative line. > **NOTE：**> > When the bottom co
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | DecorationStyleInterface | Yes | Style of the text decorative line.&lt;br&gt;Default value:&lt;br&gt;{&lt;br&gt; type: TextDecorationType.None,&lt;br&gt; color: Color.Black,&lt;br&gt; style: TextDecorationStyle.SOLID &lt;br&gt;}&lt;br&gt;**NOTE：**&lt;br&gt;The **style** parameter cannot be used in widgets.<br>**Since:** 12 |
+| value | DecorationStyleInterface | Yes | Style of the text decorative line.<br>Default value:<br>{<br> type: TextDecorationType.None,<br> color: Color.Black,<br> style: TextDecorationStyle.SOLID <br>}<br>**NOTE：**<br>The **style** parameter cannot be used in widgets.<br>**Since:** 12 |
 
 ## draggable
 
@@ -266,7 +266,7 @@ Sets the drag effect of the selected text. This attribute cannot be used togethe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Drag effect of the selected text.&lt;br&gt;**true**: The selected text is draggable. **false**: The selected text is not draggable.&lt;br&gt;Default value: **false |
+| value | boolean | Yes | Drag effect of the selected text.<br>**true**: The selected text is draggable. **false**: The selected text is not draggable.<br>Default value: **false |
 
 ## editMenuOptions
 
@@ -322,7 +322,7 @@ Sets the ellipsis position. For the settings to work, **overflow** must be set t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | EllipsisMode | Yes | Ellipsis position.&lt;br&gt;Default value: **EllipsisMode.END |
+| value | EllipsisMode | Yes | Ellipsis position.<br>Default value: **EllipsisMode.END |
 
 ## enableAutoSpacing
 
@@ -350,7 +350,7 @@ Sets whether to enable automatic spacing between Chinese and Western characters.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | Optional&lt;boolean&gt; | Yes | Whether to enable automatic spacing between Chinese and Western characters.&lt; br&gt;**true** to enable, **false** otherwise.&lt;br&gt;Default value: **false |
+| enabled | Optional&lt;boolean&gt; | Yes | Whether to enable automatic spacing between Chinese and Western characters.&lt; br&gt;**true** to enable, **false** otherwise.<br>Default value: **false |
 
 ## enableDataDetector
 
@@ -378,7 +378,7 @@ Sets whether to enable special entity detection within the text. Special entitie
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to enable text recognition.&lt;br&gt;**true**: Enable text recognition. **false**: Disable text recognition.&lt;br&gt;Default value: **false |
+| enable | boolean | Yes | Whether to enable text recognition.<br>**true**: Enable text recognition. **false**: Disable text recognition.<br>Default value: **false |
 
 ## enableHapticFeedback
 
@@ -406,7 +406,7 @@ Sets whether to enable haptic feedback. To enable haptic feedback, you must decl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isEnabled | boolean | Yes | Whether to enable haptic feedback.&lt;br&gt;**true** to enable, **false** otherwise.&lt;br&gt; Default value: **true |
+| isEnabled | boolean | Yes | Whether to enable haptic feedback.<br>**true** to enable, **false** otherwise.<br> Default value: **true |
 
 ## enableSelectedDataDetector
 
@@ -434,7 +434,7 @@ Sets whether to enable entity recognition for selected text. This API only works
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean \| undefined | Yes | Whether to enable entity recognition for selected text.&lt;br&gt;**true**: Entity recognition is enabled. **false**: Entity recognition is disabled. Default value: **true |
+| enable | boolean \| undefined | Yes | Whether to enable entity recognition for selected text.<br>**true**: Entity recognition is enabled. **false**: Entity recognition is disabled. Default value: **true |
 
 ## fallbackLineSpacing
 
@@ -462,7 +462,7 @@ Adapts the line height to the actual text height for overlapped multi-line text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | Optional&lt;boolean&gt; | Yes | Whether the line height adapts to the actual text height.&lt;br&gt;**true**: Line height adapts to the actual text height. **false**: Line height does not adapt to the actual text height. |
+| enabled | Optional&lt;boolean&gt; | Yes | Whether the line height adapts to the actual text height.<br>**true**: Line height adapts to the actual text height. **false**: Line height does not adapt to the actual text height. |
 
 ## font
 
@@ -549,7 +549,7 @@ Sets the font color.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ResourceColor | Yes | Font color.&lt;br&gt;Default value: **'#e6182431'**&lt;br&gt;Default value for wearables: **'#c5ffffff' |
+| value | ResourceColor | Yes | Font color.<br>Default value: **'#e6182431'**<br>Default value for wearables: **'#c5ffffff' |
 
 ## fontFamily
 
@@ -577,7 +577,7 @@ Sets the font family. > **NOTE：**> > You can use [loadFontSync](../../apis-ark
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| Resource | Yes | Font family. Default font: **'HarmonyOS Sans'**&lt;br&gt;To specify multiple fonts, separate them with commas (,), and fonts are applied in priority order. Example: **'Arial, HarmonyOS Sans'**. |
+| value | string \| Resource | Yes | Font family. Default font: **'HarmonyOS Sans'**<br>To specify multiple fonts, separate them with commas (,), and fonts are applied in priority order. Example: **'Arial, HarmonyOS Sans'**. |
 
 ## fontFeature
 
@@ -635,7 +635,7 @@ Sets the text size.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | Yes | Font size. If **fontSize** is of the number type, the unit fp is used. This parameter cannot be set in percentage.&lt;br&gt;Default value: **16fp**&lt;br&gt;Default value on wearable devices: **15fp |
+| value | number \| string \| Resource | Yes | Font size. If **fontSize** is of the number type, the unit fp is used. This parameter cannot be set in percentage.<br>Default value: **16fp**<br>Default value on wearable devices: **15fp |
 
 ## fontStyle
 
@@ -663,7 +663,7 @@ Sets the font style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | FontStyle | Yes | Font style.&lt;br&gt;Default value: **FontStyle.Normal |
+| value | FontStyle | Yes | Font style.<br>Default value: **FontStyle.Normal |
 
 ## fontVariations
 
@@ -719,7 +719,7 @@ Sets the font weight. If the value is too large, the text may be clipped dependi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| FontWeight \| ResourceStr | Yes | Font weight. For the number type, the value range is [100, 900], at an interval of 100. The default value is **400**. A larger value indicates a heavier font weight. For the string type, only strings that represent a number, for example, **400**, and the following enumerated values of **FontWeight** are supported: **bold**, **bolder**, **lighter**, **regular**, and **medium**.&lt;br&gt;Default value: **FontWeight.Normal**&lt;br&gt;Default value on wearable devices: **FontWeight.Regular**&lt;br&gt;The Resource type is supported since API version 20.<br>**Since:** 20 |
+| value | number \| FontWeight \| ResourceStr | Yes | Font weight. For the number type, the value range is [100, 900], at an interval of 100. The default value is **400**. A larger value indicates a heavier font weight. For the string type, only strings that represent a number, for example, **400**, and the following enumerated values of **FontWeight** are supported: **bold**, **bolder**, **lighter**, **regular**, and **medium**.<br>Default value: **FontWeight.Normal**<br>Default value on wearable devices: **FontWeight.Regular**<br>The Resource type is supported since API version 20.<br>**Since:** 20 |
 
 ## fontWeight
 
@@ -749,8 +749,8 @@ Sets the text font weight, with support for font settings. It is only effective 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| weight | number \| FontWeight \| ResourceStr | Yes | Font weight. For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a heavier font weight. The default value is **400**. For the string type, only strings that represent a number, for example, **400**, and the following enumerated values of **FontWeight** are supported: **bold**, **bolder**, **lighter**, **regular**, and **medium**.&lt;br&gt;The Resource type is supported since API version 20.<br>**Since:** 20 |
-| options | FontSettingOptions | No | Font setting options.&lt;br&gt;When **enableVariableFontWeight** in **options** is set to **false**, variable font weight adjustment is disabled. If **weight** is set to a value at intervals of 100 within [100, 900], the font weight uses the specified value. If **weight** is set to a value that is not a multiple of 100, the default value **400** is used.&lt;br&gt;When **enableVariableFontWeight** in **options** is set to **true**, variable font weight adjustment is enabled. If **weight** is set to any integer within [100, 900], the font weight uses the specified value. |
+| weight | number \| FontWeight \| ResourceStr | Yes | Font weight. For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a heavier font weight. The default value is **400**. For the string type, only strings that represent a number, for example, **400**, and the following enumerated values of **FontWeight** are supported: **bold**, **bolder**, **lighter**, **regular**, and **medium**.<br>The Resource type is supported since API version 20.<br>**Since:** 20 |
+| options | FontSettingOptions | No | Font setting options.<br>When **enableVariableFontWeight** in **options** is set to **false**, variable font weight adjustment is disabled. If **weight** is set to a value at intervals of 100 within [100, 900], the font weight uses the specified value. If **weight** is set to a value that is not a multiple of 100, the default value **400** is used.<br>When **enableVariableFontWeight** in **options** is set to **true**, variable font weight adjustment is enabled. If **weight** is set to any integer within [100, 900], the font weight uses the specified value. |
 
 ## halfLeading
 
@@ -778,7 +778,7 @@ Whether half leading is enabled. Half leading refers to splitting the leading in
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| halfLeading | boolean | Yes | Whether half leading is enabled. Half leading refers to splitting the leading in half and applying it equally to the top and bottom of the line.&lt;br&gt;**true**: Half leading is enabled. **false**: Half leading is not enabled.&lt;br&gt;Default value: **false |
+| halfLeading | boolean | Yes | Whether half leading is enabled. Half leading refers to splitting the leading in half and applying it equally to the top and bottom of the line.<br>**true**: Half leading is enabled. **false**: Half leading is not enabled.<br>Default value: **false |
 
 ## heightAdaptivePolicy
 
@@ -806,7 +806,7 @@ Sets the font size adjustment strategy for adaptive text layout. The available m
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | TextHeightAdaptivePolicy | Yes | How the adaptive height is determined for the text.&lt;br&gt;Default value: **TextHeightAdaptivePolicy.MAX_LINES_FIRST |
+| value | TextHeightAdaptivePolicy | Yes | How the adaptive height is determined for the text.<br>Default value: **TextHeightAdaptivePolicy.MAX_LINES_FIRST |
 
 ## includeFontPadding
 
@@ -834,7 +834,7 @@ Sets whether to add spacing to the first and last lines to avoid text truncation
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| include | Optional&lt;boolean&gt; | Yes | Whether to add spacing to the first and last lines to avoid text truncation. &lt;br&gt;**true**: Spacing is added to the first and last lines. **false**: Spacing is not added to the first and last lines. |
+| include | Optional&lt;boolean&gt; | Yes | Whether to add spacing to the first and last lines to avoid text truncation. <br>**true**: Spacing is added to the first and last lines. **false**: Spacing is not added to the first and last lines. |
 
 ## incrementalUpdatePolicy
 
@@ -890,7 +890,7 @@ Sets the letter spacing for a text style. If the value specified is a percentage
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| ResourceStr | Yes | Letter spacing.&lt;br&gt;Default value: **0**&lt;br&gt;Unit: fp&lt;br&gt;The Resource type is supported since API version 20.<br>**Since:** 20 |
+| value | number \| ResourceStr | Yes | Letter spacing.<br>Default value: **0**<br>Unit: fp<br>The Resource type is supported since API version 20.<br>**Since:** 20 |
 
 ## lineBreakStrategy
 
@@ -918,7 +918,7 @@ Sets the line break rule. This attribute takes effect only when [wordBreak](#wor
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strategy | LineBreakStrategy | Yes | Line break rule.&lt;br&gt;Default value: **LineBreakStrategy.GREEDY |
+| strategy | LineBreakStrategy | Yes | Line break rule.<br>Default value: **LineBreakStrategy.GREEDY |
 
 ## lineHeight
 
@@ -976,7 +976,7 @@ Sets the line height of text in multiple mode. The line height equals the input 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| undefined | Yes | Multiplier for the line height.&lt;br&gt;Value range: ≥ 0&lt;br&gt;Values ≤ 0 are treated as **0**. When the value is set to **0**, the default line height is used. Decimal values are supported. |
+| value | number \| undefined | Yes | Multiplier for the line height.<br>Value range: ≥ 0<br>Values ≤ 0 are treated as **0**. When the value is set to **0**, the default line height is used. Decimal values are supported. |
 
 ## lineSpacing
 
@@ -1033,7 +1033,7 @@ Sets the line spacing for text. When **LineSpacingOptions** is not specified, li
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | LengthMetrics | Yes | Line spacing. Values less than or equal to 0 are treated as the default value **0**. |
-| options | LineSpacingOptions | No | Line spacing configuration options.&lt;br&gt;Default value: **{ onlyBetweenLines: false } |
+| options | LineSpacingOptions | No | Line spacing configuration options.<br>Default value: **{ onlyBetweenLines: false } |
 
 ## marqueeOptions
 
@@ -1089,7 +1089,7 @@ Sets the maximum font scale factor for text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | number \| Resource | Yes | Maximum font scale factor for text.&lt;br&gt;Value range: [1, +∞)&lt;br&gt;**NOTE：**&lt;br&gt;Values less than 1 are treated as **1**. Other invalid values are ineffective by default. |
+| scale | number \| Resource | Yes | Maximum font scale factor for text.<br>Value range: [1, +∞)<br>**NOTE：**<br>Values less than 1 are treated as **1**. Other invalid values are ineffective by default. |
 
 ## maxFontSize
 
@@ -1117,7 +1117,7 @@ Sets the maximum font size. For the string type, numeric string values with opti
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | Yes | Maximum font size.&lt;br&gt;Unit: fp |
+| value | number \| string \| Resource | Yes | Maximum font size.<br>Unit: fp |
 
 ## maxLineHeight
 
@@ -1147,7 +1147,7 @@ Sets the maximum line height of text. If the value is less than or equal to 0, t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | LengthMetrics \| undefined | Yes | Maximum line height of text. Percentage values are not supported.&lt;br&gt; Values less than or equal to 0 are treated as **0**. When the value is set to **0**, the maximum line height is unrestricted. |
+| value | LengthMetrics \| undefined | Yes | Maximum line height of text. Percentage values are not supported.<br> Values less than or equal to 0 are treated as **0**. When the value is set to **0**, the maximum line height is unrestricted. |
 
 ## maxLines
 
@@ -1175,7 +1175,7 @@ Sets the maximum number of lines for text. By default, text is automatically fol
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Maximum number of lines of the text.&lt;br&gt;**NOTE：**&lt;br&gt;Value range: [0, *INT32_MAX*]&lt;br&gt;If this parameter is set to **0**, no text content is displayed. |
+| value | number | Yes | Maximum number of lines of the text.<br>**NOTE：**<br>Value range: [0, *INT32_MAX*]<br>If this parameter is set to **0**, no text content is displayed. |
 
 ## minFontScale
 
@@ -1203,7 +1203,7 @@ Sets the minimum font scale factor for text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | number \| Resource | Yes | Minimum font scale factor for text.&lt;br&gt;Value range: [0, 1]&lt;br&gt;**NOTE：**&lt;br&gt; Values less than 0 are treated as 0, and values greater than 1 are treated as 1. Other invalid values do not take effect by default. |
+| scale | number \| Resource | Yes | Minimum font scale factor for text.<br>Value range: [0, 1]<br>**NOTE：**<br> Values less than 0 are treated as 0, and values greater than 1 are treated as 1. Other invalid values do not take effect by default. |
 
 ## minFontSize
 
@@ -1231,7 +1231,7 @@ Sets the minimum font size. For the string type, numeric string values with opti
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | Yes | Minimum font size.&lt;br&gt;Unit: fp |
+| value | number \| string \| Resource | Yes | Minimum font size.<br>Unit: fp |
 
 ## minLineHeight
 
@@ -1261,7 +1261,7 @@ Sets the minimum line height of text. If the value is less than or equal to 0, t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | LengthMetrics \| undefined | Yes | Minimum line height of text. Percentage values are not supported.&lt;br&gt; Values less than or equal to 0 are treated as **0**. |
+| value | LengthMetrics \| undefined | Yes | Minimum line height of text. Percentage values are not supported.<br> Values less than or equal to 0 are treated as **0**. |
 
 ## minLines
 
@@ -1291,7 +1291,7 @@ Sets the minimum number of lines for text. If the actual text height is less tha
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| minLines | Optional&lt;number&gt; | Yes | Minimum number of lines of the text.&lt;br&gt;Value range: [0, *INT32_MAX*]&lt;br&gt; Values less than 0 are clamped to **0**. |
+| minLines | Optional&lt;number&gt; | Yes | Minimum number of lines of the text.<br>Value range: [0, *INT32_MAX*]<br> Values less than 0 are clamped to **0**. |
 
 ## onCopy
 
@@ -1403,7 +1403,7 @@ Called before the copy operation is performed. **Since**: 26.0.0
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | Callback&lt;string, boolean&gt; | Yes | The string type indicates the text to be copied.&lt;br&gt;The boolean type indicates whether the text can be copied. The value **true** means yes and **false** means no. |
+| callback | Callback&lt;string, boolean&gt; | Yes | The string type indicates the text to be copied.<br>The boolean type indicates whether the text can be copied. The value **true** means yes and **false** means no. |
 
 ## optimizeTrailingSpace
 
@@ -1431,7 +1431,7 @@ Sets whether to optimize trailing spaces at line endings during text layout, res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| optimize | Optional&lt;boolean&gt; | Yes | Whether to optimize trailing spaces.&lt;br&gt;**true** to optimize, **false** otherwise.&lt;br&gt;Default value: **false |
+| optimize | Optional&lt;boolean&gt; | Yes | Whether to optimize trailing spaces.<br>**true** to optimize, **false** otherwise.<br>Default value: **false |
 
 ## orphanCharOptimization
 
@@ -1457,7 +1457,7 @@ Sets whether to enable orphan character optimization during text typesetting. If
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | Optional&lt;boolean&gt; | Yes | Whether to enable orphan character optimization for the last line of the paragraph.&lt;br&gt;**true**: Orphan character optimization is enabled. **false**: Orphan character optimization is disabled.&lt;br&gt;When the value is **undefined** or **null**, orphan character optimization is disabled. |
+| enabled | Optional&lt;boolean&gt; | Yes | Whether to enable orphan character optimization for the last line of the paragraph.<br>**true**: Orphan character optimization is enabled. **false**: Orphan character optimization is disabled.<br>When the value is **undefined** or **null**, orphan character optimization is disabled. |
 
 ## privacySensitive
 
@@ -1487,7 +1487,7 @@ Sets whether to enable privacy mode on widgets.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| supported | boolean | Yes | Whether to enable privacy mode on widgets.&lt;br&gt;Default value: **false**. The value **true** means to enable privacy mode, in which case text is obscured with hyphens (-).&lt;br&gt;**NOTE：**&lt;br&gt;The value **null** means not to enable privacy mode on widgets.&lt;br&gt;Enabling privacy mode requires support from the widget framework. You can use obscured to set how the component content is obscured. |
+| supported | boolean | Yes | Whether to enable privacy mode on widgets.<br>Default value: **false**. The value **true** means to enable privacy mode, in which case text is obscured with hyphens (-).<br>**NOTE：**<br>The value **null** means not to enable privacy mode on widgets.<br>Enabling privacy mode requires support from the widget framework. You can use obscured to set how the component content is obscured. |
 
 ## punctuationOverflow
 
@@ -1543,7 +1543,7 @@ Sets the background color of the selected text. If the opacity is not set, a 20%
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | ResourceColor | Yes | Background color of the selected text.&lt;br&gt;Default value: **'#007DFF' |
+| color | ResourceColor | Yes | Background color of the selected text.<br>Default value: **'#007DFF' |
 
 ## selectedDragPreviewStyle
 
@@ -1571,7 +1571,7 @@ Applies a transition animation to text content. Supports numeric flip animation 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | SelectedDragPreviewStyle \| undefined | Yes | Drag preview style for selected text.&lt;br&gt;If this parameter is set to **undefined**, the drag preview follows the theme: white in light mode and black in dark mode. |
+| value | SelectedDragPreviewStyle \| undefined | Yes | Drag preview style for selected text.<br>If this parameter is set to **undefined**, the drag preview follows the theme: white in light mode and black in dark mode. |
 
 ## selection
 
@@ -1599,8 +1599,8 @@ Sets text selection. The selected text is highlighted, with selection handles an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| selectionStart | number | Yes | Start position of the selected text.&lt;br&gt;Default value: **-1 |
-| selectionEnd | number | Yes | End position of the selected text.&lt;br&gt;Default value: **-1 |
+| selectionStart | number | Yes | Start position of the selected text.<br>Default value: **-1 |
+| selectionEnd | number | Yes | End position of the selected text.<br>Default value: **-1 |
 
 ## shaderStyle
 
@@ -1628,7 +1628,7 @@ Applies gradient or solid color effects to text. Supports RadialGradientStyle, L
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| shader | ShaderStyle | Yes | Shader effect.&lt;br&gt;Based on the input, the system applies a radial gradient ( RadialGradientStyle), linear gradient ( LinearGradientStyle), or solid color (ColorShaderStyle). &lt;br&gt;**NOTE：**&lt;br&gt;If RadialGradientStyle is used and the **center** parameter (from RadialGradientOptions) is outside the component bounds, setting **repeating** to **true** enhances the gradient effect. |
+| shader | ShaderStyle | Yes | Shader effect.<br>Based on the input, the system applies a radial gradient ( RadialGradientStyle), linear gradient ( LinearGradientStyle), or solid color (ColorShaderStyle). <br>**NOTE：**<br>If RadialGradientStyle is used and the **center** parameter (from RadialGradientOptions) is outside the component bounds, setting **repeating** to **true** enhances the gradient effect. |
 
 ## tailIndents
 
@@ -1636,7 +1636,7 @@ Applies gradient or solid color effects to text. Supports RadialGradientStyle, L
 tailIndents(value: Optional<LengthMetrics | Array<LengthMetrics>>)
 ```
 
-Specify the tail indentation for each line in a text block. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;When a single LengthMetrics value is provided, all lines share the same tail indent. &lt;br&gt;When an array is provided, the i-th element specifies the tail indent for the i-th line. If the number of text lines exceeds the array length, the last element in the array is used for the remaining lines. &lt;br&gt;Negative values are treated as 0. &lt;br&gt;If the value is set to undefined, the default value 0 is used. &lt;/p&gt;
+Specify the tail indentation for each line in a text block. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>When a single LengthMetrics value is provided, all lines share the same tail indent. <br>When an array is provided, the i-th element specifies the tail indent for the i-th line. If the number of text lines exceeds the array length, the last element in the array is used for the remaining lines. <br>Negative values are treated as 0. <br>If the value is set to undefined, the default value 0 is used. &lt;/p&gt;
 
 **Since:** 26.0.0
 
@@ -1684,7 +1684,7 @@ Sets the horizontal alignment of the text. The text takes up the full width of t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | TextAlign | Yes | Horizontal alignment of the text.&lt;br&gt;Default value: **TextAlign.Start**&lt;br&gt;Default value on wearable devices: **TextAlign.Center |
+| value | TextAlign | Yes | Horizontal alignment of the text.<br>Default value: **TextAlign.Start**<br>Default value on wearable devices: **TextAlign.Center |
 
 ## textCase
 
@@ -1712,7 +1712,7 @@ Sets the text case.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | TextCase | Yes | Text case.&lt;br&gt;Default value: **TextCase.Normal |
+| value | TextCase | Yes | Text case.<br>Default value: **TextCase.Normal |
 
 ## textContentAlign
 
@@ -1740,7 +1740,7 @@ Sets the vertical alignment of the text content area within the component. This 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| textContentAlign | Optional&lt;TextContentAlign&gt; | Yes | Vertical alignment of the text.&lt;br&gt;If the value is **undefined** or invalid, alignment defaults to **Center**. |
+| textContentAlign | Optional&lt;TextContentAlign&gt; | Yes | Vertical alignment of the text.<br>If the value is **undefined** or invalid, alignment defaults to **Center**. |
 
 ## textDirection
 
@@ -1768,7 +1768,7 @@ Specifies the text layout direction. If this attribute is not set, the default t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| direction | TextDirection \| undefined | Yes | Text layout direction.&lt;br&gt;If this parameter is set to **undefined**, the text layout direction follows the component layout direction as defined by **TextDirection.DEFAULT**. |
+| direction | TextDirection \| undefined | Yes | Text layout direction.<br>If this parameter is set to **undefined**, the text layout direction follows the component layout direction as defined by **TextDirection.DEFAULT**. |
 
 ## textIndent
 
@@ -1796,7 +1796,7 @@ Sets the indent of the first line text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Length | Yes | Indent of the first line text.&lt;br&gt;Default value: **0**&lt;br&gt;Unit: fp |
+| value | Length | Yes | Indent of the first line text.<br>Default value: **0**<br>Unit: fp |
 
 ## textOverflow
 
@@ -1852,7 +1852,7 @@ Sets whether the text is selectable and focusable. This attribute must be used i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | TextSelectableMode | Yes | Whether the text is selectable and focusable.&lt;br&gt;Default value: **TextSelectableMode.SELECTABLE_UNFOCUSABLE |
+| mode | TextSelectableMode | Yes | Whether the text is selectable and focusable.<br>Default value: **TextSelectableMode.SELECTABLE_UNFOCUSABLE |
 
 ## textShadow
 
@@ -1910,7 +1910,7 @@ Sets the vertical alignment of the text. > **NOTE：**> > - When this API and [h
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| textVerticalAlign | Optional&lt;TextVerticalAlign&gt; | Yes | Vertical alignment of the text.&lt;br&gt;Default value: **TextVerticalAlign.BASELINE |
+| textVerticalAlign | Optional&lt;TextVerticalAlign&gt; | Yes | Vertical alignment of the text.<br>Default value: **TextVerticalAlign.BASELINE |
 
 ## wordBreak
 
@@ -1938,5 +1938,5 @@ Sets the word break rule. By default, when **wordBreak** is not called or is set
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | WordBreak | Yes | Word break rule.&lt;br&gt;Default value: **WordBreak.BREAK_WORD |
+| value | WordBreak | Yes | Word break rule.<br>Default value: **WordBreak.BREAK_WORD |
 

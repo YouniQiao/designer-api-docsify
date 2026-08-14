@@ -15,7 +15,7 @@ Component information.
 ## Modules to Import
 
 ```TypeScript
-import { componentUtils } from '@kit.ArkUI';
+import { componentUtils } from 'componentUtils';
 ```
 
 ## localOffset

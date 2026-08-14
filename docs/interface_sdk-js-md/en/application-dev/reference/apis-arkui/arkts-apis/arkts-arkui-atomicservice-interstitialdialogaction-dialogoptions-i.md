@@ -15,7 +15,10 @@ Defines the attributes specific to the dialog box and custom click actions for t
 ## Modules to Import
 
 ```TypeScript
-import { IconStyle, TitlePosition, BottomOffset, InterstitialDialogAction } from '@kit.ArkUI';
+import { InterstitialDialogAction } from 'InterstitialDialogAction';
+import { IconStyle } from 'IconStyle';
+import { TitlePosition } from 'TitlePosition';
+import { BottomOffset } from 'BottomOffset';
 ```
 
 ## backgroundImage

@@ -30,9 +30,9 @@ function on(activity: ActivityType, event: ActivityEvent, reportLatencyNs: numbe
 ## 示例
 
 ```TypeScript
-let reportLatencyNs = 1000000000;
+let reportLatencyNs = 1000000000; // 单位：纳秒
 stationary.on('still', stationary.ActivityEvent.ENTER, reportLatencyNs, (data) => {
     console.info('data=' + JSON.stringify(data));
-})
+});
 ```
 

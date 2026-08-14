@@ -220,7 +220,7 @@ Obtains the localized expression of the specified time in the specified locale.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hour | int | Yes | Specified time, for example, 16. &lt;br&gt;The value should be an integer. |
+| hour | int | Yes | Specified time, for example, 16. <br>The value should be an integer. |
 | locale | string | No | System locale, which consists of the language, script, and country/region. for example, "zh-Hans-CN". The default value is the current system locale. |
 
 **Return value:**

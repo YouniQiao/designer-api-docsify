@@ -53,7 +53,7 @@ let options: zlib.Options = {
 
 try {
   zlib.compressFile(inFile, outFile, options, (errData: BusinessError) => {
-    if (errData !== null) {
+    if (errData) {
       console.error(`compressFile errData is errCode:${errData.code}  message:${errData.message}`);
     } else {
       console.info(`compressFile success.`);

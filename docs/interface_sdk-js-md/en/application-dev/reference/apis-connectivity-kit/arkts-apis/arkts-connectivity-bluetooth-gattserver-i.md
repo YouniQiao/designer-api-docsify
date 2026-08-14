@@ -17,7 +17,7 @@ Manages GATT server. Before calling an Gatt server method, you must use [createG
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from '@kit.ConnectivityKit';
+import { bluetooth } from 'bluetooth';
 ```
 
 ## addService

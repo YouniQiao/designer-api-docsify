@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleState } from '@kit.BackgroundTasksKit';
+import { bundleState } from 'bundleState';
 ```
 
 ## queryCurrentBundleActiveStates
@@ -32,8 +32,8 @@ Queries state data of the current bundle within a specified period.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| begin | number | Yes | Indicates the start time of the query period, in milliseconds. &lt;br&gt; Unit:ms |
-| end | number | Yes | Indicates the end time of the query period, in milliseconds. &lt;br&gt; Unit:ms |
+| begin | number | Yes | Indicates the start time of the query period, in milliseconds. <br> Unit:ms |
+| end | number | Yes | Indicates the end time of the query period, in milliseconds. <br> Unit:ms |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BundleActiveState](arkts-backgroundtasks-bundlestate-bundleactivestate-i.md)&gt;&gt; | Yes | the state data of the current bundle. |
 
 ## Examples
@@ -77,8 +77,8 @@ Queries state data of the current bundle within a specified period.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| begin | number | Yes | Indicates the start time of the query period, in milliseconds. &lt;br&gt; Unit:ms |
-| end | number | Yes | Indicates the end time of the query period, in milliseconds. &lt;br&gt; Unit:ms |
+| begin | number | Yes | Indicates the start time of the query period, in milliseconds. <br> Unit:ms |
+| end | number | Yes | Indicates the end time of the query period, in milliseconds. <br> Unit:ms |
 
 **Return value:**
 

@@ -36,7 +36,7 @@ Sets automatic refresh for the ColorMetrics object. When enabled, the color valu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to automatically refresh the color value when system configuration changes. &lt;br&gt;If this parameter is set to true, the color values of objects created using ColorMetrics.resourceColor() are automatically updated when the system configuration changes. If set to false, the color values of objects created by ColorMetrics.resourceColor() are not automatically updated. The default value is false. |
+| value | boolean | Yes | Whether to automatically refresh the color value when system configuration changes. <br>If this parameter is set to true, the color values of objects created using ColorMetrics.resourceColor() are automatically updated when the system configuration changes. If set to false, the color values of objects created by ColorMetrics.resourceColor() are not automatically updated. The default value is false. |
 
 **Return value:**
 
@@ -142,7 +142,7 @@ Instantiate the ColorMetrics class using color number
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | color number. &lt;br&gt;The value should be an integer. |
+| value | int | Yes | color number. <br>The value should be an integer. |
 
 **Return value:**
 

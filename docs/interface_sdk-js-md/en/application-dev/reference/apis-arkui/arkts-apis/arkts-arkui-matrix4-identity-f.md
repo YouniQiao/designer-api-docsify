@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { matrix4 } from '@kit.ArkUI';
+import { matrix4 } from 'matrix4';
 ```
 
 ## identity
@@ -31,4 +31,38 @@ Constructs an identity matrix.
 | Type | Description |
 | --- | --- |
 | Matrix4Transit | Identity matrix object. |
+
+## Examples
+
+```TypeScript
+// The effect of matrix 1 is the same as that of matrix 2.
+import { matrix4 } from '@kit.ArkUI';
+
+let matrix1 = matrix4.init(
+  [1.0, 0.0, 0.0, 0.0,
+    0.0, 1.0, 0.0, 0.0,
+    0.0, 0.0, 1.0, 0.0,
+    0.0, 0.0, 0.0, 1.0]);
+let matrix2 = matrix4.identity();
+
+@Entry
+@Component
+struct Tests {
+  build() {
+    Column() {
+      // Replace $r("app.media.zh") with the image resource file you use.
+      Image($r("app.media.zh"))
+        .width("40%")
+        .height(100)
+        .transform(matrix1)
+      // Replace $r("app.media.zh") with the image resource file you use.
+      Image($r("app.media.zh"))
+        .width("40%")
+        .height(100)
+        .margin({ top: 150 })
+        .transform(matrix2)
+    }
+  }
+}
+```
 

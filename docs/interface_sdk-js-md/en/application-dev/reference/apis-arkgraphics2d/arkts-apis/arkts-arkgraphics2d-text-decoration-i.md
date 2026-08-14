@@ -15,7 +15,7 @@ Describes a text decoration.
 ## Modules to Import
 
 ```TypeScript
-import { text } from '@kit.ArkGraphics2D';
+import { text } from 'text';
 ```
 
 ## color

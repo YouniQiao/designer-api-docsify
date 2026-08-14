@@ -17,7 +17,7 @@ Represents the device-cloud sharing result.
 ## Modules to Import
 
 ```TypeScript
-import { cloudData } from '@kit.ArkData';
+import { cloudData } from 'cloudData';
 ```
 
 ## code

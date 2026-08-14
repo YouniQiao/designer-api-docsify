@@ -19,7 +19,7 @@ Describes the color sensor data. It extends from [Response](arkts-sensorservice-
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
+import { sensor } from 'sensor';
 ```
 
 ## colorTemperature

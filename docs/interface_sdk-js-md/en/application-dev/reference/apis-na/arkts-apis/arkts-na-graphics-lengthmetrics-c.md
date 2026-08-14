@@ -36,7 +36,7 @@ Sets automatic refresh for the LengthMetrics object. When enabled, the length va
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | whether to automatically update the length value when the system configuration changes. &lt;br&gt;If set to true, the length value of the object created by LengthMetrics.resource() is automatically updated when the system configuration changes. If set to false, the length value of the object created by LengthMetrics.resource() is automatically updated when the system configuration changes. The default value is false. |
+| value | boolean | Yes | whether to automatically update the length value when the system configuration changes. <br>If set to true, the length value of the object created by LengthMetrics.resource() is automatically updated when the system configuration changes. If set to false, the length value of the object created by LengthMetrics.resource() is automatically updated when the system configuration changes. The default value is false. |
 
 **Return value:**
 

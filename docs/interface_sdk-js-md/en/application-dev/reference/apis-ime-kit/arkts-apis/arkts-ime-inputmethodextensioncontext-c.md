@@ -17,7 +17,7 @@ The **InputMethodExtensionContext** module, inherited from **ExtensionContext**,
 ## Modules to Import
 
 ```TypeScript
-import { InputMethodExtensionContext } from '@kit.IMEKit';
+import { InputMethodExtensionContext } from 'InputMethodExtensionContext';
 ```
 
 ## destroy

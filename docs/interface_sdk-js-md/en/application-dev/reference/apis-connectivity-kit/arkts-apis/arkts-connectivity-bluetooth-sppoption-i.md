@@ -17,7 +17,7 @@ Describes the spp parameters.
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from '@kit.ConnectivityKit';
+import { bluetooth } from 'bluetooth';
 ```
 
 ## secure

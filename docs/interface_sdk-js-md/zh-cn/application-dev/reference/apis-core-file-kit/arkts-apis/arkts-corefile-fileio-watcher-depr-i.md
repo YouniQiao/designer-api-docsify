@@ -8,7 +8,7 @@ Watcher是文件变化监听的实例，调用Watcher.stop()方法（同步或�
 
 **废弃版本：** 10
 
-**替代接口：** [Watcher](arkts-corefile-file-fs-watcher-i.md#Watcher)
+**替代接口：** [Watcher](../../apis-na/arkts-apis/arkts-na-watcher-t.md#Watcher)
 
 <!--Device-unnamed-declare interface Watcher--><!--Device-unnamed-declare interface Watcher-End-->
 

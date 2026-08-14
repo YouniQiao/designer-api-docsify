@@ -39,8 +39,8 @@ Creates a JsonParseError with location information.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | msg | string | Yes | Error message |
-| start_offset | int | No | Start offset in the source string &lt;br&gt;The value should be an integer. |
-| end_offset | int | No | End offset in the source string &lt;br&gt;The value should be an integer. |
+| start_offset | int | No | Start offset in the source string <br>The value should be an integer. |
+| end_offset | int | No | End offset in the source string <br>The value should be an integer. |
 
 **Return value:**
 

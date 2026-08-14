@@ -17,7 +17,7 @@ Defines the local image resolution in a video call.
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'call';
 ```
 
 ## callId

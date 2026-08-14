@@ -58,15 +58,15 @@ export default class EntryAbility extends UIAbility {
     try {
       // 手动调用run方法
       startupManager.run(startParams).then(() => {
-        console.info(`StartupTest startupManager run then, startParams = ${startParams}.`);
+        hilog.info(0x0000, 'testTag', 'StartupTest startupManager run then, startParams = %{public}s.', startParams.join(','));
       }).catch((err: Error) => {
         let error = err as BusinessError;
-        console.error(`StartupTest promise catch failed, error code: ${error.code}, error msg: ${error.message}.`);
+        hilog.error(0x0000, 'testTag', 'StartupTest promise catch failed, error code: %{public}d, error msg: %{public}s.', error.code, error.message);
       });
     } catch (error) {
       let errMsg = (error as BusinessError).message;
       let errCode = (error as BusinessError).code;
-      console.error(`Startup.run failed, err code: ${errCode}, err msg: ${errMsg}.`);
+      hilog.error(0x0000, 'testTag', 'startupManager.run failed, err code: %{public}d, err msg: %{public}s.', errCode, errMsg);
     }
   }
 
@@ -151,7 +151,7 @@ export default class MyAbilityStage extends AbilityStage {
       }).catch((err: Error) => {
         let error = err as BusinessError;
         hilog.error(0x0000, 'testTag', `startupManager.run promise catch error code: ${error.code}, error msg: ${error.message}`);
-      })
+      });
     } catch (error) {
       hilog.error(0x0000, 'testTag', `startupManager.run catch error code: ${error.code}, error msg: ${error.message}`);
     }

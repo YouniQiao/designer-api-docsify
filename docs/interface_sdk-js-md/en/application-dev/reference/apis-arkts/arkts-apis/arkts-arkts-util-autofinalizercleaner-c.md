@@ -15,7 +15,7 @@ A cleaner for releasing resources managed by developers through a developer-defi
 ## Modules to Import
 
 ```TypeScript
-import { util } from '@kit.ArkTS';
+import { util } from 'util';
 ```
 
 ## register

@@ -17,7 +17,7 @@ The UploadProgress data structure.
 ## Modules to Import
 
 ```TypeScript
-import { cloudSync } from '@kit.CoreFileKit';
+import { cloudSync } from 'cloudSync';
 ```
 
 ## error
@@ -50,7 +50,7 @@ The error type of upload.
 processed: long
 ```
 
-The processed data size for current file. &lt;br&gt;Unit:Byte.
+The processed data size for current file. <br>Unit:Byte.
 
 **Type:** long
 
@@ -74,7 +74,7 @@ The processed data size for current file. &lt;br&gt;Unit:Byte.
 size: long
 ```
 
-The size of current file. &lt;br&gt;Unit:Byte.
+The size of current file. <br>Unit:Byte.
 
 **Type:** long
 

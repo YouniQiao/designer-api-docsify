@@ -15,7 +15,7 @@ Provides APIs for user authentication. The user authentication widget is support
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
+import { userAuth } from 'userAuth';
 ```
 
 ## cancel
@@ -44,7 +44,7 @@ Cancels this authentication. This API is commonly used in the following scenario
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
 
@@ -127,7 +127,7 @@ Unsubscribes from the event for intermediate authentication status. > **NOTE：*
 offResult(callback?: IAuthCallback): void
 ```
 
-Unsubscribes from the user authentication result. > **NOTE：**> The [UserAuthInstance](#UserAuthInstance) instance used to invoke this API must be the one used > to subscribe to the event. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;The UserAuthInstance instance used to invoke this API must be the one used to subscribe to the event. &lt;/p&gt;
+Unsubscribes from the user authentication result. > **NOTE：**> The [UserAuthInstance](#UserAuthInstance) instance used to invoke this API must be the one used > to subscribe to the event. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>The UserAuthInstance instance used to invoke this API must be the one used to subscribe to the event. &lt;/p&gt;
 
 **Since:** 23
 
@@ -149,7 +149,7 @@ Unsubscribes from the user authentication result. > **NOTE：**> The [UserAuthIn
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed. |
 | [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
 
 ## off_authTip
@@ -258,7 +258,7 @@ Unsubscribes from the user authentication result. This API is commonly used in t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed. |
 | [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
 
 ## Examples
@@ -363,7 +363,7 @@ Subscribes to the user authentication result. This API is used to obtain the fin
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed. |
 | [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
 
 ## on_authTip
@@ -475,7 +475,7 @@ Subscribes to the user authentication result. This API is used to obtain the fin
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed. |
 | [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
 
 ## start
@@ -506,8 +506,8 @@ Starts authentication. This API is commonly used in the following service scenar
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Possible causes: &lt;br&gt;1. No permission to access biometric. &lt;br&gt;2. No permission to start authentication from background. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Incorrect parameter types. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Possible causes: <br>1. No permission to access biometric. <br>2. No permission to start authentication from background. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Incorrect parameter types. |
 | [12500013](../errorcode-useriam.md#12500013-password-expired) | Operation failed because of PIN expired.<br>**Applicable version:** 12 and later |
 | [12500010](../errorcode-useriam.md#12500010-credential-not-enrolled) | The type of credential has not been enrolled. |
 | [12500011](../errorcode-useriam.md#12500011-switched-to-custom-authentication) | Switched to the customized authentication process. |

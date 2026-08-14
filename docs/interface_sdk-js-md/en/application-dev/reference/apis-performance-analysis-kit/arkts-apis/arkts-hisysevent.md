@@ -17,7 +17,7 @@ The **hiSysEvent** module provides the system event logging functions, such as c
 ## Modules to Import
 
 ```TypeScript
-import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
+import { hiSysEvent } from 'hiSysEvent';
 ```
 
 ## Summary

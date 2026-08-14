@@ -24,7 +24,7 @@ Moves a file to the destination path. This API returns the result synchronously.
 | --- | --- | --- | --- |
 | src | string | Yes | Application sandbox path of the file to move. |
 | dest | string | Yes | Application sandbox path of the destination file. |
-| mode | int | No | Move mode. &lt;br&gt; The value **0** means to overwrite the file with the same name in the destination directory; the value **1** means to throw an exception. The default value is **0**. |
+| mode | int | No | Move mode. <br> The value **0** means to overwrite the file with the same name in the destination directory; the value **1** means to throw an exception. The default value is **0**. |
 
 **Error codes:**
 

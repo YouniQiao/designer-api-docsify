@@ -393,7 +393,7 @@ Sets the dark/light color mode for this UIExtensionAbility. Before calling this 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorMode | ConfigurationConstant.ColorMode | Yes | Color mode. The options are as follows:&lt;br&gt; - **COLOR_MODE_DARK** : dark mode.&lt;br&gt; - **COLOR_MODE_LIGHT**: light mode.&lt;br&gt; - **COLOR_MODE_NOT_SET**: not set (following the system or application). |
+| colorMode | ConfigurationConstant.ColorMode | Yes | Color mode. The options are as follows:<br> - **COLOR_MODE_DARK** : dark mode.<br> - **COLOR_MODE_LIGHT**: light mode.<br> - **COLOR_MODE_NOT_SET**: not set (following the system or application). |
 
 **Error codes:**
 

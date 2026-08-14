@@ -37,8 +37,8 @@ function parsePkcs12(data: Uint8Array, config: Pkcs12ParsingConfig): Pkcs12Data
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| [401](../../errorcode-universal.md#401-参数检查失败) | 参数错误。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数校验失败。 |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： <br>1. 内存拷贝失败； <br>2. 系统内部出现空指针； <br>3. 获取Native对象失败或参数转换失败。 |
+| [401](../../errorcode-universal.md#401-参数检查失败) | 参数错误。可能的原因： <br>1. 必填参数未指定； <br>2. 参数类型不正确； <br>3. 参数校验失败。 |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | 内存错误。 |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
 | [19030008](../errorcode-cert.md#19030008-私钥密码错误) | 私钥密码错误。 |
@@ -209,12 +209,12 @@ function doTestParsePkcs12() {
       needsCert: false,
       needsPrivateKey: true,
       privateKeyFormat: cert.EncodingBaseFormat.DER,
-      needsOtherCerts: false,
+      needsOtherCerts: false
     };
     let p12: cert.Pkcs12Data = cert.parsePkcs12(p12_cert, conf);
     console.info('parsePKCS12 result: success.');
     if (p12.privateKey) {
-      console.info('privateKey:' + p12.privateKey.toString())
+      console.info('privateKey:' + p12.privateKey.toString());
     }
   } catch (error) {
     console.error(`parsePKCS12 failed: errCode: ${error.code}, errMsg: ${error.message}`);
@@ -386,7 +386,7 @@ function doTestParsePkcs12() {
       needsCert: false,
       needsPrivateKey: true,
       privateKeyFormat: cert.EncodingBaseFormat.DER,
-      needsOtherCerts: false,
+      needsOtherCerts: false
     };
     let p12: cert.Pkcs12Data = cert.parsePkcs12(p12_cert, conf);
     console.info("parsePKCS12 result: success.");
@@ -438,8 +438,8 @@ function parsePkcs12(data: Uint8Array, password: string): Promise<Pkcs12Data>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： &lt;br&gt;1. 内存拷贝失败； &lt;br&gt;2. 系统内部出现空指针； &lt;br&gt;3. 获取Native对象失败或参数转换失败。 |
-| [19020003](../errorcode-cert.md#19020003-参数检查失败) | 参数检查失败。可能的原因： &lt;br&gt;1. 数据长度为零或过大； &lt;br&gt;2. 密码长度过大。 |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | 运行时外部错误。可能的原因： <br>1. 内存拷贝失败； <br>2. 系统内部出现空指针； <br>3. 获取Native对象失败或参数转换失败。 |
+| [19020003](../errorcode-cert.md#19020003-参数检查失败) | 参数检查失败。可能的原因： <br>1. 数据长度为零或过大； <br>2. 密码长度过大。 |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | 内存错误。 |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | 调用三方算法库API出错。 |
 | [19030008](../errorcode-cert.md#19030008-私钥密码错误) | 私钥密码错误。 |

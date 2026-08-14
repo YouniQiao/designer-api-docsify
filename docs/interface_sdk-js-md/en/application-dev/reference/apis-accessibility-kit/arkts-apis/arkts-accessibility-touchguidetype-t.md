@@ -4,7 +4,7 @@
 type TouchGuideType = 'touchBegin' | 'touchEnd' | 'touchGuideGesture'
 ```
 
-Enumerates the touch guide event types.
+Enumerates the touch exploration event types. Touch exploration is an interaction mode in accessibility features, in which the user explores UI elements by touch without directly activating them.
 
 **Since:** 9
 
@@ -20,5 +20,5 @@ Enumerates the touch guide event types.
 | --- | --- |
 | 'touchBegin' | Start of touch. |
 | 'touchEnd' | End of touch. |
-| 'touchGuideGesture' | Event indicating the touchGuide gesture. [since 26.0.0] |
+| 'touchGuideGesture' | Represents a touch exploration gesture. [since 26.0.0] |
 

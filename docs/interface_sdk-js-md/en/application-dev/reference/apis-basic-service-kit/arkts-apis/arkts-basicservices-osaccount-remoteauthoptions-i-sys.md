@@ -17,7 +17,7 @@ Represents a set of optional parameters for remote authentication.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'osAccount';
 ```
 
 ## collectorNetworkId

@@ -17,7 +17,7 @@ Invoke options for function execution.
 ## Modules to Import
 
 ```TypeScript
-import { functionManager } from '@kit.AbilityKit';
+import { functionManager } from 'functionManager';
 ```
 
 ## context
@@ -26,7 +26,7 @@ import { functionManager } from '@kit.AbilityKit';
 context?: Context
 ```
 
-Context of the caller.&lt;br&gt;Note: Currently, only [UIAbilityContext](arkts-ability-uiabilitycontext-c.md#UIAbilityContext) is supported.
+Context of the caller.<br>Note: Currently, only [UIAbilityContext](arkts-ability-uiabilitycontext-c.md#UIAbilityContext) is supported.
 
 **Type:** [Context](arkts-ability-context-c.md)
 

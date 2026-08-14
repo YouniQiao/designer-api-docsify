@@ -154,7 +154,7 @@ customUIController?: NodeController
 
 自定义UI控制器，用于实现在画中画界面的自定义UI功能。此参数不填时，默认不使用自定义UI功能
 
-**类型：** [NodeController](../../apis-na/arkts-apis/arkts-na-nodecontroller-c.md)
+**类型：** [NodeController](arkts-arkui-nodecontroller-c.md)
 
 **起始版本：** 26.0.0
 
@@ -242,7 +242,7 @@ localStorage?: LocalStorage
 navigationId?: string
 ```
 
-navigation控件ID，不传值则默认不需要缓存页面。 1、UIAbility使用Navigation管理页面时，需要设置Navigation控件的id属性，并将该id设置给画中画控制器，确 保还原场景下能够从画中画窗口恢复到原页面。 2、UIAbility使用[Router](arkts-router.md#@ohos.router)管理页面时，无需设置navigationId。 3、UIAbility只有单页面时，无需设置navigationId，还原场景下也能够从画中画窗口恢复到原页面。
+navigation控件ID，不传值则默认不需要缓存页面。 1、UIAbility使用Navigation管理页面时，需要设置Navigation控件的id属性，并将该id设置给画中画控制器，确 保还原场景下能够从画中画窗口恢复到原页面。 2、UIAbility使用[Router](../../apis-na/arkts-apis/arkts-router.md#@ohos.router)管理页面时，无需设置navigationId。 3、UIAbility只有单页面时，无需设置navigationId，还原场景下也能够从画中画窗口恢复到原页面。
 
 **类型：** string
 

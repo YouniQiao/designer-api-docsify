@@ -59,7 +59,7 @@ let accountId: number = 100;
 try {
   securityManager.setDisallowedPermission(wantTemp, permission, disallow, accountId);
   console.info(`Succeeded in setting disallowed permission.`);
-} catch(err) {
+} catch (err) {
   console.error(`Failed to set disallowed permission. Code: ${err.code}, message: ${err.message}`);
 }
 ```

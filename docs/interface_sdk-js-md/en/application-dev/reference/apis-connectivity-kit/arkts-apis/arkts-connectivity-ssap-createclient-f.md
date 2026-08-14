@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ssap } from '@kit.ConnectivityKit';
+import { ssap } from 'ssap';
 ```
 
 ## createClient
@@ -32,7 +32,7 @@ Creates a SSAP client instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| address | string | Yes | Indicates the device address of a server &lt;br&gt;The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF. |
+| address | string | Yes | Indicates the device address of a server <br>The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF. |
 
 **Return value:**
 

@@ -15,7 +15,38 @@ Provides the capability to draw overlays. > **NOTE：**> > - The initial APIs of
 ## Modules to Import
 
 ```TypeScript
-import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CustomKeyboardContinueFeature, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from '@kit.ArkUI';
+import { AtomicServiceBar } from 'AtomicServiceBar';
+import { ComponentUtils } from 'ComponentUtils';
+import { ContextMenuController } from 'ContextMenuController';
+import { CursorController } from 'CursorController';
+import { DialogPresenter } from 'DialogPresenter';
+import { DragController } from 'DragController';
+import { Font } from 'Font';
+import { KeyboardAvoidMode } from 'KeyboardAvoidMode';
+import { MediaQuery } from 'MediaQuery';
+import { OverlayManager } from 'OverlayManager';
+import { PromptAction } from 'PromptAction';
+import { Router } from 'Router';
+import { UIContext } from 'UIContext';
+import { UIInspector } from 'UIInspector';
+import { UIObserver } from 'UIObserver';
+import { PageInfo } from 'PageInfo';
+import { SwiperDynamicSyncScene } from 'SwiperDynamicSyncScene';
+import { SwiperDynamicSyncSceneType } from 'SwiperDynamicSyncSceneType';
+import { MarqueeDynamicSyncScene } from 'MarqueeDynamicSyncScene';
+import { MarqueeDynamicSyncSceneType } from 'MarqueeDynamicSyncSceneType';
+import { MeasureUtils } from 'MeasureUtils';
+import { FrameCallback } from 'FrameCallback';
+import { OverlayManagerOptions } from 'OverlayManagerOptions';
+import { TargetInfo } from 'TargetInfo';
+import { TextMenuController } from 'TextMenuController';
+import { NodeIdentity } from 'NodeIdentity';
+import { NodeRenderState } from 'NodeRenderState';
+import { NodeRenderStateChangeCallback } from 'NodeRenderStateChangeCallback';
+import { Magnifier } from 'Magnifier';
+import { ResolvedUIContext } from 'ResolvedUIContext';
+import { TextSelectionClearPolicy } from 'TextSelectionClearPolicy';
+import { CustomKeyboardContinueFeature } from 'CustomKeyboardContinueFeature';
 ```
 
 ## addComponentContent
@@ -44,7 +75,7 @@ Adds a specified **ComponentContent** node to the **OverlayManager**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | ComponentContent | Yes | Content to add to the target node on the **OverlayManager**.&lt;br&gt; **NOTE：**&lt;br&gt; By default, the new node is centered on the page and stacked according to its stacking level. |
+| content | ComponentContent | Yes | Content to add to the target node on the **OverlayManager**.<br> **NOTE：**<br> By default, the new node is centered on the page and stacked according to its stacking level. |
 | index | number | No |  |
 
 ## addComponentContentWithOrder
@@ -73,7 +104,7 @@ Creates an overlay node with the specified display order. This API allows you to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | ComponentContent | Yes | Content to add to the target node on the **OverlayManager**. &lt;br&gt;**NOTE：**&lt;br&gt; By default, the new node is centered on the page and stacked according to its stacking level. |
+| content | ComponentContent | Yes | Content to add to the target node on the **OverlayManager**. <br>**NOTE：**<br> By default, the new node is centered on the page and stacked according to its stacking level. |
 | levelOrder | [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) | No |  |
 
 ## hideAllComponentContents
@@ -152,7 +183,7 @@ Opens an overlay with the specified ComponentContent and options.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | ComponentContent | Yes | Content to add to the new node on the OverlayManager. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;By default, the new node is centered on the page and stacked according to its stacking level. &lt;/p&gt; |
+| content | ComponentContent | Yes | Content to add to the new node on the OverlayManager. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>By default, the new node is centered on the page and stacked according to its stacking level. &lt;/p&gt; |
 | options | [OrderOverlayOptions](arkts-arkui-arkui-uicontext-orderoverlayoptions-i.md) | No |  |
 
 **Return value:**

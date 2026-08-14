@@ -58,13 +58,13 @@ Deserialize web download from typed array.
 
 | 类型 | 说明 |
 | --- | --- |
-| [WebDownloadItem](arkts-na-webview-webdownloaditem-c.md) | Deserialize the serialized data into a WebDownloadItem. |
+| [WebDownloadItem](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webdownloaditem-c.md) | Deserialize the serialized data into a WebDownloadItem. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types. &lt;br&gt;2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types. <br>2. Parameter verification failed. |
 
 ## getCurrentSpeed
 
@@ -160,7 +160,7 @@ Get last error code of the web download.
 
 | 类型 | 说明 |
 | --- | --- |
-| [WebDownloadErrorCode](arkts-na-webview-webdownloaderrorcode-e.md) | Returns the last error code. |
+| [WebDownloadErrorCode](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webdownloaderrorcode-e.md) | Returns the last error code. |
 
 ## getMethod
 
@@ -332,7 +332,7 @@ Get state of the web download.
 
 | 类型 | 说明 |
 | --- | --- |
-| [WebDownloadState](arkts-na-webview-webdownloadstate-e.md) | Returns the current download state. |
+| [WebDownloadState](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webdownloadstate-e.md) | Returns the current download state. |
 
 ## getSuggestedFileName
 
@@ -506,5 +506,5 @@ Start the web download. Used in onBeforeDownload, If you want to start the curre
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types. &lt;br&gt;2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types. <br>2. Parameter verification failed. |
 

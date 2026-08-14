@@ -15,7 +15,7 @@ Get information about network connections.
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'connection';
 ```
 
 ## connectionProperties

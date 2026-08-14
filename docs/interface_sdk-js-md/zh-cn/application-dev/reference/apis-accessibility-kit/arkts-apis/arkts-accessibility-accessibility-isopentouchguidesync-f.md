@@ -6,7 +6,7 @@
 function isOpenTouchGuideSync(): boolean
 ```
 
-是否开启了触摸浏览模式。
+查询触摸浏览模式是否开启。
 
 **起始版本：** 23
 

@@ -15,7 +15,7 @@ AVMetadataExtractor is a class for metadata retrieval. It provides APIs to obtai
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'media';
 ```
 
 ## cancelAllFetchFrames
@@ -272,7 +272,7 @@ Obtains a video thumbnail. You can set the maximum timeout interval (**timeoutMs
 | timeUs | long | Yes | Time of the video for which a thumbnail is to be obtained, in μs. |
 | options | [AVImageQueryOptions](arkts-media-media-avimagequeryoptions-e.md) | Yes | Relationship between the time passed in and the video frame. |
 | param | [PixelMapParams](arkts-media-media-pixelmapparams-i.md) | Yes | Format parameters of the thumbnail to be obtained. |
-| timeoutMs | long | Yes | Timeout interval for obtaining the thumbnail. The value range is (0, 20000], in milliseconds.&lt;br&gt;If the thumbnail is not obtained within the specified timeout interval, error code 5400104 is returned. |
+| timeoutMs | long | Yes | Timeout interval for obtaining the thumbnail. The value range is (0, 20000], in milliseconds.<br>If the thumbnail is not obtained within the specified timeout interval, error code 5400104 is returned. |
 
 **Return value:**
 
@@ -315,10 +315,10 @@ Obtains video thumbnails in batches. This API uses an asynchronous callback to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timesUs | long[] | Yes | Set of time points of all thumbnails to be obtained in the video.&lt;br&gt;The unit is microsecond (μs), and the value range of the array length is (0, 4096]. |
+| timesUs | long[] | Yes | Set of time points of all thumbnails to be obtained in the video.<br>The unit is microsecond (μs), and the value range of the array length is (0, 4096]. |
 | queryOption | [AVImageQueryOptions](arkts-media-media-avimagequeryoptions-e.md) | Yes | Relationship between the time passed in and the video frame. |
 | param | [PixelMapParams](arkts-media-media-pixelmapparams-i.md) | Yes | Format parameters of the thumbnail to be obtained. |
-| callback | [OnFrameFetched](arkts-media-media-onframefetched-t.md) | Yes | Thumbnail information to be returned and possible exception types.&lt;br&gt;For details about the exception types, see the returned error code information. |
+| callback | [OnFrameFetched](arkts-media-media-onframefetched-t.md) | Yes | Thumbnail information to be returned and possible exception types.<br>For details about the exception types, see the returned error code information. |
 
 **Error codes:**
 
@@ -356,11 +356,11 @@ Obtains video thumbnails in batches. You can set the maximum timeout interval (*
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timesUs | long[] | Yes | Set of time points of all thumbnails to be obtained in the video.&lt;br&gt;The unit is microsecond (μs), and the value range of the array length is (0, 4096]. |
+| timesUs | long[] | Yes | Set of time points of all thumbnails to be obtained in the video.<br>The unit is microsecond (μs), and the value range of the array length is (0, 4096]. |
 | queryOption | [AVImageQueryOptions](arkts-media-media-avimagequeryoptions-e.md) | Yes | Relationship between the time passed in and the video frame. |
 | param | [PixelMapParams](arkts-media-media-pixelmapparams-i.md) | Yes | Format parameters of the thumbnail to be obtained. |
-| timeoutMs | long | Yes | Timeout interval for obtaining each thumbnail. The value range is (0, 20000], in milliseconds.&lt;br&gt;If a thumbnail is not obtained within the specified timeout interval, error code 5400104 is returned. |
-| callback | [OnFrameFetched](arkts-media-media-onframefetched-t.md) | Yes | Thumbnail information to be returned and possible exception types.&lt;br&gt;For details about the exception types, see the returned error code information. |
+| timeoutMs | long | Yes | Timeout interval for obtaining each thumbnail. The value range is (0, 20000], in milliseconds.<br>If a thumbnail is not obtained within the specified timeout interval, error code 5400104 is returned. |
+| callback | [OnFrameFetched](arkts-media-media-onframefetched-t.md) | Yes | Thumbnail information to be returned and possible exception types.<br>For details about the exception types, see the returned error code information. |
 
 **Error codes:**
 
@@ -525,7 +525,7 @@ Obtains the media metadata. You can set the maximum timeout interval (**timeoutM
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timeoutMs | long | Yes | Timeout interval for obtaining media metadata. The value range is (0, 20000], in milliseconds.&lt;br&gt;If no metadata is returned within the specified timeout interval, error code 5400104 is returned. |
+| timeoutMs | long | Yes | Timeout interval for obtaining media metadata. The value range is (0, 20000], in milliseconds.<br>If no metadata is returned within the specified timeout interval, error code 5400104 is returned. |
 
 **Return value:**
 
@@ -625,7 +625,7 @@ Sets the data source for a network on-demand resource. Only network metadata ( [
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| url | string | Yes | URL of the media resource.&lt;br&gt;1. The video formats MP4, MPEG-TS, and MKV are supported.&lt; br&gt;2. The audio formats M4A, AAC, MP3, OGG, WAV, FLAC, and AMR are supported.&lt;br&gt; **Example of supported URLs**:&lt;br&gt;1. HTTP: http://xx&lt;br&gt;2. HTTPS: https://xx&lt;br&gt;Note: HLS/DASH and live streaming resources are not supported. |
+| url | string | Yes | URL of the media resource.<br>1. The video formats MP4, MPEG-TS, and MKV are supported.&lt; br&gt;2. The audio formats M4A, AAC, MP3, OGG, WAV, FLAC, and AMR are supported.<br> **Example of supported URLs**:<br>1. HTTP: http://xx<br>2. HTTPS: https://xx<br>Note: HLS/DASH and live streaming resources are not supported. |
 | headers | Record&lt;string, string&gt; | No | Custom HTTP headers for accessing the network resource. The default value is empty. |
 
 ## dataSrc

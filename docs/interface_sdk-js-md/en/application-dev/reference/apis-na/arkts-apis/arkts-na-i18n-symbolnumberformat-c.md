@@ -69,8 +69,8 @@ Parse a localized string to number object. For example, "123,456" will parse to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | Localized string to be parse. &lt;br&gt;Text to be parsed |
-| lenientMode | boolean | Yes | Indicates whether parsing allows any non-compliant localized strings. For example, "1,23,456" is a invalid thousand separator number string, it will parse failure when lenientMode is false, and will parse success with value 123456 when lenientMode is true.it's better set to false, ensure the data is not polluted. &lt;br&gt;Whether to use loose rules |
+| text | string | Yes | Localized string to be parse. <br>Text to be parsed |
+| lenientMode | boolean | Yes | Indicates whether parsing allows any non-compliant localized strings. For example, "1,23,456" is a invalid thousand separator number string, it will parse failure when lenientMode is false, and will parse success with value 123456 when lenientMode is true.it's better set to false, ensure the data is not polluted. <br>Whether to use loose rules |
 
 **Return value:**
 

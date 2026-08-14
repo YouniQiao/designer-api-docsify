@@ -176,7 +176,7 @@ space?: double | string
 spaceWidth?: Dimension
 ```
 
-列表项间距。只作用于ListItem与ListItem之间，不作用于header与ListItem、footer与ListItem之间。 &lt;p&gt;&lt;strong&gt;说明：&lt;/strong&gt; &lt;br/&gt;设置为负数或者大于等于List内容区长度时，按默认值显示。 &lt;br/&gt;如果同时设置了spaceWidth和space，则spaceWidth优先生效。当spaceWidth为undefined或null时，space生效。 &lt;/p&gt;。
+列表项间距。只作用于ListItem与ListItem之间，不作用于header与ListItem、footer与ListItem之间。 &lt;p&gt;&lt;strong&gt;说明：&lt;/strong&gt; <br/>设置为负数或者大于等于List内容区长度时，按默认值显示。 <br/>如果同时设置了spaceWidth和space，则spaceWidth优先生效。当spaceWidth为undefined或null时，space生效。 &lt;/p&gt;。
 
 **类型：** [Dimension](../../apis-arkui/arkts-apis/arkts-arkui-dimension-t.md)
 

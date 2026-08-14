@@ -6,7 +6,7 @@
 const audioBalance: Config<double>
 ```
 
-Audio balance for the left and right audio channels. The value ranges from -1.0 to 1.0. Default value: **0.0**
+Indicates the configuration for left and right channel volume balance. **-1.0** indicates output from the left channel only; **0.0** indicates balanced output from both channels; **1.0** indicates output from the right channel only. Intermediate values represent a linear ratio of the left and right channel volumes. The value ranges from -1. 0 to 1.0. The default value is **0.0**.
 
 **Since:** 23
 
@@ -26,7 +26,7 @@ Audio balance for the left and right audio channels. The value ranges from -1.0 
 const audioMono: Config<boolean>
 ```
 
-Whether to enable mono audio. The value **true** indicates that mono audio is enabled, and **false** indicates the opposite. Default value: **false**
+Indicates the mono audio feature status. The value **true** indicates that the mono audio feature is enabled, and **false** indicates that it is disabled. The default value is **false**.
 
 **Since:** 23
 
@@ -66,7 +66,7 @@ Length of time required for a click.
 const daltonizationState: Config<boolean>
 ```
 
-Whether to enable daltonization. It must be used with **daltonizationColorFilter**. The value **true** indicates that daltonization is enabled, and **false** indicates the opposite. Default value: **false**
+Indicates the color correction feature status. Used together with daltonizationColorFilter. The value **true** indicates that color correction is enabled, and **false** indicates that it is disabled. The default value is **false**.
 
 **Since:** 23
 
@@ -106,7 +106,7 @@ Whether to ignore repeated clicks. This parameter must be used together with **r
 const repeatClickInterval: Config<RepeatClickInterval>
 ```
 
-Interval between repeated clicks.
+Indicates the configuration for the interval of ignoring repeated clicks. Used together with ignoreRepeatClick. This configuration takes effect only when ignoreRepeatClick is set to **true**. The default value is Shortest, indicating the shortest interval.
 
 **Since:** 23
 
@@ -146,7 +146,7 @@ Indicates the configuration of screen magnification.
 const shortkeyMultiTargets: Config<Array<string>>
 ```
 
-List of target applications for the accessibility shortcut keys. The value format is ['bundleName/abilityName'].
+Indicates the multi-target list configuration of the accessibility extension shortcut key. The value is the name of the accessibility extension app, in the format ['bundleName/abilityName']. If the format is incorrect or the name is invalid, the setting does not take effect.
 
 **Since:** 23
 

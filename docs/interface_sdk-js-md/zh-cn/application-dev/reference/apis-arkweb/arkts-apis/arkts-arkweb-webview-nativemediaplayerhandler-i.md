@@ -1,6 +1,6 @@
 # NativeMediaPlayerHandler
 
-[CreateNativeMediaPlayerCallback](../../apis-na/arkts-apis/arkts-na-webview-createnativemediaplayercallback-t.md#CreateNativeMediaPlayerCallback)回调函数的参数。应用通过该对象，将 播放器的状态通知给 ArkWeb 内核。 > **说明：** > > - 本Interface首批接口从API version 12开始支持。 > > - 示例效果请以真机运行为准。
+[CreateNativeMediaPlayerCallback](arkts-arkweb-webview-createnativemediaplayercallback-t.md#CreateNativeMediaPlayerCallback)回调函数的参数。应用通过该对象，将 播放器的状态通知给 ArkWeb 内核。 > **说明：** > > - 本Interface首批接口从API version 12开始支持。 > > - 示例效果请以真机运行为准。
 
 **起始版本：** 12
 
@@ -36,7 +36,7 @@ handleBufferedEndTimeChanged(bufferedEndTime: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bufferedEndTime | number | 是 | 媒体缓冲的时长。&lt;br&gt;单位：秒，取值范围：[0, duration] |
+| bufferedEndTime | number | 是 | 媒体缓冲的时长。<br>单位：秒，取值范围：[0, duration] |
 
 ## handleDurationChanged
 
@@ -62,7 +62,7 @@ handleDurationChanged(duration: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| duration | number | 是 | 媒体的总时长。&lt;br&gt;单位：秒，取值范围：[0, +∞) |
+| duration | number | 是 | 媒体的总时长。<br>单位：秒，取值范围：[0, +∞) |
 
 ## handleEnded
 
@@ -108,7 +108,7 @@ handleError(error: MediaError, errorMessage: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| error | [MediaError](../../apis-na/arkts-apis/arkts-na-webview-mediaerror-e.md) | 是 | 错误类型。 |
+| error | [MediaError](arkts-arkweb-webview-mediaerror-e.md) | 是 | 错误类型。 |
 | errorMessage | string | 是 | 错误的详细描述。 |
 
 ## handleFullscreenChanged
@@ -135,7 +135,7 @@ handleFullscreenChanged(fullscreen: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fullscreen | boolean | 是 | 是否全屏。&lt;br&gt;true表示全屏，false表示未全屏。 |
+| fullscreen | boolean | 是 | 是否全屏。<br>true表示全屏，false表示未全屏。 |
 
 ## handleMutedChanged
 
@@ -161,7 +161,7 @@ handleMutedChanged(muted: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| muted | boolean | 是 | 当前播放器是否静音。&lt;br&gt;true表示当前播放器静音，false表示当前播放器未静音。 |
+| muted | boolean | 是 | 当前播放器是否静音。<br>true表示当前播放器静音，false表示当前播放器未静音。 |
 
 ## handleNetworkStateChanged
 
@@ -239,7 +239,7 @@ handleReadyStateChanged(state: ReadyState): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| state | [ReadyState](../../apis-na/arkts-apis/arkts-na-webview-readystate-e.md) | 是 | 播放器的缓存状态。 |
+| state | [ReadyState](arkts-arkweb-webview-readystate-e.md) | 是 | 播放器的缓存状态。 |
 
 ## handleSeekFinished
 
@@ -305,7 +305,7 @@ handleStatusChanged(status: PlaybackStatus): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| status | [PlaybackStatus](../../apis-na/arkts-apis/arkts-na-webview-playbackstatus-e.md) | 是 | 播放器的播放状态。 |
+| status | [PlaybackStatus](arkts-arkweb-webview-playbackstatus-e.md) | 是 | 播放器的播放状态。 |
 
 ## handleTimeUpdate
 
@@ -331,7 +331,7 @@ handleTimeUpdate(currentPlayTime: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| currentPlayTime | number | 是 | 当前播放时间。&lt;br&gt;单位：秒，取值范围：[0, duration] |
+| currentPlayTime | number | 是 | 当前播放时间。<br>单位：秒，取值范围：[0, duration] |
 
 ## handleVideoSizeChanged
 

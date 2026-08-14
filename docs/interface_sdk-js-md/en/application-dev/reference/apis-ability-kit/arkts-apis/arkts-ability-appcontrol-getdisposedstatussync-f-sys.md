@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { appControl } from '@kit.AbilityKit';
+import { appControl } from 'appControl';
 ```
 
 ## getDisposedStatusSync
@@ -32,7 +32,7 @@ Obtains the disposed status of an application. This API returns the result synch
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appId | string | Yes | ID of the target application.&lt;br&gt; **appId** is the unique identifier of an application and is determined by the bundle name and signature information of the application. For details about how to obtain **appId**, see How do I obtain appId from application information . |
+| appId | string | Yes | ID of the target application.<br> **appId** is the unique identifier of an application and is determined by the bundle name and signature information of the application. For details about how to obtain **appId**, see How do I obtain appId from application information . |
 
 **Return value:**
 

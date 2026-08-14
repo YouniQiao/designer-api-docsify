@@ -15,7 +15,7 @@ The MediaSourceLoadingRequest class defines a loading request object. Applicatio
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'media';
 ```
 
 ## finishLoading
@@ -71,13 +71,13 @@ Sends data to the player.
 | --- | --- | --- | --- |
 | uuid | number | Yes | ID for the resource handle. The source is [SourceOpenCallback](arkts-media-media-sourceopencallback-t.md#SourceOpenCallback). |
 | offset | number | Yes | Offset of the current media data relative to the start of the resource. The value cannot be less than 0. |
-| buffer | ArrayBuffer | Yes | Media data sent to the player.&lt;br&gt;**Note：**: Do not transmit irrelevant data, as it can affect normal data parsing and playback. |
+| buffer | ArrayBuffer | Yes | Media data sent to the player.<br>**Note：**: Do not transmit irrelevant data, as it can affect normal data parsing and playback. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Number of bytes received by the server. &lt;br&gt;- A return value less than 0 indicates failure. &lt;br&gt;- A return value of -2 indicates that the player no longer needs the current data, and the client should stop the current read process. &lt;br&gt;- A return value of -3 indicates that the player's buffer is full, and the client should wait for the next read. |
+| number | Number of bytes received by the server. <br>- A return value less than 0 indicates failure. <br>- A return value of -2 indicates that the player no longer needs the current data, and the client should stop the current read process. <br>- A return value of -3 indicates that the player's buffer is full, and the client should wait for the next read. |
 
 ## respondData
 
@@ -136,7 +136,7 @@ Sends response header information to the player. This API must be called before 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uuid | long | Yes | ID for the resource handle. The source is [SourceOpenCallback](arkts-media-media-sourceopencallback-t.md#SourceOpenCallback). |
-| header | Record&lt;string, string&gt; | No | Header information in the HTTP response. The application can intersect the header fields with the fields supported by the underlying layer for parsing or directly pass in all corresponding header information.&lt;br&gt; - The following fields need to be parsed by the underlying player: Transfer-Encoding, Location, Content-Type, Content-Range, Content-Encode, Accept-Ranges, and content-length. |
+| header | Record&lt;string, string&gt; | No | Header information in the HTTP response. The application can intersect the header fields with the fields supported by the underlying layer for parsing or directly pass in all corresponding header information.<br> - The following fields need to be parsed by the underlying player: Transfer-Encoding, Location, Content-Type, Content-Range, Content-Encode, Accept-Ranges, and content-length. |
 | redirectUrl | string | No | Redirect URL in the HTTP response. |
 
 ## header

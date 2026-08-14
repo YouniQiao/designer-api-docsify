@@ -20,7 +20,7 @@
 condition?: string | null | undefined
 ```
 
-事件的额外参数条件，格式：{"version":"V1","condition":{"and":[{"param":"参数","op":"操作符","value":"比较值"}]}}。 参数：指定事件参数的键值。 操作符支持：=、!=、&lt;、<=、>和&gt;&lt;=、&gt;和>=。 支持在“and”数组中配置多个条件，查询结果取交集。
+事件的额外参数条件，格式：{"version":"V1","condition":{"and":[{"param":"参数","op":"操作符","value":"比较值"}]}}。 参数：指定事件参数的键值。 操作符支持：=、!=、&lt;、<=、>和&gt;=。 支持在“and”数组中配置多个条件，查询结果取交集。
 
 **类型：** string \| null \| undefined
 

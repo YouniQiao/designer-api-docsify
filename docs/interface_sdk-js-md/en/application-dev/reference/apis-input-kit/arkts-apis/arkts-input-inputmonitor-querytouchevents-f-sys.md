@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputMonitor } from '@kit.InputKit';
+import { inputMonitor } from 'inputMonitor';
 ```
 
 ## queryTouchEvents
@@ -38,7 +38,7 @@ Queries recent touchscreen input events. A maximum of 100 events can be queried.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[TouchEvent](arkts-input-multimodalinput-touchevent-touchevent-i.md)&gt;&gt; | Promise used to return the queried touchscreen input events. It contains the following valid information; all other information is invalid:&lt;br/&gt;- **actionTime**: Time when the touchscreen input event occurred, in microseconds (μs) since system startup.&lt;br/&gt;- [SourceType]{ |
+| Promise&lt;Array&lt;[TouchEvent](arkts-input-multimodalinput-touchevent-touchevent-i.md)&gt;&gt; | Promise used to return the queried touchscreen input events. It contains the following valid information; all other information is invalid:<br/>- **actionTime**: Time when the touchscreen input event occurred, in microseconds (μs) since system startup.<br/>- [SourceType]{ |
 
 **Error codes:**
 

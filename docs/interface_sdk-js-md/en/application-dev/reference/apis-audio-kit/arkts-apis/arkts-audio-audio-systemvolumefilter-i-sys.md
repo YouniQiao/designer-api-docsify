@@ -17,7 +17,7 @@ Describes the system volume filter.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'audio';
 ```
 
 ## uid

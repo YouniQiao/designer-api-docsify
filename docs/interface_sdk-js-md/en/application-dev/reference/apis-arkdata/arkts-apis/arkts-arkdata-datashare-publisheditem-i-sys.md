@@ -17,7 +17,7 @@ Defines the data to publish.
 ## Modules to Import
 
 ```TypeScript
-import { dataShare } from '@kit.ArkData';
+import { dataShare } from 'dataShare';
 ```
 
 ## data

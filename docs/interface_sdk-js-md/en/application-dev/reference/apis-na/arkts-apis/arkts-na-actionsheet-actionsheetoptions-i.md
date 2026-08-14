@@ -18,7 +18,7 @@ The options of ActionSheet.
 alignment?: DialogAlignment
 ```
 
-Alignment mode of the dialog box in the vertical direction. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;If showInSubWindow is set to true in UIExtension, the dialog box is aligned with the host window based on UIExtension. &lt;/p&gt;
+Alignment mode of the dialog box in the vertical direction. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>If showInSubWindow is set to true in UIExtension, the dialog box is aligned with the host window based on UIExtension. &lt;/p&gt;
 
 **Type:** [DialogAlignment](arkts-na-alertdialog-dialogalignment-e.md)
 
@@ -66,7 +66,7 @@ Whether to close the dialog box when the overlay is clicked.
 backgroundBlurStyle?: BlurStyle
 ```
 
-Background blur style of the dialog box. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;Setting this parameter to BlurStyle.NONE disables the background blur. When backgroundBlurStyle is set to a value other than NONE, do not set backgroundColor. If you do, the color display may not produce the expected visual effect. &lt;/p&gt;
+Background blur style of the dialog box. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>Setting this parameter to BlurStyle.NONE disables the background blur. When backgroundBlurStyle is set to a value other than NONE, do not set backgroundColor. If you do, the color display may not produce the expected visual effect. &lt;/p&gt;
 
 **Type:** [BlurStyle](../../apis-arkui/arkts-components/arkts-arkui-blurstyle-e.md)
 
@@ -112,7 +112,7 @@ Defines the actionSheet's background blur style with options
 backgroundColor?: ResourceColor
 ```
 
-Background color of the dialog box. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;When backgroundColor is set to a non-transparent color, backgroundBlurStyle must be set to BlurStyle.NONE; otherwise, the color display may not meet the expected effect. &lt;/p&gt;
+Background color of the dialog box. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>When backgroundColor is set to a non-transparent color, backgroundBlurStyle must be set to BlurStyle.NONE; otherwise, the color display may not meet the expected effect. &lt;/p&gt;
 
 **Type:** [ResourceColor](../../apis-arkui/arkts-apis/arkts-arkui-resourcecolor-t.md)
 
@@ -158,7 +158,7 @@ Defines the actionSheet's background effect with options
 borderColor?: ResourceColor | EdgeColors | LocalizedEdgeColors
 ```
 
-Border color of the dialog box. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;When borderColor is of type LocalizedEdgeColors, the layout order can be dynamically adjusted based on the user's language settings. &lt;/p&gt;
+Border color of the dialog box. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>When borderColor is of type LocalizedEdgeColors, the layout order can be dynamically adjusted based on the user's language settings. &lt;/p&gt;
 
 **Type:** [ResourceColor](../../apis-arkui/arkts-apis/arkts-arkui-resourcecolor-t.md) \| [EdgeColors](../../apis-arkui/arkts-apis/arkts-arkui-edgecolors-t.md) \| [LocalizedEdgeColors](../../apis-arkui/arkts-apis/arkts-arkui-localizededgecolors-i.md)
 
@@ -466,7 +466,7 @@ Determine the display order of the dialog.
 levelUniqueId?: int
 ```
 
-Unique ID of the node under the display level for the page-level dialog box. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;This parameter takes effect only when levelMode is set to LevelMode.EMBEDDED. &lt;/p&gt;
+Unique ID of the node under the display level for the page-level dialog box. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>This parameter takes effect only when levelMode is set to LevelMode.EMBEDDED. &lt;/p&gt;
 
 **Type:** int
 
@@ -488,7 +488,7 @@ Unique ID of the node under the display level for the page-level dialog box. &lt
 maskRect?: Rectangle
 ```
 
-Mask area of the dialog box. Events outside the mask area are transparently transmitted, and events within the mask area are not. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;maskRect does not take effect when showInSubWindow is set to true. &lt;/p&gt;
+Mask area of the dialog box. Events outside the mask area are transparently transmitted, and events within the mask area are not. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>maskRect does not take effect when showInSubWindow is set to true. &lt;/p&gt;
 
 **Type:** [Rectangle](../../apis-arkui/arkts-components/arkts-arkui-rectangle-i.md)
 
@@ -534,7 +534,7 @@ Content of the dialog box.
 offset?: ActionSheetOffset
 ```
 
-Offset of the dialog box relative to the alignment position. &lt;br&gt;When alignment is set to Top, TopStart, or TopEnd: {dx: 0,dy: "40vp"} &lt;br&gt;When alignment is set to any other value: {dx: 0,dy: "-40vp"}
+Offset of the dialog box relative to the alignment position. <br>When alignment is set to Top, TopStart, or TopEnd: {dx: 0,dy: "40vp"} <br>When alignment is set to any other value: {dx: 0,dy: "-40vp"}
 
 **Type:** [ActionSheetOffset](arkts-na-actionsheet-actionsheetoffset-i.md)
 
@@ -712,7 +712,7 @@ Options in the dialog box. Each option supports the image, text, and callback.
 showInSubWindow?: boolean
 ```
 
-Whether to show the dialog box in a subwindow when the dialog box needs to be displayed outside the main window. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;A dialog box whose showInSubWindow attribute is true cannot trigger the display of another dialog box whose showInSubWindow attribute is also true. &lt;/p&gt;
+Whether to show the dialog box in a subwindow when the dialog box needs to be displayed outside the main window. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>A dialog box whose showInSubWindow attribute is true cannot trigger the display of another dialog box whose showInSubWindow attribute is also true. &lt;/p&gt;
 
 **Type:** boolean
 

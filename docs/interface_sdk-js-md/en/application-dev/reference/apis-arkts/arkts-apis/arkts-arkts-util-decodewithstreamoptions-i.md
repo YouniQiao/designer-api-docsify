@@ -15,7 +15,7 @@ Defines whether decoding follows data blocks.
 ## Modules to Import
 
 ```TypeScript
-import { util } from '@kit.ArkTS';
+import { util } from 'util';
 ```
 
 ## stream

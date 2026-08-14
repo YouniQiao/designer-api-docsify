@@ -17,7 +17,7 @@ Defines the information of a word selection event.
 ## Modules to Import
 
 ```TypeScript
-import { selectionManager } from '@kit.BasicServicesKit';
+import { selectionManager } from 'selectionManager';
 ```
 
 ## bundleName

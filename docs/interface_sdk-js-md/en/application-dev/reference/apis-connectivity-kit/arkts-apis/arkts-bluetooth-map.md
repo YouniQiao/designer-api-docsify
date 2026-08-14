@@ -15,7 +15,7 @@ Provides methods to accessing bluetooth MAP(Message Access Profile)-related capa
 ## Modules to Import
 
 ```TypeScript
-import { map } from '@kit.ConnectivityKit';
+import { map } from 'map';
 ```
 
 ## Summary

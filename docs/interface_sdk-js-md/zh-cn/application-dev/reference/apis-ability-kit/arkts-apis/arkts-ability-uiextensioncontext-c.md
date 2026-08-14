@@ -393,7 +393,7 @@ setColorMode(colorMode: ConfigurationConstant.ColorMode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| colorMode | ConfigurationConstant.ColorMode | 是 | 设置颜色模式，包括：&lt;br&gt; - COLOR_MODE_DARK：深色模式 &lt;br&gt; - COLOR_MODE_LIGHT：浅色模 式 &lt;br&gt; - COLOR_MODE_NOT_SET：不设置（跟随系统或应用） |
+| colorMode | ConfigurationConstant.ColorMode | 是 | 设置颜色模式，包括：<br> - COLOR_MODE_DARK：深色模式 <br> - COLOR_MODE_LIGHT：浅色模 式 <br> - COLOR_MODE_NOT_SET：不设置（跟随系统或应用） |
 
 **错误码：**
 

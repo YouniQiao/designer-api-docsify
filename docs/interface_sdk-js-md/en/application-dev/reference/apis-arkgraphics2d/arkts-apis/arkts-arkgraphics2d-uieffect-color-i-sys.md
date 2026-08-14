@@ -17,7 +17,7 @@ RGBA color description.
 ## Modules to Import
 
 ```TypeScript
-import { uiEffect } from '@kit.ArkGraphics2D';
+import { uiEffect } from 'uiEffect';
 ```
 
 ## alpha

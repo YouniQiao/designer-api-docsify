@@ -17,7 +17,7 @@ Provides APIs for basic image operations, including obtaining image information 
 ## Modules to Import
 
 ```TypeScript
-import { sendableImage } from '@kit.ImageKit';
+import { sendableImage } from 'sendableImage';
 ```
 
 ## getComponent

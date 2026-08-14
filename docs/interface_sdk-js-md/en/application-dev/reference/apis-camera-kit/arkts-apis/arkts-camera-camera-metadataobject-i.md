@@ -15,7 +15,7 @@ Describes the camera metadata, which is the data source of [CameraInput](arkts-c
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'camera';
 ```
 
 ## boundingBox

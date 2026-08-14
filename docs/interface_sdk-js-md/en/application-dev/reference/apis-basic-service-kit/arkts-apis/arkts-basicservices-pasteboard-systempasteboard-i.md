@@ -15,7 +15,7 @@ Provides **SystemPasteboard** APIs. Before calling any **SystemPasteboard** API,
 ## Modules to Import
 
 ```TypeScript
-import { pasteboard } from '@kit.BasicServicesKit';
+import { pasteboard } from 'pasteboard';
 ```
 
 ## clear
@@ -1235,7 +1235,7 @@ Remove a callback invoked when pasteboard content changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [UpdateCallback](arkts-basicservices-pasteboard-updatecallback-t.md) | No | the callback to remove. If this parameter is not filled in, it indicates that all callbacks for this application will be cleared. Otherwise, it indicates that the specified callback will be cleared. &lt;br&gt;Default value: Clear all callbacks of this application. |
+| callback | [UpdateCallback](arkts-basicservices-pasteboard-updatecallback-t.md) | No | the callback to remove. If this parameter is not filled in, it indicates that all callbacks for this application will be cleared. Otherwise, it indicates that the specified callback will be cleared. <br>Default value: Clear all callbacks of this application. |
 
 ## off_update
 

@@ -435,8 +435,8 @@ export default class EntryAbility extends EmbeddedUIExtensionAbility {
         }).catch((err: BusinessError) => {
           console.error(`Failed to occupy events. Cause code: ${err.code}, message: ${err.message}`);
         });
-      } catch (e) {
-        console.error(`Occupy events got exception code: ${e.code}, message: ${e.message}`);
+      } catch (err) {
+        console.error(`Occupy events got exception code: ${err.code}, message: ${err.message}`);
       }
     }, 500);
   }
@@ -862,7 +862,7 @@ Subscribes to changes in the position and size of the component (EmbeddedCompone
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| reasons | int | 是 | The reasons of component rect change. &lt;br&gt;取值范围为全体整数。 |
+| reasons | int | 是 | The reasons of component rect change. <br>取值范围为全体整数。 |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;RectChangeOptions&gt; | 是 | Callback used to return the RectChangeOptions. |
 
 **错误码：**
@@ -870,7 +870,7 @@ Subscribes to changes in the position and size of the component (EmbeddedCompone
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-窗口状态异常) | Abnormal state. Possible causes: &lt;br&gt; 1. The listening type is not supported. &lt;br&gt; 2. The listener has been registered. &lt;br&gt; 3. The UIExtension window proxy is abnormal. |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) | Abnormal state. Possible causes: <br> 1. The listening type is not supported. <br> 2. The listener has been registered. <br> 3. The UIExtension window proxy is abnormal. |
 
 ## 示例
 

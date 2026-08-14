@@ -15,7 +15,8 @@ getInfo interface
 ## Modules to Import
 
 ```TypeScript
-import { DeviceResponse, GetDeviceOptions } from '@kit.BasicServicesKit';
+import { DeviceResponse } from 'DeviceResponse';
+import { GetDeviceOptions } from 'GetDeviceOptions';
 ```
 
 ## getInfo

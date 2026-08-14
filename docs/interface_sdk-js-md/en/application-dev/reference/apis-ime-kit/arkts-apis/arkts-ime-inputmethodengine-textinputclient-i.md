@@ -17,7 +17,7 @@ In the following API examples, you must first use on('inputStart') to obtain a *
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from '@kit.IMEKit';
+import { inputMethodEngine } from 'inputMethodEngine';
 ```
 
 ## deleteBackward
@@ -583,7 +583,7 @@ Sends the function key. This API uses an asynchronous callback to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| action | number | Yes | Action of the function key. &lt;br&gt;- **0**: invalid key. &lt;br&gt;- **1**: confirm key (Enter key). |
+| action | number | Yes | Action of the function key. <br>- **0**: invalid key. <br>- **1**: confirm key (Enter key). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true**. Otherwise, **err** is an error object. |
 
 ## Examples
@@ -629,7 +629,7 @@ Sends the function key. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| action | number | Yes | Action of the function key. &lt;br&gt;**0**: invalid key. &lt;br&gt;**1**: confirm key (Enter key). |
+| action | number | Yes | Action of the function key. <br>**0**: invalid key. <br>**1**: confirm key (Enter key). |
 
 **Return value:**
 

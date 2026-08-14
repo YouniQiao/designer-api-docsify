@@ -3,7 +3,14 @@
 ## Modules to Import
 
 ```TypeScript
-import { OnSelectedIndexesChange, TabSegmentButtonV2, SegmentButtonV2Items, MultiCapsuleSegmentButtonV2, OnSelectedIndexChange, SegmentButtonV2ItemOptions, SegmentButtonV2Item, CapsuleSegmentButtonV2 } from '@kit.ArkUI';
+import { SegmentButtonV2ItemOptions } from 'SegmentButtonV2ItemOptions';
+import { OnSelectedIndexChange } from 'OnSelectedIndexChange';
+import { OnSelectedIndexesChange } from 'OnSelectedIndexesChange';
+import { SegmentButtonV2Item } from 'SegmentButtonV2Item';
+import { SegmentButtonV2Items } from 'SegmentButtonV2Items';
+import { TabSegmentButtonV2 } from 'TabSegmentButtonV2';
+import { CapsuleSegmentButtonV2 } from 'CapsuleSegmentButtonV2';
+import { MultiCapsuleSegmentButtonV2 } from 'MultiCapsuleSegmentButtonV2';
 ```
 
 ## Summary

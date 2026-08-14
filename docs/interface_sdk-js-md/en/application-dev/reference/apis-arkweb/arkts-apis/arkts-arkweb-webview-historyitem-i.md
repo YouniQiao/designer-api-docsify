@@ -15,7 +15,7 @@ Provides information for history item in BackForwardList.
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'webview';
 ```
 
 ## historyRawUrl

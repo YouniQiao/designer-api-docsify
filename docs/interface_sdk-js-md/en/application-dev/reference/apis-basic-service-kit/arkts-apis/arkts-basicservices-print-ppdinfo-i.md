@@ -15,7 +15,7 @@ defines ppd info.
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'print';
 ```
 
 ## manufacturer

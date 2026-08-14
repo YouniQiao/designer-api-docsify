@@ -15,7 +15,7 @@ Defines a contact's name.
 ## Modules to Import
 
 ```TypeScript
-import { contact } from '@kit.ContactsKit';
+import { contact } from 'contact';
 ```
 
 ## familyName

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sim } from '@kit.TelephonyKit';
+import { sim } from 'sim';
 ```
 
 ## setSimLabelIndex
@@ -32,7 +32,7 @@ Set the SIM card labelIndex.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| simId | int | Yes | Indicates the sim Id for card from sim account information. &lt;br&gt;Value range:[1,500] |
+| simId | int | Yes | Indicates the sim Id for card from sim account information. <br>Value range:[1,500] |
 | simLabelIndex | int | Yes | Indicates the simlabel index for card. |
 
 **Return value:**

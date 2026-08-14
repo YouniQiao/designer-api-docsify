@@ -17,7 +17,7 @@ Describes the Gatt profile connection state.
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from '@kit.ConnectivityKit';
+import { bluetooth } from 'bluetooth';
 ```
 
 ## deviceId

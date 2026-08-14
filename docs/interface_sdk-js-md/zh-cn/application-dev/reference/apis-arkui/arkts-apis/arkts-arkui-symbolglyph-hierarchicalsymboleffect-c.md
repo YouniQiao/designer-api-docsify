@@ -38,7 +38,7 @@ HierarchicalSymbolEffect的构造函数，层级动效。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fillStyle | [EffectFillStyle](arkts-arkui-symbolglyph-effectfillstyle-e.md) | 否 | 动效模式。&lt;br/&gt;默认值：EffectFillStyle.CUMULATIVE |
+| fillStyle | [EffectFillStyle](arkts-arkui-symbolglyph-effectfillstyle-e.md) | 否 | 动效模式。<br/>默认值：EffectFillStyle.CUMULATIVE |
 
 ## fillStyle
 

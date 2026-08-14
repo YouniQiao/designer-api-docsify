@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sendableContextManager } from '@kit.AbilityKit';
+import { sendableContextManager } from 'sendableContextManager';
 ```
 
 ## setEventHubMultithreadingEnabled
@@ -33,7 +33,7 @@ Enables the cross-thread data transfer feature of [EventHub](arkts-ability-event
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | common.Context | Yes | Context object. For details about the serialization data types supported by Eventhub, see Sequenceable Data Types. The data size cannot exceed 16 MB. |
-| enabled | boolean | Yes | Whether to enable the cross-thread data transfer feature.&lt;br&gt;- **true**: The cross-thread data transfer feature is enabled, and data is passed by reference.&lt;br&gt;- **false**: The cross-thread data transfer feature is disabled. Data is passed through serialization, which means that the data of the sender thread is independent of that of the receiver thread. |
+| enabled | boolean | Yes | Whether to enable the cross-thread data transfer feature.<br>- **true**: The cross-thread data transfer feature is enabled, and data is passed by reference.<br>- **false**: The cross-thread data transfer feature is disabled. Data is passed through serialization, which means that the data of the sender thread is independent of that of the receiver thread. |
 
 ## Examples
 

@@ -17,7 +17,7 @@ Defines the resuming download options, which are used to specify the network typ
 ## Modules to Import
 
 ```TypeScript
-import { update } from '@kit.BasicServicesKit';
+import { update } from 'update';
 ```
 
 ## allowNetwork

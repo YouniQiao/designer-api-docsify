@@ -15,7 +15,7 @@ xts_device_attest authResult information
 ## Modules to Import
 
 ```TypeScript
-import { deviceAttest } from '@kit.BasicServicesKit';
+import { deviceAttest } from 'deviceAttest';
 ```
 
 ## Summary

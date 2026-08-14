@@ -22,7 +22,7 @@ businessType: BusinessType
 
 升级业务类型。
 
-**类型：** [BusinessType](arkts-basicservices-update-businesstype-i-sys.md)
+**类型：** BusinessType
 
 **起始版本：** 23
 

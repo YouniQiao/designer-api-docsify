@@ -15,7 +15,7 @@ This interface provides APIs for audio monitoring. Before calling any API in Aud
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'audio';
 ```
 
 ## enable
@@ -79,7 +79,7 @@ Gets the current equalizer preset. The default equalizer preset of audio loopbac
 
 | Type | Description |
 | --- | --- |
-| [AudioLoopbackEqualizerPreset](arkts-audio-audio-audioloopbackequalizerpreset-e.md) | Equalizer type. &lt;br&gt;If no equalizer type has been set, the default equalizer type is **FULL**. |
+| [AudioLoopbackEqualizerPreset](arkts-audio-audio-audioloopbackequalizerpreset-e.md) | Equalizer type. <br>If no equalizer type has been set, the default equalizer type is **FULL**. |
 
 ## getPreferredDevicePair
 
@@ -129,7 +129,7 @@ Get the current reverberation. The default reverberation preset of audio loopbac
 
 | Type | Description |
 | --- | --- |
-| [AudioLoopbackReverbPreset](arkts-audio-audio-audioloopbackreverbpreset-e.md) | Reverb mode. &lt;br&gt;If no reverb mode has been set, the default reverb mode is **THEATER**. |
+| [AudioLoopbackReverbPreset](arkts-audio-audio-audioloopbackreverbpreset-e.md) | Reverb mode. <br>If no reverb mode has been set, the default reverb mode is **THEATER**. |
 
 ## getStatus
 

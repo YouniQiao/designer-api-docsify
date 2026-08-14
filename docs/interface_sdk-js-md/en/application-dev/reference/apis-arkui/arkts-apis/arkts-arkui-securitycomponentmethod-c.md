@@ -74,7 +74,7 @@ Provides an accessibility description for the component. You can set detailed te
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| description | string \| Resource | Yes | Accessibility description for the component. Provides details about the component's operation, helping users understand what the current action does and its potential consequences. When the component is selected, if it has both text attributes and an accessibility description, the text content is announced first, followed by the accessibility description. &lt;br&gt;The default value is an empty string. |
+| description | string \| Resource | Yes | Accessibility description for the component. Provides details about the component's operation, helping users understand what the current action does and its potential consequences. When the component is selected, if it has both text attributes and an accessibility description, the text content is announced first, followed by the accessibility description. <br>The default value is an empty string. |
 
 **Return value:**
 
@@ -176,7 +176,7 @@ Sets the alignment of the icon and text on the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| alignType | Alignment | Yes | Alignment of the icon and text within the security component. The icon and text are aligned as a unit within the component's background area. The alignment is applied based on the **alignType** value after [padding](#padding) takes effect, which also affects the visual result. &lt;br&gt;Default value: Alignment.Center. |
+| alignType | Alignment | Yes | Alignment of the icon and text within the security component. The icon and text are aligned as a unit within the component's background area. The alignment is applied based on the **alignType** value after [padding](#padding) takes effect, which also affects the visual result. <br>Default value: Alignment.Center. |
 
 **Return value:**
 
@@ -278,7 +278,7 @@ Sets the background color of the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ResourceColor | Yes | Background color of the security component. &lt;br&gt;Default value: \\$r('sys.color.icon_emphasize'). &lt;br&gt;If the alpha value of the upper eight bits of the security component's background color is less than **0x1a** (for example, **0x1800ff00**), the system will forcibly adjust this alpha value to **0xff**. This ensures the security component remains sufficiently visible and prevents users from inadvertently triggering authorization due to an overly transparent component. |
+| value | ResourceColor | Yes | Background color of the security component. <br>Default value: \\$r('sys.color.icon_emphasize'). <br>If the alpha value of the upper eight bits of the security component's background color is less than **0x1a** (for example, **0x1800ff00**), the system will forcibly adjust this alpha value to **0xff**. This ensures the security component remains sufficiently visible and prevents users from inadvertently triggering authorization due to an overly transparent component. |
 
 **Return value:**
 
@@ -312,7 +312,7 @@ Sets the border color of the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ResourceColor | Yes | Border color of the security component.&lt;br&gt;No border color is set by default. |
+| value | ResourceColor | Yes | Border color of the security component.<br>No border color is set by default. |
 
 **Return value:**
 
@@ -346,7 +346,7 @@ Sets the border radius of the security component. The effect of **borderRadius**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Dimension | Yes | Border radius of the security component. &lt;br&gt;Default value: **0vp**. &lt;br&gt;If no unit is explicitly specified, the unit is vp. &lt;br&gt;Percentage strings are not supported.&lt;br&gt;The border radius is constrained by the component size, with a minimum of **0** and a maximum of half the smaller of the width and height. If an invalid value is set, this attribute does not take effect. |
+| value | Dimension | Yes | Border radius of the security component. <br>Default value: **0vp**. <br>If no unit is explicitly specified, the unit is vp. <br>Percentage strings are not supported.<br>The border radius is constrained by the component size, with a minimum of **0** and a maximum of half the smaller of the width and height. If an invalid value is set, this attribute does not take effect. |
 
 **Return value:**
 
@@ -380,7 +380,7 @@ Sets the border radius of the security component, allowing individual setting of
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| radius | Dimension \| BorderRadiuses | Yes | Border radius of the security component. &lt;br&gt;Default value: **0vp**. &lt;br&gt;When the unit is not explicitly specified, the unit is vp.&lt;br&gt;The Dimension type does not support setting percentage strings. The border radius is constrained by the component size, with a minimum value of **0** and a maximum value of half the smaller dimension of width and height. When an invalid value is set, this attribute does not take effect. |
+| radius | Dimension \| BorderRadiuses | Yes | Border radius of the security component. <br>Default value: **0vp**. <br>When the unit is not explicitly specified, the unit is vp.<br>The Dimension type does not support setting percentage strings. The border radius is constrained by the component size, with a minimum value of **0** and a maximum value of half the smaller dimension of width and height. When an invalid value is set, this attribute does not take effect. |
 
 **Return value:**
 
@@ -414,7 +414,7 @@ Sets the border style of the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | BorderStyle | Yes | Border style of the security component. &lt;br&gt;No border style is set by default. |
+| value | BorderStyle | Yes | Border style of the security component. <br>No border style is set by default. |
 
 **Return value:**
 
@@ -448,7 +448,7 @@ Sets the border width of the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Dimension | Yes | Border width of the security component. &lt;br&gt;Default value: **0vp**. &lt;br&gt;When the unit is not explicitly specified, the unit is vp.&lt;br/&gt;Percentage strings are not supported. This attribute does not take effect when it is set to an invalid value. |
+| value | Dimension | Yes | Border width of the security component. <br>Default value: **0vp**. <br>When the unit is not explicitly specified, the unit is vp.<br/>Percentage strings are not supported. This attribute does not take effect when it is set to an invalid value. |
 
 **Return value:**
 
@@ -517,7 +517,7 @@ Sets the constraint size, limiting the size range during component layout.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ConstraintSizeOptions | Yes | Constraint size, limiting the size range during component layout. &lt;br&gt;When the unit is not explicitly specified, the unit is vp.&lt;br&gt;**constraintSize** takes precedence over **width** and **height**. When used in conjunction with adaptive font size attributes, if the text on the security component is truncated, clicking the component does not perform authorization. The **constraintSize** setting affects whether the text is fully displayed.&lt;br&gt;For the value results, see [impact of constraintSize values on width/height](#constraintSize). &lt;br&gt;Default value:&lt;br&gt;{&lt;br&gt;minWidth: 0,&lt;br&gt;maxWidth: Infinity,&lt;br&gt;minHeight: 0,&lt;br&gt;maxHeight: Infinity&lt;br&gt;}. |
+| value | ConstraintSizeOptions | Yes | Constraint size, limiting the size range during component layout. <br>When the unit is not explicitly specified, the unit is vp.<br>**constraintSize** takes precedence over **width** and **height**. When used in conjunction with adaptive font size attributes, if the text on the security component is truncated, clicking the component does not perform authorization. The **constraintSize** setting affects whether the text is fully displayed.<br>For the value results, see [impact of constraintSize values on width/height](#constraintSize). <br>Default value:<br>{<br>minWidth: 0,<br>maxWidth: Infinity,<br>minHeight: 0,<br>maxHeight: Infinity<br>}. |
 
 **Return value:**
 
@@ -551,7 +551,7 @@ Sets whether the security component is interactive.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| respond | boolean | Yes | Whether the security component is interactive. &lt;br&gt;Default value: **true** &lt;br&gt;**true**: The component is interactive and responds to operations such as clicks. &lt;br&gt;**false**: The component is non-interactive and does not respond to operations such as clicks. |
+| respond | boolean | Yes | Whether the security component is interactive. <br>Default value: **true** <br>**true**: The component is interactive and responds to operations such as clicks. <br>**false**: The component is non-interactive and does not respond to operations such as clicks. |
 
 **Return value:**
 
@@ -585,7 +585,7 @@ Enables adaptive line height based on the actual text height for multi-line text
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether the line height adapts based on the actual text height.&lt;br/&gt;**true**: The line height adapts based on the actual text height. **false**: The line height does not adapt based on the actual text height. |
+| enabled | boolean | Yes | Whether the line height adapts based on the actual text height.<br/>**true**: The line height adapts based on the actual text height. **false**: The line height does not adapt based on the actual text height. |
 
 **Return value:**
 
@@ -653,7 +653,7 @@ Sets the font color of the text on the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ResourceColor | Yes | Font color of the text on the security component. &lt;br&gt;Default value: \\$r('sys.color.font_on_primary'). |
+| value | ResourceColor | Yes | Font color of the text on the security component. <br>Default value: \\$r('sys.color.font_on_primary'). |
 
 **Return value:**
 
@@ -687,7 +687,7 @@ Sets the font family of the text on the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| Resource | Yes | Font family of the text on the security component. &lt;br&gt;Default font:**'HarmonyOS Sans'**. |
+| value | string \| Resource | Yes | Font family of the text on the security component. <br>Default font:**'HarmonyOS Sans'**. |
 
 **Return value:**
 
@@ -721,7 +721,7 @@ Sets the font size of the text for the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Dimension | Yes | Font size of the text on the security component. &lt;br&gt;When the unit is not explicitly specified, the unit is fp. &lt;br&gt;Default value: \\$r('sys.float.ohos_id_text_size_button1')&lt;br&gt;Percentage strings are not supported.&lt;br&gt;This attribute does not take effect when it is set to an invalid value.&lt;br&gt; Note: When the security component text is not fully displayed, clicking it does not perform authorization. The **fontSize** setting determines whether the text can be fully displayed and thereby affects the authorization behavior of the security component. |
+| value | Dimension | Yes | Font size of the text on the security component. <br>When the unit is not explicitly specified, the unit is fp. <br>Default value: \\$r('sys.float.ohos_id_text_size_button1')<br>Percentage strings are not supported.<br>This attribute does not take effect when it is set to an invalid value.<br> Note: When the security component text is not fully displayed, clicking it does not perform authorization. The **fontSize** setting determines whether the text can be fully displayed and thereby affects the authorization behavior of the security component. |
 
 **Return value:**
 
@@ -755,7 +755,7 @@ Sets the font style of the text on the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | FontStyle | Yes | Font style of the text on the security component. &lt;br&gt;Default value: FontStyle.Normal. |
+| value | FontStyle | Yes | Font style of the text on the security component. <br>Default value: FontStyle.Normal. |
 
 **Return value:**
 
@@ -789,7 +789,7 @@ Sets the font weight of the text on the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| FontWeight \| string \| Resource | Yes | Font weight of the text on the security component. &lt;br&gt;For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a heavier font weight. &lt;br&gt;For the string type, only numeric strings, for example, **'400'**, and the enumerated values of **FontWeight** are supported, including **'bold'**, **'bolder'**, **'lighter'**, **'regular'**, and **'medium'**. &lt;br&gt;The Resource type is supported since API version 20. The Resource type supports only **'integer'** and **'string'** formats. Values follow the number type specifications for the **'integer'** type and the string type specifications for the **'string'** type, both described earlier. &lt;br&gt;If **fontWeight** is not set for the component, the font weight is set to **FontWeight.Medium** by default. If **value** is **undefined** or **null**, a number outside the [100, 900] range, or a string that does not match the string format of **FontWeight** enums, the font weight is set to **FontWeight.Normal**.<br>**Since:** 20 |
+| value | number \| FontWeight \| string \| Resource | Yes | Font weight of the text on the security component. <br>For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a heavier font weight. <br>For the string type, only numeric strings, for example, **'400'**, and the enumerated values of **FontWeight** are supported, including **'bold'**, **'bolder'**, **'lighter'**, **'regular'**, and **'medium'**. <br>The Resource type is supported since API version 20. The Resource type supports only **'integer'** and **'string'** formats. Values follow the number type specifications for the **'integer'** type and the string type specifications for the **'string'** type, both described earlier. <br>If **fontWeight** is not set for the component, the font weight is set to **FontWeight.Medium** by default. If **value** is **undefined** or **null**, a number outside the [100, 900] range, or a string that does not match the string format of **FontWeight** enums, the font weight is set to **FontWeight.Normal**.<br>**Since:** 20 |
 
 **Return value:**
 
@@ -823,7 +823,7 @@ Sets the height of the security component. If not set, the height adapts to the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Length | Yes | Height of the security component. If not set, the height adapts to the element content. &lt;br&gt;If no unit is explicitly specified, the unit is vp.&lt;br&gt;When used in conjunction with [minFontSize](#minFontSize), [maxFontSize](#maxFontSize), [maxLines](#maxLines), and [heightAdaptivePolicy](#heightAdaptivePolicy) for adaptive font sizing, if the text on the security component is truncated, clicking the component does not perform authorization. If an invalid value is set, this attribute does not take effect. |
+| value | Length | Yes | Height of the security component. If not set, the height adapts to the element content. <br>If no unit is explicitly specified, the unit is vp.<br>When used in conjunction with [minFontSize](#minFontSize), [maxFontSize](#maxFontSize), [maxLines](#maxLines), and [heightAdaptivePolicy](#heightAdaptivePolicy) for adaptive font sizing, if the text on the security component is truncated, clicking the component does not perform authorization. If an invalid value is set, this attribute does not take effect. |
 
 **Return value:**
 
@@ -837,7 +837,7 @@ Sets the height of the security component. If not set, the height adapts to the 
 heightAdaptivePolicy(policy: TextHeightAdaptivePolicy): T
 ```
 
-Sets the method for text height adaptation. This is applicable to scenarios where the text display of a security component needs to be dynamically adjusted to ensure complete text visibility under different sizes or language environments. The security component text is laid out at [maxFontSize](#maxFontSize). If the text can be completely displayed and no adaptive adjustment is needed, this API does not take effect. Otherwise, adaptation proceeds according to the specified policy, as follows: &lt;br&gt;**TextHeightAdaptivePolicy.MAX_LINES_FIRST**: prioritizes the [maxLines](#maxLines) attribute for adjusting the text height. If the layout size with **maxLines** exceeds the layout constraints, the security component attempts to reduce the font size within the range of [minFontSize](#minFontSize) and [maxFontSize](#maxFontSize) to fit more text. If the text still cannot be fully displayed, the security component adaptively adjusts its height to show all text. &lt;br&gt;**TextHeightAdaptivePolicy.MIN_FONT_SIZE_FIRST**: prioritizes the [minFontSize](#minFontSize) attribute for adjusting the text height. If the text can be laid out in a single line using **minFontSize**, the security component attempts to increase the font size within the range of **minFontSize** and [maxFontSize](#maxFontSize) to use the largest possible font size. If the text cannot be laid out in a single line using **minFontSize**, the security component attempts to use the [maxLines](#maxLines) attribute for layout. If the text still cannot be fully displayed, the security component adaptively adjusts its height to fully display the text. &lt;br&gt;**TextHeightAdaptivePolicy.LAYOUT_CONSTRAINT_FIRST**: prioritizes layout constraints for adjusting the text height. &lt;br&gt;If the layout size exceeds the constraints, the security component attempts to reduce the font size within the range of [minFontSize](#minFontSize) and [maxFontSize](#maxFontSize). If the layout size still exceeds the constraints after the font size is reduced to **minFontSize**, the security component truncates the excess lines. If the [maxLines](#maxLines) attribute is set, the number of lines does not exceed the **maxLines** value (horizontal truncation may occur). If **maxLines** is not set, there is no limit on the number of lines. If the security component text is not fully displayed, clicking does not trigger authorization. Whether the text is fully displayed depends on attributes such as **heightAdaptivePolicy**, **minFontSize**, **maxFontSize**, **maxLines**, **width**, and **height**. For details, see [Example](../../../reference/apis-arkui/arkui-ts/ts-securitycomponent-attributes.md#example-3)
+Sets the method for text height adaptation. This is applicable to scenarios where the text display of a security component needs to be dynamically adjusted to ensure complete text visibility under different sizes or language environments. The security component text is laid out at [maxFontSize](#maxFontSize). If the text can be completely displayed and no adaptive adjustment is needed, this API does not take effect. Otherwise, adaptation proceeds according to the specified policy, as follows: <br>**TextHeightAdaptivePolicy.MAX_LINES_FIRST**: prioritizes the [maxLines](#maxLines) attribute for adjusting the text height. If the layout size with **maxLines** exceeds the layout constraints, the security component attempts to reduce the font size within the range of [minFontSize](#minFontSize) and [maxFontSize](#maxFontSize) to fit more text. If the text still cannot be fully displayed, the security component adaptively adjusts its height to show all text. <br>**TextHeightAdaptivePolicy.MIN_FONT_SIZE_FIRST**: prioritizes the [minFontSize](#minFontSize) attribute for adjusting the text height. If the text can be laid out in a single line using **minFontSize**, the security component attempts to increase the font size within the range of **minFontSize** and [maxFontSize](#maxFontSize) to use the largest possible font size. If the text cannot be laid out in a single line using **minFontSize**, the security component attempts to use the [maxLines](#maxLines) attribute for layout. If the text still cannot be fully displayed, the security component adaptively adjusts its height to fully display the text. <br>**TextHeightAdaptivePolicy.LAYOUT_CONSTRAINT_FIRST**: prioritizes layout constraints for adjusting the text height. <br>If the layout size exceeds the constraints, the security component attempts to reduce the font size within the range of [minFontSize](#minFontSize) and [maxFontSize](#maxFontSize). If the layout size still exceeds the constraints after the font size is reduced to **minFontSize**, the security component truncates the excess lines. If the [maxLines](#maxLines) attribute is set, the number of lines does not exceed the **maxLines** value (horizontal truncation may occur). If **maxLines** is not set, there is no limit on the number of lines. If the security component text is not fully displayed, clicking does not trigger authorization. Whether the text is fully displayed depends on attributes such as **heightAdaptivePolicy**, **minFontSize**, **maxFontSize**, **maxLines**, **width**, and **height**. For details, see [Example](../../../reference/apis-arkui/arkui-ts/ts-securitycomponent-attributes.md#example-3)
 
 **Since:** 18
 
@@ -857,7 +857,7 @@ Sets the method for text height adaptation. This is applicable to scenarios wher
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| policy | TextHeightAdaptivePolicy | Yes | Policy for text height adaptation. &lt;br&gt;Default value: TextHeightAdaptivePolicy.MAX_LINES_FIRST. |
+| policy | TextHeightAdaptivePolicy | Yes | Policy for text height adaptation. <br>Default value: TextHeightAdaptivePolicy.MAX_LINES_FIRST. |
 
 **Return value:**
 
@@ -891,7 +891,7 @@ Sets the icon color of the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ResourceColor | Yes | Icon color of the security component. &lt;br&gt;Default value: \\$r('sys.color.icon_on_primary'). |
+| value | ResourceColor | Yes | Icon color of the security component. <br>Default value: \\$r('sys.color.icon_on_primary'). |
 
 **Return value:**
 
@@ -925,7 +925,7 @@ Sets the icon size of the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Dimension | Yes | Icon size of the security component, in vp by default when no unit is specified. &lt;br&gt;Default value: **16vp**. &lt;br&gt;Percentage strings are not supported.&lt;br/&gt;If an invalid value or unit is passed, the attribute does not take effect, and the component is displayed according to the default value. |
+| value | Dimension | Yes | Icon size of the security component, in vp by default when no unit is specified. <br>Default value: **16vp**. <br>Percentage strings are not supported.<br/>If an invalid value or unit is passed, the attribute does not take effect, and the component is displayed according to the default value. |
 
 **Return value:**
 
@@ -959,7 +959,7 @@ Unique ID you assigned for the component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | Unique ID you assigned for the component. &lt;br&gt;Default value: ''. |
+| id | string | Yes | Unique ID you assigned for the component. <br>Default value: ''. |
 
 **Return value:**
 
@@ -993,7 +993,7 @@ Sets the layout direction of the icon and text on the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [SecurityComponentLayoutDirection](arkts-arkui-securitycomponentlayoutdirection-e.md) | Yes | Indicates the layout direction of the icon and text. &lt;br&gt;Default value:SecurityComponentLayoutDirection.HORIZONTAL. |
+| value | [SecurityComponentLayoutDirection](arkts-arkui-securitycomponentlayoutdirection-e.md) | Yes | Indicates the layout direction of the icon and text. <br>Default value:SecurityComponentLayoutDirection.HORIZONTAL. |
 
 **Return value:**
 
@@ -1027,7 +1027,7 @@ Sets the anchor of the security component for moving the component with its top-
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Position | Yes | Anchor of the security component for moving the component with its top-left corner as the reference point. Generally, this attribute is used in conjunction with **position()** and **offset()** for more precise positioning. &lt;br&gt;No default value. &lt;br&gt;This attribute does not take effect when it is set to an invalid value. |
+| value | Position | Yes | Anchor of the security component for moving the component with its top-left corner as the reference point. Generally, this attribute is used in conjunction with **position()** and **offset()** for more precise positioning. <br>No default value. <br>This attribute does not take effect when it is set to an invalid value. |
 
 **Return value:**
 
@@ -1061,7 +1061,7 @@ Sets the maximum font scale factor. When this API is invoked and the system font
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | number \| Resource | Yes | Maximum font scale factor for the text. &lt;br&gt;The value must be greater than or equal to 1. &lt;br&gt; **NOTE：**&lt;br&gt;If the set value is less than 1, the value **1** is used. If the value is **undefined**, **null**, or another invalid value, the attribute has no effect. |
+| scale | number \| Resource | Yes | Maximum font scale factor for the text. <br>The value must be greater than or equal to 1. <br> **NOTE：**<br>If the set value is less than 1, the value **1** is used. If the value is **undefined**, **null**, or another invalid value, the attribute has no effect. |
 
 **Return value:**
 
@@ -1095,7 +1095,7 @@ Sets the maximum font size for text display. - When used in conjunction with [mi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| maxSize | number \| string \| Resource | Yes | Maximum display font size of the text. &lt;br&gt;The value must be greater than 0. &lt;br&gt;When the unit is not explicitly specified, the unit is fp. &lt;br&gt;**NOTE：**&lt;br&gt;When the set value is less than or equal to 0, the adaptive font size does not take effect. When an invalid value is set, this attribute does not take effect. |
+| maxSize | number \| string \| Resource | Yes | Maximum display font size of the text. <br>The value must be greater than 0. <br>When the unit is not explicitly specified, the unit is fp. <br>**NOTE：**<br>When the set value is less than or equal to 0, the adaptive font size does not take effect. When an invalid value is set, this attribute does not take effect. |
 
 **Return value:**
 
@@ -1129,7 +1129,7 @@ Sets the maximum number of lines for text. By default, text wraps automatically.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| line | number \| Resource | Yes | Maximum number of lines for the text. &lt;br&gt;The number type accepts values in [1, +∞). The Resource type is supported since API version 20. The parameter of the Resource type supports only integers in the range [1, +∞). &lt;br&gt;**NOTE：**&lt;br&gt;A value less than 1 is handled as the default value **1000000**.<br>**Since:** 20 |
+| line | number \| Resource | Yes | Maximum number of lines for the text. <br>The number type accepts values in [1, +∞). The Resource type is supported since API version 20. The parameter of the Resource type supports only integers in the range [1, +∞). <br>**NOTE：**<br>A value less than 1 is handled as the default value **1000000**.<br>**Since:** 20 |
 
 **Return value:**
 
@@ -1163,7 +1163,7 @@ Sets the minimum font scale factor for the text. When this API is invoked and th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | number \| Resource | Yes | Minimum font scale factor for the text. &lt;br&gt;Value range: [0,1]. &lt;br&gt;**NOTE：**&lt;br&gt;If the set value is less than 0, the value **0** is used, meaning scaling down to any factor is allowed. If the set value is greater than 1, the value **1** is used, meaning font scaling is not allowed. If the value is **undefined**, **null**, or another invalid value, the attribute has no effect. |
+| scale | number \| Resource | Yes | Minimum font scale factor for the text. <br>Value range: [0,1]. <br>**NOTE：**<br>If the set value is less than 0, the value **0** is used, meaning scaling down to any factor is allowed. If the set value is greater than 1, the value **1** is used, meaning font scaling is not allowed. If the value is **undefined**, **null**, or another invalid value, the attribute has no effect. |
 
 **Return value:**
 
@@ -1197,7 +1197,7 @@ Sets the minimum font size for text display. - When used in conjunction with [ma
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| minSize | number \| string \| Resource | Yes | Minimum display font size of the text. &lt;br&gt;The value must be greater than 0. &lt;br&gt;When the unit is not explicitly specified, the unit is fp.&lt;br&gt; **minFontSize** must be less than **maxFontSize**. If the set value is greater than **maxFontSize**, **maxFontSize** is used instead. If this parameter is less than or equal to 0, the adaptive font size does not take effect. |
+| minSize | number \| string \| Resource | Yes | Minimum display font size of the text. <br>The value must be greater than 0. <br>When the unit is not explicitly specified, the unit is fp.<br> **minFontSize** must be less than **maxFontSize**. If the set value is greater than **maxFontSize**, **maxFontSize** is used instead. If this parameter is less than or equal to 0, the adaptive font size does not take effect. |
 
 **Return value:**
 
@@ -1231,7 +1231,7 @@ Sets the coordinate offset of the security component relative to its own layout 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Position \| Edges \| LocalizedEdges | Yes | Coordinate offset of the security component relative to its own layout position. This attribute does not affect the layout in the parent container. The offset is used only during drawing. &lt;br&gt;When the unit is not explicitly specified, the unit is vp. &lt;br&gt;No default value. &lt;br&gt;This attribute does not take effect when it is set to an invalid value.<br>**Since:** 12 |
+| value | Position \| Edges \| LocalizedEdges | Yes | Coordinate offset of the security component relative to its own layout position. This attribute does not affect the layout in the parent container. The offset is used only during drawing. <br>When the unit is not explicitly specified, the unit is vp. <br>No default value. <br>This attribute does not take effect when it is set to an invalid value.<br>**Since:** 12 |
 
 **Return value:**
 
@@ -1265,7 +1265,7 @@ Sets the padding of the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Padding \| Dimension | Yes | Padding of the security component. &lt;br&gt;Default value: 8 vp for the top and bottom and 16 vp for the left and right. &lt;br&gt;When the unit is not explicitly specified, the unit is vp. &lt;br&gt;Note: Percentage strings are not supported. If a percentage string is set, the corresponding padding is **0**. |
+| value | Padding \| Dimension | Yes | Padding of the security component. <br>Default value: 8 vp for the top and bottom and 16 vp for the left and right. <br>When the unit is not explicitly specified, the unit is vp. <br>Note: Percentage strings are not supported. If a percentage string is set, the corresponding padding is **0**. |
 
 **Return value:**
 
@@ -1299,7 +1299,7 @@ Sets the absolute position, which is the offset of the top-left corner of the se
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Position | Yes | Offset position of the security component's top-left corner relative to the parent container's top-left corner. Applicable to scenarios where the security component is placed in a fixed area of the page through absolute positioning. &lt;br&gt;When the unit is not explicitly specified, the unit is vp. &lt;br/&gt;It is recommended that you pass numeric coordinates for both **x** and **y**.&lt;br/&gt;If the parameter is **undefined** or **null**, or **x** and **y** are non-numeric types, this attribute does not take effect, and invalid coordinates are treated as **0**. |
+| value | Position | Yes | Offset position of the security component's top-left corner relative to the parent container's top-left corner. Applicable to scenarios where the security component is placed in a fixed area of the page through absolute positioning. <br>When the unit is not explicitly specified, the unit is vp. <br/>It is recommended that you pass numeric coordinates for both **x** and **y**.<br/>If the parameter is **undefined** or **null**, or **x** and **y** are non-numeric types, this attribute does not take effect, and invalid coordinates are treated as **0**. |
 
 **Return value:**
 
@@ -1333,7 +1333,7 @@ Sets the width and height. If not set, the width and height adapt to the element
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | SizeOptions | Yes | Width and height of the security component. When this parameter is not specified, the security component automatically adapts its size to the element content. &lt;br&gt;If no unit is explicitly specified, the unit is vp. &lt;br&gt;When used in conjunction with [minFontSize](#minFontSize), [maxFontSize](#maxFontSize), [maxLines](#maxLines), and [heightAdaptivePolicy](#heightAdaptivePolicy) for adaptive font sizing, if the text on the security component is truncated, clicking the component does not perform authorization. If an invalid value is set, this attribute does not take effect. |
+| value | SizeOptions | Yes | Width and height of the security component. When this parameter is not specified, the security component automatically adapts its size to the element content. <br>If no unit is explicitly specified, the unit is vp. <br>When used in conjunction with [minFontSize](#minFontSize), [maxFontSize](#maxFontSize), [maxLines](#maxLines), and [heightAdaptivePolicy](#heightAdaptivePolicy) for adaptive font sizing, if the text on the security component is truncated, clicking the component does not perform authorization. If an invalid value is set, this attribute does not take effect. |
 
 **Return value:**
 
@@ -1367,7 +1367,7 @@ Sets the spacing between the icon and text in the security component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Dimension | Yes | Spacing between the icon and text in the security component. &lt;br&gt;Default value: **4vp**. &lt;br&gt;When the unit is not explicitly specified, the unit is vp. &lt;br&gt;Note: Percentage strings are not supported. If a percentage string is set, the corresponding spacing between the icon and text is **0**. Since API version 14, negative values are treated as the default value. |
+| value | Dimension | Yes | Spacing between the icon and text in the security component. <br>Default value: **4vp**. <br>When the unit is not explicitly specified, the unit is vp. <br>Note: Percentage strings are not supported. If a percentage string is set, the corresponding spacing between the icon and text is **0**. Since API version 14, negative values are treated as the default value. |
 
 **Return value:**
 
@@ -1401,7 +1401,7 @@ Sets the width of the security component. If not set, the width adapts to the el
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Length | Yes | Width of the security component itself. If not set, the width adapts to the element content. &lt;br&gt;When the unit is not explicitly specified, the unit is vp.&lt;br&gt;When used in conjunction with [minFontSize](#minFontSize), [maxFontSize](#maxFontSize), [maxLines](#maxLines), and [heightAdaptivePolicy](#heightAdaptivePolicy) for adaptive font sizing, if the text on the security component is truncated, clicking the component does not perform authorization. If an invalid value is set, this attribute does not take effect. |
+| value | Length | Yes | Width of the security component itself. If not set, the width adapts to the element content. <br>When the unit is not explicitly specified, the unit is vp.<br>When used in conjunction with [minFontSize](#minFontSize), [maxFontSize](#maxFontSize), [maxLines](#maxLines), and [heightAdaptivePolicy](#heightAdaptivePolicy) for adaptive font sizing, if the text on the security component is truncated, clicking the component does not perform authorization. If an invalid value is set, this attribute does not take effect. |
 
 **Return value:**
 

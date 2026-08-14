@@ -42,7 +42,7 @@ import { Callback } from '@kit.BasicServicesKit';
 let attributesChangeCallback: Callback<number> = (data: number) => {
   console.info(`Listening enabled. Data: ${data}`);
 };
-let attributes: Array<string> = ["rotation", "width"];
+let attributes: Array<string> = ['rotation', 'width'];
 display.onChangeWithAttribute(attributes, attributesChangeCallback);
 ```
 

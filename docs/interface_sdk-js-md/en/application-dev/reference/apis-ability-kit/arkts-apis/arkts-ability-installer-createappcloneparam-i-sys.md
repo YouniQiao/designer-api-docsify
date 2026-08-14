@@ -17,7 +17,7 @@ Describes the parameters used for creating an application clone.
 ## Modules to Import
 
 ```TypeScript
-import { installer } from '@kit.AbilityKit';
+import { installer } from 'installer';
 ```
 
 ## appIndex

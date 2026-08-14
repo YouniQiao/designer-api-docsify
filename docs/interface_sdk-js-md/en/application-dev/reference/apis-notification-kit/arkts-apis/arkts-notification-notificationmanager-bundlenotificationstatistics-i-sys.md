@@ -17,7 +17,7 @@ Describes the notification statistics of a specified application.
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'notificationManager';
 ```
 
 ## bundle
@@ -48,7 +48,7 @@ Bundle information of the application.
 lastTime: long
 ```
 
-Time when the app last published a notification.&lt;br&gt;Data format: timestamp.&lt;br&gt;Unit: millisecond.
+Time when the app last published a notification.<br>Data format: timestamp.<br>Unit: millisecond.
 
 **Type:** long
 

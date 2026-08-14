@@ -15,7 +15,7 @@ P2P group information.
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'wifiManager';
 ```
 
 ## clientDevices

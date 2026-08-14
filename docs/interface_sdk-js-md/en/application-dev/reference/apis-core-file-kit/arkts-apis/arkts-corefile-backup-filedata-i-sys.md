@@ -17,7 +17,7 @@ Corresponding to a file's data. Filedata is useful when doing IPC with the backu
 ## Modules to Import
 
 ```TypeScript
-import { backup } from '@kit.CoreFileKit';
+import { backup } from 'backup';
 ```
 
 ## fd

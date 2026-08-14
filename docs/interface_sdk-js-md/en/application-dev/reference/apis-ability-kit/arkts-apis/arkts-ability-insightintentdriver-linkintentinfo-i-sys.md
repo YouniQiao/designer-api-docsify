@@ -17,7 +17,7 @@ Describes the parameters supported by the @InsightIntentLink decorator, such as 
 ## Modules to Import
 
 ```TypeScript
-import { insightIntentDriver } from '@kit.AbilityKit';
+import { insightIntentDriver } from 'insightIntentDriver';
 ```
 
 ## uri

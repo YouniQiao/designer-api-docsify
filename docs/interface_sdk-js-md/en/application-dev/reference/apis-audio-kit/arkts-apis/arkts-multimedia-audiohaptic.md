@@ -15,7 +15,7 @@ Audio-haptic enables users to get rhythmic auditory and haptic feedback while ha
 ## Modules to Import
 
 ```TypeScript
-import { audioHaptic } from '@kit.AudioKit';
+import { audioHaptic } from 'audioHaptic';
 ```
 
 ## Summary

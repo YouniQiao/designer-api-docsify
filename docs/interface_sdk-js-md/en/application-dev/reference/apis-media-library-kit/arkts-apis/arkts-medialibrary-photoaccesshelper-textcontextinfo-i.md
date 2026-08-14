@@ -15,7 +15,7 @@ Represents the text information about the recommended images.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'photoAccessHelper';
 ```
 
 ## text

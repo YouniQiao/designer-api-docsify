@@ -15,7 +15,11 @@ Defines the style parameters of the popup.
 ## Modules to Import
 
 ```TypeScript
-import { Popup, PopupOptions, PopupButtonOptions, PopupIconOptions, PopupTextOptions } from '@kit.ArkUI';
+import { Popup } from 'Popup';
+import { PopupButtonOptions } from 'PopupButtonOptions';
+import { PopupIconOptions } from 'PopupIconOptions';
+import { PopupOptions } from 'PopupOptions';
+import { PopupTextOptions } from 'PopupTextOptions';
 ```
 
 ## buttons

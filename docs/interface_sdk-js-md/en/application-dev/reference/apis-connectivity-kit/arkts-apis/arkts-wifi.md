@@ -15,7 +15,7 @@ Provides methods to operate or manage Wi-Fi.
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'wifi';
 ```
 
 ## Summary

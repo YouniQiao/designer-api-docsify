@@ -1,6 +1,6 @@
 # AccessibilityExtensionContext
 
-The accessibility extension context. Used to configure, query information, and inject gestures.
+The **AccessibilityExtensionContext** module, inherited from **ExtensionContext**, provides context for **AccessibilityExtensionAbility**. The Accessibility Extension Context module provides capabilities related to the accessibility extension, including configuring concerned information types, querying node information, and gesture injection.
 
 **Inheritance/Implementation:** AccessibilityExtensionContext extends ExtensionContext
 
@@ -20,7 +20,7 @@ The accessibility extension context. Used to configure, query information, and i
 addAccessibilityVirtualNodes(elementId: long, windowId: int, nodes: Array<AccessibilityVirtualNode>): Promise<OperateVirtualNodeResult>
 ```
 
-Add accessibility virtual nodes.
+Adds a virtual accessibility node tree. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -42,15 +42,15 @@ Add accessibility virtual nodes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elementId | long | Yes | Indicates the id of the node to which the accessibility virtual node tree belongs |
-| windowId | int | Yes | Indicates the window id &lt;br&gt;The value range is all integers. |
-| nodes | Array&lt;[AccessibilityVirtualNode](arkts-accessibility-accessibilityextensioncontext-accessibilityvirtualnode-i-sys.md)&gt; | Yes | Indicates accessibility virtual node tree. |
+| elementId | long | Yes | Parent node ID of the virtual node tree to add. |
+| windowId | int | Yes | Parent window ID of the virtual node tree to add. |
+| nodes | Array&lt;[AccessibilityVirtualNode](arkts-accessibility-accessibilityextensioncontext-accessibilityvirtualnode-i-sys.md)&gt; | Yes | Array of virtual nodes to add. The virtual nodes in the array are organized into a tree based on the parentId and childNodeIds parent-child relationships. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[OperateVirtualNodeResult](arkts-accessibility-accessibility-operatevirtualnoderesult-e-sys.md)&gt; | Promise used to return the result code. |
+| Promise&lt;[OperateVirtualNodeResult](arkts-accessibility-accessibility-operatevirtualnoderesult-e-sys.md)&gt; | Promise used to return the execution result. |
 
 **Error codes:**
 
@@ -58,7 +58,7 @@ Add accessibility virtual nodes.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [9300000](../errorcode-accessibility.md#9300000-accessibility-system-service-abnormal) | System abnormality.Possible causes: &lt;br&gt;1.Internal operation failed. &lt;br&gt;2.Failed to obtain the required service or client object (null pointer). &lt;br&gt;3.IPC communication failed. &lt;br&gt;4.Failed to obtain the accessibility service proxy. &lt;br&gt;5.Timed out while waiting for the result of an asynchronous operation. |
+| [9300000](../errorcode-accessibility.md#9300000-accessibility-system-service-abnormal) | System abnormality.Possible causes: <br>1.Internal operation failed. <br>2.Failed to obtain the required service or client object (null pointer). <br>3.IPC communication failed. <br>4.Failed to obtain the accessibility service proxy. <br>5.Timed out while waiting for the result of an asynchronous operation. |
 
 ## getAccessibilityFocusedElement
 
@@ -66,7 +66,7 @@ Add accessibility virtual nodes.
 getAccessibilityFocusedElement(): Promise<AccessibilityElement>
 ```
 
-Obtains the element that is currently focused. This API uses a promise to return the result.
+Obtains the element that currently has the accessibility focus. This API uses a promise to return the result. The accessibility focus refers to the node currently focused by the accessibility service, which is different from the input focus.
 
 **Since:** 23
 
@@ -86,7 +86,7 @@ Obtains the element that is currently focused. This API uses a promise to return
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Promise used to return the result. |
+| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Promise used to return the element that currently has the focus. |
 
 **Error codes:**
 
@@ -147,7 +147,7 @@ export default class AccessibilityManager {
 getAccessibilityWindowsSync(displayId?: long): Array<AccessibilityElement>
 ```
 
-Obtains the accessibility windows.
+Obtains the list of all accessibility-accessible windows on the current display device.
 
 **Since:** 23
 
@@ -167,7 +167,7 @@ Obtains the accessibility windows.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | long | No | Indicates the display ID. If this parameter is not provided, indicates the default displayId. |
+| displayId | long | No | Display ID. If this parameter is not provided, the default displayId is used. |
 
 **Return value:**
 
@@ -189,7 +189,7 @@ Obtains the accessibility windows.
 getDefaultFocusedElementIds(windowId: int): Promise<Array<long>>
 ```
 
-Obtains the custom default focuses of an application. This API uses a promise to return the result.
+Queries the list of default focus element IDs customized by the app. This API uses a promise to return the result. Default focus refers to the element that the accessibility service prioritizes for focusing when a window is opened.
 
 **Since:** 23
 
@@ -207,13 +207,13 @@ Obtains the custom default focuses of an application. This API uses a promise to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | int | Yes | Window ID to be obtained. |
+| windowId | int | Yes | ID of the window to query. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;long&gt;&gt; | Promise used to return the result. |
+| Promise&lt;Array&lt;long&gt;&gt; | Promise used to return the list of custom default focus IDs in the current window. |
 
 **Error codes:**
 
@@ -274,7 +274,7 @@ export default class AccessibilityManager {
 getElements(windowId: int, elementId?: long): Promise<Array<AccessibilityElement>>
 ```
 
-Obtains node elements in batches. This API uses a promise to return the result.
+Queries all descendant accessibility nodes in a specified window or under a specified node in batches. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -292,14 +292,14 @@ Obtains node elements in batches. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | int | Yes | Window ID to be obtained. |
-| elementId | long | No | Element ID to be obtained. If this parameter is passed in, the list of all child nodes under the current node is obtained. Otherwise, all nodes in the window are obtained. The default value is **-1**. |
+| windowId | int | Yes | ID of the window to query. |
+| elementId | long | No | ID of the node to query. If this parameter is passed, all child nodes under this node ( excluding the node itself) are queried. If this parameter is not passed or **-1** is passed, the complete node tree (including the root node) in the specified window is queried. The default value is **-1**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; | Promise used to return the result. |
+| Promise&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; | Promise used to return the list of all child nodes in the current window or under the current node. |
 
 **Error codes:**
 
@@ -362,7 +362,7 @@ export default class AccessibilityManager {
 getRootInActiveWindow(windowId?: int): Promise<AccessibilityElement>
 ```
 
-Obtains the root element of an active window. This API uses a promise to return the result.
+Obtains the root element of the accessibility node tree of the active window. This API uses a promise to return the result. The active window refers to the foreground app window that currently gains focus.
 
 **Since:** 23
 
@@ -382,13 +382,13 @@ Obtains the root element of an active window. This API uses a promise to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | int | No | Indicates the window ID. |
+| windowId | int | No | ID of the window to query. If this parameter is not provided, the root element of the active window is queried by default. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Promise used to return the result. |
+| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Promise used to return the root element of the active window. |
 
 **Error codes:**
 
@@ -405,7 +405,7 @@ Obtains the root element of an active window. This API uses a promise to return 
 holdRunningLockSync(): void
 ```
 
-Holds the running lock. After the lock is held, the screen will not turn off automatically.
+Holds the RunningLock. After the lock is held, the screen will not automatically turn off. After this method is called, call [unholdRunningLockSync](#unholdRunningLockSync) to release the lock and restore the automatic screen-off mechanism when the screen no longer needs to stay on.
 
 **Since:** 23
 
@@ -476,7 +476,7 @@ export default class AccessibilityManager {
 notifyDisconnect(): void
 ```
 
-Notifies the accessibility service that the accessibility extension service can be disconnected. This API must be used together with the [on('preDisconnect')](#on_preDisconnect) API. If the **on('preDisconnect')** API is not called, this API does not take effect.
+Notifies the accessibility service that the accessibility extension service can be closed. This function must be used together with the pre-disconnection registration API [on('preDisconnect')](#on_preDisconnect). If the pre-disconnection registration function has not been called, calling this function directly has no effect.
 
 **Since:** 23
 
@@ -582,7 +582,7 @@ Unregister accessibilityExtensionAbility disconnect callback.
 off(type: 'preDisconnect', callback?: Callback<void>): void
 ```
 
-Unsubscribes from the pre-disconnection event of the accessibility extension service. This API is not called until the accessibility extension service is disconnected. This API uses an asynchronous callback to return the result.
+Unregisters the pre-disconnect callback registered with the accessibility service. This callback must be registered via on('preDisconnect') before it can be unregistered. After unregistration, the callback will no longer be executed before the accessibility service closes this extension service.
 
 **Since:** 20
 
@@ -602,8 +602,8 @@ Unsubscribes from the pre-disconnection event of the accessibility extension ser
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'preDisconnect' | Yes | Name of the event to listen for. The value is fixed at **'preDisconnect'**, indicating that the accessibility extension service is about to be disconnected. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback to unregister, which must be the same as that of [on('preDisconnect')](#on_preDisconnect). If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| type | 'preDisconnect' | Yes | Event name, which is fixed to 'preDisconnect', indicating that the accessibility extension service is about to be closed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback for the event that the accessibility extension service is about to be closed. It must be the same as the callback in [on('preDisconnect')](#on_preDisconnect). If this parameter is not specified, all registered events are unregistered. |
 
 **Error codes:**
 
@@ -697,7 +697,7 @@ Register accessibilityExtensionAbility disconnect callback.
 on(type: 'preDisconnect', callback: Callback<void>): void
 ```
 
-Subscribes to the pre-disconnection event of the accessibility extension service. This API is called when the accessibility extension service is about to be disconnected. This API uses an asynchronous callback to return the result. Used together with [notifyDisconnect](#notifyDisconnect); otherwise, the accessibility extension service is automatically disconnected 30 seconds later by default.
+Registers a callback with the accessibility service, which is invoked before the accessibility service closes this Accessibility Extension Service. This API uses an asynchronous callback to return the result. This registration function must be used together with [notifyDisconnect](#notifyDisconnect). If [notifyDisconnect](#notifyDisconnect) is not called, the Accessibility Extension Service is automatically closed after a default wait of 30 seconds.
 
 **Since:** 20
 
@@ -717,8 +717,8 @@ Subscribes to the pre-disconnection event of the accessibility extension service
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'preDisconnect' | Yes | Name of the event to listen for. The value is fixed at **'preDisconnect'**, indicating that the accessibility extension service is about to be disconnected. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback to be invoked when the accessibility extension service is about to be disconnected. |
+| type | 'preDisconnect' | Yes | Listening event name, which is fixed to 'preDisconnect', indicating the event that the Accessibility Extension Service is about to be closed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | Callback invoked when the Accessibility Extension Service is about to be closed. |
 
 **Error codes:**
 
@@ -777,7 +777,7 @@ export default class AccessibilityManager {
 removeAccessibilityVirtualNodes(elementId: long, windowId: int): Promise<OperateVirtualNodeResult>
 ```
 
-Remove accessibility virtual nodes.
+Deletes the added accessibility virtual node tree. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -799,14 +799,14 @@ Remove accessibility virtual nodes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elementId | long | Yes | Indicates the id of the accessibility element to be removed. |
-| windowId | int | Yes | Indicates the window id. &lt;br&gt;The value range is all integers. |
+| elementId | long | Yes | ID of the node where the virtual node tree to be deleted is located. |
+| windowId | int | Yes | ID of the window where the virtual node tree to be deleted is located. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[OperateVirtualNodeResult](arkts-accessibility-accessibility-operatevirtualnoderesult-e-sys.md)&gt; | Promise used to return the result code. |
+| Promise&lt;[OperateVirtualNodeResult](arkts-accessibility-accessibility-operatevirtualnoderesult-e-sys.md)&gt; | Promise used to return the execution result. |
 
 **Error codes:**
 
@@ -814,7 +814,7 @@ Remove accessibility virtual nodes.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [9300000](../errorcode-accessibility.md#9300000-accessibility-system-service-abnormal) | System abnormality.Possible causes: &lt;br&gt;1.Internal operation failed. &lt;br&gt;2.Failed to obtain the required service or client object (null pointer). &lt;br&gt;3.IPC communication failed. &lt;br&gt;4.Failed to obtain the accessibility service proxy. &lt;br&gt;5.Timed out while waiting for the result of an asynchronous operation. |
+| [9300000](../errorcode-accessibility.md#9300000-accessibility-system-service-abnormal) | System abnormality.Possible causes: <br>1.Internal operation failed. <br>2.Failed to obtain the required service or client object (null pointer). <br>3.IPC communication failed. <br>4.Failed to obtain the accessibility service proxy. <br>5.Timed out while waiting for the result of an asynchronous operation. |
 
 ## startAbility
 
@@ -822,7 +822,7 @@ Remove accessibility virtual nodes.
 startAbility(want: Want): Promise<void>
 ```
 
-Starts the foreground page. This API uses a promise to return the result.
+Starts a foreground page. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -840,7 +840,7 @@ Starts the foreground page. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target ability, such as the ability name and bundle name. |
+| want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want type parameter, which passes in the information about the ability to start, such as the ability name and bundle name. |
 
 **Return value:**
 
@@ -910,7 +910,7 @@ export default class AccessibilityManager {
 unholdRunningLockSync(): void
 ```
 
-Releases the running lock. After the lock is released, the screen will automatically turn off.
+Releases the RunningLock and restores automatic screen-off. Used in pair with [holdRunningLockSync](#holdRunningLockSync).
 
 **Since:** 23
 
@@ -981,7 +981,7 @@ export default class AccessibilityManager {
 updateAccessibilityElementProperty(elementId: long, windowId: int, node: AccessibilityVirtualNode): Promise<OperateVirtualNodeResult>
 ```
 
-Update accessibility element property.
+Modifies the accessibility node property. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -1003,15 +1003,15 @@ Update accessibility element property.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elementId | long | Yes | Indicates the id of the accessibility element to be updated |
-| windowId | int | Yes | Indicates the window id &lt;br&gt;The value range is all integers. |
-| node | [AccessibilityVirtualNode](arkts-accessibility-accessibilityextensioncontext-accessibilityvirtualnode-i-sys.md) | Yes | Indicates accessibility virtual node to be updated. |
+| elementId | long | Yes | ID of the accessibility node to modify. |
+| windowId | int | Yes | ID of the window of the accessibility node to modify. |
+| node | [AccessibilityVirtualNode](arkts-accessibility-accessibilityextensioncontext-accessibilityvirtualnode-i-sys.md) | Yes | Property values of the accessibility node to modify. The modifiable properties include: <br>accessibilityText, accessibilityGroup, accessibilityLevel, checkable, checked, selected, clickable, enabled, customComponentType. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[OperateVirtualNodeResult](arkts-accessibility-accessibility-operatevirtualnoderesult-e-sys.md)&gt; | Promise used to return the result code. |
+| Promise&lt;[OperateVirtualNodeResult](arkts-accessibility-accessibility-operatevirtualnoderesult-e-sys.md)&gt; | Promise used to return the execution result. |
 
 **Error codes:**
 
@@ -1019,5 +1019,5 @@ Update accessibility element property.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [9300000](../errorcode-accessibility.md#9300000-accessibility-system-service-abnormal) | System abnormality.Possible causes: &lt;br&gt;1.Internal operation failed. &lt;br&gt;2.Failed to obtain the required service or client object (null pointer). &lt;br&gt;3.IPC communication failed. &lt;br&gt;4.Failed to obtain the accessibility service proxy. &lt;br&gt;5.Timed out while waiting for the result of an asynchronous operation. |
+| [9300000](../errorcode-accessibility.md#9300000-accessibility-system-service-abnormal) | System abnormality.Possible causes: <br>1.Internal operation failed. <br>2.Failed to obtain the required service or client object (null pointer). <br>3.IPC communication failed. <br>4.Failed to obtain the accessibility service proxy. <br>5.Timed out while waiting for the result of an asynchronous operation. |
 

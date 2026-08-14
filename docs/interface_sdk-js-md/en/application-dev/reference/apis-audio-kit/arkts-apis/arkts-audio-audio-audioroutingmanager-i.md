@@ -15,7 +15,7 @@ This interface implements audio routing management. Before calling any API in Au
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'audio';
 ```
 
 ## declareDeviceTypesCompatibility

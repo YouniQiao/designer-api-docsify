@@ -49,7 +49,7 @@ function compressFiles(inFiles: Array<string>, outFile: string, options: Options
 import { zlib, BusinessError } from '@kit.BasicServicesKit';
 
 let inFile = '/data/storage/el2/base/temp/filename.xxx';
-let pathDir = 'data/storage/el2/base/temp/xxx';
+let pathDir = '/data/storage/el2/base/temp/xxx';
 let outFile = '/data/storage/el2/base/temp/xxx.zip';
 let options: zlib.Options = {
   level: zlib.CompressLevel.COMPRESS_LEVEL_DEFAULT_COMPRESSION,

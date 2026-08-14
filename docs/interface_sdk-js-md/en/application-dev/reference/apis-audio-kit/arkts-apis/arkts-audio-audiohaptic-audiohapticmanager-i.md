@@ -15,7 +15,7 @@ Manages the audio-haptic feature. Before calling any API in AudioHapticManager, 
 ## Modules to Import
 
 ```TypeScript
-import { audioHaptic } from '@kit.AudioKit';
+import { audioHaptic } from 'audioHaptic';
 ```
 
 ## createPlayer
@@ -143,14 +143,14 @@ Registers audio and haptic resources via URIs. This API uses a promise to return
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| audioUri | string | Yes | URI of the audio source.&lt;br&gt;- For details about the supported audio resource formats and path formats in the normal latency mode, see [AVPlayer](../../apis-media-kit/arkts-apis/arkts-multimedia-media.md#@ohos.multimedia.media).&lt;br&gt;- For details about the supported audio resource formats in the low-latency mode, see SoundPool. The path format must meet the requirements described in fileIo.open.&lt;br&gt;- In both modes, you are advised to pass in the absolute path of the file. |
-| hapticUri | string | Yes | URI of the haptic source.&lt;br&gt;For details about the supported haptic resource formats, see [HapticFileDescriptor](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-hapticfiledescriptor-i.md#HapticFileDescriptor). The path format must meet the requirements described in fileIo.open.&lt;br&gt;You are advised to pass in the absolute path of the file. |
+| audioUri | string | Yes | URI of the audio source.<br>- For details about the supported audio resource formats and path formats in the normal latency mode, see [AVPlayer](../../apis-media-kit/arkts-apis/arkts-multimedia-media.md#@ohos.multimedia.media).<br>- For details about the supported audio resource formats in the low-latency mode, see SoundPool. The path format must meet the requirements described in fileIo.open.<br>- In both modes, you are advised to pass in the absolute path of the file. |
+| hapticUri | string | Yes | URI of the haptic source.<br>For details about the supported haptic resource formats, see [HapticFileDescriptor](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-hapticfiledescriptor-i.md#HapticFileDescriptor). The path format must meet the requirements described in fileIo.open.<br>You are advised to pass in the absolute path of the file. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;int&gt; | Promise, which returns the registered resource ID. &lt;br&gt;In normal cases, the returned resource ID is a non-negative number. A negative ID indicates a registration failure. In this case, check whether the number of registered resources exceeds the upper limit. |
+| Promise&lt;int&gt; | Promise, which returns the registered resource ID. <br>In normal cases, the returned resource ID is a non-negative number. A negative ID indicates a registration failure. In this case, check whether the number of registered resources exceeds the upper limit. |
 
 **Error codes:**
 
@@ -204,7 +204,7 @@ Registers audio and haptic resources via file descriptors. This API uses a promi
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;int&gt; | Promise, which returns the registered resource ID. &lt;br&gt;In normal cases, the returned resource ID is a non-negative number. A negative ID indicates a registration failure. In this case, check whether the number of registered resources exceeds the upper limit. |
+| Promise&lt;int&gt; | Promise, which returns the registered resource ID. <br>In normal cases, the returned resource ID is a non-negative number. A negative ID indicates a registration failure. In this case, check whether the number of registered resources exceeds the upper limit. |
 
 ## Examples
 

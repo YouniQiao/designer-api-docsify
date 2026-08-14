@@ -13,7 +13,7 @@ type GestureType = 'left' | 'leftThenRight' | 'leftThenUp' | 'leftThenDown' |
   'fourFingerSwipeUp' | 'fourFingerSwipeDown' | 'fourFingerSwipeLeft' | 'fourFingerSwipeRight' | 'oneFingerDoubleTap'
 ```
 
-手势事件类型。
+手势事件类型。手势事件在用户执行特定手势操作时由无障碍服务触发，辅助功能扩展可通过onAccessibilityEvent回调接收并处理对应的手势事件。
 
 **起始版本：** 9
 
@@ -68,5 +68,5 @@ type GestureType = 'left' | 'leftThenRight' | 'leftThenUp' | 'leftThenDown' |
 | 'fourFingerSwipeDown' | 表示四指向下滑动的手势。 [since 11] |
 | 'fourFingerSwipeLeft' | 表示四指向左滑动的手势。 [since 11] |
 | 'fourFingerSwipeRight' | 表示四指向右滑动的手势。 [since 11] |
-| 'oneFingerDoubleTap' | [since 26.0.0] |
+| 'oneFingerDoubleTap' | 表示单指双击的手势。 [since 26.0.0] |
 

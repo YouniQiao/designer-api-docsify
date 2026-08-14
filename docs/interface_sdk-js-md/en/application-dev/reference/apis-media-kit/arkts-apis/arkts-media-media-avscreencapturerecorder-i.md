@@ -15,7 +15,7 @@ AVScreenCaptureRecorder is a class for screen capture management. It provides AP
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'media';
 ```
 
 ## addWatermark
@@ -132,7 +132,7 @@ Initializes screen capture and sets screen capture parameters. This API uses a p
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3. Parameter verification failed. Return by promise. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3. Parameter verification failed. Return by promise. |
 | [5400103](../errorcode-media.md#5400103-io-error) | IO error. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
 
@@ -577,7 +577,7 @@ Sets the display mode of the picker. The setting takes effect the next time the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pickerMode | [PickerMode](arkts-media-media-pickermode-e.md) | Yes | Picker mode.&lt;br&gt;It defines the content type displayed in the picker. The options are as follows:&lt;br&gt;- **SCREEN_ONLY**: Displays only a list of screens.&lt;br&gt;- **WINDOW_ONLY**: Displays only a list of windows.&lt;br&gt;- **SCREEN_AND_WINDOW**: Displays both screens and windows. It is the default value. |
+| pickerMode | [PickerMode](arkts-media-media-pickermode-e.md) | Yes | Picker mode.<br>It defines the content type displayed in the picker. The options are as follows:<br>- **SCREEN_ONLY**: Displays only a list of screens.<br>- **WINDOW_ONLY**: Displays only a list of windows.<br>- **SCREEN_AND_WINDOW**: Displays both screens and windows. It is the default value. |
 
 **Return value:**
 

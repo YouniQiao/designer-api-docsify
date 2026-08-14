@@ -90,7 +90,7 @@ The arrow background background color. Default value: '# 00000000'.
 backgroundSize?: Length
 ```
 
-The arrow background size. The size of the arrow is three-quarters of the background size, when the background is displayed. The percentage cannot be set. &lt;br&gt;Displays on either side of the navigation point: Default value: 24vp Displayed on both sides of the component:Default value: 32vp.
+The arrow background size. The size of the arrow is three-quarters of the background size, when the background is displayed. The percentage cannot be set. <br>Displays on either side of the navigation point: Default value: 24vp Displayed on both sides of the component:Default value: 32vp.
 
 **Type:** [Length](../../apis-arkui/arkts-apis/arkts-arkui-length-t.md)
 

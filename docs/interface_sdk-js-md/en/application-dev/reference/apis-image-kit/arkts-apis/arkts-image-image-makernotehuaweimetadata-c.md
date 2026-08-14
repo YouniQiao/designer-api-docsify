@@ -17,7 +17,7 @@ MakerNoteHuaweiMetadata implements Metadata Photo metadata from Huawei cameras.
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'image';
 ```
 
 ## clone

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { autoFillManager } from '@kit.AbilityKit';
+import { autoFillManager } from 'autoFillManager';
 ```
 
 ## requestAutoSave
@@ -39,7 +39,7 @@ Requests to automatically save the widget data. This API uses an asynchronous ca
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Get instance id failed; &lt;br&gt;2. Parse instance id failed; 3. The second parameter is not of type callback. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Possible causes: 1. Get instance id failed; <br>2. Parse instance id failed; 3. The second parameter is not of type callback. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 ## Examples

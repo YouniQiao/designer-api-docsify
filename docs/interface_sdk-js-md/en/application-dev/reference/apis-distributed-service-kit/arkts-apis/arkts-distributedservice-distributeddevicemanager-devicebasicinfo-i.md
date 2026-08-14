@@ -15,7 +15,7 @@ Represents the basic information about a distributed device.
 ## Modules to Import
 
 ```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { distributedDeviceManager } from 'distributedDeviceManager';
 ```
 
 ## deviceId

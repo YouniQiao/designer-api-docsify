@@ -15,7 +15,7 @@ Provides the string collation capability.
 ## Modules to Import
 
 ```TypeScript
-import { intl } from '@kit.LocalizationKit';
+import { intl } from 'intl';
 ```
 
 ## compare

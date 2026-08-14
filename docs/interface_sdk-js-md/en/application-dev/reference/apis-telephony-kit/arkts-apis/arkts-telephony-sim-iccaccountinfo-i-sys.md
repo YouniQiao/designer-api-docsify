@@ -15,7 +15,7 @@ Defines the ICC account information.
 ## Modules to Import
 
 ```TypeScript
-import { sim } from '@kit.TelephonyKit';
+import { sim } from 'sim';
 ```
 
 ## operatorName

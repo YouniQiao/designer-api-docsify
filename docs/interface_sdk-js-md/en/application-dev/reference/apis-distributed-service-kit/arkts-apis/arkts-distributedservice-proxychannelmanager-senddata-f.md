@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { proxyChannelManager } from '@kit.DistributedServiceKit';
+import { proxyChannelManager } from 'proxyChannelManager';
 ```
 
 ## sendData

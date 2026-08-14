@@ -17,7 +17,7 @@ Defines a button displayed in the reminder notification.
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgent } from '@kit.BackgroundTasksKit';
+import { reminderAgent } from 'reminderAgent';
 ```
 
 ## title

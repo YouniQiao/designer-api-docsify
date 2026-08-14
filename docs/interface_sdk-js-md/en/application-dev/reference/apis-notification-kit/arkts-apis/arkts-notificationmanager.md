@@ -15,7 +15,7 @@ This module provides notification management capabilities, allowing applications
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'notificationManager';
 ```
 
 ## Summary
@@ -199,7 +199,7 @@ import { notificationManager } from '@kit.NotificationKit';
 | [setSyncNotificationEnabledWithoutApp](arkts-notification-notificationmanager-setsyncnotificationenabledwithoutapp-f-sys.md#setSyncNotificationEnabledWithoutApp) | Sets whether to enable the notification sync feature for devices where the application is not installed. This API uses an asynchronous callback to return the result. |
 | [setSyncNotificationEnabledWithoutApp](arkts-notification-notificationmanager-setsyncnotificationenabledwithoutapp-f-sys.md#setSyncNotificationEnabledWithoutApp-(System-API)) | Sets whether to enable the notification sync feature for devices where the application is not installed. This API uses a promise to return the result. |
 | [setTargetDeviceStatus](arkts-notification-notificationmanager-settargetdevicestatus-f-sys.md#setTargetDeviceStatus) | Sets the status of a device after it is successfully connected. Device status determines the notification mode of the current device when a notification is published. |
-| [snoozeNotification](arkts-notification-notificationmanager-snoozenotification-f-sys.md#snoozeNotification) | Snoozes a notification. The notification will be reminded again after the specified time. Each setting will trigger only one reminder, and the reminder mode will be the same as that of the notification.&lt;br&gt;The notification will be deleted after the setting. |
+| [snoozeNotification](arkts-notification-notificationmanager-snoozenotification-f-sys.md#snoozeNotification) | Snoozes a notification. The notification will be reminded again after the specified time. Each setting will trigger only one reminder, and the reminder mode will be the same as that of the notification.<br>The notification will be deleted after the setting. |
 | [subscribeSystemLiveView](arkts-notification-notificationmanager-subscribesystemliveview-f-sys.md#subscribeSystemLiveView) | Subscribes to the system live view notification. This API uses a promise to return the result. |
 | [triggerSystemLiveView](arkts-notification-notificationmanager-triggersystemliveview-f-sys.md#triggerSystemLiveView) | Triggers a system live view notification. This API uses a promise to return the result. |
 <!--DelEnd-->

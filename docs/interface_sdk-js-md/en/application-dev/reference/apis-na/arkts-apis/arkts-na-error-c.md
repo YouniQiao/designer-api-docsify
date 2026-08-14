@@ -69,7 +69,7 @@ Constructs a new error instance with provided code, message and cause.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | int | Yes | Error code.. &lt;br&gt;The value should be an integer. |
+| code | int | Yes | Error code.. <br>The value should be an integer. |
 | message | string | No | Error text. |
 | options | [ErrorOptions](arkts-na-error-erroroptions-i.md) | No | Error options. |
 
@@ -125,7 +125,7 @@ Constructs a new error instance with provided name, code, message and options.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Error name. |
-| code | int | Yes | Error code. &lt;br&gt;The value should be an integer. |
+| code | int | Yes | Error code. <br>The value should be an integer. |
 | message | string | No | Error text. |
 | options | [ErrorOptions](arkts-na-error-erroroptions-i.md) | No | Error options. |
 

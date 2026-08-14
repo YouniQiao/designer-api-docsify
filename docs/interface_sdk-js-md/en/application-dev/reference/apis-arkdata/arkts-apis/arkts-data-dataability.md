@@ -15,7 +15,7 @@ The **DataAbility** module provides APIs to create predicates for querying data 
 ## Modules to Import
 
 ```TypeScript
-import { dataAbility } from '@kit.ArkData';
+import { dataAbility } from 'dataAbility';
 ```
 
 ## Summary

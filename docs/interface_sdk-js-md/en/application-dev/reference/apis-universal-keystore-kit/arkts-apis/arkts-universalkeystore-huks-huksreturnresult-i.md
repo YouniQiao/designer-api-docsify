@@ -15,7 +15,7 @@ Represents the result returned.
 ## Modules to Import
 
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
+import { huks } from 'huks';
 ```
 
 ## certChains

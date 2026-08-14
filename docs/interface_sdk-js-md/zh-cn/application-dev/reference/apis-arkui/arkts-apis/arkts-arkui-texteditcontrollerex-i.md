@@ -130,7 +130,7 @@ setCaretOffset(offset: number): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 光标是否设置成功。 &lt;br&gt;true表示光标设置成功，false表示设置失败。 |
+| boolean | 光标是否设置成功。 <br>true表示光标设置成功，false表示设置失败。 |
 
 ## stopEditing
 

@@ -17,7 +17,7 @@ This module provides data sharing and expansion capabilities.
 ## Modules to Import
 
 ```TypeScript
-import { DataShareExtensionAbility } from '@kit.ArkData';
+import { DataShareExtensionAbility } from 'DataShareExtensionAbility';
 ```
 
 ## batchInsert

@@ -40,7 +40,7 @@ Number of pixels of the maximum image.
 largestImageLoadEndTime?: number
 ```
 
-End time of the loading of the maximum image. &lt;br&gt;Unit: milliseconds.
+End time of the loading of the maximum image. <br>Unit: milliseconds.
 
 **Type:** number
 
@@ -62,7 +62,7 @@ End time of the loading of the maximum image. &lt;br&gt;Unit: milliseconds.
 largestImageLoadStartTime?: number
 ```
 
-Start time of the loading of the maximum image. &lt;br&gt;Unit: milliseconds.
+Start time of the loading of the maximum image. <br>Unit: milliseconds.
 
 **Type:** number
 
@@ -84,7 +84,7 @@ Start time of the loading of the maximum image. &lt;br&gt;Unit: milliseconds.
 largestImagePaintTime?: number
 ```
 
-Paint time of largest image. &lt;br&gt;Unit:milliseconds.
+Paint time of largest image. <br>Unit:milliseconds.
 
 **Type:** number
 
@@ -106,7 +106,7 @@ Paint time of largest image. &lt;br&gt;Unit:milliseconds.
 largestTextPaintTime?: number
 ```
 
-Paint time of largest text. &lt;br&gt;Unit:milliseconds.
+Paint time of largest text. <br>Unit:milliseconds.
 
 **Type:** number
 
@@ -128,7 +128,7 @@ Paint time of largest text. &lt;br&gt;Unit:milliseconds.
 navigationStartTime?: number
 ```
 
-Start time of navigation. &lt;br&gt;Unit:microseconds.
+Start time of navigation. <br>Unit:microseconds.
 
 **Type:** number
 

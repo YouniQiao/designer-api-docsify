@@ -15,7 +15,7 @@ Defines the ad configuration.
 ## Modules to Import
 
 ```TypeScript
-import { advertising } from '@kit.AdsKit';
+import { advertising } from 'advertising';
 ```
 
 ## adContentClassification

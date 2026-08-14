@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { mechanicManager } from '@kit.MechanicKit';
+import { mechanicManager } from 'mechanicManager';
 ```
 
 ## doAction
@@ -30,7 +30,7 @@ Execute an action sequence.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mechId | int | Yes | ID of the mechanical device. &lt;br&gt;The value should be an integer. |
+| mechId | int | Yes | ID of the mechanical device. <br>The value should be an integer. |
 | actionType | ActionType | Yes | Type of action sequence. |
 
 **Return value:**

@@ -54,7 +54,7 @@ let wantTemp: Want = {
 try {
   securityManager.setExternalSourceExtensionsPolicy(wantTemp, common.ManagedPolicy.FORCE_OPEN);
   console.info(`Succeeded in setting managed policy.`);
-} catch(err) {
+} catch (err) {
   console.error(`Failed to set managed policy. Code: ${err.code}, message: ${err.message}`);
 }
 ```

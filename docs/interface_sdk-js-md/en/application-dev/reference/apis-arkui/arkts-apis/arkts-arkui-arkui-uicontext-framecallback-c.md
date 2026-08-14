@@ -15,7 +15,38 @@ Implements the API for setting the task that needs to be executed during the nex
 ## Modules to Import
 
 ```TypeScript
-import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CustomKeyboardContinueFeature, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from '@kit.ArkUI';
+import { AtomicServiceBar } from 'AtomicServiceBar';
+import { ComponentUtils } from 'ComponentUtils';
+import { ContextMenuController } from 'ContextMenuController';
+import { CursorController } from 'CursorController';
+import { DialogPresenter } from 'DialogPresenter';
+import { DragController } from 'DragController';
+import { Font } from 'Font';
+import { KeyboardAvoidMode } from 'KeyboardAvoidMode';
+import { MediaQuery } from 'MediaQuery';
+import { OverlayManager } from 'OverlayManager';
+import { PromptAction } from 'PromptAction';
+import { Router } from 'Router';
+import { UIContext } from 'UIContext';
+import { UIInspector } from 'UIInspector';
+import { UIObserver } from 'UIObserver';
+import { PageInfo } from 'PageInfo';
+import { SwiperDynamicSyncScene } from 'SwiperDynamicSyncScene';
+import { SwiperDynamicSyncSceneType } from 'SwiperDynamicSyncSceneType';
+import { MarqueeDynamicSyncScene } from 'MarqueeDynamicSyncScene';
+import { MarqueeDynamicSyncSceneType } from 'MarqueeDynamicSyncSceneType';
+import { MeasureUtils } from 'MeasureUtils';
+import { FrameCallback } from 'FrameCallback';
+import { OverlayManagerOptions } from 'OverlayManagerOptions';
+import { TargetInfo } from 'TargetInfo';
+import { TextMenuController } from 'TextMenuController';
+import { NodeIdentity } from 'NodeIdentity';
+import { NodeRenderState } from 'NodeRenderState';
+import { NodeRenderStateChangeCallback } from 'NodeRenderStateChangeCallback';
+import { Magnifier } from 'Magnifier';
+import { ResolvedUIContext } from 'ResolvedUIContext';
+import { TextSelectionClearPolicy } from 'TextSelectionClearPolicy';
+import { CustomKeyboardContinueFeature } from 'CustomKeyboardContinueFeature';
 ```
 
 ## onFrame
@@ -44,7 +75,7 @@ Called when the next frame is rendered.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| frameTimeInNano | number | Yes | Time when the rendering of the next frame starts, in nanoseconds.&lt;br&gt;Value range: [0, +∞) |
+| frameTimeInNano | number | Yes | Time when the rendering of the next frame starts, in nanoseconds.<br>Value range: [0, +∞) |
 
 ## onIdle
 
@@ -72,5 +103,5 @@ Called after the rendering of the subsequent frame has finished and there is mor
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timeLeftInNano | number | Yes | Remaining idle time for the current frame, in nanoseconds.&lt;br&gt;Value range: [0, +∞) |
+| timeLeftInNano | number | Yes | Remaining idle time for the current frame, in nanoseconds.<br>Value range: [0, +∞) |
 

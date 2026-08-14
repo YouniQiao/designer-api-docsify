@@ -56,7 +56,7 @@ Sets the gesture event consumption result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | boolean | Yes | Whether to consume the gesture event.&lt;br&gt;The value **true** means to consume the gesture event, and **false** means the opposite.&lt;br&gt;If **null** or **undefined** is passed in, the value is **true**. |
+| result | boolean | Yes | Whether to consume the gesture event.<br>The value **true** means to consume the gesture event, and **false** means the opposite.<br>If **null** or **undefined** is passed in, the value is **true**. |
 
 ## setGestureEventResult
 
@@ -80,8 +80,8 @@ Sets the gesture event consumption result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | boolean | Yes | Whether to consume the gesture event.&lt;br&gt;The value **true** means to consume the gesture event, and **false** means the opposite.&lt;br&gt;If **null** or **undefined** is passed in, the value is **true**. |
-| stopPropagation | boolean | Yes | Whether to stop propagation. This parameter is valid only when **result** is set to **true**.&lt;br&gt;The value **true** means to stop propagation, and **false** means the opposite.&lt;br&gt;If **null** or **undefined** is passed in, the value is **true**. |
+| result | boolean | Yes | Whether to consume the gesture event.<br>The value **true** means to consume the gesture event, and **false** means the opposite.<br>If **null** or **undefined** is passed in, the value is **true**. |
+| stopPropagation | boolean | Yes | Whether to stop propagation. This parameter is valid only when **result** is set to **true**.<br>The value **true** means to stop propagation, and **false** means the opposite.<br>If **null** or **undefined** is passed in, the value is **true**. |
 
 ## setMouseEventResult
 
@@ -105,6 +105,6 @@ Sets the mouse event consumption result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | boolean | Yes | Whether to consume the mouse event.&lt;br&gt;The value **true** means to consume the mouse event, and **false** means the opposite.&lt;br&gt;If **null** or **undefined** is passed in, the value is **true**. |
-| stopPropagation | boolean | No | Whether to stop propagation. This parameter is valid only when **result** is set to **true**.&lt;br&gt;The value **true** means to stop propagation, and **false** means the opposite.&lt;br&gt;If **null** or **undefined** is passed in, the value is **true**. |
+| result | boolean | Yes | Whether to consume the mouse event.<br>The value **true** means to consume the mouse event, and **false** means the opposite.<br>If **null** or **undefined** is passed in, the value is **true**. |
+| stopPropagation | boolean | No | Whether to stop propagation. This parameter is valid only when **result** is set to **true**.<br>The value **true** means to stop propagation, and **false** means the opposite.<br>If **null** or **undefined** is passed in, the value is **true**. |
 

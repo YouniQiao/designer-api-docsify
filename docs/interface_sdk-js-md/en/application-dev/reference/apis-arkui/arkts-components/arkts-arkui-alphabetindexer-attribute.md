@@ -38,7 +38,7 @@ Sets the alignment style of the indexer pop-up window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [IndexerAlign](arkts-arkui-indexeralign-e.md) | Yes | Alignment style of the indexer pop-up window. The pop-up window can be displayed on the right or left of the indexer.&lt;br&gt;Default value: **IndexerAlign.END |
+| value | [IndexerAlign](arkts-arkui-indexeralign-e.md) | Yes | Alignment style of the indexer pop-up window. The pop-up window can be displayed on the right or left of the indexer.<br>Default value: **IndexerAlign.END |
 | offset | Length | No | Spacing between the pop-up window and the alphabetic index bar. A value greater than or equal to **0** is valid. If this parameter is set to a value less than **0** or is not set, the spacing is the same as **popupPosition**. When this parameter and [popupPosition](#popupPosition) are set at the same time, **offset** takes effect in the horizontal direction, and **popupPosition.y** takes effect in the vertical direction.<br>**Since:** 10 |
 
 ## autoCollapse
@@ -67,7 +67,7 @@ Sets whether to enable the adaptive collapse behavior for the indexer. When the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to auto-collapse or expand the indexer bar.&lt;br&gt;Default value:&lt;br&gt;Before API version 12: **false**&lt;br&gt;Since API version 12: **true**&lt;br&gt;**true**: Enable the adaptive collapse behavior.&lt;br&gt; **false**: Disable the adaptive collapse behavior. |
+| value | boolean | Yes | Whether to auto-collapse or expand the indexer bar.<br>Default value:<br>Before API version 12: **false**<br>Since API version 12: **true**<br>**true**: Enable the adaptive collapse behavior.<br> **false**: Disable the adaptive collapse behavior. |
 
 ## color
 
@@ -93,7 +93,7 @@ Sets the text color for unselected items.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ResourceColor | Yes | Text color of unselected items.&lt;br&gt;Default value: **0x99182431**, which is a slightly transparent brown. |
+| value | ResourceColor | Yes | Text color of unselected items.<br>Default value: **0x99182431**, which is a slightly transparent brown. |
 
 ## enableHapticFeedback
 
@@ -121,7 +121,7 @@ Sets whether to enable haptic feedback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to enable haptic feedback.&lt;br&gt;**true**: To enable haptic feedback.&lt;br&gt;**false**: Not to enable haptic feedback.&lt;br&gt;Default value: **true**&lt;br&gt;To enable haptic feedback, you must declare the **ohos.permission.VIBRATE** permission under **requestPermissions** in the [module.json5](../../../quick-start/module-configuration-file.md) file of the project.&lt;br&gt;"requestPermissions" : [{"name": "ohos.permission.VIBRATE"}] |
+| value | boolean | Yes | Whether to enable haptic feedback.<br>**true**: To enable haptic feedback.<br>**false**: Not to enable haptic feedback.<br>Default value: **true**<br>To enable haptic feedback, you must declare the **ohos.permission.VIBRATE** permission under **requestPermissions** in the [module.json5](../../../quick-start/module-configuration-file.md) file of the project.<br>"requestPermissions" : [{"name": "ohos.permission.VIBRATE"}] |
 
 ## font
 
@@ -147,7 +147,7 @@ Sets the text style for unselected items.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Font | Yes | Text style of unselected items.&lt;br&gt;Default value:&lt;br&gt;API version 11 and earlier:&lt;br&gt;{&lt;br&gt; size:'12.0fp',&lt;br&gt; style:FontStyle.Normal,&lt;br&gt; weight:FontWeight.Regular,&lt;br&gt; family:'HarmonyOS Sans'&lt;br&gt;}&lt;br&gt; API version 12 and later:&lt;br&gt;{&lt;br&gt;size:'10.0vp',&lt;br&gt; style:FontStyle.Normal,&lt;br&gt; weight:FontWeight.Medium,&lt;br&gt; family:'HarmonyOS Sans'&lt;br&gt;} |
+| value | Font | Yes | Text style of unselected items.<br>Default value:<br>API version 11 and earlier:<br>{<br> size:'12.0fp',<br> style:FontStyle.Normal,<br> weight:FontWeight.Regular,<br> family:'HarmonyOS Sans'<br>}<br> API version 12 and later:<br>{<br>size:'10.0vp',<br> style:FontStyle.Normal,<br> weight:FontWeight.Medium,<br> family:'HarmonyOS Sans'<br>} |
 
 ## itemBorderRadius
 
@@ -175,7 +175,7 @@ Sets the radius of the index background border corners in the alphabetic index b
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | &lt;br&gt;Unit: vp. - Radius of the index background border corners in the alphabetic index bar.&lt;br&gt;Default value: **8vp**&lt;br&gt;This parameter cannot be set in percentage. If the value specified is less than **0**, **0** is used.&lt;br&gt;The radius of the index background border corners in the alphabetic index bar is automatically adaptive (radius of the index corners + 4 vp). |
+| value | number | Yes | <br>Unit: vp. - Radius of the index background border corners in the alphabetic index bar.<br>Default value: **8vp**<br>This parameter cannot be set in percentage. If the value specified is less than **0**, **0** is used.<br>The radius of the index background border corners in the alphabetic index bar is automatically adaptive (radius of the index corners + 4 vp). |
 
 ## itemSize
 
@@ -201,7 +201,7 @@ Sets the size of the index item area.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string \| number | Yes | Size of the index item area, which is a square, meaning the side length of the square. This attribute cannot be set in percentage.&lt;br&gt;The actual value is restricted by the component size. The maximum width of an index item is the component width minus the left and right padding, and the maximum height of an index item is (component height minus the top and bottom padding)/number of index items. If the input value is less than or equal to 0, the default value is used.&lt;br&gt;Default value: **16.0**&lt;br&gt;Unit: vp |
+| value | string \| number | Yes | Size of the index item area, which is a square, meaning the side length of the square. This attribute cannot be set in percentage.<br>The actual value is restricted by the component size. The maximum width of an index item is the component width minus the left and right padding, and the maximum height of an index item is (component height minus the top and bottom padding)/number of index items. If the input value is less than or equal to 0, the default value is used.<br>Default value: **16.0**<br>Unit: vp |
 
 ## onPopupSelect
 
@@ -331,7 +331,7 @@ Sets the background color for the pop-up window. If this API is not called or th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ResourceColor | Yes | Background color of the pop-up window.&lt;br&gt;The background blur effect of the pop-up text can affect the background color. You can disable the effect by setting [popupBackgroundBlurStyle](#popupBackgroundBlurStyle) to **NONE**.&lt;br&gt; |
+| value | ResourceColor | Yes | Background color of the pop-up window.<br>The background blur effect of the pop-up text can affect the background color. You can disable the effect by setting [popupBackgroundBlurStyle](#popupBackgroundBlurStyle) to **NONE**.<br> |
 
 ## popupBackgroundBlurStyle
 
@@ -359,7 +359,7 @@ Sets the background blur style of the pop-up window. In versions earlier than AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | BlurStyle | Yes | Background blur style of the pop-up window.&lt;br&gt;The background blur effect can affect [popupBackground](#popupBackground). You can disable the effect by setting it to **NONE**. |
+| value | BlurStyle | Yes | Background blur style of the pop-up window.<br>The background blur effect can affect [popupBackground](#popupBackground). You can disable the effect by setting it to **NONE**. |
 
 ## popupColor
 
@@ -385,7 +385,7 @@ Sets the text color for the primary index item in the pop-up window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ResourceColor | Yes | Text color of the primary index item in the pop-up window.&lt;br&gt;Default value: **0xFF007DFF**, which is blue. |
+| value | ResourceColor | Yes | Text color of the primary index item in the pop-up window.<br>Default value: **0xFF007DFF**, which is blue. |
 
 ## popupFont
 
@@ -411,7 +411,7 @@ Sets the text style for the primary index item in the pop-up window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Font | Yes | Text style of the primary index item in the pop-up window.&lt;br&gt;Default value:&lt;br&gt;{&lt;br&gt;size:' 24.0vp',&lt;br&gt; style:FontStyle.Normal,&lt;br&gt; weight:FontWeight.Medium,&lt;br&gt; family:'HarmonyOS Sans'&lt;br&gt;} |
+| value | Font | Yes | Text style of the primary index item in the pop-up window.<br>Default value:<br>{<br>size:' 24.0vp',<br> style:FontStyle.Normal,<br> weight:FontWeight.Medium,<br> family:'HarmonyOS Sans'<br>} |
 
 ## popupItemBackgroundColor
 
@@ -439,7 +439,7 @@ Sets the background color for the secondary index item in the pop-up window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ResourceColor | Yes | Background color of the secondary index item in the pop-up window.&lt;br&gt;Default value:&lt;br&gt;API version 11 and earlier: **#FFFFFFFF**, which is white.&lt;br&gt;API version 12 and later: **#00000000**, which is transparent. |
+| value | ResourceColor | Yes | Background color of the secondary index item in the pop-up window.<br>Default value:<br>API version 11 and earlier: **#FFFFFFFF**, which is white.<br>API version 12 and later: **#00000000**, which is transparent. |
 
 ## popupItemBorderRadius
 
@@ -467,7 +467,7 @@ Sets the radius of the index border corners in the pop-up window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Radius of the index background border corners in the pop-up window. &lt;br&gt;Unit: vp. **24vp**.&lt;br&gt;This parameter cannot be set in percentage. If the value specified is less than **0**, **0** is used.&lt;br&gt;The radius of the index background border corners in the pop-up window is automatically adaptive ( radius of the index corners + 4 vp). |
+| value | number | Yes | Radius of the index background border corners in the pop-up window. <br>Unit: vp. **24vp**.<br>This parameter cannot be set in percentage. If the value specified is less than **0**, **0** is used.<br>The radius of the index background border corners in the pop-up window is automatically adaptive ( radius of the index corners + 4 vp). |
 
 ## popupItemFont
 
@@ -495,7 +495,7 @@ Sets the text style for the secondary index item in the pop-up window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Font | Yes | Text style of the secondary index item in the pop-up window.&lt;br&gt;Default value:&lt;br&gt;{&lt;br&gt;size :24,&lt;br&gt;weight:FontWeight.Medium&lt;br&gt;} |
+| value | Font | Yes | Text style of the secondary index item in the pop-up window.<br>Default value:<br>{<br>size :24,<br>weight:FontWeight.Medium<br>} |
 
 ## popupPosition
 
@@ -521,7 +521,7 @@ Sets the position of the pop-up window relative to the center of the indexer's t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Position | Yes | Position of the pop-up window relative to the center of the indexer's top border.&lt;br&gt; Default value: **{x: 60.0, y: 48.0} |
+| value | Position | Yes | Position of the pop-up window relative to the center of the indexer's top border.<br> Default value: **{x: 60.0, y: 48.0} |
 
 ## popupSelectedColor
 
@@ -549,7 +549,7 @@ Sets the text color for the selected secondary index item in the pop-up window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ResourceColor | Yes | Text color of the selected secondary index items in the pop-up window.&lt;br&gt;Default value: **#FF182431**, which is dark blue. |
+| value | ResourceColor | Yes | Text color of the selected secondary index items in the pop-up window.<br>Default value: **#FF182431**, which is dark blue. |
 
 ## popupTitleBackground
 
@@ -577,7 +577,7 @@ Sets the background color for the primary index item in the pop-up window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ResourceColor | Yes | Background color for the primary index item in the pop-up window.&lt;br&gt;Default value :&lt;br&gt;If the pop-up window has only one index: **#00FFFFFF**.&lt;br&gt;If the pop-up window has multiple indexes: **#0c182431**. |
+| value | ResourceColor | Yes | Background color for the primary index item in the pop-up window.<br>Default value :<br>If the pop-up window has only one index: **#00FFFFFF**.<br>If the pop-up window has multiple indexes: **#0c182431**. |
 
 ## popupUnselectedColor
 
@@ -605,7 +605,7 @@ Sets the text color for the unselected secondary index items in the pop-up windo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ResourceColor | Yes | Text color of the unselected secondary index items in the pop-up window.&lt;br&gt; Default value: **#FF182431**, which is dark blue. |
+| value | ResourceColor | Yes | Text color of the unselected secondary index items in the pop-up window.<br> Default value: **#FF182431**, which is dark blue. |
 
 ## selected
 
@@ -631,7 +631,7 @@ Sets the index of the selected item. Since API version 10, this parameter suppor
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index of the selected item.&lt;br&gt;Value range: [0, [arrayValue](arkts-arkui-alphabetindexeroptions-i.md#AlphabetIndexerOptions).length – 1]&lt;br&gt;Default value: **0 |
+| index | number | Yes | Index of the selected item.<br>Value range: [0, [arrayValue](arkts-arkui-alphabetindexeroptions-i.md#AlphabetIndexerOptions).length – 1]<br>Default value: **0 |
 
 ## selectedBackgroundColor
 
@@ -657,7 +657,7 @@ Sets the background color of the selected item.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ResourceColor | Yes | Background color of the selected item.&lt;br&gt;Default value: **0x1A007DFF**, which is semi-transparent blue-green. |
+| value | ResourceColor | Yes | Background color of the selected item.<br>Default value: **0x1A007DFF**, which is semi-transparent blue-green. |
 
 ## selectedColor
 
@@ -683,7 +683,7 @@ Sets the text color for the selected item.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ResourceColor | Yes | Text color of the selected item.&lt;br&gt;Default value: **0xFF007DFF**, which is blue. |
+| value | ResourceColor | Yes | Text color of the selected item.<br>Default value: **0xFF007DFF**, which is blue. |
 
 ## selectedFont
 
@@ -709,7 +709,7 @@ Sets the text style for the selected item.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Font | Yes | Text style of the selected item.&lt;br&gt;Default value:&lt;br&gt;API version 11 and earlier:&lt;br&gt;{&lt;br&gt; size:'12.0fp',&lt;br&gt; style:FontStyle.Normal,&lt;br&gt; weight:FontWeight.Regular,&lt;br&gt; family:'HarmonyOS Sans'&lt;br&gt;}&lt;br&gt; API version 12 and later:&lt;br&gt;{&lt;br&gt;size:'10.0vp',&lt;br&gt; style:FontStyle.Normal,&lt;br&gt; weight:FontWeight.Medium,&lt;br&gt; family:'HarmonyOS Sans'&lt;br&gt;} |
+| value | Font | Yes | Text style of the selected item.<br>Default value:<br>API version 11 and earlier:<br>{<br> size:'12.0fp',<br> style:FontStyle.Normal,<br> weight:FontWeight.Regular,<br> family:'HarmonyOS Sans'<br>}<br> API version 12 and later:<br>{<br>size:'10.0vp',<br> style:FontStyle.Normal,<br> weight:FontWeight.Medium,<br> family:'HarmonyOS Sans'<br>} |
 
 ## usingPopup
 
@@ -735,5 +735,5 @@ Sets whether to display the pop-up window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to display the pop-up window.&lt;br&gt;Default value: **false**.&lt;br&gt;**true**: Display the pop-up window.&lt;br&gt;**false**: Do not display the pop-up window. |
+| value | boolean | Yes | Whether to display the pop-up window.<br>Default value: **false**.<br>**true**: Display the pop-up window.<br>**false**: Do not display the pop-up window. |
 

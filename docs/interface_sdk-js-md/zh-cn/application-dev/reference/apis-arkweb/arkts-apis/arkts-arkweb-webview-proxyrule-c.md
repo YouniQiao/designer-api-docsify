@@ -36,7 +36,7 @@ getSchemeFilter(): ProxySchemeFilter
 
 | 类型 | 说明 |
 | --- | --- |
-| [ProxySchemeFilter](../../apis-na/arkts-apis/arkts-na-webview-proxyschemefilter-e.md) | 代理规则中的ProxySchemeFilter信息。 |
+| [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) | 代理规则中的ProxySchemeFilter信息。 |
 
 ## getUrl
 

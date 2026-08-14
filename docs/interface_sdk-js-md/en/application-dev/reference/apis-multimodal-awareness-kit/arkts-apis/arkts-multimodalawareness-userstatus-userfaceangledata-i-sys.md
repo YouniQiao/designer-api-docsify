@@ -19,7 +19,7 @@ Defines user face angle data.
 ## Modules to Import
 
 ```TypeScript
-import { userStatus } from '@kit.MultimodalAwarenessKit';
+import { userStatus } from 'userStatus';
 ```
 
 ## hpeNetworkId

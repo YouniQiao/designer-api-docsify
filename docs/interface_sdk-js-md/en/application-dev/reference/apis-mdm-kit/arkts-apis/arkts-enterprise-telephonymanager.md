@@ -17,7 +17,7 @@ The **telephonyManager** module provides the telephony management capability. > 
 ## Modules to Import
 
 ```TypeScript
-import { telephonyManager } from '@kit.MDMKit';
+import { telephonyManager } from 'telephonyManager';
 ```
 
 ## Summary

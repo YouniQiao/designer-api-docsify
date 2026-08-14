@@ -17,7 +17,7 @@ Describes the options for decomposing an HDR Pixelmap to a Picture containing an
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'image';
 ```
 
 ## desiredPixelFormat

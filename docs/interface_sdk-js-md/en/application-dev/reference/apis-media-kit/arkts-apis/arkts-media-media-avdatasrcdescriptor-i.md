@@ -15,7 +15,7 @@ Defines the descriptor of an audio and video file, which is used in DataSource p
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'media';
 ```
 
 ## callback
@@ -24,7 +24,7 @@ import { media } from '@kit.MediaKit';
 callback: (buffer: ArrayBuffer, length: long, pos?: long) => int
 ```
 
-Callback function implemented by users, which is used to fill data. buffer - The buffer need to fill. length - The stream length player want to get, in byte. pos - The stream position player want get start, and is an optional parameter. When fileSize set to -1, this parameter is not used. Returns length of the data to be filled, Return -1 to indicate that the end of the stream is reached, Return -2 to indicate that an unrecoverable error has been encountered.
+Callback function implemented by users, which is used to fill data. buffer - The buffer need to fill. length - The stream length player want to get. pos - The stream position player want get start, and is an optional parameter. When fileSize set to -1, this parameter is not used. Returns length of the data to be filled, Return -1 to indicate that the end of the stream is reached, Return -2 to indicate that an unrecoverable error has been encountered.
 
 **Type:** (buffer: ArrayBuffer, length: long, pos?: long) =&gt; int
 
@@ -46,7 +46,7 @@ Callback function implemented by users, which is used to fill data. buffer - The
 fileSize: long
 ```
 
-Size of the file, -1 means the file size is unknown, in this case, in byte, seek and setSpeed can't be executed, loop can't be set, and can't replay.
+Size of the file, -1 means the file size is unknown, in this case, seek and setSpeed can't be executed, loop can't be set, and can't replay.
 
 **Type:** long
 

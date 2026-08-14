@@ -17,7 +17,11 @@ Defines the **EnableAlertBeforeBackPage** parameter.
 ## Modules to Import
 
 ```TypeScript
-import { BackRouterOptions, DisableAlertBeforeBackPageOptions, RouterOptions, RouterState, EnableAlertBeforeBackPageOptions } from '@kit.ArkUI';
+import { BackRouterOptions } from 'BackRouterOptions';
+import { DisableAlertBeforeBackPageOptions } from 'DisableAlertBeforeBackPageOptions';
+import { EnableAlertBeforeBackPageOptions } from 'EnableAlertBeforeBackPageOptions';
+import { RouterOptions } from 'RouterOptions';
+import { RouterState } from 'RouterState';
 ```
 
 ## cancel

@@ -17,7 +17,7 @@ Defines the network ID filter options.
 ## Modules to Import
 
 ```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { distributedDeviceManager } from 'distributedDeviceManager';
 ```
 
 ## onlineStatus

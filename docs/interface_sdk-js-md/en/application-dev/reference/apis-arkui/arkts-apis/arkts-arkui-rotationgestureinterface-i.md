@@ -38,7 +38,7 @@ Sets the parameters for the rotation gesture. Inherits from [GestureInterface&lt
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | { fingers?: number; angle?: number } | No | Parameters for the rotation gesture. &lt;br&gt; - **fingers**: minimum number of fingers to trigger the rotation gesture.&lt;br&gt;Default value: **2** &lt;br&gt;Value range: [2, 5]. Values less than 2 or greater than 5 are automatically adjusted to the default value. &lt;br&gt;While more fingers than the minimum number can be pressed to trigger the gesture, only the first two fingers participate in gesture calculation. &lt;br&gt; - **angle**: minimum angular change required to trigger the rotation gesture; unit: deg.&lt;br&gt;Default value: **1**&lt;br&gt;**NOTE：**&lt;br&gt;If the value is less than or equal to 0 or greater than 360, it will be converted to the default value. |
+| value | { fingers?: number; angle?: number } | No | Parameters for the rotation gesture. <br> - **fingers**: minimum number of fingers to trigger the rotation gesture.<br>Default value: **2** <br>Value range: [2, 5]. Values less than 2 or greater than 5 are automatically adjusted to the default value. <br>While more fingers than the minimum number can be pressed to trigger the gesture, only the first two fingers participate in gesture calculation. <br> - **angle**: minimum angular change required to trigger the rotation gesture; unit: deg.<br>Default value: **1**<br>**NOTE：**<br>If the value is less than or equal to 0 or greater than 360, it will be converted to the default value. |
 
 **Return value:**
 

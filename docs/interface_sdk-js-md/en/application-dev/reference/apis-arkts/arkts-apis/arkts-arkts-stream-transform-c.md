@@ -17,7 +17,7 @@ A special duplex stream that supports data conversion and result output. The **T
 ## Modules to Import
 
 ```TypeScript
-import { stream } from '@kit.ArkTS';
+import { stream } from 'stream';
 ```
 
 ## constructor

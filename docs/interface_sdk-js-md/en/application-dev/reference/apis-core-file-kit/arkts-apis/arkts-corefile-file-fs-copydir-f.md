@@ -3,7 +3,21 @@
 ## Modules to Import
 
 ```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
+import { ConflictFiles } from 'ConflictFiles';
+import { FileFilter } from 'FileFilter';
+import { Filter } from 'Filter';
+import { Options } from 'Options';
+import { ReaderIteratorResult } from 'ReaderIteratorResult';
+import { WatchEvent } from 'WatchEvent';
+import { WatchEventListener } from 'WatchEventListener';
+import { Watcher } from 'Watcher';
+import { ReadOptions } from 'ReadOptions';
+import { ReadTextOptions } from 'ReadTextOptions';
+import { WriteOptions } from 'WriteOptions';
+import { ListFileExtOptions } from 'ListFileExtOptions';
+import { ListFileOptions } from 'ListFileOptions';
+import { DfsListeners } from 'DfsListeners';
+import { TaskSignal } from 'TaskSignal';
 ```
 
 ## copyDir
@@ -30,7 +44,7 @@ Copies the source directory to the destination path. This API uses a promise to 
 | --- | --- | --- | --- |
 | src | string | Yes | Application sandbox path of the source directory. |
 | dest | string | Yes | Application sandbox path of the destination directory. |
-| mode | number | No | Copy mode. The default value is **0**.&lt;br&gt;- **0**: Throw an exception if a file conflict occurs.&lt;br&gt; An exception will be thrown if the destination directory contains a directory with the same name as the source directory, and a file with the same name exists in the conflict directory. All the non-conflicting files in the source directory will be moved to the destination directory, and the non-conflicting files in the destination directory will be retained. The data attribute in the error returned provides information about the conflicting files in the Array&lt;[ConflictFiles](../../apis-na/arkts-apis/arkts-na-file-fs-conflictfiles-i.md#ConflictFiles)&gt; format.&lt;br&gt;- **1**: Forcibly overwrite the files with the same name in the destination directory.&lt;br&gt; When the destination directory contains a directory with the same name as the source directory, the files with the same names in the destination directory are overwritten forcibly; the files without conflicts in the destination directory are retained. |
+| mode | number | No | Copy mode. The default value is **0**.<br>- **0**: Throw an exception if a file conflict occurs.<br> An exception will be thrown if the destination directory contains a directory with the same name as the source directory, and a file with the same name exists in the conflict directory. All the non-conflicting files in the source directory will be moved to the destination directory, and the non-conflicting files in the destination directory will be retained. The data attribute in the error returned provides information about the conflicting files in the Array&lt;[ConflictFiles](../../apis-na/arkts-apis/arkts-na-file-fs-conflictfiles-i.md#ConflictFiles)&gt; format.<br>- **1**: Forcibly overwrite the files with the same name in the destination directory.<br> When the destination directory contains a directory with the same name as the source directory, the files with the same names in the destination directory are overwritten forcibly; the files without conflicts in the destination directory are retained. |
 
 **Return value:**
 
@@ -168,7 +182,7 @@ Copies the source directory to the destination directory. You can set the copy m
 | --- | --- | --- | --- |
 | src | string | Yes | Application sandbox path of the source directory. |
 | dest | string | Yes | Application sandbox path of the destination directory. |
-| mode | number | Yes | Copy mode. The default value is 0. &lt;br&gt;0: Throw an exception if a file conflict occurs. &lt;br&gt;An exception will be thrown if the destination directory contains a directory with &lt;br&gt;the same name as the source directory, and a file with the same name exists in the conflict directory. &lt;br&gt;All the non-conflicting files in the source directory will be moved &lt;br&gt;to the destination directory, and the non-conflicting files in the destination directory will be retained. &lt;br&gt;The data attribute in the error returned provides information about the &lt;br&gt;conflicting files in the Array&lt;ConflictFiles&gt; format. &lt;br&gt;1: Forcibly overwrite the files with the same name in the destination directory. &lt;br&gt;When the destination directory contains a directory with the same name as the source directory, &lt;br&gt;the files with the same names in the destination directory are overwritten forcibly; &lt;br&gt;the files without conflicts in the destination directory are retained. |
+| mode | number | Yes | Copy mode. The default value is 0. <br>0: Throw an exception if a file conflict occurs. <br>An exception will be thrown if the destination directory contains a directory with <br>the same name as the source directory, and a file with the same name exists in the conflict directory. <br>All the non-conflicting files in the source directory will be moved <br>to the destination directory, and the non-conflicting files in the destination directory will be retained. <br>The data attribute in the error returned provides information about the <br>conflicting files in the Array&lt;ConflictFiles&gt; format. <br>1: Forcibly overwrite the files with the same name in the destination directory. <br>When the destination directory contains a directory with the same name as the source directory, <br>the files with the same names in the destination directory are overwritten forcibly; <br>the files without conflicts in the destination directory are retained. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -218,7 +232,7 @@ Copies the source directory to the destination path. You can set the copy mode. 
 | --- | --- | --- | --- |
 | src | string | Yes | Application sandbox path of the source directory. |
 | dest | string | Yes | Application sandbox path of the destination directory. |
-| mode | number | Yes | Copy mode. The default value is **0**.&lt;br&gt;- **0**: Throw an exception if a file conflict occurs.&lt;br&gt; An exception will be thrown if the destination directory contains a directory with the same name as the source directory, and a file with the same name exists in the conflict directory. All the non-conflicting files in the source directory will be moved to the destination directory, and the non-conflicting files in the destination directory will be retained. The data attribute in the error returned provides information about the conflicting files in the Array&lt;[ConflictFiles](../../apis-na/arkts-apis/arkts-na-file-fs-conflictfiles-i.md#ConflictFiles)&gt; format.&lt;br&gt;- **1**: Forcibly overwrite the files with the same name in the destination directory.&lt;br&gt; When the destination directory contains a directory with the same name as the source directory, the files with the same names in the destination directory are overwritten forcibly; the files without conflicts in the destination directory are retained. |
+| mode | number | Yes | Copy mode. The default value is **0**.<br>- **0**: Throw an exception if a file conflict occurs.<br> An exception will be thrown if the destination directory contains a directory with the same name as the source directory, and a file with the same name exists in the conflict directory. All the non-conflicting files in the source directory will be moved to the destination directory, and the non-conflicting files in the destination directory will be retained. The data attribute in the error returned provides information about the conflicting files in the Array&lt;[ConflictFiles](../../apis-na/arkts-apis/arkts-na-file-fs-conflictfiles-i.md#ConflictFiles)&gt; format.<br>- **1**: Forcibly overwrite the files with the same name in the destination directory.<br> When the destination directory contains a directory with the same name as the source directory, the files with the same names in the destination directory are overwritten forcibly; the files without conflicts in the destination directory are retained. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void, Array&lt;[ConflictFiles](../../apis-na/arkts-apis/arkts-na-file-fs-conflictfiles-i.md)&gt;&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**

@@ -15,7 +15,7 @@ Defines the device capability.
 ## Modules to Import
 
 ```TypeScript
-import { resourceManager } from '@kit.LocalizationKit';
+import { resourceManager } from 'resourceManager';
 ```
 
 ## deviceType

@@ -40,7 +40,7 @@ baselineOffset(value: number | ResourceStr)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| ResourceStr | 是 | 文本基线的偏移量。设置该值为百分比时，按0显示。 &lt;br&gt;单位：fp &lt;br&gt;从API version 20开始，支持Resource类型。<br>**起始版本：** 20 |
+| value | number \| ResourceStr | 是 | 文本基线的偏移量。设置该值为百分比时，按0显示。 <br>单位：fp <br>从API version 20开始，支持Resource类型。<br>**起始版本：** 20 |
 
 ## bindSelectionMenu
 
@@ -72,7 +72,7 @@ bindSelectionMenu(spanType: TextSpanType, content: CustomBuilder, responseType: 
 | spanType | [TextSpanType](arkts-arkui-textspantype-e.md) | 是 | 选择菜单的类型。 |
 | content | CustomBuilder | 是 | 选择菜单的内容。 |
 | responseType | [TextResponseType](arkts-arkui-textresponsetype-e.md) | 是 | 选择菜单的响应类型。 |
-| options | SelectionMenuOptions | 否 | 选择菜单的配置选项，用于自定义选择菜单的行为。包含菜单出现、消失、显示、隐藏等回调配置项。 &lt;br&gt;默认值：不设置时，使用系统默认的选择菜单配置。 |
+| options | SelectionMenuOptions | 否 | 选择菜单的配置选项，用于自定义选择菜单的行为。包含菜单出现、消失、显示、隐藏等回调配置项。 <br>默认值：不设置时，使用系统默认的选择菜单配置。 |
 
 ## caretColor
 
@@ -128,7 +128,7 @@ compressLeadingPunctuation(enabled: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enabled | Optional&lt;boolean&gt; | 是 | 是否开启行首标点符号压缩。 &lt;br&gt;true表示开启行首标点符号压缩；false表示不开启行首标点符号压缩。 |
+| enabled | Optional&lt;boolean&gt; | 是 | 是否开启行首标点符号压缩。 <br>true表示开启行首标点符号压缩；false表示不开启行首标点符号压缩。 |
 
 ## contentTransition
 
@@ -240,7 +240,7 @@ decoration(value: DecorationStyleInterface)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | DecorationStyleInterface | 是 | 文本装饰线样式对象。 &lt;br&gt;**说明：** &lt;br&gt;style参数不支持卡片能力。<br>**起始版本：** 12 |
+| value | DecorationStyleInterface | 是 | 文本装饰线样式对象。 <br>**说明：** <br>style参数不支持卡片能力。<br>**起始版本：** 12 |
 
 ## draggable
 
@@ -266,7 +266,7 @@ draggable(value: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 选中文本拖拽效果。 &lt;br&gt;true表示选中文本可拖拽，false表示不可拖拽。 |
+| value | boolean | 是 | 选中文本拖拽效果。 <br>true表示选中文本可拖拽，false表示不可拖拽。 |
 
 ## editMenuOptions
 
@@ -274,7 +274,7 @@ draggable(value: boolean)
 editMenuOptions(editMenu: EditMenuOptions)
 ```
 
-设置自定义菜单扩展项，允许用户设置扩展项的文本内容、图标、回调方法。 调用[disableMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md#disableMenuItems)或 [disableSystemServiceMenuItems](../arkts-apis/arkts-arkui-arkui-uicontext-textmenucontroller-c.md#disableSystemServiceMenuItems)接口屏蔽文本 选择菜单内的系统服务菜单项时，editMenuOptions接口内回调方法onCreateMenu的入参列表中不包含被屏蔽的菜单选项。 > **说明：** > > 通过[editMenuOptions](#editMenuOptions)设置文本选择菜单时，保留系统默认的风格，触发菜单弹出的条件不变。 > > 通过[bindSelectionMenu](#bindSelectionMenu)设置文本选择菜单时，风格由开发者定义，触发菜单弹出的条件由开发者定义。
+设置自定义菜单扩展项，允许用户设置扩展项的文本内容、图标、回调方法。 调用[disableMenuItems](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-textmenucontroller-c.md#disableMenuItems)或 [disableSystemServiceMenuItems](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-textmenucontroller-c.md#disableSystemServiceMenuItems)接口屏蔽文本 选择菜单内的系统服务菜单项时，editMenuOptions接口内回调方法onCreateMenu的入参列表中不包含被屏蔽的菜单选项。 > **说明：** > > 通过[editMenuOptions](#editMenuOptions)设置文本选择菜单时，保留系统默认的风格，触发菜单弹出的条件不变。 > > 通过[bindSelectionMenu](#bindSelectionMenu)设置文本选择菜单时，风格由开发者定义，触发菜单弹出的条件由开发者定义。
 
 **起始版本：** 12
 
@@ -350,7 +350,7 @@ enableAutoSpacing(enabled: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enabled | Optional&lt;boolean&gt; | 是 | 是否开启中文与西文的自动间距。 &lt;br&gt;true为开启自动间距，false为不开启。 |
+| enabled | Optional&lt;boolean&gt; | 是 | 是否开启中文与西文的自动间距。 <br>true为开启自动间距，false为不开启。 |
 
 ## enableDataDetector
 
@@ -378,7 +378,7 @@ enableDataDetector(enable: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean | 是 | 是否可进行文本特殊实体识别。 &lt;br&gt;true表示可识别，false表示不可识别。 |
+| enable | boolean | 是 | 是否可进行文本特殊实体识别。 <br>true表示可识别，false表示不可识别。 |
 
 ## enableHapticFeedback
 
@@ -406,7 +406,7 @@ enableHapticFeedback(isEnabled: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isEnabled | boolean | 是 | 是否开启触控反馈。 &lt;br&gt;true表示开启，false表示不开启。 |
+| isEnabled | boolean | 是 | 是否开启触控反馈。 <br>true表示开启，false表示不开启。 |
 
 ## enableSelectedDataDetector
 
@@ -434,7 +434,7 @@ enableSelectedDataDetector(enable: boolean | undefined)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean \| undefined | 是 | 是否对选中文本进行实体识别。 &lt;br&gt;true：开启识别，false：关闭识别。 |
+| enable | boolean \| undefined | 是 | 是否对选中文本进行实体识别。 <br>true：开启识别，false：关闭识别。 |
 
 ## fallbackLineSpacing
 
@@ -462,7 +462,7 @@ fallbackLineSpacing(enabled: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enabled | Optional&lt;boolean&gt; | 是 | 行高是否基于文字实际高度自适应。 &lt;br&gt;true表示行高基于文字实际高度自适应；false表示行高不基于文字实际高度自适应。 |
+| enabled | Optional&lt;boolean&gt; | 是 | 行高是否基于文字实际高度自适应。 <br>true表示行高基于文字实际高度自适应；false表示行高不基于文字实际高度自适应。 |
 
 ## font
 
@@ -521,7 +521,7 @@ font(fontValue: Font, options?: FontSettingOptions)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | fontValue | Font | 是 | 设置文本样式。 |
-| options | FontSettingOptions | 否 | 设置字体配置项。 &lt;br&gt;默认值：不设置时，使用默认字体配置，详见FontSettingOptions。 |
+| options | FontSettingOptions | 否 | 设置字体配置项。 <br>默认值：不设置时，使用默认字体配置，详见FontSettingOptions。 |
 
 ## fontColor
 
@@ -719,7 +719,7 @@ fontWeight(value: number | FontWeight | ResourceStr)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| FontWeight \| ResourceStr | 是 | 文本的字体粗细。 &lt;br&gt;number类型取值[100, 900]，取值间隔为100，默认为400，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如“400”，以及“bold”、“bolder”、“ lighter”、“regular”、“medium”，分别对应FontWeight中相应的枚举值。设置过大可能会在不同字体下有截断。传入超出取值范围或不符合间隔要求的值时取默认值。 &lt;br&gt;从API version 20开始，支持Resource类型。<br>**起始版本：** 20 |
+| value | number \| FontWeight \| ResourceStr | 是 | 文本的字体粗细。 <br>number类型取值[100, 900]，取值间隔为100，默认为400，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如“400”，以及“bold”、“bolder”、“ lighter”、“regular”、“medium”，分别对应FontWeight中相应的枚举值。设置过大可能会在不同字体下有截断。传入超出取值范围或不符合间隔要求的值时取默认值。 <br>从API version 20开始，支持Resource类型。<br>**起始版本：** 20 |
 
 ## fontWeight
 
@@ -749,8 +749,8 @@ fontWeight(weight: number | FontWeight | ResourceStr, options?: FontSettingOptio
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| weight | number \| FontWeight \| ResourceStr | 是 | 设置文本字重 &lt;br&gt;number类型取值[100, 900]，取值间隔为100，默认为400，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如“400”，以及“bold”、“bolder”、“ lighter”、“regular”、“medium”，分别对应FontWeight中相应的枚举值。设置过大可能会在不同字体下有截断。 &lt;br&gt;传入超出取值范围的值时取默认值。传入不符合间隔要求的值时，若设置fontWeightConfigs的enableVariableFontWeight为true，使用传入值；若设置为false，使用默认值。 &lt;br&gt;从API version 20开始，支持Resource类型。<br>**起始版本：** 20 |
-| options | FontSettingOptions | 否 | 设置字体配置项，用于启用可变字重调节功能。当需要使用可变字体的字重属性进行精细调节时传入此参数（设置enableVariableFontWeight为 true）。不传入时使用默认字体配置（禁用可变字重调节，仅支持整百字重值）。 &lt;br&gt;enableVariableFontWeight为false时禁用可变字重调节，weight取整百值时字重为weight，非整百值时字重为400；enableVariableFontWeight为true时启用可变 字重调节，weight取任意整数时字重为weight。 |
+| weight | number \| FontWeight \| ResourceStr | 是 | 设置文本字重 <br>number类型取值[100, 900]，取值间隔为100，默认为400，取值越大，字体越粗。string类型仅支持number类型取值的字符串形式，例如“400”，以及“bold”、“bolder”、“ lighter”、“regular”、“medium”，分别对应FontWeight中相应的枚举值。设置过大可能会在不同字体下有截断。 <br>传入超出取值范围的值时取默认值。传入不符合间隔要求的值时，若设置fontWeightConfigs的enableVariableFontWeight为true，使用传入值；若设置为false，使用默认值。 <br>从API version 20开始，支持Resource类型。<br>**起始版本：** 20 |
+| options | FontSettingOptions | 否 | 设置字体配置项，用于启用可变字重调节功能。当需要使用可变字体的字重属性进行精细调节时传入此参数（设置enableVariableFontWeight为 true）。不传入时使用默认字体配置（禁用可变字重调节，仅支持整百字重值）。 <br>enableVariableFontWeight为false时禁用可变字重调节，weight取整百值时字重为weight，非整百值时字重为400；enableVariableFontWeight为true时启用可变 字重调节，weight取任意整数时字重为weight。 |
 
 ## halfLeading
 
@@ -778,7 +778,7 @@ halfLeading(halfLeading: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| halfLeading | boolean | 是 | 设置文本是否垂直居中。与[textVerticalAlign](#textVerticalAlign)同时配置时， halfLeading不生效。 &lt;br&gt;true表示将行间距平分至行的顶部与底部，false则不平分。 |
+| halfLeading | boolean | 是 | 设置文本是否垂直居中。与[textVerticalAlign](#textVerticalAlign)同时配置时， halfLeading不生效。 <br>true表示将行间距平分至行的顶部与底部，false则不平分。 |
 
 ## heightAdaptivePolicy
 
@@ -834,7 +834,7 @@ includeFontPadding(include: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| include | Optional&lt;boolean&gt; | 是 | 是否在首行和尾行增加间距以避免文字截断。 &lt;br&gt;true表示在首行和尾行增加间距；false表示在首行和尾行不增加间距。 |
+| include | Optional&lt;boolean&gt; | 是 | 是否在首行和尾行增加间距以避免文字截断。 <br>true表示在首行和尾行增加间距；false表示在首行和尾行不增加间距。 |
 
 ## incrementalUpdatePolicy
 
@@ -862,7 +862,7 @@ incrementalUpdatePolicy(policy: IncrementalUpdatePolicy | undefined)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| policy | IncrementalUpdatePolicy \| undefined | 是 | 文本渲染的增量更新策略。 &lt;br&gt;设置为undefined时，按IncrementalUpdatePolicy.NONE处理。 |
+| policy | IncrementalUpdatePolicy \| undefined | 是 | 文本渲染的增量更新策略。 <br>设置为undefined时，按IncrementalUpdatePolicy.NONE处理。 |
 
 ## letterSpacing
 
@@ -890,7 +890,7 @@ letterSpacing(value: number | ResourceStr)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| ResourceStr | 是 | 文本字符间距。 &lt;br&gt;单位：[fp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) &lt;br&gt;从API version 20开始，支持Resource类型。<br>**起始版本：** 20 |
+| value | number \| ResourceStr | 是 | 文本字符间距。 <br>单位：[fp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) <br>从API version 20开始，支持Resource类型。<br>**起始版本：** 20 |
 
 ## lineBreakStrategy
 
@@ -976,7 +976,7 @@ lineHeightMultiple(value: number | undefined)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| undefined | 是 | 使用行高的倍数数值。 &lt;br&gt;取值范围：[0, +∞) &lt;br&gt;**说明：** &lt;br&gt;- 设置的值小于0时，lineHeightMultiple不生效。 &lt;br&gt;- 设置的值等于0时，等效于设置为1，表现为行高没有变化。 &lt;br&gt;- 支持小数输入。 |
+| value | number \| undefined | 是 | 使用行高的倍数数值。 <br>取值范围：[0, +∞) <br>**说明：** <br>- 设置的值小于0时，lineHeightMultiple不生效。 <br>- 设置的值等于0时，等效于设置为1，表现为行高没有变化。 <br>- 支持小数输入。 |
 
 ## lineSpacing
 
@@ -1004,7 +1004,7 @@ lineSpacing(value: LengthMetrics)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | LengthMetrics | 是 | 文本的行间距。 &lt;br&gt;取值范围：[0, +∞)。设置值小于0时，取默认值0。 |
+| value | LengthMetrics | 是 | 文本的行间距。 <br>取值范围：[0, +∞)。设置值小于0时，取默认值0。 |
 
 ## lineSpacing
 
@@ -1033,7 +1033,7 @@ lineSpacing(value: LengthMetrics, options?: LineSpacingOptions)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | LengthMetrics | 是 | 文本的行间距。设置值不大于0时，取默认值0。 |
-| options | LineSpacingOptions | 否 | 设置行间距配置项。 &lt;br&gt;默认值：{ onlyBetweenLines: false } |
+| options | LineSpacingOptions | 否 | 设置行间距配置项。 <br>默认值：{ onlyBetweenLines: false } |
 
 ## marqueeOptions
 
@@ -1089,7 +1089,7 @@ maxFontScale(scale: number | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scale | number \| Resource | 是 | 文本最大的字体缩放倍数。 &lt;br&gt;取值范围：[1, +∞) &lt;br&gt;**说明：** &lt;br&gt;设置的值小于1时，按值为1处理，其余异常值默认不生效。 |
+| scale | number \| Resource | 是 | 文本最大的字体缩放倍数。 <br>取值范围：[1, +∞) <br>**说明：** <br>设置的值小于1时，按值为1处理，其余异常值默认不生效。 |
 
 ## maxFontSize
 
@@ -1117,7 +1117,7 @@ maxFontSize(value: number | string | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | 是 | 文本最大显示字号。 &lt;br&gt;取值范围：大于0且大于等于minFontSize。 &lt;br&gt;单位：[fp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) &lt;br&gt;**说明：** &lt;br&gt;设置的值≤0或小于minFontSize时，自适应字号不生效，此时按照fontSize属性的值生效。 |
+| value | number \| string \| Resource | 是 | 文本最大显示字号。 <br>取值范围：大于0且大于等于minFontSize。 <br>单位：[fp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) <br>**说明：** <br>设置的值≤0或小于minFontSize时，自适应字号不生效，此时按照fontSize属性的值生效。 |
 
 ## maxLineHeight
 
@@ -1147,7 +1147,7 @@ maxLineHeight(value: LengthMetrics | undefined)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | LengthMetrics \| undefined | 是 | 文本的最大行高，不支持百分比。 &lt;br&gt;设置的值不大于0时按0处理，设置为0时，最大行高不受限制。 |
+| value | LengthMetrics \| undefined | 是 | 文本的最大行高，不支持百分比。 <br>设置的值不大于0时按0处理，设置为0时，最大行高不受限制。 |
 
 ## maxLines
 
@@ -1175,7 +1175,7 @@ maxLines(value: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 文本的最大行数。 &lt;br&gt;**说明：** &lt;br&gt;取值范围：[0, INT32_MAX] &lt;br&gt;设置为0时，不显示文本内容。 |
+| value | number | 是 | 文本的最大行数。 <br>**说明：** <br>取值范围：[0, INT32_MAX] <br>设置为0时，不显示文本内容。 |
 
 ## minFontScale
 
@@ -1203,7 +1203,7 @@ minFontScale(scale: number | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| scale | number \| Resource | 是 | 文本最小的字体缩放倍数。 &lt;br&gt;取值范围：[0, 1] &lt;br&gt;**说明：** &lt;br&gt;设置的值小于0时按0处理，大于1时按1处理，其余异常值默认不生效。 |
+| scale | number \| Resource | 是 | 文本最小的字体缩放倍数。 <br>取值范围：[0, 1] <br>**说明：** <br>设置的值小于0时按0处理，大于1时按1处理，其余异常值默认不生效。 |
 
 ## minFontSize
 
@@ -1231,7 +1231,7 @@ minFontSize(value: number | string | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | 是 | 文本最小显示字号。 &lt;br&gt;取值范围：大于0。 &lt;br&gt;单位：[fp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) &lt;br&gt;**说明：** &lt;br&gt;设置的值≤0时，自适应字号不生效，此时按照fontSize属性的值生效。 |
+| value | number \| string \| Resource | 是 | 文本最小显示字号。 <br>取值范围：大于0。 <br>单位：[fp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) <br>**说明：** <br>设置的值≤0时，自适应字号不生效，此时按照fontSize属性的值生效。 |
 
 ## minLineHeight
 
@@ -1261,7 +1261,7 @@ minLineHeight(value: LengthMetrics | undefined)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | LengthMetrics \| undefined | 是 | 文本的最小行高，不支持百分比。 &lt;br&gt;设置的值不大于0时按0处理。 |
+| value | LengthMetrics \| undefined | 是 | 文本的最小行高，不支持百分比。 <br>设置的值不大于0时按0处理。 |
 
 ## minLines
 
@@ -1291,7 +1291,7 @@ minLines(minLines: Optional<number>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| minLines | Optional&lt;number&gt; | 是 | 文本最小行数。 &lt;br&gt;取值范围：[0, INT32_MAX] &lt;br&gt;设置的值小于0时按0处理。 &lt;br&gt;**说明：** &lt;br&gt;与[maxLines](#maxLines)同时配置时，最小行数对应的显示高度不会超过最大行数对应的高度限制。 |
+| minLines | Optional&lt;number&gt; | 是 | 文本最小行数。 <br>取值范围：[0, INT32_MAX] <br>设置的值小于0时按0处理。 <br>**说明：** <br>与[maxLines](#maxLines)同时配置时，最小行数对应的显示高度不会超过最大行数对应的高度限制。 |
 
 ## onCopy
 
@@ -1431,7 +1431,7 @@ optimizeTrailingSpace(optimize: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| optimize | Optional&lt;boolean&gt; | 是 | 是否优化每行末尾的空格。 &lt;br&gt;true表示优化末尾空格，false则不优化。 |
+| optimize | Optional&lt;boolean&gt; | 是 | 是否优化每行末尾的空格。 <br>true表示优化末尾空格，false则不优化。 |
 
 ## orphanCharOptimization
 
@@ -1457,7 +1457,7 @@ orphanCharOptimization(enabled: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enabled | Optional&lt;boolean&gt; | 是 | 段落最后一行是否使能孤字优化。 &lt;br&gt;true表示使能孤字优化，false表示不使能孤字优化。 &lt;br&gt;值为undefined或null时，不使能孤字优化。 |
+| enabled | Optional&lt;boolean&gt; | 是 | 段落最后一行是否使能孤字优化。 <br>true表示使能孤字优化，false表示不使能孤字优化。 <br>值为undefined或null时，不使能孤字优化。 |
 
 ## privacySensitive
 
@@ -1487,7 +1487,7 @@ privacySensitive(supported: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| supported | boolean | 是 | 是否支持卡片敏感隐私信息。 &lt;br&gt;true表示支持卡片敏感隐私信息，隐私模式下文字将被遮罩为横杠"-"样式；false表示不支持卡片敏感隐私信息，隐私模式下文字正常显示。 &lt;br&gt;**说明：** &lt;br&gt;设置为null则表示不敏感。 &lt;br&gt;进入隐私模式需要卡片框架支持。隐私遮罩的类型可以通过obscured配置。 |
+| supported | boolean | 是 | 是否支持卡片敏感隐私信息。 <br>true表示支持卡片敏感隐私信息，隐私模式下文字将被遮罩为横杠"-"样式；false表示不支持卡片敏感隐私信息，隐私模式下文字正常显示。 <br>**说明：** <br>设置为null则表示不敏感。 <br>进入隐私模式需要卡片框架支持。隐私遮罩的类型可以通过obscured配置。 |
 
 ## punctuationOverflow
 
@@ -1515,7 +1515,7 @@ punctuationOverflow(enabled: Optional<boolean>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enabled | Optional&lt;boolean&gt; | 是 | 是否启用行尾标点符号悬挂。 &lt;br&gt;true表示启用行尾标点符号悬挂，false表示不启用行尾标点符号悬挂。设置为undefined或null时，不启用标点符号悬挂。 |
+| enabled | Optional&lt;boolean&gt; | 是 | 是否启用行尾标点符号悬挂。 <br>true表示启用行尾标点符号悬挂，false表示不启用行尾标点符号悬挂。设置为undefined或null时，不启用标点符号悬挂。 |
 
 ## selectedBackgroundColor
 
@@ -1571,7 +1571,7 @@ selectedDragPreviewStyle(value: SelectedDragPreviewStyle | undefined)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | SelectedDragPreviewStyle \| undefined | 是 | 文本拖拽时的背板样式。 &lt;br&gt;设置为undefined时：背板颜色跟随主题，浅色模式显示白色，深色模式显示黑色。 |
+| value | SelectedDragPreviewStyle \| undefined | 是 | 文本拖拽时的背板样式。 <br>设置为undefined时：背板颜色跟随主题，浅色模式显示白色，深色模式显示黑色。 |
 
 ## selection
 
@@ -1599,8 +1599,8 @@ selection(selectionStart: number, selectionEnd: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| selectionStart | number | 是 | 所选文本的起始位置。 &lt;br&gt;取值范围：[0, textSize]，其中textSize为文本内容最大字符数。入参小于0时处理为0，大于textSize时处理为textSize。 |
-| selectionEnd | number | 是 | 所选文本的结束位置。 &lt;br&gt;取值范围：[0, textSize]，其中textSize为文本内容最大字符数。入参小于0时处理为0，大于textSize时处理为textSize。 |
+| selectionStart | number | 是 | 所选文本的起始位置。 <br>取值范围：[0, textSize]，其中textSize为文本内容最大字符数。入参小于0时处理为0，大于textSize时处理为textSize。 |
+| selectionEnd | number | 是 | 所选文本的结束位置。 <br>取值范围：[0, textSize]，其中textSize为文本内容最大字符数。入参小于0时处理为0，大于textSize时处理为textSize。 |
 
 ## shaderStyle
 
@@ -1628,7 +1628,7 @@ shaderStyle(shader: ShaderStyle)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| shader | ShaderStyle | 是 | 径向渐变或线性渐变或纯色。 &lt;br&gt;根据传入的参数区分处理径向渐变RadialGradientStyle或线性渐变 LinearGradientStyle或纯色ColorShaderStyle，最终设置到Text文本上显示为渐变 色效果。 &lt;br&gt;**说明：** &lt;br&gt;当设置为径向渐变RadialGradientStyle时，若 RadialGradientOptions的center参数设置到组件范围外时，可将repeating参数设置为true，此时渐变效果会更明显。 |
+| shader | ShaderStyle | 是 | 径向渐变或线性渐变或纯色。 <br>根据传入的参数区分处理径向渐变RadialGradientStyle或线性渐变 LinearGradientStyle或纯色ColorShaderStyle，最终设置到Text文本上显示为渐变 色效果。 <br>**说明：** <br>当设置为径向渐变RadialGradientStyle时，若 RadialGradientOptions的center参数设置到组件范围外时，可将repeating参数设置为true，此时渐变效果会更明显。 |
 
 ## tailIndents
 
@@ -1656,7 +1656,7 @@ tailIndents(value: Optional<LengthMetrics | Array<LengthMetrics>>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Optional&lt;LengthMetrics \| Array&lt;LengthMetrics&gt;&gt; | 是 | 指定文本每一行尾部缩进。当提供一个单独的LengthMetrics值时，所有行共享相同的尾部缩进； 当提供一个数组时，第i个元素指定第i行的尾部缩进；如果文本行数超过数组长度，则数组中的最后一个元素将用于剩余的行。不支持百分比。 &lt;br&gt;取值范围：大于等于0。设置负数时，按默认值处理。 |
+| value | Optional&lt;LengthMetrics \| Array&lt;LengthMetrics&gt;&gt; | 是 | 指定文本每一行尾部缩进。当提供一个单独的LengthMetrics值时，所有行共享相同的尾部缩进； 当提供一个数组时，第i个元素指定第i行的尾部缩进；如果文本行数超过数组长度，则数组中的最后一个元素将用于剩余的行。不支持百分比。 <br>取值范围：大于等于0。设置负数时，按默认值处理。 |
 
 ## textAlign
 
@@ -1684,7 +1684,7 @@ textAlign(value: TextAlign)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | TextAlign | 是 | 文本段落在水平方向的对齐方式。 &lt;br&gt;**说明：** &lt;br&gt;当设置为TextAlign.JUSTIFY时，需要根据文本内容设置[wordBreak](#wordBreak)属性，且最后一行文本水平对齐首部，不参与两端对齐。 |
+| value | TextAlign | 是 | 文本段落在水平方向的对齐方式。 <br>**说明：** <br>当设置为TextAlign.JUSTIFY时，需要根据文本内容设置[wordBreak](#wordBreak)属性，且最后一行文本水平对齐首部，不参与两端对齐。 |
 
 ## textCase
 
@@ -1740,7 +1740,7 @@ textContentAlign(textContentAlign: Optional<TextContentAlign>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| textContentAlign | Optional&lt;TextContentAlign&gt; | 是 | 文本内容区在组件内的垂直对齐方式。 &lt;br&gt;默认(undefined和异常值情况下)和align属性设置为Center效果一致。 |
+| textContentAlign | Optional&lt;TextContentAlign&gt; | 是 | 文本内容区在组件内的垂直对齐方式。 <br>默认(undefined和异常值情况下)和align属性设置为Center效果一致。 |
 
 ## textDirection
 
@@ -1768,7 +1768,7 @@ textDirection(direction: TextDirection | undefined)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| direction | TextDirection \| undefined | 是 | 文本排版方向。 &lt;br&gt;设置为undefined时，按照TextDirection.DEFAULT处理，表现为文本排版方向遵循组件布局方向。 |
+| direction | TextDirection \| undefined | 是 | 文本排版方向。 <br>设置为undefined时，按照TextDirection.DEFAULT处理，表现为文本排版方向遵循组件布局方向。 |
 
 ## textIndent
 
@@ -1796,7 +1796,7 @@ textIndent(value: Length)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Length | 是 | 首行文本缩进。 &lt;br&gt;单位：[fp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) &lt;br&gt;取值范围：大于等于0。设置负数时，按默认值处理。 |
+| value | Length | 是 | 首行文本缩进。 <br>单位：[fp](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) <br>取值范围：大于等于0。设置负数时，按默认值处理。 |
 
 ## textOverflow
 

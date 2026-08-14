@@ -246,7 +246,7 @@ dateTimeOptions?: DateTimeOptions
 disappearTextStyle?: PickerTextStyle
 ```
 
-设置边缘项（以选中项为基准向上或向下的第二项）的文本颜色、字号、字体粗细。 > 默认值： > > &lt;br&gt;{ > &lt;br&gt;color: '#ff182431', > &lt;br&gt;font: { > &lt;br&gt;size: '14fp', > &lt;br&gt;weight: FontWeight.Regular > &lt;br&gt;} > &lt;br&gt;}
+设置边缘项（以选中项为基准向上或向下的第二项）的文本颜色、字号、字体粗细。 > 默认值： > > <br>{ > <br>color: '#ff182431', > <br>font: { > <br>size: '14fp', > <br>weight: FontWeight.Regular > <br>} > <br>}
 
 **类型：** PickerTextStyle
 
@@ -400,7 +400,7 @@ lunarSwitch?: boolean
 lunarSwitchStyle?: LunarSwitchStyle
 ```
 
-设置农历开关的颜色样式。仅当lunarSwitch为true时生效。 > 默认值： > &lt;br&gt;{ > &lt;br&gt;selectedColor: `\$r('sys.color.ohos_id_color_text_primary_actived')`, > &lt;br&gt;unselectedColor: `\$r('sys.color.ohos_id_color_switch_outline_off')`, > &lt;br&gt;strokeColor: Color.White > &lt;br&gt;}
+设置农历开关的颜色样式。仅当lunarSwitch为true时生效。 > 默认值： > <br>{ > <br>selectedColor: `\$r('sys.color.ohos_id_color_text_primary_actived')`, > <br>unselectedColor: `\$r('sys.color.ohos_id_color_switch_outline_off')`, > <br>strokeColor: Color.White > <br>}
 
 **类型：** [LunarSwitchStyle](arkts-arkui-lunarswitchstyle-i.md)
 
@@ -688,7 +688,7 @@ onWillDisappear?: VoidCallback
 selectedTextStyle?: PickerTextStyle
 ```
 
-设置选中项的文本颜色、字号、字体粗细。 > 默认值： > > &lt;br&gt;{ > &lt;br&gt;color: '#ff007dff', > &lt;br&gt;font: { > &lt;br&gt;size: '20fp', > &lt;br&gt;weight: FontWeight.Medium > &lt;br&gt;} > &lt;br&gt;}
+设置选中项的文本颜色、字号、字体粗细。 > 默认值： > > <br>{ > <br>color: '#ff007dff', > <br>font: { > <br>size: '20fp', > <br>weight: FontWeight.Medium > <br>} > <br>}
 
 **类型：** PickerTextStyle
 
@@ -788,7 +788,7 @@ systemMaterial?: SystemUiMaterial
 textStyle?: PickerTextStyle
 ```
 
-设置待选项（以选中项为基准向上或向下的第一项）的文本颜色、字号、字体粗细。 > 默认值： > > &lt;br&gt;{ > &lt;br&gt;color: '#ff182431', > &lt;br&gt;font: { > &lt;br&gt;size: '16fp', > &lt;br&gt;weight: FontWeight.Regular > &lt;br&gt;} > &lt;br&gt;}
+设置待选项（以选中项为基准向上或向下的第一项）的文本颜色、字号、字体粗细。 > 默认值： > > <br>{ > <br>color: '#ff182431', > <br>font: { > <br>size: '16fp', > <br>weight: FontWeight.Regular > <br>} > <br>}
 
 **类型：** PickerTextStyle
 

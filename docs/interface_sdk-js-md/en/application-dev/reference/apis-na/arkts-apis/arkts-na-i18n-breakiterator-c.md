@@ -88,7 +88,7 @@ Moves the line break iterator to the line break point after the specified positi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | int | Yes | Offset of the line break point. &lt;br&gt;The value should be an integer. |
+| offset | int | Yes | Offset of the line break point. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -146,7 +146,7 @@ Checks whether the specified position is a line break point.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | int | Yes | Specified position in the text. &lt;br&gt;The value should be an integer. |
+| offset | int | Yes | Specified position in the text. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -204,7 +204,7 @@ Moves the break iterator backward by the specified number of line break points.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | No | Number of line break points for moving the break iterator. The value is an integer. A positive number means to move the break iterator backward, and a negative number means to move the break iterator forward. The default value is 1. &lt;br&gt;The value should be an integer. |
+| index | int | No | Number of line break points for moving the break iterator. The value is an integer. A positive number means to move the break iterator backward, and a negative number means to move the break iterator forward. The default value is 1. <br>The value should be an integer. |
 
 **Return value:**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dragInteraction } from '@kit.ArkUI';
+import { dragInteraction } from 'dragInteraction';
 ```
 
 ## offDragStateChange
@@ -30,7 +30,7 @@ Disables listening for dragging state change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DragState](arkts-arkui-draginteraction-dragstate-e-sys.md)&gt; | No | Indicates the callback for which listening is disabled. If this &lt;br&gt; parameter is not specified, listening will be disabled for all registered callbacks. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DragState](arkts-arkui-draginteraction-dragstate-e-sys.md)&gt; | No | Indicates the callback for which listening is disabled. If this <br> parameter is not specified, listening will be disabled for all registered callbacks. |
 
 **Error codes:**
 

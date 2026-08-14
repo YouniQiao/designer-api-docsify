@@ -64,7 +64,7 @@ pushDestination(moduleName: string, info: NavPathInfo, animated?: boolean): Prom
 | --- | --- | --- | --- |
 | moduleName | string | 是 | 目标NavDestination所在分包的moduleName。 |
 | info | NavPathInfo | 是 | NavDestination页面的信息。 |
-| animated | boolean | 否 | 是否支持转场动画。 &lt;br&gt;默认值：true。 &lt;br&gt;true：支持转场动画。 &lt;br&gt;false：不支持转场动画。 |
+| animated | boolean | 否 | 是否支持转场动画。 <br>默认值：true。 <br>true：支持转场动画。 <br>false：不支持转场动画。 |
 
 **返回值：**
 
@@ -77,7 +77,7 @@ pushDestination(moduleName: string, info: NavPathInfo, animated?: boolean): Prom
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) | Builder function not registered. |
 | [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) | hsp silent install fail. |
 | [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) | NavDestination not found. |
@@ -153,7 +153,7 @@ pushDestinationByName(moduleName: string, name: string, param: Object, animated?
 | moduleName | string | 是 | 目标NavDestination所在分包的moduleName。 |
 | name | string | 是 | NavDestination页面名称。 |
 | param | Object | 是 | NavDestination页面详细参数。 |
-| animated | boolean | 否 | 是否支持转场动画。 &lt;br&gt;默认值：true。 &lt;br&gt;true：支持转场动画。 &lt;br&gt;false：不支持转场动画。 |
+| animated | boolean | 否 | 是否支持转场动画。 <br>默认值：true。 <br>true：支持转场动画。 <br>false：不支持转场动画。 |
 
 **返回值：**
 
@@ -166,7 +166,7 @@ pushDestinationByName(moduleName: string, name: string, param: Object, animated?
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) | Builder function not registered. |
 | [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) | hsp silent install fail. |
 | [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) | NavDestination not found. |
@@ -200,7 +200,7 @@ pushDestinationByName(moduleName: string, name: string, param: Object,
 | name | string | 是 | NavDestination页面名称。 |
 | param | Object | 是 | NavDestination页面的参数对象，用于向目标页面传递数据。 |
 | onPop | Callback&lt;PopInfo&gt; | 是 | Callback回调，用于页面出栈时处理返回结果。 |
-| animated | boolean | 否 | 是否支持转场动画。 &lt;br&gt;默认值：true。 &lt;br&gt;true：支持转场动画。 &lt;br&gt;false：不支持转场动画。 |
+| animated | boolean | 否 | 是否支持转场动画。 <br>默认值：true。 <br>true：支持转场动画。 <br>false：不支持转场动画。 |
 
 **返回值：**
 
@@ -213,7 +213,7 @@ pushDestinationByName(moduleName: string, name: string, param: Object,
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100005](../errorcode-router.md#100005-navigation跳转时未注册builder函数) | Builder function not registered. |
 | [300001](../errorcode-router.md#300001-navigation跳转前静默安装hsp分包失败) | hsp silent install fail. |
 | [100006](../errorcode-router.md#100006-navigation跳转时目标页面不存在navdestination组件) | NavDestination not found. |
@@ -244,7 +244,7 @@ pushPath(moduleName: string, info: NavPathInfo, animated?: boolean): Promise<voi
 | --- | --- | --- | --- |
 | moduleName | string | 是 | 目标NavDestination所在分包的moduleName。 |
 | info | NavPathInfo | 是 | NavDestination页面的信息。 |
-| animated | boolean | 否 | 是否支持转场动画。 &lt;br&gt;默认值：true。 &lt;br&gt;true：支持转场动画。 &lt;br&gt;false：不支持转场动画。 |
+| animated | boolean | 否 | 是否支持转场动画。 <br>默认值：true。 <br>true：支持转场动画。 <br>false：不支持转场动画。 |
 
 **返回值：**
 
@@ -325,7 +325,7 @@ pushPathByName(moduleName: string, name: string, param: Object, animated?: boole
 | moduleName | string | 是 | 目标NavDestination所在分包的moduleName。 |
 | name | string | 是 | NavDestination页面名称。 |
 | param | Object | 是 | NavDestination页面详细参数。 |
-| animated | boolean | 否 | 是否支持转场动画。 &lt;br&gt;默认值：true。 &lt;br&gt;true：支持转场动画。 &lt;br&gt;false：不支持转场动画。 |
+| animated | boolean | 否 | 是否支持转场动画。 <br>默认值：true。 <br>true：支持转场动画。 <br>false：不支持转场动画。 |
 
 **返回值：**
 
@@ -368,7 +368,7 @@ pushPathByName(moduleName: string, name: string, param: Object,
 | name | string | 是 | NavDestination页面名称。 |
 | param | Object | 是 | NavDestination页面详细参数。 |
 | onPop | Callback&lt;PopInfo&gt; | 是 | Callback回调，用于页面出栈时处理返回结果。 |
-| animated | boolean | 否 | 是否支持转场动画。 &lt;br&gt;默认值：true。 &lt;br&gt;true：支持转场动画。 &lt;br&gt;false：不支持转场动画。 |
+| animated | boolean | 否 | 是否支持转场动画。 <br>默认值：true。 <br>true：支持转场动画。 <br>false：不支持转场动画。 |
 
 **返回值：**
 
@@ -408,7 +408,7 @@ replacePath(moduleName: string, info: NavPathInfo, animated?: boolean): Promise<
 | --- | --- | --- | --- |
 | moduleName | string | 是 | 目标NavDestination所在分包的moduleName。 |
 | info | NavPathInfo | 是 | 新栈顶页面参数信息。 |
-| animated | boolean | 否 | 是否支持转场动画。 &lt;br&gt;默认值：true。 &lt;br&gt;true：支持转场动画。 &lt;br&gt;false：不支持转场动画。 |
+| animated | boolean | 否 | 是否支持转场动画。 <br>默认值：true。 <br>true：支持转场动画。 <br>false：不支持转场动画。 |
 
 **返回值：**
 
@@ -489,7 +489,7 @@ replacePathByName(moduleName: string, name: string, param: Object, animated?: bo
 | moduleName | string | 是 | 目标NavDestination所在分包的moduleName。 |
 | name | string | 是 | NavDestination页面名称。 |
 | param | Object | 是 | NavDestination页面详细参数。 |
-| animated | boolean | 否 | 是否支持转场动画。 &lt;br&gt;默认值：true。 &lt;br&gt;true：支持转场动画。 &lt;br&gt;false：不支持转场动画。 |
+| animated | boolean | 否 | 是否支持转场动画。 <br>默认值：true。 <br>true：支持转场动画。 <br>false：不支持转场动画。 |
 
 **返回值：**
 

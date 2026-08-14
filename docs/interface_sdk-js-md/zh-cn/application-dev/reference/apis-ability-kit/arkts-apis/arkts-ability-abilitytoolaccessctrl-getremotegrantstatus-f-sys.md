@@ -37,3 +37,16 @@ export function getRemoteGrantStatus(): Promise<RemoteGrantStatus>
 | [24010002](../errorcode-abilityToolAccessCtrl-sys.md#24010002-服务内部错误) | Common internal error. possible cause: dependent service unavailable, resource access failure, etc. |
 | [24010001](../errorcode-abilityToolAccessCtrl-sys.md#24010001-系统服务工作异常) | Service is abnormal. possible cause: IPC failed. |
 
+## 示例
+
+```TypeScript
+import { abilityToolAccessCtrl } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+abilityToolAccessCtrl.getRemoteGrantStatus().then((data: abilityToolAccessCtrl.RemoteGrantStatus) => {
+  console.info('getRemoteGrantStatus success, data: ' + data);
+}).catch((err: BusinessError): void => {
+  console.error(`getRemoteGrantStatus fail, code: ${err.code}, message: ${err.message}`);
+});
+```
+

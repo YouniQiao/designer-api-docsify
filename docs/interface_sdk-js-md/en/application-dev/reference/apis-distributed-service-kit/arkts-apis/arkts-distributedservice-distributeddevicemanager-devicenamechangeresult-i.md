@@ -15,7 +15,7 @@ Device name change result.
 ## Modules to Import
 
 ```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { distributedDeviceManager } from 'distributedDeviceManager';
 ```
 
 ## deviceName

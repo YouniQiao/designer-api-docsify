@@ -15,7 +15,7 @@ The **cloudSyncManager** module provides APIs for managing device-cloud sync for
 ## Modules to Import
 
 ```TypeScript
-import { cloudSyncManager } from '@kit.CoreFileKit';
+import { cloudSyncManager } from 'cloudSyncManager';
 ```
 
 ## Summary

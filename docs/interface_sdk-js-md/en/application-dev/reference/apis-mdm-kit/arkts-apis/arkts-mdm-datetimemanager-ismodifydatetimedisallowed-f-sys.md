@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dateTimeManager } from '@kit.MDMKit';
+import { dateTimeManager } from 'dateTimeManager';
 ```
 
 ## isModifyDateTimeDisallowed

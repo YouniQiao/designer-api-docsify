@@ -37,16 +37,16 @@ compare(target: FastBuffer | Uint8Array, targetStart?: number, targetEnd?: numbe
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | target | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | 是 | 要比较的实例对象。 |
-| targetStart | number | 否 | `target`实例中开始的偏移量。默认值：0。取值范围：0 <= targetStart <= target.length。 |
-| targetEnd | number | 否 | `target`实例中结束的偏移量（不包含结束位置）。默认值：目标对象的字节长度。取值范围：0 <= targetEnd <= target.length。 |
-| sourceStart | number | 否 | `this`实例中开始的偏移量。默认值：0。取值范围：0 <= sourceStart <= this.length。 |
-| sourceEnd | number | 否 | `this`实例中结束的偏移量（不包含结束位置）。默认值：当前对象的字节长度。取值范围：0 <= sourceEnd <= this.length。 |
+| targetStart | number | 否 | `target`实例中开始的偏移量。默认值：0。取值范围：0 &lt;= targetStart &lt;= target.length。 |
+| targetEnd | number | 否 | `target`实例中结束的偏移量（不包含结束位置）。默认值：目标对象的字节长度。取值范围：0 &lt;= targetEnd &lt;= target.length。 |
+| sourceStart | number | 否 | `this`实例中开始的偏移量。默认值：0。取值范围：0 &lt;= sourceStart &lt;= this.length。 |
+| sourceEnd | number | 否 | `this`实例中结束的偏移量（不包含结束位置）。默认值：当前对象的字节长度。取值范围：0 &lt;= sourceEnd &lt;= this.length。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| -1 | 返回比较结果。&lt;br/&gt;-1：当前排列在目标前；&lt;br/&gt;0：当前与目标相同；&lt;br/&gt;1：当前排列在目标后。 |
+| -1 | 返回比较结果。<br/>-1：当前排列在目标前；<br/>0：当前与目标相同；<br/>1：当前排列在目标后。 |
 
 **错误码：**
 
@@ -99,9 +99,9 @@ copy(target: FastBuffer | Uint8Array, targetStart?: number, sourceStart?: number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | target | [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array | 是 | 要复制到的Buffer或Uint8Array实例。 |
-| targetStart | number | 否 | `target`实例中开始写入的偏移量。默认值：0。取值范围：0 <= targetStart <= UINT32_MAX。 |
-| sourceStart | number | 否 | `this`实例中开始复制的偏移量。默认值：0。取值范围：0 <= sourceStart <= UINT32_MAX。 |
-| sourceEnd | number | 否 | `this`实例中结束复制的偏移量（不包含结束位置）。默认值：当前对象的字节长度。取值范围：0 <= sourceEnd <= this.length。 |
+| targetStart | number | 否 | `target`实例中开始写入的偏移量。默认值：0。取值范围：0 &lt;= targetStart &lt;= UINT32_MAX。 |
+| sourceStart | number | 否 | `this`实例中开始复制的偏移量。默认值：0。取值范围：0 &lt;= sourceStart &lt;= UINT32_MAX。 |
+| sourceEnd | number | 否 | `this`实例中结束复制的偏移量（不包含结束位置）。默认值：当前对象的字节长度。取值范围：0 &lt;= sourceEnd &lt;= this.length。 |
 
 **返回值：**
 
@@ -268,8 +268,8 @@ fill(value: string | FastBuffer | Uint8Array | number, offset?: number, end?: nu
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | string \| [FastBuffer](arkts-arkts-fastbuffer-fastbuffer-c.md) \| Uint8Array \| number | 是 | 用于填充的值。 |
-| offset | number | 否 | 起始偏移量。默认值：0。取值范围：0 <= offset <= this.length。 |
-| end | number | 否 | 结束偏移量（不包含结束位置）。默认值：当前对象的字节长度。取值范围：0 <= end <= this.length。 |
+| offset | number | 否 | 起始偏移量。默认值：0。取值范围：0 &lt;= offset &lt;= this.length。 |
+| end | number | 否 | 结束偏移量（不包含结束位置）。默认值：当前对象的字节长度。取值范围：0 &lt;= end &lt;= this.length。 |
 | encoding | BufferEncoding | 否 | 字符编码格式（`value`为string才有意义）。默认值：'utf8'。传入无法识别的encoding会抛出TypeError。 |
 
 **返回值：**
@@ -503,7 +503,7 @@ readBigInt64BE(offset?: number): bigint
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offset | number | 否 | 偏移量。取值范围：0 <= offset <= this.length - 8，默认值：0。 |
+| offset | number | 否 | 偏移量。取值范围：0 &lt;= offset &lt;= this.length - 8，默认值：0。 |
 
 **返回值：**
 
@@ -515,7 +515,7 @@ readBigInt64BE(offset?: number): bigint
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 8. Received value is: [offset] |
 
 ## 示例
 
@@ -552,7 +552,7 @@ readBigInt64LE(offset?: number): bigint
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offset | number | 否 | 偏移量。取值范围：0 <= offset <= this.length - 8，默认值：0。 |
+| offset | number | 否 | 偏移量。取值范围：0 &lt;= offset &lt;= this.length - 8，默认值：0。 |
 
 **返回值：**
 
@@ -564,7 +564,7 @@ readBigInt64LE(offset?: number): bigint
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 8. Received value is: [offset] |
 
 ## 示例
 
@@ -601,7 +601,7 @@ readBigUInt64BE(offset?: number): bigint
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offset | number | 否 | 偏移量。取值范围：0 <= offset <= this.length - 8，默认值：0。 |
+| offset | number | 否 | 偏移量。取值范围：0 &lt;= offset &lt;= this.length - 8，默认值：0。 |
 
 **返回值：**
 
@@ -613,7 +613,7 @@ readBigUInt64BE(offset?: number): bigint
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 8. Received value is: [offset] |
 
 ## 示例
 
@@ -650,7 +650,7 @@ readBigUInt64LE(offset?: number): bigint
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offset | number | 否 | 偏移量。取值范围：0 <= offset <= this.length - 8，默认值：0。 |
+| offset | number | 否 | 偏移量。取值范围：0 &lt;= offset &lt;= this.length - 8，默认值：0。 |
 
 **返回值：**
 
@@ -662,7 +662,7 @@ readBigUInt64LE(offset?: number): bigint
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 8. Received value is: [offset] |
 
 ## 示例
 
@@ -699,7 +699,7 @@ readDoubleBE(offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offset | number | 否 | 偏移量。取值范围：0 <= offset <= this.length - 8，默认值：0。 |
+| offset | number | 否 | 偏移量。取值范围：0 &lt;= offset &lt;= this.length - 8，默认值：0。 |
 
 **返回值：**
 
@@ -711,7 +711,7 @@ readDoubleBE(offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 8. Received value is: [offset] |
 
 ## 示例
 
@@ -747,7 +747,7 @@ readDoubleLE(offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offset | number | 否 | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 8。 |
+| offset | number | 否 | 偏移量。默认值：0。取值范围：0 &lt;= offset &lt;= this.length - 8。 |
 
 **返回值：**
 
@@ -759,7 +759,7 @@ readDoubleLE(offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 8. Received value is: [offset] |
 
 ## 示例
 
@@ -795,7 +795,7 @@ readFloatBE(offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offset | number | 否 | 偏移量。取值范围：0 <= offset <= this.length - 4，默认值：0。 |
+| offset | number | 否 | 偏移量。取值范围：0 &lt;= offset &lt;= this.length - 4，默认值：0。 |
 
 **返回值：**
 
@@ -807,7 +807,7 @@ readFloatBE(offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 4. Received value is: [offset] |
 
 ## 示例
 
@@ -843,7 +843,7 @@ readFloatLE(offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offset | number | 否 | 偏移量。取值范围：0 <= offset <= this.length - 4，默认值：0。 |
+| offset | number | 否 | 偏移量。取值范围：0 &lt;= offset &lt;= this.length - 4，默认值：0。 |
 
 **返回值：**
 
@@ -855,7 +855,7 @@ readFloatLE(offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 4. Received value is: [offset] |
 
 ## 示例
 
@@ -891,7 +891,7 @@ readInt16BE(offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offset | number | 否 | 偏移量。取值范围：0 <= offset <= this.length - 2，默认值：0。 |
+| offset | number | 否 | 偏移量。取值范围：0 &lt;= offset &lt;= this.length - 2，默认值：0。 |
 
 **返回值：**
 
@@ -903,7 +903,7 @@ readInt16BE(offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 2. Received value is: [offset] |
 
 ## 示例
 
@@ -939,7 +939,7 @@ readInt16LE(offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offset | number | 否 | 偏移量。取值范围：0 <= offset <= this.length - 2，默认值：0。 |
+| offset | number | 否 | 偏移量。取值范围：0 &lt;= offset &lt;= this.length - 2，默认值：0。 |
 
 **返回值：**
 
@@ -951,7 +951,7 @@ readInt16LE(offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 2. Received value is: [offset] |
 
 ## 示例
 
@@ -987,7 +987,7 @@ readInt32BE(offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offset | number | 否 | 偏移量。取值范围：0 <= offset <= this.length - 4，默认值：0。 |
+| offset | number | 否 | 偏移量。取值范围：0 &lt;= offset &lt;= this.length - 4，默认值：0。 |
 
 **返回值：**
 
@@ -999,7 +999,7 @@ readInt32BE(offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 4. Received value is: [offset] |
 
 ## 示例
 
@@ -1035,7 +1035,7 @@ readInt32LE(offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offset | number | 否 | 偏移量。取值范围：0 <= offset <= this.length - 4，默认值：0。 |
+| offset | number | 否 | 偏移量。取值范围：0 &lt;= offset &lt;= this.length - 4，默认值：0。 |
 
 **返回值：**
 
@@ -1047,7 +1047,7 @@ readInt32LE(offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 4. Received value is: [offset] |
 
 ## 示例
 
@@ -1083,7 +1083,7 @@ readInt8(offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offset | number | 否 | 偏移量。取值范围：0 <= offset <= this.length - 1，默认值：0。 |
+| offset | number | 否 | 偏移量。取值范围：0 &lt;= offset &lt;= this.length - 1，默认值：0。 |
 
 **返回值：**
 
@@ -1095,7 +1095,7 @@ readInt8(offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 1. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 1. Received value is: [offset] |
 
 ## 示例
 
@@ -1133,8 +1133,8 @@ readIntBE(offset: number, byteLength: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offset | number | 是 | 偏移量。取值范围：0 <= offset <= this.length - byteLength，默认值：0。 |
-| byteLength | number | 是 | 读取的字节数。取值范围：1 <= byteLength <= 6。 |
+| offset | number | 是 | 偏移量。取值范围：0 &lt;= offset &lt;= this.length - byteLength，默认值：0。 |
+| byteLength | number | 是 | 读取的字节数。取值范围：1 &lt;= byteLength &lt;= 6。 |
 
 **返回值：**
 
@@ -1146,7 +1146,7 @@ readIntBE(offset: number, byteLength: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -1183,8 +1183,8 @@ readIntLE(offset: number, byteLength: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offset | number | 是 | 偏移量。取值范围：0 <= offset <= this.length - byteLength，默认值：0。 |
-| byteLength | number | 是 | 读取的字节数。取值范围：1 <= byteLength <= 6。 |
+| offset | number | 是 | 偏移量。取值范围：0 &lt;= offset &lt;= this.length - byteLength，默认值：0。 |
+| byteLength | number | 是 | 读取的字节数。取值范围：1 &lt;= byteLength &lt;= 6。 |
 
 **返回值：**
 
@@ -1196,7 +1196,7 @@ readIntLE(offset: number, byteLength: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -1232,7 +1232,7 @@ readUInt16BE(offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offset | number | 否 | 偏移量。取值范围：0 <= offset <= this.length - 2，默认值：0。 |
+| offset | number | 否 | 偏移量。取值范围：0 &lt;= offset &lt;= this.length - 2，默认值：0。 |
 
 **返回值：**
 
@@ -1244,7 +1244,7 @@ readUInt16BE(offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 2. Received value is: [offset] |
 
 ## 示例
 
@@ -1282,7 +1282,7 @@ readUInt16LE(offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offset | number | 否 | 偏移量。取值范围：0 <= offset <= this.length - 2，默认值：0。 |
+| offset | number | 否 | 偏移量。取值范围：0 &lt;= offset &lt;= this.length - 2，默认值：0。 |
 
 **返回值：**
 
@@ -1294,7 +1294,7 @@ readUInt16LE(offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 2. Received value is: [offset] |
 
 ## 示例
 
@@ -1332,7 +1332,7 @@ readUInt32BE(offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offset | number | 否 | 偏移量。取值范围：0 <= offset <= this.length - 4，默认值：0。 |
+| offset | number | 否 | 偏移量。取值范围：0 &lt;= offset &lt;= this.length - 4，默认值：0。 |
 
 **返回值：**
 
@@ -1344,7 +1344,7 @@ readUInt32BE(offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 4. Received value is: [offset] |
 
 ## 示例
 
@@ -1380,7 +1380,7 @@ readUInt32LE(offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offset | number | 否 | 偏移量。取值范围：0 <= offset <= this.length - 4，默认值：0。 |
+| offset | number | 否 | 偏移量。取值范围：0 &lt;= offset &lt;= this.length - 4，默认值：0。 |
 
 **返回值：**
 
@@ -1392,7 +1392,7 @@ readUInt32LE(offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 4. Received value is: [offset] |
 
 ## 示例
 
@@ -1428,7 +1428,7 @@ readUInt8(offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offset | number | 否 | 偏移量。取值范围：0 <= offset <= this.length - 1，默认值：0。 |
+| offset | number | 否 | 偏移量。取值范围：0 &lt;= offset &lt;= this.length - 1，默认值：0。 |
 
 **返回值：**
 
@@ -1440,7 +1440,7 @@ readUInt8(offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 1. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 1. Received value is: [offset] |
 
 ## 示例
 
@@ -1478,8 +1478,8 @@ readUIntBE(offset: number, byteLength: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offset | number | 是 | 偏移量。取值范围：0 <= offset <= this.length - byteLength。 |
-| byteLength | number | 是 | 要读取的字节数。取值范围：1 <= byteLength <= 6。 |
+| offset | number | 是 | 偏移量。取值范围：0 &lt;= offset &lt;= this.length - byteLength。 |
+| byteLength | number | 是 | 要读取的字节数。取值范围：1 &lt;= byteLength &lt;= 6。 |
 
 **返回值：**
 
@@ -1491,7 +1491,7 @@ readUIntBE(offset: number, byteLength: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -1527,8 +1527,8 @@ readUIntLE(offset: number, byteLength: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offset | number | 是 | 偏移量。取值范围：0 <= offset <= this.length - byteLength。 |
-| byteLength | number | 是 | 读取的字节数。取值范围：1 <= byteLength <= 6。 |
+| offset | number | 是 | 偏移量。取值范围：0 &lt;= offset &lt;= this.length - byteLength。 |
+| byteLength | number | 是 | 读取的字节数。取值范围：1 &lt;= byteLength &lt;= 6。 |
 
 **返回值：**
 
@@ -1540,7 +1540,7 @@ readUIntLE(offset: number, byteLength: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -1577,7 +1577,7 @@ subarray(start?: number, end?: number): FastBuffer
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | start | number | 否 | 截取开始位置。默认值：0。 |
-| end | number | 否 | 截取结束位置（不包含结束位置）。默认值：当前对象的字节长度。取值范围：start <= end <= this.length。 传入null时返回长度为0的FastBuffer对象。 |
+| end | number | 否 | 截取结束位置（不包含结束位置）。默认值：当前对象的字节长度。取值范围：start &lt;= end &lt;= this.length。 传入null时返回长度为0的FastBuffer对象。 |
 
 **返回值：**
 
@@ -1955,8 +1955,8 @@ writeBigInt64BE(value: bigint, offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | bigint | 是 | 写入FastBuffer的数据。取值范围：-INT64_MAX <= value <= INT64_MAX。 |
-| offset | number | 否 | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 8。 |
+| value | bigint | 是 | 写入FastBuffer的数据。取值范围：-INT64_MAX &lt;= value &lt;= INT64_MAX。 |
+| offset | number | 否 | 偏移量。默认值：0。取值范围：0 &lt;= offset &lt;= this.length - 8。 |
 
 **返回值：**
 
@@ -1968,7 +1968,7 @@ writeBigInt64BE(value: bigint, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -2005,8 +2005,8 @@ writeBigInt64LE(value: bigint, offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | bigint | 是 | 写入FastBuffer的数据。取值范围：-INT64_MAX <= value <= INT64_MAX。 |
-| offset | number | 否 | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 8。 |
+| value | bigint | 是 | 写入FastBuffer的数据。取值范围：-INT64_MAX &lt;= value &lt;= INT64_MAX。 |
+| offset | number | 否 | 偏移量。默认值：0。取值范围：0 &lt;= offset &lt;= this.length - 8。 |
 
 **返回值：**
 
@@ -2018,7 +2018,7 @@ writeBigInt64LE(value: bigint, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -2055,8 +2055,8 @@ writeBigUInt64BE(value: bigint, offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | bigint | 是 | 写入FastBuffer的数据。取值范围：0 <= value <= UINT64_MAX。 |
-| offset | number | 否 | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 8。 |
+| value | bigint | 是 | 写入FastBuffer的数据。取值范围：0 &lt;= value &lt;= UINT64_MAX。 |
+| offset | number | 否 | 偏移量。默认值：0。取值范围：0 &lt;= offset &lt;= this.length - 8。 |
 
 **返回值：**
 
@@ -2068,7 +2068,7 @@ writeBigUInt64BE(value: bigint, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -2105,8 +2105,8 @@ writeBigUInt64LE(value: bigint, offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | bigint | 是 | 写入FastBuffer的数据。取值范围：0 <= value <= UINT64_MAX。 |
-| offset | number | 否 | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 8。 |
+| value | bigint | 是 | 写入FastBuffer的数据。取值范围：0 &lt;= value &lt;= UINT64_MAX。 |
+| offset | number | 否 | 偏移量。默认值：0。取值范围：0 &lt;= offset &lt;= this.length - 8。 |
 
 **返回值：**
 
@@ -2118,7 +2118,7 @@ writeBigUInt64LE(value: bigint, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -2155,8 +2155,8 @@ writeDoubleBE(value: number, offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 写入FastBuffer的数据。取值范围：-DOUBLE_MAX <= value <= DOUBLE_MAX。 |
-| offset | number | 否 | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 8。 |
+| value | number | 是 | 写入FastBuffer的数据。取值范围：-DOUBLE_MAX &lt;= value &lt;= DOUBLE_MAX。 |
+| offset | number | 否 | 偏移量。默认值：0。取值范围：0 &lt;= offset &lt;= this.length - 8。 |
 
 **返回值：**
 
@@ -2168,7 +2168,7 @@ writeDoubleBE(value: number, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 8. Received value is: [offset] |
 
 ## 示例
 
@@ -2205,8 +2205,8 @@ writeDoubleLE(value: number, offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 写入FastBuffer的数据。取值范围：-DOUBLE_MAX <= value <= DOUBLE_MAX。 |
-| offset | number | 否 | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 8。 |
+| value | number | 是 | 写入FastBuffer的数据。取值范围：-DOUBLE_MAX &lt;= value &lt;= DOUBLE_MAX。 |
+| offset | number | 否 | 偏移量。默认值：0。取值范围：0 &lt;= offset &lt;= this.length - 8。 |
 
 **返回值：**
 
@@ -2218,7 +2218,7 @@ writeDoubleLE(value: number, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 8. Received value is: [offset] |
 
 ## 示例
 
@@ -2255,8 +2255,8 @@ writeFloatBE(value: number, offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 写入FastBuffer的数据。取值范围：-FLOAT_MAX <= value <= FLOAT_MAX。 |
-| offset | number | 否 | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 4。 |
+| value | number | 是 | 写入FastBuffer的数据。取值范围：-FLOAT_MAX &lt;= value &lt;= FLOAT_MAX。 |
+| offset | number | 否 | 偏移量。默认值：0。取值范围：0 &lt;= offset &lt;= this.length - 4。 |
 
 **返回值：**
 
@@ -2268,7 +2268,7 @@ writeFloatBE(value: number, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 4. Received value is: [offset] |
 
 ## 示例
 
@@ -2305,8 +2305,8 @@ writeFloatLE(value: number, offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 写入FastBuffer的数据。取值范围：-FLOAT_MAX <= value <= FLOAT_MAX。 |
-| offset | number | 否 | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 4。 |
+| value | number | 是 | 写入FastBuffer的数据。取值范围：-FLOAT_MAX &lt;= value &lt;= FLOAT_MAX。 |
+| offset | number | 否 | 偏移量。默认值：0。取值范围：0 &lt;= offset &lt;= this.length - 4。 |
 
 **返回值：**
 
@@ -2318,7 +2318,7 @@ writeFloatLE(value: number, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 4. Received value is: [offset] |
 
 ## 示例
 
@@ -2355,8 +2355,8 @@ writeInt16BE(value: number, offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 写入FastBuffer的数据。取值范围：-INT16_MAX <= value <= INT16_MAX。 |
-| offset | number | 否 | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 2。 |
+| value | number | 是 | 写入FastBuffer的数据。取值范围：-INT16_MAX &lt;= value &lt;= INT16_MAX。 |
+| offset | number | 否 | 偏移量。默认值：0。取值范围：0 &lt;= offset &lt;= this.length - 2。 |
 
 **返回值：**
 
@@ -2368,7 +2368,7 @@ writeInt16BE(value: number, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -2405,8 +2405,8 @@ writeInt16LE(value: number, offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 写入FastBuffer的数据。取值范围：-INT16_MAX <= value <= INT16_MAX。 |
-| offset | number | 否 | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 2。 |
+| value | number | 是 | 写入FastBuffer的数据。取值范围：-INT16_MAX &lt;= value &lt;= INT16_MAX。 |
+| offset | number | 否 | 偏移量。默认值：0。取值范围：0 &lt;= offset &lt;= this.length - 2。 |
 
 **返回值：**
 
@@ -2418,7 +2418,7 @@ writeInt16LE(value: number, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -2455,8 +2455,8 @@ writeInt32BE(value: number, offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 写入FastBuffer的数据。取值范围：-INT32_MAX <= value <= INT32_MAX。 |
-| offset | number | 否 | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 4。 |
+| value | number | 是 | 写入FastBuffer的数据。取值范围：-INT32_MAX &lt;= value &lt;= INT32_MAX。 |
+| offset | number | 否 | 偏移量。默认值：0。取值范围：0 &lt;= offset &lt;= this.length - 4。 |
 
 **返回值：**
 
@@ -2468,7 +2468,7 @@ writeInt32BE(value: number, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -2505,8 +2505,8 @@ writeInt32LE(value: number, offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 写入FastBuffer的数据。取值范围：-INT32_MAX <= value <= INT32_MAX。 |
-| offset | number | 否 | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 4。 |
+| value | number | 是 | 写入FastBuffer的数据。取值范围：-INT32_MAX &lt;= value &lt;= INT32_MAX。 |
+| offset | number | 否 | 偏移量。默认值：0。取值范围：0 &lt;= offset &lt;= this.length - 4。 |
 
 **返回值：**
 
@@ -2518,7 +2518,7 @@ writeInt32LE(value: number, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -2555,8 +2555,8 @@ writeInt8(value: number, offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 写入FastBuffer的数据。取值范围：-INT8_MAX <= value <= INT8_MAX。 |
-| offset | number | 否 | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 1。 |
+| value | number | 是 | 写入FastBuffer的数据。取值范围：-INT8_MAX &lt;= value &lt;= INT8_MAX。 |
+| offset | number | 否 | 偏移量。默认值：0。取值范围：0 &lt;= offset &lt;= this.length - 1。 |
 
 **返回值：**
 
@@ -2568,7 +2568,7 @@ writeInt8(value: number, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -2609,8 +2609,8 @@ writeIntBE(value: number, offset: number, byteLength: number): number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | number | 是 | 写入FastBuffer的数据。取值范围：-2^(8×byteLength-1) ≤ value ≤ 2^(8×byteLength-1)-1。 |
-| offset | number | 是 | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - byteLength。传入null或undefined时偏移量为0。 |
-| byteLength | number | 是 | 要写入的字节数。取值范围：1 <= byteLength <= 6。 |
+| offset | number | 是 | 偏移量。默认值：0。取值范围：0 &lt;= offset &lt;= this.length - byteLength。传入null或undefined时偏移量为0。 |
+| byteLength | number | 是 | 要写入的字节数。取值范围：1 &lt;= byteLength &lt;= 6。 |
 
 **返回值：**
 
@@ -2622,7 +2622,7 @@ writeIntBE(value: number, offset: number, byteLength: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -2660,8 +2660,8 @@ writeIntLE(value: number, offset: number, byteLength: number): number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | number | 是 | 写入FastBuffer的数据。取值范围：-2^(8×byteLength-1) ≤ value ≤ 2^(8×byteLength-1)-1。 |
-| offset | number | 是 | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - byteLength。传入null或undefined时偏移量为0。 |
-| byteLength | number | 是 | 要写入的字节数。取值范围：1 <= byteLength <= 6。 |
+| offset | number | 是 | 偏移量。默认值：0。取值范围：0 &lt;= offset &lt;= this.length - byteLength。传入null或undefined时偏移量为0。 |
+| byteLength | number | 是 | 要写入的字节数。取值范围：1 &lt;= byteLength &lt;= 6。 |
 
 **返回值：**
 
@@ -2673,7 +2673,7 @@ writeIntLE(value: number, offset: number, byteLength: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -2710,8 +2710,8 @@ writeUInt16BE(value: number, offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 写入FastBuffer的数据。取值范围：0 <= value <= UINT16_MAX。 |
-| offset | number | 否 | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 2。 |
+| value | number | 是 | 写入FastBuffer的数据。取值范围：0 &lt;= value &lt;= UINT16_MAX。 |
+| offset | number | 否 | 偏移量。默认值：0。取值范围：0 &lt;= offset &lt;= this.length - 2。 |
 
 **返回值：**
 
@@ -2723,7 +2723,7 @@ writeUInt16BE(value: number, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -2763,8 +2763,8 @@ writeUInt16LE(value: number, offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 写入FastBuffer的数据。取值范围：0 <= value <= UINT16_MAX。 |
-| offset | number | 否 | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 2。 |
+| value | number | 是 | 写入FastBuffer的数据。取值范围：0 &lt;= value &lt;= UINT16_MAX。 |
+| offset | number | 否 | 偏移量。默认值：0。取值范围：0 &lt;= offset &lt;= this.length - 2。 |
 
 **返回值：**
 
@@ -2776,7 +2776,7 @@ writeUInt16LE(value: number, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -2816,8 +2816,8 @@ writeUInt32BE(value: number, offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 写入FastBuffer的数据。取值范围：0 <= value <= UINT32_MAX。 |
-| offset | number | 否 | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 4。 |
+| value | number | 是 | 写入FastBuffer的数据。取值范围：0 &lt;= value &lt;= UINT32_MAX。 |
+| offset | number | 否 | 偏移量。默认值：0。取值范围：0 &lt;= offset &lt;= this.length - 4。 |
 
 **返回值：**
 
@@ -2829,7 +2829,7 @@ writeUInt32BE(value: number, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -2866,8 +2866,8 @@ writeUInt32LE(value: number, offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 写入FastBuffer的数据。取值范围：0 <= value <= UINT32_MAX。 |
-| offset | number | 否 | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 4。 |
+| value | number | 是 | 写入FastBuffer的数据。取值范围：0 &lt;= value &lt;= UINT32_MAX。 |
+| offset | number | 否 | 偏移量。默认值：0。取值范围：0 &lt;= offset &lt;= this.length - 4。 |
 
 **返回值：**
 
@@ -2879,7 +2879,7 @@ writeUInt32LE(value: number, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -2916,8 +2916,8 @@ writeUInt8(value: number, offset?: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 写入FastBuffer的数据。取值范围：0 <= value <= UINT8_MAX。 |
-| offset | number | 否 | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - 1。 |
+| value | number | 是 | 写入FastBuffer的数据。取值范围：0 &lt;= value &lt;= UINT8_MAX。 |
+| offset | number | 否 | 偏移量。默认值：0。取值范围：0 &lt;= offset &lt;= this.length - 1。 |
 
 **返回值：**
 
@@ -2929,7 +2929,7 @@ writeUInt8(value: number, offset?: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -2976,8 +2976,8 @@ writeUIntBE(value: number, offset: number, byteLength: number): number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | number | 是 | 写入FastBuffer的数据。取值范围：0 ≤ value ≤ 2^(8×byteLength)-1。 |
-| offset | number | 是 | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - byteLength。传入null或undefined时偏移量为0。 |
-| byteLength | number | 是 | 要写入的字节数。取值范围：1 <= byteLength <= 6。 |
+| offset | number | 是 | 偏移量。默认值：0。取值范围：0 &lt;= offset &lt;= this.length - byteLength。传入null或undefined时偏移量为0。 |
+| byteLength | number | 是 | 要写入的字节数。取值范围：1 &lt;= byteLength &lt;= 6。 |
 
 **返回值：**
 
@@ -2989,7 +2989,7 @@ writeUIntBE(value: number, offset: number, byteLength: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
 ## 示例
 
@@ -3027,8 +3027,8 @@ writeUIntLE(value: number, offset: number, byteLength: number): number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | number | 是 | 写入FastBuffer的数据。取值范围：0 ≤ value ≤ 2^(8×byteLength)-1。 |
-| offset | number | 是 | 偏移量。默认值：0。取值范围：0 <= offset <= this.length - byteLength。传入null或undefined时偏移量为0。 |
-| byteLength | number | 是 | 要写入的字节数。取值范围：1 <= byteLength <= 6。 |
+| offset | number | 是 | 偏移量。默认值：0。取值范围：0 &lt;= offset &lt;= this.length - byteLength。传入null或undefined时偏移量为0。 |
+| byteLength | number | 是 | 要写入的字节数。取值范围：1 &lt;= byteLength &lt;= 6。 |
 
 **返回值：**
 
@@ -3040,7 +3040,7 @@ writeUIntLE(value: number, offset: number, byteLength: number): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
 ## 示例
 

@@ -76,7 +76,7 @@ Reverse the bypass rules. If false all URLs will use proxy settings except URLs 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
 
 ## getBypassRules
 
@@ -124,7 +124,7 @@ Returns the proxy rules.
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[ProxyRule](arkts-na-webview-proxyrule-c.md)&gt; | The proxy rules. |
+| Array&lt;[ProxyRule](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-proxyrule-c.md)&gt; | The proxy rules. |
 
 ## insertBypassRule
 
@@ -154,7 +154,7 @@ Insert a bypass rule that indicates URLs that should skip the override proxy and
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
 
 ## insertDirectRule
 
@@ -178,13 +178,13 @@ Insert a proxy rule that indicates URLs that match the schemeFilter will connect
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| schemeFilter | [ProxySchemeFilter](arkts-na-webview-proxyschemefilter-e.md) | 否 | The scheme filter for this rule. |
+| schemeFilter | [ProxySchemeFilter](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-proxyschemefilter-e.md) | 否 | The scheme filter for this rule. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
 
 ## insertProxyRule
 
@@ -209,13 +209,13 @@ Insert a proxy rule which indicates that requests matching the schemeFilter shou
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | proxyRule | string | 是 | The proxy rule. |
-| schemeFilter | [ProxySchemeFilter](arkts-na-webview-proxyschemefilter-e.md) | 否 | The scheme filter for this rule. |
+| schemeFilter | [ProxySchemeFilter](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-proxyschemefilter-e.md) | 否 | The scheme filter for this rule. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
 
 ## isReverseBypassEnabled
 

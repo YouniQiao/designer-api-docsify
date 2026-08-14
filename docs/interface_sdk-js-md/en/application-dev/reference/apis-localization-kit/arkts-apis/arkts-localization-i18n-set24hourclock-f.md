@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'i18n';
 ```
 
 ## set24HourClock
@@ -37,4 +37,13 @@ Sets the 24-hour clock.
 | Type | Description |
 | --- | --- |
 | boolean | true** if the setting is successful, and **false** otherwise. |
+
+## Examples
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+// Set the system time to the 24-hour clock.
+let success: boolean = i18n.set24HourClock(true);
+```
 

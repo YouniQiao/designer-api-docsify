@@ -15,7 +15,7 @@ Provides enhanced audio device management capabilities.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'audio';
 ```
 
 ## getSoundCardInfo

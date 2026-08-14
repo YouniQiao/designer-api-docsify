@@ -15,7 +15,7 @@ Filter effect class, used to apply corresponding effects to specified components
 ## Modules to Import
 
 ```TypeScript
-import { uiEffect } from '@kit.ArkGraphics2D';
+import { uiEffect } from 'uiEffect';
 ```
 
 ## blur

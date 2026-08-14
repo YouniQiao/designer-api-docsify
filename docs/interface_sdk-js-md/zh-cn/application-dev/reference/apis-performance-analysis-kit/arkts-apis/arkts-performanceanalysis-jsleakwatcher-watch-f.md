@@ -22,7 +22,7 @@ function watch(obj: object, msg: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| obj | object | 是 | 需要检测的对象。&lt;br&gt;**说明：**可传入任何非null的ArkTS对象，不支持undefined和基本类型。 |
+| obj | object | 是 | 需要检测的对象。<br>**说明：**可传入任何非null的ArkTS对象，不支持undefined和基本类型。 |
 | msg | string | 是 | 自定义对象信息。 |
 
 ## 示例

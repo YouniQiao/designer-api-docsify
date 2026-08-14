@@ -15,7 +15,7 @@ Describes the VM memory information.
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
+import { hidebug } from 'hidebug';
 ```
 
 ## allArraySize

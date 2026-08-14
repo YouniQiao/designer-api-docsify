@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { WorkSchedulerExtensionContext } from '@kit.BackgroundTasksKit';
+import { WorkSchedulerExtensionContext } from 'WorkSchedulerExtensionContext';
 ```
 
 ## Summary

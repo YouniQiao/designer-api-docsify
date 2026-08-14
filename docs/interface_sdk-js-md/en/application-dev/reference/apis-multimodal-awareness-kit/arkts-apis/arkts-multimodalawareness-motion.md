@@ -15,7 +15,7 @@ The **motion** module provides the user motion awareness capabilities, including
 ## Modules to Import
 
 ```TypeScript
-import { motion } from '@kit.MultimodalAwarenessKit';
+import { motion } from 'motion';
 ```
 
 ## Summary

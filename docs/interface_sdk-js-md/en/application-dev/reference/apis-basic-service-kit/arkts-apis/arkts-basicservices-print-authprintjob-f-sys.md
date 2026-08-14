@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'print';
 ```
 
 ## authPrintJob
@@ -34,9 +34,9 @@ Authenticate a print job.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| jobId | string | Yes | Indicates the print job ID. &lt;br&gt;Job ID to be printed. |
-| userName | string | Yes | Indicates the user name. &lt;br&gt;Indicates the user name. |
-| password | string | Yes | Indicates the user password. &lt;br&gt;Indicates the user password. |
+| jobId | string | Yes | Indicates the print job ID. <br>Job ID to be printed. |
+| userName | string | Yes | Indicates the user name. <br>Indicates the user name. |
+| password | string | Yes | Indicates the user password. <br>Indicates the user password. |
 
 **Return value:**
 

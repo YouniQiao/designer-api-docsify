@@ -3,7 +3,21 @@
 ## Modules to Import
 
 ```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
+import { ConflictFiles } from 'ConflictFiles';
+import { FileFilter } from 'FileFilter';
+import { Filter } from 'Filter';
+import { Options } from 'Options';
+import { ReaderIteratorResult } from 'ReaderIteratorResult';
+import { WatchEvent } from 'WatchEvent';
+import { WatchEventListener } from 'WatchEventListener';
+import { Watcher } from 'Watcher';
+import { ReadOptions } from 'ReadOptions';
+import { ReadTextOptions } from 'ReadTextOptions';
+import { WriteOptions } from 'WriteOptions';
+import { ListFileExtOptions } from 'ListFileExtOptions';
+import { ListFileOptions } from 'ListFileOptions';
+import { DfsListeners } from 'DfsListeners';
+import { TaskSignal } from 'TaskSignal';
 ```
 
 ## disconnectDfs
@@ -42,7 +56,7 @@ Triggers disconnection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed.Possible causes: 1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed.Possible causes: 1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | 13600004 | Unmount failed. |
 

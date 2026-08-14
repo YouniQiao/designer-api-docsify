@@ -15,7 +15,12 @@ Defines the struct of Colors.
 ## Modules to Import
 
 ```TypeScript
-import { CustomColors, ThemeControl, Colors, CustomDarkColors, Theme, CustomTheme } from '@kit.ArkUI';
+import { Colors } from 'Colors';
+import { CustomColors } from 'CustomColors';
+import { Theme } from 'Theme';
+import { ThemeControl } from 'ThemeControl';
+import { CustomTheme } from 'CustomTheme';
+import { CustomDarkColors } from 'CustomDarkColors';
 ```
 
 ## alert

@@ -15,7 +15,7 @@ Network Global Proxy Configuration Information.
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'connection';
 ```
 
 ## exclusionList

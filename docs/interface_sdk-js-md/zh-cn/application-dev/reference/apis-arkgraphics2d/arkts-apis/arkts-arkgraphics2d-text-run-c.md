@@ -781,7 +781,7 @@ getTextStyle(): TextStyle
 
 | 类型 | 说明 |
 | --- | --- |
-| TextStyle | 该排版单元的文本样式。 &lt;br&gt;**说明：** &lt;br&gt;1.`textStyle.color`、`textStyle.textShadows.color`、`textStyle.backgroundRect.color`、 `textStyle.decoration.color`属性：返回32位无符号整型颜色数值。示例：返回值`4278190080`，对应纯黑色十六进制颜色值`0xFF000000`，等价于 [common2D.Color]{ |
+| TextStyle | 该排版单元的文本样式。 <br>**说明：** <br>1.`textStyle.color`、`textStyle.textShadows.color`、`textStyle.backgroundRect.color`、 `textStyle.decoration.color`属性：返回32位无符号整型颜色数值。示例：返回值`4278190080`，对应纯黑色十六进制颜色值`0xFF000000`，等价于 [common2D.Color]{ |
 
 ## 示例
 

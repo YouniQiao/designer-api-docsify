@@ -15,7 +15,7 @@ Represents the result returned.
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManager } from 'certificateManager';
 ```
 
 ## appUidList

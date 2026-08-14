@@ -17,7 +17,7 @@ Describes the Gatt service.
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from '@kit.ConnectivityKit';
+import { bluetooth } from 'bluetooth';
 ```
 
 ## characteristics

@@ -17,7 +17,7 @@ Describes a **Panel** object, which is created using [createPanel](arkts-basicse
 ## Modules to Import
 
 ```TypeScript
-import { selectionManager } from '@kit.BasicServicesKit';
+import { selectionManager } from 'selectionManager';
 ```
 
 ## moveToGlobalDisplay

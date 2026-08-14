@@ -56,7 +56,7 @@ contentSize() : SizeResult
 
 | 类型 | 说明 |
 | --- | --- |
-| [SizeResult](../../apis-arkui/arkts-components/arkts-arkui-sizeresult-i.md) | 滚动组件内容总大小，包括内容宽度和高度。&lt;br/&gt;单位：vp |
+| [SizeResult](../../apis-arkui/arkts-components/arkts-arkui-sizeresult-i.md) | 滚动组件内容总大小，包括内容宽度和高度。<br/>单位：vp |
 
 **错误码：**
 
@@ -114,13 +114,13 @@ fling(velocity: double): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| velocity | double | 是 | 惯性滚动的初始速度值。单位：vp/s&lt;br/&gt;**说明：**&lt;br/&gt;velocity值设置为0，视为异常值，本次滚动不生效。如果值为正数，则向顶部滚动；如果值为负数， 则向底部滚动。&lt;br/&gt;。 &lt;br&gt;取值范围：(-∞, +∞)。 &lt;br&gt; &lt;em&gt;注意&lt;/em&gt; &lt;br&gt;如果指定的值为0，则视为无效，此实例的滚动将不会 生效。 正值表示向顶部滚动，负值表示向 底的意思。 |
+| velocity | double | 是 | 惯性滚动的初始速度值。单位：vp/s<br/>**说明：**<br/>velocity值设置为0，视为异常值，本次滚动不生效。如果值为正数，则向顶部滚动；如果值为负数， 则向底部滚动。<br/>。 <br>取值范围：(-∞, +∞)。 <br> &lt;em&gt;注意&lt;/em&gt; <br>如果指定的值为0，则视为无效，此实例的滚动将不会 生效。 正值表示向顶部滚动，负值表示向 底的意思。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100004](../../apis-arkui/errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Controller not bound to a component. |
 
 ## getFrameNode
@@ -186,7 +186,7 @@ getItemIndex(x: double, y: double): int
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100004](../../apis-arkui/errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Controller not bound to a component. |
 
 ## getItemRect
@@ -213,19 +213,19 @@ getItemRect(index: int): RectResult
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | int | 是 | 子组件的索引值。**说明：**&lt;br/&gt;index必须是当前显示区域显示的子组件的索引值，否则视为非法值。非法值返回的大小和位置均为0。 &lt;br&gt;取值限定为整数。 |
+| index | int | 是 | 子组件的索引值。**说明：**<br/>index必须是当前显示区域显示的子组件的索引值，否则视为非法值。非法值返回的大小和位置均为0。 <br>取值限定为整数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [RectResult](../../apis-arkui/arkts-components/arkts-arkui-rectresult-i.md) | 子组件的大小和相对于组件的位置。&lt;br/&gt;单位：vp。 |
+| [RectResult](../../apis-arkui/arkts-components/arkts-arkui-rectresult-i.md) | 子组件的大小和相对于组件的位置。<br/>单位：vp。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100004](../../apis-arkui/errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Controller not bound to a component. |
 
 ## isAtEnd
@@ -410,8 +410,8 @@ scrollToIndex(value: int, smooth?: boolean, align?: ScrollAlign, options?: Scrol
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | int | 是 | 要滑动到的目标元素在当前容器中的索引值。 &lt;br/&gt;**说明：** &lt;br/&gt;value值设置成负值或者大于当前容器子组件的最大索引值，视为异常值，本次跳转不生效。 &lt;br&gt;取值限定为整数。 |
-| smooth | boolean | 否 | 设置滑动到列表项在列表中的索引值时是否有动效，true表示有动效，false表示没有动效。&lt;br/&gt;。 &lt;br&gt;默认值：false。 |
-| align | [ScrollAlign](arkts-na-scroll-scrollalign-e.md) | 否 | 指定滑动到的元素与当前容器的对齐方式。&lt;br/&gt;List中的默认值为：ScrollAlign.START。Grid中默认值为：ScrollAlign.AUTO。 WaterFlow中的默认值为：ScrollAlign.START。&lt;br/&gt;**说明：** &lt;br/&gt;仅List、Grid、WaterFlow组件支持该参数。 |
-| options | [ScrollToIndexOptions](arkts-na-scroll-scrolltoindexoptions-i.md) | 否 | 设置滑动到指定Index的选项，如额外偏移量。&lt;br/&gt;。 &lt;br&gt;单位为：vp。默认值：0，单位：vp。 |
+| value | int | 是 | 要滑动到的目标元素在当前容器中的索引值。 <br/>**说明：** <br/>value值设置成负值或者大于当前容器子组件的最大索引值，视为异常值，本次跳转不生效。 <br>取值限定为整数。 |
+| smooth | boolean | 否 | 设置滑动到列表项在列表中的索引值时是否有动效，true表示有动效，false表示没有动效。<br/>。 <br>默认值：false。 |
+| align | [ScrollAlign](arkts-na-scroll-scrollalign-e.md) | 否 | 指定滑动到的元素与当前容器的对齐方式。<br/>List中的默认值为：ScrollAlign.START。Grid中默认值为：ScrollAlign.AUTO。 WaterFlow中的默认值为：ScrollAlign.START。<br/>**说明：** <br/>仅List、Grid、WaterFlow组件支持该参数。 |
+| options | [ScrollToIndexOptions](arkts-na-scroll-scrolltoindexoptions-i.md) | 否 | 设置滑动到指定Index的选项，如额外偏移量。<br/>。 <br>单位为：vp。默认值：0，单位：vp。 |
 

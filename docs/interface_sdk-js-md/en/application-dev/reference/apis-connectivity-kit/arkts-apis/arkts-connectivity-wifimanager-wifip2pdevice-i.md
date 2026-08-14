@@ -15,7 +15,7 @@ P2P device information.
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'wifiManager';
 ```
 
 ## deviceAddress

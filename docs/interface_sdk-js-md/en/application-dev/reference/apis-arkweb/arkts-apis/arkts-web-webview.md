@@ -15,7 +15,7 @@ This module provides the capability to manage web modules.
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'webview';
 ```
 
 ## Summary
@@ -82,7 +82,7 @@ import { webview } from '@kit.ArkWeb';
 | [SnapshotResult](arkts-arkweb-webview-snapshotresult-i.md) | Represents a full drawing result. |
 | [WebCustomScheme](arkts-arkweb-webview-webcustomscheme-i.md) | Defines the configuration of web custom scheme, related to [customizeSchemes](arkts-arkweb-webview-webviewcontroller-c.md#customizeSchemes) method. |
 | [WebHeader](arkts-arkweb-webview-webheader-i.md) | Defines the Web's request/response header. |
-| [WebHttpCookie](arkts-arkweb-webview-webhttpcookie-i.md) | Defines the Web's HTTPCookie. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; The maximum length allowed for each attribute value in a cookie string is 1024. &lt;/p&gt; |
+| [WebHttpCookie](arkts-arkweb-webview-webhttpcookie-i.md) | Defines the Web's HTTPCookie. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<br> The maximum length allowed for each attribute value in a cookie string is 1024. &lt;/p&gt; |
 | [WebMessagePort](arkts-arkweb-webview-webmessageport-i.md) | Define html web message port. |
 | [WebStorageOrigin](arkts-arkweb-webview-webstorageorigin-i.md) | Provides usage information of the Web SQL Database. |
 

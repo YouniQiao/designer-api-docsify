@@ -15,7 +15,7 @@ System configuration updated callback.
 ## Modules to Import
 
 ```TypeScript
-import { systemConfiguration } from '@kit.AbilityKit';
+import { systemConfiguration } from 'systemConfiguration';
 ```
 
 ## onColorModeUpdated

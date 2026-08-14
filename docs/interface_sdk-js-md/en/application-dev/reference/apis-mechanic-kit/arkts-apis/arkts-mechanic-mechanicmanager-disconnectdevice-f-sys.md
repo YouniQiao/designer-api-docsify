@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { mechanicManager } from '@kit.MechanicKit';
+import { mechanicManager } from 'mechanicManager';
 ```
 
 ## disconnectDevice
@@ -34,7 +34,7 @@ Disconnect a device with mechanic id.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mechId | int | Yes | mechanic device id. &lt;br&gt;The value should be an integer. |
+| mechId | int | Yes | mechanic device id. <br>The value should be an integer. |
 
 **Return value:**
 

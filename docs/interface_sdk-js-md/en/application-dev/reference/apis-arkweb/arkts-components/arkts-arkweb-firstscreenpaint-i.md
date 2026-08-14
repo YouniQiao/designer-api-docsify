@@ -18,7 +18,7 @@ Defines the event information when the first screen paint is detected.
 firstScreenPaintTime: number
 ```
 
-The first screen paint time of the url. &lt;br&gt;Unit:milliseconds.
+The first screen paint time of the url. <br>Unit:milliseconds.
 
 **Type:** number
 
@@ -38,7 +38,7 @@ The first screen paint time of the url. &lt;br&gt;Unit:milliseconds.
 navigationStartTime: number
 ```
 
-The navigation start time of the url. &lt;br&gt;Unit:milliseconds.
+The navigation start time of the url. <br>Unit:milliseconds.
 
 **Type:** number
 

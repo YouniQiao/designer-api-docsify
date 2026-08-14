@@ -15,7 +15,7 @@ Describes the information of an Metrics Event.
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'media';
 ```
 
 ## details
@@ -68,7 +68,7 @@ Type of the metrics event.
 playbackPosition: int
 ```
 
-The playback progress position when the event occurs, in ms.
+The playback progress position when the event occurs.
 
 **Type:** int
 
@@ -88,7 +88,7 @@ The playback progress position when the event occurs, in ms.
 timeStamp: long
 ```
 
-Absolute timestamp when the event occurred, in ms.
+Absolute timestamp when the event occurred.
 
 **Type:** long
 

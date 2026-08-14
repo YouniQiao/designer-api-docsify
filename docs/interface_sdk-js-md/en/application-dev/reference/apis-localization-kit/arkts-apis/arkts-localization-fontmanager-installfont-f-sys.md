@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fontManager } from '@kit.LocalizationKit';
+import { fontManager } from 'fontManager';
 ```
 
 ## installFont
@@ -38,7 +38,7 @@ Installs a font file from a specified path into the system font library. This AP
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;int&gt; | Promise used to return the installation result. &lt;br&gt;- The value **0** indicates that the installation is successful and the font has been added to the system font library. &lt;br&gt;- Any other value indicates that the installation failed. Troubleshoot based on the error code. |
+| Promise&lt;int&gt; | Promise used to return the installation result. <br>- The value **0** indicates that the installation is successful and the font has been added to the system font library. <br>- Any other value indicates that the installation failed. Troubleshoot based on the error code. |
 
 **Error codes:**
 

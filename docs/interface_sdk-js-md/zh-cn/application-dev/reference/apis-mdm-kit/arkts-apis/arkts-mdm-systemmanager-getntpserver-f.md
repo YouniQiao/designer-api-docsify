@@ -55,8 +55,8 @@ let wantTemp: Want = {
   abilityName: 'EnterpriseAdminAbility'
 };
 try {
-  systemManager.getNTPServer(wantTemp);
-  console.info('Succeeded in getting NTP server.');
+  let result: string = systemManager.getNTPServer(wantTemp);
+  console.info(`Succeeded in getting NTP server. result: ${result}`);
 } catch (err) {
   console.error(`Failed to get ntp server. Code is ${err.code}, message is ${err.message}`);
 }

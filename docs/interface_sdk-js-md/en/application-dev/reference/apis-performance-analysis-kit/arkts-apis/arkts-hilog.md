@@ -15,7 +15,7 @@ The HiLog subsystem allows your applications or services to output logs based on
 ## Modules to Import
 
 ```TypeScript
-import { hilog } from '@kit.PerformanceAnalysisKit';
+import { hilog } from 'hilog';
 ```
 
 ## Summary

@@ -85,7 +85,7 @@ async function getDomainAccountPolicy() {
     })
     .catch((err: BusinessError) => {
       console.error(`Failed to get account domain info. Code: ${err.code}, message: ${err.message}`);
-    })
+    });
   try {
     domainAccountPolicy = accountManager.getDomainAccountPolicy(wantTemp, accountInfo2);
     console.info('Succeeded in getting domain account policy.');

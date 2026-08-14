@@ -62,7 +62,7 @@ Returns to the specified page.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | index of page. &lt;br&gt;Value range:[0, +∞) |
+| index | int | Yes | index of page. <br>Value range:[0, +∞) |
 | params | Object | No | params of page. |
 
 ## clear
@@ -213,7 +213,7 @@ Obtains page information by index.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | Index of page. &lt;br&gt;The value must be an integer greater than or equal to 0. |
+| index | int | Yes | Index of page. <br>The value must be an integer greater than or equal to 0. |
 
 **Return value:**
 
@@ -305,7 +305,7 @@ Navigates to a specified page in the application based on the page URL and param
 | Error Code ID | Error Message |
 | --- | --- |
 | [100001](../../apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100003](../../apis-arkui/errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) | Page stack error. Too many pages are pushed. |
 | [100004](../../apis-arkui/errorcode-router.md#100004-incorrect-route-name) | Named route error. The named route does not exist. |
 
@@ -346,7 +346,7 @@ Navigates to a specified page in the application based on the page URL and param
 | Error Code ID | Error Message |
 | --- | --- |
 | [100001](../../apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100003](../../apis-arkui/errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) | Page stack error. Too many pages are pushed. |
 | [100004](../../apis-arkui/errorcode-router.md#100004-incorrect-route-name) | Named route error. The named route does not exist. |
 
@@ -383,7 +383,7 @@ Navigates to a specified page in the application based on the page URL and param
 | Error Code ID | Error Message |
 | --- | --- |
 | [100001](../../apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100003](../../apis-arkui/errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) | Page stack error. Too many pages are pushed. |
 | [100004](../../apis-arkui/errorcode-router.md#100004-incorrect-route-name) | Named route error. The named route does not exist. |
 
@@ -425,7 +425,7 @@ Navigates to a specified page in the application based on the page URL and param
 | Error Code ID | Error Message |
 | --- | --- |
 | [100001](../../apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100003](../../apis-arkui/errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) | Page stack error. Too many pages are pushed. |
 | [100004](../../apis-arkui/errorcode-router.md#100004-incorrect-route-name) | Named route error. The named route does not exist. |
 
@@ -461,7 +461,7 @@ Navigates to a specified page in the application based on the page URL and param
 | Error Code ID | Error Message |
 | --- | --- |
 | [100001](../../apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100003](../../apis-arkui/errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) | Page stack error. Too many pages are pushed. |
 | [100002](../../apis-arkui/errorcode-router.md#100002-incorrect-uri-during-page-redirection) | Uri error. The URI of the page to redirect is incorrect or does not exist |
 
@@ -502,7 +502,7 @@ Navigates to a specified page in the application based on the page URL and param
 | Error Code ID | Error Message |
 | --- | --- |
 | [100001](../../apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100003](../../apis-arkui/errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) | Page stack error. Too many pages are pushed. |
 | [100002](../../apis-arkui/errorcode-router.md#100002-incorrect-uri-during-page-redirection) | Uri error. The URI of the page to redirect is incorrect or does not exist |
 
@@ -539,7 +539,7 @@ Navigates to a specified page in the application based on the page URL and param
 | Error Code ID | Error Message |
 | --- | --- |
 | [100001](../../apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100003](../../apis-arkui/errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) | Page stack error. Too many pages are pushed. |
 | [100002](../../apis-arkui/errorcode-router.md#100002-incorrect-uri-during-page-redirection) | Uri error. The URI of the page to redirect is incorrect or does not exist |
 
@@ -581,7 +581,7 @@ Navigates to a specified page in the application based on the page URL and param
 | Error Code ID | Error Message |
 | --- | --- |
 | [100001](../../apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100003](../../apis-arkui/errorcode-router.md#100003-too-many-pages-are-pushed-into-the-page-stack) | Page stack error. Too many pages are pushed. |
 | [100002](../../apis-arkui/errorcode-router.md#100002-incorrect-uri-during-page-redirection) | Uri error. The URI of the page to redirect is incorrect or does not exist |
 
@@ -617,7 +617,7 @@ Replaces the current page with another one in the application. The current page 
 | Error Code ID | Error Message |
 | --- | --- |
 | [100001](../../apis-arkui/errorcode-internal.md#100001-internal-error) | The UI execution context is not found. This error code is thrown only in the standard system. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100004](../../apis-arkui/errorcode-router.md#100004-incorrect-route-name) | Named route error. The named route does not exist. |
 
 ## replaceNamedRoute
@@ -734,7 +734,7 @@ Replaces the current page with another one in the application. The current page 
 | Error Code ID | Error Message |
 | --- | --- |
 | [100001](../../apis-arkui/errorcode-internal.md#100001-internal-error) | Failed to get the delegate. This error code is thrown only in the standard system. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100004](../../apis-arkui/errorcode-router.md#100004-incorrect-route-name) | Named route error. The named route does not exist. |
 
 ## replaceUrl
@@ -769,7 +769,7 @@ Replaces the current page with another one in the application. The current page 
 | Error Code ID | Error Message |
 | --- | --- |
 | [100001](../../apis-arkui/errorcode-internal.md#100001-internal-error) | The UI execution context is not found. This error code is thrown only in the standard system. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [200002](../../apis-arkui/errorcode-router.md#200002-incorrect-uri-during-page-replacement) | Uri error. The URI of the page to be used for replacement is incorrect or does not exist. |
 
 ## replaceUrl
@@ -809,7 +809,7 @@ Replaces the current page with another one in the application. The current page 
 | Error Code ID | Error Message |
 | --- | --- |
 | [100001](../../apis-arkui/errorcode-internal.md#100001-internal-error) | The UI execution context is not found. This error code is thrown only in the standard system. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [200002](../../apis-arkui/errorcode-router.md#200002-incorrect-uri-during-page-replacement) | Uri error. The URI of the page to be used for replacement is incorrect or does not exist. |
 
 ## replaceUrl
@@ -845,7 +845,7 @@ Replaces the current page with another one in the application. The current page 
 | Error Code ID | Error Message |
 | --- | --- |
 | [100001](../../apis-arkui/errorcode-internal.md#100001-internal-error) | The UI execution context is not found. This error code is thrown only in the standard system. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [200002](../../apis-arkui/errorcode-router.md#200002-incorrect-uri-during-page-replacement) | Uri error. The URI of the page to be used for replacement is incorrect or does not exist. |
 
 ## replaceUrl
@@ -886,7 +886,7 @@ Replaces the current page with another one in the application. The current page 
 | Error Code ID | Error Message |
 | --- | --- |
 | [100001](../../apis-arkui/errorcode-internal.md#100001-internal-error) | Failed to get the delegate. This error code is thrown only in the standard system. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [200002](../../apis-arkui/errorcode-router.md#200002-incorrect-uri-during-page-replacement) | Uri error. The URI of the page to be used for replacement is incorrect or does not exist. |
 
 ## showAlertBeforeBackPage
@@ -920,5 +920,5 @@ Pop up alert dialog to ask whether to back.
 | Error Code ID | Error Message |
 | --- | --- |
 | [100001](../../apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 

@@ -17,7 +17,7 @@ Provides APIs for tone playing.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'audio';
 ```
 
 ## load

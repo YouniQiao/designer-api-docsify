@@ -38,8 +38,8 @@ constructor(value: number, total: number, color: ResourceColor)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 进度遮罩的当前值。&lt;br/&gt; 取值范围：[0.0, +∞) |
-| total | number | 是 | 进度遮罩的最大值。&lt;br/&gt; 取值范围：[0.0, +∞) |
+| value | number | 是 | 进度遮罩的当前值。<br/> 取值范围：[0.0, +∞) |
+| total | number | 是 | 进度遮罩的最大值。<br/> 取值范围：[0.0, +∞) |
 | color | ResourceColor | 是 | 进度遮罩的颜色。 |
 
 ## enableBreathingAnimation
@@ -68,7 +68,7 @@ enableBreathingAnimation(value: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 是否开启呼吸光晕动画。&lt;br/&gt;true：开启呼吸光晕动画。&lt;br/&gt;false：关闭呼吸光晕动画。 |
+| value | boolean | 是 | 是否开启呼吸光晕动画。<br/>true：开启呼吸光晕动画。<br/>false：关闭呼吸光晕动画。 |
 
 ## updateColor
 

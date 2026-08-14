@@ -15,7 +15,7 @@ This class is used to enable back forward cache supported features.
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'webview';
 ```
 
 ## constructor
@@ -40,7 +40,7 @@ constructor()
 mediaTakeOver: boolean
 ```
 
-Whether cache the pages that use media take over. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; When the value is set to **true**, you need to maintain the lifecycle of system components created for video elements to avoid resource leak. &lt;/p&gt; Default is false;
+Whether cache the pages that use media take over. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<br> When the value is set to **true**, you need to maintain the lifecycle of system components created for video elements to avoid resource leak. &lt;/p&gt; Default is false;
 
 **Type:** boolean
 
@@ -60,7 +60,7 @@ Whether cache the pages that use media take over. &lt;p&gt;&lt;strong&gt;API Not
 nativeEmbed: boolean
 ```
 
-Whether cache the pages that use native embed. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; When the value is set to **true**, you need to maintain the lifecycle of system components created for the same-layer rendering elements to avoid resource leak. &lt;/p&gt; Default is false;
+Whether cache the pages that use native embed. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<br> When the value is set to **true**, you need to maintain the lifecycle of system components created for the same-layer rendering elements to avoid resource leak. &lt;/p&gt; Default is false;
 
 **Type:** boolean
 

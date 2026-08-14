@@ -15,7 +15,7 @@ Defines the Web resource request used for scheme handler.
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'webview';
 ```
 
 ## getFrameUrl

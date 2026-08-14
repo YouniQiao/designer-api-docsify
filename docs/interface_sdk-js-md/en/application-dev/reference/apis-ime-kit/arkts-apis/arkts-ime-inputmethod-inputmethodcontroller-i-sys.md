@@ -15,7 +15,7 @@ A control class that encapsulates APIs for input method management, which can on
 ## Modules to Import
 
 ```TypeScript
-import { inputMethod } from '@kit.IMEKit';
+import { inputMethod } from 'inputMethod';
 ```
 
 ## hideSoftKeyboard

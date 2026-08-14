@@ -1,6 +1,6 @@
 # AccessibilityElement
 
-Defines the **AccessibilityElement**. Before calling APIs of **AccessibilityElement**, you must call [AccessibilityExtensionContext.getFocusElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getFocusElement) or [AccessibilityExtensionContext.getWindowRootElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getWindowRootElement) to obtain an **AccessibilityElement** instance.
+An accessibility node element that provides capabilities such as querying parent/child elements, finding elements by content or focus direction, and performing accessibility actions. It is applicable to scenarios where an accessibility app needs to interact with and operate on UI nodes. Before calling methods of AccessibilityElement, obtain an AccessibilityElement instance through [AccessibilityExtensionContext.getFocusElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getFocusElement) or [AccessibilityExtensionContext.getWindowRootElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getWindowRootElement).
 
 **Since:** 23
 
@@ -18,7 +18,7 @@ Defines the **AccessibilityElement**. Before calling APIs of **AccessibilityElem
 enableScreenCurtain(isEnable: boolean): void
 ```
 
-Enables or disables the screen curtain.
+Enables or disables the screen curtain. When the screen curtain is enabled, the screen content is hidden (the screen dims), but the device still responds to operations normally.
 
 **Since:** 23
 
@@ -36,7 +36,7 @@ Enables or disables the screen curtain.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isEnable | boolean | Yes | The value **true** indicates enabled; **false** indicates disabled. |
+| isEnable | boolean | Yes | Whether to enable the screen curtain. The value `true` means to enable the screen curtain, and `false` means to disable it. |
 
 **Error codes:**
 
@@ -97,7 +97,7 @@ export default class AccessibilityManager {
 executeAction(action: AccessibilityAction, parameters?: Parameter): Promise<void>
 ```
 
-Executes a specific action based on the specified action type and input parameters. This API uses a promise to return the result.
+Performs an action on an accessibility node element based on the action type and parameters specified. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -117,8 +117,8 @@ Executes a specific action based on the specified action type and input paramete
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| action | [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md) | Yes | Executable action for the accessibility node. |
-| parameters | [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md) | No | Parameters set for the action. This parameter is left empty by default. |
+| action | [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md) | Yes | Action that can be performed on the accessibility node. |
+| parameters | [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md) | No | Parameter value set when performing the action. This parameter is passed when performing actions that require additional parameter configuration (such as SET_SELECTION, SET_CURSOR_POSITION, etc.); it is not required when performing parameterless actions (such as CLICK, etc.). Defaults to empty if not passed. |
 
 **Return value:**
 
@@ -190,7 +190,7 @@ try {
 findElement(type: 'textType', condition: string): Promise<Array<AccessibilityElement>>
 ```
 
-Finds all node elements based on the **accessibilityTextHint** text type configured for a node. This API uses a promise to return the result.
+Searches for all node elements based on the accessibility text type configured in the component's accessibilityTextHint attribute. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -208,14 +208,14 @@ Finds all node elements based on the **accessibilityTextHint** text type configu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'textType' | Yes | Type of element finding. The value is fixed at **'textType'**. |
-| condition | string | Yes | Search criteria. |
+| type | 'textType' | Yes | Fixed to 'textType', indicating that elements are searched by text type. |
+| condition | string | Yes | Accessibility text type condition for the search. All node elements whose accessibilityTextHint attribute matches this text type will be returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; | Promise used to return the result. |
+| Promise&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; | Promise used to return all node elements that match the specified accessibility text type. |
 
 **Error codes:**
 
@@ -246,7 +246,7 @@ rootElement.findElement('textType', condition).then((data: AccessibilityElement[
 findElement(type: 'elementId', condition: long): Promise<AccessibilityElement>
 ```
 
-Finds the node element of the current active window based on the element ID. This API uses a promise to return the result.
+Queries the node element in the current active window based on the element ID. This API uses a promise to return the result. This method and [findElementById](#findElementById) both find a node element by element ID. They are functionally equivalent. It is recommended to use findElementById.
 
 **Since:** 12
 
@@ -264,14 +264,14 @@ Finds the node element of the current active window based on the element ID. Thi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'elementId' | Yes | Type of element finding. The value is fixed at **'elementId'**. |
-| condition | long | Yes | elementId** of the node element. |
+| type | 'elementId' | Yes | Fixed value **'elementId'**, indicating that the node element in the current active window is queried by element ID. |
+| condition | long | Yes | Element ID of the node element to query. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Promise used to return the result. |
+| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Promise used to return the result, which is the node element that meets the specified query condition. |
 
 **Error codes:**
 
@@ -302,7 +302,7 @@ rootElement.findElement('elementId', condition).then((data: AccessibilityElement
 findElementByContent(condition: string): Promise<Array<AccessibilityElement>>
 ```
 
-Finds elements based on the content. This API uses a promise to return the result.
+Searches for node elements by their content text, and returns all node elements that contain the specified text. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -322,13 +322,13 @@ Finds elements based on the content. This API uses a promise to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| condition | string | Yes | Content. |
+| condition | string | Yes | Content text of the element to find. After this parameter is set, all node elements that contain this text content are returned. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; | Promise used to return the result. |
+| Promise&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; | Promise used to return the result. The value is a list of elements that contain the specified content. |
 
 **Error codes:**
 
@@ -409,7 +409,7 @@ Find elements that match the condition.
 findElementByFocusDirection(condition: FocusDirection): Promise<AccessibilityElement>
 ```
 
-Finds elements based on the focus direction. This API uses a promise to return the result.
+Searches for an element based on the focus direction. This API uses a promise to return the result. Compared with [findElementsByCondition](#findElementsByCondition), this method is mainly used to search for web components, while findElementsByCondition is mainly used to search for UI components.
 
 **Since:** 23
 
@@ -429,13 +429,13 @@ Finds elements based on the focus direction. This API uses a promise to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| condition | [FocusDirection](arkts-accessibility-focusdirection-t.md) | Yes | Focus direction. |
+| condition | [FocusDirection](arkts-accessibility-focusdirection-t.md) | Yes | Focus direction, which specifies the search direction for finding elements. For example, 'forward' indicates forward search and 'backward' indicates backward search. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Promise used to return the result. |
+| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Promise used to return the result. The element in the specified focus direction. |
 
 **Error codes:**
 
@@ -481,7 +481,7 @@ axContext.getAccessibilityFocusedElement().then((focus: AccessibilityElement) =>
 findElementByFocusDirection(condition: FocusDirection, type: FocusRuleType): Promise<AccessibilityElement>
 ```
 
-Finds elements based on the focus direction. This API uses a promise to return the result.
+Searches for an element based on the focus direction and focus rule type. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -504,13 +504,13 @@ Finds elements based on the focus direction. This API uses a promise to return t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | condition | [FocusDirection](arkts-accessibility-focusdirection-t.md) | Yes | Focus direction. |
-| type | [FocusRuleType](arkts-accessibility-accessibility-focusruletype-e-sys.md) | Yes | Type for finding a focusable node. |
+| type | [FocusRuleType](arkts-accessibility-accessibility-focusruletype-e-sys.md) | Yes | Focus rule type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Promise used to return the result. |
+| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Promise used to return the element that matches the focus rule type in the specified focus direction. |
 
 **Error codes:**
 
@@ -526,7 +526,7 @@ Finds elements based on the focus direction. This API uses a promise to return t
 findElementById(condition: long): Promise<AccessibilityElement>
 ```
 
-Finds elements based on element ID. This API uses a promise to return the result.
+Searches for a node element in the active window by element ID. This API uses a promise to return the result. This method is functionally equivalent to [findElement('elementId')](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md#findElement) and is recommended for priority use.
 
 **Since:** 23
 
@@ -546,13 +546,13 @@ Finds elements based on element ID. This API uses a promise to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| condition | long | Yes | Element ID. |
+| condition | long | Yes | ID of the node element to query. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Promise used to return the result. |
+| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Promise used to return the element with the specified ID. |
 
 **Error codes:**
 
@@ -636,7 +636,7 @@ Find elements that match the condition.
 findElementsByAccessibilityHintText(condition: string): Promise<Array<AccessibilityElement>>
 ```
 
-Finds elements based on the hint text. This API uses a promise to return the result.
+Searches for elements by hint text, and returns all node elements whose accessibilityTextHint attribute matches the text. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -656,13 +656,13 @@ Finds elements based on the hint text. This API uses a promise to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| condition | string | Yes | Hint text. |
+| condition | string | Yes | Hint text of the element to find. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; | Promise used to return the result. |
+| Promise&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; | Promise used to return the list of elements with the specified hint text. |
 
 **Error codes:**
 
@@ -710,7 +710,7 @@ axContext.getRootInActiveWindow(windowId).then((root: AccessibilityElement) => {
 findElementsByCondition(rule: FocusRule, condition: FocusCondition): Promise<FocusMoveResult>
 ```
 
-Finds a focusable node by conditions. This API uses a promise to return the result.
+Queries focusable nodes that meet the conditions. This API uses a promise to return the result. Compared with [findElementByFocusDirection](#findElementByFocusDirection), this method is mainly used to find UI components, while findElementByFocusDirection is mainly used to find Web components.
 
 **Since:** 23
 
@@ -730,14 +730,14 @@ Finds a focusable node by conditions. This API uses a promise to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rule | [FocusRule](arkts-accessibility-focusrule-t-sys.md) | Yes | Rule for checking the current node and its descendants. |
-| condition | [FocusCondition](arkts-accessibility-focuscondition-t-sys.md) | Yes | Condition for finding a focusable node. |
+| rule | [FocusRule](arkts-accessibility-focusrule-t-sys.md) | Yes | Rule for checking the current node and its child nodes. |
+| condition | [FocusCondition](arkts-accessibility-focuscondition-t-sys.md) | Yes | Mode for querying focusable nodes. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[FocusMoveResult](arkts-accessibility-accessibilityextensioncontext-focusmoveresult-i-sys.md)&gt; | Promise used to return the result. |
+| Promise&lt;[FocusMoveResult](arkts-accessibility-accessibilityextensioncontext-focusmoveresult-i-sys.md)&gt; | Promise used to return the result. The FocusMoveResult object contains the queried accessibility node list and the query result status code. |
 
 **Error codes:**
 
@@ -768,7 +768,7 @@ axContext.getAccessibilityFocusedElement().then((focus: AccessibilityElement) =>
 findElementsByCondition(rule: FocusRule, condition: FocusCondition, type: FocusRuleType): Promise<FocusMoveResult>
 ```
 
-Finds a focusable node by conditions. This API uses a promise to return the result.
+Searches for focusable nodes of the target type based on the rule and query condition. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -790,15 +790,15 @@ Finds a focusable node by conditions. This API uses a promise to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rule | [FocusRule](arkts-accessibility-focusrule-t-sys.md) | Yes | Rule for checking the current node and its descendants. |
-| condition | [FocusCondition](arkts-accessibility-focuscondition-t-sys.md) | Yes | Condition for finding a focusable node. |
-| type | [FocusRuleType](arkts-accessibility-accessibility-focusruletype-e-sys.md) | Yes | Type for finding a focusable node. |
+| rule | [FocusRule](arkts-accessibility-focusrule-t-sys.md) | Yes | Rule for checking the current node and its child nodes. |
+| condition | [FocusCondition](arkts-accessibility-focuscondition-t-sys.md) | Yes | Method for querying focusable nodes. |
+| type | [FocusRuleType](arkts-accessibility-accessibility-focusruletype-e-sys.md) | Yes | Focus type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[FocusMoveResult](arkts-accessibility-accessibilityextensioncontext-focusmoveresult-i-sys.md)&gt; | Promise used to return the result. |
+| Promise&lt;[FocusMoveResult](arkts-accessibility-accessibilityextensioncontext-focusmoveresult-i-sys.md)&gt; | Promise used to return the query result object. |
 
 **Error codes:**
 
@@ -813,7 +813,7 @@ Finds a focusable node by conditions. This API uses a promise to return the resu
 getChildren(): Promise<Array<AccessibilityElement>>
 ```
 
-Obtains the child elements of an element. This API uses a promise to return the result.
+Obtains the list of child elements of this element. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -833,7 +833,7 @@ Obtains the child elements of an element. This API uses a promise to return the 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; | Promise used to return the result. |
+| Promise&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; | Promise used to return the list of child elements of the current element. |
 
 **Error codes:**
 
@@ -865,7 +865,7 @@ axContext.getAccessibilityFocusedElement().then((element: AccessibilityElement) 
 getCursorPosition(callback: AsyncCallback<int>): void
 ```
 
-Obtains the cursor position in the **Text** component. This API uses an asynchronous callback to return the result.
+Obtains the cursor position in a text component. This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -883,7 +883,7 @@ Obtains the cursor position in the **Text** component. This API uses an asynchro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback function used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. If the cursor position is obtained successfully, **err** is undefined and **data** is the position index of the cursor in the text; otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -906,7 +906,7 @@ rootElement.getCursorPosition((err: BusinessError, data: number) => {
 getCursorPosition(): Promise<int>
 ```
 
-Obtains the cursor position in the **Text** component. This API uses a promise to return the result.
+Obtains the cursor position in a text component. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -924,7 +924,7 @@ Obtains the cursor position in the **Text** component. This API uses a promise t
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;int&gt; | Promise used to return the result. |
+| Promise&lt;int&gt; | Promise used to return the current cursor position. |
 
 ## Examples
 
@@ -965,7 +965,7 @@ Obtains the parent element of an accessibility node. This API uses a promise to 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Promise used to return the result. |
+| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Promise used to return the parent element of the current element. |
 
 **Error codes:**
 
@@ -997,7 +997,7 @@ axContext.getAccessibilityFocusedElement().then((element: AccessibilityElement) 
 getRoot(): Promise<AccessibilityElement>
 ```
 
-Obtains the root element of an active window. This API uses a promise to return the result.
+Obtains the root element of the active window. This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -1017,7 +1017,7 @@ Obtains the root element of an active window. This API uses a promise to return 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Promise used to return the result. |
+| Promise&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Promise used to return the root element of the active window. |
 
 **Error codes:**
 
@@ -1048,7 +1048,7 @@ for (let window of windows) {
 accessibilityFocused?: boolean
 ```
 
-Whether the element is focused for accessibility purposes. The value **true** indicates that the element is focused , and **false** indicates the opposite. Default value: **false**.
+Whether the element gains focus for accessibility purposes. The value **true** indicates that the element has gained focus, and **false** indicates the opposite. Default value: **false**.
 
 **Type:** boolean
 
@@ -1092,7 +1092,7 @@ Whether the element is an accessibility group. The value **true** indicates that
 accessibilityLevel?: string
 ```
 
-Accessibility level of a component. **auto**: The accessibility grouping service and ArkUI jointly determine whether the current component can be identified by accessibility services. **yes**: The component can be identified by accessibility services. **no**: The component cannot be identified by accessibility services. **no-hide-descendants**: The current component and all its child components cannot be identified by accessibility services.
+Accessibility level of the component. **'auto'**: The accessibility grouping service and ArkUI jointly determine whether the component can be recognized by accessibility. **'yes'**: The component can be recognized by accessibility. **'no'**: The component cannot be recognized by accessibility. **'no-hide-descendants'**: The component and all its child components cannot be recognized by accessibility. Default value: **'auto'**.
 
 **Type:** string
 
@@ -1114,7 +1114,7 @@ Accessibility level of a component. **auto**: The accessibility grouping service
 accessibilityNextFocusId?: long
 ```
 
-ID of the next component to obtain the focus. Default value: **-1**.
+ID of the next component to gain focus. Default value: **-1**.
 
 **Type:** long
 
@@ -1136,7 +1136,7 @@ ID of the next component to obtain the focus. Default value: **-1**.
 accessibilityPreviousFocusId?: long
 ```
 
-ID of the previous component to obtain the focus. Default value: **-1**.
+ID of the previous component to gain focus. Default value: **-1**.
 
 **Type:** long
 
@@ -1158,7 +1158,7 @@ ID of the previous component to obtain the focus. Default value: **-1**.
 accessibilityScrollable?: boolean
 ```
 
-Whether the element can be scrolled for accessibility purposes. This attribute has a higher priority than **scrollable**. The value **true** indicates that the element is scrollable, and **false** indicates the opposite. Default value: **true**.
+Whether the element is scrollable for accessibility purposes. This attribute has a higher priority than scrollable. That is, when the value of accessibilityScrollable conflicts with that of scrollable, the value of accessibilityScrollable prevails. The value **true** indicates that the element is scrollable, and **false** indicates the opposite. Default value: **false**.
 
 **Type:** boolean
 
@@ -1180,7 +1180,7 @@ Whether the element can be scrolled for accessibility purposes. This attribute h
 accessibilityStateDescription?: string
 ```
 
-Custom accessibility state broadcast text of an element.
+Custom accessibility state announcement text of the element.
 
 **Type:** string
 
@@ -1204,7 +1204,7 @@ Custom accessibility state broadcast text of an element.
 accessibilityText?: string
 ```
 
-Accessibility text information of an element.
+Accessibility text information of the element.
 
 **Type:** string
 
@@ -1226,7 +1226,7 @@ Accessibility text information of an element.
 accessibilityVisible?: boolean
 ```
 
-Whether the component is visible for accessibility purposes. The value **true** indicates that the component is visible, and **false** indicates the opposite.
+Whether the component is visible for accessibility. The value **true** indicates that the component is visible, and **false** indicates the opposite. Default value: **true**.
 
 **Type:** boolean
 
@@ -1248,7 +1248,7 @@ Whether the component is visible for accessibility purposes. The value **true** 
 belongTreeId?: int
 ```
 
-Component tree ID that the element belongs to. The default value is **-1**.
+ID of the component tree to which the element belongs. Default value: **-1**.
 
 **Type:** int
 
@@ -1338,7 +1338,7 @@ Whether the element is checked. The value **true** indicates that the element is
 childrenIds?: Array<long>
 ```
 
-List of child element IDs of a component.
+List of child element IDs of the component. Default value: empty array.
 
 **Type:** Array&lt;long&gt;
 
@@ -1360,7 +1360,7 @@ List of child element IDs of a component.
 childrenTreeId?: int
 ```
 
-Child component tree ID of the element. The default value is **-1**.
+ID of the child component tree of the element. Default value: **-1**.
 
 **Type:** int
 
@@ -1406,7 +1406,7 @@ Whether the element is clickable. The value **true** indicates that the element 
 clip?: boolean
 ```
 
-Whether the component needs to be clipped. The value **true** indicates that the component needs to be clipped, and **false** indicates the opposite.
+Whether the component needs clipping. The value **true** indicates that clipping is needed, and **false** indicates the opposite. Default value: **false**.
 
 **Type:** boolean
 
@@ -1472,7 +1472,7 @@ Type of the component to which the element belongs.
 contents?: Array<string>
 ```
 
-Content displayed in the element.
+Content displayed by the element. Default value: empty array.
 
 **Type:** Array&lt;string&gt;
 
@@ -1538,7 +1538,7 @@ Current item in the component grid.
 customActions?: Array<string>
 ```
 
-Indicates the custom actions supported by the component.
+List of custom actions supported by the element.
 
 **Type:** Array&lt;string&gt;
 
@@ -1562,7 +1562,7 @@ Indicates the custom actions supported by the component.
 customComponentType?: string
 ```
 
-Custom component type.
+Custom component type. Corresponds to the [AccessibilityRoleType](../../apis-arkui/arkts-components/arkts-arkui-accessibilityroletype-e.md#AccessibilityRoleType) type of the element.
 
 **Type:** string
 
@@ -1650,7 +1650,7 @@ Index of the last list item displayed on the screen. Default value: **0**.
 error?: string
 ```
 
-Error status of the element.
+Error state of the element.
 
 **Type:** string
 
@@ -1672,7 +1672,7 @@ Error status of the element.
 extraInfo?: string
 ```
 
-Additional information about an element. The value is a JSON string.
+Extra information of the element. The value is a JSON string.
 
 **Type:** string
 
@@ -1694,7 +1694,7 @@ Additional information about an element. The value is a JSON string.
 focusable?: boolean
 ```
 
-Whether the element is focusable. The value **true** indicates that the element is focusable, and **false** indicates the opposite. Default value: **false**.
+Whether the element can gain focus (here it refers to accessibility focus, which is different from input focus). The value **true** indicates that the element can gain focus, and **false** indicates the opposite. Default value: **false**.
 
 **Type:** boolean
 
@@ -1738,7 +1738,7 @@ Hint text.
 hotArea?: Rect
 ```
 
-Hot area of an element.
+Touchable area of the element.
 
 **Type:** [Rect](arkts-accessibility-accessibilityextensioncontext-rect-i.md)
 
@@ -1760,7 +1760,7 @@ Hot area of an element.
 inputType?: int
 ```
 
-Type of the input text. Default value: **0**.
+Type of the input text. Different values correspond to different input modes: **0** indicates no specific type; **1** indicates text; **2** indicates email; **3** indicates date; **4** indicates time; **5** indicates number; **6** indicates password; **7** indicates phone number; **8** indicates username; **9** indicates new password. Default value: **0**.
 
 **Type:** int
 
@@ -1848,7 +1848,7 @@ Whether the element is enabled. The value **true** indicates that the element is
 isEssential?: boolean
 ```
 
-Whether the element is mandatory for the user. The value **true** indicates that the element is mandatory, and the value **false** indicates that the element is not mandatory. The default value is **false**.
+Whether the element is essential to the user. The value **true** indicates that the element is essential, and **false** indicates the opposite. Default value: **false**.
 
 **Type:** boolean
 
@@ -1872,7 +1872,7 @@ Whether the element is mandatory for the user. The value **true** indicates that
 isFocused?: boolean
 ```
 
-Whether the element is focused. The value **true** indicates that the element is focused, and **false** indicates the opposite. Default value: **false**.
+Whether the element has gained focus (here it refers to accessibility focus, which is different from input focus). The value **true** indicates that the element has gained focus, and **false** indicates the opposite. Default value: **false**.
 
 **Type:** boolean
 
@@ -1982,7 +1982,7 @@ Total number of items. Default value: **0**.
 lastContent?: string
 ```
 
-Last item.
+Content of the last item.
 
 **Type:** string
 
@@ -2026,7 +2026,7 @@ Display layer of the element.
 longClickable?: boolean
 ```
 
-Whether the element can be long-pressed. The value **true** indicates that the element can be long-pressed, and **false** indicates the opposite. Default value: **false**.
+Whether the element is long-clickable. The value **true** indicates that the element is long-clickable, and **false** indicates the opposite. Default value: **false**.
 
 **Type:** boolean
 
@@ -2048,7 +2048,7 @@ Whether the element can be long-pressed. The value **true** indicates that the e
 mainWindowId?: int
 ```
 
-Main window ID of a component.
+Main window ID of the component. Default value: **-1**.
 
 **Type:** int
 
@@ -2070,7 +2070,7 @@ Main window ID of a component.
 navDestinationId?: long
 ```
 
-Destination ID of a component for navigation.
+Navigation destination ID of the component. Default value: **-1**.
 
 **Type:** long
 
@@ -2092,7 +2092,7 @@ Destination ID of a component for navigation.
 offset?: double
 ```
 
-Pixel offset of the content area relative to the top coordinate of a scrollable component (such as List and Grid). The unit is pixel (px). Default value: **0**.
+Pixel offset of the content area relative to the top coordinate of the scrollable component (such as List and Grid ), in pixels (px). Default value: **0**.
 
 **Type:** double
 
@@ -2136,7 +2136,7 @@ Page ID. Default value: **-1**.
 parentId?: long
 ```
 
-Parent element ID of a component.
+Parent element ID of the component. Default value: **-1**.
 
 **Type:** long
 
@@ -2158,7 +2158,7 @@ Parent element ID of a component.
 pluralLineSupported?: boolean
 ```
 
-Whether the element supports multiple lines of text. The value **true** indicates that the element supports multiple lines of text, and **false** indicates the opposite. Default value: **false**.
+Whether the element supports multi-line text. The value **true** indicates that the element supports multi-line text, and **false** indicates the opposite. Default value: **false**.
 
 **Type:** boolean
 
@@ -2180,7 +2180,7 @@ Whether the element supports multiple lines of text. The value **true** indicate
 rect?: Rect
 ```
 
-Rectangular area for the element.
+Area of the element.
 
 **Type:** [Rect](arkts-accessibility-accessibilityextensioncontext-rect-i.md)
 
@@ -2224,7 +2224,7 @@ Resource name of the element.
 screenRect?: Rect
 ```
 
-Rectangular area for the element to display.
+Display area of the element.
 
 **Type:** [Rect](arkts-accessibility-accessibilityextensioncontext-rect-i.md)
 
@@ -2246,7 +2246,7 @@ Rectangular area for the element to display.
 scrollable?: boolean
 ```
 
-Whether the element is scrollable. The value **true** indicates that the element is scrollable, and **false** indicates the opposite. Default value: **false**.
+Whether the element is scrollable. The value **true** indicates that the element is scrollable, and **false** indicates the opposite. When the value conflicts with that of accessibilityScrollable, the value of accessibilityScrollable prevails. Default value: **false**.
 
 **Type:** boolean
 
@@ -2290,7 +2290,7 @@ Whether the element is selected. The value **true** indicates that the element i
 sourceType?: AccessibilitySourceType
 ```
 
-Indicates the source of this element.
+Source type of the component, used to distinguish default components from newly added or modified virtual components.
 
 **Type:** [AccessibilitySourceType](arkts-accessibility-accessibility-accessibilitysourcetype-e-sys.md)
 
@@ -2314,7 +2314,7 @@ Indicates the source of this element.
 spans?: AccessibilitySpan[]
 ```
 
-Span array of a component.
+Array of accessibility hyperlink text information of the component. Default value: empty array.
 
 **Type:** [AccessibilitySpan](arkts-accessibility-accessibilityextensioncontext-accessibilityspan-i-sys.md)[]
 
@@ -2336,7 +2336,7 @@ Span array of a component.
 startIndex?: int
 ```
 
-Index of the first item on the screen. Default value: **0**.
+Index of the first list item on the screen. Default value: **0**.
 
 **Type:** int
 
@@ -2358,7 +2358,7 @@ Index of the first item on the screen. Default value: **0**.
 supportedActionNames?: Array<string>
 ```
 
-Supported action names.
+Supported action names. Default value: empty array.
 
 **Type:** Array&lt;string&gt;
 
@@ -2380,7 +2380,7 @@ Supported action names.
 text?: string
 ```
 
-Text content of an element.
+Text content of the element.
 
 **Type:** string
 
@@ -2402,7 +2402,7 @@ Text content of an element.
 textLengthLimit?: int
 ```
 
-Maximum text length of an element.
+Maximum text length of the element. Default value: **0**.
 
 **Type:** int
 
@@ -2424,7 +2424,7 @@ Maximum text length of an element.
 textMoveUnit?: accessibility.TextMoveUnit
 ```
 
-Movement unit for traversing and reading text. Default value: **char**.
+Movement unit for text reading. Default value: **char**.
 
 **Type:** accessibility.TextMoveUnit
 
@@ -2446,7 +2446,7 @@ Movement unit for traversing and reading text. Default value: **char**.
 textType?: string
 ```
 
-Accessibility text type of an element, which is configured by the **accessibilityTextHint** attribute of the component.
+Accessibility text type of the element, configured by the accessibilityTextHint attribute of the component.
 
 **Type:** string
 
@@ -2490,7 +2490,7 @@ Action that triggers the element event.
 type?: WindowType
 ```
 
-Window type of an element.
+Window type of the element.
 
 **Type:** [WindowType](arkts-accessibility-windowtype-t.md)
 

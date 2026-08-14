@@ -17,7 +17,7 @@ This module provides package management capabilities, including installing and u
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@kit.MDMKit';
+import { bundleManager } from 'bundleManager';
 ```
 
 ## Summary

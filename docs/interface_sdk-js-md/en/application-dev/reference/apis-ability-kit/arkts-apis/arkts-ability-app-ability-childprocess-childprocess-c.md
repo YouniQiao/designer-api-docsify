@@ -15,7 +15,7 @@ ChildProcess is the base class for you to customize child processes. When starti
 ## Modules to Import
 
 ```TypeScript
-import { ChildProcess } from '@kit.AbilityKit';
+import { ChildProcess } from 'ChildProcess';
 ```
 
 ## onStart

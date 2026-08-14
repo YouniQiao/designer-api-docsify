@@ -15,7 +15,7 @@ Describes the configuration of the main window screenshot.
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'window';
 ```
 
 ## useCache

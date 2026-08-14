@@ -162,7 +162,7 @@ style(indicatorStyle: DotIndicator | DigitIndicator)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| indicatorStyle | DotIndicator \| DigitIndicator | 是 | 可选导航点指示器样式。&lt;br/&gt; - DotIndicator：圆点指示器样式。&lt;br/&gt; - DigitIndicator：数字指示器样式。&lt;br/&gt;  默认类型：DotIndicator。 |
+| indicatorStyle | DotIndicator \| DigitIndicator | 是 | 可选导航点指示器样式。<br/> - DotIndicator：圆点指示器样式。<br/> - DigitIndicator：数字指示器样式。<br/>  默认类型：DotIndicator。 |
 
 ## vertical
 

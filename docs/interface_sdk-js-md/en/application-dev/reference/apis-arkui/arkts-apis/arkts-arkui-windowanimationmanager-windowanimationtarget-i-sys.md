@@ -17,7 +17,7 @@ Window animation target.
 ## Modules to Import
 
 ```TypeScript
-import { windowAnimationManager } from '@kit.ArkUI';
+import { windowAnimationManager } from 'windowAnimationManager';
 ```
 
 ## abilityName

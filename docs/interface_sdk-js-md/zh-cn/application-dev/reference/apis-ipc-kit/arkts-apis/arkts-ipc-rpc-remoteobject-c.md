@@ -538,7 +538,7 @@ sendMessageRequest请求的响应处理函数，服务端在该函数里同步�
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 若在onRemoteMessageRequest中同步处理请求，则返回一个布尔值。返回true表示操作成功，返回false表示操作失败。 &lt;br/&gt;- 若在onRemoteMessageRequest中异步处理请求，则返回一个Promise对象。返回true表示操作成功，返回false表示操作失败。 |
+| boolean | 若在onRemoteMessageRequest中同步处理请求，则返回一个布尔值。返回true表示操作成功，返回false表示操作失败。 <br/>- 若在onRemoteMessageRequest中异步处理请求，则返回一个Promise对象。返回true表示操作成功，返回false表示操作失败。 |
 
 ## 示例
 
@@ -724,7 +724,7 @@ sendMessageRequest请求的响应处理函数，服务端在该函数里同步�
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 若在onRemoteMessageRequest中同步处理请求，则返回一个布尔值。返回true表示操作成功，返回false表示操作失败。 &lt;br/&gt;- 若在onRemoteMessageRequest中异步处理请求，则返回一个Promise对象。返回true表示操作成功，返回false表示操作失败。 |
+| boolean | 若在onRemoteMessageRequest中同步处理请求，则返回一个布尔值。返回true表示操作成功，返回false表示操作失败。 <br/>- 若在onRemoteMessageRequest中异步处理请求，则返回一个Promise对象。返回true表示操作成功，返回false表示操作失败。 |
 
 ## 示例
 

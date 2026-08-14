@@ -53,7 +53,7 @@ let options: zlib.Options = {
 
 try {
   zlib.decompressFile(inFile, outFileDir, options, (errData: BusinessError) => {
-    if (errData !== null) {
+    if (errData) {
       console.error(`decompressFile errData is errCode:${errData.code}  message:${errData.message}`);
     } else {
       console.info(`decompressFile success.`);
@@ -115,7 +115,7 @@ let outFileDir = '/data/storage/el2/base/temp';
 
 try {
   zlib.decompressFile(inFile, outFileDir, (errData: BusinessError) => {
-    if (errData !== null) {
+    if (errData) {
       console.error(`decompressFile failed. code is ${errData.code}, message is ${errData.message}`);
     } else {
       console.info(`decompressFile success.`);

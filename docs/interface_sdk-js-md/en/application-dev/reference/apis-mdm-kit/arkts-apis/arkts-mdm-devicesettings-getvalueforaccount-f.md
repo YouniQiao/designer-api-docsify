@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { deviceSettings } from '@kit.MDMKit';
+import { deviceSettings } from 'deviceSettings';
 ```
 
 ## getValueForAccount
@@ -34,13 +34,13 @@ Obtains the device policy of a specified user. This API allows you to obtain a s
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | item | [SettingsItem](arkts-mdm-devicesettings-settingsitem-e.md) | Yes | Type of the policy to set. The following policy types are supported: **DEVICE_NAME** (device name) and **FLOATING_NAVIGATION** (three-button navigation). |
-| accountId | number | Yes | User ID, which must be greater than or equal to 0. &lt;br&gt;**accountId** can be obtained via APIs such as [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId). |
+| accountId | number | Yes | User ID, which must be greater than or equal to 0. <br>**accountId** can be obtained via APIs such as [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Policy type value. &lt;br&gt;When **item** is set to [SettingsItem.DEVICE_NAME]{ |
+| string | Policy type value. <br>When **item** is set to [SettingsItem.DEVICE_NAME]{ |
 
 **Error codes:**
 

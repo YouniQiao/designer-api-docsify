@@ -15,7 +15,7 @@ Describes pairing request parameters.
 ## Modules to Import
 
 ```TypeScript
-import { remoteDevice } from '@kit.ConnectivityKit';
+import { remoteDevice } from 'remoteDevice';
 ```
 
 ## address

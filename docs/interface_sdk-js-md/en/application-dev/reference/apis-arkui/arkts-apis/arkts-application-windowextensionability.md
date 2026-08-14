@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { WindowExtensionContext } from '@kit.ArkUI';
+import { WindowExtensionContext } from 'WindowExtensionContext';
 ```
 
 ## Summary

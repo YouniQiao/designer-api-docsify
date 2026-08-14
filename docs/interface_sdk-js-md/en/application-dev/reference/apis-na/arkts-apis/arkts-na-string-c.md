@@ -36,7 +36,7 @@ Returns an instance of string at passed index.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | index to look at &lt;br&gt;The value range is all integers. |
+| index | int | Yes | index to look at <br>The value range is all integers. |
 
 **Return value:**
 
@@ -222,7 +222,7 @@ Creates a new instance of a string from int
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | The value to be converted to a string &lt;br&gt;The value range is all integers. |
+| value | int | Yes | The value to be converted to a string <br>The value range is all integers. |
 
 **Return value:**
 
@@ -440,7 +440,7 @@ The at() method takes an integer value and returns a new string consisting of th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | Converted at element. &lt;br&gt;The value should be an integer. |
+| index | int | Yes | Converted at element. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -550,7 +550,7 @@ Getter for char at some index
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | index in char array inside string. &lt;br&gt;The value should be an integer. |
+| index | int | Yes | index in char array inside string. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -582,7 +582,7 @@ The charCodeAt() method returns an integer between 0 and 65535 representing the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | subscript. The value must be an integer within [0, string.length-1]. &lt;br&gt;The value must be an integer greater than or equal to 0. |
+| index | int | Yes | subscript. The value must be an integer within [0, string.length-1]. <br>The value must be an integer greater than or equal to 0. |
 
 **Return value:**
 
@@ -614,7 +614,7 @@ Gets the codepoint at the specified index in this string. Is similar to charAt(i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | index of the potential surrogate pair. &lt;br&gt;The value should be an integer. |
+| index | int | Yes | index of the potential surrogate pair. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -646,8 +646,8 @@ Returns the amount of full codepoints between begin and end indexes. Characters 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| begin | int | Yes | index to start from. &lt;br&gt;The value must be an integer greater than or equal to 0. |
-| end | int | Yes | past the ending index. &lt;br&gt;The value must be an integer greater than or equal to 0. |
+| begin | int | Yes | index to start from. <br>The value must be an integer greater than or equal to 0. |
+| end | int | Yes | past the ending index. <br>The value must be an integer greater than or equal to 0. |
 
 **Return value:**
 
@@ -973,8 +973,8 @@ Checks if this string contains the specified string. The search starts from spec
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| str | string | Yes | string to search. &lt;br&gt;The minimum length is 0. |
-| fromIndex | int | Yes | index to start search from. &lt;br&gt;The value should be an integer. |
+| str | string | Yes | string to search. <br>The minimum length is 0. |
+| fromIndex | int | Yes | index to start search from. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -1072,7 +1072,7 @@ Checks that this string ends with the specified suffix.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | suffix | string | Yes | suffix string. |
-| endPosition | int | No | at which suffix is expected to be found. Defaults to str.length. &lt;br&gt;The value should be an integer. |
+| endPosition | int | No | at which suffix is expected to be found. Defaults to str.length. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -1194,7 +1194,7 @@ The fontsize() method creates a string that embeds a string in a &lt;font&gt; el
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | int | Yes | size to use. &lt;br&gt;The value should be an integer. |
+| size | int | Yes | size to use. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -1258,7 +1258,7 @@ The string.fromCharCode() static method returns a string created from the specif
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | int | Yes | is a number between 0 and 65535 (0xFFFF) representing a UTF-16 code unit or NaN. &lt;br&gt;The value range is all integers. |
+| code | int | Yes | is a number between 0 and 65535 (0xFFFF) representing a UTF-16 code unit or NaN. <br>The value range is all integers. |
 
 **Return value:**
 
@@ -1354,8 +1354,8 @@ Gets the byte sequence that is representing the part of this string between begi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| begin | int | Yes | index to start from. &lt;br&gt;The value must be an integer greater than or equal to 0. |
-| end | int | Yes | past the ending index. &lt;br&gt;The value must be an integer greater than or equal to 0. |
+| begin | int | Yes | index to start from. <br>The value must be an integer greater than or equal to 0. |
+| end | int | Yes | past the ending index. <br>The value must be an integer greater than or equal to 0. |
 
 **Return value:**
 
@@ -1413,8 +1413,8 @@ Gets the char sequence that is representing the part of this string between begi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| begin | int | Yes | index to start from. &lt;br&gt;The value should be an integer. |
-| end | int | Yes | past the ending index. &lt;br&gt;The value should be an integer. |
+| begin | int | Yes | index to start from. <br>The value should be an integer. |
+| end | int | Yes | past the ending index. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -1475,7 +1475,7 @@ Resolves the replacement template string by parsing special substitution pattern
 | --- | --- | --- | --- |
 | matched | string | Yes | matched string, which is the complete substring matched by the regular expression. |
 | str | string | Yes | the original full string on which the replacement operation is being performed. |
-| position | int | Yes | the zero-based start index of the matched substring within the original string str. &lt;br&gt;The value must be an integer greater than or equal to 0. |
+| position | int | Yes | the zero-based start index of the matched substring within the original string str. <br>The value must be an integer greater than or equal to 0. |
 | captures | string[] | Yes | an array of capture group matches. |
 | namedCaptures | Record&lt;string, string \| undefined&gt; \| undefined | Yes | a mapping object for named capturing groups. |
 | replacement | string | Yes | the replacement template string. |
@@ -1511,7 +1511,7 @@ The includes() method performs a case-sensitive search to determine whether one 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | searchString | string | Yes | to be searched. |
-| position | int | No | within the string at which to begin searching for searchString. Defaults to 0, meaning the search starts from the beginning of the string. &lt;br&gt;The value should be an integer. |
+| position | int | No | within the string at which to begin searching for searchString. Defaults to 0, meaning the search starts from the beginning of the string. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -1576,7 +1576,7 @@ Finds the first occurrence of a character in this string at position >= fromInde
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | ch | char | Yes | the character to search for from the beginning of the string. The character must be a valid UTF-16 code unit (0 to 65535). |
-| fromIndex | int | Yes | to start searching from. &lt;br&gt;The value should be an integer. |
+| fromIndex | int | Yes | to start searching from. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -1609,7 +1609,7 @@ Finds the first occurrence of another string in this string
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | str | string | Yes | the substring to search for within this string. If an empty string is provided, returns fromIndex (or 0 if fromIndex is undefined). |
-| fromIndex | int | No | to start searching from. &lt;br&gt;The value should be an integer. |
+| fromIndex | int | No | to start searching from. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -1814,7 +1814,7 @@ Finds the last occurrence of a character in this string at position &lt;= fromIn
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | ch | char | Yes | the character to search for from the end of the string. |
-| fromIndex | int | Yes | to start searching from. &lt;br&gt;The value should be an integer. |
+| fromIndex | int | Yes | to start searching from. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -1879,7 +1879,7 @@ Finds the last occurrence of another string in this string. If fromIndex is unde
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | str | string | Yes | the substring to search for within this string. |
-| fromIndex | int | No | position to start searching backwards from. If undefined, searches from the end of the string. If >= string length, searches from the end. If negative, returns -1. &lt;br&gt;The value should be an integer. |
+| fromIndex | int | No | position to start searching backwards from. If undefined, searches from the end of the string. If >= string length, searches from the end. If negative, returns -1. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -2137,7 +2137,7 @@ The padEnd() method pads the current string with a given string (repeated, if ne
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| maxLength | int | Yes | of the resulting string once the current str has been padded. &lt;br&gt;The value should be an integer. |
+| maxLength | int | Yes | of the resulting string once the current str has been padded. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -2169,7 +2169,7 @@ The padEnd() method pads the current string with a given string (repeated, if ne
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| maxLength | int | Yes | of the resulting string once the current str has been padded. &lt;br&gt;The value should be an integer. |
+| maxLength | int | Yes | of the resulting string once the current str has been padded. <br>The value should be an integer. |
 | ch | char | Yes | to pad the current str with. |
 
 **Return value:**
@@ -2202,7 +2202,7 @@ The padEnd() method pads the current string with a given string (repeated, if ne
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| maxLength | int | Yes | of the resulting string once the current str has been padded. &lt;br&gt;The value range is all integers. |
+| maxLength | int | Yes | of the resulting string once the current str has been padded. <br>The value range is all integers. |
 | fillString | string | No | to pad the current str with. If not specified, defaults to space character (U+0020). If the fillString is an empty string, no padding occurs. |
 
 **Return value:**
@@ -2236,7 +2236,7 @@ Creates a new string of a specified length in which the beginning of this string
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | pad | char | Yes | the character to use for padding (repeated as needed to fill). The character must be a valid UTF-16 code unit (0 to 65535). |
-| count | int | Yes | the target length of the resulting string. If count <= current string length, returns a copy of the original string. &lt;br&gt;The value should be an integer. |
+| count | int | Yes | the target length of the resulting string. If count &lt;= current string length, returns a copy of the original string. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -2269,7 +2269,7 @@ Creates a new string of a specified length in which the end of this string is pa
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | pad | char | Yes | the character to use for padding (repeated as needed to fill). The character must be a valid UTF-16 code unit (0 to 65535). |
-| count | int | Yes | the target length of the resulting string. If count <= current string length, returns a copy of the original string. &lt;br&gt;The value should be an integer. |
+| count | int | Yes | the target length of the resulting string. If count &lt;= current string length, returns a copy of the original string. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -2301,7 +2301,7 @@ The padStart() method pads the current string with another string (multiple time
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| maxLength | int | Yes | The target length of the resulting string. If less than or equal to the current string length, returns a copy of the original string. &lt;br&gt;The value range is all integers. |
+| maxLength | int | Yes | The target length of the resulting string. If less than or equal to the current string length, returns a copy of the original string. <br>The value range is all integers. |
 | ch | char | Yes | The character to use for padding (repeated as needed). |
 
 **Return value:**
@@ -2334,7 +2334,7 @@ The padStart() method pads the current string with another string (multiple time
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| maxLength | int | Yes | The target length of the resulting string. If less than or equal to the current string length, returns a copy of the original string. &lt;br&gt;The value should be an integer. |
+| maxLength | int | Yes | The target length of the resulting string. If less than or equal to the current string length, returns a copy of the original string. <br>The value should be an integer. |
 | fillString | string | No | The string to pad with. Defaults to space character (U+0020) if not specified. |
 
 **Return value:**
@@ -2367,7 +2367,7 @@ Repeats this string count times, i.e. a = 'A', a.repeat(2) == 'AA'
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| count | int | Yes | number of repetitions of this string. &lt;br&gt;The value must be an integer greater than or equal to 0. |
+| count | int | Yes | number of repetitions of this string. <br>The value must be an integer greater than or equal to 0. |
 
 **Return value:**
 
@@ -2926,8 +2926,8 @@ The slice() method extracts a section of a string and returns it as a new string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| begin | int | No | Start index. &lt;br&gt;The value should be an integer. |
-| end | int | No | End index. &lt;br&gt;The value should be an integer. |
+| begin | int | No | Start index. <br>The value should be an integer. |
+| end | int | No | End index. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -2986,7 +2986,7 @@ Splits this string by separator and returns an ordered array of substrings. The 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | separator | string | Yes | string to split by. |
-| limit | int | No | max length of the returned array. Int.MAX_VALUE if it's negative. &lt;br&gt;The value should be an integer. |
+| limit | int | No | max length of the returned array. Int.MAX_VALUE if it's negative. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -3019,7 +3019,7 @@ Splits this string by RegExp separator and returns an ordered array of substring
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | separator | RegExp | Yes | RegExp to split by. |
-| limit | int | No | max length of the returned array. If it's negative then there is no limit. &lt;br&gt;The value should be an integer. |
+| limit | int | No | max length of the returned array. If it's negative then there is no limit. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -3052,7 +3052,7 @@ Splits this string by separator and returns an ordered array of substrings.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | separator | string \| RegExp | Yes | string or RegExp to split by. |
-| limit | int | No | max length of the returned array. If it's negative then there is no limit. &lt;br&gt;The value should be an integer. |
+| limit | int | No | max length of the returned array. If it's negative then there is no limit. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -3085,7 +3085,7 @@ Checks that the substring of this string that starts from the specified index st
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | prefix | string | Yes | prefix string. |
-| fromIndex | int | No | index to start from (defaults to 0). &lt;br&gt;The value should be an integer. |
+| fromIndex | int | No | index to start from (defaults to 0). <br>The value should be an integer. |
 
 **Return value:**
 
@@ -3169,8 +3169,8 @@ The substr() method returns a portion of the string, starting at the specified i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| begin | int | Yes | is index of the first character to include in the returned substring. &lt;br&gt;The value should be an integer. |
-| length | int | No | number of characters to extract. Defaults to the remaining characters from `begin` to the end of the string if not specified. &lt;br&gt;The value range is all integers. |
+| begin | int | Yes | is index of the first character to include in the returned substring. <br>The value should be an integer. |
+| length | int | No | number of characters to extract. Defaults to the remaining characters from `begin` to the end of the string if not specified. <br>The value range is all integers. |
 
 **Return value:**
 
@@ -3202,7 +3202,7 @@ Selects a substring of this string, starting at a specified index and ending at 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| begin | int | Yes | to start substring. &lt;br&gt;The value should be an integer. |
+| begin | int | Yes | to start substring. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -3234,8 +3234,8 @@ Selects a substring of this string, starting at a specified index and ending at 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| begin | int | Yes | to start substring. &lt;br&gt;The value should be an integer. |
-| end | int | Yes | to end before at. &lt;br&gt;The value range is all integers. |
+| begin | int | Yes | to start substring. <br>The value should be an integer. |
+| end | int | Yes | to end before at. <br>The value range is all integers. |
 
 **Return value:**
 

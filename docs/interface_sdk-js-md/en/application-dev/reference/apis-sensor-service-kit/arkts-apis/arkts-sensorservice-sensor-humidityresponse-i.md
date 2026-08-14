@@ -17,7 +17,7 @@ Describes the humidity sensor data. It extends from [Response](arkts-sensorservi
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
+import { sensor } from 'sensor';
 ```
 
 ## humidity

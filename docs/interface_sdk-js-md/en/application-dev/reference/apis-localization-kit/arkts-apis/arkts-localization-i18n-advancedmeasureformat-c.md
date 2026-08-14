@@ -15,7 +15,7 @@ Provides the number formatting capability, supporting automatic unit conversion 
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'i18n';
 ```
 
 ## constructor

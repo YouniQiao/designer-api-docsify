@@ -15,7 +15,7 @@ Describes the information about an album.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'photoAccessHelper';
 ```
 
 ## albumOrder

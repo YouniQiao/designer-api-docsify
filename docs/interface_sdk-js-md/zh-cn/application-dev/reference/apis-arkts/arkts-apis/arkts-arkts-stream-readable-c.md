@@ -161,7 +161,7 @@ doRead(size: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| size | int | 是 | 读取数据的字节数。取值范围：0 <= size <= Number.MAX_VALUE。 |
+| size | int | 是 | 读取数据的字节数。取值范围：0 &lt;= size &lt;= Number.MAX_VALUE。 |
 
 ## 示例
 
@@ -648,7 +648,7 @@ push(chunk: Uint8Array | string | undefined | null, encoding?: string): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| chunk | Uint8Array \| string \| undefined \| null | 是 | 读取的数据。 &lt;br&gt; API version22开始发生兼容性变更，在API version21及之前的版本其类型为：`Uint8Array \| string \| null`。<br>**起始版本：** 23 |
+| chunk | Uint8Array \| string \| undefined \| null | 是 | 读取的数据。 <br> API version22开始发生兼容性变更，在API version21及之前的版本其类型为：`Uint8Array \| string \| null`。<br>**起始版本：** 23 |
 | encoding | string | 否 | 数据的字符编码类型。默认值是'utf8'，当前版本支持'utf8'、'gb18030'、'gbk'以及'gb2312'。 |
 
 **返回值：**

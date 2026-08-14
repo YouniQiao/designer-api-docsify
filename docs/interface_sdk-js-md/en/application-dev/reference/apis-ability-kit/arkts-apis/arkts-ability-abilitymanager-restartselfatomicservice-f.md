@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { abilityManager } from '@kit.AbilityKit';
+import { abilityManager } from 'abilityManager';
 ```
 
 ## restartSelfAtomicService
@@ -32,7 +32,7 @@ Restarts the current atomic service. > **NOTE：**> > - Currently, atomic servic
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](arkts-ability-context-c.md) | Yes | Context of the ability.&lt;br&gt;Note: Currently, only [UIAbilityContext](arkts-ability-uiabilitycontext-c.md#UIAbilityContext) is supported.&lt;br&gt; |
+| context | [Context](arkts-ability-context-c.md) | Yes | Context of the ability.<br>Note: Currently, only [UIAbilityContext](arkts-ability-uiabilitycontext-c.md#UIAbilityContext) is supported.<br> |
 
 **Error codes:**
 

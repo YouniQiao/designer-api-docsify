@@ -15,7 +15,7 @@ Parameter for query entity.
 ## Modules to Import
 
 ```TypeScript
-import { insightIntent } from '@kit.AbilityKit';
+import { insightIntent } from 'insightIntent';
 ```
 
 ## parameters

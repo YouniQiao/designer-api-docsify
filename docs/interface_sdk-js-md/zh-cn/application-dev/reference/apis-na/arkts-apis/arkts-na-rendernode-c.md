@@ -36,7 +36,7 @@ appendChild(node: RenderNode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [RenderNode](../../apis-arkui/arkts-apis/arkts-arkui-rendernode-c.md) | 是 | 需要添加的RenderNode。 |
+| node | [RenderNode](arkts-na-rendernode-c.md) | 是 | 需要添加的RenderNode。 |
 
 **错误码：**
 
@@ -154,13 +154,13 @@ getChild(index: int): RenderNode | null
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | int | 是 | 需要查询的子节点的序列号。 &lt;br&gt;取值限定为整数。 |
+| index | int | 是 | 需要查询的子节点的序列号。 <br>取值限定为整数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [RenderNode](../../apis-arkui/arkts-apis/arkts-arkui-rendernode-c.md) | Returns a RenderNode. When the required node does not exist, returns null. |
+| [RenderNode](arkts-na-rendernode-c.md) | Returns a RenderNode. When the required node does not exist, returns null. |
 
 ## getFirstChild
 
@@ -186,7 +186,7 @@ getFirstChild(): RenderNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [RenderNode](../../apis-arkui/arkts-apis/arkts-arkui-rendernode-c.md) | Returns a RenderNode, which is first child of the current RenderNode. If current RenderNode does not have child node, returns null. |
+| [RenderNode](arkts-na-rendernode-c.md) | Returns a RenderNode, which is first child of the current RenderNode. If current RenderNode does not have child node, returns null. |
 
 ## getNextSibling
 
@@ -212,7 +212,7 @@ getNextSibling(): RenderNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [RenderNode](../../apis-arkui/arkts-apis/arkts-arkui-rendernode-c.md) | Returns a RenderNode. If current RenderNode does not have next sibling node, returns null. |
+| [RenderNode](arkts-na-rendernode-c.md) | Returns a RenderNode. If current RenderNode does not have next sibling node, returns null. |
 
 ## getPreviousSibling
 
@@ -238,7 +238,7 @@ getPreviousSibling(): RenderNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [RenderNode](../../apis-arkui/arkts-apis/arkts-arkui-rendernode-c.md) | Returns a RenderNode. |
+| [RenderNode](arkts-na-rendernode-c.md) | Returns a RenderNode. |
 
 ## insertChildAfter
 
@@ -264,8 +264,8 @@ insertChildAfter(child: RenderNode, sibling: RenderNode | null): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| child | [RenderNode](../../apis-arkui/arkts-apis/arkts-arkui-rendernode-c.md) | 是 | 需要添加的子节点。 |
-| sibling | [RenderNode](../../apis-arkui/arkts-apis/arkts-arkui-rendernode-c.md) \| null | 是 | 新节点将插入到该节点之后。若该参数设置为空，则新节点将插入到首个子节点之前。 |
+| child | [RenderNode](arkts-na-rendernode-c.md) | 是 | 需要添加的子节点。 |
+| sibling | [RenderNode](arkts-na-rendernode-c.md) \| null | 是 | 新节点将插入到该节点之后。若该参数设置为空，则新节点将插入到首个子节点之前。 |
 
 **错误码：**
 
@@ -343,5 +343,5 @@ removeChild(node: RenderNode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [RenderNode](../../apis-arkui/arkts-apis/arkts-arkui-rendernode-c.md) | 是 | 需要删除的子节点。 |
+| node | [RenderNode](arkts-na-rendernode-c.md) | 是 | 需要删除的子节点。 |
 

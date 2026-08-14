@@ -15,7 +15,9 @@ Defines the breakpoint configuration options for container dimension analysis. S
 ## Modules to Import
 
 ```TypeScript
-import { BreakpointOptions, ContainerReader, ContainerReaderAttribute } from '@kit.ArkUI';
+import { ContainerReader } from 'ContainerReader';
+import { ContainerReaderAttribute } from 'ContainerReaderAttribute';
+import { BreakpointOptions } from 'BreakpointOptions';
 ```
 
 ## height

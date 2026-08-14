@@ -38,7 +38,7 @@ altitude: double
 latitude: double
 ```
 
-纬度。取值范围：[-90, 90]。单位：degree（度）。
+纬度。取值范围：[-90, 90]。单位：°（度）。
 
 **类型：** double
 
@@ -58,7 +58,7 @@ latitude: double
 longitude: double
 ```
 
-经度。取值范围：[-180, 180]。单位：degree（度）。
+经度。取值范围：[-180, 180]。单位：°（度）。
 
 **类型：** double
 

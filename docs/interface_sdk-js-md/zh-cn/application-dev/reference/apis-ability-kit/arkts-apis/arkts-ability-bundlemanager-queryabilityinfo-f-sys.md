@@ -337,7 +337,7 @@ function queryAbilityInfo(wants: Array<Want>, abilityFlags: int, userId?: int): 
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;AbilityInfo&gt;&gt; | Promise对象，返回Array<[AbilityInfo]{ |
+| Promise&lt;Array&lt;AbilityInfo&gt;&gt; | Promise对象，返回Array&lt;[AbilityInfo]{ |
 
 **错误码：**
 

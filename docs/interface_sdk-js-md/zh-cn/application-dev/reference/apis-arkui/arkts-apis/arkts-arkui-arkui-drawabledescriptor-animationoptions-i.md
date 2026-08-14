@@ -118,7 +118,7 @@ stopMode?: AnimationStopMode
 
 设置动图的停止模式。 默认值：AnimationStopMode.FIRST_FRAME，表示动图停止时回到首帧。
 
-**类型：** [AnimationStopMode](arkts-arkui-arkui-drawabledescriptor-animationstopmode-e.md)
+**类型：** [AnimationStopMode](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-animationstopmode-e.md)
 
 **默认值：** AnimationStopMode.FIRST_FRAME
 

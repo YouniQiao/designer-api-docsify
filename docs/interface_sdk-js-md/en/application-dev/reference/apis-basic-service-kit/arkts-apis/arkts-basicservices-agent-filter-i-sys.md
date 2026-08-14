@@ -15,7 +15,7 @@ Defines the filter criteria.
 ## Modules to Import
 
 ```TypeScript
-import { request } from '@kit.BasicServicesKit';
+import { request } from 'request';
 ```
 
 ## bundle

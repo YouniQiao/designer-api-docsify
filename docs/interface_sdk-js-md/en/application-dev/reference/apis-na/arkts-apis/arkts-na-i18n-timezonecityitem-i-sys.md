@@ -58,6 +58,54 @@ City ID, for example, "Shanghai".
 
 **System API:** This is a system API.
 
+## latitude
+
+```TypeScript
+latitude: double
+```
+
+Latitude info of time zone city in decimal degrees (°).
+
+**Type:** double
+
+**Since:** 26.1.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-TimeZoneCityItem-latitude: double--><!--Device-TimeZoneCityItem-latitude: double-End-->
+
+**System capability:** SystemCapability.Global.I18n
+
+**System API:** This is a system API.
+
+## longitude
+
+```TypeScript
+longitude: double
+```
+
+Longitude info of time zone city in decimal degrees (°).
+
+**Type:** double
+
+**Since:** 26.1.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-TimeZoneCityItem-longitude: double--><!--Device-TimeZoneCityItem-longitude: double-End-->
+
+**System capability:** SystemCapability.Global.I18n
+
+**System API:** This is a system API.
+
 ## offset
 
 ```TypeScript

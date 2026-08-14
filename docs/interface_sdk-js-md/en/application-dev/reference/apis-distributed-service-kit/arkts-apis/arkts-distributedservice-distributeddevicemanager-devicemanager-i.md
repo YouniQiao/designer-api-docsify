@@ -15,7 +15,7 @@ Provides APIs to obtain information about trusted devices and local devices. Bef
 ## Modules to Import
 
 ```TypeScript
-import { distributedDeviceManager } from '@kit.DistributedServiceKit';
+import { distributedDeviceManager } from 'distributedDeviceManager';
 ```
 
 ## bindTarget
@@ -43,7 +43,7 @@ Binds a device. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Device ID. The value is a string of 1 to 255 characters. |
-| bindParam | { [key: string]: Object; } | Yes | Authentication parameters. You can determine the key-value pair to be passed in. By default, the following keys are carried: &lt;br&gt;**bindType**: binding type, which is mandatory. &lt;br&gt;The value **1** means PIN authentication. &lt;br&gt;**targetPkgName**: bundle name of the target to bind. &lt;br&gt;**appName**: application that attempts to bind the target. &lt;br&gt;**appOperation**: reason for the application to bind the target. &lt;br&gt;**customDescription**: detailed description of the operation. |
+| bindParam | { [key: string]: Object; } | Yes | Authentication parameters. You can determine the key-value pair to be passed in. By default, the following keys are carried: <br>**bindType**: binding type, which is mandatory. <br>The value **1** means PIN authentication. <br>**targetPkgName**: bundle name of the target to bind. <br>**appName**: application that attempts to bind the target. <br>**appOperation**: reason for the application to bind the target. <br>**customDescription**: detailed description of the operation. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;{deviceId: string;}&gt; | Yes |  |
 
 **Error codes:**
@@ -115,7 +115,7 @@ Binds a device. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | deviceId | string | Yes | Device ID. The value is a string of 1 to 255 characters. |
-| bindParam | Record&lt;string, int \| string&gt; | Yes | Authentication parameters. You can determine the key-value pair to be passed in. By default, the following keys are carried: &lt;br&gt;**bindType**: binding type, which is mandatory. &lt;br&gt;The value **1** means PIN authentication. &lt;br&gt;**targetPkgName**: bundle name of the target to bind. &lt;br&gt;**appName**: application that attempts to bind the target. &lt;br&gt;**appOperation**: reason for the application to bind the target. &lt;br&gt;**customDescription**: detailed description of the operation. |
+| bindParam | Record&lt;string, int \| string&gt; | Yes | Authentication parameters. You can determine the key-value pair to be passed in. By default, the following keys are carried: <br>**bindType**: binding type, which is mandatory. <br>The value **1** means PIN authentication. <br>**targetPkgName**: bundle name of the target to bind. <br>**appName**: application that attempts to bind the target. <br>**appOperation**: reason for the application to bind the target. <br>**customDescription**: detailed description of the operation. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BindTargetResult](arkts-distributedservice-distributeddevicemanager-bindtargetresult-i.md)&gt; | Yes | Callback used to return the authentication result. |
 
 **Error codes:**
@@ -1495,8 +1495,8 @@ Starts to discover devices nearby. The discovery process takes 2 minutes. A maxi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| discoverParam | { [key: string]: Object; } | Yes | Identifier of the device to discover. It specifies the type of the target to discover. &lt;br&gt;**discoverTargetType**: The default discovery target is device. The value is **1**. |
-| filterOptions | { [key: string]: Object; } | No | Options for filtering the devices to discover. The default value is **undefined**, which means to discover offline devices. The options include the following: &lt;br&gt;- **availableStatus(0-1)**: status of the device to discover. The value **0** means the device is untrusted. &lt;br&gt;- **0**: The device is offline. The client needs to call **bindTarget** to bind the device. &lt;br&gt;- **1**: The device is online and can be connected. &lt;br&gt;**discoverDistance(0-100)**: distance of the device to discover, in cm. This parameter is not used in Wi-Fi scenarios. &lt;br&gt;**authenticationStatus(0-1)**: authentication status of the device to discover. &lt;br&gt;- **0**: The device is not authenticated. &lt;br&gt;The value **1** means the device has been authenticated. &lt;br&gt;- **authorizationType(0-2)**: authorization type of the device to discover. &lt;br&gt;- **0**: The device is authenticated by a temporarily agreed session key. &lt;br&gt;- **1**: The device is authenticated by a key of the same account. &lt;br&gt;- **2**: The device is authenticated by a credential key of different accounts. |
+| discoverParam | { [key: string]: Object; } | Yes | Identifier of the device to discover. It specifies the type of the target to discover. <br>**discoverTargetType**: The default discovery target is device. The value is **1**. |
+| filterOptions | { [key: string]: Object; } | No | Options for filtering the devices to discover. The default value is **undefined**, which means to discover offline devices. The options include the following: <br>- **availableStatus(0-1)**: status of the device to discover. The value **0** means the device is untrusted. <br>- **0**: The device is offline. The client needs to call **bindTarget** to bind the device. <br>- **1**: The device is online and can be connected. <br>**discoverDistance(0-100)**: distance of the device to discover, in cm. This parameter is not used in Wi-Fi scenarios. <br>**authenticationStatus(0-1)**: authentication status of the device to discover. <br>- **0**: The device is not authenticated. <br>The value **1** means the device has been authenticated. <br>- **authorizationType(0-2)**: authorization type of the device to discover. <br>- **0**: The device is authenticated by a temporarily agreed session key. <br>- **1**: The device is authenticated by a key of the same account. <br>- **2**: The device is authenticated by a credential key of different accounts. |
 
 **Error codes:**
 
@@ -1564,8 +1564,8 @@ Starts to discover devices nearby. The discovery process takes 2 minutes. A maxi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| discoverParam | Record&lt;string, int \| string&gt; | Yes | Identifier of the device to discover. It specifies the type of the target to discover. &lt;br&gt;**discoverTargetType**: The default discovery target is device. The value is **1**. |
-| filterOptions | Record&lt;string, int \| string&gt; | No | Options for filtering the devices to discover. The default value is **undefined**, which means to discover offline devices. The options include the following: &lt;br&gt;- **availableStatus(0-1)**: status of the device to discover. The value **0** means the device is untrusted. &lt;br&gt;- **0**: The device is offline. The client needs to call **bindTarget** to bind the device. &lt;br&gt;- **1**: The device is online and can be connected. &lt;br&gt;**discoverDistance(0-100)**: distance of the device to discover, in cm. This parameter is not used in Wi-Fi scenarios. &lt;br&gt;**authenticationStatus(0-1)**: authentication status of the device to discover. &lt;br&gt;- **0**: The device is not authenticated. &lt;br&gt;The value **1** means the device has been authenticated. &lt;br&gt;- **authorizationType(0-2)**: authorization type of the device to discover. &lt;br&gt;- **0**: The device is authenticated by a temporarily agreed session key. &lt;br&gt;- **1**: The device is authenticated by a key of the same account. &lt;br&gt;- **2**: The device is authenticated by a credential key of different accounts. |
+| discoverParam | Record&lt;string, int \| string&gt; | Yes | Identifier of the device to discover. It specifies the type of the target to discover. <br>**discoverTargetType**: The default discovery target is device. The value is **1**. |
+| filterOptions | Record&lt;string, int \| string&gt; | No | Options for filtering the devices to discover. The default value is **undefined**, which means to discover offline devices. The options include the following: <br>- **availableStatus(0-1)**: status of the device to discover. The value **0** means the device is untrusted. <br>- **0**: The device is offline. The client needs to call **bindTarget** to bind the device. <br>- **1**: The device is online and can be connected. <br>**discoverDistance(0-100)**: distance of the device to discover, in cm. This parameter is not used in Wi-Fi scenarios. <br>**authenticationStatus(0-1)**: authentication status of the device to discover. <br>- **0**: The device is not authenticated. <br>The value **1** means the device has been authenticated. <br>- **authorizationType(0-2)**: authorization type of the device to discover. <br>- **0**: The device is authenticated by a temporarily agreed session key. <br>- **1**: The device is authenticated by a key of the same account. <br>- **2**: The device is authenticated by a credential key of different accounts. |
 
 **Error codes:**
 

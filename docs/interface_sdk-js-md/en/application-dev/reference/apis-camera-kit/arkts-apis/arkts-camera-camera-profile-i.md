@@ -15,7 +15,7 @@ Describes the camera profile.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'camera';
 ```
 
 ## format

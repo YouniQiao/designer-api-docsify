@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { BackupExtensionContext } from '@kit.CoreFileKit';
+import { BackupExtensionContext } from 'BackupExtensionContext';
 ```
 
 ## Summary

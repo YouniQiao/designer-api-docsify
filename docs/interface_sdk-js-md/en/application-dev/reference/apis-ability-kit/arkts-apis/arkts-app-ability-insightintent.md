@@ -17,7 +17,7 @@ This module provides basic definitions of the [InsightIntent framework](../../..
 ## Modules to Import
 
 ```TypeScript
-import { insightIntent } from '@kit.AbilityKit';
+import { insightIntent } from 'insightIntent';
 ```
 
 ## Summary

@@ -17,7 +17,7 @@ PhotoOutput implements output information used in a photo session. It inherits f
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'camera';
 ```
 
 ## capture
@@ -325,7 +325,7 @@ Obtains the photo rotation angle. - Device' natural orientation: the default ori
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceDegree | int | No | Device rotation angle, measured in degrees, within the range of [0, 360]. &lt;br&gt;If the input value goes beyond this range, the system uses the remainder of the input value divided by 36 0. &lt;br&gt;Since API version 23, the input parameter **deviceDegree** is optional. If no parameter is passed, the system obtains the **deviceDegree** value to calculate the photo rotation angle.<br>**Since:** 23 |
+| deviceDegree | int | No | Device rotation angle, measured in degrees, within the range of [0, 360]. <br>If the input value goes beyond this range, the system uses the remainder of the input value divided by 36 0. <br>Since API version 23, the input parameter **deviceDegree** is optional. If no parameter is passed, the system obtains the **deviceDegree** value to calculate the photo rotation angle.<br>**Since:** 23 |
 
 **Return value:**
 
@@ -1548,7 +1548,7 @@ Sets a video codec type for moving photos.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| codecType | [VideoCodecType](arkts-camera-camera-videocodectype-e.md) | Yes | Video codec type. &lt;br&gt;If the value is not within the enumerated value range, this parameter does not take effect. |
+| codecType | [VideoCodecType](arkts-camera-camera-videocodectype-e.md) | Yes | Video codec type. <br>If the value is not within the enumerated value range, this parameter does not take effect. |
 
 **Error codes:**
 

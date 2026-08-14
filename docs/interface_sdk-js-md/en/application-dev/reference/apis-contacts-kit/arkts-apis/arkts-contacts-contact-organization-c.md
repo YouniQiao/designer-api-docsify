@@ -15,7 +15,7 @@ Defines a contact's organization.
 ## Modules to Import
 
 ```TypeScript
-import { contact } from '@kit.ContactsKit';
+import { contact } from 'contact';
 ```
 
 ## name

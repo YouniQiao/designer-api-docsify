@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'notificationManager';
 ```
 
 ## setPriorityEnabledByBundle
@@ -33,7 +33,7 @@ function setPriorityEnabledByBundle(bundle: BundleOption, enableStatus: Priority
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundle | BundleOption | 是 | 指定应用的包信息。 |
-| enableStatus | [PriorityEnableStatus](arkts-notification-notificationmanager-priorityenablestatus-e-sys.md) | 是 | 应用通知优先级开关状态。&lt;br&gt; - DISABLE：不允许设置为优先通知。&lt;br&gt; - ENABLE_BY_INTELLIGENT：允 许经智能识别、用户关键词匹配、应用规则匹配等方式设置为优先通知。&lt;br&gt; - ENABLE：应用通知均设置为优先通知。 |
+| enableStatus | [PriorityEnableStatus](arkts-notification-notificationmanager-priorityenablestatus-e-sys.md) | 是 | 应用通知优先级开关状态。<br> - DISABLE：不允许设置为优先通知。<br> - ENABLE_BY_INTELLIGENT：允 许经智能识别、用户关键词匹配、应用规则匹配等方式设置为优先通知。<br> - ENABLE：应用通知均设置为优先通知。 |
 
 **返回值：**
 

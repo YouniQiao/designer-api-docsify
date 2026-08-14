@@ -18,7 +18,7 @@
 direction?: ScrollBarDirection
 ```
 
-滚动条的方向，控制可滚动组件对应方向的滚动。&lt;br/&gt;默认值：ScrollBarDirection.Vertical
+滚动条的方向，控制可滚动组件对应方向的滚动。<br/>默认值：ScrollBarDirection.Vertical
 
 **类型：** [ScrollBarDirection](arkts-arkui-scrollbardirection-e.md)
 
@@ -62,7 +62,7 @@ scroller: Scroller
 state?: BarState
 ```
 
-滚动条状态。&lt;br/&gt;默认值：BarState.Auto
+滚动条状态。<br/>默认值：BarState.Auto
 
 **类型：** BarState
 

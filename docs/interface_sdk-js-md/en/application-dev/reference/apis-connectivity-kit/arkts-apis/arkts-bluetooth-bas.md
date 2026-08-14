@@ -19,7 +19,7 @@ Provide methods to access BAS(Battery Service)-related capabilities.
 ## Modules to Import
 
 ```TypeScript
-import { bas } from '@kit.ConnectivityKit';
+import { bas } from 'bas';
 ```
 
 ## Summary

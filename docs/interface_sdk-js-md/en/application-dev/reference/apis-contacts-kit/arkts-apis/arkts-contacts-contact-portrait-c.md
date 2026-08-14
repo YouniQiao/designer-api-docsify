@@ -15,7 +15,7 @@ Defines a contact's portrait. > **NOTE：**> > Since API version 22, contact por
 ## Modules to Import
 
 ```TypeScript
-import { contact } from '@kit.ContactsKit';
+import { contact } from 'contact';
 ```
 
 ## photo

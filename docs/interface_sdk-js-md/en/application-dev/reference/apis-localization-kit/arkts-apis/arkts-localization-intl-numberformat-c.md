@@ -15,7 +15,7 @@ Provides the API for formatting number strings.
 ## Modules to Import
 
 ```TypeScript
-import { intl } from '@kit.LocalizationKit';
+import { intl } from 'intl';
 ```
 
 ## constructor

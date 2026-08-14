@@ -17,7 +17,7 @@ The interface is used to notify listeners of changes in shared interface status.
 ## Modules to Import
 
 ```TypeScript
-import { sharing } from '@kit.NetworkKit';
+import { sharing } from 'sharing';
 ```
 
 ## iface

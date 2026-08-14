@@ -17,7 +17,7 @@ Describes the parameters for creating a system window.
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'window';
 ```
 
 ## windowType

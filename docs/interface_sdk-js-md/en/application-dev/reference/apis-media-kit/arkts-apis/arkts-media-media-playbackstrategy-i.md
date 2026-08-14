@@ -15,7 +15,7 @@ Provides preferred playback settings for player.
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'media';
 ```
 
 ## enableSuperResolution
@@ -264,7 +264,7 @@ Show first frame on prepare.
 thresholdForAutoQuickPlay?: double
 ```
 
-set max buffering threshold for liveStreaming or avplayer while change the speed, in s. It is recommended that the value be 2 seconds greater than the starting waterline.
+set max buffering threshold for liveStreaming or avplayer while change the speed. It is recommended that the value be 2 seconds greater than the starting waterline.
 
 **Type:** double
 

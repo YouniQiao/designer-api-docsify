@@ -46,7 +46,7 @@ Collapses the list items in the EXPANDED state and sets callback events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
 
 ## getItemRectInGroup
@@ -82,13 +82,13 @@ Obtains the size of a list item in a list item group and its position relative t
 
 | Type | Description |
 | --- | --- |
-| RectResult | Size of the list item in the list item group and its position relative to the list. &lt;br&gt;Unit: vp |
+| RectResult | Size of the list item in the list item group and its position relative to the list. <br>Unit: vp |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
 
 ## getVisibleListContentInfo
@@ -130,7 +130,7 @@ Obtains the index information of the child component at the specified coordinate
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
 
 ## scrollToItemInGroup
@@ -159,15 +159,15 @@ Scrolls to the specified list item in the specified list item group.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index of the target list item group in the current container.&lt;br&gt;**NOTE：**&lt;br&gt;If the value set is a negative value or greater than the maximum index of the items in the container, the value is deemed abnormal, and no scrolling will be performed. |
-| indexInGroup | number | Yes | Index of the target list item in the list item group specified by **index**.&lt;br&gt; **NOTE：**&lt;br&gt;If the value set is a negative value or greater than the maximum index of the items in the list item group, the value is deemed abnormal, and no scrolling will be performed. |
-| smooth | boolean | No | Whether the scroll animation is enabled. The options are **true** (enabled) and **false** (disabled).&lt;br&gt;Default value: **false**&lt;br&gt;**NOTE：**&lt;br&gt;When **smooth** is set to **true**, all passed items are loaded and counted in layout calculation. This may result in performance issues if a large number of items are involved. |
-| align | ScrollAlign | No | How the list item to scroll to is aligned with the container.&lt;br&gt;Default value: **ScrollAlign.START |
+| index | number | Yes | Index of the target list item group in the current container.<br>**NOTE：**<br>If the value set is a negative value or greater than the maximum index of the items in the container, the value is deemed abnormal, and no scrolling will be performed. |
+| indexInGroup | number | Yes | Index of the target list item in the list item group specified by **index**.<br> **NOTE：**<br>If the value set is a negative value or greater than the maximum index of the items in the list item group, the value is deemed abnormal, and no scrolling will be performed. |
+| smooth | boolean | No | Whether the scroll animation is enabled. The options are **true** (enabled) and **false** (disabled).<br>Default value: **false**<br>**NOTE：**<br>When **smooth** is set to **true**, all passed items are loaded and counted in layout calculation. This may result in performance issues if a large number of items are involved. |
+| align | ScrollAlign | No | How the list item to scroll to is aligned with the container.<br>Default value: **ScrollAlign.START |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
 

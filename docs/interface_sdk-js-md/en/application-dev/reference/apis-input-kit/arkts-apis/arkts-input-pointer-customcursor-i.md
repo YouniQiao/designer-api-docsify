@@ -15,7 +15,7 @@ Defines custom cursor resources.
 ## Modules to Import
 
 ```TypeScript
-import { pointer } from '@kit.InputKit';
+import { pointer } from 'pointer';
 ```
 
 ## focusX

@@ -18,7 +18,7 @@ Defines the shard transition function params.
 curve?: Curve | string | ICurve
 ```
 
-Animation curve.&lt;br&gt;You are advised to specify the curve using the **Curve** or ** ICurve** type.&lt;br&gt;For the string type, this parameter indicates an animation interpolation curve. For available values, see the **curve** parameter in AnimateParam. &lt;br&gt;Default value: **Curve.Linear**.
+Animation curve.<br>You are advised to specify the curve using the **Curve** or ** ICurve** type.<br>For the string type, this parameter indicates an animation interpolation curve. For available values, see the **curve** parameter in AnimateParam. <br>Default value: **Curve.Linear**.
 
 **Type:** [Curve](../../apis-arkui/arkts-apis/arkts-arkui-curve-e.md) \| string \| [ICurve](arkts-na-icurve-t.md)
 
@@ -66,7 +66,7 @@ Animation delay time, in ms.
 duration?: int
 ```
 
-Animation duration. &lt;br&gt;Default value: **1000**. &lt;br&gt;Unit: ms. &lt;br&gt;Value range: [0, +∞).
+Animation duration. <br>Default value: **1000**. <br>Unit: ms. <br>Value range: [0, +∞).
 
 **Type:** int
 

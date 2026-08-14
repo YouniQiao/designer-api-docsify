@@ -15,7 +15,7 @@ A class that provides VM maintenance and test capabilities for developers.
 ## Modules to Import
 
 ```TypeScript
-import { util } from '@kit.ArkTS';
+import { util } from 'util';
 ```
 
 ## enableLocalHandleDetection

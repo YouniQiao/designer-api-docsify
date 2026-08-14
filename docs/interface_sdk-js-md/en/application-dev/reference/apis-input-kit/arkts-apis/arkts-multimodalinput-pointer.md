@@ -15,7 +15,7 @@ The **pointer** module provides APIs related to pointer attribute management, su
 ## Modules to Import
 
 ```TypeScript
-import { pointer } from '@kit.InputKit';
+import { pointer } from 'pointer';
 ```
 
 ## Summary

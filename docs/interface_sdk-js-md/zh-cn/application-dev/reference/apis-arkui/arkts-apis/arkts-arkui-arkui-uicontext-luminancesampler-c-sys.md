@@ -68,7 +68,7 @@ onBackgroundLuminanceChange(samplingCallback: Callback<number>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| samplingCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | 是 | 监听回调。触发同时返回当前背景亮度。&lt;br/&gt;**说明：**监听回调里不能调用 offBackgroundLuminanceChange。 |
+| samplingCallback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | 是 | 监听回调。触发同时返回当前背景亮度。<br/>**说明：**监听回调里不能调用 offBackgroundLuminanceChange。 |
 
 ## setBackgroundLuminanceSamplingConfigs
 
@@ -102,5 +102,5 @@ setBackgroundLuminanceSamplingConfigs(configs: BackgroundLuminanceSamplingConfig
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. &lt;br&gt; 1. Incorrect parameter values. &lt;br&gt; 2. Incorrect parameters types. |
+| [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal error. <br> 1. Incorrect parameter values. <br> 2. Incorrect parameters types. |
 

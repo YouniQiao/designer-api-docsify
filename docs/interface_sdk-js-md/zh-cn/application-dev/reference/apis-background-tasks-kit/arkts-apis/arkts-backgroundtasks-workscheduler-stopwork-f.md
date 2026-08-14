@@ -25,7 +25,7 @@ function stopWork(work: WorkInfo, needCancel?: boolean): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | work | [WorkInfo](arkts-backgroundtasks-workscheduler-workinfo-i.md) | 是 | 要停止或移除的延迟任务。 |
-| needCancel | boolean | 否 | 是否需要移除任务。&lt;br&gt;true表示停止并移除，false表示只停止不移除。默认为false。 |
+| needCancel | boolean | 否 | 是否需要移除任务。<br>true表示停止并移除，false表示只停止不移除。默认为false。 |
 
 **错误码：**
 

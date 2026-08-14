@@ -1,6 +1,6 @@
 # @ohos.app.ability.autoStartupManager
 
-autoStartupManager模块提供获取自身应用的开机自启状态。
+aautoStartupManager模块提供获取自身应用的开机自启状态以及检查设备是否支持开机自启动的能力。
 
 **起始版本：** 23
 

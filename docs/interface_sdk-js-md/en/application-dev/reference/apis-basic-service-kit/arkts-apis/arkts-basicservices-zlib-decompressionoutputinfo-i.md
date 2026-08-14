@@ -15,7 +15,7 @@ Uncompress2 return value information.
 ## Modules to Import
 
 ```TypeScript
-import { zlib } from '@kit.BasicServicesKit';
+import { zlib } from 'zlib';
 ```
 
 ## destLength

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'media';
 ```
 
 ## getScreenCaptureMonitor
@@ -30,7 +30,7 @@ Obtains a **ScreenCaptureMonitor** instance. This API uses a promise to return t
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[ScreenCaptureMonitor](arkts-media-media-screencapturemonitor-i-sys.md)&gt; | Promise used to return the result. The instance can be used to query and monitor the status of the system screen recorder. &lt;br&gt;If the operation is successful, a **ScreenCaptureMonitor** instance is returned; otherwise, **null** is returned. |
+| Promise&lt;[ScreenCaptureMonitor](arkts-media-media-screencapturemonitor-i-sys.md)&gt; | Promise used to return the result. The instance can be used to query and monitor the status of the system screen recorder. <br>If the operation is successful, a **ScreenCaptureMonitor** instance is returned; otherwise, **null** is returned. |
 
 **Error codes:**
 
@@ -75,7 +75,7 @@ Obtains a **ScreenCaptureMonitor** instance. This API uses a promise to return t
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[ScreenCaptureMonitor](arkts-media-media-screencapturemonitor-i-sys.md) \| undefined&gt; | Promise used to return the result. The instance can be used to query and monitor the status of the system screen recorder. &lt;br&gt;If the operation is successful, a **ScreenCaptureMonitor** instance is returned; otherwise, **undefined** is returned. |
+| Promise&lt;[ScreenCaptureMonitor](arkts-media-media-screencapturemonitor-i-sys.md) \| undefined&gt; | Promise used to return the result. The instance can be used to query and monitor the status of the system screen recorder. <br>If the operation is successful, a **ScreenCaptureMonitor** instance is returned; otherwise, **undefined** is returned. |
 
 **Error codes:**
 

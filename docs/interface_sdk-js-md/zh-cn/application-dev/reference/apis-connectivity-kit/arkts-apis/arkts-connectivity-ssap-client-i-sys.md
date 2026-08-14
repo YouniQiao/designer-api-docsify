@@ -239,7 +239,7 @@ writeDescriptor(descriptor: PropertyDescriptor): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| descriptor | [PropertyDescriptor](arkts-connectivity-ssap-propertydescriptor-i.md) | 是 | 指示要写入的描述符。 &lt;br&gt;描述符类型不应为CLIENT_PROPERTY_CONFIG。 |
+| descriptor | [PropertyDescriptor](arkts-connectivity-ssap-propertydescriptor-i.md) | 是 | 指示要写入的描述符。 <br>描述符类型不应为CLIENT_PROPERTY_CONFIG。 |
 
 **返回值：**
 

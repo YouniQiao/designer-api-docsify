@@ -15,7 +15,7 @@ Defines a struct for the device-cloud sync statistics of a database table.
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from '@kit.ArkData';
+import { relationalStore } from 'relationalStore';
 ```
 
 ## failed

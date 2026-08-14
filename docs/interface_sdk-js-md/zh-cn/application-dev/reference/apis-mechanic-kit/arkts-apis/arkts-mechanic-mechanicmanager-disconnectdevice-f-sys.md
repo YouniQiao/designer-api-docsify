@@ -28,7 +28,7 @@ function disconnectDevice(mechId: int): Promise<Result>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mechId | int | 是 | 具身设备ID。 &lt;br&gt;取值限定为整数。 |
+| mechId | int | 是 | 具身设备ID。 <br>取值限定为整数。 |
 
 **返回值：**
 

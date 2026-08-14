@@ -50,7 +50,7 @@ function setHomeWallpaper(admin: Want, fd: number):  Promise<void>
 import { deviceSettings } from '@kit.MDMKit';
 import { common, Want } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
-import { fileIo as fs }  from '@kit.CoreFileKit';
+import { fileIo }  from '@kit.CoreFileKit';
 
 let wantTemp: Want = {
   // 请根据实际情况修改
@@ -63,13 +63,13 @@ const context = this.getUIContext().getHostContext() as common.UIAbilityContext;
 // 参数根据实际情况进行替换
 let filename: string = "homewallpaper.jpg";
 let filePath: string = context.filesDir + '/' + filename;
-let fd: number = fs.openSync(filePath, fs.OpenMode.READ_WRITE).fd;
+let fd: number = fileIo.openSync(filePath, fileIo.OpenMode.READ_WRITE).fd;
 deviceSettings.setHomeWallpaper(wantTemp, fd).then(() => {
   console.info('Succeeded in setting home wallpaper');
 }).catch((err: BusinessError) => {
   console.error(`Failed to set home wallpaper. Code: ${err.code}, message: ${err.message}`);
 }).finally(() => {
-  fs.closeSync(fd);
+  fileIo.closeSync(fd);
 });
 ```
 

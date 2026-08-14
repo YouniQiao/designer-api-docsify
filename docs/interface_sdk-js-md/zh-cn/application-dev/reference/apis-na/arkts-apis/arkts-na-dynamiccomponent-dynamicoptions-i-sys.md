@@ -20,7 +20,7 @@
 allowCrossProcessNesting?: boolean
 ```
 
-是否允许DynamicComponent跨进程嵌套UIExtensionComponent。&lt;br/&gt;true：允许跨进程嵌套；false：不允许跨进程嵌套。&lt;br/&gt;默认值：false
+是否允许DynamicComponent跨进程嵌套UIExtensionComponent。<br/>true：允许跨进程嵌套；false：不允许跨进程嵌套。<br/>默认值：false
 
 **类型：** boolean
 
@@ -70,7 +70,7 @@ allowOccupied?: boolean
 backgroundTransparent?: boolean
 ```
 
-是否启用组件背景透明。&lt;br/&gt;true：启用背景透明；false：不启用背景透明。&lt;br/&gt;默认值：false
+是否启用组件背景透明。<br/>true：启用背景透明；false：不启用背景透明。<br/>默认值：false
 
 **类型：** boolean
 
@@ -96,7 +96,7 @@ backgroundTransparent?: boolean
 entryPoint: string
 ```
 
-要加载的Abc页面入口。&lt;br/&gt;取值格式：'bundleName/moduleName/pagePath'，例如'com.example.myapplication/entry/ets/pages/DynamicPage'。
+要加载的Abc页面入口。<br/>取值格式：'bundleName/moduleName/pagePath'，例如'com.example.myapplication/entry/ets/pages/DynamicPage'。
 
 **类型：** string
 
@@ -120,7 +120,7 @@ entryPoint: string
 worker: EAWorker | undefined
 ```
 
-运行Abc的Worker。&lt;br/&gt;ArkTS-Sta模式下，可传入undefined，表示回拉起一个空的DynamicComponent。
+运行Abc的Worker。<br/>ArkTS-Sta模式下，可传入undefined，表示回拉起一个空的DynamicComponent。
 
 **类型：** EAWorker \| undefined
 

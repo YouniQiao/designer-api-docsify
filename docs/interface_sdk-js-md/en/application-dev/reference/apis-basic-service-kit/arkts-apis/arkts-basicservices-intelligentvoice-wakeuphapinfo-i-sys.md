@@ -17,7 +17,7 @@ Describes wakeup hap information.
 ## Modules to Import
 
 ```TypeScript
-import { intelligentVoice } from '@kit.BasicServicesKit';
+import { intelligentVoice } from 'intelligentVoice';
 ```
 
 ## abilityName

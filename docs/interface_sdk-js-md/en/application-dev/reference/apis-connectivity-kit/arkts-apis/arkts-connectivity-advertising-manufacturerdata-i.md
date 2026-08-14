@@ -15,7 +15,7 @@ Describes the manufacturer data.
 ## Modules to Import
 
 ```TypeScript
-import { advertising } from '@kit.ConnectivityKit';
+import { advertising } from 'advertising';
 ```
 
 ## manufacturerData

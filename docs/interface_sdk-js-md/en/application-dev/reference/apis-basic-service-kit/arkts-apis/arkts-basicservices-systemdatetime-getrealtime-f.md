@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemDateTime } from '@kit.BasicServicesKit';
+import { systemDateTime } from 'systemDateTime';
 ```
 
 ## getRealTime
@@ -30,14 +30,14 @@ Obtains the time elapsed since system startup, including the deep sleep time. Th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isNano | boolean | Yes | Whether the time to return is in nanoseconds.&lt;br&gt;- **true**: The result is in nanoseconds.&lt;br&gt;- **false**: The result is in milliseconds. |
+| isNano | boolean | Yes | Whether the time to return is in nanoseconds.<br>- **true**: The result is in nanoseconds.<br>- **false**: The result is in milliseconds. |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the time. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Incorrect parameter types. |
 
 ## Examples
 
@@ -89,7 +89,7 @@ Obtains the time elapsed since system startup, including the deep sleep time. Th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Incorrect parameter types. |
 
 ## Examples
 
@@ -135,7 +135,7 @@ Obtains the time elapsed since system startup, including the deep sleep time. Th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isNano | boolean | No | Whether the time to return is in nanoseconds. The default value is **false**.&lt;br&gt;- **true**: The result is in nanoseconds.&lt;br&gt;- **false**: The result is in milliseconds. |
+| isNano | boolean | No | Whether the time to return is in nanoseconds. The default value is **false**.<br>- **true**: The result is in nanoseconds.<br>- **false**: The result is in milliseconds. |
 
 **Return value:**
 
@@ -147,7 +147,7 @@ Obtains the time elapsed since system startup, including the deep sleep time. Th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Incorrect parameter types. |
 
 ## Examples
 

@@ -64,7 +64,7 @@ Get LayoutManager.
 setStyledString(value: StyledString): void
 ```
 
-Update the styles of StyledString by setStyledString. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;The child class MutableStyledString of StyledString can also serve as the argument. &lt;/p&gt;
+Update the styles of StyledString by setStyledString. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>The child class MutableStyledString of StyledString can also serve as the argument. &lt;/p&gt;
 
 **Since:** 23
 
@@ -90,7 +90,7 @@ Update the styles of StyledString by setStyledString. &lt;p&gt;&lt;strong&gt;NOT
 setTextSelection(selectionStart: int | undefined, selectionEnd: int | undefined, options?: SelectionOptions): void
 ```
 
-Text selection is achieved by specifying the start and end positions of the text. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;If selectionStart or selectionEnd is set to undefined, the value 0 will be used. &lt;br&gt;If a 2-in-1 device is used, calling setTextSelection does not display the context menu even when options is set to MenuPolicy.SHOW. &lt;br&gt;If the selected text contains an emoji, the emoji is selected when its start position is within the text selection range. &lt;/p&gt;
+Text selection is achieved by specifying the start and end positions of the text. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>If selectionStart or selectionEnd is set to undefined, the value 0 will be used. <br>If a 2-in-1 device is used, calling setTextSelection does not display the context menu even when options is set to MenuPolicy.SHOW. <br>If the selected text contains an emoji, the emoji is selected when its start position is within the text selection range. &lt;/p&gt;
 
 **Since:** 23
 

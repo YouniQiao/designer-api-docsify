@@ -22,7 +22,7 @@ function check(): string
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 触发GC后未被回收的泄漏对象列表。 &lt;br&gt;**说明：**check成功，返回JSON格式的泄漏对象列表；check失败，返回空字符串。 |
+| string | 触发GC后未被回收的泄漏对象列表。 <br>**说明：**check成功，返回JSON格式的泄漏对象列表；check失败，返回空字符串。 |
 
 ## 示例
 

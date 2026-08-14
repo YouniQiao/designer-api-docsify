@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { display } from '@kit.ArkUI';
+import { display } from 'display';
 ```
 
 ## convertRelativeToGlobalCoordinate

@@ -15,7 +15,7 @@ Provides information about an accessibility application.
 ## Modules to Import
 
 ```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
+import { accessibility } from 'accessibility';
 ```
 
 ## abilityTypes
@@ -168,7 +168,7 @@ Ability ID.
 readonly label: string
 ```
 
-Name of the application in the extended service list.
+Name of the accessibility app in the extended service list.
 
 **Type:** string
 

@@ -15,7 +15,10 @@ Defines a common callback that carries an error parameter and asynchronous retur
 ## Modules to Import
 
 ```TypeScript
-import { Callback, BusinessError, ErrorCallback, AsyncCallback } from '@kit.BasicServicesKit';
+import { AsyncCallback } from 'AsyncCallback';
+import { BusinessError } from 'BusinessError';
+import { Callback } from 'Callback';
+import { ErrorCallback } from 'ErrorCallback';
 ```
 
 ## constructor

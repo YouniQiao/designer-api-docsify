@@ -18,7 +18,7 @@ Provides detailed information about the first meaningful paint.
 firstMeaningfulPaintTime?: long
 ```
 
-Paint time of first meaningful content. &lt;br&gt;Unit:microseconds.
+Paint time of first meaningful content. <br>Unit:microseconds.
 
 **类型：** long
 
@@ -38,7 +38,7 @@ Paint time of first meaningful content. &lt;br&gt;Unit:microseconds.
 navigationStartTime?: long
 ```
 
-Start time of navigation. &lt;br&gt;Unit:microseconds.
+Start time of navigation. <br>Unit:microseconds.
 
 **类型：** long
 

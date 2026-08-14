@@ -15,7 +15,7 @@ Represents the private key information.
 ## Modules to Import
 
 ```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
+import { cert } from 'cert';
 ```
 
 ## key

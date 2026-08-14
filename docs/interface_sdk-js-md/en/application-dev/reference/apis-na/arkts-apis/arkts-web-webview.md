@@ -27,7 +27,7 @@ This module provides the capability to manage web modules.
 | [AdsBlockManager](arkts-na-webview-adsblockmanager-c.md) | This class is used to set adblock config. |
 | [BackForwardCacheOptions](arkts-na-webview-backforwardcacheoptions-c.md) | This class is used to set back forward cache options. |
 | [BackForwardCacheSupportedFeatures](arkts-na-webview-backforwardcachesupportedfeatures-c.md) | This class is used to enable back forward cache supported features. |
-| [GeolocationPermissions](arkts-na-webview-geolocationpermissions-c.md) | Implements a GeolocationPermissions object. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; You must load the Web component before calling the APIs in GeolocationPermissions. &lt;/p&gt; |
+| [GeolocationPermissions](arkts-na-webview-geolocationpermissions-c.md) | Implements a GeolocationPermissions object. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<br> You must load the Web component before calling the APIs in GeolocationPermissions. &lt;/p&gt; |
 | [JsMessageExt](arkts-na-webview-jsmessageext-c.md) | The message for indicating the of result of JavaScript code execution. |
 | [MediaSourceInfo](arkts-na-webview-mediasourceinfo-c.md) | Implements a **MediaSourceInfo** object to provide the information about the media source. > **NOTE：**> > - The sample effect is subject to the actual device. |
 | [NativeMediaPlayerSurfaceInfo](arkts-na-webview-nativemediaplayersurfaceinfo-c.md) | Implements a **NativeMediaPlayerSurfaceInfo** object to provide the surface information used for same-layer rendering [when the application takes over the media playback of the web page] (../../../reference/apis-arkweb/arkts-basic-components-web-attributes.md#enablenativemediaplayer12). > **NOTE：**> > - The sample effect is subject to the actual device. |
@@ -76,7 +76,7 @@ This module provides the capability to manage web modules.
 | [SnapshotResult](arkts-na-webview-snapshotresult-i.md) | Represents a full drawing result. |
 | [WebCustomScheme](arkts-na-webview-webcustomscheme-i.md) | Defines the configuration of web custom scheme, related to [customizeSchemes](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#customizeSchemes) method. |
 | [WebHeader](arkts-na-webview-webheader-i.md) | Defines the Web's request/response header. |
-| [WebHttpCookie](arkts-na-webview-webhttpcookie-i.md) | Defines the Web's HTTPCookie. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; The maximum length allowed for each attribute value in a cookie string is 1024. &lt;/p&gt; |
+| [WebHttpCookie](arkts-na-webview-webhttpcookie-i.md) | Defines the Web's HTTPCookie. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<br> The maximum length allowed for each attribute value in a cookie string is 1024. &lt;/p&gt; |
 | [WebMessagePort](arkts-na-webview-webmessageport-i.md) | Define html web message port. |
 | [WebStorageOrigin](arkts-na-webview-webstorageorigin-i.md) | Provides usage information of the Web SQL Database. |
 

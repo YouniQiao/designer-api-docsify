@@ -15,7 +15,7 @@ Provides the screen capture capability.
 ## Modules to Import
 
 ```TypeScript
-import { screenshot } from '@kit.ArkUI';
+import { screenshot } from 'screenshot';
 ```
 
 ## Summary

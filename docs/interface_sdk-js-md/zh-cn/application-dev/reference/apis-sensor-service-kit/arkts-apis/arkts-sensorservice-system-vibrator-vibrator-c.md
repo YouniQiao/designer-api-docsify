@@ -42,5 +42,5 @@ static vibrate(options?: VibrateOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [VibrateOptions](arkts-sensorservice-system-vibrator-vibrateoptions-i.md) | 否 | 振动配置参数，用于指定振动模式及回调函数。不传时使用默认配置（mode默认为'long'），此时仅触发success和complete回调（无fail回调场景下）。 |
+| options | [VibrateOptions](arkts-sensorservice-system-vibrator-vibrateoptions-i.md) | 否 | 振动配置参数，用于指定振动模式及回调函数。不传时使用默认配置（mode默认为'long'），此时仅触发success和complete回调（说明调用后不会触发fail回调）。 |
 

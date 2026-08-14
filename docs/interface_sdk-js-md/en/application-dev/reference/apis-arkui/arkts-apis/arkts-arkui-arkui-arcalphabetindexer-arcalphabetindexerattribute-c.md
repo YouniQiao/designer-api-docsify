@@ -17,7 +17,8 @@ In addition to the universal attributes, the following attributes are supported.
 ## Modules to Import
 
 ```TypeScript
-import { ArcAlphabetIndexerAttribute, ArcAlphabetIndexer } from '@kit.ArkUI';
+import { ArcAlphabetIndexer } from 'ArcAlphabetIndexer';
+import { ArcAlphabetIndexerAttribute } from 'ArcAlphabetIndexerAttribute';
 ```
 
 ## autoCollapse
@@ -44,7 +45,7 @@ Sets whether to enable the adaptive collapse behavior for the indexer.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | Optional&lt;boolean&gt; | Yes | Whether to enable the adaptive collapse behavior for the indexer.&lt;br&gt;Default value: **true**.&lt;br&gt;**true**: Enable the adaptive collapse behavior.&lt;br&gt;**false**: Disable the adaptive collapse behavior. |
+| enable | Optional&lt;boolean&gt; | Yes | Whether to enable the adaptive collapse behavior for the indexer.<br>Default value: **true**.<br>**true**: Enable the adaptive collapse behavior.<br>**false**: Disable the adaptive collapse behavior. |
 
 **Return value:**
 
@@ -76,7 +77,7 @@ Sets the text color of the index items in the normal state.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | Optional&lt;ColorMetrics&gt; | Yes | Text color.&lt;br&gt;Default value: **0xFFFFFF**, displayed as white |
+| color | Optional&lt;ColorMetrics&gt; | Yes | Text color.<br>Default value: **0xFFFFFF**, displayed as white |
 
 **Return value:**
 
@@ -108,7 +109,7 @@ Sets the default font style of the index items.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| font | Optional&lt;Font&gt; | Yes | Default font style of the index items.&lt;br&gt;Default value:&lt;br&gt;{&lt;br&gt;size:'13.0fp',&lt;br &gt; style:FontStyle.Normal,&lt;br&gt; weight:500,&lt;br&gt; family:'HarmonyOS Sans'&lt;br&gt;} |
+| font | Optional&lt;Font&gt; | Yes | Default font style of the index items.<br>Default value:<br>{<br>size:'13.0fp',&lt;br &gt; style:FontStyle.Normal,<br> weight:500,<br> family:'HarmonyOS Sans'<br>} |
 
 **Return value:**
 
@@ -140,7 +141,7 @@ Sets the size of the index item area.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | Optional&lt;LengthMetrics&gt; | Yes | Size of the index item area. For the circular item area, this represents the diameter of the circle. Percentage values are not supported.&lt;br&gt;Default value: **24.0**&lt;br&gt;Unit: vp |
+| size | Optional&lt;LengthMetrics&gt; | Yes | Size of the index item area. For the circular item area, this represents the diameter of the circle. Percentage values are not supported.<br>Default value: **24.0**<br>Unit: vp |
 
 **Return value:**
 
@@ -204,7 +205,7 @@ Sets the background color of the pop-up window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | Optional&lt;ColorMetrics&gt; | Yes | Background color of the pop-up window.&lt;br&gt;Default value: **0xD8404040**, displayed as dark gray with slight transparency |
+| color | Optional&lt;ColorMetrics&gt; | Yes | Background color of the pop-up window.<br>Default value: **0xD8404040**, displayed as dark gray with slight transparency |
 
 **Return value:**
 
@@ -268,7 +269,7 @@ Sets the text color for the pop-up window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | Optional&lt;ColorMetrics&gt; | Yes | Text color of the pop-up window.&lt;br&gt;Default value: **0xFFFFFF**, displayed as white |
+| color | Optional&lt;ColorMetrics&gt; | Yes | Text color of the pop-up window.<br>Default value: **0xFFFFFF**, displayed as white |
 
 **Return value:**
 
@@ -300,7 +301,7 @@ Sets the font style of the pop-up window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| font | Optional&lt;Font&gt; | Yes | Font style of the pop-up window.&lt;br&gt;Default value:&lt;br&gt;{&lt;br&gt;size:'19.0fp',&lt;br&gt; style:FontStyle.Normal,&lt;br&gt; weight:500,&lt;br&gt; family:'HarmonyOS Sans'&lt;br&gt;} |
+| font | Optional&lt;Font&gt; | Yes | Font style of the pop-up window.<br>Default value:<br>{<br>size:'19.0fp',<br> style:FontStyle.Normal,<br> weight:500,<br> family:'HarmonyOS Sans'<br>} |
 
 **Return value:**
 
@@ -332,7 +333,7 @@ Sets the index of the selected item.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | Optional&lt;number&gt; | Yes | Index of the selected item.&lt;br&gt;Default value: **0**&lt;br&gt;This parameter supports two-way binding through [!!](../../../ui/state-management/arkts-new-binding.md). |
+| index | Optional&lt;number&gt; | Yes | Index of the selected item.<br>Default value: **0**<br>This parameter supports two-way binding through [!!](../../../ui/state-management/arkts-new-binding.md). |
 
 **Return value:**
 
@@ -364,7 +365,7 @@ Sets the background color of the selected item.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | Optional&lt;ColorMetrics&gt; | Yes | Background color of the selected item.&lt;br&gt;Default value: **0x1F71FF**, displayed as dark blue |
+| color | Optional&lt;ColorMetrics&gt; | Yes | Background color of the selected item.<br>Default value: **0x1F71FF**, displayed as dark blue |
 
 **Return value:**
 
@@ -396,7 +397,7 @@ Sets the text color of the selected item.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | Optional&lt;ColorMetrics&gt; | Yes | Text color of the selected item.&lt;br&gt;Default value: **0xFFFFFF**, displayed as white |
+| color | Optional&lt;ColorMetrics&gt; | Yes | Text color of the selected item.<br>Default value: **0xFFFFFF**, displayed as white |
 
 **Return value:**
 
@@ -428,7 +429,7 @@ Sets the font style of the selected item, including size, weight, style, and fon
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| font | Optional&lt;Font&gt; | Yes | Font style of the selected item.&lt;br&gt;Default value: {&lt;br&gt;size:'13.0fp',&lt;br&gt; style: FontStyle.Normal,&lt;br&gt; weight:500,&lt;br&gt; family:'HarmonyOS Sans'&lt;br&gt;} |
+| font | Optional&lt;Font&gt; | Yes | Font style of the selected item.<br>Default value: {<br>size:'13.0fp',<br> style: FontStyle.Normal,<br> weight:500,<br> family:'HarmonyOS Sans'<br>} |
 
 **Return value:**
 
@@ -460,7 +461,7 @@ Sets whether to display the pop-up window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | Optional&lt;boolean&gt; | Yes | Whether to display the pop-up window.&lt;br&gt;**true**: yes; **false**: no&lt;br&gt; Default value: **false |
+| enabled | Optional&lt;boolean&gt; | Yes | Whether to display the pop-up window.<br>**true**: yes; **false**: no<br> Default value: **false |
 
 **Return value:**
 

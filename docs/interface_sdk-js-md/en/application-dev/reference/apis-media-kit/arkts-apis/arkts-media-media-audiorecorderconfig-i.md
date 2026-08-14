@@ -17,7 +17,7 @@ Provides the audio recorder configuration definitions.
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'media';
 ```
 
 ## audioEncodeBitRate

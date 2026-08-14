@@ -15,7 +15,38 @@ Implements a **UIContext** instance. > **NOTE：**> > - You can preview how this
 ## Modules to Import
 
 ```TypeScript
-import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CustomKeyboardContinueFeature, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from '@kit.ArkUI';
+import { AtomicServiceBar } from 'AtomicServiceBar';
+import { ComponentUtils } from 'ComponentUtils';
+import { ContextMenuController } from 'ContextMenuController';
+import { CursorController } from 'CursorController';
+import { DialogPresenter } from 'DialogPresenter';
+import { DragController } from 'DragController';
+import { Font } from 'Font';
+import { KeyboardAvoidMode } from 'KeyboardAvoidMode';
+import { MediaQuery } from 'MediaQuery';
+import { OverlayManager } from 'OverlayManager';
+import { PromptAction } from 'PromptAction';
+import { Router } from 'Router';
+import { UIContext } from 'UIContext';
+import { UIInspector } from 'UIInspector';
+import { UIObserver } from 'UIObserver';
+import { PageInfo } from 'PageInfo';
+import { SwiperDynamicSyncScene } from 'SwiperDynamicSyncScene';
+import { SwiperDynamicSyncSceneType } from 'SwiperDynamicSyncSceneType';
+import { MarqueeDynamicSyncScene } from 'MarqueeDynamicSyncScene';
+import { MarqueeDynamicSyncSceneType } from 'MarqueeDynamicSyncSceneType';
+import { MeasureUtils } from 'MeasureUtils';
+import { FrameCallback } from 'FrameCallback';
+import { OverlayManagerOptions } from 'OverlayManagerOptions';
+import { TargetInfo } from 'TargetInfo';
+import { TextMenuController } from 'TextMenuController';
+import { NodeIdentity } from 'NodeIdentity';
+import { NodeRenderState } from 'NodeRenderState';
+import { NodeRenderStateChangeCallback } from 'NodeRenderStateChangeCallback';
+import { Magnifier } from 'Magnifier';
+import { ResolvedUIContext } from 'ResolvedUIContext';
+import { TextSelectionClearPolicy } from 'TextSelectionClearPolicy';
+import { CustomKeyboardContinueFeature } from 'CustomKeyboardContinueFeature';
 ```
 
 ## addLocalInputEventMonitor
@@ -180,7 +211,7 @@ Closes the sheet corresponding to **bindSheetContent**. This API uses a promise 
 | Error Code ID | Error Message |
 | --- | --- |
 | [120001](../errorcode-bindSheet.md#120001-incorrect-bindsheetcontent) | The bindSheetContent is incorrect. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [120003](../errorcode-bindSheet.md#120003-no-matching-modal-found) | The bindSheetContent cannot be found. |
 
 ## constructor
@@ -243,7 +274,7 @@ Creates an **Animator** object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 
 ## createAnimator
 
@@ -283,7 +314,7 @@ Creates an **AnimatorResult** object for animations. Compared to the previous [c
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 
 ## createUIContextWithoutWindow
 
@@ -324,7 +355,7 @@ Creates a UI instance that does not depend on a window and returns its UI contex
 | Error Code ID | Error Message |
 | --- | --- |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. The number of parameters is incorrect. &lt;br&gt; 2. Invalid parameter type of context. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. The number of parameters is incorrect. <br> 2. Invalid parameter type of context. |
 
 ## destroyUIContextWithoutWindow
 
@@ -764,7 +795,7 @@ Get DragController.
 getFilteredInspectorTree(filters?: Array<string>): string
 ```
 
-Obtains the component tree and component attributes. This API has a long processing time and is intended for &lt;br&gt;testing scenarios only.
+Obtains the component tree and component attributes. This API has a long processing time and is intended for <br>testing scenarios only.
 
 **Since:** 12
 
@@ -784,7 +815,7 @@ Obtains the component tree and component attributes. This API has a long process
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filters | Array&lt;string&gt; | No | List of component attributes used for filtering. Currently, only the following filter fields are supported: &lt;br&gt;**"id"**: unique ID of the component. &lt;br&gt;**"src"**: source of the resource. &lt;br&gt;**"content"**: information or data contained in the element, component, or object. &lt;br&gt;**"editable"**: whether the component is editable. &lt;br&gt;**"scrollable"**: whether the component is scrollable. &lt;br&gt;**"selectable"**: whether the component is selectable. &lt;br&gt;**"focusable"**: whether the component is focusable. &lt;br&gt;**"focused"**: whether the component is currently focused. &lt;br&gt;If **filters** includes one or more fields, unspecified fields will be filtered out from the results. &lt;br&gt;If **filters** is not provided or is an empty array, none of the aforementioned fields &lt;br&gt;will be filtered out. &lt;br&gt;The following filter field is supported since API version 20: &lt;br&gt;**"isLayoutInspector"**: whether the component tree contains custom components. &lt;br&gt;If **filters** is omitted or &lt;br&gt;does not contain **"isLayoutInspector"**, the returned component tree &lt;br&gt;will not include custom component details. &lt;br&gt;Other filter fields are used only in testing scenarios. |
+| filters | Array&lt;string&gt; | No | List of component attributes used for filtering. Currently, only the following filter fields are supported: <br>**"id"**: unique ID of the component. <br>**"src"**: source of the resource. <br>**"content"**: information or data contained in the element, component, or object. <br>**"editable"**: whether the component is editable. <br>**"scrollable"**: whether the component is scrollable. <br>**"selectable"**: whether the component is selectable. <br>**"focusable"**: whether the component is focusable. <br>**"focused"**: whether the component is currently focused. <br>If **filters** includes one or more fields, unspecified fields will be filtered out from the results. <br>If **filters** is not provided or is an empty array, none of the aforementioned fields <br>will be filtered out. <br>The following filter field is supported since API version 20: <br>**"isLayoutInspector"**: whether the component tree contains custom components. <br>If **filters** is omitted or <br>does not contain **"isLayoutInspector"**, the returned component tree <br>will not include custom component details. <br>Other filter fields are used only in testing scenarios. |
 
 **Return value:**
 
@@ -796,7 +827,7 @@ Obtains the component tree and component attributes. This API has a long process
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 
 ## getFilteredInspectorTreeById
 
@@ -804,7 +835,7 @@ Obtains the component tree and component attributes. This API has a long process
 getFilteredInspectorTreeById(id: string, depth: number, filters?: Array<string>): string
 ```
 
-Obtains the attributes of the specified component and its child components. This API has a long processing time &lt;br&gt;and is intended for testing scenarios only.
+Obtains the attributes of the specified component and its child components. This API has a long processing time <br>and is intended for testing scenarios only.
 
 **Since:** 12
 
@@ -825,20 +856,20 @@ Obtains the attributes of the specified component and its child components. This
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | id | string | Yes | ID of the target component. |
-| depth | number | Yes | Number of layers of child components. If the value is **0**, the attributes of the specified component and all its child components are obtained. If the value is **1**, only the attributes of &lt;br&gt;the specified component are obtained. If the value is **2**, the attributes of &lt;br&gt;the specified component and its &lt;br&gt;level-1 child components are obtained. The rest can be deduced by analogy. |
-| filters | Array&lt;string&gt; | No | List of component attributes used for filtering. Currently, only the following filter fields are supported: &lt;br&gt;**"id"**: unique ID of the component. &lt;br&gt;**"src"**: source of the resource. &lt;br&gt;**"content"**: information or data contained in the element, component, or object. &lt;br&gt;**"editable"**: whether the component is editable. &lt;br&gt;**"scrollable"**: whether the component is scrollable. &lt;br&gt;**"selectable"**: whether the component is selectable. &lt;br&gt;**"focusable"**: whether the component is focusable. &lt;br&gt;**"focused"**: whether the component is currently focused. &lt;br&gt;If **filters** includes one or more fields, unspecified fields will be filtered out from the results. &lt;br&gt;If **filters** is not provided or is an empty array, none of the aforementioned fields &lt;br&gt;will be filtered out. &lt;br&gt;Other filter fields are used only in testing scenarios. |
+| depth | number | Yes | Number of layers of child components. If the value is **0**, the attributes of the specified component and all its child components are obtained. If the value is **1**, only the attributes of <br>the specified component are obtained. If the value is **2**, the attributes of <br>the specified component and its <br>level-1 child components are obtained. The rest can be deduced by analogy. |
+| filters | Array&lt;string&gt; | No | List of component attributes used for filtering. Currently, only the following filter fields are supported: <br>**"id"**: unique ID of the component. <br>**"src"**: source of the resource. <br>**"content"**: information or data contained in the element, component, or object. <br>**"editable"**: whether the component is editable. <br>**"scrollable"**: whether the component is scrollable. <br>**"selectable"**: whether the component is selectable. <br>**"focusable"**: whether the component is focusable. <br>**"focused"**: whether the component is currently focused. <br>If **filters** includes one or more fields, unspecified fields will be filtered out from the results. <br>If **filters** is not provided or is an empty array, none of the aforementioned fields <br>will be filtered out. <br>Other filter fields are used only in testing scenarios. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | JSON string of the attributes of the specified component and its child components. For details about each field in the component, see the return value &lt;br&gt;description of [getInspectorInfo]{ |
+| string | JSON string of the attributes of the specified component and its child components. For details about each field in the component, see the return value <br>description of [getInspectorInfo]{ |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 
 ## getFocusController
 
@@ -1364,7 +1395,7 @@ Obtains the root node of the page corresponding to the UIContext.
 
 | Type | Description |
 | --- | --- |
-| FrameNode | FrameNode of the root node of the page or **null**. &lt;br&gt;If no valid FrameNode is available, **null** is returned. &lt;br&gt;If no page is loaded in the window, **null** is returned. |
+| FrameNode | FrameNode of the root node of the page or **null**. <br>If no valid FrameNode is available, **null** is returned. <br>If no page is loaded in the window, **null** is returned. |
 
 **Error codes:**
 
@@ -1882,7 +1913,7 @@ Creates a sheet whose content is as defined in **bindSheetContent** and displays
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bindSheetContent | ComponentContent&lt;T&gt; | Yes | Content to display on the sheet. |
-| sheetOptions | SheetOptions | No | Style of the sheet.&lt;br&gt;**NOTE：**&lt;br&gt;1. **SheetOptions.uiContext** cannot be set. Its value is fixed to the **UIContext** object of the current instance.&lt;br&gt;2. If **targetId** is not passed in, **SheetOptions.preferType** cannot be set to **POPUP**; if **POPUP** is set, it will be replaced with **CENTER**.&lt;br&gt;3. If **targetId** is not passed in, **SheetOptions.mode** cannot be set to **EMBEDDED**; the default mode is **OVERLAY**.&lt;br&gt;4. For the default values of other attributes, see SheetOptions. |
+| sheetOptions | SheetOptions | No | Style of the sheet.<br>**NOTE：**<br>1. **SheetOptions.uiContext** cannot be set. Its value is fixed to the **UIContext** object of the current instance.<br>2. If **targetId** is not passed in, **SheetOptions.preferType** cannot be set to **POPUP**; if **POPUP** is set, it will be replaced with **CENTER**.<br>3. If **targetId** is not passed in, **SheetOptions.mode** cannot be set to **EMBEDDED**; the default mode is **OVERLAY**.<br>4. For the default values of other attributes, see SheetOptions. |
 | targetId | number | No | ID of the component to be bound. If this parameter is not set, no component is bound. If the ID does not exist, the error code 120004 is returned. Returns error code 401 if **undefined** is passed in. |
 
 **Return value:**
@@ -1896,7 +1927,7 @@ Creates a sheet whose content is as defined in **bindSheetContent** and displays
 | Error Code ID | Error Message |
 | --- | --- |
 | [120001](../errorcode-bindSheet.md#120001-incorrect-bindsheetcontent) | The bindSheetContent is incorrect. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [120002](../errorcode-bindSheet.md#120002-modal-for-bindsheetcontent-already-exists) | The bindSheetContent already exists. |
 | [120005](../errorcode-bindSheet.md#120005-node-specified-by-targetid-is-not-in-the-component-tree) | The node of targetId is not in the component tree. |
 | [120004](../errorcode-bindSheet.md#120004-specified-targetid-does-not-exist) | The targetId does not exist. |
@@ -2289,7 +2320,7 @@ Sets the avoidance mode for the virtual keyboard. > **NOTE：**> > With **Keyboa
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [KeyboardAvoidMode](arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md) | Yes | Avoidance mode of the virtual keyboard.&lt;br&gt;Default value: **KeyboardAvoidMode.OFFSET**, which means that the page moves up when the keyboard is displayed.&lt;br&gt;When **setKeyboardAvoidMode** is set to an invalid value, this attribute does not take effect. |
+| value | [KeyboardAvoidMode](arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md) | Yes | Avoidance mode of the virtual keyboard.<br>Default value: **KeyboardAvoidMode.OFFSET**, which means that the page moves up when the keyboard is displayed.<br>When **setKeyboardAvoidMode** is set to an invalid value, this attribute does not take effect. |
 
 ## setOverlayManagerOptions
 
@@ -2351,7 +2382,7 @@ Sets the pixel rounding mode for this page.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | PixelRoundMode | Yes | Pixel rounding mode. Default value:**PixelRoundMode.PIXEL_ROUND_ON_LAYOUT_FINISH**.&lt;br&gt;If this parameter is set to an invalid value, the default value will be used. |
+| mode | PixelRoundMode | Yes | Pixel rounding mode. Default value:**PixelRoundMode.PIXEL_ROUND_ON_LAYOUT_FINISH**.<br>If this parameter is set to an invalid value, the default value will be used. |
 
 ## setResourceManagerCacheMaxCountForHSP
 
@@ -2671,8 +2702,8 @@ Updates the style of the sheet corresponding to the provided **bindSheetContent*
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bindSheetContent | ComponentContent&lt;T&gt; | Yes | Content to display on the sheet. |
-| sheetOptions | SheetOptions | Yes | Style of the sheet.&lt;br&gt;**NOTE：**&lt;br&gt;**SheetOptions.UIContext** and **SheetOptions.mode** cannot be updated. |
-| partialUpdate | boolean | No | Whether to update the sheet in incremental mode.&lt;br&gt;Default value: **false**&lt;br&gt; **NOTE：**&lt;br&gt;1. **true**: incremental update, where the specified properties in **SheetOptions** are updated, and other properties stay at their current value.&lt;br&gt;2. **false**: full update, where all properties except those specified in **SheetOptions** are restored to default values. |
+| sheetOptions | SheetOptions | Yes | Style of the sheet.<br>**NOTE：**<br>**SheetOptions.UIContext** and **SheetOptions.mode** cannot be updated. |
+| partialUpdate | boolean | No | Whether to update the sheet in incremental mode.<br>Default value: **false**<br> **NOTE：**<br>1. **true**: incremental update, where the specified properties in **SheetOptions** are updated, and other properties stay at their current value.<br>2. **false**: full update, where all properties except those specified in **SheetOptions** are restored to default values. |
 
 **Return value:**
 
@@ -2685,7 +2716,7 @@ Updates the style of the sheet corresponding to the provided **bindSheetContent*
 | Error Code ID | Error Message |
 | --- | --- |
 | [120001](../errorcode-bindSheet.md#120001-incorrect-bindsheetcontent) | The bindSheetContent is incorrect. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [120003](../errorcode-bindSheet.md#120003-no-matching-modal-found) | The bindSheetContent cannot be found. |
 
 ## vp2px

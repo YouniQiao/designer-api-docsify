@@ -121,7 +121,7 @@ Checks whether the handler has messages with the specified what code
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| what | int | Yes | the message code to check for. &lt;br&gt;The value should be an integer. |
+| what | int | Yes | the message code to check for. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -153,7 +153,7 @@ Checks whether the handler has messages with the specified what code and object
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| what | int | Yes | the message code to check for. &lt;br&gt;The value should be an integer. |
+| what | int | Yes | the message code to check for. <br>The value should be an integer. |
 | obj | Any | Yes | the object to check for. |
 
 **Return value:**
@@ -250,7 +250,7 @@ Removes pending messages with the specified what code
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| what | int | Yes | the message code to remove. &lt;br&gt;The value should be an integer. |
+| what | int | Yes | the message code to remove. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -282,7 +282,7 @@ Removes pending messages with the specified what code and object
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| what | int | Yes | the message code to remove. &lt;br&gt;The value should be an integer. |
+| what | int | Yes | the message code to remove. <br>The value should be an integer. |
 | obj | Any | Yes | the object to match. |
 
 **Return value:**
@@ -315,7 +315,7 @@ Sends an empty message with the specified what code
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| what | int | Yes | the message code to send. &lt;br&gt;The value should be an integer. |
+| what | int | Yes | the message code to send. <br>The value should be an integer. |
 
 **Return value:**
 

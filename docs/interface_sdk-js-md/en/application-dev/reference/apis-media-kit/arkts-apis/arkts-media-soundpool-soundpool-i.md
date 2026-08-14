@@ -835,7 +835,7 @@ Sets the loop mode. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | streamID | int | Yes | Audio stream ID, which is obtained by calling **play()**. |
-| loop | int | Yes | Number of loops.&lt;br&gt;If this parameter is set to a value greater than or equal to 0, the number of times the content is actually played is the value of **loop** plus 1.&lt;br&gt; If this parameter is set to a value less than 0, the content is played repeatedly. |
+| loop | int | Yes | Number of loops.<br>If this parameter is set to a value greater than or equal to 0, the number of times the content is actually played is the value of **loop** plus 1.<br> If this parameter is set to a value less than 0, the content is played repeatedly. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -869,7 +869,7 @@ Sets the loop mode. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | streamID | int | Yes | Audio stream ID, which is obtained by calling **play()**. |
-| loop | int | Yes | Number of loops.&lt;br&gt;If this parameter is set to a value greater than or equal to 0, the number of times the content is actually played is the value of **loop** plus 1.&lt;br&gt; If this parameter is set to a value less than 0, the content is played repeatedly. |
+| loop | int | Yes | Number of loops.<br>If this parameter is set to a value greater than or equal to 0, the number of times the content is actually played is the value of **loop** plus 1.<br> If this parameter is set to a value less than 0, the content is played repeatedly. |
 
 **Return value:**
 

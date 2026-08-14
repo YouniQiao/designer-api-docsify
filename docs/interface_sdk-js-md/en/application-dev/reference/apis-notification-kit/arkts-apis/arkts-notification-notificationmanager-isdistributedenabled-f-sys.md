@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'notificationManager';
 ```
 
 ## isDistributedEnabled
@@ -32,7 +32,7 @@ Checks whether a device enables cross-device notification. This API uses a promi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceType | string | Yes | Device type. The options are as follows:&lt;br&gt;- **headset**: wearable audio device&lt;br&gt; - **liteWearable**: lite wearable&lt;br&gt;- **wearable**: wearable&lt;br&gt;- **current**: current device&lt;br&gt;- **2in1**: PC&lt;br&gt;- **tablet**: tablet |
+| deviceType | string | Yes | Device type. The options are as follows:<br>- **headset**: wearable audio device<br> - **liteWearable**: lite wearable<br>- **wearable**: wearable<br>- **current**: current device<br>- **2in1**: PC<br>- **tablet**: tablet |
 
 **Return value:**
 

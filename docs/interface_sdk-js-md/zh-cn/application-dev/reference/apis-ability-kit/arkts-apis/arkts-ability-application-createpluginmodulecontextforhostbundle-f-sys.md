@@ -7,7 +7,7 @@ export function createPluginModuleContextForHostBundle(context: Context, pluginB
     hostBundleName: string): Promise<Context>
 ```
 
-根据入参Context、插件包名和插件模块名和应用包名，创建对应插件的Context，用于获取插件的基本信息。使用Promise异步回调。
+根据入参Context、插件包名、插件模块名和安装插件的应用包名，创建对应插件的Context，用于获取插件的基本信息。使用Promise异步回调。
 
 **起始版本：** 23
 

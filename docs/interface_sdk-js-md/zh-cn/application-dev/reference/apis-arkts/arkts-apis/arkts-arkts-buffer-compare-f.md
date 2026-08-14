@@ -31,7 +31,7 @@ function compare(buf1: Buffer | Uint8Array, buf2: Buffer | Uint8Array): -1 | 0 |
 
 | 类型 | 说明 |
 | --- | --- |
-| -1 | 如果buf1与buf2相同，则返回0。 &lt;br/&gt;如果排序时buf1位于buf2之后，则返回1。 &lt;br/&gt;如果排序时buf1位于buf2之前，则返回-1。 |
+| -1 | 如果buf1与buf2相同，则返回0。 <br/>如果排序时buf1位于buf2之后，则返回1。 <br/>如果排序时buf1位于buf2之前，则返回-1。 |
 
 ## 示例
 
@@ -78,7 +78,7 @@ function compare(buf1: Buffer | Uint8Array, buf2: Buffer | Uint8Array): int
 
 | 类型 | 说明 |
 | --- | --- |
-| int | 如果buf1与buf2相同，则返回0。&lt;br/&gt;如果排序时buf1位于buf2之后，则返回1。&lt;br/&gt;如果排序时buf1位于buf2之前，则返回-1。 |
+| int | 如果buf1与buf2相同，则返回0。<br/>如果排序时buf1位于buf2之后，则返回1。<br/>如果排序时buf1位于buf2之前，则返回-1。 |
 
 ## 示例
 

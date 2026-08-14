@@ -17,7 +17,7 @@ Volume information for active audio streams.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'audio';
 ```
 
 ## appVolume

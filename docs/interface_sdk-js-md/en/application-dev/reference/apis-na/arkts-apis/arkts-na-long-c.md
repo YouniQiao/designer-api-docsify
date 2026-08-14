@@ -373,7 +373,7 @@ Parses from String an integer of specified radix.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | s | string | Yes | the string to convert. |
-| r | int | Yes | the radix of conversion; should be [2, 36]; 0 assumed to be 10. &lt;br&gt;The value should be an integer. |
+| r | int | Yes | the radix of conversion; should be [2, 36]; 0 assumed to be 10. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -973,7 +973,7 @@ Converts this object to a string with specified radix.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| radix | int | Yes | the radix of conversion. &lt;br&gt;The value should be an integer. |
+| radix | int | Yes | the radix of conversion. <br>The value should be an integer. |
 
 **Return value:**
 

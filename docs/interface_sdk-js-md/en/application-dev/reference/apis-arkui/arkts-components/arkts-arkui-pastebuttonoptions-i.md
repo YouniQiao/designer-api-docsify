@@ -42,7 +42,7 @@ Shape of the **PasteButton** component. Default value: ButtonType.Capsule.
 icon?: PasteIconStyle
 ```
 
-Icon style of the **PasteButton** component. Default value: No icon is displayed. &lt;br&gt;If neither **icon** nor **text** is provided, the component uses the default style.
+Icon style of the **PasteButton** component. Default value: No icon is displayed. <br>If neither **icon** nor **text** is provided, the component uses the default style.
 
 **Type:** [PasteIconStyle](arkts-arkui-pasteiconstyle-e.md)
 
@@ -66,7 +66,7 @@ Icon style of the **PasteButton** component. Default value: No icon is displayed
 text?: PasteDescription
 ```
 
-Text on the **PasteButton** component. Default value: No text description is displayed. &lt;br&gt;If the icon is not transferred, the control is displayed in the default style.
+Text on the **PasteButton** component. Default value: No text description is displayed. <br>If the icon is not transferred, the control is displayed in the default style.
 
 **Type:** [PasteDescription](arkts-arkui-pastedescription-e.md)
 

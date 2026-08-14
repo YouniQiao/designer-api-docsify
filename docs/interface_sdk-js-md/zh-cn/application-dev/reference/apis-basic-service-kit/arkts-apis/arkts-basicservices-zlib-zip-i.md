@@ -165,7 +165,7 @@ let arrayBufferIn = new ArrayBuffer(str.length);
 let byteArray = new Uint8Array(arrayBufferIn);
 
 for (let i = 0, j = str.length; i < j; i++) {
-  byteArray[i] = str.charCodeAt(i)
+  byteArray[i] = str.charCodeAt(i);
 }
 
 let zip = zlib.createZipSync();
@@ -2139,7 +2139,7 @@ let arrayBufferIn = new ArrayBuffer(str.length);
 let byteArray = new Uint8Array(arrayBufferIn);
 
 for (let i = 0, j = str.length; i < j; i++) {
-  byteArray[i] = str.charCodeAt(i)
+  byteArray[i] = str.charCodeAt(i);
 }
 
 let arrayBufferOut = new ArrayBuffer(100);
@@ -2203,7 +2203,7 @@ let arrayBufferIn = new ArrayBuffer(str.length);
 let byteArray = new Uint8Array(arrayBufferIn);
 
 for (let i = 0, j = str.length; i < j; i++) {
-  byteArray[i] = str.charCodeAt(i)
+  byteArray[i] = str.charCodeAt(i);
 }
 
 let arrayBufferOut = new ArrayBuffer(100);
@@ -2609,7 +2609,7 @@ async function demo() {
   }
   let arrayBufferOut = new ArrayBuffer(100);
   let zip = zlib.createZipSync();
-  let dictionary = 'hello'
+  let dictionary = 'hello';
   let dictionarybuf = new ArrayBuffer(dictionary.length);
   let dictionarybufdata = new Uint8Array(dictionarybuf);
   for (let i = 0, j = dictionary.length; i < j; i++) {

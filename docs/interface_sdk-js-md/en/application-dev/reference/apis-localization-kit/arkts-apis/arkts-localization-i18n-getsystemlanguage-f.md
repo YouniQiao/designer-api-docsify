@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'i18n';
 ```
 
 ## getSystemLanguage
@@ -31,4 +31,12 @@ Obtains the system language.
 | Type | Description |
 | --- | --- |
 | string | System language ID. |
+
+## Examples
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let systemLanguage: string = i18n.getSystemLanguage();
+```
 

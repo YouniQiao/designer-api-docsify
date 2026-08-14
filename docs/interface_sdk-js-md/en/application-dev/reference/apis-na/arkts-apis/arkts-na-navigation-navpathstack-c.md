@@ -342,7 +342,7 @@ Pops the top NavDestination out of the stack.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| animated | boolean | No | Indicates whether the transition is animated &lt;br&gt;Default value: true. |
+| animated | boolean | No | Indicates whether the transition is animated <br>Default value: true. |
 
 **Return value:**
 
@@ -375,7 +375,7 @@ Pops the top NavDestination out of the stack.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | result | Object | Yes | The result of the NavDestination. |
-| animated | boolean | No | Indicates whether the transition is animated &lt;br&gt;Default value: true. |
+| animated | boolean | No | Indicates whether the transition is animated <br>Default value: true. |
 
 **Return value:**
 

@@ -36,11 +36,11 @@ public nextTransition(date?: double): ZoneOffsetTransition
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| date | double | 否 | 从1970年1月1日0时0分0秒到指定时间之间的毫秒数。 &lt;br&gt;默认值：系统时间。 |
+| date | double | 否 | 从1970年1月1日0时0分0秒到指定时间之间的毫秒数。 <br>默认值：系统时间。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ZoneOffsetTransition](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-zoneoffsettransition-c.md) | 时区跳变对象。 |
+| [ZoneOffsetTransition](arkts-na-i18n-zoneoffsettransition-c.md) | 时区跳变对象。 |
 

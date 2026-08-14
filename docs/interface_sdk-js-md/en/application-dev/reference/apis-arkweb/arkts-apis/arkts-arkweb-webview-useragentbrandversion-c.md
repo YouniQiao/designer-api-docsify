@@ -15,7 +15,7 @@ Class that holds brand name, major version and full version. Brand name and majo
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'webview';
 ```
 
 ## getBrand

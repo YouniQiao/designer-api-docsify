@@ -15,7 +15,11 @@ Declare type SelectOption
 ## Modules to Import
 
 ```TypeScript
-import { SelectOptions, OperationOption, SubHeader, OperationType, SymbolOptions } from '@kit.ArkUI';
+import { OperationOption } from 'OperationOption';
+import { OperationType } from 'OperationType';
+import { SelectOptions } from 'SelectOptions';
+import { SubHeader } from 'SubHeader';
+import { SymbolOptions } from 'SymbolOptions';
 ```
 
 ## defaultFocus

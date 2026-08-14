@@ -34,7 +34,7 @@ constructor(value: double, unit?:LengthUnit)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | double | 是 | 长度属性的值。&lt;br/&gt;取值范围：[0, +∞) |
+| value | double | 是 | 长度属性的值。<br/>取值范围：[0, +∞) |
 | unit | [LengthUnit](arkts-na-graphics-lengthunit-e.md) | 否 | 长度属性的单位。 |
 
 ## fp
@@ -61,7 +61,7 @@ static fp(value: double): LengthMetrics
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | double | 是 | 长度属性的值。&lt;br/&gt;。 &lt;br&gt;取值范围：(-∞, +∞)。 |
+| value | double | 是 | 长度属性的值。<br/>。 <br>取值范围：(-∞, +∞)。 |
 
 **返回值：**
 
@@ -93,7 +93,7 @@ static lpx(value: double): LengthMetrics
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | double | 是 | 长度属性的值。&lt;br/&gt;。 &lt;br&gt;取值范围：(-∞, +∞)。 |
+| value | double | 是 | 长度属性的值。<br/>。 <br>取值范围：(-∞, +∞)。 |
 
 **返回值：**
 
@@ -125,7 +125,7 @@ static percent(value: double): LengthMetrics
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | double | 是 | 长度属性的值。&lt;br/&gt;。 &lt;br&gt;取值范围：[0, 1]。 |
+| value | double | 是 | 长度属性的值。<br/>。 <br>取值范围：[0, 1]。 |
 
 **返回值：**
 
@@ -157,7 +157,7 @@ static px(value: double): LengthMetrics
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | double | 是 | 长度属性的值。&lt;br/&gt;。 &lt;br&gt;取值范围：(-∞, +∞)。 |
+| value | double | 是 | 长度属性的值。<br/>。 <br>取值范围：(-∞, +∞)。 |
 
 **返回值：**
 
@@ -221,7 +221,7 @@ static vp(value: double): LengthMetrics
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | double | 是 | 长度属性的值。&lt;br/&gt;。 &lt;br&gt;取值范围：(-∞, +∞)。 |
+| value | double | 是 | 长度属性的值。<br/>。 <br>取值范围：(-∞, +∞)。 |
 
 **返回值：**
 

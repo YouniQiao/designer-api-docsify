@@ -117,7 +117,7 @@ export default class MyAbility extends UIAbility {
 disableDelayedProcessExit(): Promise<void>
 ```
 
-Disables delayed process exit for the current process. &lt;p&gt;&lt;b&gt;NOTE&lt;/b&gt;: &lt;br&gt;This API can be called only by the main thread. &lt;br&gt;Calling this API cancels the effect of [enableDelayedProcessExit](#enableDelayedProcessExit).&lt;/p&gt;
+Disables delayed process exit for the current process. &lt;p&gt;&lt;b&gt;NOTE&lt;/b&gt;: <br>This API can be called only by the main thread. <br>Calling this API cancels the effect of [enableDelayedProcessExit](#enableDelayedProcessExit).&lt;/p&gt;
 
 **Since:** 26.0.0
 
@@ -151,7 +151,7 @@ Disables delayed process exit for the current process. &lt;p&gt;&lt;b&gt;NOTE&lt
 enableDelayedProcessExit(): Promise<void>
 ```
 
-Enable delayed exit for the current process. &lt;p&gt;**NOTE：**: &lt;br&gt;It can be called only by the main thread. &lt;br&gt;Under normal circumstances, the process exits after the last UIAbility within the application process has exited. After calling this interface, the process will delay its exit for 10 seconds after the last UIAbility exits. If a new Ability is started within the 10 seconds in the current process, the process no longer exits.&lt;/p&gt;
+Enable delayed exit for the current process. &lt;p&gt;**NOTE：**: <br>It can be called only by the main thread. <br>Under normal circumstances, the process exits after the last UIAbility within the application process has exited. After calling this interface, the process will delay its exit for 10 seconds after the last UIAbility exits. If a new Ability is started within the 10 seconds in the current process, the process no longer exits.&lt;/p&gt;
 
 **Since:** 26.0.0
 
@@ -509,7 +509,7 @@ export default class MyAbility extends UIAbility {
 getUIAbilityByInstanceId(instanceId: string): UIAbility
 ```
 
-Get the UIAbility instance by the instance Id. &lt;p&gt;**NOTE：**: &lt;br&gt;It can be called only by the main thread. &lt;/p&gt;
+Get the UIAbility instance by the instance Id. &lt;p&gt;**NOTE：**: <br>It can be called only by the main thread. &lt;/p&gt;
 
 **Since:** 26.0.0
 
@@ -732,7 +732,7 @@ Unregisters the listener that monitors the ability lifecycle of the application.
 offAbilityLifecycle(callbackId: int): Promise<void>
 ```
 
-Unregisters the listener that monitors the ability lifecycle of the application. This API uses a promise to return the result. &lt;p&gt;**NOTE：**: &lt;br&gt;It can be called only by the main thread. &lt;/p&gt;
+Unregisters the listener that monitors the ability lifecycle of the application. This API uses a promise to return the result. &lt;p&gt;**NOTE：**: <br>It can be called only by the main thread. &lt;/p&gt;
 
 **Since:** 23
 
@@ -849,7 +849,7 @@ Unregister environment callback.
 offInteropAbilityLifecycle(callback?: InteropAbilityLifecycleCallback): void
 ```
 
-Unregisters the listener that monitors the ability lifecycle of the application for interoperability. &lt;p&gt;**NOTE：**: &lt;br&gt;It can be called only by the main thread. &lt;/p&gt;
+Unregisters the listener that monitors the ability lifecycle of the application for interoperability. &lt;p&gt;**NOTE：**: <br>It can be called only by the main thread. &lt;/p&gt;
 
 **Since:** 23
 
@@ -875,7 +875,7 @@ Unregisters the listener that monitors the ability lifecycle of the application 
 offSystemConfigurationUpdated(callback?: systemConfiguration.UpdatedCallback): void
 ```
 
-unregisters a listener for system configuration updated. &lt;p&gt;**NOTE：**: &lt;br&gt;It can be called only by the main thread. &lt;/p&gt;
+unregisters a listener for system configuration updated. &lt;p&gt;**NOTE：**: <br>It can be called only by the main thread. &lt;/p&gt;
 
 **Since:** 24
 
@@ -1049,7 +1049,7 @@ Unregisters the listener for application process state changes. This API uses an
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'applicationStateChange' | Yes | Application process state change. The value is fixed at **'applicationStateChange'**. |
-| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | No | Callback used to return the result. The value can be a callback defined by [ApplicationContext.on('applicationStateChange')](#on_abilityLifecycle) or empty.&lt;br&gt;- If a defined callback is passed in, the listener for that callback is unregistered.&lt;br&gt;- If no value is passed in, all the listeners for the corresponding event are unregistered. |
+| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | No | Callback used to return the result. The value can be a callback defined by [ApplicationContext.on('applicationStateChange')](#on_abilityLifecycle) or empty.<br>- If a defined callback is passed in, the listener for that callback is unregistered.<br>- If no value is passed in, all the listeners for the corresponding event are unregistered. |
 
 **Error codes:**
 
@@ -1307,7 +1307,7 @@ Register environment callback.
 onInteropAbilityLifecycle(callback: InteropAbilityLifecycleCallback): void
 ```
 
-Registers a listener to monitor the ability lifecycle of the application for interoperability. &lt;p&gt;**NOTE：**: &lt;br&gt;It can be called only by the main thread. &lt;/p&gt;
+Registers a listener to monitor the ability lifecycle of the application for interoperability. &lt;p&gt;**NOTE：**: <br>It can be called only by the main thread. &lt;/p&gt;
 
 **Since:** 23
 
@@ -1333,7 +1333,7 @@ Registers a listener to monitor the ability lifecycle of the application for int
 onSystemConfigurationUpdated(callback: systemConfiguration.UpdatedCallback): void
 ```
 
-Registers a listener for system configuration updated. &lt;p&gt;**NOTE：**: &lt;br&gt;It can be called only by the main thread. &lt;/p&gt;
+Registers a listener for system configuration updated. &lt;p&gt;**NOTE：**: <br>It can be called only by the main thread. &lt;/p&gt;
 
 **Since:** 24
 

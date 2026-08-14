@@ -15,7 +15,7 @@ Describes the system memory information, including the total memory, free memory
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
+import { hidebug } from 'hidebug';
 ```
 
 ## availableMem

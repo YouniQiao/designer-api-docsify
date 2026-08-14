@@ -60,7 +60,7 @@ let accountId: number = 100;
 try {
   let result: Array<string> = securityManager.getWatermarkImageApps(wantTemp, accountId);
   console.info(`Succeeded in getting watermark image apps, result : ${JSON.stringify(result)}`);
-} catch(err) {
+} catch (err) {
   console.error(`Failed to get watermark image apps. Code: ${err.code}, message: ${err.message}`);
 }
 ```

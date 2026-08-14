@@ -15,7 +15,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { prompt } from '@kit.ArkUI';
+import { prompt } from 'prompt';
 ```
 
 ## Summary

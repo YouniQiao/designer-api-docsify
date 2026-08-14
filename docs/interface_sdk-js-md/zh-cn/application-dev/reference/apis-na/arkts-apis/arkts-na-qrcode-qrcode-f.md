@@ -27,7 +27,7 @@ export declare function QRCode(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 二维码内容字符串。最大支持512个字符，若超出，则截取前512个字符。 &lt;br/&gt;**说明：** &lt;br/&gt;设置为null时与设置字符串“null”效果一致；设置为 undefined时与设置字符串“undefined”效果一致；当传入空字符串时，将生成无效二维码。 |
+| value | [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 二维码内容字符串。最大支持512个字符，若超出，则截取前512个字符。 <br/>**说明：** <br/>设置为null时与设置字符串“null”效果一致；设置为 undefined时与设置字符串“undefined”效果一致；当传入空字符串时，将生成无效二维码。 |
 
 **返回值：**
 

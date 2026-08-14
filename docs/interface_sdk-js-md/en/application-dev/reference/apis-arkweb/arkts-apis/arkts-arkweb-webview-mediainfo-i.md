@@ -15,7 +15,7 @@ Represents a **MediaInfo** object used as a parameter of the [CreateNativeMediaP
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'webview';
 ```
 
 ## attributes

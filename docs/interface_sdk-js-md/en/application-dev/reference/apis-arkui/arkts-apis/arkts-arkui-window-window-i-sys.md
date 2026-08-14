@@ -15,7 +15,7 @@ Represents a window instance, which is the basic unit managed by the window mana
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'window';
 ```
 
 ## attachLayoutToParentWindow
@@ -2547,7 +2547,7 @@ Sets whether to ignore this window during screen capture, recording, or casting.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isSkip | boolean | Yes | Whether to ignore the window. The default value is **false**.&lt;br&gt;**true** to ignore, **false** otherwise.&lt;br&gt; |
+| isSkip | boolean | Yes | Whether to ignore the window. The default value is **false**.<br>**true** to ignore, **false** otherwise.<br> |
 
 **Error codes:**
 
@@ -2824,7 +2824,7 @@ Adds or deletes the watermark flag for this window. This API uses an asynchronou
 | Error Code ID | Error Message |
 | --- | --- |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [1300008](../errorcode-window.md#1300008-display-device-exception) | The display device is abnormal. |
@@ -2886,7 +2886,7 @@ Adds or deletes the watermark flag for this window. This API uses a promise to r
 | Error Code ID | Error Message |
 | --- | --- |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
 | [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [1300008](../errorcode-window.md#1300008-display-device-exception) | The display device is abnormal. |

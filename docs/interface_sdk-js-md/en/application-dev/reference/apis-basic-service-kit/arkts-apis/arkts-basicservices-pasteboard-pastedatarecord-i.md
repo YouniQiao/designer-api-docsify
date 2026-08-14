@@ -15,7 +15,7 @@ Provides **PasteDataRecord** APIs. A **PasteDataRecord** is an abstract definiti
 ## Modules to Import
 
 ```TypeScript
-import { pasteboard } from '@kit.BasicServicesKit';
+import { pasteboard } from 'pasteboard';
 ```
 
 ## addEntry
@@ -295,7 +295,7 @@ console.info(`Succeeded in converting to text. Text: ${text}`);
 data: Record<string, ArrayBuffer>
 ```
 
-Content of custom data.
+Content of custom data. Modifications to this attribute are ineffective.
 
 **Type:** Record&lt;string, ArrayBuffer&gt;
 
@@ -317,7 +317,7 @@ Content of custom data.
 htmlText: string
 ```
 
-HTML content.
+HTML content, must conform to standard HTML format. Modifications to this attribute are ineffective. To refresh the attribute value, please use [addEntry](#addEntry).
 
 **Type:** string
 
@@ -339,7 +339,7 @@ HTML content.
 mimeType: string
 ```
 
-Default type of PasteDataRecord.
+Default type of PasteDataRecord. Modifications to this attribute are ineffective.
 
 **Type:** string
 
@@ -361,7 +361,7 @@ Default type of PasteDataRecord.
 pixelMap: image.PixelMap
 ```
 
-PixelMap content.
+PixelMap content. Modifications to this attribute are ineffective. To refresh the attribute value, please use [addEntry](#addEntry).
 
 **Type:** image.PixelMap
 
@@ -383,7 +383,7 @@ PixelMap content.
 plainText: string
 ```
 
-Plain text.
+Plain text. Modifications to this attribute are ineffective. To refresh the attribute value, please use [addEntry](#addEntry).
 
 **Type:** string
 
@@ -405,7 +405,7 @@ Plain text.
 uri: string
 ```
 
-URI content.
+URI content, must conform to standard URI format. Modifications to this attribute are ineffective. To refresh the attribute value, please use [addEntry](#addEntry).
 
 **Type:** string
 
@@ -427,7 +427,7 @@ URI content.
 want: Want
 ```
 
-Want content.
+Want content. Modifications to this attribute are ineffective. To refresh the attribute value, please use [addEntry](#addEntry).
 
 **Type:** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)
 

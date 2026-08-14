@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'print';
 ```
 
 ## getPrinterDefaultPreferences
@@ -34,7 +34,7 @@ Get default preferences by printer ID.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerId | string | Yes | Indicates the printer ID. &lt;br&gt;Added printer ID in the system. |
+| printerId | string | Yes | Indicates the printer ID. <br>Added printer ID in the system. |
 
 **Return value:**
 

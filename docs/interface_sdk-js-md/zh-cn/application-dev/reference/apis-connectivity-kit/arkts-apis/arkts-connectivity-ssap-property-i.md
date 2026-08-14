@@ -62,7 +62,7 @@ operation?: int
 propertyUuid: string
 ```
 
-Property实例的UUID 长度必须为32，由16进制数字字符和连字符共36个字符组成，形如“FFFFFFFF-1234-5678-ABCD-000000001234”，代表128比特标识。 &lt;br&gt;不允许使用NearLink标准UUID。
+Property实例的UUID 长度必须为32，由16进制数字字符和连字符共36个字符组成，形如“FFFFFFFF-1234-5678-ABCD-000000001234”，代表128比特标识。 <br>不允许使用NearLink标准UUID。
 
 **类型：** string
 
@@ -84,7 +84,7 @@ Property实例的UUID 长度必须为32，由16进制数字字符和连字符共
 serviceUuid: string
 ```
 
-属性所属的[Service](arkts-connectivity-ssap-service-i.md#Service)实例的UUID 长度必须为32，禁止使用星闪标准服务UUID。 &lt;br&gt;不允许使用NearLink标准UUID。
+属性所属的[Service](arkts-connectivity-ssap-service-i.md#Service)实例的UUID 长度必须为32，禁止使用星闪标准服务UUID。 <br>不允许使用NearLink标准UUID。
 
 **类型：** string
 

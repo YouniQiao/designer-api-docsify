@@ -15,7 +15,29 @@ The **IReusableInfo** API provides information about the current number and maxi
 ## Modules to Import
 
 ```TypeScript
-import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInactive, PersistenceV2, ComponentDisappear, MutableBinding, CustomComponentLifecycleObserver, AppStorageV2, Type, ConnectOptionsCollections, CollectionType, CustomComponentContext, IReusePool, ConnectOptions, UIUtils, ComponentActive, CustomComponentLifecycle, ComponentInit, ComponentAppear, ComponentBuilt, ComponentRecycle, IReusableInfo } from '@kit.ArkUI';
+import { AppStorageV2 } from 'AppStorageV2';
+import { PersistenceV2 } from 'PersistenceV2';
+import { Type } from 'Type';
+import { UIUtils } from 'UIUtils';
+import { ConnectOptions } from 'ConnectOptions';
+import { Binding } from 'Binding';
+import { MutableBinding } from 'MutableBinding';
+import { CustomComponentLifecycle } from 'CustomComponentLifecycle';
+import { CustomComponentLifecycleObserver } from 'CustomComponentLifecycleObserver';
+import { CustomComponentLifecycleState } from 'CustomComponentLifecycleState';
+import { ComponentInit } from 'ComponentInit';
+import { ComponentAppear } from 'ComponentAppear';
+import { ComponentBuilt } from 'ComponentBuilt';
+import { ComponentReuse } from 'ComponentReuse';
+import { ComponentActive } from 'ComponentActive';
+import { ComponentInactive } from 'ComponentInactive';
+import { ComponentRecycle } from 'ComponentRecycle';
+import { ComponentDisappear } from 'ComponentDisappear';
+import { CollectionType } from 'CollectionType';
+import { ConnectOptionsCollections } from 'ConnectOptionsCollections';
+import { CustomComponentContext } from 'CustomComponentContext';
+import { IReusePool } from 'IReusePool';
+import { IReusableInfo } from 'IReusableInfo';
 ```
 
 ## count
@@ -24,7 +46,7 @@ import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInacti
 readonly count: number
 ```
 
-Current number of @Reuseable/V2 component instances in pool. count is usually <= maxCount. It is allowed to be larger for short time because pool clean happens asynchronously.
+Current number of @Reuseable/V2 component instances in pool. count is usually &lt;= maxCount. It is allowed to be larger for short time because pool clean happens asynchronously.
 
 **Type:** number
 

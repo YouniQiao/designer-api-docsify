@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
+import { privacyManager } from 'privacyManager';
 ```
 
 ## addPermissionUsedRecord
@@ -38,10 +38,10 @@ When an application protected by a permission is called by another service or ap
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tokenID | int | Yes | Identity identifier of the target application. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accessTokenId) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. &lt;br&gt;The value should be an integer. Value constraint: This parameter must be an integer greater than 0. &lt;br&gt;For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getBundleInfoSync). |
-| permissionName | [Permissions](arkts-ability-permissions-t.md) | Yes | Name of the permission to be recorded. Passing an invalid value returns error code 12100001. &lt;br&gt;Value constraint: The permission name length cannot exceed 256 characters. |
-| successCount | int | Yes | Number of successful accesses. Passing an invalid value returns error code 12100001. &lt;br&gt;The value should be an integer. Value constraint: The value must be a non-negative integer. |
-| failCount | int | Yes | Number of failed accesses. Passing an invalid value returns error code 12100001. &lt;br&gt;The value should be an integer. Value constraint: The value must be a non-negative integer. |
+| tokenID | int | Yes | Identity identifier of the target application. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accessTokenId) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. <br>The value should be an integer. Value constraint: This parameter must be an integer greater than 0. <br>For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getBundleInfoSync). |
+| permissionName | [Permissions](arkts-ability-permissions-t.md) | Yes | Name of the permission to be recorded. Passing an invalid value returns error code 12100001. <br>Value constraint: The permission name length cannot exceed 256 characters. |
+| successCount | int | Yes | Number of successful accesses. Passing an invalid value returns error code 12100001. <br>The value should be an integer. Value constraint: The value must be a non-negative integer. |
+| failCount | int | Yes | Number of failed accesses. Passing an invalid value returns error code 12100001. <br>The value should be an integer. Value constraint: The value must be a non-negative integer. |
 | options | [AddPermissionUsedRecordOptions](arkts-ability-privacymanager-addpermissionusedrecordoptions-i-sys.md) | No | Optional parameter for adding a permission usage record, used to specify the sensitive permission usage type and extension identity. Pass this parameter when you need to distinguish the permission access method (such as access via Picker or security control) or identify the caller's extension identity.<br>**Since:** 12 |
 
 **Return value:**
@@ -120,10 +120,10 @@ When an application protected by a permission is called by another service or ap
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| tokenID | int | Yes | Identity identifier of the target application. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accessTokenId) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. &lt;br&gt;The value should be an integer. Value constraint: This parameter must be an integer greater than 0. &lt;br&gt;For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getBundleInfoSync). |
-| permissionName | [Permissions](arkts-ability-permissions-t.md) | Yes | Name of the permission to be recorded. Passing an invalid value returns error code 12100001. &lt;br&gt;Value constraint: The permission name length cannot exceed 256 characters. |
-| successCount | int | Yes | Number of successful accesses. Passing an invalid value returns error code 12100001. &lt;br&gt;The value should be an integer. Value constraint: The value must be a non-negative integer. |
-| failCount | int | Yes | Number of failed accesses. Passing an invalid value returns error code 12100001. &lt;br&gt;The value should be an integer. Value constraint: The value must be a non-negative integer. |
+| tokenID | int | Yes | Identity identifier of the target application. It can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accessTokenId) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. <br>The value should be an integer. Value constraint: This parameter must be an integer greater than 0. <br>For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getBundleInfoSync). |
+| permissionName | [Permissions](arkts-ability-permissions-t.md) | Yes | Name of the permission to be recorded. Passing an invalid value returns error code 12100001. <br>Value constraint: The permission name length cannot exceed 256 characters. |
+| successCount | int | Yes | Number of successful accesses. Passing an invalid value returns error code 12100001. <br>The value should be an integer. Value constraint: The value must be a non-negative integer. |
+| failCount | int | Yes | Number of failed accesses. Passing an invalid value returns error code 12100001. <br>The value should be an integer. Value constraint: The value must be a non-negative integer. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**

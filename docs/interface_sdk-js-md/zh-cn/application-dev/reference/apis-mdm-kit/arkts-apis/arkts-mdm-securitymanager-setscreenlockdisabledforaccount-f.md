@@ -53,7 +53,7 @@ let wantTemp: Want = {
 try {
   securityManager.setScreenLockDisabledForAccount(wantTemp, true);
   console.info(`Succeeded in setting screen lock disabled for account.`);
-} catch(err) {
+} catch (err) {
   console.error(`Failed to set screen lock disabled for account. Code: ${err.code}, message: ${err.message}`);
 }
 ```

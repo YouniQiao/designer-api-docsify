@@ -21,6 +21,6 @@ Represents the service widget data defined by the system. It is a child class of
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from '@kit.ArkData';
+import { unifiedDataChannel } from 'unifiedDataChannel';
 ```
 

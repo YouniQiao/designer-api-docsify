@@ -30,7 +30,7 @@ function configEventPolicy(policy: EventPolicy): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，无返回结果。 &lt;br&gt;各个事件的事件配置策略，详细规格见[EventPolicy]{ |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 <br>各个事件的事件配置策略，详细规格见[EventPolicy]{ |
 
 ## 示例
 

@@ -15,7 +15,38 @@ Provides capabilities to control focus, including features such as clearing, mov
 ## Modules to Import
 
 ```TypeScript
-import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CustomKeyboardContinueFeature, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from '@kit.ArkUI';
+import { AtomicServiceBar } from 'AtomicServiceBar';
+import { ComponentUtils } from 'ComponentUtils';
+import { ContextMenuController } from 'ContextMenuController';
+import { CursorController } from 'CursorController';
+import { DialogPresenter } from 'DialogPresenter';
+import { DragController } from 'DragController';
+import { Font } from 'Font';
+import { KeyboardAvoidMode } from 'KeyboardAvoidMode';
+import { MediaQuery } from 'MediaQuery';
+import { OverlayManager } from 'OverlayManager';
+import { PromptAction } from 'PromptAction';
+import { Router } from 'Router';
+import { UIContext } from 'UIContext';
+import { UIInspector } from 'UIInspector';
+import { UIObserver } from 'UIObserver';
+import { PageInfo } from 'PageInfo';
+import { SwiperDynamicSyncScene } from 'SwiperDynamicSyncScene';
+import { SwiperDynamicSyncSceneType } from 'SwiperDynamicSyncSceneType';
+import { MarqueeDynamicSyncScene } from 'MarqueeDynamicSyncScene';
+import { MarqueeDynamicSyncSceneType } from 'MarqueeDynamicSyncSceneType';
+import { MeasureUtils } from 'MeasureUtils';
+import { FrameCallback } from 'FrameCallback';
+import { OverlayManagerOptions } from 'OverlayManagerOptions';
+import { TargetInfo } from 'TargetInfo';
+import { TextMenuController } from 'TextMenuController';
+import { NodeIdentity } from 'NodeIdentity';
+import { NodeRenderState } from 'NodeRenderState';
+import { NodeRenderStateChangeCallback } from 'NodeRenderStateChangeCallback';
+import { Magnifier } from 'Magnifier';
+import { ResolvedUIContext } from 'ResolvedUIContext';
+import { TextSelectionClearPolicy } from 'TextSelectionClearPolicy';
+import { CustomKeyboardContinueFeature } from 'CustomKeyboardContinueFeature';
 ```
 
 ## activate
@@ -44,8 +75,8 @@ Sets the [focus activation state](../../../ui/arkts-common-events-focus-event.md
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isActive | boolean | Yes | Whether to enter or exit the focus activation state.&lt;br&gt;The value **true** means to enter the focus activation state, and **false** means to exit the focus activation state. |
-| autoInactive | boolean | No | Logic for exiting the focus activation state.&lt;br&gt;The value **true** means the focus activation state will be exited automatically when touch or mouse events are triggered, and **false** means the state is controlled solely by API calls.&lt;br&gt;Default value: **true |
+| isActive | boolean | Yes | Whether to enter or exit the focus activation state.<br>The value **true** means to enter the focus activation state, and **false** means to exit the focus activation state. |
+| autoInactive | boolean | No | Logic for exiting the focus activation state.<br>The value **true** means the focus activation state will be exited automatically when touch or mouse events are triggered, and **false** means the state is controlled solely by API calls.<br>Default value: **true |
 
 ## clearFocus
 

@@ -15,7 +15,11 @@ Represents the **AlbumPicker** configuration.
 ## Modules to Import
 
 ```TypeScript
-import { EmptyAreaClickCallback, AlbumPickerComponent, AlbumInfo, AlbumPickerOptions, AlbumPickerController } from '@kit.MediaLibraryKit';
+import { AlbumPickerComponent } from 'AlbumPickerComponent';
+import { AlbumPickerOptions } from 'AlbumPickerOptions';
+import { AlbumInfo } from 'AlbumInfo';
+import { EmptyAreaClickCallback } from 'EmptyAreaClickCallback';
+import { AlbumPickerController } from 'AlbumPickerController';
 ```
 
 ## filterType

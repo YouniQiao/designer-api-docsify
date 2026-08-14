@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'print';
 ```
 
 ## queryRecommendDriversById
@@ -34,7 +34,7 @@ Query recommend printer drivers by printer ID.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerId | string | Yes | Indicates the printer ID. &lt;br&gt;Indicates the printer ID. |
+| printerId | string | Yes | Indicates the printer ID. <br>Indicates the printer ID. |
 
 **Return value:**
 

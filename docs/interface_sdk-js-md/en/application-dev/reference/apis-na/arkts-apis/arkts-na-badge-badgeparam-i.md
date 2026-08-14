@@ -18,7 +18,7 @@ Provides basic parameters for creating a badge.
 position?: BadgePosition | Position
 ```
 
-Position to display the badge relative to the parent component. Default value: BadgePosition.RightTop. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: Percentage values are not supported for location types. &lt;br&gt;If an invalid value is set, the default value (0, 0) is used. Represents the upper left corner of the component, which will be used. &lt;br&gt;When using the BadgePosition type, the location is mirrored based on the orientation attribute. &lt;/p&gt;
+Position to display the badge relative to the parent component. Default value: BadgePosition.RightTop. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: Percentage values are not supported for location types. <br>If an invalid value is set, the default value (0, 0) is used. Represents the upper left corner of the component, which will be used. <br>When using the BadgePosition type, the location is mirrored based on the orientation attribute. &lt;/p&gt;
 
 **Type:** [BadgePosition](arkts-na-badge-badgeposition-e.md) \| [Position](../../apis-arkui/arkts-apis/arkts-arkui-position-i.md)
 

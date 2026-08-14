@@ -26,7 +26,7 @@ function createNode(context: UIContext, nodeType: 'Text'): Text
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| context | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
 | nodeType | 'Text' | 是 | 创建Text类型的FrameNode节点。 |
 
 **返回值：**
@@ -62,7 +62,7 @@ function createNode(context: UIContext, nodeType: 'Column'): Column
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| context | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
 | nodeType | 'Column' | 是 | 创建Column类型的FrameNode节点。 |
 
 **返回值：**
@@ -98,7 +98,7 @@ function createNode(context: UIContext, nodeType: 'Row'): Row
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| context | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
 | nodeType | 'Row' | 是 | 创建Row类型的FrameNode节点。 |
 
 **返回值：**
@@ -134,7 +134,7 @@ function createNode(context: UIContext, nodeType: 'Stack'): Stack
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| context | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
 | nodeType | 'Stack' | 是 | 创建Stack类型的FrameNode节点。 |
 
 **返回值：**
@@ -170,7 +170,7 @@ function createNode(context: UIContext, nodeType: 'GridRow'): GridRow
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| context | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
 | nodeType | 'GridRow' | 是 | 创建GridRow类型的FrameNode节点。 |
 
 **返回值：**
@@ -206,7 +206,7 @@ function createNode(context: UIContext, nodeType: 'GridCol'): GridCol
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| context | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
 | nodeType | 'GridCol' | 是 | 创建GridCol类型的FrameNode节点。 |
 
 **返回值：**
@@ -242,7 +242,7 @@ function createNode(context: UIContext, nodeType: 'Flex'): Flex
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| context | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
 | nodeType | 'Flex' | 是 | 创建Flex类型的FrameNode节点。 |
 
 **返回值：**
@@ -278,7 +278,7 @@ function createNode(context: UIContext, nodeType: 'Swiper'): Swiper
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| context | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
 | nodeType | 'Swiper' | 是 | 创建Swiper类型的FrameNode节点。 |
 
 **返回值：**
@@ -314,7 +314,7 @@ function createNode(context: UIContext, nodeType: 'Progress'): Progress
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| context | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
 | nodeType | 'Progress' | 是 | 创建Progress类型的FrameNode节点。 |
 
 **返回值：**
@@ -350,7 +350,7 @@ function createNode(context: UIContext, nodeType: 'Scroll'): Scroll
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| context | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
 | nodeType | 'Scroll' | 是 | 创建Scroll类型的FrameNode节点。 |
 
 **返回值：**
@@ -386,7 +386,7 @@ function createNode(context: UIContext, nodeType: 'RelativeContainer'): Relative
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| context | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
 | nodeType | 'RelativeContainer' | 是 | 创建RelativeContainer类型的FrameNode节点。 |
 
 **返回值：**
@@ -422,7 +422,7 @@ function createNode(context: UIContext, nodeType: 'Divider'): Divider
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| context | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
 | nodeType | 'Divider' | 是 | 创建Divider类型的FrameNode节点。 |
 
 **返回值：**
@@ -458,7 +458,7 @@ function createNode(context: UIContext, nodeType: 'LoadingProgress'): LoadingPro
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| context | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
 | nodeType | 'LoadingProgress' | 是 | 创建LoadingProgress类型的FrameNode节点。 |
 
 **返回值：**
@@ -494,7 +494,7 @@ function createNode(context: UIContext, nodeType: 'Search'): Search
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| context | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
 | nodeType | 'Search' | 是 | 创建Search类型的FrameNode节点。 |
 
 **返回值：**
@@ -530,7 +530,7 @@ function createNode(context: UIContext, nodeType: 'Blank'): Blank
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| context | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
 | nodeType | 'Blank' | 是 | 创建Blank类型的FrameNode节点。 |
 
 **返回值：**
@@ -566,7 +566,7 @@ function createNode(context: UIContext, nodeType: 'Image'): Image
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| context | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
 | nodeType | 'Image' | 是 | 创建Image类型的节点。 |
 
 **返回值：**
@@ -602,7 +602,7 @@ function createNode(context: UIContext, nodeType: 'List'): List
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| context | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
 | nodeType | 'List' | 是 | 创建List类型的节点。 |
 
 **返回值：**
@@ -638,7 +638,7 @@ function createNode(context: UIContext, nodeType: 'ListItem'): ListItem
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| context | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
 | nodeType | 'ListItem' | 是 | 创建ListItem类型的节点。 |
 
 **返回值：**
@@ -674,7 +674,7 @@ function createNode(context: UIContext, nodeType: 'TextInput'): TextInput
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| context | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
 | nodeType | 'TextInput' | 是 | 创建TextInput类型的节点。 |
 
 **返回值：**
@@ -710,7 +710,7 @@ function createNode(context: UIContext, nodeType: 'Button'): Button
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| context | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
 | nodeType | 'Button' | 是 | 创建Button类型的节点。 |
 
 **返回值：**
@@ -746,7 +746,7 @@ function createNode(context: UIContext, nodeType: 'ListItemGroup'): ListItemGrou
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| context | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
 | nodeType | 'ListItemGroup' | 是 | 创建ListItemGroup类型的节点。 |
 
 **返回值：**
@@ -782,7 +782,7 @@ function createNode(context: UIContext, nodeType: 'WaterFlow'): WaterFlow
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| context | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
 | nodeType | 'WaterFlow' | 是 | 创建WaterFlow类型的节点。 |
 
 **返回值：**
@@ -818,7 +818,7 @@ function createNode(context: UIContext, nodeType: 'FlowItem'): FlowItem
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| context | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
 | nodeType | 'FlowItem' | 是 | 创建FlowItem类型的节点。 |
 
 **返回值：**
@@ -854,7 +854,7 @@ function createNode(context: UIContext, nodeType: 'XComponent'): XComponent
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| context | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
 | nodeType | 'XComponent' | 是 | 创建XComponent类型的节点。 |
 
 **返回值：**
@@ -890,7 +890,7 @@ function createNode(context: UIContext, nodeType: 'XComponent', options: XCompon
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| context | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
 | nodeType | 'XComponent' | 是 | 创建XComponent类型的节点。 |
 | options | XComponentOptions | 是 | 定义XComponent的具体配置参数。 |
 
@@ -927,7 +927,7 @@ function createNode(context: UIContext, nodeType: 'XComponent', parameters: Nati
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| context | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
 | nodeType | 'XComponent' | 是 | 创建XComponent类型的节点。 |
 | parameters | NativeXComponentParameters | 是 | 定义XComponent的具体配置参数。 |
 
@@ -964,7 +964,7 @@ function createNode(context: UIContext, nodeType: 'Checkbox'): Checkbox
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| context | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
 | nodeType | 'Checkbox' | 是 | 创建Checkbox类型的节点。 |
 
 **返回值：**
@@ -1000,7 +1000,7 @@ function createNode(context: UIContext, nodeType: 'CheckboxGroup'): CheckboxGrou
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| context | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
 | nodeType | 'CheckboxGroup' | 是 | 创建CheckboxGroup类型的节点。 |
 
 **返回值：**
@@ -1036,7 +1036,7 @@ function createNode(context: UIContext, nodeType: 'Radio'): Radio
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| context | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
 | nodeType | 'Radio' | 是 | 创建Radio类型的节点。 |
 
 **返回值：**
@@ -1072,7 +1072,7 @@ function createNode(context: UIContext, nodeType: 'Rating'): Rating
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| context | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
 | nodeType | 'Rating' | 是 | 创建Rating类型的节点。 |
 
 **返回值：**
@@ -1108,7 +1108,7 @@ function createNode(context: UIContext, nodeType: 'Select'): Select
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| context | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
 | nodeType | 'Select' | 是 | 创建Select类型的节点。 |
 
 **返回值：**
@@ -1144,7 +1144,7 @@ function createNode(context: UIContext, nodeType: 'Slider'): Slider
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| context | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
 | nodeType | 'Slider' | 是 | 创建Slider类型的节点。 |
 
 **返回值：**
@@ -1180,7 +1180,7 @@ function createNode(context: UIContext, nodeType: 'Toggle', options?: ToggleOpti
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| context | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
 | nodeType | 'Toggle' | 是 | 创建Toggle类型的节点。 |
 | options | ToggleOptions | 否 | 创建Toggle节点的接口参数，仅可通过ToggleOptions中的type属性设置开关样式。不传入该参数时，需通过initialize接口设置 Toggle的type属性。 |
 
@@ -1217,7 +1217,7 @@ function createNode(context: UIContext, nodeType: 'Marquee'): Marquee
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| context | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
 | nodeType | 'Marquee' | 是 | 创建Marquee类型的节点。 |
 
 **返回值：**
@@ -1253,7 +1253,7 @@ function createNode(context: UIContext, nodeType: 'TextArea'): TextArea
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| context | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
 | nodeType | 'TextArea' | 是 | 创建TextArea类型的节点。 |
 
 **返回值：**
@@ -1289,7 +1289,7 @@ function createNode(context: UIContext, nodeType: 'SymbolGlyph'): SymbolGlyph
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| context | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
 | nodeType | 'SymbolGlyph' | 是 | 创建SymbolGlyph类型的节点。 |
 
 **返回值：**
@@ -1325,7 +1325,7 @@ function createNode(context: UIContext, nodeType: 'QRCode'): QRCode
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| context | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
 | nodeType | 'QRCode' | 是 | 创建QRCode类型的节点。 |
 
 **返回值：**
@@ -1361,7 +1361,7 @@ function createNode(context: UIContext, nodeType: 'Badge'): Badge
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| context | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
 | nodeType | 'Badge' | 是 | 创建Badge类型的节点。 |
 
 **返回值：**
@@ -1397,7 +1397,7 @@ function createNode(context: UIContext, nodeType: 'TextClock'): TextClock
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| context | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
 | nodeType | 'TextClock' | 是 | 创建TextClock类型的节点。 |
 
 **返回值：**
@@ -1433,7 +1433,7 @@ function createNode(context: UIContext, nodeType: 'TextTimer'): TextTimer
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| context | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
 | nodeType | 'TextTimer' | 是 | 创建TextTimer类型的节点。 |
 
 **返回值：**
@@ -1469,7 +1469,7 @@ function createNode(context: UIContext, nodeType: 'Grid'): Grid
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| context | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
 | nodeType | 'Grid' | 是 | 创建Grid类型的节点。 |
 
 **返回值：**
@@ -1505,7 +1505,7 @@ function createNode(context: UIContext, nodeType: 'GridItem'): GridItem
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| context | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
 | nodeType | 'GridItem' | 是 | 创建GridItem类型的节点。 |
 
 **返回值：**

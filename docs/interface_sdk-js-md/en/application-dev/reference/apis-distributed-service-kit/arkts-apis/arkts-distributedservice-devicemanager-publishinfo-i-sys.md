@@ -17,7 +17,7 @@ Defines published device information.
 ## Modules to Import
 
 ```TypeScript
-import { deviceManager } from '@kit.DistributedServiceKit';
+import { deviceManager } from 'deviceManager';
 ```
 
 ## freq

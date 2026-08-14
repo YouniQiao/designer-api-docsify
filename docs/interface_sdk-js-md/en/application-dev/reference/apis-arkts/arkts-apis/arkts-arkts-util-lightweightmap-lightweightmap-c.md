@@ -15,7 +15,7 @@ LightWeightMap stores key-value (KV) pairs. Each key must be unique and have onl
 ## Modules to Import
 
 ```TypeScript
-import { LightWeightMap } from '@kit.ArkTS';
+import { LightWeightMap } from 'LightWeightMap';
 ```
 
 ## $_iterator

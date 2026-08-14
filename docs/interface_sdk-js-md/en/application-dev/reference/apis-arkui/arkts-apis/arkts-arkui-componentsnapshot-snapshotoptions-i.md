@@ -15,7 +15,7 @@ Defines the extra options for snapshot taking.
 ## Modules to Import
 
 ```TypeScript
-import { componentSnapshot } from '@kit.ArkUI';
+import { componentSnapshot } from 'componentSnapshot';
 ```
 
 ## colorMode

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sendableImage } from '@kit.ImageKit';
+import { sendableImage } from 'sendableImage';
 ```
 
 ## createImageSource
@@ -30,7 +30,7 @@ Creates an ImageSource instance based on a given URI. Images occupy a large amou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | Image path. Currently, only the application sandbox path is supported. &lt;br&gt;The following formats are supported: .jpg, .png, .gif, .bmp, .webp, .dng [SVG](../../../reference/apis-image-kit/arkts-apis-image-f.md#svg-tags), and ico. |
+| uri | string | Yes | Image path. Currently, only the application sandbox path is supported. <br>The following formats are supported: .jpg, .png, .gif, .bmp, .webp, .dng [SVG](../../../reference/apis-image-kit/arkts-apis-image-f.md#svg-tags), and ico. |
 
 **Return value:**
 

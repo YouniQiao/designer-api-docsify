@@ -24,10 +24,10 @@ Enumerates the font families of captions.
 | Type | Description |
 | --- | --- |
 | 'default' | Default font family. |
-| 'monospacedSerif' | Monospaced Serif fonts, which use the same width for each character. |
-| 'serif' | Serif fonts. |
-| 'monospacedSansSerif' | Monospaced Sans Serif fonts, which use the same width for each character. |
-| 'sansSerif' | Sans Serif fonts. |
+| 'monospacedSerif' | Represents a monospaced Serif font. |
+| 'serif' | Represents a Serif font. |
+| 'monospacedSansSerif' | Represents a monospaced Sans Serif font. |
+| 'sansSerif' | Represents a Sans Serif font. |
 | 'casual' | Casual fonts. |
 | 'cursive' | Cursive fonts. |
 | 'smallCapitals' | Small caps fonts. |

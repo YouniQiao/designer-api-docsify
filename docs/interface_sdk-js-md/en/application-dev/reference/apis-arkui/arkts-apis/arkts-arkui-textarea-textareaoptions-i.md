@@ -40,7 +40,7 @@ Called when the position of the insertion cursor is set.
 placeholder?: ResourceStr
 ```
 
-The place holder text string. Text displayed when there is no input. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;When only the placeholder attribute is set, the text selection handle is still available. &lt;br&gt;The caret stays at the beginning of the placeholder text when the handle is released. &lt;/p&gt;
+The place holder text string. Text displayed when there is no input. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>When only the placeholder attribute is set, the text selection handle is still available. <br>The caret stays at the beginning of the placeholder text when the handle is released. &lt;/p&gt;
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

@@ -91,7 +91,7 @@ Sets the text selection area, which will be highlighted.
 | --- | --- | --- | --- |
 | selectionStart | number | Yes | Start position of the text selection range. The start position of text in the text box is 0. |
 | selectionEnd | number | Yes | End position of the text selection range. If **selectionEnd** is less than 0, it is handled as **0**. If **selectionEnd** exceeds the text length, it is clamped to the text length. |
-| options | SelectionOptions | No | Configuration options for text selection.&lt;br&gt;Default value: **MenuPolicy.DEFAULT**&lt;br&gt;This parameter can be used in atomic services since API version 12.<br>**Since:** 12 |
+| options | SelectionOptions | No | Configuration options for text selection.<br>Default value: **MenuPolicy.DEFAULT**<br>This parameter can be used in atomic services since API version 12.<br>**Since:** 12 |
 
 ## stopEditing
 

@@ -140,7 +140,7 @@ Obtains a **LayoutManager** object.
 
 | Type | Description |
 | --- | --- |
-| LayoutManager | LayoutManager** object. &lt;br&gt;If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
+| LayoutManager | LayoutManager** object. <br>If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
 
 ## getPreviewText
 
@@ -168,7 +168,7 @@ Obtains the preview text.
 
 | Type | Description |
 | --- | --- |
-| PreviewText | Preview text. &lt;br&gt;If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
+| PreviewText | Preview text. <br>If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
 
 ## getTypingStyle
 
@@ -196,7 +196,7 @@ Obtains the preset text style of a user.
 
 | Type | Description |
 | --- | --- |
-| [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md) | Preset typing style. &lt;br&gt;If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
+| [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md) | Preset typing style. <br>If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
 
 ## isEditing
 
@@ -284,7 +284,7 @@ Sets the cursor offset.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the caret offset is set successfully. &lt;br&gt;**true** if the caret offset is set successfully; **false** otherwise. |
+| boolean | Whether the caret offset is set successfully. <br>**true** if the caret offset is set successfully; **false** otherwise. |
 
 ## setSelection
 

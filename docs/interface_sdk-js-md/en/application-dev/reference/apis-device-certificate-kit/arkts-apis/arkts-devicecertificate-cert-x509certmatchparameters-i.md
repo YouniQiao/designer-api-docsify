@@ -15,7 +15,7 @@ Defines the parameters used to match a certificate. If no parameter is specified
 ## Modules to Import
 
 ```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
+import { cert } from 'cert';
 ```
 
 ## authorityKeyIdentifier

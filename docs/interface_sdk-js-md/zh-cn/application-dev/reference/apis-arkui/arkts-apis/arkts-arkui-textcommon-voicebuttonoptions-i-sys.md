@@ -20,7 +20,7 @@
 enabled?: boolean
 ```
 
-输入框启用或禁用语音按钮。&lt;br/&gt;true表示启用语音按钮，false表示禁用语音按钮。&lt;br/&gt; 默认值：false
+输入框启用或禁用语音按钮。<br/>true表示启用语音按钮，false表示禁用语音按钮。<br/> 默认值：false
 
 **类型：** boolean
 

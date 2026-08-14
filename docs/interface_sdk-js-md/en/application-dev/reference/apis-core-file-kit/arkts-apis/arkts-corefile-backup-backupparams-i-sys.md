@@ -17,7 +17,7 @@ Provides configuration parameters for backup and restore.
 ## Modules to Import
 
 ```TypeScript
-import { backup } from '@kit.CoreFileKit';
+import { backup } from 'backup';
 ```
 
 ## parameters

@@ -15,7 +15,7 @@ Provides the rectangle area change information of the float view.
 ## Modules to Import
 
 ```TypeScript
-import { floatView } from '@kit.ArkUI';
+import { floatView } from 'floatView';
 ```
 
 ## reason

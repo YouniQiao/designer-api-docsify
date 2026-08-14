@@ -17,7 +17,10 @@ This API inherits from [CommonShapeMethod](../../apis-na/arkts-apis/arkts-na-ark
 ## Modules to Import
 
 ```TypeScript
-import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
+import { RectShape } from 'RectShape';
+import { CircleShape } from 'CircleShape';
+import { EllipseShape } from 'EllipseShape';
+import { PathShape } from 'PathShape';
 ```
 
 ## height
@@ -48,7 +51,7 @@ Sets the height of a shape.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| height | Length | Yes | Height of the shape.&lt;br&gt;Unit: vp.&lt;br&gt;If the value is invalid, 0 vp is used. |
+| height | Length | Yes | Height of the shape.<br>Unit: vp.<br>If the value is invalid, 0 vp is used. |
 
 **Return value:**
 
@@ -120,7 +123,7 @@ Sets the width of a shape.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | Length | Yes | Width of the shape.&lt;br&gt;Unit: vp.&lt;br&gt;If the value is invalid, 0 vp is used. |
+| width | Length | Yes | Width of the shape.<br>Unit: vp.<br>If the value is invalid, 0 vp is used. |
 
 **Return value:**
 

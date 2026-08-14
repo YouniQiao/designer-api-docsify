@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { inputMonitor } from '@kit.InputKit';
+import { inputMonitor } from 'inputMonitor';
 ```
 
 ## onSwipeInward

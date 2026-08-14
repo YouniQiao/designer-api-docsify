@@ -1,6 +1,6 @@
 # Uint16Array
 
-一种线性数据结构，底层基于ArkTS ArrayBuffer实现。 > **说明：**> > - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。 > **装饰器类型**：\@Sendable
+一种线性数据结构，底层基于[ArkTS ArrayBuffer](arkts-collections.md#@arkts.collections)实现。 > **说明：**> > - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。 > **装饰器类型**：\@Sendable
 
 **起始版本：** 12
 
@@ -68,7 +68,7 @@ at(index: number): number | undefined
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | number | 是 | 要返回的Array元素的索引（从零开始），取值为整数。&lt;br/&gt;如果`index < 0`，则会访问`index + Uint16Array.length`位置的元素。 |
+| index | number | 是 | 要返回的Array元素的索引（从零开始），取值为整数。<br/>如果`index &lt; 0`，则会访问`index + Uint16Array.length`位置的元素。 |
 
 **返回值：**
 
@@ -197,7 +197,7 @@ constructor(array: ArrayLike<number> | ArrayBuffer)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| array | ArrayLike&lt;number&gt; \| ArrayBuffer | 是 | 用于构造ArkTS Uint16Array的对象。 当参数类型是ArrayBuffer时buffer所占的字节数需是2的整数倍。 |
+| array | [ArrayLike](../../apis-na/arkts-apis/arkts-na-arraylike-i.md)&lt;number&gt; \| ArrayBuffer | 是 | 用于构造ArkTS Uint16Array的对象。 当参数类型是ArrayBuffer时buffer所占的字节数需是2的整数倍。 |
 
 **错误码：**
 
@@ -263,9 +263,9 @@ copyWithin(target: number, start: number, end?: number): Uint16Array
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| target | number | 是 | 目标起始位置的下标，如果`target < 0`，则会从`target + array.length`位置开始。 |
-| start | number | 是 | 源起始位置下标，如果`start < 0`，则会从`start + Uint16Array.length`位置开始。 |
-| end | number | 否 | 源终止位置下标（不包含end位置的元素），如果`end < 0`，则会到`end + Uint16Array.length`位置结束。默认为ArkTS Uint16Array的长度。 |
+| target | number | 是 | 目标起始位置的下标，如果`target &lt; 0`，则会从`target + array.length`位置开始。 |
+| start | number | 是 | 源起始位置下标，如果`start &lt; 0`，则会从`start + Uint16Array.length`位置开始。 |
+| end | number | 否 | 源终止位置下标（不包含end位置的元素），如果`end &lt; 0`，则会到`end + Uint16Array.length`位置结束。默认为ArkTS Uint16Array的长度。 |
 
 **返回值：**
 
@@ -377,8 +377,8 @@ fill(value: number, start?: number, end?: number): Uint16Array
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | number | 是 | 待填充的值，取值范围为0到2^16-1，即0到65535。 如果元素超出此范围，该元素会通过取模运算转换为0~65535范围内的值（即执行 value & 0xFFFF 操作）。 |
-| start | number | 否 | 开始填充的索引，如果`start < 0`，则会从`start + Uint16Array.length`位置开始。默认值为**0**。 |
-| end | number | 否 | 结束填充的索引（不包括该元素），如果`end < 0`，则会到`end + Uint16Array.length`位置结束。默认为ArkTS Uint16Array的长度。 |
+| start | number | 否 | 开始填充的索引，如果`start &lt; 0`，则会从`start + Uint16Array.length`位置开始。默认值为**0**。 |
+| end | number | 否 | 结束填充的索引（不包括该元素），如果`end &lt; 0`，则会到`end + Uint16Array.length`位置结束。默认为ArkTS Uint16Array的长度。 |
 
 **返回值：**
 
@@ -567,7 +567,7 @@ static from(arrayLike: ArrayLike<number>): Uint16Array
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arrayLike | ArrayLike&lt;number&gt; | 是 | 用于构造ArkTS Uint16Array的ArrayLike对象。 |
+| arrayLike | [ArrayLike](../../apis-na/arkts-apis/arkts-na-arraylike-i.md)&lt;number&gt; | 是 | 用于构造ArkTS Uint16Array的ArrayLike对象。 |
 
 **返回值：**
 
@@ -599,7 +599,7 @@ static from<T>(arrayLike: ArrayLike<T>, mapFn: TypedArrayFromMapFn<T, number>): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arrayLike | ArrayLike&lt;T&gt; | 是 | 用于构造ArrayLike对象。 |
+| arrayLike | [ArrayLike](../../apis-na/arkts-apis/arkts-na-arraylike-i.md)&lt;T&gt; | 是 | 用于构造ArrayLike对象。 |
 | mapFn | [TypedArrayFromMapFn](arkts-arkts-collections-typedarrayfrommapfn-t.md)&lt;T, number&gt; | 是 | 映射函数。 |
 
 **返回值：**
@@ -902,7 +902,7 @@ static of(...items: number[]): Uint16Array
 
 | 类型 | 说明 |
 | --- | --- |
-| Uint16Array | 新的ArkTS Uint16Array实例。可能的异常原因：1.必填参数未指定； &lt;br&gt;2.参数类型不正确；3.参数校验失败。 |
+| Uint16Array | 新的ArkTS Uint16Array实例。可能的异常原因：1.必填参数未指定； <br>2.参数类型不正确；3.参数校验失败。 |
 
 ## reduce
 
@@ -1048,7 +1048,7 @@ reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Uint16Ar
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;U, number, Uint16Array&gt; | 是 | 对Uint16Array中每个元素调用的函数。 |
-| initialValue | U | 是 | 作为首次调用callbackFn函数第一个参数的值。 &lt;br&gt;若未提供初始值，则会使用Uint16Array的最后一个元素作为初始值， &lt;br&gt;并从倒数第二个元素开始调用callback。 |
+| initialValue | U | 是 | 作为首次调用callbackFn函数第一个参数的值。 <br>若未提供初始值，则会使用Uint16Array的最后一个元素作为初始值， <br>并从倒数第二个元素开始调用callback。 |
 
 **返回值：**
 
@@ -1159,7 +1159,7 @@ set(array: ArrayLike<number>, offset?: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| array | ArrayLike&lt;number&gt; | 是 | 用于设置的ArrayLike对象。 |
+| array | [ArrayLike](../../apis-na/arkts-apis/arkts-na-arraylike-i.md)&lt;number&gt; | 是 | 用于设置的ArrayLike对象。 |
 | offset | number | 否 | 写入的起始位置。默认为0。 |
 
 **错误码：**
@@ -1193,8 +1193,8 @@ slice(start?: number, end?: number): Uint16Array
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| start | number | 否 | 开始索引，如果`start < 0`，则会从`start + Uint16Array.length`位置开始。默认值为**0**。 |
-| end | number | 否 | 结束索引（不包括该元素），如果`end < 0`，则会到`end + Uint16Array.length`位置结束。默认为ArkTS Uint16Array的长度。 |
+| start | number | 否 | 开始索引，如果`start &lt; 0`，则会从`start + Uint16Array.length`位置开始。默认值为**0**。 |
+| end | number | 否 | 结束索引（不包括该元素），如果`end &lt; 0`，则会到`end + Uint16Array.length`位置结束。默认为ArkTS Uint16Array的长度。 |
 
 **返回值：**
 
@@ -1311,8 +1311,8 @@ subarray(begin?: number, end?: number): Uint16Array
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| begin | number | 否 | 开始索引，如果`begin < 0`，则会从`begin + Uint16Array.length`位置开始。默认值为**0**。 |
-| end | number | 否 | 结束索引（不包括该元素），如果`end < 0`，则会到`end + Uint16Array.length`位置结束。默认为ArkTS Uint16Array的长度。 |
+| begin | number | 否 | 开始索引，如果`begin &lt; 0`，则会从`begin + Uint16Array.length`位置开始。默认值为**0**。 |
+| end | number | 否 | 结束索引（不包括该元素），如果`end &lt; 0`，则会到`end + Uint16Array.length`位置结束。默认为ArkTS Uint16Array的长度。 |
 
 **返回值：**
 

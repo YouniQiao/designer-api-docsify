@@ -15,7 +15,14 @@ Layout information for the expanded state.
 ## Modules to Import
 
 ```TypeScript
-import { HoverModeStatus, ExtraRegionPosition, OnHoverStatusChangeHandler, ExpandedRegionLayoutOptions, FoldSplitContainer, HoverModeRegionLayoutOptions, FoldedRegionLayoutOptions, PresetSplitRatio } from '@kit.ArkUI';
+import { ExtraRegionPosition } from 'ExtraRegionPosition';
+import { ExpandedRegionLayoutOptions } from 'ExpandedRegionLayoutOptions';
+import { HoverModeRegionLayoutOptions } from 'HoverModeRegionLayoutOptions';
+import { FoldedRegionLayoutOptions } from 'FoldedRegionLayoutOptions';
+import { PresetSplitRatio } from 'PresetSplitRatio';
+import { FoldSplitContainer } from 'FoldSplitContainer';
+import { HoverModeStatus } from 'HoverModeStatus';
+import { OnHoverStatusChangeHandler } from 'OnHoverStatusChangeHandler';
 ```
 
 ## extraRegionPosition

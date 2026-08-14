@@ -3,7 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
-import { LazyVWaterFlowLayout, LazyWaterFlowLayoutAttribute, LazyVWaterFlowLayoutAttribute } from '@kit.ArkUI';
+import { LazyVWaterFlowLayout } from 'LazyVWaterFlowLayout';
+import { LazyVWaterFlowLayoutAttribute } from 'LazyVWaterFlowLayoutAttribute';
+import { LazyWaterFlowLayoutAttribute } from 'LazyWaterFlowLayoutAttribute';
 ```
 
 ## Summary

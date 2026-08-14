@@ -17,7 +17,11 @@ Application component that has the UI. It provides lifecycle callbacks such as c
 ## Modules to Import
 
 ```TypeScript
-import { Callee, Caller, OnReleaseCallback, OnRemoteStateChangeCallback, CalleeCallback } from '@kit.AbilityKit';
+import { Callee } from 'Callee';
+import { CalleeCallback } from 'CalleeCallback';
+import { Caller } from 'Caller';
+import { OnReleaseCallback } from 'OnReleaseCallback';
+import { OnRemoteStateChangeCallback } from 'OnRemoteStateChangeCallback';
 ```
 
 ## onBackPressed
@@ -206,7 +210,7 @@ Called when a UIAbility is to be migrated across devices. You can save service d
 | Type | Description |
 | --- | --- |
 | AbilityConstant.OnContinueResult | Return the result of onContinue.<br>**Applicable version:** 9 - 11 |
-| AbilityConstant.OnContinueResult \| Promise&lt;AbilityConstant.OnContinueResult&gt; | Whether the migration is accepted. The options are as follows: &lt;br&gt;- **AGREE**: The migration is allowed. &lt;br&gt;- **REJECT**: The migration is rejected, for example, when an application is abnormal in **onContinue()**. &lt;br&gt;- **MISMATCH**: The application versions of the source and target devices do not match. The application on the source device can obtain the version of the target application from **onContinue**. If the ability continuation cannot be performed due to version mismatch, this result is returned. &lt;br&gt; This callback comes in pairs with **onWindowStageRestore**. In ability continuation scenarios, the source UIAbility triggers **onContinue** to save custom data, and the target UIAbility triggers **onWindowStageRestore** to restore the custom data.<br>**Applicable version:** 12 and later |
+| AbilityConstant.OnContinueResult \| Promise&lt;AbilityConstant.OnContinueResult&gt; | Whether the migration is accepted. The options are as follows: <br>- **AGREE**: The migration is allowed. <br>- **REJECT**: The migration is rejected, for example, when an application is abnormal in **onContinue()**. <br>- **MISMATCH**: The application versions of the source and target devices do not match. The application on the source device can obtain the version of the target application from **onContinue**. If the ability continuation cannot be performed due to version mismatch, this result is returned. <br> This callback comes in pairs with **onWindowStageRestore**. In ability continuation scenarios, the source UIAbility triggers **onContinue** to save custom data, and the target UIAbility triggers **onWindowStageRestore** to restore the custom data.<br>**Applicable version:** 12 and later |
 
 ## Examples
 
@@ -621,7 +625,7 @@ Triggered by the system just before the UIAbility is about to close (for example
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether to terminate the UIAbility. &lt;br&gt;The value &lt;code&gt;true&lt;/code&gt; means that the termination process is canceled. &lt;br&gt;The value &lt;code&gt;false&lt;/code&gt; means to continue terminating the UIAbility. |
+| boolean | Whether to terminate the UIAbility. <br>The value &lt;code&gt;true&lt;/code&gt; means that the termination process is canceled. <br>The value &lt;code&gt;false&lt;/code&gt; means to continue terminating the UIAbility. |
 
 ## Examples
 
@@ -684,7 +688,7 @@ Triggered by the system just before the UIAbility is close (for example, when th
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. &lt;br&gt;The value &lt;code&gt;true&lt;/code&gt; means that the termination process is canceled. &lt;br&gt;The value &lt;code&gt;false&lt;/code&gt; means to continue terminating the UIAbility. |
+| Promise&lt;boolean&gt; | Promise used to return the result. <br>The value &lt;code&gt;true&lt;/code&gt; means that the termination process is canceled. <br>The value &lt;code&gt;false&lt;/code&gt; means to continue terminating the UIAbility. |
 
 ## Examples
 

@@ -26,8 +26,8 @@ Queries usage information about each bundle within a specified period. This meth
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| begin | number | 是 | Indicates the start time of the query period, in milliseconds. &lt;br&gt; Unit:ms |
-| end | number | 是 | Indicates the end time of the query period, in milliseconds. &lt;br&gt; Unit:ms |
+| begin | number | 是 | Indicates the start time of the query period, in milliseconds. <br> Unit:ms |
+| end | number | 是 | Indicates the end time of the query period, in milliseconds. <br> Unit:ms |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[BundleActiveInfoResponse](arkts-backgroundtasks-bundlestate-bundleactiveinforesponse-i.md)&gt; | 是 | the callback of queryBundleStateInfos. the [BundleActiveInfoResponse](arkts-backgroundtasks-bundlestate-bundleactiveinforesponse-i.md#BundleActiveInfoResponse) objects containing the usage information about each bundle. |
 
 ## 示例
@@ -74,8 +74,8 @@ Queries usage information about each bundle within a specified period. This meth
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| begin | number | 是 | Indicates the start time of the query period, in milliseconds. &lt;br&gt; Unit:ms |
-| end | number | 是 | Indicates the end time of the query period, in milliseconds. &lt;br&gt; Unit:ms |
+| begin | number | 是 | Indicates the start time of the query period, in milliseconds. <br> Unit:ms |
+| end | number | 是 | Indicates the end time of the query period, in milliseconds. <br> Unit:ms |
 
 **返回值：**
 

@@ -1,6 +1,6 @@
 # GeolocationPermissions
 
-Implements a GeolocationPermissions object. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; You must load the Web component before calling the APIs in GeolocationPermissions. &lt;/p&gt;
+Implements a GeolocationPermissions object. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<br> You must load the Web component before calling the APIs in GeolocationPermissions. &lt;/p&gt;
 
 **Since:** 23
 
@@ -41,7 +41,7 @@ Allows the specified origin to use the geolocation information.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100011](../../apis-arkweb/errorcode-webview.md#17100011-invalid-origin) | Invalid origin. |
 
 ## deleteAllGeolocation
@@ -97,7 +97,7 @@ Delete geolocation permissions for specifies source.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100011](../../apis-arkweb/errorcode-webview.md#17100011-invalid-origin) | Invalid origin. |
 
 ## getAccessibleGeolocation
@@ -135,7 +135,7 @@ Gets the geolocation permission status of the specified source.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100011](../../apis-arkweb/errorcode-webview.md#17100011-invalid-origin) | Invalid origin. |
 
 ## getAccessibleGeolocation
@@ -168,7 +168,7 @@ Gets the geolocation permission status of the specified source.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100011](../../apis-arkweb/errorcode-webview.md#17100011-invalid-origin) | Invalid origin. |
 
 ## getStoredGeolocation
@@ -205,7 +205,7 @@ Get all stored geolocation permission url source.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 
 ## getStoredGeolocation
 
@@ -236,5 +236,5 @@ Get all stored geolocation permission url source.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 

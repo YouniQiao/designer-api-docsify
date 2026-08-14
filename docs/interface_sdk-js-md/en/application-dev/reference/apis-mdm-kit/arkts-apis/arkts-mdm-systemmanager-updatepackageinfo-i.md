@@ -15,7 +15,7 @@ Represents information about the system update packages.
 ## Modules to Import
 
 ```TypeScript
-import { systemManager } from '@kit.MDMKit';
+import { systemManager } from 'systemManager';
 ```
 
 ## authInfo

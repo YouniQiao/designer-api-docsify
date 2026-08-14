@@ -67,7 +67,7 @@ A constructor used to create a text line height and multiple. > **NOTE：**> > -
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | lineHeight | LengthMetrics | Yes | Text line height options. If **value** of **LengthMetrics** is less than or equal to 0, the text line height is unlimited and automatically adapts to the font size. |
-| lineHeightMultiple | number | No | Multiplier for the text line height.&lt;br&gt;Value range: 0, +∞). Decimals are supported. |
+| lineHeightMultiple | number | No | Multiplier for the text line height.<br>Value range: 0, +∞). Decimals are supported. |
 
 ## lineHeight
 

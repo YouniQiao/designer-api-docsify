@@ -15,7 +15,7 @@ Defines the data operation performed by the UDMF. It includes three optional par
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from '@kit.ArkData';
+import { unifiedDataChannel } from 'unifiedDataChannel';
 ```
 
 ## intention

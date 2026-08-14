@@ -40,7 +40,7 @@ onVisibleIndexesChange(callback: Callback<int[]> | undefined): LazyDynamicLayout
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-na/arkts-apis/arkts-na-callback-t.md)&lt;int[]&gt; \| undefined | 是 | 可见索引变化时回调的回调函数。 &lt;br&gt;传递undefined将取消注册回调。 |
+| callback | [Callback](../../apis-na/arkts-apis/arkts-na-callback-t.md)&lt;int[]&gt; \| undefined | 是 | 可见索引变化时回调的回调函数。 <br>传递undefined将取消注册回调。 |
 
 **返回值：**
 

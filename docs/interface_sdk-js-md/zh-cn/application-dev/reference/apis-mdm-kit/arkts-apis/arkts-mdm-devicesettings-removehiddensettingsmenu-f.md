@@ -57,7 +57,7 @@ let menusToHidden: Array<deviceSettings.SettingsMenu> = [
   // 需根据实际情况进行替换或增加
   deviceSettings.SettingsMenu.ACCOUNT_ID,
   deviceSettings.SettingsMenu.WIFI,
-]
+];
 
 try {
   deviceSettings.removeHiddenSettingsMenu(wantTemp, menusToHidden);

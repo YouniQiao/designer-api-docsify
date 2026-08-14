@@ -15,7 +15,7 @@ Describes the display mode of a device and the corresponding physical screen res
 ## Modules to Import
 
 ```TypeScript
-import { display } from '@kit.ArkUI';
+import { display } from 'display';
 ```
 
 ## foldDisplayMode

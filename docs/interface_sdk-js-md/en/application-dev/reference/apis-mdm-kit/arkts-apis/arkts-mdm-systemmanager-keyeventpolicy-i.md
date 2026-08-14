@@ -15,7 +15,7 @@ Enumerates key event handling policies. When a key event occurs, only the keys f
 ## Modules to Import
 
 ```TypeScript
-import { systemManager } from '@kit.MDMKit';
+import { systemManager } from 'systemManager';
 ```
 
 ## keyCode

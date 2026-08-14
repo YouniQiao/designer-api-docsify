@@ -17,7 +17,7 @@ Result of an analysis tool execution.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'photoAccessHelper';
 ```
 
 ## errCode
@@ -26,7 +26,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 errCode: int
 ```
 
-Error code of the tool execution. The value 0 indicates success. Possible error codes: &lt;br&gt;23800203 - Temperature is too high. &lt;br&gt;23800204 - Battery level is too low. &lt;br&gt;23800205 - Storage space is insufficient. &lt;br&gt;23800206 - Power saving mode is enabled. &lt;br&gt;23800207 - Intelligent analysis service is already running. &lt;br&gt;23800208 - Intelligent analysis switch is disabled. &lt;br&gt;23800209 - Analysis service error. Check the logs for details. &lt;br&gt;23800301 - Internal system error.
+Error code of the tool execution. The value 0 indicates success. Possible error codes: <br>23800203 - Temperature is too high. <br>23800204 - Battery level is too low. <br>23800205 - Storage space is insufficient. <br>23800206 - Power saving mode is enabled. <br>23800207 - Intelligent analysis service is already running. <br>23800208 - Intelligent analysis switch is disabled. <br>23800209 - Analysis service error. Check the logs for details. <br>23800301 - Internal system error.
 
 **Type:** int
 

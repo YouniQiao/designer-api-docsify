@@ -15,7 +15,38 @@ Provides APIs for measuring text metrics, such as text height and width. > **NOT
 ## Modules to Import
 
 ```TypeScript
-import { OverlayManager, FrameCallback, ResolvedUIContext, NodeRenderStateChangeCallback, MediaQuery, OverlayManagerOptions, TextMenuController, UIObserver, Font, KeyboardAvoidMode, MarqueeDynamicSyncScene, PromptAction, NodeRenderState, UIContext, TextSelectionClearPolicy, SwiperDynamicSyncScene, Router, MarqueeDynamicSyncSceneType, DialogPresenter, Magnifier, ContextMenuController, UIInspector, CustomKeyboardContinueFeature, CursorController, SwiperDynamicSyncSceneType, AtomicServiceBar, PageInfo, TargetInfo, ComponentUtils, DragController, MeasureUtils, NodeIdentity } from '@kit.ArkUI';
+import { AtomicServiceBar } from 'AtomicServiceBar';
+import { ComponentUtils } from 'ComponentUtils';
+import { ContextMenuController } from 'ContextMenuController';
+import { CursorController } from 'CursorController';
+import { DialogPresenter } from 'DialogPresenter';
+import { DragController } from 'DragController';
+import { Font } from 'Font';
+import { KeyboardAvoidMode } from 'KeyboardAvoidMode';
+import { MediaQuery } from 'MediaQuery';
+import { OverlayManager } from 'OverlayManager';
+import { PromptAction } from 'PromptAction';
+import { Router } from 'Router';
+import { UIContext } from 'UIContext';
+import { UIInspector } from 'UIInspector';
+import { UIObserver } from 'UIObserver';
+import { PageInfo } from 'PageInfo';
+import { SwiperDynamicSyncScene } from 'SwiperDynamicSyncScene';
+import { SwiperDynamicSyncSceneType } from 'SwiperDynamicSyncSceneType';
+import { MarqueeDynamicSyncScene } from 'MarqueeDynamicSyncScene';
+import { MarqueeDynamicSyncSceneType } from 'MarqueeDynamicSyncSceneType';
+import { MeasureUtils } from 'MeasureUtils';
+import { FrameCallback } from 'FrameCallback';
+import { OverlayManagerOptions } from 'OverlayManagerOptions';
+import { TargetInfo } from 'TargetInfo';
+import { TextMenuController } from 'TextMenuController';
+import { NodeIdentity } from 'NodeIdentity';
+import { NodeRenderState } from 'NodeRenderState';
+import { NodeRenderStateChangeCallback } from 'NodeRenderStateChangeCallback';
+import { Magnifier } from 'Magnifier';
+import { ResolvedUIContext } from 'ResolvedUIContext';
+import { TextSelectionClearPolicy } from 'TextSelectionClearPolicy';
+import { CustomKeyboardContinueFeature } from 'CustomKeyboardContinueFeature';
 ```
 
 ## getParagraphs
@@ -83,7 +114,7 @@ Measures the single-line display width of the specified text. For multi-line tex
 
 | Type | Description |
 | --- | --- |
-| number | Text width. &lt;br&gt;**NOTE：**&lt;br&gt;Floating-point results are rounded up. &lt;br&gt;Unit: px. |
+| number | Text width. <br>**NOTE：**<br>Floating-point results are rounded up. <br>Unit: px. |
 
 ## measureTextSize
 
@@ -117,5 +148,5 @@ Measures the width and height of the given single-line text. > **NOTE：**> > Wh
 
 | Type | Description |
 | --- | --- |
-| SizeOptions | Width and height of the text. &lt;br&gt;**NOTE：**&lt;br&gt;If **constraintWidth** is not specified, the floating-point value of the text width will be rounded up. &lt;br&gt;The return values for text width and height are both in px. |
+| SizeOptions | Width and height of the text. <br>**NOTE：**<br>If **constraintWidth** is not specified, the floating-point value of the text width will be rounded up. <br>The return values for text width and height are both in px. |
 

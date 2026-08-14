@@ -17,7 +17,7 @@ DSoftBus provides stable and reliable underlying channels for cross-device commu
 ## Modules to Import
 
 ```TypeScript
-import { proxyChannelManager } from '@kit.DistributedServiceKit';
+import { proxyChannelManager } from 'proxyChannelManager';
 ```
 
 ## Summary

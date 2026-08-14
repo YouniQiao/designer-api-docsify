@@ -30,6 +30,6 @@ function once(activity: ActivityType, callback: Callback<ActivityResponse>): voi
 ```TypeScript
 stationary.once('still', (data) => {
     console.info('data=' + JSON.stringify(data));
-})
+});
 ```
 

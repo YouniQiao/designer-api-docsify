@@ -15,7 +15,7 @@ Describes a coordinate position. In the global coordinate system, the origin is 
 ## Modules to Import
 
 ```TypeScript
-import { display } from '@kit.ArkUI';
+import { display } from 'display';
 ```
 
 ## x

@@ -15,7 +15,7 @@ Describes the event indicating that the output device changes.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'audio';
 ```
 
 ## changeReason

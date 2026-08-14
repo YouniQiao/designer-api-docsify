@@ -15,7 +15,7 @@ Describes an audio device pair including both input and output devices.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'audio';
 ```
 
 ## inputDevice

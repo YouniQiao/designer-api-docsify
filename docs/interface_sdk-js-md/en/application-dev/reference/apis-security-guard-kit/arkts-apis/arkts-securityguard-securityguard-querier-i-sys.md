@@ -17,7 +17,7 @@ Definition callback of receiving the query data.
 ## Modules to Import
 
 ```TypeScript
-import { securityGuard } from '@kit.SecurityGuardKit';
+import { securityGuard } from 'securityGuard';
 ```
 
 ## onComplete

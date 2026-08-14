@@ -38,7 +38,7 @@
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | { fingers?: number; repeat?: boolean; duration?: number } | 否 | 设置长按手势参数。&lt;br&gt; - fingers：触发长按的最少手指数，最小值为1，&nbsp;最大值为10。&lt;br/&gt;默认值：1 &lt;br&gt; - repeat：是否连续触发事件回调。true表示连续触发事件回调，false表示不连续触发事件回调。&lt;br/&gt;默认值：false &lt;br&gt; - duration：触发长按的最短时间，单位为毫秒（ms）。&lt;br/&gt;默认值：500 |
+| value | { fingers?: number; repeat?: boolean; duration?: number } | 否 | 设置长按手势参数。<br> - fingers：触发长按的最少手指数，最小值为1，&nbsp;最大值为10。<br/>默认值：1 <br> - repeat：是否连续触发事件回调。true表示连续触发事件回调，false表示不连续触发事件回调。<br/>默认值：false <br> - duration：触发长按的最短时间，单位为毫秒（ms）。<br/>默认值：500 |
 
 **返回值：**
 

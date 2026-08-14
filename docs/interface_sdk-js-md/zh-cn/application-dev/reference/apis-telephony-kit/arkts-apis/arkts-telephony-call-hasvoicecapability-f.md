@@ -24,3 +24,10 @@ function hasVoiceCapability(): boolean
 | --- | --- |
 | boolean | 返回true表示设备具备语音通话能力，返回false表示设备不具备语音通话能力。 |
 
+## 示例
+
+```TypeScript
+let result: boolean = call.hasVoiceCapability();
+console.info(`hasVoiceCapability: ${JSON.stringify(result)}`);
+```
+

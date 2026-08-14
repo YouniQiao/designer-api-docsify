@@ -60,7 +60,7 @@ let policy: securityManager.PasswordPolicy = {
 try {
   securityManager.setPasswordPolicy(wantTemp, policy);
   console.info(`Succeeded in setting password policy.`);
-} catch(err) {
+} catch (err) {
   console.error(`Failed to set password policy. Code: ${err.code}, message: ${err.message}`);
 }
 ```

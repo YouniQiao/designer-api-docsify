@@ -64,7 +64,7 @@ LazyForEach的内存优化策略。该参数在创建LazyForEach时设定，不�
 releaseStrategy?: LazyForEachReleaseStrategy
 ```
 
-LazyForEach缓存节点的资源释放策略。默认值：LazyForEachReleaseStrategy.BATCH。 &lt;br&gt;默认值:默认值：LazyForEachReleaseStrategy.BATCH。
+LazyForEach缓存节点的资源释放策略。默认值：LazyForEachReleaseStrategy.BATCH。 <br>默认值:默认值：LazyForEachReleaseStrategy.BATCH。
 
 **类型：** [LazyForEachReleaseStrategy](arkts-na-lazyforeach-lazyforeachreleasestrategy-e.md)
 

@@ -15,7 +15,7 @@ Task timeout configuration.
 ## Modules to Import
 
 ```TypeScript
-import { cacheDownload } from '@kit.BasicServicesKit';
+import { cacheDownload } from 'cacheDownload';
 ```
 
 ## httpTotalTimeout

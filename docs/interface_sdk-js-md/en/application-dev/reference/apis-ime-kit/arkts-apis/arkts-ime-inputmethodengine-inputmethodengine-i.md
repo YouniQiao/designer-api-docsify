@@ -17,7 +17,7 @@ In the following API examples, you must first use [getInputMethodEngine](arkts-i
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from '@kit.IMEKit';
+import { inputMethodEngine } from 'inputMethodEngine';
 ```
 
 ## off_inputStart
@@ -84,7 +84,7 @@ Disables listening for a keyboard visibility event. This API uses an asynchronou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type. &lt;br&gt;- The value **'keyboardShow'** indicates the keyboard display event. &lt;br&gt;- The value **'keyboardHide'** indicates the keyboard hiding event. |
+| type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type. <br>- The value **'keyboardShow'** indicates the keyboard display event. <br>- The value **'keyboardHide'** indicates the keyboard hiding event. |
 | callback | () =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 ## Examples
@@ -118,7 +118,7 @@ Disables listening for a keyboard visibility event. This API uses an asynchronou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type. &lt;br&gt;- The value **'keyboardShow'** indicates the keyboard display event. &lt;br&gt;- The value **'keyboardHide'** indicates the keyboard hiding event. |
+| type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type. <br>- The value **'keyboardShow'** indicates the keyboard display event. <br>- The value **'keyboardHide'** indicates the keyboard hiding event. |
 | callback | () =&gt; void | No | Callback to unregister. If this parameter is not specified, this API unregisters all callbacks for the specified type. |
 
 ## Examples
@@ -193,7 +193,7 @@ Enables listening for a keyboard visibility event. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type. &lt;br&gt;- The value **'keyboardShow'** indicates the keyboard display event. &lt;br&gt;- The value **'keyboardHide'** indicates the keyboard hiding event. |
+| type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type. <br>- The value **'keyboardShow'** indicates the keyboard display event. <br>- The value **'keyboardHide'** indicates the keyboard hiding event. |
 | callback | () =&gt; void | Yes | Callback used to return the result. |
 
 ## Examples
@@ -231,7 +231,7 @@ Enables listening for a keyboard visibility event. This API uses an asynchronous
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type. &lt;br&gt;- The value **'keyboardShow'** indicates the keyboard display event. &lt;br&gt;- The value **'keyboardHide'** indicates the keyboard hiding event. |
+| type | 'keyboardShow' \| 'keyboardHide' | Yes | Event type. <br>- The value **'keyboardShow'** indicates the keyboard display event. <br>- The value **'keyboardHide'** indicates the keyboard hiding event. |
 | callback | () =&gt; void | Yes | Callback used to return the result. |
 
 ## Examples

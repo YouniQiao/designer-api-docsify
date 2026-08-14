@@ -15,7 +15,8 @@ Declare custom parameters used for volume panel.
 ## Modules to Import
 
 ```TypeScript
-import { AVVolumePanelParameter, AVVolumePanel } from '@kit.AudioKit';
+import { AVVolumePanel } from 'AVVolumePanel';
+import { AVVolumePanelParameter } from 'AVVolumePanelParameter';
 ```
 
 ## position

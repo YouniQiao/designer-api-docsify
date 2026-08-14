@@ -15,7 +15,7 @@ Describes the physical memory information of the application process.
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
+import { hidebug } from 'hidebug';
 ```
 
 ## rss

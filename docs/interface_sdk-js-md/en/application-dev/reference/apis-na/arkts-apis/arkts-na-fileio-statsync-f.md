@@ -22,7 +22,7 @@ Obtains detailed attributes of a file or directory synchronously. The returned *
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | string \| int | Yes | Application sandbox path, URI, or FD of the file or directory. &lt;br&gt;**Note：**: URIs can be passed since API version 22. |
+| file | string \| int | Yes | Application sandbox path, URI, or FD of the file or directory. <br>**Note：**: URIs can be passed since API version 22. |
 
 **Return value:**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'print';
 ```
 
 ## connectPrinterByIdAndPpd
@@ -34,9 +34,9 @@ Query recommend printer drivers by printer ID.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerId | string | Yes | Indicates the printer ID. &lt;br&gt;Printer ID of the printer to be connected. |
-| protocol | string | Yes | Indicates the protocol. &lt;br&gt;Protocol of the printer to be connected. |
-| ppdName | string | Yes | Indicates the ppd name. &lt;br&gt;Ppd name of the printer to be connected. |
+| printerId | string | Yes | Indicates the printer ID. <br>Printer ID of the printer to be connected. |
+| protocol | string | Yes | Indicates the protocol. <br>Protocol of the printer to be connected. |
+| ppdName | string | Yes | Indicates the ppd name. <br>Ppd name of the printer to be connected. |
 
 **Return value:**
 

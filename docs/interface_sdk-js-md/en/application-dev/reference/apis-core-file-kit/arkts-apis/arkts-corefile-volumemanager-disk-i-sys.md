@@ -17,7 +17,7 @@ Disk information.
 ## Modules to Import
 
 ```TypeScript
-import { volumeManager } from '@kit.CoreFileKit';
+import { volumeManager } from 'volumeManager';
 ```
 
 ## diskId
@@ -122,7 +122,7 @@ Indicates that the disk can be removed.The value true indicates that the disk ca
 sizeBytes: long
 ```
 
-Disk total size. &lt;br&gt;Unit: Byte.
+Disk total size. <br>Unit: Byte.
 
 **Type:** long
 

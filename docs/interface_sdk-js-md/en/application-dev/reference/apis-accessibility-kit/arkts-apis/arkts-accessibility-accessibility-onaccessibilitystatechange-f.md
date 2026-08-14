@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
+import { accessibility } from 'accessibility';
 ```
 
 ## onAccessibilityStateChange

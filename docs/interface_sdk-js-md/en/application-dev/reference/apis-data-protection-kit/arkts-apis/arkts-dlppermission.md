@@ -15,7 +15,7 @@ Data loss prevention (DLP) is a system solution provided to prevent data disclos
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'dlpPermission';
 ```
 
 ## Summary

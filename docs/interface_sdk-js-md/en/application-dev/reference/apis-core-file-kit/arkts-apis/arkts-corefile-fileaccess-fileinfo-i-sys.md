@@ -17,7 +17,7 @@ Provides APIs for managing file or directory attribute information.
 ## Modules to Import
 
 ```TypeScript
-import { fileAccess } from '@kit.CoreFileKit';
+import { fileAccess } from 'fileAccess';
 ```
 
 ## listFile
@@ -320,7 +320,7 @@ Permissions on the file or directory.
 mtime: number
 ```
 
-Time when the file or directory was last modified. &lt;br&gt;Unit: ms.
+Time when the file or directory was last modified. <br>Unit: ms.
 
 **Type:** number
 
@@ -372,7 +372,7 @@ Relative path of the file or directory.
 size: number
 ```
 
-Size of the file or directory. &lt;br&gt;Unit: Byte.
+Size of the file or directory. <br>Unit: Byte.
 
 **Type:** number
 

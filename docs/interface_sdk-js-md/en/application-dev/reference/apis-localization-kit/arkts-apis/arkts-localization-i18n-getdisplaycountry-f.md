@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'i18n';
 ```
 
 ## getDisplayCountry
@@ -39,4 +39,13 @@ Obtains the localized name of the specified country/region.
 | Type | Description |
 | --- | --- |
 | string | Localized script for the specified country. |
+
+## Examples
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let countryName: string = i18n.getDisplayCountry('zh-CN', 'en-GB', true); // countryName = 'China'
+countryName = i18n.getDisplayCountry('zh-CN', 'en-GB'); // countryName = 'China'
+```
 

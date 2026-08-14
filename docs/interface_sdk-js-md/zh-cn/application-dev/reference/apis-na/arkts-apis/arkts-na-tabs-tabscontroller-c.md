@@ -36,7 +36,7 @@ changeIndex(value: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | int | 是 | 页签在Tabs里的索引值，索引值从0开始。&lt;br/&gt;**说明：** &lt;br/&gt;设置小于0或大于最大数量的值时，取默认值0。 |
+| value | int | 是 | 页签在Tabs里的索引值，索引值从0开始。<br/>**说明：** <br/>设置小于0或大于最大数量的值时，取默认值0。 |
 
 ## constructor
 
@@ -82,7 +82,7 @@ preloadItems(indices: Array<int> | undefined): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| indices | Array&lt;int&gt; \| undefined | 是 | 需预加载的子节点的下标数组。&lt;br/&gt;默认值：空数组。&lt;br/&gt;取值为undefined时，按默认值处理。 |
+| indices | Array&lt;int&gt; \| undefined | 是 | 需预加载的子节点的下标数组。<br/>默认值：空数组。<br/>取值为undefined时，按默认值处理。 |
 
 **返回值：**
 
@@ -94,7 +94,7 @@ preloadItems(indices: Array<int> | undefined): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter invalid. Possible causes: &lt;br&gt; 1. The parameter type is not Array&lt;int&gt;. &lt;br&gt; 2. The parameter is an empty array. &lt;br&gt; 3. The parameter contains an invalid index. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter invalid. Possible causes: <br> 1. The parameter type is not Array&lt;int&gt;. <br> 2. The parameter is an empty array. <br> 3. The parameter contains an invalid index. |
 
 ## setTabBarOpacity
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
+import { accessibility } from 'accessibility';
 ```
 
 ## getTouchModeSync
@@ -12,7 +12,7 @@ import { accessibility } from '@kit.AccessibilityKit';
 function getTouchModeSync(): string
 ```
 
-Queries single- or double-touch mode.
+Obtains the single-tap/double-tap operation mode in touch guide mode. This can be used to adjust the app's interaction response mode based on the current operation mode (for example, responding directly to taps in single- tap mode, or requiring double-tap confirmation in double-tap mode).
 
 **Since:** 23
 
@@ -32,5 +32,5 @@ Queries single- or double-touch mode.
 
 | Type | Description |
 | --- | --- |
-| string | Touch mode. &lt;br&gt;- **singleTouchMode**: Single-touch mode. &lt;br&gt;- **doubleTouchMode**: Double-touch mode. &lt;br&gt;- **none**: Touch guide mode is disabled. |
+| string | Touch mode. <br>- **singleTouchMode**: Single-touch mode. <br>- **doubleTouchMode**: Double-touch mode. <br>- **none**: Touch guide mode is disabled. |
 

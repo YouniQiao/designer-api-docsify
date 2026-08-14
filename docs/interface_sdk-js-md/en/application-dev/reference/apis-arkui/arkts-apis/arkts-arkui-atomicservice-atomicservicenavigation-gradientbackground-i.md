@@ -15,7 +15,15 @@ Provides options for setting gradient colors for branding.
 ## Modules to Import
 
 ```TypeScript
-import { GradientBackground, TitleBarType, MixMode, AtomicServiceNavigation, SideBarOptions, TitleOptions, GradientAlpha, NavDestinationBuilder, BackgroundTheme } from '@kit.ArkUI';
+import { AtomicServiceNavigation } from 'AtomicServiceNavigation';
+import { NavDestinationBuilder } from 'NavDestinationBuilder';
+import { MixMode } from 'MixMode';
+import { GradientAlpha } from 'GradientAlpha';
+import { BackgroundTheme } from 'BackgroundTheme';
+import { TitleBarType } from 'TitleBarType';
+import { SideBarOptions } from 'SideBarOptions';
+import { TitleOptions } from 'TitleOptions';
+import { GradientBackground } from 'GradientBackground';
 ```
 
 ## alpha

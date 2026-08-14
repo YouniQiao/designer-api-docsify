@@ -19,7 +19,7 @@ Define configuration of the open VPN network.
 ## Modules to Import
 
 ```TypeScript
-import { vpn } from '@kit.NetworkKit';
+import { vpn } from 'vpn';
 ```
 
 ## askpass

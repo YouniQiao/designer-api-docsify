@@ -19,7 +19,7 @@ This module provides word selection management capabilities, including creating,
 ## Modules to Import
 
 ```TypeScript
-import { selectionManager } from '@kit.BasicServicesKit';
+import { selectionManager } from 'selectionManager';
 ```
 
 ## Summary

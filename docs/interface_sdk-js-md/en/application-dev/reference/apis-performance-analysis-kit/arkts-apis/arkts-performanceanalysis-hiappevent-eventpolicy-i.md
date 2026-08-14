@@ -15,7 +15,7 @@ Defines the system event configuration policy, which is set by calling [configEv
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from 'hiAppEvent';
 ```
 
 ## addressSanitizerPolicy

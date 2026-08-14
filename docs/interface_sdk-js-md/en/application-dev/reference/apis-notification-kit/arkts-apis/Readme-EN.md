@@ -384,7 +384,8 @@
   - [SourceType(system api)](arkts-notification-notificationmanager-sourcetype-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [SwitchState(system api)](arkts-notification-notificationmanager-switchstate-e-sys.md)<!--DelEnd-->
-- [@ohos.notificationSubscribe](arkts-notificationsubscribe.md)
+<!--Del-->
+- [@ohos.notificationSubscribe](arkts-notificationsubscribe.md)<!--DelEnd-->
   <!--Del-->
   - [distributeOperation(system api)](arkts-notification-notificationsubscribe-distributeoperation-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -519,13 +520,16 @@
     - [NotificationSlot](arkts-notification-notificationslot-notificationslot-i.md)
     <!--Del-->
     - [NotificationSlot(system api)](arkts-notification-notificationslot-notificationslot-i-sys.md)<!--DelEnd-->
-  - [notificationSorting](arkts-notificationsorting.md)
+  <!--Del-->
+  - [notificationSorting](arkts-notificationsorting.md)<!--DelEnd-->
     <!--Del-->
     - [NotificationSorting(system api)](arkts-notification-notificationsorting-notificationsorting-i-sys.md)<!--DelEnd-->
-  - [notificationSortingMap](arkts-notificationsortingmap.md)
+  <!--Del-->
+  - [notificationSortingMap](arkts-notificationsortingmap.md)<!--DelEnd-->
     <!--Del-->
     - [NotificationSortingMap(system api)](arkts-notification-notificationsortingmap-notificationsortingmap-i-sys.md)<!--DelEnd-->
-  - [notificationSubscribeInfo](arkts-notificationsubscribeinfo.md)
+  <!--Del-->
+  - [notificationSubscribeInfo](arkts-notificationsubscribeinfo.md)<!--DelEnd-->
     <!--Del-->
     - [NotificationSubscribeInfo(system api)](arkts-notification-notificationsubscribeinfo-notificationsubscribeinfo-i-sys.md)<!--DelEnd-->
     <!--Del-->

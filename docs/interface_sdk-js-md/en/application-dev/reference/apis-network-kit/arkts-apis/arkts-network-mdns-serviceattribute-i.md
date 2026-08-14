@@ -15,7 +15,7 @@ Defines the mDNS service attribute information.
 ## Modules to Import
 
 ```TypeScript
-import { mdns } from '@kit.NetworkKit';
+import { mdns } from 'mdns';
 ```
 
 ## key

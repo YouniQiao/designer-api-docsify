@@ -15,7 +15,7 @@ Describes the main window information.
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'window';
 ```
 
 ## displayId

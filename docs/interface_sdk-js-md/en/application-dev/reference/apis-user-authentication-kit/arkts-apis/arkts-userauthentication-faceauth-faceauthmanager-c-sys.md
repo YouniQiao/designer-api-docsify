@@ -17,7 +17,7 @@ Provides APIs for facial authentication management. It provides management featu
 ## Modules to Import
 
 ```TypeScript
-import { faceAuth } from '@kit.UserAuthenticationKit';
+import { faceAuth } from 'faceAuth';
 ```
 
 ## constructor
@@ -74,7 +74,7 @@ Sets the surface ID of the face preview page during face enrollment. This API mu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| surfaceId | string | Yes | ID of the surface held by XComponent. This ID is used to display the face preview page during face enrollment. &lt;br&gt;**Note:** A valid **surfaceId** must be obtained through the getXComponentSurfaceId method after **XComponent** initialization. An invalid **surfaceId** may cause the preview page to fail to display or the API call to fail. |
+| surfaceId | string | Yes | ID of the surface held by XComponent. This ID is used to display the face preview page during face enrollment. <br>**Note:** A valid **surfaceId** must be obtained through the getXComponentSurfaceId method after **XComponent** initialization. An invalid **surfaceId** may cause the preview page to fail to display or the API call to fail. |
 
 **Error codes:**
 

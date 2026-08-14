@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { config } from '@kit.AccessibilityKit';
+import { config } from 'config';
 ```
 
 ## onSeniorModeStateChangeForApp
@@ -12,7 +12,7 @@ import { config } from '@kit.AccessibilityKit';
 function onSeniorModeStateChangeForApp(callback: Callback<AppSeniorModeInfo>): void
 ```
 
-Register an observer for anyone application's senior mode state changes.
+Listens for senior mode state change events of all apps. This API uses an asynchronous callback to return the result. > **NOTE：**> > - The callback parameter for registration should use a named function instead of an anonymous function, otherwise > a new underlying object will be created each time it is called, causing memory leaks. > > - After calling this method, be sure to use > [config.offSeniorModeStateChangeForApp](arkts-accessibility-config-offseniormodestatechangeforapp-f-sys.md#offSeniorModeStateChangeForApp-(System-API)) > to cancel the listener before the component instance is destroyed (for example, in the aboutToDisappear lifecycle > ), otherwise crashes may occur.
 
 **Since:** 26.0.0
 
@@ -34,12 +34,12 @@ Register an observer for anyone application's senior mode state changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AppSeniorModeInfo](arkts-accessibility-config-appseniormodeinfo-i-sys.md)&gt; | Yes | Asynchronous callback interface. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AppSeniorModeInfo](arkts-accessibility-config-appseniormodeinfo-i-sys.md)&gt; | Yes | Callback invoked to return the modified senior mode information of the app. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. &lt;br&gt;The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. &lt;br&gt;A non-system application calls a system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. <br>The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. <br>A non-system application calls a system API. |
 

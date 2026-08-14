@@ -58,5 +58,5 @@ Report the geolocation permission status from users.
 | --- | --- | --- | --- |
 | origin | string | 是 | Index of the origin. |
 | allow | boolean | 是 | Geolocation permission status. {@code true} means to allow geolocation permission; {@code false} means to disallow geolocation permission. |
-| retain | boolean | 是 | Whether the geolocation permission status can be saved to the system. {@code true} means to allow the geolocation permission status to be saved to the system; {@code false} means to disallow the geolocation permission status to be saved to the system. You can manage the geolocation permissions saved to the system through [GeolocationPermissions](../../apis-na/arkts-apis/arkts-na-webview-geolocationpermissions-c.md#GeolocationPermissions). |
+| retain | boolean | 是 | Whether the geolocation permission status can be saved to the system. {@code true} means to allow the geolocation permission status to be saved to the system; {@code false} means to disallow the geolocation permission status to be saved to the system. You can manage the geolocation permissions saved to the system through [GeolocationPermissions](../arkts-apis/arkts-arkweb-webview-geolocationpermissions-c.md#GeolocationPermissions). |
 

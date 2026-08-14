@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { deviceControl } from '@kit.MDMKit';
+import { deviceControl } from 'deviceControl';
 ```
 
 ## lockScreen

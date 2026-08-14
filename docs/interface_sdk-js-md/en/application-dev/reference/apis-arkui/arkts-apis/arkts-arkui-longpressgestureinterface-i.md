@@ -38,7 +38,7 @@ Creates a long press gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-ar
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | { fingers?: number; repeat?: boolean; duration?: number } | No | Parameters for the long press gesture. &lt;br&gt; - **fingers**: minimum number of fingers to trigger a long press gesture. The value ranges from 1 to 10. &lt;br&gt;Default value: **1**. &lt;br&gt; - **repeat**: whether to continuously trigger the event callback. The value **true** means to continuously trigger the event callback, and **false** means the opposite.&lt;br&gt;Default value: **false**. &lt;br&gt; - **duration**: minimum hold-down time, in ms.&lt;br&gt;Default value: **500**. |
+| value | { fingers?: number; repeat?: boolean; duration?: number } | No | Parameters for the long press gesture. <br> - **fingers**: minimum number of fingers to trigger a long press gesture. The value ranges from 1 to 10. <br>Default value: **1**. <br> - **repeat**: whether to continuously trigger the event callback. The value **true** means to continuously trigger the event callback, and **false** means the opposite.<br>Default value: **false**. <br> - **duration**: minimum hold-down time, in ms.<br>Default value: **500**. |
 
 **Return value:**
 

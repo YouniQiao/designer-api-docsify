@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { ValueType, ValuesBucket } from '@kit.ArkData';
+import { ValueType } from 'ValueType';
+import { ValuesBucket } from 'ValuesBucket';
 ```
 
 ## Summary

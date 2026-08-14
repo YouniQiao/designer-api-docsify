@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'photoAccessHelper';
 ```
 
 ## getPhotoAccessHelper
@@ -118,5 +118,5 @@ Obtains a PhotoAccessHelper instance for accessing and modifying media files in 
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called by non-system application |
-| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | Scene parameters validate failed, possible causes: &lt;br&gt;1. userId is invalid. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | Scene parameters validate failed, possible causes: <br>1. userId is invalid. |
 

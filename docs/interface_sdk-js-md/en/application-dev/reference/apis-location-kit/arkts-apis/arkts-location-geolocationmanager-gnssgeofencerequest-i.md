@@ -15,7 +15,7 @@ Configuring parameters in GNSS geofence requests.
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'geoLocationManager';
 ```
 
 ## fenceExtensionAbilityName

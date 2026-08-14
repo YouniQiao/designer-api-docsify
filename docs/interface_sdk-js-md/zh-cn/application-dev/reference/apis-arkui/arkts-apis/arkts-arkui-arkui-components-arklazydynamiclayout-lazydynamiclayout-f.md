@@ -26,7 +26,7 @@ export declare function LazyDynamicLayout(algorithm: LazyLayoutAlgorithm): LazyD
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| algorithm | [LazyLayoutAlgorithm](../../apis-na/arkts-apis/arkts-na-lazylayoutalgorithm-i.md) | 是 | Lazy layout algorithm. |
+| algorithm | [LazyLayoutAlgorithm](arkts-arkui-lazylayoutalgorithm-i.md) | 是 | Lazy layout algorithm. |
 
 **返回值：**
 

@@ -41,7 +41,7 @@ public constructor(locale?: Intl.Locale, options?: SymbolDateTimeFormatOptions)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | locale | Intl.Locale | 否 | 区域对象。默认值：系统区域对象。 |
-| options | [SymbolDateTimeFormatOptions](arkts-localization-i18n-symboldatetimeformatoptions-i.md) | 否 | 自定义符号时间日期格式化的配置项。默认值：区域对象默认的符号。 |
+| options | [SymbolDateTimeFormatOptions](../../apis-na/arkts-apis/arkts-na-i18n-symboldatetimeformatoptions-i.md) | 否 | 自定义符号时间日期格式化的配置项。默认值：区域对象默认的符号。 |
 
 **错误码：**
 
@@ -75,7 +75,7 @@ public format(date?: Date | number): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| date | Date \| number | 否 | 时间日期对象或时间日期对应的毫秒值。时间日期对象中月份从0开始计数，0表示一月。 &lt;br&gt;默认值：系统时间。 |
+| date | Date \| number | 否 | 时间日期对象或时间日期对应的毫秒值。时间日期对象中月份从0开始计数，0表示一月。 <br>默认值：系统时间。 |
 
 **返回值：**
 
@@ -180,7 +180,7 @@ public formatToParts(date?: Date | number): Intl.DateTimeFormatPart[]
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| date | Date \| number | 否 | 时间日期对象或时间日期对应的毫秒值。时间日期对象中月份从0开始计数，0表示一月。 &lt;br&gt;默认值：系统时间。 |
+| date | Date \| number | 否 | 时间日期对象或时间日期对应的毫秒值。时间日期对象中月份从0开始计数，0表示一月。 <br>默认值：系统时间。 |
 
 **返回值：**
 
@@ -215,7 +215,7 @@ public parse(text: string, lenientMode: boolean): number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | text | string | 是 | 待解析的本地化时间日期字符串。 |
-| lenientMode | boolean | 是 | 是否采用宽松模式，true表示采用宽松模式，false表示不采用宽松模式。 &lt;br&gt;宽松模式下，能够处理不符合常规逻辑的时间日期值，如"5月32日"会自动转换成"6月1日"进行解析。 |
+| lenientMode | boolean | 是 | 是否采用宽松模式，true表示采用宽松模式，false表示不采用宽松模式。 <br>宽松模式下，能够处理不符合常规逻辑的时间日期值，如"5月32日"会自动转换成"6月1日"进行解析。 |
 
 **返回值：**
 
@@ -255,5 +255,5 @@ public resolvedOptions(): ResolvedSymbolDateTimeFormatOptions
 
 | 类型 | 说明 |
 | --- | --- |
-| [ResolvedSymbolDateTimeFormatOptions](arkts-localization-i18n-resolvedsymboldatetimeformatoptions-i.md) | 自定义符号时间日期格式化对象配置项的解析结果。 |
+| [ResolvedSymbolDateTimeFormatOptions](../../apis-na/arkts-apis/arkts-na-i18n-resolvedsymboldatetimeformatoptions-i.md) | 自定义符号时间日期格式化对象配置项的解析结果。 |
 

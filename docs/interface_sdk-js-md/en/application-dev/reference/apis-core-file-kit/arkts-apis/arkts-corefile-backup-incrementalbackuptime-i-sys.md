@@ -17,7 +17,7 @@ Save the time information of the incremental backup. IncrementalBackupTime is us
 ## Modules to Import
 
 ```TypeScript
-import { backup } from '@kit.CoreFileKit';
+import { backup } from 'backup';
 ```
 
 ## bundleName

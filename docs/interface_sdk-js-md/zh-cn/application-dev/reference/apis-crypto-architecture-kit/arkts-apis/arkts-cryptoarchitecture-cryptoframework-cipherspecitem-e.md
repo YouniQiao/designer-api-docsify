@@ -1,6 +1,6 @@
 # CipherSpecItem
 
-表示加解密参数的枚举。这些参数支持通过[setCipherSpec](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#setCipherSpec)接口设置，通过 [getCipherSpec](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#getCipherSpec)接口获取。 &lt;br&gt;当前只支持RSA算法和SM2算法。详细规格请参考 [加解密规格](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md)。
+表示加解密参数的枚举。这些参数支持通过[setCipherSpec](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#setCipherSpec)接口设置，通过 [getCipherSpec](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#getCipherSpec)接口获取。 <br>当前只支持RSA算法和SM2算法。详细规格请参考 [加解密规格](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md)。
 
 **起始版本：** 23
 

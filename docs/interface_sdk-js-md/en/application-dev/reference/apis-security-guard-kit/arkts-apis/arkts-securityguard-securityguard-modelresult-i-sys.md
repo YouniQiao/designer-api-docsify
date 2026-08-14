@@ -17,7 +17,7 @@ Provides the ModelResult type.
 ## Modules to Import
 
 ```TypeScript
-import { securityGuard } from '@kit.SecurityGuardKit';
+import { securityGuard } from 'securityGuard';
 ```
 
 ## result

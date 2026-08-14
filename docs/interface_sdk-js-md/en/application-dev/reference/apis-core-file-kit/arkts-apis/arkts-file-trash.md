@@ -31,7 +31,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { trash } from '@kit.CoreFileKit';
+import { trash } from 'trash';
 ```
 
 ## Summary

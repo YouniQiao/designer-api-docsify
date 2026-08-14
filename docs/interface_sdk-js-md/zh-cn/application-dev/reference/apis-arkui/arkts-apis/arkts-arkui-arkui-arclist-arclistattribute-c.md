@@ -38,7 +38,7 @@ cachedCount(count: Optional<number>): ArcListAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| count | Optional&lt;number&gt; | 是 | ArcListItem的预加载数量。 &lt;br&gt;默认值：根据屏幕内显示的节点个数设置，最大值为16。 &lt;br&gt;取值范围：[0, +∞) &lt;br&gt;设置为负数时，按1处理。 |
+| count | Optional&lt;number&gt; | 是 | ArcListItem的预加载数量。 <br>默认值：根据屏幕内显示的节点个数设置，最大值为16。 <br>取值范围：[0, +∞) <br>设置为负数时，按1处理。 |
 
 **返回值：**
 
@@ -70,7 +70,7 @@ chainAnimation(enable: Optional<boolean>): ArcListAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | Optional&lt;boolean&gt; | 是 | 是否启用链式联动动效。仅当边缘效果为EdgeEffect.Spring时，链式联动动效才会生效。 &lt;br&gt;默认值：false，不启用链式联动。true，启用链式联动。 |
+| enable | Optional&lt;boolean&gt; | 是 | 是否启用链式联动动效。仅当边缘效果为EdgeEffect.Spring时，链式联动动效才会生效。 <br>默认值：false，不启用链式联动。true，启用链式联动。 |
 
 **返回值：**
 
@@ -102,7 +102,7 @@ childrenMainSize(size: Optional<ChildrenMainSize>): ArcListAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| size | Optional&lt;ChildrenMainSize&gt; | 是 | 通过ChildrenMainSize对象向ArcList组件精确提供所有子组件在主轴方向 的大小信息，能够确保ArcList组件在子组件主轴尺寸不统一、子组件的增删变动、以及使用scrollToIndex等场景时，仍能保持其滑动位置的准确性。进而保 证了scrollTo能够精准跳转至指定位置，currentOffset或 offset准确反映当前的滑动位置，且内置滚动条能够实现平滑移动，避免任何跳跃或突变。从API version 23开始，新增offset接口。 &lt;br&gt; **说明：** &lt;br&gt;提供的主轴方向大小必须与子组件实际在主轴方向的大小一致，否则可能导致ArcList组件显示异常。子组件在主轴方向大小发生变化或进行增删操作时，必须通过调用ChildrenMainSize对象的方法在变更后通知 ArcList组件，否则可能导致ArcList组件显示异常。 |
+| size | Optional&lt;ChildrenMainSize&gt; | 是 | 通过ChildrenMainSize对象向ArcList组件精确提供所有子组件在主轴方向 的大小信息，能够确保ArcList组件在子组件主轴尺寸不统一、子组件的增删变动、以及使用scrollToIndex等场景时，仍能保持其滑动位置的准确性。进而保 证了scrollTo能够精准跳转至指定位置，currentOffset或 offset准确反映当前的滑动位置，且内置滚动条能够实现平滑移动，避免任何跳跃或突变。从API version 23开始，新增offset接口。 <br> **说明：** <br>提供的主轴方向大小必须与子组件实际在主轴方向的大小一致，否则可能导致ArcList组件显示异常。子组件在主轴方向大小发生变化或进行增删操作时，必须通过调用ChildrenMainSize对象的方法在变更后通知 ArcList组件，否则可能导致ArcList组件显示异常。 |
 
 **返回值：**
 
@@ -134,7 +134,7 @@ digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>): ArcListAttribu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sensitivity | Optional&lt;CrownSensitivity&gt; | 是 | 表冠响应灵敏度。 &lt;br&gt;默认值：CrownSensitivity.MEDIUM，响应速度适中。 |
+| sensitivity | Optional&lt;CrownSensitivity&gt; | 是 | 表冠响应灵敏度。 <br>默认值：CrownSensitivity.MEDIUM，响应速度适中。 |
 
 **返回值：**
 
@@ -166,7 +166,7 @@ enableScrollInteraction(enable: Optional<boolean>): ArcListAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | Optional&lt;boolean&gt; | 是 | 是否支持滚动手势。设置为true时可以通过手指或者鼠标滚动，设置为false时无法通过手指或者鼠标滚动，但不影响控制器 Scroller的滚动接口。 &lt;br&gt;默认值：true |
+| enable | Optional&lt;boolean&gt; | 是 | 是否支持滚动手势。设置为true时可以通过手指或者鼠标滚动，设置为false时无法通过手指或者鼠标滚动，但不影响控制器 Scroller的滚动接口。 <br>默认值：true |
 
 **返回值：**
 
@@ -198,7 +198,7 @@ fadingEdge(enable: Optional<boolean>): ArcListAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | Optional&lt;boolean&gt; | 是 | fadingEdge生效时，会覆盖原组件的`.overlay()`属性。 &lt;br&gt;fadingEdge生效时，建议不在该组件上设置background相关属性，会影响渐隐的显示效果。 &lt;br&gt;fadingEdge生效时，组件会裁剪到边界，设置组件的clip属性为false不生效。 &lt;br&gt;设置为true时开启边缘渐隐效果，设置为false时不开启边缘渐隐效果。 &lt;br&gt;默认值：false |
+| enable | Optional&lt;boolean&gt; | 是 | fadingEdge生效时，会覆盖原组件的`.overlay()`属性。 <br>fadingEdge生效时，建议不在该组件上设置background相关属性，会影响渐隐的显示效果。 <br>fadingEdge生效时，组件会裁剪到边界，设置组件的clip属性为false不生效。 <br>设置为true时开启边缘渐隐效果，设置为false时不开启边缘渐隐效果。 <br>默认值：false |
 
 **返回值：**
 
@@ -230,7 +230,7 @@ flingSpeedLimit(speed: Optional<number>): ArcListAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| speed | Optional&lt;number&gt; | 是 | 惯性滚动动效开始时的最大初始速度。设置为小于等于0的值时，按默认值处理。 &lt;br&gt;默认值：9000 &lt;br&gt;单位：vp/s &lt;br&gt;取值范围：(0, +∞) |
+| speed | Optional&lt;number&gt; | 是 | 惯性滚动动效开始时的最大初始速度。设置为小于等于0的值时，按默认值处理。 <br>默认值：9000 <br>单位：vp/s <br>取值范围：(0, +∞) |
 
 **返回值：**
 
@@ -262,7 +262,7 @@ friction(friction: Optional<number>): ArcListAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| friction | Optional&lt;number&gt; | 是 | 摩擦系数，手动滑动滚动区域时生效，仅影响惯性滚动过程。设置为小于等于0的值时，按默认值处理。 &lt;br&gt;默认值：0.8 &lt;br&gt;取值范围：(0, +∞) |
+| friction | Optional&lt;number&gt; | 是 | 摩擦系数，手动滑动滚动区域时生效，仅影响惯性滚动过程。设置为小于等于0的值时，按默认值处理。 <br>默认值：0.8 <br>取值范围：(0, +∞) |
 
 **返回值：**
 
@@ -518,7 +518,7 @@ scrollBar(status: Optional<BarState>): ArcListAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| status | Optional&lt;BarState&gt; | 是 | 滚动条状态。 &lt;br&gt;默认值：BarState.Auto |
+| status | Optional&lt;BarState&gt; | 是 | 滚动条状态。 <br>默认值：BarState.Auto |
 
 **返回值：**
 
@@ -550,7 +550,7 @@ scrollBarColor(color: Optional<ColorMetrics>): ArcListAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| color | Optional&lt;[ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md)&gt; | 是 | 设置滚动条颜色。 &lt;br&gt;默认值：ColorMetrics.numeric(0xA9FFFFFF) |
+| color | Optional&lt;[ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md)&gt; | 是 | 设置滚动条颜色。 <br>默认值：ColorMetrics.numeric(0xA9FFFFFF) |
 
 **返回值：**
 
@@ -582,7 +582,7 @@ scrollBarWidth(width: Optional<LengthMetrics>): ArcListAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| width | Optional&lt;[LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)&gt; | 是 | ArcList滚动条在按压态下的宽度。 &lt;br&gt;默认值：LengthMetrics.vp(24) &lt;br&gt;非按压态宽度：LengthMetrics.vp(4) &lt;br&gt;设置为负值、undefined等异常值时，按滚动条的普通态宽度处理。 &lt;br&gt;单位：vp |
+| width | Optional&lt;[LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)&gt; | 是 | ArcList滚动条在按压态下的宽度。 <br>默认值：LengthMetrics.vp(24) <br>非按压态宽度：LengthMetrics.vp(4) <br>设置为负值、undefined等异常值时，按滚动条的普通态宽度处理。 <br>单位：vp |
 
 **返回值：**
 
@@ -614,7 +614,7 @@ space(space: Optional<LengthMetrics>): ArcListAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| space | Optional&lt;[LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)&gt; | 是 | 列表子项之间的间距。 &lt;br&gt;默认值：LengthMetrics.vp(0) &lt;br&gt;ArcList子组件的visibility属性设置为None时不显示，但该子组件上下的space还会生效。 |
+| space | Optional&lt;[LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)&gt; | 是 | 列表子项之间的间距。 <br>默认值：LengthMetrics.vp(0) <br>ArcList子组件的visibility属性设置为None时不显示，但该子组件上下的space还会生效。 |
 
 **返回值：**
 

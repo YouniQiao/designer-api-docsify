@@ -15,7 +15,7 @@ Describes the USB accessory information.
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from '@kit.BasicServicesKit';
+import { usbManager } from 'usbManager';
 ```
 
 ## description

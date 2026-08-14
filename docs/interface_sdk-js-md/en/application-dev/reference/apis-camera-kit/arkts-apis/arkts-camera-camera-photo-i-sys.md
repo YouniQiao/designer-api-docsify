@@ -15,7 +15,7 @@ Photo defines a full-quality image object.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'camera';
 ```
 
 ## depthData

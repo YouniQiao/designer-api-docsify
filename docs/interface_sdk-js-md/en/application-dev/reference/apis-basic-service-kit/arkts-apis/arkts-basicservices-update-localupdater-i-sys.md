@@ -17,7 +17,7 @@ Defines a tool class for updating the local firmware, such as verifying the sign
 ## Modules to Import
 
 ```TypeScript
-import { update } from '@kit.BasicServicesKit';
+import { update } from 'update';
 ```
 
 ## applyNewVersion

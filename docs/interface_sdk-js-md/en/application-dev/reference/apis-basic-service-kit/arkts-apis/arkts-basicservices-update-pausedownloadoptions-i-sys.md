@@ -17,7 +17,7 @@ Defines the pausing download options, which are used to control the pause behavi
 ## Modules to Import
 
 ```TypeScript
-import { update } from '@kit.BasicServicesKit';
+import { update } from 'update';
 ```
 
 ## isAllowAutoResume

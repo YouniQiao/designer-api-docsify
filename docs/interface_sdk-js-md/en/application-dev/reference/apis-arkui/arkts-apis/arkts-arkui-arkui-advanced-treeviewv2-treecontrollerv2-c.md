@@ -15,7 +15,12 @@ Declare TreeControllerV2
 ## Modules to Import
 
 ```TypeScript
-import { TreeListenerManagerV2, NodeParamV2, CallbackParamV2, TreeControllerV2, TreeViewV2, TreeListenerV2 } from '@kit.ArkUI';
+import { CallbackParamV2 } from 'CallbackParamV2';
+import { NodeParamV2 } from 'NodeParamV2';
+import { TreeControllerV2 } from 'TreeControllerV2';
+import { TreeListenerV2 } from 'TreeListenerV2';
+import { TreeListenerManagerV2 } from 'TreeListenerManagerV2';
+import { TreeViewV2 } from 'TreeViewV2';
 ```
 
 ## addNode
@@ -122,7 +127,7 @@ This interface is called when a secondaryTitle needs to be updated
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parentId | number | Yes | ID of the parent node. &lt;br&gt;Value range:The value must be greater than or equal to -1. |
+| parentId | number | Yes | ID of the parent node. <br>Value range:The value must be greater than or equal to -1. |
 | parentSubTitle | [ResourceStr](../../apis-na/arkts-apis/arkts-na-resourcestr-t.md) | Yes | secondaryTitle of parent node. |
 | currentSubtitle | [ResourceStr](../../apis-na/arkts-apis/arkts-na-resourcestr-t.md) | Yes | secondaryTitle of current node. |
 

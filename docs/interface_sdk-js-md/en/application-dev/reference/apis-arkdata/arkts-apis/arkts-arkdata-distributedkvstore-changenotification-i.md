@@ -15,7 +15,7 @@ Defines the content of a data change notification, including inserted data, upda
 ## Modules to Import
 
 ```TypeScript
-import { distributedKVStore } from '@kit.ArkData';
+import { distributedKVStore } from 'distributedKVStore';
 ```
 
 ## deleteEntries

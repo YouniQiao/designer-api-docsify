@@ -15,7 +15,7 @@ Provides domain name constants. | Name| Type | Read Only | Description | | --- |
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from 'hiAppEvent';
 ```
 
 ## Summary

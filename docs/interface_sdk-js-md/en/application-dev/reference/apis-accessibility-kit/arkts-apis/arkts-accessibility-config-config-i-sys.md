@@ -17,7 +17,7 @@ Implements configuration, acquisition, and listening for properties.
 ## Modules to Import
 
 ```TypeScript
-import { config } from '@kit.AccessibilityKit';
+import { config } from 'config';
 ```
 
 ## get
@@ -90,7 +90,7 @@ Obtains the property value. This API uses an asynchronous callback to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;T&gt; | Yes | Callback used to return the property value. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;T&gt; | Yes | Callback used to return the result. If the attribute is obtained successfully, **err** is **undefined** and **data** is the attribute value; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -164,7 +164,7 @@ config.highContrastText.off((data: boolean) => {
 on(callback: Callback<T>): void
 ```
 
-Adds a listener for property changes. This API uses an asynchronous callback to return the result.
+Adds a listener for property changes. This API uses an asynchronous callback to return the result. This API must be used together with [off](#off_Callback<T>). Call off to unregister the listener when it is no longer needed to avoid resource leaks.
 
 **Since:** 23
 
@@ -230,7 +230,7 @@ Sets the value of a property. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | T | Yes | Property value to set. |
+| value | T | Yes | Attribute value to set. The value type is consistent with the type of the corresponding Config attribute. |
 
 **Return value:**
 
@@ -287,8 +287,8 @@ Sets the property value. This API uses an asynchronous callback to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | T | Yes | Property value to set. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| value | T | Yes | Attribute value to set. The value type is the same as that of the corresponding Config attribute. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 

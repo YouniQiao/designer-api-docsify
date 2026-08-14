@@ -15,7 +15,7 @@ Provides the capability of simulating mouse operations. The simulated mouse oper
 ## Modules to Import
 
 ```TypeScript
-import { inputEventClient } from '@kit.InputKit';
+import { inputEventClient } from 'inputEventClient';
 ```
 
 ## beginAxis

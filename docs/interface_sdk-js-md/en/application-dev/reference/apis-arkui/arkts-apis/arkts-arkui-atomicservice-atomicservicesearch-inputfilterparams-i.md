@@ -15,7 +15,13 @@ Sets regular expression for input filtering.
 ## Modules to Import
 
 ```TypeScript
-import { SearchParams, AtomicServiceSearch, SearchButtonParams, OperationParams, SelectParams, InputFilterParams, MenuAlignParams } from '@kit.ArkUI';
+import { AtomicServiceSearch } from 'AtomicServiceSearch';
+import { InputFilterParams } from 'InputFilterParams';
+import { SearchButtonParams } from 'SearchButtonParams';
+import { MenuAlignParams } from 'MenuAlignParams';
+import { SearchParams } from 'SearchParams';
+import { SelectParams } from 'SelectParams';
+import { OperationParams } from 'OperationParams';
 ```
 
 ## error

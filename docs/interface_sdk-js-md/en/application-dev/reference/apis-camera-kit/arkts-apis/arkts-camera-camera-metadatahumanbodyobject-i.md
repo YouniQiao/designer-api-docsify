@@ -21,6 +21,6 @@ Human body metadata detected by the camera, which is extended from [MetadataObje
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'camera';
 ```
 

@@ -15,7 +15,7 @@ The **certManager** module provides system-level certificate management capabili
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManager } from 'certificateManager';
 ```
 
 ## Summary

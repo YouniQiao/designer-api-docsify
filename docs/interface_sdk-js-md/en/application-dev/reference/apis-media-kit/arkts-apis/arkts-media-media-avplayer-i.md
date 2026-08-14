@@ -15,7 +15,7 @@ AVPlayer is a playback management class. It provides APIs to manage and play med
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'media';
 ```
 
 ## addPlaybackMediaSource
@@ -45,7 +45,7 @@ Add a new playback source to the player's playlist.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | src | [MediaSource](arkts-media-media-mediasource-i.md) | Yes | Playback source to be added to the playlist. |
-| id | string | No | Indicates the ID of a media source in the playlist. The newly added media source is inserted before the specified media source. &lt;br&gt;Default value:if empty, it means adding to the end of the list |
+| id | string | No | Indicates the ID of a media source in the playlist. The newly added media source is inserted before the specified media source. <br>Default value:if empty, it means adding to the end of the list |
 
 **Return value:**
 
@@ -457,7 +457,7 @@ Obtains the list of loaded time ranges. This API uses a promise to return the re
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Range&gt;&gt; | Promise used to return the list of loaded time ranges on the player. &lt;br&gt;The time range is represented by the **[start, end]** position on the playback timeline, in milliseconds. |
+| Promise&lt;Array&lt;Range&gt;&gt; | Promise used to return the list of loaded time ranges on the player. <br>The time range is represented by the **[start, end]** position on the playback timeline, in milliseconds. |
 
 ## getMediaKeySystemInfos
 
@@ -647,7 +647,7 @@ Obtains the list of seekable time ranges. This API uses a promise to return the 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Range&gt;&gt; | Promise used to return the list of seekable time ranges on the player. &lt;br&gt;The time range is represented by the **[start, end]** position on the playback timeline, in milliseconds. |
+| Promise&lt;Array&lt;Range&gt;&gt; | Promise used to return the list of seekable time ranges on the player. <br>The time range is represented by the **[start, end]** position on the playback timeline, in milliseconds. |
 
 ## getSelectedTracks
 
@@ -1099,7 +1099,7 @@ Unregisters listener to detect when changes occur in the playback content.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Callback invoked when the event is triggered. &lt;br&gt;Default value:If this parameter is not specified, all callback functions for the event are unsubscribed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Callback invoked when the event is triggered. <br>Default value:If this parameter is not specified, all callback functions for the event are unsubscribed. |
 
 ## offPlaybackRateDone
 
@@ -1344,7 +1344,7 @@ Unregister listener to detect time-based metadata, Currently, only the #EXT-X-DA
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVTimedMetaData](arkts-media-media-avtimedmetadata-i.md)&gt; | No | Callback invoked when the event is triggered. &lt;br&gt;Default value:If this parameter is not specified, all callback functions for the event are unsubscribed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AVTimedMetaData](arkts-media-media-avtimedmetadata-i.md)&gt; | No | Callback invoked when the event is triggered. <br>Default value:If this parameter is not specified, all callback functions for the event are unsubscribed. |
 
 ## offTrackChange
 
@@ -1525,7 +1525,7 @@ Unsubscribes from audio stream output device changes and reasons. This API uses 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 
 ## off_availableBitrates
 
@@ -1552,7 +1552,7 @@ Unsubscribes from available bitrates of HLS/DASH streams. This event is reported
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'availableBitrates' | Yes | Event type, which is **'availableBitrates'** in this case. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;int&gt;&gt; | No | Callback invoked when the event is triggered. It returns an array that holds the available bitrates, in bit/s. If the array length is 0, no bitrate can be set. If this parameter is specified , only the specified callback is unregistered. Otherwise, all callbacks associated with the **availableBitrates** event will be unregistered.<br>**Since:** 12 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;int&gt;&gt; | No | Callback invoked when the event is triggered. It returns an array that holds the available bitrates. If the array length is 0, no bitrate can be set. If this parameter is specified , only the specified callback is unregistered. Otherwise, all callbacks associated with the **availableBitrates** event will be unregistered.<br>**Since:** 12 |
 
 ## off_bitrateDone
 
@@ -1579,7 +1579,7 @@ Unsubscribes from the event that checks whether the bitrate is successfully set.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'bitrateDone' | Yes | Event type, which is **'bitrateDone'** in this case. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Callback invoked when the event is triggered. It reports the effective bitrate, in bit/s. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **bitrateDone** event will be unregistered.<br>**Since:** 19 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Callback invoked when the event is triggered. It reports the effective bitrate. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **bitrateDone** event will be unregistered.<br>**Since:** 19 |
 
 ## off_bufferingUpdate
 
@@ -1768,7 +1768,7 @@ Unsubscribes from the event that checks whether the seek operation takes effect.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'seekDone' | Yes | Event type, which is **'seekDone'** in this case. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Callback invoked when the event is triggered. It reports the time position requested by the user.&lt;br&gt;For video playback, [SeekMode](arkts-media-media-seekmode-e.md#SeekMode) may cause the actual position to be different from that requested by the user. The exact position can be obtained from the **currentTime** property. The time in this callback only means that the requested seek operation is complete. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **seekDone** event will be unregistered.<br>**Since:** 12 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | No | Callback invoked when the event is triggered. It reports the time position requested by the user.<br>For video playback, [SeekMode](arkts-media-media-seekmode-e.md#SeekMode) may cause the actual position to be different from that requested by the user. The exact position can be obtained from the **currentTime** property. The time in this callback only means that the requested seek operation is complete. If this parameter is specified, only the specified callback is unregistered. Otherwise, all callbacks associated with the **seekDone** event will be unregistered.<br>**Since:** 12 |
 
 ## off_seiMessageReceived
 
@@ -2816,7 +2816,7 @@ Subscribes to audio stream output device changes and reasons. This API uses an a
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 
 ## on_availableBitrates
 
@@ -2843,7 +2843,7 @@ Subscribes to available bitrates of HLS/DASH streams. This event is reported onl
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'availableBitrates' | Yes | Event type, which is **'availableBitrates'** in this case. This event is triggered once after the AVPlayer switches to the prepared state. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;int&gt;&gt; | Yes | Callback invoked when the event is triggered. It returns an array that holds the available bitrates, in bit/s. If the array length is 0, no bitrate can be set.<br>**Since:** 12 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;int&gt;&gt; | Yes | Callback invoked when the event is triggered. It returns an array that holds the available bitrates. If the array length is 0, no bitrate can be set.<br>**Since:** 12 |
 
 ## on_bitrateDone
 
@@ -2870,7 +2870,7 @@ Subscribes to the event to check whether the bitrate is successfully set.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'bitrateDone' | Yes | Event type, which is **'bitrateDone'** in this case. This event is triggered each time **setBitrate()** is called. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback invoked when the event is triggered. It reports the effective bitrate, in bit/s. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback invoked when the event is triggered. It reports the effective bitrate. |
 
 ## on_bufferingUpdate
 
@@ -3086,7 +3086,7 @@ Subscribes to the event to check whether the seek operation takes effect.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'seekDone' | Yes | Event type, which is **'seekDone'** in this case. This event is triggered each time **seek()** is called, except in SEEK_CONTINUOUS mode. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback invoked when the event is triggered. It reports the time position requested by the user.&lt;br&gt;For video playback, [SeekMode](arkts-media-media-seekmode-e.md#SeekMode) may cause the actual position to be different from that requested by the user. The exact position can be obtained from the **currentTime** property. The time in this callback only means that the requested seek operation is complete. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | Yes | Callback invoked when the event is triggered. It reports the time position requested by the user.<br>For video playback, [SeekMode](arkts-media-media-seekmode-e.md#SeekMode) may cause the actual position to be different from that requested by the user. The exact position can be obtained from the **currentTime** property. The time in this callback only means that the requested seek operation is complete. |
 
 ## on_seiMessageReceived
 
@@ -3775,7 +3775,7 @@ Seeks to the specified playback position. This API can be called only when the A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timeMs | int | Yes | Position to seek to, in ms. The value range is [0, [duration](../../../reference/apis-media-kit/arkts-apis-media-AVPlayer.md#properties)].&lt;br&gt;When the seek mode is [SEEK_CONTINUOUS](arkts-media-media-seekmode-e.md#SeekMode), you can set this parameter to **-1** to end the **SEEK_CONTINUOUS** mode. |
+| timeMs | int | Yes | Position to seek to, in ms. The value range is [0, [duration](../../../reference/apis-media-kit/arkts-apis-media-AVPlayer.md#properties)].<br>When the seek mode is [SEEK_CONTINUOUS](arkts-media-media-seekmode-e.md#SeekMode), you can set this parameter to **-1** to end the **SEEK_CONTINUOUS** mode. |
 | mode | SeekMode | No | Seek mode based on the video I frame. The default value is **SEEK_PREV_SYNC**. **Set this parameter only for video playback. |
 
 ## seekToDefaultPosition
@@ -3831,7 +3831,7 @@ Selects a track when the AVPlayer plays multimedia resources with multiple audio
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | index | int | Yes | Index of the track. You can call [getTrackDescription](#getTrackDescription) to obtain all track information [MediaDescription](arkts-media-media-mediadescription-i.md#MediaDescription) of the current resource. |
-| mode | [SwitchMode](arkts-media-media-switchmode-e.md) | No | Video track mode. The default mode is **SMOOTH**. This parameter takes effect only for DASH/HLS network stream video track switching.&lt;br&gt;HLS network stream video is supported since API version 24.<br>**Since:** 26.0.0 |
+| mode | [SwitchMode](arkts-media-media-switchmode-e.md) | No | Video track mode. The default mode is **SMOOTH**. This parameter takes effect only for DASH/HLS network stream video track switching.<br>HLS network stream video is supported since API version 24.<br>**Since:** 26.0.0 |
 
 **Return value:**
 
@@ -3870,7 +3870,7 @@ Sets the bitrate for the streaming media. This API is valid only for HLS/DASH st
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bitrate | int | Yes | Bitrate to set. You can obtain the available bitrates of the current HLS/DASH stream by subscribing to the [availableBitrates](#on_mediaKeySystemInfoUpdate) event. If the bitrate to set is not in the list of the available bitrates, the AVPlayer selects from the list the bitrate that is closed to the bitrate to set. If the length of the available bitrate list obtained through the event is 0, no bitrate can be set and the **bitrateDone** callback will not be triggered, in bit/s. |
+| bitrate | int | Yes | Bitrate to set. You can obtain the available bitrates of the current HLS/DASH stream by subscribing to the [availableBitrates](#on_mediaKeySystemInfoUpdate) event. If the bitrate to set is not in the list of the available bitrates, the AVPlayer selects from the list the bitrate that is closed to the bitrate to set. If the length of the available bitrate list obtained through the event is 0, no bitrate can be set and the **bitrateDone** callback will not be triggered. |
 
 ## setDecryptionConfig
 
@@ -3903,7 +3903,7 @@ Sets the decryption configuration. When receiving an [on('mediaKeySystemInfoUpda
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 
 ## setLoudnessGain
 
@@ -3959,8 +3959,8 @@ Mutes or unmutes the audio. Since API version 20, this API also supports whether
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mediaType | MediaType | Yes | Media type.&lt;br&gt;For API version 12 to 19, only **MEDIA_TYPE_AUD** is supported.&lt; br&gt;Since API version 20, **MEDIA_TYPE_VID** is supported. |
-| muted | boolean | Yes | For API version 12 to 19, only audio playback strategies are supported. This parameter specifies whether to mute or unmute the audio. **true** to mute, **false** otherwise.&lt;br&gt;Since API version 20 , video playback strategies are also supported. This parameter specifies whether to disable or enable the video image. **true** to disable, false otherwise. |
+| mediaType | MediaType | Yes | Media type.<br>For API version 12 to 19, only **MEDIA_TYPE_AUD** is supported.&lt; br&gt;Since API version 20, **MEDIA_TYPE_VID** is supported. |
+| muted | boolean | Yes | For API version 12 to 19, only audio playback strategies are supported. This parameter specifies whether to mute or unmute the audio. **true** to mute, **false** otherwise.<br>Since API version 20 , video playback strategies are also supported. This parameter specifies whether to disable or enable the video image. **true** to disable, false otherwise. |
 
 **Return value:**
 
@@ -4012,7 +4012,7 @@ Sets a source of streaming media that can be pre-downloaded, downloads the media
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Return by promise. |
 
 ## setPlaybackRange
@@ -4062,7 +4062,7 @@ Sets the playback range and seeks to the start position of the range based on th
 setPlaybackRate(rate: double): void
 ```
 
-Sets the playback rate. This API can be called only when the AVPlayer is in the prepared, playing, paused, or completed state. The value range is [0.125, 4.0]. You can check whether the setting takes effect through the [playbackRateDone](#on_mediaKeySystemInfoUpdate) event. > **NOTE：**> > This API is not supported in live mode.
+Set playback rate. Sets the playback rate. This API can be called only when the AVPlayer is in the prepared, playing, paused, or Supported states: prepared/playing/paused/completed. completed state. The value range is [0.125, 8.0], on API 24 and below, the range is [0.125, 4.0].
 
 **Since:** 23
 
@@ -4080,7 +4080,7 @@ Sets the playback rate. This API can be called only when the AVPlayer is in the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rate | double | Yes | Playback rate, which is in the range [0.125, 4.0]. |
+| rate | double | Yes | Playback rate, which is in the range [0.125, 8.0] on API 24 and below, the range is [0.125, 4.0]. |
 
 **Error codes:**
 
@@ -4568,7 +4568,7 @@ Whether to loop playback. **true** to loop, **false** otherwise. The default val
 playlistLoopMode?: PlaylistLoopMode
 ```
 
-Set the loop mode when playing the media source playlist. &lt;br&gt;Default value:PLAYLIST_LOOP_MODE_ALL, which means loops all items in the playlist.
+Set the loop mode when playing the media source playlist. <br>Default value:PLAYLIST_LOOP_MODE_ALL, which means loops all items in the playlist.
 
 **Type:** [PlaylistLoopMode](arkts-media-media-playlistloopmode-e.md)
 

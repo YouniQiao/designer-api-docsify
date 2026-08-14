@@ -39,8 +39,8 @@ Adds a gesture.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | gesture | GestureHandler&lt;T&gt; | Yes | Gesture handler object. |
-| priority | GesturePriority | No | Priority of the bound gesture.&lt;br&gt;Default value: **GesturePriority.NORMAL**. |
-| mask | GestureMask | No | Mask for gesture events.&lt;br&gt;Default value: **GestureMask.Normal**. |
+| priority | GesturePriority | No | Priority of the bound gesture.<br>Default value: **GesturePriority.NORMAL**. |
+| mask | GestureMask | No | Mask for gesture events.<br>Default value: **GestureMask.Normal**. |
 
 ## addParallelGesture
 
@@ -69,7 +69,7 @@ Adds a gesture that can be recognized at once by the component and its child com
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | gesture | GestureHandler&lt;T&gt; | Yes | Gesture handler object. |
-| mask | GestureMask | No | Mask for gesture events.&lt;br&gt;Default value: **GestureMask.Normal**. |
+| mask | GestureMask | No | Mask for gesture events.<br>Default value: **GestureMask.Normal**. |
 
 ## clearGestures
 

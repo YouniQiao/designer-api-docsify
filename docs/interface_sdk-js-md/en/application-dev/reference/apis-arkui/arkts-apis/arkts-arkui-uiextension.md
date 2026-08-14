@@ -17,7 +17,7 @@ The **uiExtension** module provides APIs for the [EmbeddedUIExtensionAbility](..
 ## Modules to Import
 
 ```TypeScript
-import { uiExtension } from '@kit.ArkUI';
+import { uiExtension } from 'uiExtension';
 ```
 
 ## Summary

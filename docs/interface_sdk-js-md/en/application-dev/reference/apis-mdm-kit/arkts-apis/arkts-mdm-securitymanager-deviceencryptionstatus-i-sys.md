@@ -17,7 +17,7 @@ Represents the file system encryption status.
 ## Modules to Import
 
 ```TypeScript
-import { securityManager } from '@kit.MDMKit';
+import { securityManager } from 'securityManager';
 ```
 
 ## isEncrypted

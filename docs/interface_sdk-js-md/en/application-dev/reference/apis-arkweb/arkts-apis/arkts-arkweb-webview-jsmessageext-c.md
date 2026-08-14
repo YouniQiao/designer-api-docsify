@@ -15,7 +15,7 @@ The message for indicating the of result of JavaScript code execution.
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'webview';
 ```
 
 ## getArray

@@ -38,8 +38,8 @@ A constructor used to create a text line spacing style. **Since**: 26.0.0
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lineSpacing | LengthMetrics | Yes | Text line spacing.&lt;br&gt;Default value: **0.0**&lt;br&gt;Value range: 0, +∞) &lt;br&gt;**NOTE：**If **value** of **LengthMetrics** is less than 0, the default value **0.0** is used. |
-| options | LineSpacingOptions | No | Line spacing options.&lt;br&gt;Default value: **{ onlyBetweenLines: false } |
+| lineSpacing | LengthMetrics | Yes | Text line spacing.<br>Default value: **0.0**<br>Value range: 0, +∞) <br>**NOTE：**If **value** of **LengthMetrics** is less than 0, the default value **0.0** is used. |
+| options | LineSpacingOptions | No | Line spacing options.<br>Default value: **{ onlyBetweenLines: false } |
 
 ## lineSpacing
 

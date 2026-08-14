@@ -17,7 +17,7 @@ Provides methods to implement **RemoteObject**. The service provider must inheri
 ## Modules to Import
 
 ```TypeScript
-import { rpc } from '@kit.IPCKit';
+import { rpc } from 'rpc';
 ```
 
 ## attachLocalInterface
@@ -482,7 +482,7 @@ Called to return a response to **sendMessageRequest()**. The server processes th
 
 | Type | Description |
 | --- | --- |
-| boolean | If the request is processed synchronously in **onRemoteMessageRequest**, a Boolean value is returned. The value **true** means that the operation is successful, and **false** means the opposite.&lt;br&gt;- If the request is processed asynchronously in **onRemoteMessageRequest**, a promise object is returned. The value **true** means that the operation is successful, and **false** means the opposite. |
+| boolean | If the request is processed synchronously in **onRemoteMessageRequest**, a Boolean value is returned. The value **true** means that the operation is successful, and **false** means the opposite.<br>- If the request is processed asynchronously in **onRemoteMessageRequest**, a promise object is returned. The value **true** means that the operation is successful, and **false** means the opposite. |
 
 ## onRemoteMessageRequest
 
@@ -522,7 +522,7 @@ Provides a response to **sendMessageRequest()**. The server processes the reques
 
 | Type | Description |
 | --- | --- |
-| boolean | If the request is processed synchronously in **onRemoteMessageRequest**, a Boolean value is returned. The value **true** means that the operation is successful, and **false** means the opposite.&lt;br&gt;- If the request is processed asynchronously in **onRemoteMessageRequest**, a promise object is returned. The value **true** means that the operation is successful, and **false** means the opposite. |
+| boolean | If the request is processed synchronously in **onRemoteMessageRequest**, a Boolean value is returned. The value **true** means that the operation is successful, and **false** means the opposite.<br>- If the request is processed asynchronously in **onRemoteMessageRequest**, a promise object is returned. The value **true** means that the operation is successful, and **false** means the opposite. |
 
 ## onRemoteRequest
 

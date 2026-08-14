@@ -68,7 +68,7 @@ setSurfaceId(surfaceId: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| surfaceId | string | 是 | XComponent持有Surface的ID。用于在人脸录入过程中显示人脸 预览画面。 &lt;br&gt;**说明：**需在XComponent完成初始化后，通过getXComponentSurfaceId方法 获取有效的surfaceId，若传入无效的surfaceId可能导致预览画面无法正常显示或接口调用失败。 |
+| surfaceId | string | 是 | XComponent持有Surface的ID。用于在人脸录入过程中显示人脸 预览画面。 <br>**说明：**需在XComponent完成初始化后，通过getXComponentSurfaceId方法 获取有效的surfaceId，若传入无效的surfaceId可能导致预览画面无法正常显示或接口调用失败。 |
 
 **错误码：**
 

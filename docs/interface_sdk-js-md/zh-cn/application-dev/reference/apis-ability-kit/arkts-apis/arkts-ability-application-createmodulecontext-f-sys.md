@@ -29,7 +29,7 @@ export function createModuleContext(context: Context, bundleName: string, module
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | [Context](arkts-ability-context-c.md) | 是 | 表示应用上下文。 |
-| bundleName | string | 是 | 表示应用包名。取值为空字符串时，默认为当前应用。 |
+| bundleName | string | 是 | 表示应用包名。取值为空字符串时，默认取当前应用的包名。 |
 | moduleName | string | 是 | 表示应用模块名。 |
 
 **返回值：**

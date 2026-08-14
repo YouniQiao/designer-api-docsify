@@ -66,5 +66,5 @@ Sets the styled string displayed in the rich text component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styledString | StyledString | Yes | Styled string to set.&lt;br&gt;**NOTE：**&lt;br&gt;The child class MutableStyledString of **StyledString** can also serve as the argument. |
+| styledString | StyledString | Yes | Styled string to set.<br>**NOTE：**<br>The child class MutableStyledString of **StyledString** can also serve as the argument. |
 

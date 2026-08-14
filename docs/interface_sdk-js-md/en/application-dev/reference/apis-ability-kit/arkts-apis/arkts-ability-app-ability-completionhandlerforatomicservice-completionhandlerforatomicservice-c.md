@@ -15,7 +15,7 @@ CompletionHandlerForAtomicService provides two callback functions, [onAtomicServ
 ## Modules to Import
 
 ```TypeScript
-import { FailureCode } from '@kit.AbilityKit';
+import { FailureCode } from 'FailureCode';
 ```
 
 ## onAtomicServiceRequestFailure

@@ -68,7 +68,7 @@ Define the start row of the item with startIndex.
 startOffset: double
 ```
 
-Offset between the top of the **GridItem** corresponding to **startIndex** and the top of the **Grid**. &lt;br&gt;Unit: vp
+Offset between the top of the **GridItem** corresponding to **startIndex** and the top of the **Grid**. <br>Unit: vp
 
 **Type:** double
 
@@ -92,7 +92,7 @@ Offset between the top of the **GridItem** corresponding to **startIndex** and t
 totalOffset: double
 ```
 
-Total scrolling offset, that is, the offset between the top of the first **GridItem** in the **Grid** component and the top of the **Grid** component.&lt;br&gt;Unit: vp
+Total scrolling offset, that is, the offset between the top of the first **GridItem** in the **Grid** component and the top of the **Grid** component.<br>Unit: vp
 
 **Type:** double
 

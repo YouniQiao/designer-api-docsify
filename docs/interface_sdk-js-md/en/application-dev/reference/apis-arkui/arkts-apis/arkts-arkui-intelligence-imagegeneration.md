@@ -19,7 +19,7 @@ Module for AI-generated images using UI Component.
 ## Modules to Import
 
 ```TypeScript
-import { imageGeneration } from '@kit.ArkUI';
+import { imageGeneration } from 'imageGeneration';
 ```
 
 ## Summary

@@ -17,7 +17,7 @@ The definition of compilation.
 ## Modules to Import
 
 ```TypeScript
-import { avMusicTemplate } from '@kit.AVSessionKit';
+import { avMusicTemplate } from 'avMusicTemplate';
 ```
 
 ## hasMoreData

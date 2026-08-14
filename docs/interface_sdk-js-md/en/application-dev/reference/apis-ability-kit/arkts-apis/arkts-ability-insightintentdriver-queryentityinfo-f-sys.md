@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { insightIntentDriver } from '@kit.AbilityKit';
+import { insightIntentDriver } from 'insightIntentDriver';
 ```
 
 ## queryEntityInfo

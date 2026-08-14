@@ -17,7 +17,7 @@ WebNativeMessagingExtensionContext is the runtime context of the native web mess
 ## Modules to Import
 
 ```TypeScript
-import { WebNativeMessagingExtensionContext } from '@kit.ArkWeb';
+import { WebNativeMessagingExtensionContext } from 'WebNativeMessagingExtensionContext';
 ```
 
 ## startAbility

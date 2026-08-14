@@ -52,7 +52,7 @@ Checks whether any saved HTTP authentication credentials exist. This API returns
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether any saved HTTP authentication credentials exist. &lt;br&gt;**true** is returned if any saved HTTP authentication credentials exist; otherwise, **false** is returned. |
+| boolean | Whether any saved HTTP authentication credentials exist. <br>**true** is returned if any saved HTTP authentication credentials exist; otherwise, **false** is returned. |
 
 ## getHttpAuthCredentials
 

@@ -15,7 +15,7 @@ AbilityStage is a [module](../../../quick-start/application-package-overview.md#
 ## Modules to Import
 
 ```TypeScript
-import { AbilityStage } from '@kit.AbilityKit';
+import { AbilityStage } from 'AbilityStage';
 ```
 
 ## onAboutToCreateAbility
@@ -314,7 +314,7 @@ Listens for changes in the system memory level status. Called when the available
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| level | AbilityConstant.MemoryLevel | Yes | Memory level that indicates the memory usage status. When the specified memory level is reached, a callback will be invoked and the system will start adjustment.&lt;br&gt;**NOTE：**&lt;br&gt;The trigger conditions may differ across various devices. For example, on a standard device with 12 GB of memory:&lt;br&gt;- A callback with value 0 is triggered when available memory drops between 1700 MB and 1800 MB.&lt;br&gt;- A callback with value 1 is triggered when available memory drops between 1600 MB and 1700 MB.&lt;br&gt;- A callback with value 2 is triggered when available memory falls below 1600 MB. |
+| level | AbilityConstant.MemoryLevel | Yes | Memory level that indicates the memory usage status. When the specified memory level is reached, a callback will be invoked and the system will start adjustment.<br>**NOTE：**<br>The trigger conditions may differ across various devices. For example, on a standard device with 12 GB of memory:<br>- A callback with value 0 is triggered when available memory drops between 1700 MB and 1800 MB.<br>- A callback with value 1 is triggered when available memory drops between 1600 MB and 1700 MB.<br>- A callback with value 2 is triggered when available memory falls below 1600 MB. |
 
 ## Examples
 

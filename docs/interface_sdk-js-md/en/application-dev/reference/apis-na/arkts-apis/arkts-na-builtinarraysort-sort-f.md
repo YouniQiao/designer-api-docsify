@@ -25,8 +25,8 @@ Sorts the array in-place.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | arr | FixedArray&lt;boolean&gt; | Yes | The array to sort. |
-| startIndex | int | Yes | The index to start sorting with, inclusive. &lt;br&gt;The value should be an integer. |
-| endIndex | int | Yes | The index to end sorting, exclusive. &lt;br&gt;The value should be an integer. |
+| startIndex | int | Yes | The index to start sorting with, inclusive. <br>The value should be an integer. |
+| endIndex | int | Yes | The index to end sorting, exclusive. <br>The value should be an integer. |
 
 
 ## sort
@@ -54,8 +54,8 @@ Sorts the array in-place.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | arr | FixedArray&lt;byte&gt; | Yes | The array to sort. |
-| startIndex | int | Yes | The index to start sorting with, inclusive. &lt;br&gt;The value should be an integer. |
-| endIndex | int | Yes | The index to end sorting, exclusive. &lt;br&gt;The value should be an integer. |
+| startIndex | int | Yes | The index to start sorting with, inclusive. <br>The value should be an integer. |
+| endIndex | int | Yes | The index to end sorting, exclusive. <br>The value should be an integer. |
 
 
 ## sort
@@ -83,8 +83,8 @@ Sorts the array in-place.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | arr | FixedArray&lt;short&gt; | Yes | The array to sort. |
-| startIndex | int | Yes | The index to start sorting with, inclusive. &lt;br&gt;The value should be an integer. |
-| endIndex | int | Yes | The index to end sorting, exclusive. &lt;br&gt;The value should be an integer. |
+| startIndex | int | Yes | The index to start sorting with, inclusive. <br>The value should be an integer. |
+| endIndex | int | Yes | The index to end sorting, exclusive. <br>The value should be an integer. |
 
 
 ## sort
@@ -112,8 +112,8 @@ Sorts the array in-place.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | arr | FixedArray&lt;int&gt; | Yes | The array to sort. |
-| startIndex | int | Yes | The index to start sorting with, inclusive. &lt;br&gt;The value should be an integer. |
-| endIndex | int | Yes | The index to end sorting, exclusive. &lt;br&gt;The value should be an integer. |
+| startIndex | int | Yes | The index to start sorting with, inclusive. <br>The value should be an integer. |
+| endIndex | int | Yes | The index to end sorting, exclusive. <br>The value should be an integer. |
 
 
 ## sort
@@ -141,8 +141,8 @@ Sorts the array in-place.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | arr | FixedArray&lt;long&gt; | Yes | The array to sort. |
-| startIndex | int | Yes | The index to start sorting with, inclusive. &lt;br&gt;The value should be an integer. |
-| endIndex | int | Yes | The index to end sorting, exclusive. &lt;br&gt;The value should be an integer. |
+| startIndex | int | Yes | The index to start sorting with, inclusive. <br>The value should be an integer. |
+| endIndex | int | Yes | The index to end sorting, exclusive. <br>The value should be an integer. |
 
 
 ## sort
@@ -170,8 +170,8 @@ Sorts the array in-place.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | arr | FixedArray&lt;float&gt; | Yes | The array to sort. |
-| startIndex | int | Yes | The index to start sorting with, inclusive. &lt;br&gt;The value should be an integer. |
-| endIndex | int | Yes | The index to end sorting, exclusive. &lt;br&gt;The value should be an integer. |
+| startIndex | int | Yes | The index to start sorting with, inclusive. <br>The value should be an integer. |
+| endIndex | int | Yes | The index to end sorting, exclusive. <br>The value should be an integer. |
 
 
 ## sort
@@ -199,8 +199,8 @@ Sorts the array in-place.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | arr | FixedArray&lt;double&gt; | Yes | The array to sort. |
-| startIndex | int | Yes | The index to start sorting with, inclusive. &lt;br&gt;The value should be an integer. |
-| endIndex | int | Yes | The index to end sorting, exclusive. &lt;br&gt;The value should be an integer. |
+| startIndex | int | Yes | The index to start sorting with, inclusive. <br>The value should be an integer. |
+| endIndex | int | Yes | The index to end sorting, exclusive. <br>The value should be an integer. |
 
 
 ## sort
@@ -228,6 +228,6 @@ Sorts the array in-place.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | arr | FixedArray&lt;char&gt; | Yes | The array to sort. |
-| startIndex | int | Yes | The index to start sorting with, inclusive. &lt;br&gt;The value should be an integer. |
-| endIndex | int | Yes | The index to end sorting, exclusive. &lt;br&gt;The value should be an integer. |
+| startIndex | int | Yes | The index to start sorting with, inclusive. <br>The value should be an integer. |
+| endIndex | int | Yes | The index to end sorting, exclusive. <br>The value should be an integer. |
 

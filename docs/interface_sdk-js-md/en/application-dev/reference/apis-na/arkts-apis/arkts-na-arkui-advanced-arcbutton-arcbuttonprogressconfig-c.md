@@ -36,7 +36,7 @@ Constructor of the ArcButtonProgressConfig.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | double | Yes | sets the value of progress. &lt;br&gt;Value range:[0, total] &lt;br&gt;When setting a value less than 0, it is set to 0; when setting a value greater than total, it is set to total. |
+| value | double | Yes | sets the value of progress. <br>Value range:[0, total] <br>When setting a value less than 0, it is set to 0; when setting a value greater than total, it is set to total. |
 | total | double | No | sets the total of progress. |
 | color | ResourceColor | No | sets the foreground color of progress. |
 

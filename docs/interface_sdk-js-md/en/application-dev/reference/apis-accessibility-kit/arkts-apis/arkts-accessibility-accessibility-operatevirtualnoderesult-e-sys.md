@@ -1,6 +1,6 @@
 # OperateVirtualNodeResult (System API)
 
-Result Code Enumeration
+Enumerates the result types of operating virtual nodes for accessibility.
 
 **Since:** 26.0.0
 
@@ -20,7 +20,7 @@ Result Code Enumeration
 SUCCESS = 0
 ```
 
-Add, remove or update accessibility virtual node successfully.
+The operation is successful.
 
 **Since:** 26.0.0
 
@@ -42,7 +42,7 @@ Add, remove or update accessibility virtual node successfully.
 ACCESSIBILITY_ELEMENT_NOT_EXIST = 1
 ```
 
-The accessibility element does not exist.
+The node to be operated does not exist.
 
 **Since:** 26.0.0
 
@@ -64,7 +64,7 @@ The accessibility element does not exist.
 CANNOT_MODIFY_ROOT_NODE = 2
 ```
 
-Cannot modify root node.
+The current root node cannot be modified.
 
 **Since:** 26.0.0
 
@@ -86,7 +86,7 @@ Cannot modify root node.
 ACCESSIBILITY_PROPERTY_IS_EMPTY = 3
 ```
 
-Accessibility property is empty.
+The accessibility node property is empty.
 
 **Since:** 26.0.0
 
@@ -108,7 +108,7 @@ Accessibility property is empty.
 ALLOCATE_ID_FAILED = 4
 ```
 
-Allocate id failed.
+Failed to allocate a virtual node ID.
 
 **Since:** 26.0.0
 
@@ -130,7 +130,7 @@ Allocate id failed.
 VIRTUAL_NODE_PARAMETER_IS_EMPTY = 5
 ```
 
-Virtual node parameter is empty.
+The array of newly added virtual nodes is empty.
 
 **Since:** 26.0.0
 
@@ -152,7 +152,7 @@ Virtual node parameter is empty.
 INTERNAL_ERROR = 6
 ```
 
-Internal error.
+System exception.
 
 **Since:** 26.0.0
 
@@ -174,7 +174,7 @@ Internal error.
 VIRTUAL_NODE_NOT_SUPPORTED = 7
 ```
 
-Virtual node is not supported.
+Virtual node operations are not supported.
 
 **Since:** 26.0.0
 

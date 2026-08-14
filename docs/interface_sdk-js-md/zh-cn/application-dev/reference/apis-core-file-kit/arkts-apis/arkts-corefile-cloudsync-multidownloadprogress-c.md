@@ -40,7 +40,7 @@ getFailedFiles(): Array<FailedFileInfo>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 22400005 | Inner error. Possible causes: &lt;br&gt;1.Failed to access the database or execute the SQL statement. &lt;br&gt;2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
+| 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
 
 ## 示例
 
@@ -134,7 +134,7 @@ getSuccessfulFiles(): Array<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 22400005 | Inner error. Possible causes: &lt;br&gt;1.Failed to access the database or execute the SQL statement. &lt;br&gt;2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
+| 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
 
 ## 示例
 

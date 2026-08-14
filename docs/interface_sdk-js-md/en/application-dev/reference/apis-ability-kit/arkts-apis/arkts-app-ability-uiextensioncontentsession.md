@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { UIExtensionContentSession } from '@kit.AbilityKit';
+import { UIExtensionContentSession } from 'UIExtensionContentSession';
 ```
 
 ## Summary

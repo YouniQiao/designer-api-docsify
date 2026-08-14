@@ -109,7 +109,7 @@ Height of the icon. The aspect ratio is 1:1. The default value is **64fp**. Perc
 onAuthResult: userAuth.AuthCallbackOnResultFunc
 ```
 
-Callback used to return the user authentication result.&lt;br&gt;The application must request the `ohos.permission.ACCESS_BIOMETRIC` permission. Otherwise, it will only display the icon and cannot start the identity authentication components.
+Callback used to return the user authentication result.<br>The application must request the `ohos.permission.ACCESS_BIOMETRIC` permission. Otherwise, it will only display the icon and cannot start the identity authentication components.
 
 **Type:** userAuth.AuthCallbackOnResultFunc
 

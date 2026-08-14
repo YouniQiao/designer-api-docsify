@@ -17,7 +17,7 @@ Defines the response of ShowActionMenu.
 ## Modules to Import
 
 ```TypeScript
-import { prompt } from '@kit.ArkUI';
+import { prompt } from 'prompt';
 ```
 
 ## index

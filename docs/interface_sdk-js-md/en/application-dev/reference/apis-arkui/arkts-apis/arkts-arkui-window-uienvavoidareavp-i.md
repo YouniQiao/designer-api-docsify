@@ -15,7 +15,7 @@ Describes the information about the window avoidance area in units of vp, which 
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'window';
 ```
 
 ## bottomRect

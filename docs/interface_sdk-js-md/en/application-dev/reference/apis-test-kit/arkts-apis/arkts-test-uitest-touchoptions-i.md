@@ -15,7 +15,35 @@ Common options for touch operations.
 ## Modules to Import
 
 ```TypeScript
-import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from '@kit.TestKit';
+import { Component } from 'Component';
+import { DisplayRotation } from 'DisplayRotation';
+import { Driver } from 'Driver';
+import { MatchPattern } from 'MatchPattern';
+import { MouseButton } from 'MouseButton';
+import { ON } from 'ON';
+import { On } from 'On';
+import { PointerMatrix } from 'PointerMatrix';
+import { ResizeDirection } from 'ResizeDirection';
+import { UIElementInfo } from 'UIElementInfo';
+import { UIEventObserver } from 'UIEventObserver';
+import { UiDirection } from 'UiDirection';
+import { UiWindow } from 'UiWindow';
+import { WindowMode } from 'WindowMode';
+import { Point } from 'Point';
+import { WindowFilter } from 'WindowFilter';
+import { Rect } from 'Rect';
+import { TouchPadSwipeOptions } from 'TouchPadSwipeOptions';
+import { InputTextMode } from 'InputTextMode';
+import { WindowChangeType } from 'WindowChangeType';
+import { ComponentEventType } from 'ComponentEventType';
+import { WindowChangeOptions } from 'WindowChangeOptions';
+import { ComponentEventOptions } from 'ComponentEventOptions';
+import { TouchOptions } from 'TouchOptions';
+import { KeyOptions } from 'KeyOptions';
+import { PenKey } from 'PenKey';
+import { PenMode } from 'PenMode';
+import { PenKeyOperation } from 'PenKeyOperation';
+import { PenKeyOperationOptions } from 'PenKeyOperationOptions';
 ```
 
 ## duration
@@ -24,7 +52,7 @@ import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPat
 duration?: int
 ```
 
-Duration of the operation in milliseconds. &lt;br&gt;Value range: The value should be >= 1500 &lt;br&gt;Unit: ms &lt;br&gt;Default value: 1500
+Duration of the operation in milliseconds. <br>Value range: The value should be >= 1500 <br>Unit: ms <br>Default value: 1500
 
 **Type:** int
 
@@ -68,7 +96,7 @@ Pressure value of the touch. The value range is [0, 1]. The default value is **0
 speed?: int
 ```
 
-Speed of touch action. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Unit: px/s. &lt;br&gt;If the value is out of range or null/undefined, the default value 600 is used. &lt;br&gt;Default value: 600
+Speed of touch action. <br>Value range:[200, 40000] <br>Unit: px/s. <br>If the value is out of range or null/undefined, the default value 600 is used. <br>Default value: 600
 
 **Type:** int
 

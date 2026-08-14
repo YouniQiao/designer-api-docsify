@@ -18,7 +18,7 @@
 screenId?: number
 ```
 
-给组件设置关联屏幕ID，通过此项可在组件上显示关联屏幕画面。屏幕ID可通过@ohos.screen.getAllScreens接口获取。&lt;br/&gt;默认值：**0**，表示主屏幕。
+给组件设置关联屏幕ID，通过此项可在组件上显示关联屏幕画面。屏幕ID可通过@ohos.screen.getAllScreens接口获取。<br/>默认值：**0**，表示主屏幕。
 
 **类型：** number
 

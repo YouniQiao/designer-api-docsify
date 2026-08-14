@@ -20,7 +20,7 @@
 generateKeyPair(callback: AsyncCallback<KeyPair>): void
 ```
 
-获取非对称密钥生成器生成的密钥。使用callback异步回调。 &lt;br&gt;当使用[COMMON_PARAMS_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#AsyKeySpecType)类型的密钥参数来创建密钥生成器时，可以得到随机生成的密钥对； 当使用[KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#AsyKeySpecType)类型的密钥参数来创建密钥生成器时，可以得到各项数据与密钥参数一致的 密钥对。
+获取非对称密钥生成器生成的密钥。使用callback异步回调。 <br>当使用[COMMON_PARAMS_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#AsyKeySpecType)类型的密钥参数来创建密钥生成器时，可以得到随机生成的密钥对； 当使用[KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#AsyKeySpecType)类型的密钥参数来创建密钥生成器时，可以得到各项数据与密钥参数一致的 密钥对。
 
 **起始版本：** 23
 
@@ -99,7 +99,7 @@ function testGenerateKeyPair() {
 generateKeyPair(): Promise<KeyPair>
 ```
 
-获取该非对称密钥生成器生成的密钥。使用Promise异步回调。 &lt;br&gt;当使用[COMMON_PARAMS_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#AsyKeySpecType)类型的密钥参数来创建密钥生成器时，可以得到随机生成的密钥对； 当使用[KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#AsyKeySpecType)类型的密钥参数来创建密钥生成器时，可以得到各项数据与密钥参数一致的 密钥对。
+获取该非对称密钥生成器生成的密钥。使用Promise异步回调。 <br>当使用[COMMON_PARAMS_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#AsyKeySpecType)类型的密钥参数来创建密钥生成器时，可以得到随机生成的密钥对； 当使用[KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#AsyKeySpecType)类型的密钥参数来创建密钥生成器时，可以得到各项数据与密钥参数一致的 密钥对。
 
 **起始版本：** 23
 
@@ -125,7 +125,7 @@ generateKeyPair(): Promise<KeyPair>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
+| [401](../../errorcode-universal.md#401-参数检查失败) | 非法入参。可能的原因： <br>1. 必填参数未指定； <br>2. 参数类型不正确； <br>3. 参数验证失败。 |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 
@@ -225,7 +225,7 @@ async function testGenerateKeyPair()
 generateKeyPairSync(): KeyPair
 ```
 
-同步获取该非对称密钥生成器生成的密钥。 &lt;br&gt;当使用[COMMON_PARAMS_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#AsyKeySpecType)类型的密钥参数来创建密钥生成器时，可以得到随机生成的密钥对； 当使用[KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#AsyKeySpecType)类型的密钥参数来创建密钥生成器时，可以得到各项数据与密钥参数一致的 密钥对。 &lt;br&gt;&lt;br&gt;**说明：** &lt;br&gt;建议优先使用异步API，generateKeyPair。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
+同步获取该非对称密钥生成器生成的密钥。 <br>当使用[COMMON_PARAMS_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#AsyKeySpecType)类型的密钥参数来创建密钥生成器时，可以得到随机生成的密钥对； 当使用[KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#AsyKeySpecType)类型的密钥参数来创建密钥生成器时，可以得到各项数据与密钥参数一致的 密钥对。 <br><br>**说明：** <br>建议优先使用异步API，generateKeyPair。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 23
 
@@ -249,7 +249,7 @@ generateKeyPairSync(): KeyPair
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
+| [401](../../errorcode-universal.md#401-参数检查失败) | 非法入参。可能的原因： <br>1. 必填参数未指定； <br>2. 参数类型不正确； <br>3. 参数验证失败。 |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 
@@ -307,7 +307,7 @@ function testGenerateKeyPairSync() {
 generatePriKey(callback: AsyncCallback<PriKey>): void
 ```
 
-获取非对称密钥生成器生成的密钥。使用callback异步回调。 &lt;br&gt;使用[PRIVATE_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#AsyKeySpecType)类型密钥参数创建密钥生成器，生成指定私钥。使用 [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#AsyKeySpecType)类型密钥参数创建密钥生成器，从生成的密钥对中获取指定私钥。
+获取非对称密钥生成器生成的密钥。使用callback异步回调。 <br>使用[PRIVATE_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#AsyKeySpecType)类型密钥参数创建密钥生成器，生成指定私钥。使用 [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#AsyKeySpecType)类型密钥参数创建密钥生成器，从生成的密钥对中获取指定私钥。
 
 **起始版本：** 23
 
@@ -386,7 +386,7 @@ function testGeneratePriKey() {
 generatePriKey(): Promise<PriKey>
 ```
 
-获取该非对称密钥生成器生成的私钥。使用Promise异步回调。 &lt;br&gt;当使用[PRIVATE_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#AsyKeySpecType)类型的密钥参数来创建密钥生成器时，可以得到指定的私钥；当使用 [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#AsyKeySpecType)类型的密钥参数来创建密钥生成器时，可以从生成的密钥对中获取指定的私钥。
+获取该非对称密钥生成器生成的私钥。使用Promise异步回调。 <br>当使用[PRIVATE_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#AsyKeySpecType)类型的密钥参数来创建密钥生成器时，可以得到指定的私钥；当使用 [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#AsyKeySpecType)类型的密钥参数来创建密钥生成器时，可以从生成的密钥对中获取指定的私钥。
 
 **起始版本：** 23
 
@@ -412,7 +412,7 @@ generatePriKey(): Promise<PriKey>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
+| [401](../../errorcode-universal.md#401-参数检查失败) | 非法入参。可能的原因： <br>1. 必填参数未指定； <br>2. 参数类型不正确； <br>3. 参数验证失败。 |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 
@@ -511,7 +511,7 @@ async function testGeneratePriKey() {
 generatePriKeySync(): PriKey
 ```
 
-使用该非对称密钥生成器生成私钥。该接口以同步方式返回结果。 &lt;br&gt;当使用[PRIVATE_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#AsyKeySpecType)类型的密钥参数来创建密钥生成器时，可以得到指定的私钥；当使用 [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#AsyKeySpecType)类型的密钥参数来创建密钥生成器时，可以从生成的密钥对中获取指定的私钥。 &lt;br&gt;&lt;br&gt;**说明：** &lt;br&gt;建议优先使用异步API，[generatePriKey](#generatePriKey)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
+使用该非对称密钥生成器生成私钥。该接口以同步方式返回结果。 <br>当使用[PRIVATE_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#AsyKeySpecType)类型的密钥参数来创建密钥生成器时，可以得到指定的私钥；当使用 [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#AsyKeySpecType)类型的密钥参数来创建密钥生成器时，可以从生成的密钥对中获取指定的私钥。 <br><br>**说明：** <br>建议优先使用异步API，[generatePriKey](#generatePriKey)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 23
 
@@ -535,7 +535,7 @@ generatePriKeySync(): PriKey
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
+| [401](../../errorcode-universal.md#401-参数检查失败) | 非法入参。可能的原因： <br>1. 必填参数未指定； <br>2. 参数类型不正确； <br>3. 参数验证失败。 |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 
@@ -591,7 +591,7 @@ function testGeneratePriKeySync() {
 generatePubKey(callback: AsyncCallback<PubKey>): void
 ```
 
-获取非对称密钥生成器生成的公钥。使用callback异步回调。 &lt;br&gt;当使用[PUBLIC_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#AsyKeySpecType)类型的密钥参数来创建密钥生成器时，可以得到指定的公钥；当使用 [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#AsyKeySpecType)类型的密钥参数来创建密钥生成器时，可以从生成的密钥对中获取指定的公钥。
+获取非对称密钥生成器生成的公钥。使用callback异步回调。 <br>当使用[PUBLIC_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#AsyKeySpecType)类型的密钥参数来创建密钥生成器时，可以得到指定的公钥；当使用 [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#AsyKeySpecType)类型的密钥参数来创建密钥生成器时，可以从生成的密钥对中获取指定的公钥。
 
 **起始版本：** 23
 
@@ -670,7 +670,7 @@ function testGeneratePubKey() {
 generatePubKey(): Promise<PubKey>
 ```
 
-获取该非对称密钥生成器生成的公钥。使用Promise异步回调。 &lt;br&gt;当使用[PUBLIC_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#AsyKeySpecType)类型的密钥参数来创建密钥生成器时，可以得到指定的公钥；当使用 [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#AsyKeySpecType)类型的密钥参数来创建密钥生成器时，可以从生成的密钥对中获取指定的公钥。
+获取该非对称密钥生成器生成的公钥。使用Promise异步回调。 <br>当使用[PUBLIC_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#AsyKeySpecType)类型的密钥参数来创建密钥生成器时，可以得到指定的公钥；当使用 [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#AsyKeySpecType)类型的密钥参数来创建密钥生成器时，可以从生成的密钥对中获取指定的公钥。
 
 **起始版本：** 23
 
@@ -696,7 +696,7 @@ generatePubKey(): Promise<PubKey>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
+| [401](../../errorcode-universal.md#401-参数检查失败) | 非法入参。可能的原因： <br>1. 必填参数未指定； <br>2. 参数类型不正确； <br>3. 参数验证失败。 |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 
@@ -796,7 +796,7 @@ async function testGeneratePubKey()
 generatePubKeySync(): PubKey
 ```
 
-同步获取该非对称密钥生成器生成的公钥。 &lt;br&gt;当使用[PUBLIC_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#AsyKeySpecType)类型的密钥参数来创建密钥生成器时，可以得到指定的公钥；使用 [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#AsyKeySpecType)类型的密钥参数时，可以从生成的密钥对中获取指定的公钥。 &lt;br&gt;&lt;br&gt;**说明：** &lt;br&gt;建议优先使用异步API，[generatePubKey](#generatePubKey)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
+同步获取该非对称密钥生成器生成的公钥。 <br>当使用[PUBLIC_KEY_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#AsyKeySpecType)类型的密钥参数来创建密钥生成器时，可以得到指定的公钥；使用 [KEY_PAIR_SPEC](arkts-cryptoarchitecture-cryptoframework-asykeyspectype-e.md#AsyKeySpecType)类型的密钥参数时，可以从生成的密钥对中获取指定的公钥。 <br><br>**说明：** <br>建议优先使用异步API，[generatePubKey](#generatePubKey)。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。 因此建议在子线程中调用同步API，以避免阻塞主线程。
 
 **起始版本：** 23
 
@@ -820,7 +820,7 @@ generatePubKeySync(): PubKey
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | 非法入参。可能的原因： &lt;br&gt;1. 必填参数未指定； &lt;br&gt;2. 参数类型不正确； &lt;br&gt;3. 参数验证失败。 |
+| [401](../../errorcode-universal.md#401-参数检查失败) | 非法入参。可能的原因： <br>1. 必填参数未指定； <br>2. 参数类型不正确； <br>3. 参数验证失败。 |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | 密码操作错误。 |
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | 内存操作失败。 |
 

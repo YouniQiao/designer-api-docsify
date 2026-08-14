@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { intelligentScene } from '@kit.BasicServicesKit';
+import { intelligentScene } from 'intelligentScene';
 ```
 
 ## isNotifyAllowedInDoNotDisturb

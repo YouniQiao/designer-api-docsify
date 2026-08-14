@@ -15,7 +15,7 @@ Represents the encapsulation result of the KEM.
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from 'cryptoFramework';
 ```
 
 ## sharedSecret

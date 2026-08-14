@@ -15,7 +15,7 @@ Describes the information about a media asset.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'photoAccessHelper';
 ```
 
 ## albumChangeInfos
@@ -116,7 +116,7 @@ Date when the media asset was created.
 dateModifiedMs?: long
 ```
 
-The modified time of asset. &lt;br&gt;Unit:milliseconds.
+The modified time of asset. <br>Unit:milliseconds.
 
 **Type:** long
 
@@ -228,7 +228,7 @@ ID of the media asset.
 hiddenTime?: long
 ```
 
-The hidden time of asset. &lt;br&gt;Unit:milliseconds.
+The hidden time of asset. <br>Unit:milliseconds.
 
 **Type:** long
 

@@ -15,7 +15,8 @@ Declaration of the menu item on the right side.
 ## Modules to Import
 
 ```TypeScript
-import { SelectTitleBarMenuItem, SelectTitleBar } from '@kit.ArkUI';
+import { SelectTitleBar } from 'SelectTitleBar';
+import { SelectTitleBarMenuItem } from 'SelectTitleBarMenuItem';
 ```
 
 ## accessibilityDescription

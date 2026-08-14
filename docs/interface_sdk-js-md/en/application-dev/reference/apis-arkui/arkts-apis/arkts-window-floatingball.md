@@ -15,7 +15,7 @@ This module provides essential functionalities for floating balls. It lets you c
 ## Modules to Import
 
 ```TypeScript
-import { floatingBall } from '@kit.ArkUI';
+import { floatingBall } from 'floatingBall';
 ```
 
 ## Summary

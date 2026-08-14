@@ -17,7 +17,7 @@ Describes the magnetic field sensor data. It extends from [Response](arkts-senso
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
+import { sensor } from 'sensor';
 ```
 
 ## x

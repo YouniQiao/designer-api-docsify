@@ -17,7 +17,7 @@ P2P linked information.
 ## Modules to Import
 
 ```TypeScript
-import { wifi } from '@kit.ConnectivityKit';
+import { wifi } from 'wifi';
 ```
 
 ## connectState

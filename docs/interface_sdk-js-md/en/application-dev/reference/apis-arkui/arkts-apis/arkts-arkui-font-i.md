@@ -18,7 +18,7 @@ Sets the text style.
 family?: string | Resource
 ```
 
-Font family. &lt;br&gt;To specify multiple fonts, separate them with commas (,), and fonts are applied in priority order. Example: **'Arial, HarmonyOS Sans'**. Default value: 'HarmonyOS Sans'.
+Font family. <br>To specify multiple fonts, separate them with commas (,), and fonts are applied in priority order. Example: **'Arial, HarmonyOS Sans'**. Default value: 'HarmonyOS Sans'.
 
 **Type:** string \| [Resource](arkts-arkui-resource-t.md)
 

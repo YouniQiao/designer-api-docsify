@@ -15,7 +15,7 @@ Implements a paragraph builder that uses the builder pattern to construct paragr
 ## Modules to Import
 
 ```TypeScript
-import { text } from '@kit.ArkGraphics2D';
+import { text } from 'text';
 ```
 
 ## addPlaceholder

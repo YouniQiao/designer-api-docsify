@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { insightIntentDriver } from '@kit.AbilityKit';
+import { insightIntentDriver } from 'insightIntentDriver';
 ```
 
 ## getInsightIntentInfoByFilter
@@ -12,7 +12,7 @@ import { insightIntentDriver } from '@kit.AbilityKit';
 function getInsightIntentInfoByFilter(filter: InsightIntentInfoFilter): Promise<Array<InsightIntentInfo>>
 ```
 
-Obtains the intent information on the current device based on the given intent filter. This API uses a promise to return the result.&lt;br&gt;If the user ID of the calling application is different from the user ID of the intent, the calling application must request the ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission.
+Obtains the intent information on the current device based on the given intent filter. This API uses a promise to return the result.<br>If the user ID of the calling application is different from the user ID of the intent, the calling application must request the ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission.
 
 **Since:** 23
 

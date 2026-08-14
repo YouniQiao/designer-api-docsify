@@ -17,7 +17,7 @@ Defines a disposed rule.
 ## Modules to Import
 
 ```TypeScript
-import { appControl } from '@kit.AbilityKit';
+import { appControl } from 'appControl';
 ```
 
 ## componentType

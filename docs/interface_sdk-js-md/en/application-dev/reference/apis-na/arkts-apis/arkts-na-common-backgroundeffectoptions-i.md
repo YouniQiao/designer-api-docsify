@@ -66,7 +66,7 @@ Define the blurOptions of BackgroundEffect.
 brightness?: double
 ```
 
-Brightness. &lt;br&gt;Value range: [0, +∞). &lt;br&gt;Default value: **1** Recommended value range: [0, 2].
+Brightness. <br>Value range: [0, +∞). <br>Default value: **1** Recommended value range: [0, 2].
 
 **Type:** double
 

@@ -15,7 +15,7 @@ Defines the Contact selection options, which specifies whether one contact or mu
 ## Modules to Import
 
 ```TypeScript
-import { contact } from '@kit.ContactsKit';
+import { contact } from 'contact';
 ```
 
 ## filter

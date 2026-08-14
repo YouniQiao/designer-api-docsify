@@ -15,7 +15,7 @@ Represents the configuration for saving images or videos to the media library, i
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'photoAccessHelper';
 ```
 
 ## fileNameExtension

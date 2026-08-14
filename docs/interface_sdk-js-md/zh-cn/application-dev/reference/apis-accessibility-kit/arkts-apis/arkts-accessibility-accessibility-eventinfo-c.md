@@ -1,6 +1,6 @@
 # EventInfo
 
-界面变更事件。
+无障碍事件信息，用于描述界面变更或交互事件，作为[sendAccessibilityEvent](arkts-accessibility-accessibility-sendaccessibilityevent-f.md#sendAccessibilityEvent)的参数定义事件的类型和触发动作。发送的无障碍事 件将被系统分发到已注册且匹配事件类型的辅助应用进行响应，详见[sendAccessibilityEvent](arkts-accessibility-accessibility-sendaccessibilityevent-f.md#sendAccessibilityEvent)。
 
 **起始版本：** 23
 
@@ -38,7 +38,7 @@ constructor(jsonObject: Object)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| jsonObject | Object | 是 | 包含 type、bundleName 和 triggerAction 三个字段的 JSON对象，详见示例。 |
+| jsonObject | Object | 是 | 包含type、bundleName和triggerAction三个字段的JSON对象，详见示例。 |
 
 ## 示例
 
@@ -113,8 +113,8 @@ constructor(type: EventType, bundleName: string, triggerAction: Action)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | EventType | 是 | 无障碍事件类型。 |
-| bundleName | string | 是 | 目标应用名。 |
-| triggerAction | Action | 是 | 触发事件的 Action。 |
+| bundleName | string | 是 | 目标应用的Bundle名称。 |
+| triggerAction | Action | 是 | 触发事件的Action。 |
 
 ## 示例
 
@@ -155,7 +155,7 @@ beginIndex?: int
 bundleName: string
 ```
 
-目标应用名；不可缺省。
+目标应用的Bundle名称；不可缺省。
 
 **类型：** string
 
@@ -251,7 +251,7 @@ currentIndex?: int
 customId?: string
 ```
 
-主动聚焦的组件ID，默认值为空。
+主动聚焦的组件ID，当应用需要主动聚焦时根据实际场景设置，默认值为空。
 
 **类型：** string
 
@@ -275,7 +275,7 @@ customId?: string
 description?: string
 ```
 
-事件描述，根据实际场景设置，无特殊限制，默认值为空。
+事件描述，由开发者根据业务需要自定义描述内容，无特殊限制，默认值为空。
 
 **类型：** string
 
@@ -467,7 +467,7 @@ textMoveUnit?: TextMoveUnit
 textResourceAnnouncedForAccessibility?: Resource
 ```
 
-主动播报的内容支持传入Resource类型，且只能传入string。
+主动播报的内容支持传入Resource类型，且Resource只能引用string类型资源（如\$r('app.string.xxx')）。
 
 **类型：** Resource
 

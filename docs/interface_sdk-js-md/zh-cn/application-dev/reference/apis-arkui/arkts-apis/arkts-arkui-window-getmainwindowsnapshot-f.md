@@ -57,6 +57,7 @@ export default class EntryAbility extends UIAbility {
     windowStage.loadContent('pages/Index', (err) => {
       if (err.code) {
         console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
+        return;
       }
       reqPermissionsFromUser(permissions, this.context);
       console.info('Success in loading the content');
@@ -122,6 +123,7 @@ export default class EntryAbility extends UIAbility {
     windowStage.loadContent('pages/Index', (err: BusinessError<void> | null): void => {
       if (err?.code) {
         console.error(`Failed to load the content. Cause code: ${err.code}, message: ${err.message}`);
+        return;
       }
       reqPermissionsFromUser(permissions, this.context);
       console.info('Success in loading the content');

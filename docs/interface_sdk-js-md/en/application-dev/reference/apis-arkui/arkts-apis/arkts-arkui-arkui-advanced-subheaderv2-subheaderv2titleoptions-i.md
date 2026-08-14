@@ -15,7 +15,13 @@ Defines the options for initializing a **SubHeaderV2Title** object.
 ## Modules to Import
 
 ```TypeScript
-import { SubHeaderV2Select, SubHeaderV2, SubHeaderV2IconType, SubHeaderV2OperationItemType, SubHeaderV2OperationType, SubHeaderV2Title, SubHeaderV2OperationItem } from '@kit.ArkUI';
+import { SubHeaderV2IconType } from 'SubHeaderV2IconType';
+import { SubHeaderV2Title } from 'SubHeaderV2Title';
+import { SubHeaderV2Select } from 'SubHeaderV2Select';
+import { SubHeaderV2 } from 'SubHeaderV2';
+import { SubHeaderV2OperationType } from 'SubHeaderV2OperationType';
+import { SubHeaderV2OperationItem } from 'SubHeaderV2OperationItem';
+import { SubHeaderV2OperationItemType } from 'SubHeaderV2OperationItemType';
 ```
 
 ## id

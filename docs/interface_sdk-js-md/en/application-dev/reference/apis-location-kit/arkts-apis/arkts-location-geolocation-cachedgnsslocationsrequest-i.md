@@ -19,7 +19,7 @@ Parameters for requesting to report cache location information
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from '@kit.LocationKit';
+import { geolocation } from 'geolocation';
 ```
 
 ## reportingPeriodSec

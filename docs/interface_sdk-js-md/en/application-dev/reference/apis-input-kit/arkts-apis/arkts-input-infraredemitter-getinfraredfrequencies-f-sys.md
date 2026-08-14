@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { infraredEmitter } from '@kit.InputKit';
+import { infraredEmitter } from 'infraredEmitter';
 ```
 
 ## getInfraredFrequencies
@@ -32,7 +32,7 @@ Queries the frequency range of IR signals supported by the device.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[InfraredFrequency](arkts-input-infraredemitter-infraredfrequency-i-sys.md)&gt; | Frequency range of IR signals, including multiple groups of maximum and minimum frequencies. &lt;br&gt;Since API version 23, one group of maximum and minimum frequencies, both of which are **0** Hz, are returned. |
+| Array&lt;[InfraredFrequency](arkts-input-infraredemitter-infraredfrequency-i-sys.md)&gt; | Frequency range of IR signals, including multiple groups of maximum and minimum frequencies. <br>Since API version 23, one group of maximum and minimum frequencies, both of which are **0** Hz, are returned. |
 
 **Error codes:**
 

@@ -51,7 +51,7 @@ addEvent(event: Event): Promise<number>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**适用版本：** 23+ |
+| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: <br>1. dataShare数据库执行错误； <br>2. 空指针错误； <br>3. 数据解析错误。<br>**适用版本：** 23+ |
 | [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。<br>**适用版本：** 23+ |
 
 ## 示例
@@ -120,7 +120,7 @@ addEvent(event: Event, callback: AsyncCallback<number>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**适用版本：** 23+ |
+| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: <br>1. dataShare数据库执行错误； <br>2. 空指针错误； <br>3. 数据解析错误。<br>**适用版本：** 23+ |
 | [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。<br>**适用版本：** 23+ |
 
 ## 示例
@@ -192,7 +192,7 @@ addEvents(events: Event[]): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**适用版本：** 23+ |
+| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: <br>1. dataShare数据库执行错误； <br>2. 空指针错误； <br>3. 数据解析错误。<br>**适用版本：** 23+ |
 | [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。<br>**适用版本：** 23+ |
 
 ## 示例
@@ -266,7 +266,7 @@ addEvents(events: Event[], callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**适用版本：** 23+ |
+| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: <br>1. dataShare数据库执行错误； <br>2. 空指针错误； <br>3. 数据解析错误。<br>**适用版本：** 23+ |
 | [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。<br>**适用版本：** 23+ |
 
 ## 示例
@@ -744,7 +744,7 @@ getEvents(eventFilter?: EventFilter, eventKey?: (keyof Event)[]): Promise<Event[
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**适用版本：** 23+ |
+| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: <br>1. dataShare数据库执行错误； <br>2. 空指针错误； <br>3. 数据解析错误。<br>**适用版本：** 23+ |
 | [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。<br>**适用版本：** 23+ |
 
 ## 示例
@@ -821,7 +821,7 @@ getEvents(eventFilter: EventFilter, eventKey: (keyof Event)[], callback: AsyncCa
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**适用版本：** 23+ |
+| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: <br>1. dataShare数据库执行错误； <br>2. 空指针错误； <br>3. 数据解析错误。<br>**适用版本：** 23+ |
 | [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。<br>**适用版本：** 23+ |
 
 ## 示例
@@ -911,7 +911,7 @@ getEvents(callback: AsyncCallback<Event[]>):void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**适用版本：** 23+ |
+| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: <br>1. dataShare数据库执行错误； <br>2. 空指针错误； <br>3. 数据解析错误。<br>**适用版本：** 23+ |
 | [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。<br>**适用版本：** 23+ |
 
 ## 示例
@@ -1075,7 +1075,7 @@ queryEventInstances(start: number, end: number, ids?: number[], eventKey?: (keyo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: &lt;br&gt;1. dataShare数据库执行错误； &lt;br&gt;2. 空指针错误； &lt;br&gt;3. 数据解析错误。<br>**适用版本：** 23+ |
+| [23900004](../errorcode-calendarManager.md#23900004-内部程序错误) | 内部程序错误，可能原因: <br>1. dataShare数据库执行错误； <br>2. 空指针错误； <br>3. 数据解析错误。<br>**适用版本：** 23+ |
 | [201](../../errorcode-universal.md#201-权限校验失败) | 权限校验失败。<br>**适用版本：** 23+ |
 
 ## 示例

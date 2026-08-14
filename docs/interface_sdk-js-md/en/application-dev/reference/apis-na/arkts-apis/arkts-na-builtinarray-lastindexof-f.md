@@ -26,7 +26,7 @@ Returns the last index at which a given element can be found in the array, or -1
 | --- | --- | --- | --- |
 | self | FixedArray&lt;boolean&gt; | Yes | The array to operate `lastIndexOf` on. |
 | element | boolean | Yes |  |
-| fromIndex | int | No | The index to start in the array. &lt;br&gt;The value should be an integer. |
+| fromIndex | int | No | The index to start in the array. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -61,7 +61,7 @@ Returns the last index at which a given element can be found in the array, or -1
 | --- | --- | --- | --- |
 | self | FixedArray&lt;byte&gt; | Yes | The array to operate `lastIndexOf` on. |
 | element | byte | Yes |  |
-| fromIndex | int | No | The index to start in the array. &lt;br&gt;The value should be an integer. |
+| fromIndex | int | No | The index to start in the array. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -96,7 +96,7 @@ Returns the last index at which a given element can be found in the array, or -1
 | --- | --- | --- | --- |
 | self | FixedArray&lt;short&gt; | Yes | The array to operate `lastIndexOf` on. |
 | element | short | Yes |  |
-| fromIndex | int | No | The index to start in the array. &lt;br&gt;The value should be an integer. |
+| fromIndex | int | No | The index to start in the array. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -131,7 +131,7 @@ Returns the last index at which a given element can be found in the array, or -1
 | --- | --- | --- | --- |
 | self | FixedArray&lt;int&gt; | Yes | The array to operate `lastIndexOf` on. |
 | element | int | Yes |  |
-| fromIndex | int | No | The index to start in the array. &lt;br&gt;The value should be an integer. |
+| fromIndex | int | No | The index to start in the array. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -166,7 +166,7 @@ Returns the last index at which a given element can be found in the array, or -1
 | --- | --- | --- | --- |
 | self | FixedArray&lt;long&gt; | Yes | The array to operate `lastIndexOf` on. |
 | element | long | Yes |  |
-| fromIndex | int | No | The index to start in the array. &lt;br&gt;The value should be an integer. |
+| fromIndex | int | No | The index to start in the array. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -201,7 +201,7 @@ Returns the last index at which a given element can be found in the array, or -1
 | --- | --- | --- | --- |
 | self | FixedArray&lt;float&gt; | Yes | The array to operate `lastIndexOf` on. |
 | element | float | Yes |  |
-| fromIndex | int | No | The index to start in the array. &lt;br&gt;The value should be an integer. |
+| fromIndex | int | No | The index to start in the array. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -236,7 +236,7 @@ Returns the last index at which a given element can be found in the array, or -1
 | --- | --- | --- | --- |
 | self | FixedArray&lt;double&gt; | Yes | The array to operate `lastIndexOf` on. |
 | element | double | Yes |  |
-| fromIndex | int | No | The index to start in the array. &lt;br&gt;The value should be an integer. |
+| fromIndex | int | No | The index to start in the array. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -271,7 +271,7 @@ Returns the last index at which a given element can be found in the array, or -1
 | --- | --- | --- | --- |
 | self | FixedArray&lt;char&gt; | Yes | The array to operate `lastIndexOf` on. |
 | element | char | Yes |  |
-| fromIndex | int | No | The index to start in the array. &lt;br&gt;The value should be an integer. |
+| fromIndex | int | No | The index to start in the array. <br>The value should be an integer. |
 
 **Return value:**
 

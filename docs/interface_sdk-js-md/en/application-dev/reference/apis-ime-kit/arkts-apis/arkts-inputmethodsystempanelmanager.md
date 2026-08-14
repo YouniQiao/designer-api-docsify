@@ -19,7 +19,7 @@ Input method system panel manager.
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodSystemPanelManager } from '@kit.IMEKit';
+import { inputMethodSystemPanelManager } from 'inputMethodSystemPanelManager';
 ```
 
 ## Summary

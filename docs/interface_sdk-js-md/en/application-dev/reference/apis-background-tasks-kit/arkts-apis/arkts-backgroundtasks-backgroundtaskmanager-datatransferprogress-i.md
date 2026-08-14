@@ -15,7 +15,7 @@ Information about continuousTask notification progress.
 ## Modules to Import
 
 ```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from 'backgroundTaskManager';
 ```
 
 ## continuousTaskId

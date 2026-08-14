@@ -15,7 +15,7 @@ Implements a PiP controller that starts, stops, or updates a PiP window and regi
 ## Modules to Import
 
 ```TypeScript
-import { PiPWindow } from '@kit.ArkUI';
+import { PiPWindow } from 'PiPWindow';
 ```
 
 ## isPiPSupported

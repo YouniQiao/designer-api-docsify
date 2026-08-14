@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Want } from '@kit.AbilityKit';
+import { Want } from 'Want';
 ```
 
 ## Summary

@@ -17,7 +17,7 @@ Provides callbacks to return the authentication result.
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
+import { userAuth } from 'userAuth';
 ```
 
 ## onAcquireInfo

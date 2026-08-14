@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { accountManager } from '@kit.MDMKit';
+import { accountManager } from 'accountManager';
 ```
 
 ## setDomainAccountPolicy
@@ -33,8 +33,8 @@ Sets the domain account policy.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| domainAccountInfo | osAccount.DomainAccountInfo | Yes | Domain account information. &lt;br&gt;If the internal attribute of **domainAccountInfo** is empty, a global policy is set for all domain accounts. &lt;br&gt;If the internal attribute of **domainAccountInfo** is not empty, the policy is set for the specified domain account. &lt;br&gt;The priority of the specified domain account policy is higher than that of the global policy. If the specified domain account has a domain account policy, the global policy does not take effect for the domain account. &lt;br&gt;**Note:** To set a policy for a specified domain account, the **serverConfigId** parameter in **DomainAccountInfo** is mandatory. |
-| policy | [DomainAccountPolicy](arkts-mdm-accountmanager-domainaccountpolicy-i.md) | Yes | Domain account policy. &lt;br&gt;**Note:** After setting the domain account policy, you must change the domain account password on the device. Otherwise, the **passwordValidityPeriod** and **passwordExpirationNotification** configurations in **DomainAccountPolicy** do not take effect. |
+| domainAccountInfo | osAccount.DomainAccountInfo | Yes | Domain account information. <br>If the internal attribute of **domainAccountInfo** is empty, a global policy is set for all domain accounts. <br>If the internal attribute of **domainAccountInfo** is not empty, the policy is set for the specified domain account. <br>The priority of the specified domain account policy is higher than that of the global policy. If the specified domain account has a domain account policy, the global policy does not take effect for the domain account. <br>**Note:** To set a policy for a specified domain account, the **serverConfigId** parameter in **DomainAccountInfo** is mandatory. |
+| policy | [DomainAccountPolicy](arkts-mdm-accountmanager-domainaccountpolicy-i.md) | Yes | Domain account policy. <br>**Note:** After setting the domain account policy, you must change the domain account password on the device. Otherwise, the **passwordValidityPeriod** and **passwordExpirationNotification** configurations in **DomainAccountPolicy** do not take effect. |
 
 **Error codes:**
 

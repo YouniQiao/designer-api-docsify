@@ -17,7 +17,7 @@ Information about an embedded profile (subscription) on an eUICC.
 ## Modules to Import
 
 ```TypeScript
-import { eSIM } from '@kit.TelephonyKit';
+import { eSIM } from 'eSIM';
 ```
 
 ## accessRules

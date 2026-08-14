@@ -1,6 +1,6 @@
 # AccessibilitySpan (System API)
 
-Defines the information about the hyperlink wrapped by the span tag. For details, see the spans attribute in [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md#AccessibilityElement).
+Hyperlink text information for accessibility. For details, see the attribute spans in [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md#AccessibilityElement).
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ Defines the information about the hyperlink wrapped by the span tag. For details
 accessibilityDescription: string
 ```
 
-Accessibility description of the hyperlink.
+Accessibility description of the hyperlink text.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ Accessibility description of the hyperlink.
 accessibilityLevel: string
 ```
 
-Accessibility level of the hyperlink.
+Accessibility level of the hyperlink text. 'auto': whether the text can be identified by accessibility is determined by the system; 'yes': can be identified by accessibility; 'no': cannot be identified by accessibility; ' no-hide-descendants': the current text and its child content cannot be identified by accessibility.
 
 **Type:** string
 
@@ -64,7 +64,7 @@ Accessibility level of the hyperlink.
 accessibilityText: string
 ```
 
-Accessibility text of the hyperlink.
+Accessibility text of the hyperlink text.
 
 **Type:** string
 
@@ -86,7 +86,7 @@ Accessibility text of the hyperlink.
 spanId: int
 ```
 
-Hyperlink ID.
+Hyperlink text number.
 
 **Type:** int
 
@@ -108,7 +108,7 @@ Hyperlink ID.
 spanText: string
 ```
 
-Text content of the hyperlink.
+Text content of the hyperlink text.
 
 **Type:** string
 

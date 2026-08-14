@@ -36,7 +36,7 @@ addComponentContent<T>(content: ComponentContent<T> | ReactiveComponentContent):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | [ComponentContent](arkts-na-componentcontent-c.md)&lt;T&gt; \| [ReactiveComponentContent](arkts-na-componentcontent-reactivecomponentcontent-c.md) | 是 | FrameNode节点中显示的组件内容。<br>**起始版本：** 23 |
+| content | [ComponentContent](../../apis-arkui/arkts-apis/arkts-arkui-componentcontent-c.md)&lt;T&gt; \| [ReactiveComponentContent](../../apis-arkui/arkts-apis/arkts-arkui-componentcontent-reactivecomponentcontent-c.md) | 是 | FrameNode节点中显示的组件内容。<br>**起始版本：** 23 |
 
 **错误码：**
 
@@ -68,7 +68,7 @@ addSupportedUIStates(uiStates: int, statesChangeHandler: UIStatesChangeHandler, 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uiStates | int | 是 | 目标UI声明节点需要处理。可以组合多个状态 使用OR操作，例如`targetUIStates = UIState.PRESSED \| UIState.FOCUSED`。 &lt;br&gt;取值限定为整数。 - 需要处理目标节点的UI状态。&lt;br&gt;可以通过位或计算同时指定设置多个状态，如：targetUIStates = UIState.PRESSED  \| UIState.FOCUSED。 |
+| uiStates | int | 是 | 目标UI声明节点需要处理。可以组合多个状态 使用OR操作，例如`targetUIStates = UIState.PRESSED \| UIState.FOCUSED`。 <br>取值限定为整数。 - 需要处理目标节点的UI状态。<br>可以通过位或计算同时指定设置多个状态，如：targetUIStates = UIState.PRESSED  \| UIState.FOCUSED。 |
 | statesChangeHandler | [UIStatesChangeHandler](arkts-na-uistateschangehandler-t.md) | 是 | 状态变化时的回调函数。 |
 | excludeInner | boolean | 否 | =false] - A flag to disable the system's default style handling for states. |
 
@@ -130,7 +130,7 @@ appendChild(node: FrameNode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-na-framenode-c.md) | 是 | 需要添加的FrameNode。&lt;br/&gt; node节点不可以为声明式创建的节点，即不可修改的FrameNode。仅有从BuilderNode中获取的声明式节点可以作为子节点。 若子节点不符合规格，则抛出异常信息。&lt;br/&gt; node节点不可以拥有父节点，否则抛出异常信息。 |
+| node | [FrameNode](arkts-na-framenode-c.md) | 是 | 需要添加的FrameNode。<br/> node节点不可以为声明式创建的节点，即不可修改的FrameNode。仅有从BuilderNode中获取的声明式节点可以作为子节点。 若子节点不符合规格，则抛出异常信息。<br/> node节点不可以拥有父节点，否则抛出异常信息。 |
 
 **错误码：**
 
@@ -169,7 +169,7 @@ cancelAnimations(properties: AnimationPropertyType[]): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 表示动画是否取消成功。&lt;br/&gt;返回值为true：动画取消成功。&lt;br/&gt;返回值为false：动画取消失败。&lt;br/&gt;可能导致动画取消失败的原因：&lt;br/&gt; 1. 节点已经释放，调用过 [dispose]{ |
+| boolean | 表示动画是否取消成功。<br/>返回值为true：动画取消成功。<br/>返回值为false：动画取消失败。<br/>可能导致动画取消失败的原因：<br/> 1. 节点已经释放，调用过 [dispose]{ |
 
 ## clearChildren
 
@@ -221,7 +221,7 @@ FrameNode的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。<br>**起始版本：** 23 |
+| uiContext | [UIContext](arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。<br>**起始版本：** 23 |
 | options | [FrameNodeOptions](arkts-na-framenode-framenodeoptions-i.md) | 否 | FrameNode创建时的可选参数。默认值：undefined，表示不支持多线程操作。<br>**起始版本：** 24 |
 
 ## convertPosition
@@ -363,15 +363,15 @@ createAnimation(property: AnimationPropertyType, startValue: double[] | undefine
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | property | [AnimationPropertyType](arkts-na-enums-animationpropertytype-e.md) | 是 | 动画属性枚举。 |
-| startValue | double[] \| undefined | 是 | 动画属性的起始值。取值为undefined或数组，取值为数组时数组长度需要和属性枚举匹配。如果为undefined则表示不显式指定动画初值， 节点上一次设置的属性终值为此次动画的起点值。如果取值为数组，&lt;br/&gt;- 对于AnimationPropertyType.ROTATION，取值格式为[rotationX, rotationY, rotationZ]，单位 为度（°），表示绕x、y、z轴的旋转角。&lt;br/&gt;- 对于AnimationPropertyType.TRANSLATION，取值格式为[translateX, translateY]，单位为px，表示沿x、y轴的平移量。 &lt;br/&gt;- 对于AnimationPropertyType.SCALE，取值格式为[scaleX, scaleY]，表示x、y方向的缩放比例。&lt;br/&gt;- 对于AnimationPropertyType.OPACITY， 取值格式为[opacity]，表示不透明度。opacity的取值范围为[0, 1]。&lt;br/&gt;当节点上从未设置过该属性时，需要显式指定startValue才能正常创建动画。当节点上已经设置过属性（如第二次及之后创建动画）， 则推荐不显式指定startValue或者显式指定startValue为上一次的终值，表示使用上一次的终值作为新的动画起点，避免起始值跳变。 |
-| endValue | double[] | 是 | 动画属性的终止值。取值为数组，数组长度需要和属性枚举匹配。&lt;br/&gt;- 对于AnimationPropertyType.ROTATION，取值格式为 [rotationX, rotationY, rotationZ]，单位为度（°），表示绕x、y、z轴的旋转角。&lt;br/&gt;- 对于AnimationPropertyType.TRANSLATION，取值格式为 [translateX, translateY]，单位为px，表示沿x、y轴的平移量。&lt;br/&gt;- 对于AnimationPropertyType.SCALE，取值格式为[scaleX, scaleY]，表示x、y方向的缩 放比例。&lt;br/&gt;- 对于AnimationPropertyType.OPACITY，取值格式为[opacity]，表示不透明度。opacity的取值范围为[0, 1]。 |
+| startValue | double[] \| undefined | 是 | 动画属性的起始值。取值为undefined或数组，取值为数组时数组长度需要和属性枚举匹配。如果为undefined则表示不显式指定动画初值， 节点上一次设置的属性终值为此次动画的起点值。如果取值为数组，<br/>- 对于AnimationPropertyType.ROTATION，取值格式为[rotationX, rotationY, rotationZ]，单位 为度（°），表示绕x、y、z轴的旋转角。<br/>- 对于AnimationPropertyType.TRANSLATION，取值格式为[translateX, translateY]，单位为px，表示沿x、y轴的平移量。 <br/>- 对于AnimationPropertyType.SCALE，取值格式为[scaleX, scaleY]，表示x、y方向的缩放比例。<br/>- 对于AnimationPropertyType.OPACITY， 取值格式为[opacity]，表示不透明度。opacity的取值范围为[0, 1]。<br/>当节点上从未设置过该属性时，需要显式指定startValue才能正常创建动画。当节点上已经设置过属性（如第二次及之后创建动画）， 则推荐不显式指定startValue或者显式指定startValue为上一次的终值，表示使用上一次的终值作为新的动画起点，避免起始值跳变。 |
+| endValue | double[] | 是 | 动画属性的终止值。取值为数组，数组长度需要和属性枚举匹配。<br/>- 对于AnimationPropertyType.ROTATION，取值格式为 [rotationX, rotationY, rotationZ]，单位为度（°），表示绕x、y、z轴的旋转角。<br/>- 对于AnimationPropertyType.TRANSLATION，取值格式为 [translateX, translateY]，单位为px，表示沿x、y轴的平移量。<br/>- 对于AnimationPropertyType.SCALE，取值格式为[scaleX, scaleY]，表示x、y方向的缩 放比例。<br/>- 对于AnimationPropertyType.OPACITY，取值格式为[opacity]，表示不透明度。opacity的取值范围为[0, 1]。 |
 | param | AnimateParam | 是 | 动画参数。包含时长、动画曲线、结束回调等参数。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 表示动画是否创建成功。&lt;br/&gt;返回值为true：动画创建成功，如果动画参数中设置结束回调，动画结束后会调用结束回调。&lt;br/&gt;返回值为false：动画创建失败，即使动画参数中设置结束回 调，结束回调也不会被调用。&lt;br/&gt;可能导致动画创建失败的原因：&lt;br/&gt; 1. 节点已经释放，调用过[dispose]{ |
+| boolean | 表示动画是否创建成功。<br/>返回值为true：动画创建成功，如果动画参数中设置结束回调，动画结束后会调用结束回调。<br/>返回值为false：动画创建失败，即使动画参数中设置结束回 调，结束回调也不会被调用。<br/>可能导致动画创建失败的原因：<br/> 1. 节点已经释放，调用过[dispose]{ |
 
 ## createFrameNodes
 
@@ -397,8 +397,8 @@ static createFrameNodes(uiContext: UIContext, count: int): FrameNode[]
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
-| count | int | 是 | 指定创建节点的数量，取值范围为大于零的整型。若给定值小于等于0或不是整数，则返回空数组。 &lt;br&gt;取值限定为整数。 |
+| uiContext | [UIContext](arkts-na-arkui-uicontext-uicontext-c.md) | 是 | 创建对应节点时所需的UI上下文。 |
+| count | int | 是 | 指定创建节点的数量，取值范围为大于零的整型。若给定值小于等于0或不是整数，则返回空数组。 <br>取值限定为整数。 |
 
 **返回值：**
 
@@ -469,7 +469,7 @@ getChild(index: int, expandMode?: ExpandMode | undefined): FrameNode | null
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | index | int | 是 | 需要查询的子节点的序列号。index取值范围为[0, +∞)，若当前节点有n个子节点，index取值有效范围为[0, n-1]。 |
-| expandMode | [ExpandMode](arkts-na-framenode-expandmode-e.md) \| undefined | 否 | 指定子节点展开模式。&lt;br/&gt;默认值：ExpandMode.EXPAND |
+| expandMode | [ExpandMode](arkts-na-framenode-expandmode-e.md) \| undefined | 否 | 指定子节点展开模式。<br/>默认值：ExpandMode.EXPAND |
 
 **返回值：**
 
@@ -697,7 +697,7 @@ getFrameNodeByUniqueId(id: int): FrameNode | null
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| id | int | 是 | 查询的子节点的唯一标识UniqueID。 &lt;br&gt;取值限定为整数。 |
+| id | int | 是 | 查询的子节点的唯一标识UniqueID。 <br>取值限定为整数。 |
 
 **返回值：**
 
@@ -1201,7 +1201,7 @@ getPreviousSibling(): FrameNode | null
 getRenderNode(): RenderNode | null
 ```
 
-获取FrameNode中持有的[RenderNode](../../apis-arkui/arkts-apis/arkts-arkui-rendernode-c.md#RenderNode)。
+获取FrameNode中持有的[RenderNode](arkts-na-rendernode-c.md#RenderNode)。
 
 **起始版本：** 23
 
@@ -1219,7 +1219,7 @@ getRenderNode(): RenderNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [RenderNode](../../apis-arkui/arkts-apis/arkts-arkui-rendernode-c.md) | Returns a RenderNode inside the FrameNode, or null if not contained. |
+| [RenderNode](arkts-na-rendernode-c.md) | Returns a RenderNode inside the FrameNode, or null if not contained. |
 
 ## getUniqueId
 
@@ -1367,7 +1367,7 @@ insertChildAfter(child: FrameNode, sibling: FrameNode | null): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| child | [FrameNode](arkts-na-framenode-c.md) | 是 | 需要添加的子节点。&lt;br/&gt;child节点不可以为声明式创建的节点，即不可修改的FrameNode。仅有从BuilderNode中获取的声明式节点可以作为子节点。若子节点不 符合规格，则抛出异常信息。&lt;br/&gt; child节点不可以拥有父节点，否则抛出异常信息。 |
+| child | [FrameNode](arkts-na-framenode-c.md) | 是 | 需要添加的子节点。<br/>child节点不可以为声明式创建的节点，即不可修改的FrameNode。仅有从BuilderNode中获取的声明式节点可以作为子节点。若子节点不 符合规格，则抛出异常信息。<br/> child节点不可以拥有父节点，否则抛出异常信息。 |
 | sibling | [FrameNode](arkts-na-framenode-c.md) \| null | 是 | 新节点将插入到该节点之后。若该参数设置为空，则新节点将插入到首个子节点之前。 |
 
 **错误码：**
@@ -1441,7 +1441,7 @@ isAttached(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 节点是否被挂载到主节点树上。&lt;br/&gt;true表示节点被挂载到主节点树上，false表示节点不是被挂载到主节点树上。 |
+| boolean | 节点是否被挂载到主节点树上。<br/>true表示节点被挂载到主节点树上，false表示节点不是被挂载到主节点树上。 |
 
 ## isClipToFrame
 
@@ -1467,7 +1467,7 @@ isClipToFrame(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 节点是否是剪裁到组件区域。&lt;br/&gt;true表示节点剪裁到组件区域，false表示节点不是剪裁到组件区域。 |
+| boolean | 节点是否是剪裁到组件区域。<br/>true表示节点剪裁到组件区域，false表示节点不是剪裁到组件区域。 |
 
 ## isDisposed
 
@@ -1519,7 +1519,7 @@ isInRenderState(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 节点是否处于渲染状态。&lt;br/&gt;true：处于渲染状态；false：不处于渲染状态。 |
+| boolean | 节点是否处于渲染状态。<br/>true：处于渲染状态；false：不处于渲染状态。 |
 
 ## isMinimized
 
@@ -1571,7 +1571,7 @@ isModifiable(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 判断当前节点是否可修改。&lt;br/&gt;true表示当前节点可修改，false表示当前节点不可修改。&lt;br/&gt;当节点为 [自定义组件节点](../../../ui/arkts-user-defined-node.md#自定义组件节点-framenode)中的系统组件代理节点或节点已经 [dispose]{ |
+| boolean | 判断当前节点是否可修改。<br/>true表示当前节点可修改，false表示当前节点不可修改。<br/>当节点为 [自定义组件节点](../../../ui/arkts-user-defined-node.md#自定义组件节点-framenode)中的系统组件代理节点或节点已经 [dispose]{ |
 
 ## isOnMainTree
 
@@ -1597,7 +1597,7 @@ isOnMainTree(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 节点是否被挂载到主节点树上。&lt;br/&gt;true表示节点被挂载到主节点树上，false表示节点没有被挂载到主节点树上。 |
+| boolean | 节点是否被挂载到主节点树上。<br/>true表示节点被挂载到主节点树上，false表示节点没有被挂载到主节点树上。 |
 
 **错误码：**
 
@@ -1629,7 +1629,7 @@ isTransferred(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 返回ComponentContent是否通过transfer.transferStatic或transfer.transferDynamic方法创建。&lt;br/&gt;true： ComponentContent通过transfer.transferStatic或transfer.transferDynamic方法创建。&lt;br/&gt;false：ComponentContent不通过 transfer.transferStatic或transfer.transferDynamic方法创建。 |
+| boolean | 返回ComponentContent是否通过transfer.transferStatic或transfer.transferDynamic方法创建。<br/>true： ComponentContent通过transfer.transferStatic或transfer.transferDynamic方法创建。<br/>false：ComponentContent不通过 transfer.transferStatic或transfer.transferDynamic方法创建。 |
 
 ## isVisible
 
@@ -1655,7 +1655,7 @@ isVisible(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 节点是否可见。&lt;br/&gt;true表示节点可见，false表示节点不可见。 |
+| boolean | 节点是否可见。<br/>true表示节点可见，false表示节点不可见。 |
 
 ## layout
 
@@ -1713,7 +1713,7 @@ measure(constraint: LayoutConstraint): void
 moveTo(targetParent: FrameNode, index?: int): void
 ```
 
-将当前节点移动到目标 FrameNode 中作为其子节点。 若当前 FrameNode 不可修改，将抛出异常。 当 targetParent 为类型节点（typeNode）时，本接口会验证子节点的类型或数量。 若验证失败，将抛出异常。具体限制请参阅 typeNode 说明。 若当前 FrameNode 已被收养，将抛出异常。 &lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;： &lt;br&gt;当前移动操作仅支持以下类型的 TypedFrameNode：Stack、XComponent。 &lt;/p&gt;
+将当前节点移动到目标 FrameNode 中作为其子节点。 若当前 FrameNode 不可修改，将抛出异常。 当 targetParent 为类型节点（typeNode）时，本接口会验证子节点的类型或数量。 若验证失败，将抛出异常。具体限制请参阅 typeNode 说明。 若当前 FrameNode 已被收养，将抛出异常。 &lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;： <br>当前移动操作仅支持以下类型的 TypedFrameNode：Stack、XComponent。 &lt;/p&gt;
 
 **起始版本：** 23
 
@@ -1732,7 +1732,7 @@ moveTo(targetParent: FrameNode, index?: int): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | targetParent | [FrameNode](arkts-na-framenode-c.md) | 是 | 目标父节点。 目标父节点不能是声明式创建的节点（即不可修改的 FrameNode）。 若不符合规范，将抛出异常。 |
-| index | int | 否 | 节点移动至目标父节点中的索引位置。若该值为负数或无效值，节点将被移动到目标父节点的末尾。默认移动到目标父节点末尾。 若目标 FrameNode 已有 n 个子节点，则 index 的取值范围为 [0, n)。 &lt;br&gt;取值限定为整数。默认值：-1。 &lt;br&gt;默认值: -1 |
+| index | int | 否 | 节点移动至目标父节点中的索引位置。若该值为负数或无效值，节点将被移动到目标父节点的末尾。默认移动到目标父节点末尾。 若目标 FrameNode 已有 n 个子节点，则 index 的取值范围为 [0, n)。 <br>取值限定为整数。默认值：-1。 <br>默认值: -1 |
 
 **错误码：**
 

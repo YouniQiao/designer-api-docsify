@@ -17,7 +17,12 @@ TimeOptions defines options for the time picker. Inherits from [CommonOptions](a
 ## Modules to Import
 
 ```TypeScript
-import { DisplayMode, TimeFormat, DatePickerComponent, DateMode, DatePickerComponentOptions, DatePickerComponentResult } from '@kit.ArkUI';
+import { DatePickerComponent } from 'DatePickerComponent';
+import { DatePickerComponentOptions } from 'DatePickerComponentOptions';
+import { DisplayMode } from 'DisplayMode';
+import { DateMode } from 'DateMode';
+import { TimeFormat } from 'TimeFormat';
+import { DatePickerComponentResult } from 'DatePickerComponentResult';
 ```
 
 ## format

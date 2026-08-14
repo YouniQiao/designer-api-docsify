@@ -1,6 +1,6 @@
 # AppSeniorModeInfo (System API)
 
-Indicates the senior mode information of an application.
+Senior mode state information of an app.
 
 **Since:** 26.0.0
 
@@ -17,7 +17,7 @@ Indicates the senior mode information of an application.
 ## Modules to Import
 
 ```TypeScript
-import { config } from '@kit.AccessibilityKit';
+import { config } from 'config';
 ```
 
 ## appIndex
@@ -26,7 +26,7 @@ import { config } from '@kit.AccessibilityKit';
 appIndex?: int
 ```
 
-Indicates the index of clone app. The value must be an integer greater than or equal to 0. Default value: 0.
+Clone index of the app bundle. The value is an integer greater than or equal to 0. If not specified, the default value is **0**.
 
 **Type:** int
 
@@ -50,7 +50,7 @@ Indicates the index of clone app. The value must be an integer greater than or e
 bundleName: string
 ```
 
-The bundle name of application.
+Bundle name of the app, used to identify the app, in the format of **'com.example.myapplication'**.
 
 **Type:** string
 
@@ -74,7 +74,7 @@ The bundle name of application.
 seniorModeState: boolean
 ```
 
-The state of senior mode for application.
+Senior mode enabled state of the app. The value **true** indicates enabled, and **false** indicates disabled.
 
 **Type:** boolean
 

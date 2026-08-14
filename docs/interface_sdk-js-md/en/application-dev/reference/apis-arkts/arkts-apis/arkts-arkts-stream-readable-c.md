@@ -15,7 +15,7 @@ Stream from which data can be read. A readable stream is used to read data from 
 ## Modules to Import
 
 ```TypeScript
-import { stream } from '@kit.ArkTS';
+import { stream } from 'stream';
 ```
 
 ## constructor
@@ -147,7 +147,7 @@ A data read API that needs to be implemented in child classes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | int | Yes | Number of bytes to read. Value range: 0 <= size <= Number.MAX_VALUE |
+| size | int | Yes | Number of bytes to read. Value range: 0 &lt;= size &lt;= Number.MAX_VALUE |
 
 ## Examples
 
@@ -494,7 +494,7 @@ Pushes data into the buffer of the readable stream.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| chunk | Uint8Array \| string \| undefined \| null | Yes | Data to read.&lt;br&gt; There has been a compatibility change since API version 22. In API version 21 and earlier versions, the type is `Uint8Array \| string \| null` .<br>**Since:** 23 |
+| chunk | Uint8Array \| string \| undefined \| null | Yes | Data to read.<br> There has been a compatibility change since API version 22. In API version 21 and earlier versions, the type is `Uint8Array \| string \| null` .<br>**Since:** 23 |
 | encoding | string | No | Encoding format. The default value is **'utf8'**. Currently, **'utf8'**, **'gb18030'**, **'gbk'**, and **'gb2312'** are supported. |
 
 **Return value:**

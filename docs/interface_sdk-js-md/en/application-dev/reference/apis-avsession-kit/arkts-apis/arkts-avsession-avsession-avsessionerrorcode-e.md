@@ -38,7 +38,7 @@ Session service exception.
 ERR_CODE_SESSION_NOT_EXIST = 6600102
 ```
 
-The session does not exist
+The session does not exist.
 
 **Since:** 23
 

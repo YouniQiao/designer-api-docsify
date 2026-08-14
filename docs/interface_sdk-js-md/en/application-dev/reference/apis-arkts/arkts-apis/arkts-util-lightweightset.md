@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { LightWeightSet } from '@kit.ArkTS';
+import { LightWeightSet } from 'LightWeightSet';
 ```
 
 ## Summary

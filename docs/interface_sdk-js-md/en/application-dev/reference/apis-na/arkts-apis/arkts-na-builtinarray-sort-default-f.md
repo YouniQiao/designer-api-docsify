@@ -27,6 +27,6 @@ Sorts elements of `arr` using default sort.
 | --- | --- | --- | --- |
 | arr | FixedArray&lt;T&gt; | Yes | The array to sort. |
 | arrStr | FixedArray&lt;buffStr&gt; | Yes | Stringified array for comparison. |
-| startIndex | int | Yes | The start index of sorting range. &lt;br&gt;The value should be an integer. |
-| endIndex | int | Yes | The end index of sorting range. &lt;br&gt;The value should be an integer. |
+| startIndex | int | Yes | The start index of sorting range. <br>The value should be an integer. |
+| endIndex | int | Yes | The end index of sorting range. <br>The value should be an integer. |
 

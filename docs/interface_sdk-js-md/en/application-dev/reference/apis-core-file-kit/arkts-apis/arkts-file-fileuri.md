@@ -15,7 +15,7 @@ Provides fileUri APIS
 ## Modules to Import
 
 ```TypeScript
-import { fileUri } from '@kit.CoreFileKit';
+import { fileUri } from 'fileUri';
 ```
 
 ## Summary

@@ -173,8 +173,8 @@ insertItem(start: number, count: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| start | number | 是 | 新增的节点开始索引值。&lt;br/&gt;取值范围：0, +∞) |
-| count | number | 是 | 新增数据节点的数量。&lt;br/&gt;取值范围：[0, +∞) |
+| start | number | 是 | 新增的节点开始索引值。<br/>取值范围：0, +∞) |
+| count | number | 是 | 新增数据节点的数量。<br/>取值范围：[0, +∞) |
 
 ## isDisposed
 
@@ -234,8 +234,8 @@ moveItem(from: number, to: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| from | number | 是 | 数据移动的原始索引值。&lt;br/&gt;取值范围：[0, +∞) |
-| to | number | 是 | 数据移动的目的索引值。&lt;br/&gt;取值范围：[0, +∞) |
+| from | number | 是 | 数据移动的原始索引值。<br/>取值范围：[0, +∞) |
+| to | number | 是 | 数据移动的目的索引值。<br/>取值范围：[0, +∞) |
 
 ## onAttachToNode
 
@@ -291,7 +291,7 @@ onCreateChild?(index: number): FrameNode
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | number | 是 | 加载节点索引值。&lt;br/&gt;取值范围：[0, +∞) |
+| index | number | 是 | 加载节点索引值。<br/>取值范围：[0, +∞) |
 
 **返回值：**
 
@@ -376,7 +376,7 @@ onGetChildId?(index: number): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | number | 是 | 加载节点索引值。&lt;br/&gt;取值范围：[0, +∞) |
+| index | number | 是 | 加载节点索引值。<br/>取值范围：[0, +∞) |
 
 **返回值：**
 
@@ -461,8 +461,8 @@ reloadItem(start: number, count: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| start | number | 是 | 重新加载的节点开始索引值。&lt;br/&gt;取值范围：[0, +∞) |
-| count | number | 是 | 重新加载数据节点的数量。&lt;br/&gt;取值范围：[0, +∞) |
+| start | number | 是 | 重新加载的节点开始索引值。<br/>取值范围：[0, +∞) |
+| count | number | 是 | 重新加载数据节点的数量。<br/>取值范围：[0, +∞) |
 
 ## removeItem
 
@@ -490,6 +490,6 @@ removeItem(start: number, count: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| start | number | 是 | 删除的节点开始索引值。&lt;br/&gt;取值范围：[0, +∞) |
-| count | number | 是 | 删除数据节点的数量。&lt;br/&gt;取值范围：[0, +∞) |
+| start | number | 是 | 删除的节点开始索引值。<br/>取值范围：[0, +∞) |
+| count | number | 是 | 删除数据节点的数量。<br/>取值范围：[0, +∞) |
 

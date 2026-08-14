@@ -58,7 +58,7 @@ isVibratorOnline: boolean
 timestamp: long
 ```
 
-报告事件的时间戳。单位：ms。
+报告事件的时间戳。单位：ms（毫秒）。
 
 **类型：** long
 

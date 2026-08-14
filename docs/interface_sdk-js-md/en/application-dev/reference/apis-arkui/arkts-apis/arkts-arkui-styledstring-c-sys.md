@@ -45,7 +45,7 @@ Marshals a styled string by defining a callback to marshal [StyledStringMarshall
 
 | Type | Description |
 | --- | --- |
-| ArrayBuffer | Buffer information after marshalling. &lt;br&gt;**NOTE：**&lt;br&gt;Currently, text and images are supported. |
+| ArrayBuffer | Buffer information after marshalling. <br>**NOTE：**<br>Currently, text and images are supported. |
 
 ## marshalling
 
@@ -79,7 +79,7 @@ Marshals a styled string.
 
 | Type | Description |
 | --- | --- |
-| ArrayBuffer | Buffer information after marshalling. &lt;br&gt;**NOTE：**&lt;br&gt;Currently, text and images are supported. |
+| ArrayBuffer | Buffer information after marshalling. <br>**NOTE：**<br>Currently, text and images are supported. |
 
 ## unmarshalling
 
@@ -121,7 +121,7 @@ Unmarshals a styled string by defining a callback to [StyledStringMarshallingVal
 | Error Code ID | Error Message |
 | --- | --- |
 | [170002](../errorcode-styled-string.md#170002-styled-string-decoding-error) | Styled string decode error. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 
 ## unmarshalling
 
@@ -162,5 +162,5 @@ Unmarshals a buffer to obtain a styled string.
 | Error Code ID | Error Message |
 | --- | --- |
 | [170002](../errorcode-styled-string.md#170002-styled-string-decoding-error) | Styled string decode error. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 

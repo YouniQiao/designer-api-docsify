@@ -17,7 +17,7 @@ VideoSession inherits from [Session](arkts-camera-camera-session-i.md#Session), 
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'camera';
 ```
 
 ## getSessionConflictFunctions
@@ -392,7 +392,7 @@ Unsubscribes from camera light status changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'lightStatusChange' | Yes | Event type. The value is fixed at **'lightStatusChange'**. &lt;br&gt;The event can be listened for when a VideoSessionForSys object is created. |
+| type | 'lightStatusChange' | Yes | Event type. The value is fixed at **'lightStatusChange'**. <br>The event can be listened for when a VideoSessionForSys object is created. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LightStatus](arkts-camera-camera-lightstatus-e-sys.md)&gt; | No | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('lightStatusChange')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
 
 **Error codes:**
@@ -780,7 +780,7 @@ Subscribes to camera light status changes. This API uses an asynchronous callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'lightStatusChange' | Yes | Event type. The value is fixed at **'lightStatusChange'**. &lt;br&gt;The event can be listened for when a VideoSessionForSys object is created. |
+| type | 'lightStatusChange' | Yes | Event type. The value is fixed at **'lightStatusChange'**. <br>The event can be listened for when a VideoSessionForSys object is created. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LightStatus](arkts-camera-camera-lightstatus-e-sys.md)&gt; | Yes | Callback used to return the light status information. |
 
 **Error codes:**

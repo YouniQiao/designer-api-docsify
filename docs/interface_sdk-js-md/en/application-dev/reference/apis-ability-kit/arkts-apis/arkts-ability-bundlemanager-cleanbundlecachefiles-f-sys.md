@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@kit.AbilityKit';
+import { bundleManager } from 'bundleManager';
 ```
 
 ## cleanBundleCacheFiles
@@ -162,7 +162,7 @@ Clears the bundle cache based on the given bundle name and application index. Th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| appIndex | int | Yes | Index of the application clone.&lt;br&gt;The value **0** means to clear the cache of the main application. A value greater than 0 means to clear the cache data of the application clone. |
+| appIndex | int | Yes | Index of the application clone.<br>The value **0** means to clear the cache of the main application. A value greater than 0 means to clear the cache data of the application clone. |
 
 **Return value:**
 

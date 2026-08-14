@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { displaySync } from '@kit.ArkGraphics2D';
+import { displaySync } from 'displaySync';
 ```
 
 ## create

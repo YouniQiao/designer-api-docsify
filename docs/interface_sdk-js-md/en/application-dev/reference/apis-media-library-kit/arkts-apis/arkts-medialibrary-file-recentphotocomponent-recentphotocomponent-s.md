@@ -15,7 +15,13 @@ RecentPhotoComponent({ recentPhotoOptions?: RecentPhotoOptions, onRecentPhotoChe
 ## Modules to Import
 
 ```TypeScript
-import { RecentPhotoComponent, RecentPhotoCheckResultCallback, RecentPhotoCheckInfoCallback, PhotoSource, RecentPhotoClickCallback, RecentPhotoOptions, RecentPhotoInfo } from '@kit.MediaLibraryKit';
+import { RecentPhotoComponent } from 'RecentPhotoComponent';
+import { RecentPhotoCheckResultCallback } from 'RecentPhotoCheckResultCallback';
+import { RecentPhotoInfo } from 'RecentPhotoInfo';
+import { RecentPhotoCheckInfoCallback } from 'RecentPhotoCheckInfoCallback';
+import { RecentPhotoClickCallback } from 'RecentPhotoClickCallback';
+import { RecentPhotoOptions } from 'RecentPhotoOptions';
+import { PhotoSource } from 'PhotoSource';
 ```
 
 ## onRecentPhotoCheckInfo

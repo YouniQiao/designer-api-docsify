@@ -42,7 +42,7 @@ controller?: TextTimerController
 count?: number
 ```
 
-Timer duration, in milliseconds. It is effective only when **isCountDown** is **true**. The maximum value is 864000 00 ms (24 hours). If 0 < **count** < 86400000, **count** is the initial value of the timer. Otherwise, the default value is used as the initial value. Default value: **60000**
+Timer duration, in milliseconds. It is effective only when **isCountDown** is **true**. The maximum value is 864000 00 ms (24 hours). If 0 &lt; **count** &lt; 86400000, **count** is the initial value of the timer. Otherwise, the default value is used as the initial value. Default value: **60000**
 
 **Type:** number
 

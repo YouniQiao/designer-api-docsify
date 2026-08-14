@@ -137,7 +137,7 @@ Reads data from a file and returns the number of bytes read. This API uses a pro
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
-| options | [ReadOptions](arkts-na-file-fs-readoptions-i.md) | No | The options are as follows: &lt;br&gt;- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the buffer length.&lt;br&gt; - **offset** (number): start position to read the data, in bytes (it is determined by **filePointer** plus **offset**). This parameter is optional. By default, data is read from the **filePointer**. |
+| options | [ReadOptions](arkts-na-file-fs-readoptions-i.md) | No | The options are as follows: <br>- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the buffer length.<br> - **offset** (number): start position to read the data, in bytes (it is determined by **filePointer** plus **offset**). This parameter is optional. By default, data is read from the **filePointer**. |
 
 **Return value:**
 
@@ -226,7 +226,7 @@ Reads data from a file and returns the number of bytes read. The read options ca
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
-| options | [ReadOptions](arkts-na-file-fs-readoptions-i.md) | Yes | The options are as follows: &lt;br&gt;- **length** (number): length of the data to read, in bytes. This parameter is optional. The default valueis the buffer length.&lt;br&gt;- **offset** (number): start position to read the data, in bytes (it is determined by **filePointer** plus **offset**). This parameter is optional. By default, data is read from the **filePointer**. |
+| options | [ReadOptions](arkts-na-file-fs-readoptions-i.md) | Yes | The options are as follows: <br>- **length** (number): length of the data to read, in bytes. This parameter is optional. The default valueis the buffer length.<br>- **offset** (number): start position to read the data, in bytes (it is determined by **filePointer** plus **offset**). This parameter is optional. By default, data is read from the **filePointer**. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to return the length of the data read, in bytes. |
 
 **Error codes:**
@@ -269,7 +269,7 @@ Reads data from a file synchronously and returns the number of bytes read.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
-| options | [ReadOptions](arkts-na-file-fs-readoptions-i.md) | No | The options are as follows: &lt;br&gt;- **length** (number): length of the data to read, in bytes. This parameter is optional. The default valueis the buffer length.&lt;br&gt;- **offset** (number): start position to read the data, in bytes (it is determined by **filePointer** plus **offset**). This parameter is optional. By default, data is read from the **filePointer**. |
+| options | [ReadOptions](arkts-na-file-fs-readoptions-i.md) | No | The options are as follows: <br>- **length** (number): length of the data to read, in bytes. This parameter is optional. The default valueis the buffer length.<br>- **offset** (number): start position to read the data, in bytes (it is determined by **filePointer** plus **offset**). This parameter is optional. By default, data is read from the **filePointer**. |
 
 **Return value:**
 
@@ -352,7 +352,7 @@ Writes data to a file. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
-| options | [WriteOptions](arkts-na-file-fs-writeoptions-i.md) | No | The options are as follows: &lt;br&gt;- **length** (number): length of the data to write, in bytes. The default value is the buffer length. &lt;br&gt;- **offset** (number): start position to write the data, in bytes (it is determined by **filePointer** plus **offset**). This parameter is optional. By default, data is written from the **filePointer**. &lt;br&gt;- **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported. |
+| options | [WriteOptions](arkts-na-file-fs-writeoptions-i.md) | No | The options are as follows: <br>- **length** (number): length of the data to write, in bytes. The default value is the buffer length. <br>- **offset** (number): start position to write the data, in bytes (it is determined by **filePointer** plus **offset**). This parameter is optional. By default, data is written from the **filePointer**. <br>- **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported. |
 
 **Return value:**
 
@@ -446,7 +446,7 @@ Writes data to a file. Write options can be configured. This API uses an asynchr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
-| options | [WriteOptions](arkts-na-file-fs-writeoptions-i.md) | Yes | The options are as follows: &lt;br&gt;- **length** (number): length of the data to write, in bytes. The default value is the buffer length. &lt;br&gt;- **offset** (number): start position to write the data, in bytes (it is determined by **filePointer** plus **offset**). This parameter is optional. By default, data is written from the **filePointer**. &lt;br&gt;- **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported. |
+| options | [WriteOptions](arkts-na-file-fs-writeoptions-i.md) | Yes | The options are as follows: <br>- **length** (number): length of the data to write, in bytes. The default value is the buffer length. <br>- **offset** (number): start position to write the data, in bytes (it is determined by **filePointer** plus **offset**). This parameter is optional. By default, data is written from the **filePointer**. <br>- **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to return the length of the data written, in bytes. |
 
 **Error codes:**
@@ -492,7 +492,7 @@ Writes data to a file. This API returns the result synchronously.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer \| string | Yes | Data to write. It can be a string or data from a buffer. |
-| options | [WriteOptions](arkts-na-file-fs-writeoptions-i.md) | No | The options are as follows: &lt;br&gt;- **length** (number): length of the data to write, in bytes. The default value is the buffer length. &lt;br&gt;- **offset** (number): start position to write the data, in bytes (it is determined by **filePointer** plus **offset**). This parameter is optional. By default, data is written from the **filePointer**. &lt;br&gt;- **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported. |
+| options | [WriteOptions](arkts-na-file-fs-writeoptions-i.md) | No | The options are as follows: <br>- **length** (number): length of the data to write, in bytes. The default value is the buffer length. <br>- **offset** (number): start position to write the data, in bytes (it is determined by **filePointer** plus **offset**). This parameter is optional. By default, data is written from the **filePointer**. <br>- **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported. |
 
 **Return value:**
 

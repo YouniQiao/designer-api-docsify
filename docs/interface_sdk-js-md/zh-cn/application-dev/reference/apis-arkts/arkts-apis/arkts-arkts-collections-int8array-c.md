@@ -1,6 +1,6 @@
 # Int8Array
 
-一种线性数据结构，底层基于ArkTS ArrayBuffer实现。 > **说明：**> > - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。 > **装饰器类型**：\@Sendable
+一种线性数据结构，底层基于[ArkTS ArrayBuffer](arkts-collections.md#@arkts.collections)实现。 > **说明：**> > - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。 > **装饰器类型**：\@Sendable
 
 **起始版本：** 12
 
@@ -197,7 +197,7 @@ constructor(array: ArrayLike<number> | ArrayBuffer)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| array | ArrayLike&lt;number&gt; \| ArrayBuffer | 是 | 用于构造ArkTS Int8Array的对象。当参数类型是ArrayBuffer时buffer所占的字节数是1的整数倍。 |
+| array | [ArrayLike](../../apis-na/arkts-apis/arkts-na-arraylike-i.md)&lt;number&gt; \| ArrayBuffer | 是 | 用于构造ArkTS Int8Array的对象。当参数类型是ArrayBuffer时buffer所占的字节数是1的整数倍。 |
 
 **错误码：**
 
@@ -231,7 +231,7 @@ constructor(buffer: ArrayBuffer, byteOffset?: number, length?: number)
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer | 是 | 用于构造ArkTS Int8Array的ArrayBuffer对象。buffer所占的字节数需是1的整数倍。 |
 | byteOffset | number | 否 | 指定buffer的字节偏移，从0开始，默认为0。 |
-| length | number | 否 | 指定ArkTS Int8Array的长度，默认值为0。取值需为非负整数，且需满足byteOffset + length <= buffer.byteLength。 |
+| length | number | 否 | 指定ArkTS Int8Array的长度，默认值为0。取值需为非负整数，且需满足byteOffset + length &lt;= buffer.byteLength。 |
 
 **错误码：**
 
@@ -263,9 +263,9 @@ copyWithin(target: number, start: number, end?: number): Int8Array
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| target | number | 是 | 目标起始位置的下标，如果`target < 0`，则会从`target + array.length`位置开始。 |
-| start | number | 是 | 源起始位置下标，如果`start < 0`，则会从`start + Int8Array.length`位置开始。 |
-| end | number | 否 | 源终止位置下标（不包含end位置的元素），如果`end < 0`，则会从`end + Int8Array.length`位置终止。默认为ArkTS Int8Array的长度。 |
+| target | number | 是 | 目标起始位置的下标，如果`target &lt; 0`，则会从`target + array.length`位置开始。 |
+| start | number | 是 | 源起始位置下标，如果`start &lt; 0`，则会从`start + Int8Array.length`位置开始。 |
+| end | number | 否 | 源终止位置下标（不包含end位置的元素），如果`end &lt; 0`，则会从`end + Int8Array.length`位置终止。默认为ArkTS Int8Array的长度。 |
 
 **返回值：**
 
@@ -377,8 +377,8 @@ fill(value: number, start?: number, end?: number): Int8Array
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | number | 是 | 待填充的值。 |
-| start | number | 否 | 开始填充的索引，如果`start < 0`，则会从`start + Int8Array.length`位置开始。默认值为0。 |
-| end | number | 否 | 结束填充的索引（不包括该元素），如果`end < 0`，则会到`end + Int8Array.length`位置结束。默认为ArkTS Int8Array的长度。 |
+| start | number | 否 | 开始填充的索引，如果`start &lt; 0`，则会从`start + Int8Array.length`位置开始。默认值为0。 |
+| end | number | 否 | 结束填充的索引（不包括该元素），如果`end &lt; 0`，则会到`end + Int8Array.length`位置结束。默认为ArkTS Int8Array的长度。 |
 
 **返回值：**
 
@@ -567,7 +567,7 @@ static from(arrayLike: ArrayLike<number>): Int8Array
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arrayLike | ArrayLike&lt;number&gt; | 是 | 用于构造ArkTS Int8Array的ArrayLike对象。 |
+| arrayLike | [ArrayLike](../../apis-na/arkts-apis/arkts-na-arraylike-i.md)&lt;number&gt; | 是 | 用于构造ArkTS Int8Array的ArrayLike对象。 |
 
 **返回值：**
 
@@ -599,7 +599,7 @@ static from<T>(arrayLike: ArrayLike<T>, mapFn: TypedArrayFromMapFn<T, number>): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arrayLike | ArrayLike&lt;T&gt; | 是 | 用于构造ArrayLike对象。 |
+| arrayLike | [ArrayLike](../../apis-na/arkts-apis/arkts-na-arraylike-i.md)&lt;T&gt; | 是 | 用于构造ArrayLike对象。 |
 | mapFn | [TypedArrayFromMapFn](arkts-arkts-collections-typedarrayfrommapfn-t.md)&lt;T, number&gt; | 是 | 映射函数。 |
 
 **返回值：**
@@ -666,7 +666,7 @@ includes(searchElement: number, fromIndex?: number): boolean
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | searchElement | number | 是 | 待搜索的元素。 |
-| fromIndex | number | 否 | 开始搜索的索引，如果`fromIndex < 0`，则会从`fromIndex + Int8Array.length`位置开始。默认值为0。 |
+| fromIndex | number | 否 | 开始搜索的索引，如果`fromIndex &lt; 0`，则会从`fromIndex + Int8Array.length`位置开始。默认值为0。 |
 
 **返回值：**
 
@@ -902,7 +902,7 @@ static of(...items: number[]): Int8Array
 
 | 类型 | 说明 |
 | --- | --- |
-| Int8Array | 新的ArkTS Int8Array实例。可能的错误原因：1.必填参数未指定； &lt;br&gt;2.参数类型不正确；3.参数校验失败。 |
+| Int8Array | 新的ArkTS Int8Array实例。可能的错误原因：1.必填参数未指定； <br>2.参数类型不正确；3.参数校验失败。 |
 
 ## reduce
 
@@ -1048,7 +1048,7 @@ reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Int8Arra
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;U, number, Int8Array&gt; | 是 | 对Int8Array中的每个元素调用的函数。 |
-| initialValue | U | 是 | 作为回调函数首次调用的第一个参数的值。 &lt;br&gt;如果未提供初始值，则使用Int8Array的最后一个元素， &lt;br&gt;并且回调函数将从倒数第二个元素开始调用。 |
+| initialValue | U | 是 | 作为回调函数首次调用的第一个参数的值。 <br>如果未提供初始值，则使用Int8Array的最后一个元素， <br>并且回调函数将从倒数第二个元素开始调用。 |
 
 **返回值：**
 
@@ -1159,7 +1159,7 @@ set(array: ArrayLike<number>, offset?: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| array | ArrayLike&lt;number&gt; | 是 | 用于设置的ArrayLike对象。 |
+| array | [ArrayLike](../../apis-na/arkts-apis/arkts-na-arraylike-i.md)&lt;number&gt; | 是 | 用于设置的ArrayLike对象。 |
 | offset | number | 否 | 写入的起始位置。默认为0。 |
 
 **错误码：**
@@ -1193,8 +1193,8 @@ slice(start?: number, end?: number): Int8Array
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| start | number | 否 | 开始索引，如果`start < 0`，则会从`start + Int8Array.length`位置开始。默认值为0。 |
-| end | number | 否 | 结束索引（不包括该元素），如果`end < 0`，则会到`end + Int8Array.length`位置结束。默认为ArkTS Int8Array的长度。 |
+| start | number | 否 | 开始索引，如果`start &lt; 0`，则会从`start + Int8Array.length`位置开始。默认值为0。 |
+| end | number | 否 | 结束索引（不包括该元素），如果`end &lt; 0`，则会到`end + Int8Array.length`位置结束。默认为ArkTS Int8Array的长度。 |
 
 **返回值：**
 
@@ -1311,8 +1311,8 @@ subarray(begin?: number, end?: number): Int8Array
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| begin | number | 否 | 开始索引，如果`begin < 0`，则会从`begin + Int8Array.length`位置开始。默认值为0。 |
-| end | number | 否 | 结束索引（不包括该元素），如果`end < 0`，则会到`end + Int8Array.length`位置结束。默认为ArkTS Int8Array的长度。 |
+| begin | number | 否 | 开始索引，如果`begin &lt; 0`，则会从`begin + Int8Array.length`位置开始。默认值为0。 |
+| end | number | 否 | 结束索引（不包括该元素），如果`end &lt; 0`，则会到`end + Int8Array.length`位置结束。默认为ArkTS Int8Array的长度。 |
 
 **返回值：**
 

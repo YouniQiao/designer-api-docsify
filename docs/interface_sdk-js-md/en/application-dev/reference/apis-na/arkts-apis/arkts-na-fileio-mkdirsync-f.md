@@ -68,7 +68,7 @@ Creates a directory. This API returns the result synchronously. The value **true
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the directory. |
-| recursion | boolean | Yes | Whether to create a directory recursively. &lt;br&gt; The value **true** means to create a directory recursively. The value **false** means to create a single- level directory. |
+| recursion | boolean | Yes | Whether to create a directory recursively. <br> The value **true** means to create a directory recursively. The value **false** means to create a single- level directory. |
 
 **Error codes:**
 

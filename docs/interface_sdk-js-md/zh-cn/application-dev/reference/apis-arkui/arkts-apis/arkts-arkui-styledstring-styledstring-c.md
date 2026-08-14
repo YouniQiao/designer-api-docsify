@@ -36,8 +36,8 @@ constructor(value: string | ImageAttachment | CustomSpan, styles?: Array<StyleOp
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string \| [ImageAttachment](arkts-arkui-styledstring-imageattachment-c.md) \| [CustomSpan](arkts-arkui-styledstring-customspan-c.md) | 是 | 属性字符串文本内容。&lt;br/&gt;**说明：** &lt;br/&gt;当value的类型为ImageAttachment或 CustomSpan时，styles参数不生效。&lt;br/&gt;需要设置styles时，通过[setStyle](arkts-arkui-styledstring-mutablestyledstring-c.md#setStyle)等方法实现。 |
-| styles | Array&lt;[StyleOptions](arkts-arkui-styledstring-styleoptions-i.md)&gt; | 否 | 属性字符串初始化选项。&lt;br/&gt;**说明：** &lt;br/&gt;start为异常值时，按默认值0处理；&lt;br/&gt;当length为异常值时， length等于属性字符串在start后的实际长度；&lt;br/&gt;当StyledStringKey与StyledStringValue不匹配时，styles不生效。 |
+| value | string \| [ImageAttachment](arkts-arkui-styledstring-imageattachment-c.md) \| [CustomSpan](arkts-arkui-styledstring-customspan-c.md) | 是 | 属性字符串文本内容。<br/>**说明：** <br/>当value的类型为ImageAttachment或 CustomSpan时，styles参数不生效。<br/>需要设置styles时，通过[setStyle](arkts-arkui-styledstring-mutablestyledstring-c.md#setStyle)等方法实现。 |
+| styles | Array&lt;[StyleOptions](arkts-arkui-styledstring-styleoptions-i.md)&gt; | 否 | 属性字符串初始化选项。<br/>**说明：** <br/>start为异常值时，按默认值0处理；<br/>当length为异常值时， length等于属性字符串在start后的实际长度；<br/>当StyledStringKey与StyledStringValue不匹配时，styles不生效。 |
 
 ## equals
 
@@ -67,7 +67,7 @@ equals(other: StyledString): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 两个属性字符串是否相等。&lt;br/&gt;true表示相等，false表示不相等。&lt;br/&gt;**说明：** &lt;br/&gt;当属性字符串的文本及样式均一致，视为相等。&lt;br/&gt;不比较 [GestureStyle]{ |
+| boolean | 两个属性字符串是否相等。<br/>true表示相等，false表示不相等。<br/>**说明：** <br/>当属性字符串的文本及样式均一致，视为相等。<br/>不比较 [GestureStyle]{ |
 
 ## fromHtml
 
@@ -131,7 +131,7 @@ getString(): string
 
 | 类型 | 说明 |
 | --- | --- |
-| string | 属性字符串文本内容。&lt;br/&gt;**说明：** &lt;br/&gt;当属性字符串中包含图片或[CustomSpan]{ |
+| string | 属性字符串文本内容。<br/>**说明：** <br/>当属性字符串中包含图片或[CustomSpan]{ |
 
 ## getStyles
 
@@ -157,15 +157,15 @@ getStyles(start: int, length: int, styledKey?: StyledStringKey): Array<SpanStyle
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| start | int | 是 | 指定范围属性字符串的下标。&lt;br/&gt;取值范围：大于等于0。 |
-| length | int | 是 | 指定范围属性字符串的长度。&lt;br/&gt;取值范围：大于等于0。 |
-| styledKey | [StyledStringKey](arkts-arkui-styledstring-styledstringkey-e.md) | 否 | 指定范围属性字符串样式的枚举值。&lt;br/&gt;**说明：** &lt;br/&gt;当不传入该参数时默认获取开发者设置的 [StyledStringKey](arkts-arkui-styledstring-styledstringkey-e.md#StyledStringKey)所有枚举值样式。 |
+| start | int | 是 | 指定范围属性字符串的下标。<br/>取值范围：大于等于0。 |
+| length | int | 是 | 指定范围属性字符串的长度。<br/>取值范围：大于等于0。 |
+| styledKey | [StyledStringKey](arkts-arkui-styledstring-styledstringkey-e.md) | 否 | 指定范围属性字符串样式的枚举值。<br/>**说明：** <br/>当不传入该参数时默认获取开发者设置的 [StyledStringKey](arkts-arkui-styledstring-styledstringkey-e.md#StyledStringKey)所有枚举值样式。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[SpanStyle](arkts-arkui-styledstring-spanstyle-i.md)&gt; | 各样式对象的数组。&lt;br/&gt;**说明：** &lt;br/&gt;当指定范围属性字符串未设置任何样式，则返回空数组。&lt;br/&gt;当start和length越 界或者必填传入undefined时，会抛出异常；&lt;br/&gt;当styledKey传入异常值或undefined时，会抛出异常。&lt;br/&gt;当styledKey为CustomSpan时，返回的是创建CustomSpan时传入 的样式对象，即修改该样式对象也会影响实际的显示效果。 |
+| Array&lt;[SpanStyle](arkts-arkui-styledstring-spanstyle-i.md)&gt; | 各样式对象的数组。<br/>**说明：** <br/>当指定范围属性字符串未设置任何样式，则返回空数组。<br/>当start和length越 界或者必填传入undefined时，会抛出异常；<br/>当styledKey传入异常值或undefined时，会抛出异常。<br/>当styledKey为CustomSpan时，返回的是创建CustomSpan时传入 的样式对象，即修改该样式对象也会影响实际的显示效果。 |
 
 ## subStyledString
 
@@ -191,14 +191,14 @@ subStyledString(start: int, length?: int): StyledString | undefined
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| start | int | 是 | 子属性字符串开始位置的下标。&lt;br/&gt;取值范围：大于等于0。 |
-| length | int | 否 | 子属性字符串的长度。&lt;br/&gt;取值范围：大于等于0。 |
+| start | int | 是 | 子属性字符串开始位置的下标。<br/>取值范围：大于等于0。 |
+| length | int | 否 | 子属性字符串的长度。<br/>取值范围：大于等于0。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [StyledString](arkts-arkui-styledstring-styledstring-c.md) | 子属性字符串。&lt;br/&gt;**说明：** &lt;br/&gt;当start为合法入参时，length的默认值是被查询属性字符串对象的长度与start的值的差。&lt; br/&gt;当start和length越界或者必填传入undefined时，会抛出异常。 |
+| [StyledString](arkts-arkui-styledstring-styledstring-c.md) | 子属性字符串。<br/>**说明：** <br/>当start为合法入参时，length的默认值是被查询属性字符串对象的长度与start的值的差。&lt; br/&gt;当start和length越界或者必填传入undefined时，会抛出异常。 |
 
 ## toHtml
 
@@ -236,5 +236,5 @@ static toHtml(styledString: StyledString): string
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 

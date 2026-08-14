@@ -15,7 +15,7 @@ ConvertXML representation refers to extensible markup language.
 ## Modules to Import
 
 ```TypeScript
-import { convertxml } from '@kit.ArkTS';
+import { convertxml } from 'convertxml';
 ```
 
 ## convert

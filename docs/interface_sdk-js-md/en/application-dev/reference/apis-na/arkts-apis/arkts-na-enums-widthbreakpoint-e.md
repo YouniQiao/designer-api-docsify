@@ -18,7 +18,7 @@ Type of window width breakpoint.
 WIDTH_XS = 0
 ```
 
-Window width < 320vp type.
+Window width &lt; 320vp type.
 
 **Since:** 23
 
@@ -38,7 +38,7 @@ Window width < 320vp type.
 WIDTH_SM = 1
 ```
 
-Window width >= 320vp and < 600vp type.
+Window width >= 320vp and &lt; 600vp type.
 
 **Since:** 23
 
@@ -58,7 +58,7 @@ Window width >= 320vp and < 600vp type.
 WIDTH_MD = 2
 ```
 
-Window width >= 600vp and < 840vp type.
+Window width >= 600vp and &lt; 840vp type.
 
 **Since:** 23
 
@@ -78,7 +78,7 @@ Window width >= 600vp and < 840vp type.
 WIDTH_LG = 3
 ```
 
-Window width >= 840vp and < 1440vp type.
+Window width >= 840vp and &lt; 1440vp type.
 
 **Since:** 23
 

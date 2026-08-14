@@ -634,7 +634,7 @@ Sets the value of the property corresponding to **propName** in [LocalStorage](.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the property corresponding to **propName** exists and its value is updated to the value of **newValue**, &lt;br&gt;or if **propName** is created with the value of **newValue**. |
+| boolean | Returns **true** if the property corresponding to **propName** exists and its value is updated to the value of **newValue**, <br>or if **propName** is created with the value of **newValue**. |
 
 ## Examples
 

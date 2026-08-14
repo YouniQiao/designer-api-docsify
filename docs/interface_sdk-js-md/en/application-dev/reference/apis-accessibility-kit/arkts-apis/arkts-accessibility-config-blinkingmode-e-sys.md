@@ -1,6 +1,6 @@
 # BlinkingMode (System API)
 
-Blinking Mode Enumeration
+Enumerates the blinking modes.
 
 **Since:** 26.0.0
 
@@ -20,7 +20,7 @@ Blinking Mode Enumeration
 SINGLE_BLINK = 1
 ```
 
-Indicates a single blink.
+Single blink.
 
 **Since:** 26.0.0
 
@@ -42,7 +42,7 @@ Indicates a single blink.
 CONTINUOUS_BLINK = 2
 ```
 
-Indicates continuous blink.
+Continuous blink.
 
 **Since:** 26.0.0
 

@@ -69,7 +69,7 @@ Obtains the holiday information list of the specified year.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| year | int | No | &lt;br&gt;The value should be an integer. - Specified year, for example, 2023.&lt;br&gt;The default value is the current year. |
+| year | int | No | <br>The value should be an integer. - Specified year, for example, 2023.<br>The default value is the current year. |
 
 **Return value:**
 

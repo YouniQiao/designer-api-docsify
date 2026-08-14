@@ -40,7 +40,7 @@ function setSwitchStatus(admin: Want, key: SwitchKey, status: SwitchStatus): voi
 | [203](../../errorcode-universal.md#203-企业管理策略禁止使用此系统功能) | This function is prohibited by enterprise management policies. |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-应用没有激活成设备管理器) | The application is not an administrator application of the device. |
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) | The administrator application does not have permission to manage the device. |
-| 9201042 | Failed to toggle the switch state. |
+| [9201042](../errorcode-enterpriseDeviceManager.md#9201042-切换开关状态失败) | Failed to toggle the switch state. |
 
 ## 示例
 

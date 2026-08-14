@@ -17,7 +17,7 @@ Describes the information about the sensitivity (ISO) settings.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'camera';
 ```
 
 ## iso

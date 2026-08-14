@@ -7,7 +7,7 @@ type Action = 'accessibilityFocus' | 'clearAccessibilityFocus' | 'focus' | 'clea
   'back' | 'recentTask' | 'notificationCenter' | 'controlCenter' | 'common' | 'injectAction' | 'executeCustomAction'
 ```
 
-Target actions supported by the application. The target actions for which parameters need to be set have been specified in the description of the following table.
+Target actions supported by the app. Target actions that require configuration parameters are indicated in the description column of each action in the table below.
 
 **Since:** 23
 
@@ -25,29 +25,29 @@ Target actions supported by the application. The target actions for which parame
 
 | Type | Description |
 | --- | --- |
-| 'accessibilityFocus' | Obtain an accessibility focus. |
-| 'clearAccessibilityFocus' | Clear an accessibility focus. |
-| 'focus' | Obtain a focus. |
-| 'clearFocus' | Clear a focus. |
-| 'clearSelection' | Clear selection. Not supported yet. |
+| 'accessibilityFocus' | Obtain accessibility focus. The parameter **accessibilityFocusScene** must be configured, with the value being the type of the accessibility focus scene. |
+| 'clearAccessibilityFocus' | Clear accessibility focus. |
+| 'focus' | Obtain focus. |
+| 'clearFocus' | Clear focus. |
+| 'clearSelection' | Clear selection. This feature is not supported in the current version. |
 | 'click' | Click. |
 | 'longClick' | Long press. |
 | 'cut' | Cut. |
 | 'copy' | Copy. |
 | 'paste' | Paste. |
 | 'select' | Select. |
-| 'setText' | Set text. You need to set the **setText** parameter. |
-| 'delete' | Delete. Not supported yet. |
-| 'scrollForward' | Scroll forward. |
-| 'scrollBackward' | Scroll backward. |
-| 'setSelection' | Select. You need to set the **selectTextBegin**, **selectTextEnd** and **selectTextInForWard** parameters. |
-| 'setCursorPosition' | Set cursor location. You need to set the **offset** parameter. [since 12] |
+| 'setText' | Set text. The parameter **setText** must be configured, with the value being the text content to set. |
+| 'delete' | Delete. This feature is not supported in the current version. |
+| 'scrollForward' | Scroll forward. The parameter **scrollType** must be configured, with the value **'fullScreen'** or **'halfScreen'**. |
+| 'scrollBackward' | Scroll backward. The parameter **scrollType** must be configured, with the value **'fullScreen'** or **'halfScreen'**. |
+| 'setSelection' | Set the text selection range. The parameters **selectTextBegin**, **selectTextEnd**, and **selectTextInForWard** must be configured, with the values being the start coordinate, end coordinate, and whether to select forward. |
+| 'setCursorPosition' | Set the cursor position. The parameter **offset** must be configured, with the value being the character offset of the cursor. [since 12] |
 | 'home' | Return to the home screen. [since 12] |
-| 'back' | Return to the previous screen. [since 12] |
-| 'recentTask' | Open a recent task. [since 12] |
-| 'notificationCenter' | Open the notification bar. [since 12] |
+| 'back' | Return to the previous level. [since 12] |
+| 'recentTask' | Open recent tasks. [since 12] |
+| 'notificationCenter' | Open the notification panel. [since 12] |
 | 'controlCenter' | Open the control center. [since 12] |
-| 'common' | Common actions used in auto-focusing and auto-broadcasting. [since 12] |
-| 'injectAction' | Injection action. The **injectActionType** parameter must be set. [since 26.0.0] |
-| 'executeCustomAction' | [since 26.0.0] |
+| 'common' | No specific action, used for scenarios such as active focus and active announcement. [since 12] |
+| 'injectAction' | Inject an action. The parameter **injectActionType** must be configured, with the value being the type of the injected action. [since 26.0.0] |
+| 'executeCustomAction' | Execute a custom action. The parameter **customAction** must be configured, with the value being the name of the custom action. [since 26.0.0] |
 

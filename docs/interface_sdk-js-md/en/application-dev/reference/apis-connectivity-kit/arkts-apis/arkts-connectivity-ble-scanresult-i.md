@@ -15,7 +15,7 @@ Describes the contents of the scan results.
 ## Modules to Import
 
 ```TypeScript
-import { ble } from '@kit.ConnectivityKit';
+import { ble } from 'ble';
 ```
 
 ## address

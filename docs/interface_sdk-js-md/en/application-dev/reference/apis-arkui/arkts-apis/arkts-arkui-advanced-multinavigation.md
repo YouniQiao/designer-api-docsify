@@ -3,7 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
-import { MultiNavPathStack, MultiNavigation, SplitPolicy } from '@kit.ArkUI';
+import { SplitPolicy } from 'SplitPolicy';
+import { MultiNavigation } from 'MultiNavigation';
+import { MultiNavPathStack } from 'MultiNavPathStack';
 ```
 
 ## Summary

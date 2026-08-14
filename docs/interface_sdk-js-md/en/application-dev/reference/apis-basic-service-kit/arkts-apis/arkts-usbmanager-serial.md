@@ -27,7 +27,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { serialManager } from '@kit.BasicServicesKit';
+import { serialManager } from 'serialManager';
 ```
 
 ## Summary

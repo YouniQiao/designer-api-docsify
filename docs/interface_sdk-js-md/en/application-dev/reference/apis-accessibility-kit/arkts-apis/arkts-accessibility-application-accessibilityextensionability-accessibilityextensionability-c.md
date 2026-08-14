@@ -1,6 +1,6 @@
 # AccessibilityExtensionAbility
 
-The **AccessibilityExtensionAbility** module provides accessibility extension capabilities based on the ExtensionAbility framework.
+AccessibilityExtensionAbility provides the accessibility extension service capability based on the ExtensionAbility framework.
 
 **Since:** 23
 
@@ -15,7 +15,22 @@ The **AccessibilityExtensionAbility** module provides accessibility extension ca
 ## Modules to Import
 
 ```TypeScript
-import { Rect, TouchPosition, AccessibilityVirtualNode, ElementAttributeKeys, FocusCondition, AccessibilityExtensionContext, ElementAttributeValues, AccessibilityEventInfo, AccessibilityEvent, AccessibilityElement, FocusRule, FocusMoveResult, FocusType, Parameter, FocusDirection, WindowType } from '@kit.AccessibilityKit';
+import { AccessibilityElement } from 'AccessibilityElement';
+import { AccessibilityExtensionContext } from 'AccessibilityExtensionContext';
+import { ElementAttributeKeys } from 'ElementAttributeKeys';
+import { ElementAttributeValues } from 'ElementAttributeValues';
+import { FocusDirection } from 'FocusDirection';
+import { FocusType } from 'FocusType';
+import { Rect } from 'Rect';
+import { WindowType } from 'WindowType';
+import { AccessibilityEvent } from 'AccessibilityEvent';
+import { AccessibilityEventInfo } from 'AccessibilityEventInfo';
+import { Parameter } from 'Parameter';
+import { FocusRule } from 'FocusRule';
+import { FocusCondition } from 'FocusCondition';
+import { FocusMoveResult } from 'FocusMoveResult';
+import { AccessibilityVirtualNode } from 'AccessibilityVirtualNode';
+import { TouchPosition } from 'TouchPosition';
 ```
 
 ## onAccessibilityEvent
@@ -24,7 +39,7 @@ import { Rect, TouchPosition, AccessibilityVirtualNode, ElementAttributeKeys, Fo
 onAccessibilityEvent(event: AccessibilityEvent): void
 ```
 
-Called when an event that matches the specified bundle and event type occurs. In this API, you can implement event- specific service logic. Generally, this API needs to be overridden.
+Called when an accessibility event occurs. In this API, you can implement event-specific service logic based on the event information. Generally, this API needs to be overridden.
 
 **Since:** 9
 
@@ -40,7 +55,7 @@ Called when an event that matches the specified bundle and event type occurs. In
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [AccessibilityEvent](arkts-accessibility-application-accessibilityextensionability-accessibilityevent-i.md) | Yes | Accessibility event. No return value. |
+| event | [AccessibilityEvent](arkts-accessibility-application-accessibilityextensionability-accessibilityevent-i.md) | Yes | Accessibility event information. |
 
 ## Examples
 
@@ -93,7 +108,7 @@ class MyAccessibilityExtensionAbility extends AccessibilityExtensionAbility {
 onDisconnect(): void
 ```
 
-Called when the **AccessibilityExtensionAbility** is disabled and disconnected from the system service. In this API , you can implement the service logic of resource release and exit. This API can be overridden as required.
+Called when the **AccessibilityExtensionAbility** is disabled and disconnected from the system service. In this API, you can implement the service logic of resource release and exit. This API can be overridden as required.
 
 **Since:** 9
 
@@ -123,7 +138,7 @@ class MyAccessibilityExtensionAbility extends AccessibilityExtensionAbility {
 onKeyEvent(keyEvent: KeyEvent): boolean
 ```
 
-Called when a physical key is pressed. In this API, you can determine whether to consume the event based on the service.
+Called when a physical key is pressed. In this API, you can determine whether to consume the event based on the service. This API can be overridden as required.
 
 **Since:** 9
 
@@ -139,13 +154,13 @@ Called when a physical key is pressed. In this API, you can determine whether to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keyEvent | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | Yes | Key event. If **true** is returned, the key is consumed. |
+| keyEvent | [KeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md) | Yes | Key event. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the event is consumed and will not be transferred;&lt;br&gt;returns **false** if the event is not consumed and will be transferred. |
+| boolean | Returns **true** if the event is consumed and will not be transferred; <br>returns **false** if the event is not consumed and will be transferred. |
 
 ## Examples
 
@@ -171,7 +186,7 @@ class MyAccessibilityExtensionAbility extends AccessibilityExtensionAbility {
 context: AccessibilityExtensionContext
 ```
 
-Context of the accessibility extension ability.
+Indicates the context of the accessibility extension.
 
 **Type:** [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-t.md)
 

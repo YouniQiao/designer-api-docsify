@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
+import { accessibility } from 'accessibility';
 ```
 
 ## isSeniorModeEnabled
@@ -30,7 +30,7 @@ Checks whether the senior mode is enabled. This API uses a promise to return the
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the senior mode is enabled, and the value **false** indicates that the senior mode is disabled. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that senior mode is enabled, and **false** indicates that senior mode is disabled. |
 
 **Error codes:**
 

@@ -15,7 +15,7 @@ Provides an interface that can be implemented for releasing a resource which is 
 ## Modules to Import
 
 ```TypeScript
-import { util } from '@kit.ArkTS';
+import { util } from 'util';
 ```
 
 ## onFinalization

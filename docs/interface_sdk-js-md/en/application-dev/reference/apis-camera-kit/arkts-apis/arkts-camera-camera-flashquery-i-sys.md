@@ -15,7 +15,7 @@ FlashQuery provides APIs to query the flash status and mode of a camera device. 
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'camera';
 ```
 
 ## isLcdFlashSupported

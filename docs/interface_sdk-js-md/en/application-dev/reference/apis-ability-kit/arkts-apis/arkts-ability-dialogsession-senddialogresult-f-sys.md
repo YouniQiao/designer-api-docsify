@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dialogSession } from '@kit.AbilityKit';
+import { dialogSession } from 'dialogSession';
 ```
 
 ## sendDialogResult

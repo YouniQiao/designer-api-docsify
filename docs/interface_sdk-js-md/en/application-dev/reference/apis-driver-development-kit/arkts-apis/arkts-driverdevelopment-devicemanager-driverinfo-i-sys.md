@@ -17,7 +17,7 @@ Defines detailed information about a driver.
 ## Modules to Import
 
 ```TypeScript
-import { deviceManager } from '@kit.DriverDevelopmentKit';
+import { deviceManager } from 'deviceManager';
 ```
 
 ## busType

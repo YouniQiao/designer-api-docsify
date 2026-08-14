@@ -22,7 +22,7 @@ AutoFillExtensionContext模块是AutoFillExtensionAbility的上下文环境，�
 reloadInModal(customData: CustomData): Promise<void>
 ```
 
-拉起模态页面。使用Promise异步回调。
+重新拉起模态页面。使用Promise异步回调。
 
 **起始版本：** 23
 

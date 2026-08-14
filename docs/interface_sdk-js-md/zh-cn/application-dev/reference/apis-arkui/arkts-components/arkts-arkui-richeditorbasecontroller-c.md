@@ -140,7 +140,7 @@ getLayoutManager(): LayoutManager
 
 | 类型 | 说明 |
 | --- | --- |
-| LayoutManager | 布局管理器对象，可用于获取组件内容的布局位置等信息。 &lt;br&gt;当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
+| LayoutManager | 布局管理器对象，可用于获取组件内容的布局位置等信息。 <br>当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
 
 ## getPreviewText
 
@@ -168,7 +168,7 @@ getPreviewText(): PreviewText
 
 | 类型 | 说明 |
 | --- | --- |
-| PreviewText | 预上屏文本信息，包含输入法预显示的候选文本内容及起始位置。 &lt;br&gt;当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
+| PreviewText | 预上屏文本信息，包含输入法预显示的候选文本内容及起始位置。 <br>当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
 
 ## getTypingStyle
 
@@ -196,7 +196,7 @@ getTypingStyle(): RichEditorTextStyle
 
 | 类型 | 说明 |
 | --- | --- |
-| [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md) | 用户预设的文本输入样式对象，包含字体颜色、大小、粗细等样式属性，可用于查询当前组件的输入文本样式配置。 &lt;br&gt;当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
+| [RichEditorTextStyle](arkts-arkui-richeditortextstyle-i.md) | 用户预设的文本输入样式对象，包含字体颜色、大小、粗细等样式属性，可用于查询当前组件的输入文本样式配置。 <br>当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
 
 ## isEditing
 
@@ -250,7 +250,7 @@ scrollToVisible(range?: TextRange): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| range | TextRange | 否 | 滚动到可视区域的内容范围，包括内容起始位置和终止位置。 &lt;br&gt;起始位置应小于等于结束位置，否则接口调用无效。起始位置小于0视为0，结束位置大于全文长度视为全文长度。 &lt;br&gt;未指定范围时，默认为全部内容。未指定起始位置，默认起始位置为0；未指定结束位置，默认结束位置为全文长度。 |
+| range | TextRange | 否 | 滚动到可视区域的内容范围，包括内容起始位置和终止位置。 <br>起始位置应小于等于结束位置，否则接口调用无效。起始位置小于0视为0，结束位置大于全文长度视为全文长度。 <br>未指定范围时，默认为全部内容。未指定起始位置，默认起始位置为0；未指定结束位置，默认结束位置为全文长度。 |
 
 ## setCaretOffset
 
@@ -284,7 +284,7 @@ setCaretOffset(offset: number): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 光标是否设置成功。&lt;br/&gt;true表示光标位置设置成功，false表示未成功。 |
+| boolean | 光标是否设置成功。<br/>true表示光标位置设置成功，false表示未成功。 |
 
 ## setSelection
 
@@ -314,7 +314,7 @@ setSelection(selectionStart: number, selectionEnd: number, options?: SelectionOp
 | --- | --- | --- | --- |
 | selectionStart | number | 是 | 选中开始位置。 |
 | selectionEnd | number | 是 | 选中结束位置。 |
-| options | SelectionOptions | 否 | 选择项配置，用于控制选中操作时的菜单弹出策略。 &lt;br&gt;当需要自定义菜单弹出行为（如强制显示或隐藏菜单）时传入此参数； &lt;br&gt;省略时默认使用MenuPolicy.DEFAULT，遵循系统默认菜单弹出策略。 &lt;br&gt;各MenuPolicy取值的适用场景请参考SelectionOptions对象说明。<br>**起始版本：** 12 |
+| options | SelectionOptions | 否 | 选择项配置，用于控制选中操作时的菜单弹出策略。 <br>当需要自定义菜单弹出行为（如强制显示或隐藏菜单）时传入此参数； <br>省略时默认使用MenuPolicy.DEFAULT，遵循系统默认菜单弹出策略。 <br>各MenuPolicy取值的适用场景请参考SelectionOptions对象说明。<br>**起始版本：** 12 |
 
 ## setStyledPlaceholder
 
@@ -342,7 +342,7 @@ setStyledPlaceholder(styledString: StyledString): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| styledString | StyledString | 是 | 设置属性字符串样式的提示文本，其优先级高于placeholder属性设 置的提示文本。 &lt;br&gt;提示文本不支持触发属性字符串GestureStyle样式绑定的手势事件，以及UrlStyle样式的超链接跳转能力。 |
+| styledString | StyledString | 是 | 设置属性字符串样式的提示文本，其优先级高于placeholder属性设 置的提示文本。 <br>提示文本不支持触发属性字符串GestureStyle样式绑定的手势事件，以及UrlStyle样式的超链接跳转能力。 |
 
 ## setTypingParagraphStyle
 

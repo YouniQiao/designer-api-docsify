@@ -78,7 +78,7 @@ constructor(locale: string, options?: LocaleOptions)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | locale | string | 是 | 表示区域ID的字符串，由语言、脚本、国家地区组成。 |
-| options | [LocaleOptions](arkts-localization-intl-localeoptions-i.md) | 否 | 创建区域对象的配置项。 &lt;br&gt;默认值：所有属性都取默认值时的配置项。<br>**起始版本：** 12 |
+| options | [LocaleOptions](arkts-localization-intl-localeoptions-i.md) | 否 | 创建区域对象的配置项。 <br>默认值：所有属性都取默认值时的配置项。<br>**起始版本：** 12 |
 
 ## 示例
 

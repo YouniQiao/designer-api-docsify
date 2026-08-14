@@ -162,7 +162,7 @@ Text shader effect. This API does not take effect when used together with [TextS
 tailIndents?: LengthMetrics | Array<LengthMetrics>
 ```
 
-Specify the tail indentation for each line in a paragraph. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;When a single LengthMetrics value is provided, all lines share the same tail indent. &lt;br&gt;When an array is provided, the i-th element specifies the tail indent for the i-th line. If the number of text lines exceeds the array length, the last element in the array is used for the remaining lines. &lt;br&gt;Negative values are treated as 0. &lt;/p&gt;
+Specify the tail indentation for each line in a paragraph. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>When a single LengthMetrics value is provided, all lines share the same tail indent. <br>When an array is provided, the i-th element specifies the tail indent for the i-th line. If the number of text lines exceeds the array length, the last element in the array is used for the remaining lines. <br>Negative values are treated as 0. &lt;/p&gt;
 
 **Type:** LengthMetrics \| Array&lt;LengthMetrics&gt;
 

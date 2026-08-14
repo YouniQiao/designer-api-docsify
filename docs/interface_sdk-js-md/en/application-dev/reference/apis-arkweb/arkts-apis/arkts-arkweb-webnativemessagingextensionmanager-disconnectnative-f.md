@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
+import { webNativeMessagingExtensionManager } from 'webNativeMessagingExtensionManager';
 ```
 
 ## disconnectNative

@@ -15,7 +15,7 @@ Defines the axis range of an input device.
 ## Modules to Import
 
 ```TypeScript
-import { inputDevice } from '@kit.InputKit';
+import { inputDevice } from 'inputDevice';
 ```
 
 ## axis

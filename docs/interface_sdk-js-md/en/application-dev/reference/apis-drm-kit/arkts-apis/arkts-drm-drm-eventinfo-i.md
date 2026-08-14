@@ -15,7 +15,7 @@ Defines the DRM event information.
 ## Modules to Import
 
 ```TypeScript
-import { drm } from '@kit.DrmKit';
+import { drm } from 'drm';
 ```
 
 ## extraInfo

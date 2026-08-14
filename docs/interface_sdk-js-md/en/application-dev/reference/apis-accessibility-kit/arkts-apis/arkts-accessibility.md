@@ -5,7 +5,7 @@ Accessibility
 ## Modules to Import
 
 ```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
+import { accessibility } from 'accessibility';
 ```
 
 ## Summary
@@ -21,13 +21,13 @@ import { accessibility } from '@kit.AccessibilityKit';
 
 | Name | Description |
 | --- | --- |
-| [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md) | Enumerates executable actions for accessibility node elements. Accessibility node elements are UI components that support accessibility actions, such as buttons, text boxes, and so on. |
+| [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md) | Enumerates executable actions for accessibility node elements. An accessibility node element refers to a component on the UI that can perform accessibility operations, such as a button or text input box. |
 | [AccessibilityEventType](arkts-accessibility-accessibility-accessibilityeventtype-e-sys.md) | Enumerates accessibility event types. |
-| [AccessibilityFocusScene](arkts-accessibility-accessibility-accessibilityfocusscene-e-sys.md) | Enumeration of scenes of accessibility focus. |
-| [AccessibilitySourceType](arkts-accessibility-accessibility-accessibilitysourcetype-e-sys.md) | Accessibility Element Source Type Enumeration |
+| [AccessibilityFocusScene](arkts-accessibility-accessibility-accessibilityfocusscene-e-sys.md) | Enumerates the focus scenarios for accessibility. |
+| [AccessibilitySourceType](arkts-accessibility-accessibility-accessibilitysourcetype-e-sys.md) | Enumerates the source types of accessibility nodes. |
 | [FocusMoveResultCode](arkts-accessibility-accessibility-focusmoveresultcode-e-sys.md) | Enumerates the result codes returned by the focusable node query. |
-| [FocusRuleType](arkts-accessibility-accessibility-focusruletype-e-sys.md) | Focus Rule Type Enumeration |
+| [FocusRuleType](arkts-accessibility-accessibility-focusruletype-e-sys.md) | Enumerates the focus rule types. |
 | [InjectActionType](arkts-accessibility-accessibility-injectactiontype-e-sys.md) | Enumerates injection actions. |
-| [OperateVirtualNodeResult](arkts-accessibility-accessibility-operatevirtualnoderesult-e-sys.md) | Result Code Enumeration |
+| [OperateVirtualNodeResult](arkts-accessibility-accessibility-operatevirtualnoderesult-e-sys.md) | Enumerates the result types of operating virtual nodes for accessibility. |
 <!--DelEnd-->
 

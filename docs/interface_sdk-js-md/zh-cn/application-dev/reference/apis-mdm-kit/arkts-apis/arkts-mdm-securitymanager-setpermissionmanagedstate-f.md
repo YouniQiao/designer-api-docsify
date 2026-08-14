@@ -67,7 +67,7 @@ let permissionsTemp: Array<string> = ['ohos.permission.CAMERA', 'ohos.permission
 try {
   securityManager.setPermissionManagedState(wantTemp, appInstanceTemp, permissionsTemp, securityManager.PermissionManagedState.GRANTED);
   console.info('Succeeded in setting permission managed state.');
-} catch(err) {
+} catch (err) {
   console.error(`Failed to set permission managed state.  Code: ${err.code}, message: ${err.message}`);
 }
 ```

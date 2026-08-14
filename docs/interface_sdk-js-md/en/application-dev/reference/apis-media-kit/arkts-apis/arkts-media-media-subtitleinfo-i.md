@@ -15,7 +15,7 @@ Provides subtitle information. When a subtitle update event is subscribed to, th
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'media';
 ```
 
 ## duration

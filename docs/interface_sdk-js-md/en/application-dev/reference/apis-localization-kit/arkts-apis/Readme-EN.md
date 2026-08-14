@@ -1,6 +1,7 @@
 # ArkTS API<!--arkts-localizationkit-->
 
-- [@ohos.fontManager](arkts-fontmanager.md)
+<!--Del-->
+- [@ohos.fontManager](arkts-fontmanager.md)<!--DelEnd-->
   <!--Del-->
   - [dataMigration(system api)](arkts-localization-fontmanager-datamigration-f-sys.md)<!--DelEnd-->
   <!--Del-->

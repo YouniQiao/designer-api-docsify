@@ -38,7 +38,7 @@ capturerInfo: AudioCapturerInfo
 playbackCaptureConfig?: AudioPlaybackCaptureConfig
 ```
 
-音频内录的配置信息。 <br/
+音频内录的配置信息。 &lt;br/
 
 **类型：** [AudioPlaybackCaptureConfig](arkts-audio-audio-audioplaybackcaptureconfig-i.md)
 

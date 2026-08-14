@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { businessAbilityRouter } from '@kit.AbilityKit';
+import { businessAbilityRouter } from 'businessAbilityRouter';
 ```
 
 ## queryBusinessAbilityInfo

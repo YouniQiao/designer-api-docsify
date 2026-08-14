@@ -17,7 +17,7 @@ Provides the conditions of on/off.
 ## Modules to Import
 
 ```TypeScript
-import { securityGuard } from '@kit.SecurityGuardKit';
+import { securityGuard } from 'securityGuard';
 ```
 
 ## eventId

@@ -44,7 +44,7 @@ Background blur of the sheet. By default, there is no background blur.
 borderColor?: ResourceColor | EdgeColors | LocalizedEdgeColors
 ```
 
-Border color of the sheet. **borderColor** must be used with **borderWidth** in pairs. &lt;p&gt;**NOTE：**: &lt;br&gt;For bottom sheets, the bottom border color setting is ineffective. &lt;/p&gt;
+Border color of the sheet. **borderColor** must be used with **borderWidth** in pairs. &lt;p&gt;**NOTE：**: <br>For bottom sheets, the bottom border color setting is ineffective. &lt;/p&gt;
 
 **Type:** [ResourceColor](../../apis-arkui/arkts-apis/arkts-arkui-resourcecolor-t.md) \| [EdgeColors](../../apis-arkui/arkts-apis/arkts-arkui-edgecolors-t.md) \| [LocalizedEdgeColors](../../apis-arkui/arkts-apis/arkts-arkui-localizededgecolors-i.md)
 
@@ -90,7 +90,7 @@ Defines the sheet's border style.
 borderWidth?: Dimension | EdgeWidths | LocalizedEdgeWidths
 ```
 
-Border width of the sheet. You can set the width for all four sides or set separate widths for individual sides. Default value: **0**. Percentage parameter method: Set the border width of the sheet as a percentage of the width of the parent element. If the left and right border widths of the sheet are greater than the width of the sheet, and the top and bottom border widths are greater than the height of the sheet, the display may not appear as expected. &lt;p&gt;**Note：**: &lt;br&gt;For bottom sheets, the bottom border width setting is ineffective. &lt;/p&gt;
+Border width of the sheet. You can set the width for all four sides or set separate widths for individual sides. Default value: **0**. Percentage parameter method: Set the border width of the sheet as a percentage of the width of the parent element. If the left and right border widths of the sheet are greater than the width of the sheet, and the top and bottom border widths are greater than the height of the sheet, the display may not appear as expected. &lt;p&gt;**Note：**: <br>For bottom sheets, the bottom border width setting is ineffective. &lt;/p&gt;
 
 **Type:** [Dimension](../../apis-arkui/arkts-apis/arkts-arkui-dimension-t.md) \| [EdgeWidths](../../apis-arkui/arkts-apis/arkts-arkui-edgewidths-t.md) \| [LocalizedEdgeWidths](../../apis-arkui/arkts-apis/arkts-arkui-localizededgewidths-i.md)
 
@@ -158,7 +158,7 @@ Defines sheet detents
 dragBar?: boolean
 ```
 
-Whether to display the drag bar. &lt;br&gt;**NOTE：**&lt;br&gt;By default, the drag bar is displayed only when the sheet's **detents** attribute is set to multiple heights and the settings take effect.
+Whether to display the drag bar. <br>**NOTE：**<br>By default, the drag bar is displayed only when the sheet's **detents** attribute is set to multiple heights and the settings take effect.
 
 **Type:** boolean
 
@@ -254,7 +254,7 @@ Defines whether to respond to the hover mode.
 enableOutsideInteractive?: boolean
 ```
 
-Whether to allow users to interact with the page pertaining to the sheet. &lt;br&gt;**NOTE：**&lt;br&gt;The value **true** means that interactions are allowed, in which case no mask is not displayed. The value **false** means that interactions are not allowed, in which case a mask is displayed. If this parameter is not set, interactions are allowed for the popup sheet, but not for bottom and center sheets. If this parameter is set to **true**, the setting of **maskColor** does not take effect.
+Whether to allow users to interact with the page pertaining to the sheet. <br>**NOTE：**<br>The value **true** means that interactions are allowed, in which case no mask is not displayed. The value **false** means that interactions are not allowed, in which case a mask is displayed. If this parameter is not set, interactions are allowed for the popup sheet, but not for bottom and center sheets. If this parameter is set to **true**, the setting of **maskColor** does not take effect.
 
 **Type:** boolean
 
@@ -420,7 +420,7 @@ Determine the level sheet shows, whether sheet should be displayed within the pa
 onDetentsDidChange?: Callback<int>
 ```
 
-Callback for changes in the detents of the sheet. &lt;p&gt;**NOTE：**: &lt;br&gt;For a bottom sheet, the final height is returned when there are changes in detents. &lt;br&gt;The return value is in px. &lt;/p&gt;
+Callback for changes in the detents of the sheet. &lt;p&gt;**NOTE：**: <br>For a bottom sheet, the final height is returned when there are changes in detents. <br>The return value is in px. &lt;/p&gt;
 
 **Type:** [Callback](arkts-na-callback-t.md)&lt;int&gt;
 
@@ -444,7 +444,7 @@ Callback for changes in the detents of the sheet. &lt;p&gt;**NOTE：**: &lt;br&g
 onHeightDidChange?: Callback<int>
 ```
 
-Callback for changes in the height of the sheet. &lt;p&gt;**Note：**: &lt;br&gt;For a bottom sheet, the height of each frame is only returned when there are changes in detents or during drag actions. &lt;br&gt;When the sheet is pulled up or making space for the soft keyboard, only the final height is returned. &lt;br&gt;For other types of sheets, the final height is only returned when the sheet is pulled up. &lt;br&gt;The return value is in px. &lt;p&gt;
+Callback for changes in the height of the sheet. &lt;p&gt;**Note：**: <br>For a bottom sheet, the height of each frame is only returned when there are changes in detents or during drag actions. <br>When the sheet is pulled up or making space for the soft keyboard, only the final height is returned. <br>For other types of sheets, the final height is only returned when the sheet is pulled up. <br>The return value is in px. &lt;p&gt;
 
 **Type:** [Callback](arkts-na-callback-t.md)&lt;int&gt;
 
@@ -510,7 +510,7 @@ Called when width of the sheet changed
 onWillDismiss?: Callback<DismissSheetAction>
 ```
 
-Callback invoked when the user performs an interactive dismiss operation: pulling down or clicking the back button, the mask, or the close icon, to obtain the type of dismiss operation and decide whether to dismiss the sheet. &lt;p&gt;**NOTE：**: &lt;br&gt;If this callback is registered, the sheet is not dismissed immediately when the user performs the above operations. &lt;br&gt;Instead, you can use the DismissSheetAction parameter in the callback to determine the type of dismiss operation and decide whether to dismiss the sheet. &lt;br&gt;If this callback is not registered, the sheet is dismissed immediately when the user performs the above operations, without any additional behavior. &lt;br&gt;No further interception with onWillDismiss is allowed in an onWillDismiss callback. &lt;/p&gt;
+Callback invoked when the user performs an interactive dismiss operation: pulling down or clicking the back button, the mask, or the close icon, to obtain the type of dismiss operation and decide whether to dismiss the sheet. &lt;p&gt;**NOTE：**: <br>If this callback is registered, the sheet is not dismissed immediately when the user performs the above operations. <br>Instead, you can use the DismissSheetAction parameter in the callback to determine the type of dismiss operation and decide whether to dismiss the sheet. <br>If this callback is not registered, the sheet is dismissed immediately when the user performs the above operations, without any additional behavior. <br>No further interception with onWillDismiss is allowed in an onWillDismiss callback. &lt;/p&gt;
 
 **Type:** [Callback](arkts-na-callback-t.md)&lt;[DismissSheetAction](arkts-na-common-dismisssheetaction-i.md)&gt;
 
@@ -532,7 +532,7 @@ Callback invoked when the user performs an interactive dismiss operation: pullin
 onWillSpringBackWhenDismiss?: Callback<SpringBackAction>
 ```
 
-Callback invoked when the user performs a pull-down-to-dismiss gesture, to control the bounce effect. &lt;p&gt;**NOTE：**: &lt;br&gt;If this callback is registered along with **shouldDismiss** or **onWillDismiss** you can control whether the sheet bounces back during the pull-down-to-dismiss operation by calling **springBack** in the callback. &lt;br&gt;If this callback is not registered but **shouldDismiss** or **onWillDismiss** is registered, the sheet will bounce back before remaining open or being dismissed based on the callback behavior. &lt;br&gt;If neither this callback nor **shouldDismiss** or **onWillDismiss** is registered, the sheet is dismissed by default during the pull-down-to-dismiss operation. &lt;/p&gt;
+Callback invoked when the user performs a pull-down-to-dismiss gesture, to control the bounce effect. &lt;p&gt;**NOTE：**: <br>If this callback is registered along with **shouldDismiss** or **onWillDismiss** you can control whether the sheet bounces back during the pull-down-to-dismiss operation by calling **springBack** in the callback. <br>If this callback is not registered but **shouldDismiss** or **onWillDismiss** is registered, the sheet will bounce back before remaining open or being dismissed based on the callback behavior. <br>If neither this callback nor **shouldDismiss** or **onWillDismiss** is registered, the sheet is dismissed by default during the pull-down-to-dismiss operation. &lt;/p&gt;
 
 **Type:** [Callback](arkts-na-callback-t.md)&lt;[SpringBackAction](arkts-na-common-springbackaction-i.md)&gt;
 
@@ -602,7 +602,7 @@ placement On target node
 preferType?: SheetType
 ```
 
-Type of the sheet. &lt;br&gt;**NOTE：**&lt;br&gt;The types supported by the sheet vary by window. &lt;br&gt;1. Width < 600 vp: bottom. &lt;br&gt;2. 600 vp &lt;= Width: bottom, center, and popup (default). <br>3. Width &gt;&lt;br&gt;3. Width >= 840 vp: bottom, center, and popup (default).
+Type of the sheet. <br>**NOTE：**<br>The types supported by the sheet vary by window. <br>1. Width &lt; 600 vp: bottom. <br>2. 600 vp &lt;= Width: bottom, center, and popup (default). <br>3. Width &gt;= 840 vp: bottom, center, and popup (default).
 
 **Type:** [SheetType](arkts-na-common-sheettype-e.md)
 
@@ -716,7 +716,7 @@ Shadow of the sheet. Default value for 2-in-1 devices: **ShadowStyle.OUTER_FLOAT
 shouldDismiss?: (sheetDismiss: SheetDismiss) => void
 ```
 
-Callback invoked when the user performs an interactive dismiss operation: pulling down or clicking the back button, the mask, or the close icon.&lt;br&gt;**NOTE：**&lt;br&gt;If this callback is registered, the sheet is not dismissed immediately when the user performs the above operations. To dismiss the sheet, you must call **shouldDismiss.dismiss()** in the callback.&lt;br&gt;If this callback is not registered, the sheet is dismissed immediately when the user performs the above operations, without any additional behavior.&lt;br&gt;It is recommended that this API be used in scenarios where a secondary confirmation is required.
+Callback invoked when the user performs an interactive dismiss operation: pulling down or clicking the back button, the mask, or the close icon.<br>**NOTE：**<br>If this callback is registered, the sheet is not dismissed immediately when the user performs the above operations. To dismiss the sheet, you must call **shouldDismiss.dismiss()** in the callback.<br>If this callback is not registered, the sheet is dismissed immediately when the user performs the above operations, without any additional behavior.<br>It is recommended that this API be used in scenarios where a secondary confirmation is required.
 
 **Type:** (sheetDismiss: SheetDismiss) =&gt; void
 

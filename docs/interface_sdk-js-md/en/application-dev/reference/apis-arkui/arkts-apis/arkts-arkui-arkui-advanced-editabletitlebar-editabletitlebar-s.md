@@ -15,7 +15,11 @@ The editable title bar is a title bar that comes with button icons, typically **
 ## Modules to Import
 
 ```TypeScript
-import { EditableTitleBarOptions, EditableTitleBarMenuItem, EditableTitleBarItem, EditableLeftIconType, EditableTitleBar } from '@kit.ArkUI';
+import { EditableLeftIconType } from 'EditableLeftIconType';
+import { EditableTitleBar } from 'EditableTitleBar';
+import { EditableTitleBarMenuItem } from 'EditableTitleBarMenuItem';
+import { EditableTitleBarItem } from 'EditableTitleBarItem';
+import { EditableTitleBarOptions } from 'EditableTitleBarOptions';
 ```
 
 ## contentMargin

@@ -17,7 +17,10 @@ Represents a rectangle shape used in the **clipShape** and **maskShape** APIs. T
 ## Modules to Import
 
 ```TypeScript
-import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
+import { RectShape } from 'RectShape';
+import { CircleShape } from 'CircleShape';
+import { EllipseShape } from 'EllipseShape';
+import { PathShape } from 'PathShape';
 ```
 
 ## constructor
@@ -78,7 +81,7 @@ Sets the radius of the rectangle border corners.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| radius | number \| string \| Array&lt;number \| string&gt; | Yes | Radius of the rectangle border corners. When an array is provided, it should contain exactly four elements, corresponding to the radius of the upper left, upper right, lower left, and lower right corners of the rectangle, respectively. If more than four elements are contained, only the first four are accepted.&lt;br&gt; When the parameter type is number, the valid value range is 0, +∞). When the parameter type is string, the value must conform to the [Length type specification.&lt;br&gt;Unit: vp.&lt;br&gt;If the value is invalid, 0 vp is used. |
+| radius | number \| string \| Array&lt;number \| string&gt; | Yes | Radius of the rectangle border corners. When an array is provided, it should contain exactly four elements, corresponding to the radius of the upper left, upper right, lower left, and lower right corners of the rectangle, respectively. If more than four elements are contained, only the first four are accepted.<br> When the parameter type is number, the valid value range is 0, +∞). When the parameter type is string, the value must conform to the [Length type specification.<br>Unit: vp.<br>If the value is invalid, 0 vp is used. |
 
 **Return value:**
 
@@ -114,7 +117,7 @@ Sets the radius height of the rectangle border corners.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rHeight | number \| string | Yes | Radius height of the rectangle border corners.&lt;br&gt; When the parameter type is number, the valid value range is 0, +∞). When the parameter type is string, the value must conform to the [Length type specification.&lt;br&gt;Unit: vp.&lt;br&gt;If the value is invalid, 0 vp is used. |
+| rHeight | number \| string | Yes | Radius height of the rectangle border corners.<br> When the parameter type is number, the valid value range is 0, +∞). When the parameter type is string, the value must conform to the [Length type specification.<br>Unit: vp.<br>If the value is invalid, 0 vp is used. |
 
 **Return value:**
 
@@ -150,7 +153,7 @@ Sets the radius width of the rectangle border corners.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rWidth | number \| string | Yes | Radius width of the rectangle border corners.&lt;br&gt; When the parameter type is number, the valid value range is 0, +∞). When the parameter type is string, the value must conform to the [Length type specification.&lt;br&gt;Unit: vp.&lt;br&gt;If the value is invalid, 0 vp is used. |
+| rWidth | number \| string | Yes | Radius width of the rectangle border corners.<br> When the parameter type is number, the valid value range is 0, +∞). When the parameter type is string, the value must conform to the [Length type specification.<br>Unit: vp.<br>If the value is invalid, 0 vp is used. |
 
 **Return value:**
 

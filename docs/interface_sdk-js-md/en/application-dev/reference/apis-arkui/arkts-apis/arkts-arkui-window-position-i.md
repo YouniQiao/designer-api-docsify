@@ -15,7 +15,7 @@ Describes the position of the window or component.
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'window';
 ```
 
 ## x

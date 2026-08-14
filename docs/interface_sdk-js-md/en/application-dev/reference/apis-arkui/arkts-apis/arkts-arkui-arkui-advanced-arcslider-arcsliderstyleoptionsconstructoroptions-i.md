@@ -15,7 +15,16 @@ Defines the constructor information for **ArcSliderStyleOptions**.
 ## Modules to Import
 
 ```TypeScript
-import { ArcSliderLayoutOptions, ArcSliderValueOptionsConstructorOptions, ArcSliderValueOptions, ArcSliderStyleOptionsConstructorOptions, ArcSlider, ArcSliderLayoutOptionsConstructorOptions, ArcSliderOptions, ArcSliderStyleOptions, ArcSliderPosition, ArcSliderOptionsConstructorOptions } from '@kit.ArkUI';
+import { ArcSlider } from 'ArcSlider';
+import { ArcSliderPosition } from 'ArcSliderPosition';
+import { ArcSliderOptions } from 'ArcSliderOptions';
+import { ArcSliderOptionsConstructorOptions } from 'ArcSliderOptionsConstructorOptions';
+import { ArcSliderLayoutOptions } from 'ArcSliderLayoutOptions';
+import { ArcSliderLayoutOptionsConstructorOptions } from 'ArcSliderLayoutOptionsConstructorOptions';
+import { ArcSliderStyleOptions } from 'ArcSliderStyleOptions';
+import { ArcSliderStyleOptionsConstructorOptions } from 'ArcSliderStyleOptionsConstructorOptions';
+import { ArcSliderValueOptions } from 'ArcSliderValueOptions';
+import { ArcSliderValueOptionsConstructorOptions } from 'ArcSliderValueOptionsConstructorOptions';
 ```
 
 ## activeTrackThickness

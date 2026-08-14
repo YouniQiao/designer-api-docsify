@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'notificationManager';
 ```
 
 ## isDistributedEnabledBySlot
@@ -33,7 +33,7 @@ Queries whether notifications of a specified slot can be sent to devices of a sp
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | slot | SlotType | Yes | Types of the notification slot. |
-| deviceType | string | Yes | Device type.&lt;br&gt;Since API version 18, the following device types are supported:&lt;br&gt;- **headset**: wearable audio device&lt;br&gt;- **liteWearable**: lite wearable&lt;br&gt;- **wearable**: wearable&lt;br&gt;Since API version 20, the following device types are supported:&lt;br&gt;- **headset**: wearable audio device&lt;br&gt;- **liteWearable**: lite wearable&lt;br&gt;- **wearable**: wearable&lt;br&gt;- **current**: current device&lt;br&gt;- **2in1**: PC&lt; br&gt;- **tablet**: tablet |
+| deviceType | string | Yes | Device type.<br>Since API version 18, the following device types are supported:<br>- **headset**: wearable audio device<br>- **liteWearable**: lite wearable<br>- **wearable**: wearable<br>Since API version 20, the following device types are supported:<br>- **headset**: wearable audio device<br>- **liteWearable**: lite wearable<br>- **wearable**: wearable<br>- **current**: current device<br>- **2in1**: PC&lt; br&gt;- **tablet**: tablet |
 
 **Return value:**
 

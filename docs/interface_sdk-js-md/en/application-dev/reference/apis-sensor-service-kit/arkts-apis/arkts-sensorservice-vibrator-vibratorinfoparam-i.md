@@ -15,7 +15,7 @@ Defines the vibrator parameters. If **VibratorInfoParam** is left unspecified, a
 ## Modules to Import
 
 ```TypeScript
-import { vibrator } from '@kit.SensorServiceKit';
+import { vibrator } from 'vibrator';
 ```
 
 ## deviceId

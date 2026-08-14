@@ -906,14 +906,14 @@ off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'complete' \| 'pause' \| 'remove' | 是 | 取消订阅的事件类型。&lt;br/&gt;- 取值为'complete'，表示下载任务完成。&lt;br/&gt;- 取值为'pause'，表示下载任 务暂停。&lt;br/&gt;- 取值为'remove'，表示下载任务移除。 |
+| type | 'complete' \| 'pause' \| 'remove' | 是 | 取消订阅的事件类型。<br/>- 取值为'complete'，表示下载任务完成。<br/>- 取值为'pause'，表示下载任 务暂停。<br/>- 取值为'remove'，表示下载任务移除。 |
 | callback | () =&gt; void | 否 | 需要取消订阅的回调函数。若无此参数，则取消订阅当前类型的所有回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameters check fails. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -995,14 +995,14 @@ off(type: 'fail', callback?: (err: int) => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'fail' | 是 | 取消订阅的事件类型。&lt;br&gt;- 取值为'fail'，表示下载失败。 |
+| type | 'fail' | 是 | 取消订阅的事件类型。<br>- 取值为'fail'，表示下载失败。 |
 | callback | (err: int) =&gt; void | 否 | 需要取消订阅的回调函数。若无此参数，则取消订阅当前类型的所有回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameters check fails. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -1058,14 +1058,14 @@ off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'complete' \| 'pause' \| 'remove' | 是 | 取消订阅的事件类型。&lt;br/&gt;- 取值为'complete'，表示下载任务完成。&lt;br/&gt;- 取值为'pause'，表示下载任 务暂停。&lt;br/&gt;- 取值为'remove'，表示下载任务移除。 |
+| type | 'complete' \| 'pause' \| 'remove' | 是 | 取消订阅的事件类型。<br/>- 取值为'complete'，表示下载任务完成。<br/>- 取值为'pause'，表示下载任 务暂停。<br/>- 取值为'remove'，表示下载任务移除。 |
 | callback | () =&gt; void | 否 | 需要取消订阅的回调函数。若无此参数，则取消订阅当前类型的所有回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameters check fails. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -1147,14 +1147,14 @@ off(type: 'progress', callback?: (receivedSize: long, totalSize: long) => void):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'progress' | 是 | 取消订阅的事件类型。&lt;br&gt;- 取值为'progress'，表示下载的进度信息。 |
+| type | 'progress' | 是 | 取消订阅的事件类型。<br>- 取值为'progress'，表示下载的进度信息。 |
 | callback | (receivedSize: long, totalSize: long) =&gt; void | 否 | 需要取消订阅的回调函数。若无此参数，则取消订阅当前类型的所有回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameters check fails. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -1210,14 +1210,14 @@ off(type: 'complete' | 'pause' | 'remove', callback?: () => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'complete' \| 'pause' \| 'remove' | 是 | 取消订阅的事件类型。&lt;br/&gt;- 取值为'complete'，表示下载任务完成。&lt;br/&gt;- 取值为'pause'，表示下载任 务暂停。&lt;br/&gt;- 取值为'remove'，表示下载任务移除。 |
+| type | 'complete' \| 'pause' \| 'remove' | 是 | 取消订阅的事件类型。<br/>- 取值为'complete'，表示下载任务完成。<br/>- 取值为'pause'，表示下载任 务暂停。<br/>- 取值为'remove'，表示下载任务移除。 |
 | callback | () =&gt; void | 否 | 需要取消订阅的回调函数。若无此参数，则取消订阅当前类型的所有回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameters check fails. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -1569,14 +1569,14 @@ on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'complete' \| 'pause' \| 'remove' | 是 | 订阅的事件类型。&lt;br&gt;- 取值为'complete'，表示下载任务完成，任务完成时触发该事件。&lt;br/&gt;- 取值为' pause'，表示下载任务暂停，任务暂停时触发该事件。&lt;br/&gt;- 取值为'remove'，表示下载任务移除，任务移除时触发该事件。 |
+| type | 'complete' \| 'pause' \| 'remove' | 是 | 订阅的事件类型。<br>- 取值为'complete'，表示下载任务完成，任务完成时触发该事件。<br/>- 取值为' pause'，表示下载任务暂停，任务暂停时触发该事件。<br/>- 取值为'remove'，表示下载任务移除，任务移除时触发该事件。 |
 | callback | () =&gt; void | 是 | 下载任务相关的回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameters check fails. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -1634,14 +1634,14 @@ on(type: 'fail', callback: (err: int) => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'fail' | 是 | 订阅的事件类型。&lt;br&gt;- 取值为'fail'，表示下载失败，任务失败时触发该事件。 |
+| type | 'fail' | 是 | 订阅的事件类型。<br>- 取值为'fail'，表示下载失败，任务失败时触发该事件。 |
 | callback | (err: int) =&gt; void | 是 | 下载失败的回调函数。错误原因见 下载任务的错误码。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameters check fails. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -1689,14 +1689,14 @@ on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'complete' \| 'pause' \| 'remove' | 是 | 订阅的事件类型。&lt;br&gt;- 取值为'complete'，表示下载任务完成，任务完成时触发该事件。&lt;br/&gt;- 取值为' pause'，表示下载任务暂停，任务暂停时触发该事件。&lt;br/&gt;- 取值为'remove'，表示下载任务移除，任务移除时触发该事件。 |
+| type | 'complete' \| 'pause' \| 'remove' | 是 | 订阅的事件类型。<br>- 取值为'complete'，表示下载任务完成，任务完成时触发该事件。<br/>- 取值为' pause'，表示下载任务暂停，任务暂停时触发该事件。<br/>- 取值为'remove'，表示下载任务移除，任务移除时触发该事件。 |
 | callback | () =&gt; void | 是 | 下载任务相关的回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameters check fails. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -1754,14 +1754,14 @@ on(type: 'progress', callback: (receivedSize: long, totalSize: long) => void): v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'progress' | 是 | 订阅的事件类型。&lt;br&gt;- 取值为'progress'，表示下载的进度信息，当任务进度有进展时触发该事件。 |
+| type | 'progress' | 是 | 订阅的事件类型。<br>- 取值为'progress'，表示下载的进度信息，当任务进度有进展时触发该事件。 |
 | callback | (receivedSize: long, totalSize: long) =&gt; void | 是 | 下载任务进度的回调函数，返回已上传文件大小和上传文件大小总和，单位为字节（B）。在下载过程中，若服务器使用chunk方式传输导致无法从请求头中获取文件总大小时， totalSize为 -1。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameters check fails. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
 ## 示例
 
@@ -1809,14 +1809,14 @@ on(type: 'complete' | 'pause' | 'remove', callback: () => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'complete' \| 'pause' \| 'remove' | 是 | 订阅的事件类型。&lt;br&gt;- 取值为'complete'，表示下载任务完成，任务完成时触发该事件。&lt;br/&gt;- 取值为' pause'，表示下载任务暂停，任务暂停时触发该事件。&lt;br/&gt;- 取值为'remove'，表示下载任务移除，任务移除时触发该事件。 |
+| type | 'complete' \| 'pause' \| 'remove' | 是 | 订阅的事件类型。<br>- 取值为'complete'，表示下载任务完成，任务完成时触发该事件。<br/>- 取值为' pause'，表示下载任务暂停，任务暂停时触发该事件。<br/>- 取值为'remove'，表示下载任务移除，任务移除时触发该事件。 |
 | callback | () =&gt; void | 是 | 下载任务相关的回调函数。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | The parameters check fails. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed.<br>**适用版本：** 12+ |
 
 ## 示例
 

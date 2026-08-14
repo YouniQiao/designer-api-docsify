@@ -38,7 +38,7 @@ constructor(value?: TextStyleInterface)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [TextStyleInterface](arkts-arkui-textstyleinterface-i.md) | 否 | 字体样式设置项。 &lt;br&gt;默认值：不传入时继承TextStyleInterface各属性的默认值。 |
+| value | [TextStyleInterface](arkts-arkui-textstyleinterface-i.md) | 否 | 字体样式设置项。 <br>默认值：不传入时继承TextStyleInterface各属性的默认值。 |
 
 ## fontColor
 

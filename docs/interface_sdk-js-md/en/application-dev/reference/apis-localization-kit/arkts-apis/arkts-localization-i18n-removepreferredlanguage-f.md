@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'i18n';
 ```
 
 ## removePreferredLanguage
@@ -37,4 +37,14 @@ Removes a preferred language from the specified position on the preferred langua
 | Type | Description |
 | --- | --- |
 | boolean | Whether the operation is successful. The value **true** indicates that the operation is successful, and the value **false** indicates the opposite. |
+
+## Examples
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+// Delete the first preferred language from the preferred language list.
+let index: number = 0;
+let success: boolean = i18n.removePreferredLanguage(index);
+```
 

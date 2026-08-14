@@ -40,7 +40,7 @@ Callback for the blankless frame interpolation, which is used to return the blan
 duration?: int
 ```
 
-Duration of the frame interpolation. The valid range is the union of {0} and [200, 2000]. Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned. The value must be an integer. &lt;br&gt;Unit: ms.
+Duration of the frame interpolation. The valid range is the union of {0} and [200, 2000]. Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned. The value must be an integer. <br>Unit: ms.
 
 **Type:** int
 

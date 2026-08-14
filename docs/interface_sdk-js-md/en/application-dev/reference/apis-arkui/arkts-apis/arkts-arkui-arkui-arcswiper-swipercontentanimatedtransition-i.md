@@ -15,7 +15,11 @@ Provides the information about the custom page transition animation.
 ## Modules to Import
 
 ```TypeScript
-import { ArcSwiperAttribute, ArcSwiper, ArcDirection, ArcSwiperController, ArcDotIndicator } from '@kit.ArkUI';
+import { ArcSwiper } from 'ArcSwiper';
+import { ArcSwiperAttribute } from 'ArcSwiperAttribute';
+import { ArcDotIndicator } from 'ArcDotIndicator';
+import { ArcDirection } from 'ArcDirection';
+import { ArcSwiperController } from 'ArcSwiperController';
 ```
 
 ## timeout

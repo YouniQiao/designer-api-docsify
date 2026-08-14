@@ -15,7 +15,7 @@ Implements an upload or download task. Before using this API, you must obtain a 
 ## Modules to Import
 
 ```TypeScript
-import { request } from '@kit.BasicServicesKit';
+import { request } from 'request';
 ```
 
 ## offCompleted
@@ -258,14 +258,14 @@ Unsubscribes from task completion events. > **NOTE：**> > For details about how
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'completed' | Yes | Event type.&lt;br&gt;- **'completed'**: task completion. |
+| event | 'completed' | Yes | Event type.<br>- **'completed'**: task completion. |
 | callback | (progress: Progress) =&gt; void | No | Callback to be invoked when the specified event occurs. If this parameter is not specified, all callbacks of the task completion events are unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 | [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 and later |
 
 ## off_failed
@@ -292,14 +292,14 @@ Unsubscribes from task failure events. > **NOTE：**> > For details about how to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'failed' | Yes | Event type.&lt;br&gt;- **'failed'**: task failure. |
+| event | 'failed' | Yes | Event type.<br>- **'failed'**: task failure. |
 | callback | (progress: Progress) =&gt; void | No | Callback to be invoked when the specified event occurs. If this parameter is not specified, all callbacks of the task failure events are unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 | [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 and later |
 
 ## off_faultOccur
@@ -324,14 +324,14 @@ Unsubscribes from task failure events. > **NOTE：**> > For details about how to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'faultOccur' | Yes | Event type.&lt;br&gt;- **'faultOccur'**: task failure. |
+| event | 'faultOccur' | Yes | Event type.<br>- **'faultOccur'**: task failure. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 
 ## off_pause
 
@@ -355,14 +355,14 @@ Unsubscribes from the foreground task pause event. > **NOTE：**> > For details 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'pause' | Yes | Event type.&lt;br&gt;- **'pause'**: task pause. |
+| event | 'pause' | Yes | Event type.<br>- **'pause'**: task pause. |
 | callback | (progress: Progress) =&gt; void | No | Callback to be invoked when the specified event occurs. If this parameter is not specified, all callbacks of the task pause events are unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 
 ## off_progress
 
@@ -388,14 +388,14 @@ Unsubscribes from task progress events. > **NOTE：**> > For details about how t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'progress' | Yes | Event type.&lt;br&gt;- **'progress'**: task progress. |
+| event | 'progress' | Yes | Event type.<br>- **'progress'**: task progress. |
 | callback | (progress: Progress) =&gt; void | No | Callback to be invoked when the specified event occurs. If this parameter is not specified, all callbacks of the task progress events are unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 | [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) | task mode error.<br>**Applicable version:** 10 and later |
 
 ## off_remove
@@ -420,14 +420,14 @@ Unsubscribes from the task removal event. > **NOTE：**> > For details about how
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'remove' | Yes | Event type.&lt;br&gt;- **'remove'**: task removal. |
+| event | 'remove' | Yes | Event type.<br>- **'remove'**: task removal. |
 | callback | (progress: Progress) =&gt; void | No | Callback to be invoked when the specified event occurs. If this parameter is not specified, all callbacks of the task removal events are unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. <br> 3. Parameter verification failed. |
 
 ## off_response
 
@@ -453,14 +453,14 @@ Unsubscribes from task response headers. > **NOTE：**> > For details about how 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'response' | Yes | Event type.&lt;br&gt;- **response**: task response. |
+| event | 'response' | Yes | Event type.<br>- **response**: task response. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;HttpResponse&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 
 ## off_resume
 
@@ -484,14 +484,14 @@ Unsubscribes from foreground task resume events. > **NOTE：**> > For details ab
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'resume' | Yes | Event type.&lt;br&gt;- **'resume'**: task resume. |
+| event | 'resume' | Yes | Event type.<br>- **'resume'**: task resume. |
 | callback | (progress: Progress) =&gt; void | No | Callback to be invoked when the specified event occurs. If this parameter is not specified, all callbacks of the task resume events are unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 
 ## off_wait
 
@@ -515,14 +515,14 @@ Unsubscribes from task waiting events. > **NOTE：**> > For details about how to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'wait' | Yes | Event type.&lt;br&gt;- 'wait': The task is waiting. |
+| event | 'wait' | Yes | Event type.<br>- 'wait': The task is waiting. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks of the current type will be unregistered. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 
 ## onCompleted
 
@@ -764,14 +764,14 @@ Subscribes to task completion events. This API uses an asynchronous callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'completed' | Yes | Event type.&lt;br&gt;- **'completed'**: task completion. |
+| event | 'completed' | Yes | Event type.<br>- **'completed'**: task completion. |
 | callback | (progress: Progress) =&gt; void | Yes | Callback to be invoked when the specified event occurs. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 | [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) | task mode error.<br>**Applicable version:** 10 and later |
 
 ## on_failed
@@ -798,14 +798,14 @@ Subscribes to task failure events. This API uses an asynchronous callback to ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'failed' | Yes | Event type.&lt;br&gt;- **'failed'**: task failure. |
+| event | 'failed' | Yes | Event type.<br>- **'failed'**: task failure. |
 | callback | (progress: Progress) =&gt; void | Yes | Callback to be invoked when the specified event occurs. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 | [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) | Operation with wrong task mode.<br>**Applicable version:** 10 and later |
 
 ## on_faultOccur
@@ -830,14 +830,14 @@ Subscribes to task failure events. This API uses a callback to return the result
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'faultOccur' | Yes | Event type.&lt;br&gt;- **'faultOccur'**: task failure. |
+| event | 'faultOccur' | Yes | Event type.<br>- **'faultOccur'**: task failure. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[Faults](arkts-basicservices-agent-faults-e.md)&gt; | Yes | Callback used to return the failure cause of the task. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 
 ## on_pause
 
@@ -861,14 +861,14 @@ Subscribes to task pause events. This API uses an asynchronous callback to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'pause' | Yes | Event type.&lt;br&gt;- **'pause'**: task pause. |
+| event | 'pause' | Yes | Event type.<br>- **'pause'**: task pause. |
 | callback | (progress: Progress) =&gt; void | Yes | Callback to be invoked when the specified event occurs. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 
 ## on_progress
 
@@ -894,14 +894,14 @@ Subscribes to task progress changes. This API uses an asynchronous callback to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'progress' | Yes | Event type.&lt;br&gt;- **'progress'**: task progress. |
+| event | 'progress' | Yes | Event type.<br>- **'progress'**: task progress. |
 | callback | (progress: Progress) =&gt; void | Yes | Callback to be invoked when the specified event occurs. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 | [21900005](../../apis-basic-services-kit/errorcode-request.md#21900005-task-mode-error) | task mode error.<br>**Applicable version:** 10 and later |
 
 ## on_remove
@@ -926,14 +926,14 @@ Subscribes to task removal events. This API uses an asynchronous callback to ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'remove' | Yes | Event type.&lt;br&gt;- **'remove'**: task removal. |
+| event | 'remove' | Yes | Event type.<br>- **'remove'**: task removal. |
 | callback | (progress: Progress) =&gt; void | Yes | Callback to be invoked when the specified event occurs. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 
 ## on_response
 
@@ -959,14 +959,14 @@ Subscribes to task response headers. This API uses an asynchronous callback to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'response' | Yes | Event type.&lt;br&gt;- **'response'**: task response. |
+| event | 'response' | Yes | Event type.<br>- **'response'**: task response. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;HttpResponse&gt; | Yes | Callback used to return the data structure of the task response header. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 
 ## on_resume
 
@@ -990,14 +990,14 @@ Subscribes to task resume events. This API uses an asynchronous callback to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'resume' | Yes | Event type.&lt;br&gt;- **'resume'**: task resume. |
+| event | 'resume' | Yes | Event type.<br>- **'resume'**: task resume. |
 | callback | (progress: Progress) =&gt; void | Yes | Callback to be invoked when the specified event occurs. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 
 ## on_wait
 
@@ -1021,14 +1021,14 @@ Subscribes to task wait events. This API uses a callback to return the result. >
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | 'wait' | Yes | Event type.&lt;br&gt;- 'wait': The task is waiting. |
+| event | 'wait' | Yes | Event type.<br>- 'wait': The task is waiting. |
 | callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;[WaitingReason](arkts-basicservices-agent-waitingreason-e.md)&gt; | Yes | Callback used to return the waiting reason of the task. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 
 ## pause
 
@@ -1198,7 +1198,7 @@ Sets the maximum number of bytes that can be transmitted by a task per second. T
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 | [13400003](../../apis-basic-services-kit/errorcode-request.md#13400003-service-error) | Task service ability error. |
 
 ## start

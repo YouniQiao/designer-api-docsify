@@ -17,7 +17,7 @@ Device attest result information.
 ## Modules to Import
 
 ```TypeScript
-import { deviceAttest } from '@kit.BasicServicesKit';
+import { deviceAttest } from 'deviceAttest';
 ```
 
 ## authResult

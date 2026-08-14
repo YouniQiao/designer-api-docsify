@@ -15,7 +15,7 @@ Describes the range of the selected text.
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from '@kit.IMEKit';
+import { inputMethodEngine } from 'inputMethodEngine';
 ```
 
 ## end

@@ -1,6 +1,6 @@
 # OverlayOptions
 
-Defines the OverlayOptions interface. &lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt; When both align and offset are set, the effects are combined. The overlay is first aligned relative to the component and then offset from its current upper left corner.
+Defines the OverlayOptions interface. &lt;strong&gt;NOTE&lt;/strong&gt;:<br> When both align and offset are set, the effects are combined. The overlay is first aligned relative to the component and then offset from its current upper left corner.
 
 **起始版本：** 23
 

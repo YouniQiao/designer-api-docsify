@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { serial } from '@kit.BasicServicesKit';
+import { serial } from 'serial';
 ```
 
 ## getSerialPortList

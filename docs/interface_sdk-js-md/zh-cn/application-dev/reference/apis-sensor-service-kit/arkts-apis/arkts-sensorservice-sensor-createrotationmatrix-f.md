@@ -6,7 +6,7 @@
 function createRotationMatrix(rotationVector: Array<number>, callback: AsyncCallback<Array<number>>): void
 ```
 
-将旋转矢量转换为旋转矩阵，使用Callback异步方式返回结果。 > **说明：** > > 从API version 8 开始支持，从API version 9 开始废弃，建议使用 > [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getRotationMatrix) > 替代。
+将旋转矢量转换为旋转矩阵。使用callback异步回调。 > **说明：** > > 从API version 8 开始支持，从API version 9 开始废弃，建议使用 > [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getRotationMatrix) > 替代。
 
 **起始版本：** 8
 
@@ -52,7 +52,7 @@ sensor.createRotationMatrix([0.20046076, 0.21907, 0.73978853, 0.60376877],
 function createRotationMatrix(rotationVector: Array<number>): Promise<Array<number>>
 ```
 
-将旋转矢量转换为旋转矩阵，使用Promise异步方式返回结果。 > **说明：** > > 从API version 8 开始支持，从API version 9 开始废弃，建议使用 > [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getRotationMatrix)替代。
+将旋转矢量转换为旋转矩阵。使用Promise异步回调。 > **说明：** > > 从API version 8 开始支持，从API version 9 开始废弃，建议使用 > [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getRotationMatrix)替代。
 
 **起始版本：** 8
 
@@ -88,10 +88,10 @@ const promise = sensor.createRotationMatrix([0.20046076, 0.21907, 0.73978853, 0.
 promise.then((data: Array<number>) => {
   console.info('Succeeded in getting createRotationMatrix_promise');
   for (let i = 0; i < data.length; i++) {
-    console.info("data[" + i + "]: " + data[i]);
+    console.info('data[' + i + ']: ' + data[i]);
   }
 }).catch((reason: BusinessError) => {
-  console.info("Succeeded in getting promise::catch", reason);
+  console.info('Succeeded in getting promise::catch', reason);
 })
 ```
 
@@ -102,7 +102,7 @@ promise.then((data: Array<number>) => {
 function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>, callback: AsyncCallback<RotationMatrixResponse>): void
 ```
 
-根据重力矢量和地磁矢量计算旋转矩阵，使用Callback异步方式返回结果。 > **说明：** > > 从API version 8 开始支持，从API version 9 开始废弃，建议使用 > [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getRotationMatrix) > 替代。
+根据重力矢量和地磁矢量计算旋转矩阵。使用callback异步回调。 > **说明：** > > 从API version 8 开始支持，从API version 9 开始废弃，建议使用 > [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getRotationMatrix) > 替代。
 
 **起始版本：** 8
 
@@ -147,7 +147,7 @@ sensor.createRotationMatrix([-0.27775216, 0.5351276, 9.788099], [210.87253, -78.
 function createRotationMatrix(gravity: Array<number>, geomagnetic: Array<number>,): Promise<RotationMatrixResponse>
 ```
 
-根据重力矢量和地磁矢量计算旋转矩阵，使用Promise异步方式返回结果。 > **说明：** > > 从API version 8 开始支持，从API version 9 开始废弃，建议使用 > [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getRotationMatrix)替代。
+根据重力矢量和地磁矢量计算旋转矩阵。使用Promise异步回调。 > **说明：** > > 从API version 8 开始支持，从API version 9 开始废弃，建议使用 > [sensor.getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getRotationMatrix)替代。
 
 **起始版本：** 8
 

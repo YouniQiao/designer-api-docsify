@@ -62,7 +62,7 @@ Constructs a new Message with a what code and handler
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| what | int | Yes | the message code. &lt;br&gt;The value should be an integer. |
+| what | int | Yes | the message code. <br>The value should be an integer. |
 | handler | concurrency.MessageHandler | Yes | the handler to process this message. |
 
 ## constructor
@@ -89,7 +89,7 @@ Constructs a new Message with a what code, object, and handler
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| what | int | Yes | the message code. &lt;br&gt;The value should be an integer. |
+| what | int | Yes | the message code. <br>The value should be an integer. |
 | obj | Any | Yes | the object attached to this message. |
 | handler | concurrency.MessageHandler | Yes | the handler to process this message. |
 

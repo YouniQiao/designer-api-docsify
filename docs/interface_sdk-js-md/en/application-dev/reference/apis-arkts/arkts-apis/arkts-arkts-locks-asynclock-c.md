@@ -15,7 +15,7 @@ Class to execute an asynchronous operation under lock.
 ## Modules to Import
 
 ```TypeScript
-import { ArkTSUtils } from '@kit.ArkTS';
+import { ArkTSUtils } from 'ArkTSUtils';
 ```
 
 ## constructor

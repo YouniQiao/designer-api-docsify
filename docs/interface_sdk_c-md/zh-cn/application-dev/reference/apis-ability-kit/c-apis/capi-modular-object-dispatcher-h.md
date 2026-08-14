@@ -170,7 +170,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_CreateMainServiceIns
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} remoteProxy或ppModObjDispatcher为NULL，<br>     或ppModObjDispatcher不为NULL。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误，如内存分配失败。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) remoteProxy或ppModObjDispatcher为NULL，<br>     或ppModObjDispatcher不为NULL。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误，如内存分配失败。 |
 
 ### OH_AbilityRuntime_ModObjDispatcher_CreateSubInstance()
 
@@ -196,7 +196,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_CreateSubInstance(OH
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} mainServiceDispatcher、subProxy或ppModObjDispatcher为NULL，<br>     或ppModObjDispatcher不为NULL。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误，如内存分配失败。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) mainServiceDispatcher、subProxy或ppModObjDispatcher为NULL，<br>     或ppModObjDispatcher不为NULL。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误，如内存分配失败。 |
 
 ### OH_AbilityRuntime_ModObjDispatcher_Release()
 
@@ -239,7 +239,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_HasTypeDescriptor(OH
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pModObjDispatcher或pctinfo为NULL。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_SEND_REQUEST_FAILED} IPC请求发送失败。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_METADATA_INVALID} 类型库元数据无效。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pModObjDispatcher或pctinfo为NULL。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_SEND_REQUEST_FAILED](capi-ability-runtime-common-h.md#abilityruntime_errorcode) IPC请求发送失败。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_METADATA_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 类型库元数据无效。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_ModObjDispatcher_GetTypeDescriptor()
 
@@ -264,7 +264,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_GetTypeDescriptor(OH
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pModObjDispatcher或ppTypeDescriptor为NULL，<br>     或ppTypeDescriptor不为NULL。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_SEND_REQUEST_FAILED} IPC请求发送失败。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_METADATA_INVALID} 类型库元数据无效。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pModObjDispatcher或ppTypeDescriptor为NULL，<br>     或ppTypeDescriptor不为NULL。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_SEND_REQUEST_FAILED](capi-ability-runtime-common-h.md#abilityruntime_errorcode) IPC请求发送失败。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_METADATA_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 类型库元数据无效。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_ModObjDispatcher_QueryMainServiceInterfaceMemIDsOfNames()
 
@@ -291,7 +291,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_QueryMainServiceInte
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pModObjDispatcher、rgszNames或pMemID为NULL。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_SEND_REQUEST_FAILED} IPC请求发送失败。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_METADATA_INVALID} 类型库元数据无效。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} 方法名称未找到。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pModObjDispatcher、rgszNames或pMemID为NULL。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_SEND_REQUEST_FAILED](capi-ability-runtime-common-h.md#abilityruntime_errorcode) IPC请求发送失败。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_METADATA_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 类型库元数据无效。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 方法名称未找到。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_ModObjDispatcher_CallMethod()
 
@@ -321,7 +321,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_CallMethod(OH_Abilit
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pModObjDispatcher、pInputParams或pResult为NULL。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} 方法未找到。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH} 参数类型与元数据定义不匹配。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_SEND_REQUEST_FAILED} IPC请求发送失败。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_METADATA_INVALID} 类型库元数据无效。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pModObjDispatcher、pInputParams或pResult为NULL。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 方法未找到。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 参数类型与元数据定义不匹配。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_SEND_REQUEST_FAILED](capi-ability-runtime-common-h.md#abilityruntime_errorcode) IPC请求发送失败。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_METADATA_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 类型库元数据无效。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_TypeDescriptor_Release()
 
@@ -365,7 +365,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetVersion(OH_AbilityR
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pTypeDescriptor或pbstrVersion为NULL，或cMaxVersion为0。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pTypeDescriptor或pbstrVersion为NULL，或cMaxVersion为0。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetInterfaceCount()
 
@@ -390,7 +390,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetInterfaceCount(OH_A
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pTypeDescriptor或pcInterfaces为NULL。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pTypeDescriptor或pcInterfaces为NULL。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetInterfaceName()
 
@@ -417,7 +417,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetInterfaceName(OH_Ab
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pTypeDescriptor或pbstrName为NULL，或cMaxName为0，或index超出范围。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pTypeDescriptor或pbstrName为NULL，或cMaxName为0，或index超出范围。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetInterfaceIsCallback()
 
@@ -443,7 +443,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetInterfaceIsCallback
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pTypeDescriptor、pbstrName或pIsCallback为NULL。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} 接口未找到。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pTypeDescriptor、pbstrName或pIsCallback为NULL。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口未找到。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetMainServiceInterfaceName()
 
@@ -469,7 +469,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetMainServiceInterfac
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pTypeDescriptor或pbstrName为NULL，或cMaxName为0。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pTypeDescriptor或pbstrName为NULL，或cMaxName为0。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetMethodCount()
 
@@ -495,7 +495,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetMethodCount(OH_Abil
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pTypeDescriptor、pbstrInterfaceName或pcMethods为NULL。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} 接口未找到。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pTypeDescriptor、pbstrInterfaceName或pcMethods为NULL。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口未找到。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetMethodName()
 
@@ -523,7 +523,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetMethodName(OH_Abili
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pTypeDescriptor、pbstrInterfaceName或pbstrName为NULL，<br>     或cMaxName为0，或index超出范围。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} 接口未找到。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pTypeDescriptor、pbstrInterfaceName或pbstrName为NULL，<br>     或cMaxName为0，或index超出范围。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口未找到。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetMethodMemberId()
 
@@ -550,7 +550,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetMethodMemberId(OH_A
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pTypeDescriptor、pbstrInterfaceName、<br>     pbstrMethodName或pMemID为NULL。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} 接口或方法未找到。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pTypeDescriptor、pbstrInterfaceName、<br>     pbstrMethodName或pMemID为NULL。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口或方法未找到。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetMethodReturnType()
 
@@ -577,7 +577,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetMethodReturnType(OH
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pTypeDescriptor、pbstrInterfaceName、<br>     pbstrMethodName或pReturnType为NULL。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} 接口或方法未找到。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pTypeDescriptor、pbstrInterfaceName、<br>     pbstrMethodName或pReturnType为NULL。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口或方法未找到。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetMethodParamCount()
 
@@ -604,7 +604,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetMethodParamCount(OH
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pTypeDescriptor、pbstrInterfaceName、<br>     pbstrMethodName或pcParams为NULL。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} 接口或方法未找到。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pTypeDescriptor、pbstrInterfaceName、<br>     pbstrMethodName或pcParams为NULL。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口或方法未找到。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetMethodParamType()
 
@@ -632,7 +632,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetMethodParamType(OH_
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pTypeDescriptor、pbstrInterfaceName、<br>     pbstrMethodName或pParamType为NULL，或iParamIndex超出范围。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} 接口或方法未找到。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pTypeDescriptor、pbstrInterfaceName、<br>     pbstrMethodName或pParamType为NULL，或iParamIndex超出范围。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口或方法未找到。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetMethodParamName()
 
@@ -663,7 +663,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetMethodParamName(OH_
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pTypeDescriptor、pbstrInterfaceName、<br>     pbstrMethodName或pbstrName为NULL，或iParamIndex超出范围。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} 接口或方法未找到。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pTypeDescriptor、pbstrInterfaceName、<br>     pbstrMethodName或pbstrName为NULL，或iParamIndex超出范围。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口或方法未找到。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetEnumCount()
 
@@ -688,7 +688,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetEnumCount(OH_Abilit
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pTypeDescriptor或pcEnums为NULL。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pTypeDescriptor或pcEnums为NULL。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetEnumName()
 
@@ -715,7 +715,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetEnumName(OH_Ability
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pTypeDescriptor或pbstrName为NULL，或cMaxName为0，或index超出范围。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pTypeDescriptor或pbstrName为NULL，或cMaxName为0，或index超出范围。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetEnumValueCount()
 
@@ -741,7 +741,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetEnumValueCount(OH_A
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pTypeDescriptor、pbstrEnumName或pcValues为NULL。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} 枚举未找到。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pTypeDescriptor、pbstrEnumName或pcValues为NULL。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 枚举未找到。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetEnumValueName()
 
@@ -769,7 +769,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetEnumValueName(OH_Ab
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pTypeDescriptor、pbstrEnumName或pbstrValueName为NULL，<br>     或iValueIndex超出范围。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} 枚举未找到。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pTypeDescriptor、pbstrEnumName或pbstrValueName为NULL，<br>     或iValueIndex超出范围。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 枚举未找到。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetEnumValue()
 
@@ -796,7 +796,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetEnumValue(OH_Abilit
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pTypeDescriptor、pbstrEnumName、pbstrValueName或pValue为NULL。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} 枚举值未找到。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pTypeDescriptor、pbstrEnumName、pbstrValueName或pValue为NULL。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 枚举值未找到。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetStructCount()
 
@@ -821,7 +821,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetStructCount(OH_Abil
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pTypeDescriptor或pcStructs为NULL。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pTypeDescriptor或pcStructs为NULL。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetStructName()
 
@@ -848,7 +848,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetStructName(OH_Abili
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pTypeDescriptor或pbstrName为NULL，或cMaxName为0，或index超出范围。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pTypeDescriptor或pbstrName为NULL，或cMaxName为0，或index超出范围。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetStructFieldCount()
 
@@ -874,7 +874,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetStructFieldCount(OH
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pTypeDescriptor、pbstrStructName或pcFields为NULL。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} 结构体未找到。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pTypeDescriptor、pbstrStructName或pcFields为NULL。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 结构体未找到。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetStructFieldName()
 
@@ -902,7 +902,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetStructFieldName(OH_
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pTypeDescriptor、pbstrStructName或pbstrFieldName为NULL，<br>     或iFieldIndex超出范围。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} 结构体未找到。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pTypeDescriptor、pbstrStructName或pbstrFieldName为NULL，<br>     或iFieldIndex超出范围。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 结构体未找到。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_TypeDescriptor_GetStructFieldType()
 
@@ -929,7 +929,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_TypeDescriptor_GetStructFieldType(OH_
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pTypeDescriptor、pbstrStructName、<br>     pbstrFieldName或pFieldType为NULL。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} 结构体或字段未找到。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pTypeDescriptor、pbstrStructName、<br>     pbstrFieldName或pFieldType为NULL。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 结构体或字段未找到。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_ModObjDispatcher_ArrayCreate()
 
@@ -955,7 +955,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_ArrayCreate(OH_Abili
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} elementType或ppArray为NULL。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) elementType或ppArray为NULL。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_ModObjDispatcher_ArrayGetElementType()
 
@@ -980,7 +980,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_ArrayGetElementType(
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pArray或pElementType为NULL。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pArray或pElementType为NULL。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_ModObjDispatcher_ArraySet()
 
@@ -1006,7 +1006,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_ArraySet(OH_AbilityR
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pArray或pValue为NULL，或index超出范围。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH} 元素类型与数组定义的类型不匹配。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pArray或pValue为NULL，或index超出范围。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 元素类型与数组定义的类型不匹配。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_ModObjDispatcher_ArrayGet()
 
@@ -1032,7 +1032,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_ArrayGet(OH_AbilityR
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pArray或pValue为NULL，或index超出范围。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pArray或pValue为NULL，或index超出范围。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_ModObjDispatcher_ArrayGetSize()
 
@@ -1057,7 +1057,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_ArrayGetSize(OH_Abil
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pArray或pSize为NULL。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pArray或pSize为NULL。 |
 
 ### OH_AbilityRuntime_ModObjDispatcher_ArrayRelease()
 
@@ -1100,7 +1100,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_VectorCreate(OH_Abil
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} elementType或ppVector为NULL。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) elementType或ppVector为NULL。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_ModObjDispatcher_VectorGetElementType()
 
@@ -1125,7 +1125,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_VectorGetElementType
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pVector或pElementType为NULL。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pVector或pElementType为NULL。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_ModObjDispatcher_VectorAdd()
 
@@ -1150,7 +1150,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_VectorAdd(OH_Ability
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pVector或pValue为NULL。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH} 元素类型与向量定义的类型不匹配。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pVector或pValue为NULL。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 元素类型与向量定义的类型不匹配。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_ModObjDispatcher_VectorGet()
 
@@ -1176,7 +1176,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_VectorGet(OH_Ability
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pVector或pValue为NULL，或index超出范围。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pVector或pValue为NULL，或index超出范围。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_ModObjDispatcher_VectorGetSize()
 
@@ -1201,7 +1201,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_VectorGetSize(OH_Abi
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pVector或pSize为NULL。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pVector或pSize为NULL。 |
 
 ### OH_AbilityRuntime_ModObjDispatcher_VectorClear()
 
@@ -1225,7 +1225,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_VectorClear(OH_Abili
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pVector为NULL。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pVector为NULL。 |
 
 ### OH_AbilityRuntime_ModObjDispatcher_VectorRelease()
 
@@ -1268,7 +1268,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_SetCreate(OH_Ability
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} elementType或ppSet为NULL。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) elementType或ppSet为NULL。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_ModObjDispatcher_SetGetElementType()
 
@@ -1293,7 +1293,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_SetGetElementType(OH
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pSet或pElementType为NULL。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pSet或pElementType为NULL。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_ModObjDispatcher_SetAdd()
 
@@ -1318,7 +1318,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_SetAdd(OH_AbilityRun
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pSet或pValue为NULL。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH} 元素类型与集合定义的类型不匹配。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pSet或pValue为NULL。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 元素类型与集合定义的类型不匹配。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_ModObjDispatcher_SetRemove()
 
@@ -1343,7 +1343,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_SetRemove(OH_Ability
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pSet或pValue为NULL。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH} 元素类型与集合定义的类型不匹配。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pSet或pValue为NULL。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 元素类型与集合定义的类型不匹配。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_ModObjDispatcher_SetContains()
 
@@ -1369,7 +1369,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_SetContains(OH_Abili
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pSet、pValue或pExists为NULL。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH} 元素类型与集合定义的类型不匹配。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pSet、pValue或pExists为NULL。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 元素类型与集合定义的类型不匹配。 |
 
 ### OH_AbilityRuntime_ModObjDispatcher_SetGetSize()
 
@@ -1394,7 +1394,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_SetGetSize(OH_Abilit
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pSet或pSize为NULL。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pSet或pSize为NULL。 |
 
 ### OH_AbilityRuntime_ModObjDispatcher_SetGetAt()
 
@@ -1420,7 +1420,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_SetGetAt(OH_AbilityR
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pSet或pValue为NULL，或index超出范围。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pSet或pValue为NULL，或index超出范围。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_ModObjDispatcher_SetClear()
 
@@ -1444,7 +1444,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_SetClear(OH_AbilityR
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pSet为NULL。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pSet为NULL。 |
 
 ### OH_AbilityRuntime_ModObjDispatcher_SetRelease()
 
@@ -1488,7 +1488,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_MapCreate(OH_Ability
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} valueType或ppMap为NULL，或keyType为不支持的类型。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) valueType或ppMap为NULL，或keyType为不支持的类型。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_ModObjDispatcher_MapGetKeyType()
 
@@ -1513,7 +1513,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_MapGetKeyType(OH_Abi
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pMap或pKeyType为NULL。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pMap或pKeyType为NULL。 |
 
 ### OH_AbilityRuntime_ModObjDispatcher_MapGetValueType()
 
@@ -1538,7 +1538,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_MapGetValueType(OH_A
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pMap或pValueType为NULL。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pMap或pValueType为NULL。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_ModObjDispatcher_MapPut()
 
@@ -1564,7 +1564,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_MapPut(OH_AbilityRun
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pMap、pKey或pValue为NULL。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH} 键或值的类型与映射定义的类型不匹配。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pMap、pKey或pValue为NULL。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 键或值的类型与映射定义的类型不匹配。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_ModObjDispatcher_MapGet()
 
@@ -1590,7 +1590,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_MapGet(OH_AbilityRun
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pMap、pKey或pValue为NULL。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH} 键或值的类型与映射定义的类型不匹配。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} 键在映射中不存在。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pMap、pKey或pValue为NULL。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 键或值的类型与映射定义的类型不匹配。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 键在映射中不存在。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_ModObjDispatcher_MapRemove()
 
@@ -1615,7 +1615,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_MapRemove(OH_Ability
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pMap或pKey为NULL。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH} 键或值的类型与映射定义的类型不匹配。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pMap或pKey为NULL。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 键或值的类型与映射定义的类型不匹配。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_ModObjDispatcher_MapContainsKey()
 
@@ -1641,7 +1641,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_MapContainsKey(OH_Ab
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pMap、pKey或pExists为NULL。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH} 键或值的类型与映射定义的类型不匹配。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pMap、pKey或pExists为NULL。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 键或值的类型与映射定义的类型不匹配。 |
 
 ### OH_AbilityRuntime_ModObjDispatcher_MapGetSize()
 
@@ -1666,7 +1666,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_MapGetSize(OH_Abilit
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pMap或pSize为NULL。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pMap或pSize为NULL。 |
 
 ### OH_AbilityRuntime_ModObjDispatcher_MapGetKeyAt()
 
@@ -1692,7 +1692,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_MapGetKeyAt(OH_Abili
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pMap或pKey为NULL，或index超出范围。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pMap或pKey为NULL，或index超出范围。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_ModObjDispatcher_MapGetValueAt()
 
@@ -1718,7 +1718,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_MapGetValueAt(OH_Abi
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pMap或pValue为NULL，或index超出范围。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pMap或pValue为NULL，或index超出范围。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_ModObjDispatcher_MapClear()
 
@@ -1742,7 +1742,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_MapClear(OH_AbilityR
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pMap为NULL。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pMap为NULL。 |
 
 ### OH_AbilityRuntime_ModObjDispatcher_MapRelease()
 
@@ -1785,7 +1785,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_StructCreate(const c
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} structName或ppStruct为NULL。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} structName在类型库定义的结构体名称中不存在。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) structName或ppStruct为NULL。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) structName在类型库定义的结构体名称中不存在。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_ModObjDispatcher_StructGetName()
 
@@ -1811,7 +1811,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_StructGetName(OH_Abi
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pStruct或pbstrName为NULL，或cMaxName为0。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pStruct或pbstrName为NULL，或cMaxName为0。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_ModObjDispatcher_StructSetField()
 
@@ -1837,7 +1837,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_StructSetField(OH_Ab
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pStruct、szName或pValue为NULL。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} 字段在结构体中不存在。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH} 字段类型与元数据定义的类型不匹配。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pStruct、szName或pValue为NULL。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 字段在结构体中不存在。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_TYPE_MISMATCH](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 字段类型与元数据定义的类型不匹配。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_ModObjDispatcher_StructGetField()
 
@@ -1863,7 +1863,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjDispatcher_StructGetField(OH_Ab
 
 | 类型 | 说明 |
 | -- | -- |
-| AbilityRuntime_ErrorCode | 返回特定的错误码。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_NO_ERROR} 接口调用成功。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID} pStruct、szName或pValue为NULL。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND} 字段在结构体中不存在。<br>     <br>{@link ABILITY_RUNTIME_ERROR_CODE_INTERNAL} 内部错误。 |
+| [AbilityRuntime_ErrorCode](capi-ability-runtime-common-h.md#abilityruntime_errorcode) | 返回特定的错误码。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_NO_ERROR](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 接口调用成功。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PARAM_INVALID](capi-ability-runtime-common-h.md#abilityruntime_errorcode) pStruct、szName或pValue为NULL。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_PROPERTY_NOT_FOUND](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 字段在结构体中不存在。<br>     <br>[ABILITY_RUNTIME_ERROR_CODE_INTERNAL](capi-ability-runtime-common-h.md#abilityruntime_errorcode) 内部错误。 |
 
 ### OH_AbilityRuntime_ModObjDispatcher_StructRelease()
 

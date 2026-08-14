@@ -15,7 +15,9 @@ Animator options.
 ## Modules to Import
 
 ```TypeScript
-import { AnimatorOptions, SimpleAnimatorOptions, AnimatorResult } from '@kit.ArkUI';
+import { AnimatorOptions } from 'AnimatorOptions';
+import { AnimatorResult } from 'AnimatorResult';
+import { SimpleAnimatorOptions } from 'SimpleAnimatorOptions';
 ```
 
 ## begin

@@ -16,7 +16,7 @@
 | [CloseSwipeActionOptions](arkts-na-list-closeswipeactionoptions-i.md) | Defines the close swipe action options. |
 | [ListBackPressBehavior](arkts-na-list-listbackpressbehavior-i.md) | Defines the back press behavior for List component. |
 | [ListDividerOptions](arkts-na-list-listdivideroptions-i.md) | Defines the divider style of the list or list item group. |
-| [ListOptions](arkts-na-list-listoptions-i.md) | Defines the options of the &lt;em&gt;List&lt;/em&gt; component. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;- The default value of the universal attribute clip is &lt;em&gt;true&lt;/em&gt; for the &lt;em&gt;List&lt;/em&gt; component. &lt;/p&gt; |
+| [ListOptions](arkts-na-list-listoptions-i.md) | Defines the options of the &lt;em&gt;List&lt;/em&gt; component. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>- The default value of the universal attribute clip is &lt;em&gt;true&lt;/em&gt; for the &lt;em&gt;List&lt;/em&gt; component. &lt;/p&gt; |
 | [UIListEvent](arkts-na-list-uilistevent-i.md) | Defines a UIListEvent which is used to set different common event to target component. |
 | [VisibleListContentInfo](arkts-na-list-visiblelistcontentinfo-i.md) | Defines the visible list content info. |
 

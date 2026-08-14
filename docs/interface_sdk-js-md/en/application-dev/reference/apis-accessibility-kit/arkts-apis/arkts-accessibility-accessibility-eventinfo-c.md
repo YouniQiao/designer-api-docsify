@@ -1,6 +1,6 @@
 # EventInfo
 
-Describes a GUI change event.
+Defines the accessibility event information, which describes UI changes or interaction events. It is used as a parameter of [sendAccessibilityEvent](arkts-accessibility-accessibility-sendaccessibilityevent-f.md#sendAccessibilityEvent) to define the event type and trigger action. The sent accessibility event will be distributed by the system to registered accessibility applications that match the event type for response. For details, see [sendAccessibilityEvent](arkts-accessibility-accessibility-sendaccessibilityevent-f.md#sendAccessibilityEvent).
 
 **Since:** 23
 
@@ -15,7 +15,7 @@ Describes a GUI change event.
 ## Modules to Import
 
 ```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
+import { accessibility } from 'accessibility';
 ```
 
 ## constructor
@@ -44,7 +44,7 @@ Constructor, which is used to construct an EventInfo instance using a JSON objec
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| jsonObject | Object | Yes | JSON object that contains the **type**, **bundleName**, and **triggerAction** fields. |
+| jsonObject | Object | Yes | JSON object containing three fields: type, bundleName, and triggerAction. For details, see the example. |
 
 ## Examples
 
@@ -107,7 +107,7 @@ Constructor, which is used to construct an EventInfo instance using independent 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | EventType | Yes | Accessibility event types. |
-| bundleName | string | Yes | Target application name. |
+| bundleName | string | Yes | Bundle name of the target app. |
 | triggerAction | Action | Yes | Action that triggers the event. |
 
 ## Examples
@@ -148,7 +148,7 @@ Start index. The default value is **0**.
 bundleName: string
 ```
 
-Name of the target application (mandatory).
+Bundle name of the target app. This parameter is mandatory.
 
 **Type:** string
 
@@ -244,7 +244,7 @@ Current index. The default value is **0**.
 customId?: string
 ```
 
-Component ID for active focusing, and the default value is empty.
+Component ID for proactive focus. Set this parameter based on the actual scenario when the app needs to proactively focus. The default value is empty.
 
 **Type:** string
 
@@ -268,7 +268,7 @@ Component ID for active focusing, and the default value is empty.
 description?: string
 ```
 
-Event description, which is set according to the actual scenario with no special restrictions, and the default value is empty.
+Event description, which is customized by the developer based on service requirements. There is no special restriction. The default value is empty.
 
 **Type:** string
 
@@ -460,7 +460,7 @@ Text moving granularity. The default value is char.
 textResourceAnnouncedForAccessibility?: Resource
 ```
 
-Content for auto-broadcasting. The value is a string of the **Resource** type.
+Content for proactive announcement, which supports the Resource type. The Resource can only reference string resources (for example, \$r('app.string.xxx')).
 
 **Type:** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
 

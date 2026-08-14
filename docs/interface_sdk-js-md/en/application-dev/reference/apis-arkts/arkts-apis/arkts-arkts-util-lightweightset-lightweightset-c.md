@@ -15,7 +15,7 @@ LightWeightSet stores a set of values, each of which must be unique.
 ## Modules to Import
 
 ```TypeScript
-import { LightWeightSet } from '@kit.ArkTS';
+import { LightWeightSet } from 'LightWeightSet';
 ```
 
 ## $_iterator

@@ -15,7 +15,13 @@ Implements a **TreeController** object, which can be bound to a tree view compon
 ## Modules to Import
 
 ```TypeScript
-import { TreeListener, NodeParam, CallbackParam, TreeListenType, TreeView, TreeController, TreeListenerManager } from '@kit.ArkUI';
+import { CallbackParam } from 'CallbackParam';
+import { NodeParam } from 'NodeParam';
+import { TreeController } from 'TreeController';
+import { TreeListenType } from 'TreeListenType';
+import { TreeListener } from 'TreeListener';
+import { TreeListenerManager } from 'TreeListenerManager';
+import { TreeView } from 'TreeView';
 ```
 
 ## addNode
@@ -122,7 +128,7 @@ Refreshes the tree view. You can call this API to update the information about t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parentId | number | Yes | ID of the parent node. &lt;br&gt;The value must be greater than or equal to -1. |
+| parentId | number | Yes | ID of the parent node. <br>The value must be greater than or equal to -1. |
 | parentSubTitle | ResourceStr | Yes | Secondary text of the parent node. |
 | currentSubtitle | ResourceStr | Yes | Secondary text of the current node. |
 

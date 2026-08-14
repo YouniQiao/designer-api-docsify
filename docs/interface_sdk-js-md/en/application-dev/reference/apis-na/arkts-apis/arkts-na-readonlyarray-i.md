@@ -315,7 +315,7 @@ Determines whether an array includes a certain value.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | searchElement | T | Yes | The value to search for. |
-| fromIndex | int | No | The position in this array at which to begin searching. &lt;br&gt;The value should be an integer. |
+| fromIndex | int | No | The position in this array at which to begin searching. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -348,7 +348,7 @@ Returns the first index at which a given element can be found in the array.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | searchElement | T | Yes | The element to search for. |
-| fromIndex | int | No | The position in this array at which to begin searching. &lt;br&gt;The value should be an integer. |
+| fromIndex | int | No | The position in this array at which to begin searching. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -471,7 +471,7 @@ Returns the last index at which a given element can be found in the array.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | searchElement | T | Yes | The element to search for. |
-| fromIndex | int | No | The position in this array at which to begin searching backward. &lt;br&gt;The value should be an integer. |
+| fromIndex | int | No | The position in this array at which to begin searching backward. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -667,8 +667,8 @@ Returns a shallow copy of a portion of an array into a new array.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | int | No | Start index (inclusive). Defaults to 0. &lt;br&gt;The value should be an integer. |
-| end | int | No | End index (exclusive). Defaults to array length. &lt;br&gt;The value should be an integer. |
+| start | int | No | Start index (inclusive). Defaults to 0. <br>The value should be an integer. |
+| end | int | No | End index (exclusive). Defaults to array length. <br>The value should be an integer. |
 
 **Return value:**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { request } from '@kit.BasicServicesKit';
+import { request } from 'request';
 ```
 
 ## downloadFile
@@ -38,7 +38,7 @@ Downloads a file. This API uses an asynchronous callback to return the result. H
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 | [13400001](../../apis-basic-services-kit/errorcode-request.md#13400001-file-operation-error) | Invalid file or file system error. |
 | [13400002](../../apis-basic-services-kit/errorcode-request.md#13400002-file-path-error) | File path not supported or invalid. |
@@ -106,7 +106,7 @@ Downloads a file. This API uses a promise to return the result. HTTP is supporte
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes: &lt;br&gt; 1. Missing mandatory parameters. &lt;br&gt; 2. Incorrect parameter type. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameters check fails. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-permission-denied) | The permissions check fails. |
 | [13400001](../../apis-basic-services-kit/errorcode-request.md#13400001-file-operation-error) | Invalid file or file system error. |
 | [13400002](../../apis-basic-services-kit/errorcode-request.md#13400002-file-path-error) | File path not supported or invalid. |

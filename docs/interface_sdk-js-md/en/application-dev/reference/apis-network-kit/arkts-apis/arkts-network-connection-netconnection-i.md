@@ -15,7 +15,7 @@ Represents the network connection handle.
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'connection';
 ```
 
 ## onNetBlockStatusChange

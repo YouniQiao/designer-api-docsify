@@ -20,7 +20,7 @@ TextTimerConfiguration used by content modifier.
 count: long
 ```
 
-Timer duration, in milliseconds. It is effective only when isCountDown is true. The maximum value is 86400000 ms (24 hours). &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;If the value is between 0 and 86,400,000, it is used as the initial countdown time. &lt;br&gt;Otherwise, the default value is used as the initial countdown time. &lt;/p&gt;
+Timer duration, in milliseconds. It is effective only when isCountDown is true. The maximum value is 86400000 ms (24 hours). &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>If the value is between 0 and 86,400,000, it is used as the initial countdown time. <br>Otherwise, the default value is used as the initial countdown time. &lt;/p&gt;
 
 **Type:** long
 

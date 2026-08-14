@@ -364,7 +364,7 @@ getBufferSize(callback: AsyncCallback<long>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | 是 | 回调函数。当获取音频渲染器的最小缓冲区大小成功，err为undefined，data为获取到的最小缓冲区大小；否则为错误对象。 &lt;br&gt;单位为字节。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | 是 | 回调函数。当获取音频渲染器的最小缓冲区大小成功，err为undefined，data为获取到的最小缓冲区大小；否则为错误对象。 <br>单位为字节。 |
 
 ## getBufferSize
 
@@ -388,7 +388,7 @@ getBufferSize(): Promise<long>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;long&gt; | Promise对象，返回缓冲区大小。 &lt;br&gt;单位为字节。 |
+| Promise&lt;long&gt; | Promise对象，返回缓冲区大小。 <br>单位为字节。 |
 
 ## getBufferSizeSync
 
@@ -572,7 +572,7 @@ getMaxStreamVolume(callback: AsyncCallback<double>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;double&gt; | 是 | 回调函数。当获取音频流的最大音量成功，err为undefined，data为获取到的应用基于音频流的最大音量；否则为错误对象。 &lt;br&gt;音量范围为[0.0, 1.0]。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;double&gt; | 是 | 回调函数。当获取音频流的最大音量成功，err为undefined，data为获取到的应用基于音频流的最大音量；否则为错误对象。 <br>音量范围为[0.0, 1.0]。 |
 
 ## getMaxStreamVolume
 
@@ -596,7 +596,7 @@ getMaxStreamVolume(): Promise<double>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;double&gt; | Promise对象，返回音频流最大音量。 &lt;br&gt;音量范围为[0.0, 1.0]。 |
+| Promise&lt;double&gt; | Promise对象，返回音频流最大音量。 <br>音量范围为[0.0, 1.0]。 |
 
 ## getMaxStreamVolumeSync
 
@@ -644,7 +644,7 @@ getMinStreamVolume(callback: AsyncCallback<double>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;double&gt; | 是 | 回调函数。当获取音频流的最小音量成功，err为undefined，data为获取到的应用基于音频流的最小音量；否则为错误对象。 &lt;br&gt;音量范围为[0.0, 1.0]。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;double&gt; | 是 | 回调函数。当获取音频流的最小音量成功，err为undefined，data为获取到的应用基于音频流的最小音量；否则为错误对象。 <br>音量范围为[0.0, 1.0]。 |
 
 ## getMinStreamVolume
 
@@ -668,7 +668,7 @@ getMinStreamVolume(): Promise<double>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;double&gt; | Promise对象，返回音频流最小音量。 &lt;br&gt;音量范围为[0.0, 1.0]。 |
+| Promise&lt;double&gt; | Promise对象，返回音频流最小音量。 <br>音量范围为[0.0, 1.0]。 |
 
 ## getMinStreamVolumeSync
 
@@ -1457,7 +1457,7 @@ off(type: 'writeData', callback?: AudioRendererWriteDataCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'writeData' | 是 | 事件回调类型，支持的事件为'writeData'，当取消监听音频数据写入回调事件时，触发该事件。 |
-| callback | [AudioRendererWriteDataCallback](arkts-audio-audio-audiorendererwritedatacallback-t.md) | 否 | 回调函数，入参代表应用接收待写入的数据缓冲区。 &lt;br&gt;API version 11 不支持返回回调结果，从 API version 12 开始支持返回回调结果 [AudioDataCallbackResult](arkts-audio-audio-audiodatacallbackresult-e.md#AudioDataCallbackResult)。<br>**起始版本：** 12 |
+| callback | [AudioRendererWriteDataCallback](arkts-audio-audio-audiorendererwritedatacallback-t.md) | 否 | 回调函数，入参代表应用接收待写入的数据缓冲区。 <br>API version 11 不支持返回回调结果，从 API version 12 开始支持返回回调结果 [AudioDataCallbackResult](arkts-audio-audio-audiodatacallbackresult-e.md#AudioDataCallbackResult)。<br>**起始版本：** 12 |
 
 **错误码：**
 
@@ -1856,7 +1856,7 @@ on(type: 'writeData', callback: AudioRendererWriteDataCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'writeData' | 是 | 事件回调类型，支持的事件为'writeData'，当需要写入音频数据时，触发该事件。 |
-| callback | [AudioRendererWriteDataCallback](arkts-audio-audio-audiorendererwritedatacallback-t.md) | 是 | 回调函数，入参代表应用接收待写入的数据缓冲区。 &lt;br&gt;API version 11 不支持返回回调结果，从 API version 12 开始支持返回回调结果 [AudioDataCallbackResult](arkts-audio-audio-audiodatacallbackresult-e.md#AudioDataCallbackResult)。<br>**起始版本：** 12 |
+| callback | [AudioRendererWriteDataCallback](arkts-audio-audio-audiorendererwritedatacallback-t.md) | 是 | 回调函数，入参代表应用接收待写入的数据缓冲区。 <br>API version 11 不支持返回回调结果，从 API version 12 开始支持返回回调结果 [AudioDataCallbackResult](arkts-audio-audio-audiodatacallbackresult-e.md#AudioDataCallbackResult)。<br>**起始版本：** 12 |
 
 **错误码：**
 
@@ -2084,7 +2084,7 @@ setDefaultOutputDevice(deviceType: DeviceType): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceType | DeviceType | 是 | 设备类型。 &lt;br&gt;仅支持以下设备：EARPIECE（听筒）、SPEAKER（扬声器）和DEFAULT（系统默认设备）。 |
+| deviceType | DeviceType | 是 | 设备类型。 <br>仅支持以下设备：EARPIECE（听筒）、SPEAKER（扬声器）和DEFAULT（系统默认设备）。 |
 
 **返回值：**
 
@@ -2125,7 +2125,7 @@ setIndependentAudioSessionStrategy(strategy: AudioSessionStrategy, behavior: int
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | strategy | [AudioSessionStrategy](arkts-audio-audio-audiosessionstrategy-i.md) | 是 | 音频会话策略。 |
-| behavior | int | 是 | 用于设置音频会话行为。 &lt;br&gt;该参数可以是单个标志，也可以是多个标志的按位OR组合。 &lt;br&gt;当前支持的音频会话行为详见[AudioSessionBehaviorFlags](arkts-audio-audio-audiosessionbehaviorflags-e.md#AudioSessionBehaviorFlags)中定义的标志。 |
+| behavior | int | 是 | 用于设置音频会话行为。 <br>该参数可以是单个标志，也可以是多个标志的按位OR组合。 <br>当前支持的音频会话行为详见[AudioSessionBehaviorFlags](arkts-audio-audio-audiosessionbehaviorflags-e.md#AudioSessionBehaviorFlags)中定义的标志。 |
 
 **错误码：**
 
@@ -2480,7 +2480,7 @@ start(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当启动音频渲染器成功，err为undefined，否则为错误对象。异常将返回error对象： &lt;br&gt;错误码6800301：表示包含状态检查异常、焦点抢占失败、系统处理异常（具体错误查看系统日志）。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当启动音频渲染器成功，err为undefined，否则为错误对象。异常将返回error对象： <br>错误码6800301：表示包含状态检查异常、焦点抢占失败、系统处理异常（具体错误查看系统日志）。 |
 
 ## start
 
@@ -2504,7 +2504,7 @@ start(): Promise<void>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise对象，成功表示启动音频渲染器成功。异常将返回error对象： &lt;br&gt;错误码6800301：表示包含状态检查异常、焦点抢占失败、系统处理异常（具体错误查看系统日志）。 |
+| Promise&lt;void&gt; | Promise对象，成功表示启动音频渲染器成功。异常将返回error对象： <br>错误码6800301：表示包含状态检查异常、焦点抢占失败、系统处理异常（具体错误查看系统日志）。 |
 
 ## stop
 

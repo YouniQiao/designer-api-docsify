@@ -110,7 +110,7 @@ static numeric(value: int): ColorMetrics
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | int | 是 | HEX格式颜色。&lt;br/&gt;取值范围：支持rgb或者argb。 &lt;br&gt;取值限定为整数。 |
+| value | int | 是 | HEX格式颜色。<br/>取值范围：支持rgb或者argb。 <br>取值限定为整数。 |
 
 **返回值：**
 
@@ -184,7 +184,7 @@ static rgba(red: double, green: double, blue: double, alpha?: double): ColorMetr
 | red | double | 是 | 颜色的R分量（红色），值是0~255的整数。 |
 | green | double | 是 | 颜色的G分量（绿色），值是0~255的整数。 |
 | blue | double | 是 | 颜色的B分量（蓝色），值是0~255的整数。 |
-| alpha | double | 否 | 颜色的A分量（透明度），值是0.0~1.0的浮点数，默认值为1.0，不透明。&lt;br/&gt; **说明：** alpha小于0为全透明，大于1为不透明。 |
+| alpha | double | 否 | 颜色的A分量（透明度），值是0.0~1.0的浮点数，默认值为1.0，不透明。<br/> **说明：** alpha小于0为全透明，大于1为不透明。 |
 
 **返回值：**
 

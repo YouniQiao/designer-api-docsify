@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { installer } from '@kit.AbilityKit';
+import { installer } from 'installer';
 ```
 
 ## getBundleInstallerSync

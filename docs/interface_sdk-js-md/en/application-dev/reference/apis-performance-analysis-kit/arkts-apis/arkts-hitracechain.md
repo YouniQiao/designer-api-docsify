@@ -27,7 +27,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiTraceChain } from '@kit.PerformanceAnalysisKit';
+import { hiTraceChain } from 'hiTraceChain';
 ```
 
 ## Summary

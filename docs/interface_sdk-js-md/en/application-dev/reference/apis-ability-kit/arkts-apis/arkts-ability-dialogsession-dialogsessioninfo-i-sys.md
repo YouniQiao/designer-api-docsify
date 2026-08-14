@@ -17,7 +17,7 @@ Provides session information, including the requester information, target abilit
 ## Modules to Import
 
 ```TypeScript
-import { dialogSession } from '@kit.AbilityKit';
+import { dialogSession } from 'dialogSession';
 ```
 
 ## callerAbilityInfo

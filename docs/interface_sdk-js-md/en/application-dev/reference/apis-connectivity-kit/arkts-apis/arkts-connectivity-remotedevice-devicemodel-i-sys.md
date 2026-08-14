@@ -17,7 +17,7 @@ Describes the remote device's model information.
 ## Modules to Import
 
 ```TypeScript
-import { remoteDevice } from '@kit.ConnectivityKit';
+import { remoteDevice } from 'remoteDevice';
 ```
 
 ## iconId

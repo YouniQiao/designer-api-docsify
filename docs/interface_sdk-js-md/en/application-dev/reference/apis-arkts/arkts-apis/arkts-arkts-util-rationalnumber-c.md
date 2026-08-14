@@ -15,7 +15,7 @@ Provides APIs to compare rational numbers and obtain numerators and denominators
 ## Modules to Import
 
 ```TypeScript
-import { util } from '@kit.ArkTS';
+import { util } from 'util';
 ```
 
 ## compare
@@ -288,8 +288,8 @@ Obtains the greatest common divisor of two specified integers. > **NOTE：**> > 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| number1 | number | Yes | The first integer used to get the greatest common divisor. Value range: - Number.MAX_VALUE <= number1 <= Number.MAX_VALUE. |
-| number2 | number | Yes | The second integer used to get the greatest common divisor. Value range: - Number.MAX_VALUE <= number2 <= Number.MAX_VALUE. |
+| number1 | number | Yes | The first integer used to get the greatest common divisor. Value range: - Number.MAX_VALUE &lt;= number1 &lt;= Number.MAX_VALUE. |
+| number2 | number | Yes | The second integer used to get the greatest common divisor. Value range: - Number.MAX_VALUE &lt;= number2 &lt;= Number.MAX_VALUE. |
 
 **Return value:**
 
@@ -549,8 +549,8 @@ Creates a **RationalNumber** instance with a given numerator and denominator. > 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| numerator | number | Yes | Numerator, which is an integer. Value range: -Number.MAX_VALUE <= numerator <= Number.MAX_VALUE. |
-| denominator | number | Yes | Denominator, which is an integer. Value range: -Number.MAX_VALUE <= denominator < = Number.MAX_VALUE. |
+| numerator | number | Yes | Numerator, which is an integer. Value range: -Number.MAX_VALUE &lt;= numerator &lt;= Number.MAX_VALUE. |
+| denominator | number | Yes | Denominator, which is an integer. Value range: -Number.MAX_VALUE &lt;= denominator &lt; = Number.MAX_VALUE. |
 
 **Return value:**
 

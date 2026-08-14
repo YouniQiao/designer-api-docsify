@@ -15,7 +15,7 @@ Avis metadata.
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'image';
 ```
 
 ## delayTime
@@ -24,7 +24,7 @@ import { image } from '@kit.ImageKit';
 readonly delayTime?: int
 ```
 
-Delay of each frame. Unit: ms, The value should be an integer. &lt;br&gt;Unit:ms.
+Delay of each frame. Unit: ms, The value should be an integer. <br>Unit:ms.
 
 **Type:** int
 

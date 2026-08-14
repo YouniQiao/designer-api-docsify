@@ -96,7 +96,7 @@ Requests full-screen playback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to request full-screen playback (filling the application window).&lt;br&gt;**true**: Request full-screen playback.&lt;br&gt;**false**: Do not request full-screen playback.&lt;br&gt;Default value: **false**. |
+| value | boolean | Yes | Whether to request full-screen playback (filling the application window).<br>**true**: Request full-screen playback.<br>**false**: Do not request full-screen playback.<br>Default value: **false**. |
 
 ## reset
 
@@ -144,7 +144,7 @@ Sets the video playback position. > **NOTE：**> > To start playback from a spec
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Video playback position.&lt;br&gt;Value range: [0, [duration](arkts-arkui-preparedinfo-i.md#PreparedInfo)]&lt;br&gt; When the set value is greater than the duration, the progress will jump to the end; when the set value is less than 0, no progress jump will occur.&lt;br&gt;Unit: second&lt;br&gt;Since API version 8, seek mode configuration is supported. For details, see [setCurrentTime&lt;sup&gt;8+&lt;/sup&gt;](#setCurrentTime). |
+| value | number | Yes | Video playback position.<br>Value range: [0, [duration](arkts-arkui-preparedinfo-i.md#PreparedInfo)]<br> When the set value is greater than the duration, the progress will jump to the end; when the set value is less than 0, no progress jump will occur.<br>Unit: second<br>Since API version 8, seek mode configuration is supported. For details, see [setCurrentTime&lt;sup&gt;8+&lt;/sup&gt;](#setCurrentTime). |
 
 ## setCurrentTime
 
@@ -170,7 +170,7 @@ Sets the video playback position with the specified seek mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Video playback position.&lt;br&gt;Value range: [0, [duration](arkts-arkui-preparedinfo-i.md#PreparedInfo)]&lt;br&gt; When the set value is greater than the duration, the progress will jump to the end; when the set value is less than 0, no progress jump will occur.&lt;br&gt;Unit: second |
+| value | number | Yes | Video playback position.<br>Value range: [0, [duration](arkts-arkui-preparedinfo-i.md#PreparedInfo)]<br> When the set value is greater than the duration, the progress will jump to the end; when the set value is less than 0, no progress jump will occur.<br>Unit: second |
 | seekMode | [SeekMode](arkts-arkui-seekmode-e.md) | Yes | Seek mode. |
 
 ## start

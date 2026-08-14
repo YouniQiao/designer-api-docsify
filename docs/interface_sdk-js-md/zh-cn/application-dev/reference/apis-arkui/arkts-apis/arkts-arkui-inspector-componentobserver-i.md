@@ -200,7 +200,7 @@ off(type: 'draw', callback?: () => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'draw' | 是 | 必须填写字符串'draw'。&lt;br/&gt;draw：组件绘制送显完成。<br>**起始版本：** 12 |
+| type | 'draw' | 是 | 必须填写字符串'draw'。<br/>draw：组件绘制送显完成。<br>**起始版本：** 12 |
 | callback | () =&gt; void | 否 | 需要取消注册的回调，如果参数缺省则取消注册该句柄下所有的回调。callback需要和on('draw')方法中的callback为相同对象时才能取消回调成功。<br>**起始版本：** 12 |
 
 ## off_drawChildren
@@ -229,7 +229,7 @@ off(type: 'drawChildren', callback?: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'drawChildren' | 是 | 必须填写字符串'drawChildren'。&lt;br/&gt;drawChildren：子组件绘制送显完成。 |
+| type | 'drawChildren' | 是 | 必须填写字符串'drawChildren'。<br/>drawChildren：子组件绘制送显完成。 |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | 需要取消注册的回调，如果参数缺省则取消注册该句柄下所有的回调。 callback需要和on('drawChildren')方法中的callback为相同对象时才能取消回调成功。 |
 
 ## off_layout
@@ -258,7 +258,7 @@ off(type: 'layout', callback?: () => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'layout' | 是 | 必须填写字符串'layout'。&lt;br/&gt;layout：组件布局完成。<br>**起始版本：** 12 |
+| type | 'layout' | 是 | 必须填写字符串'layout'。<br/>layout：组件布局完成。<br>**起始版本：** 12 |
 | callback | () =&gt; void | 否 | 需要取消注册的回调，如果参数缺省则取消注册该句柄下所有的回调。callback需要和on('layout')方法中的callback为相同对象时才能取消回调成功。<br>**起始版本：** 12 |
 
 ## onDrawChildren
@@ -380,7 +380,7 @@ on(type: 'draw', callback: () => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'draw' | 是 | 必须填写字符串'draw'。&lt;br/&gt;draw：组件绘制送显完成。<br>**起始版本：** 12 |
+| type | 'draw' | 是 | 必须填写字符串'draw'。<br/>draw：组件绘制送显完成。<br>**起始版本：** 12 |
 | callback | () =&gt; void | 是 | 监听draw的回调。<br>**起始版本：** 12 |
 
 ## on_drawChildren
@@ -409,7 +409,7 @@ on(type: 'drawChildren', callback: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'drawChildren' | 是 | 必须填写字符串'drawChildren'。&lt;br/&gt;drawChildren：子组件绘制送显完成。 |
+| type | 'drawChildren' | 是 | 必须填写字符串'drawChildren'。<br/>drawChildren：子组件绘制送显完成。 |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | 监听drawChildren的回调。 |
 
 ## on_layout
@@ -438,6 +438,6 @@ on(type: 'layout', callback: () => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'layout' | 是 | 必须填写字符串'layout'。&lt;br/&gt;layout：组件布局完成。<br>**起始版本：** 12 |
+| type | 'layout' | 是 | 必须填写字符串'layout'。<br/>layout：组件布局完成。<br>**起始版本：** 12 |
 | callback | () =&gt; void | 是 | 监听layout的回调。<br>**起始版本：** 12 |
 

@@ -15,7 +15,7 @@ Wi-Fi connection information.
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'wifiManager';
 ```
 
 ## chload

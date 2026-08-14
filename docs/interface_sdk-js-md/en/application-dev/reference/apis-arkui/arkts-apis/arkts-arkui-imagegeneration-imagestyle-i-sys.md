@@ -17,7 +17,7 @@ Style types supported by AI image generation models, like Graffiti, Watercolor.
 ## Modules to Import
 
 ```TypeScript
-import { imageGeneration } from '@kit.ArkUI';
+import { imageGeneration } from 'imageGeneration';
 ```
 
 ## icon

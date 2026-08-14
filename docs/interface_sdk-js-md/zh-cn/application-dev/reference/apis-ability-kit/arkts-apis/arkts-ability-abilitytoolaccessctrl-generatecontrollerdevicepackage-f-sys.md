@@ -46,3 +46,32 @@ export function generateControllerDevicePackage(remoteUserAuthResult: RemoteUser
 | [24010000](../errorcode-abilityToolAccessCtrl-sys.md#24010000-入参错误) | Invalid parameter. OperationType and operationInfo do not match, specified callerTokenId does not exist, etc. |
 | [24010001](../errorcode-abilityToolAccessCtrl-sys.md#24010001-系统服务工作异常) | Service is abnormal. possible cause: IPC failed. |
 
+## 示例
+
+```TypeScript
+import { abilityToolAccessCtrl } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let remoteUserAuthResult: Array<abilityToolAccessCtrl.RemoteUserAuthResults> = [{
+  results: [{
+    permission: 'ohos.permission.cli.BUNDLE_ACTIVE_INFO',
+    authResult: 'GRANTED'
+  }],
+  permissionQuery: {
+    operationInfo: [{
+      operationType: abilityToolAccessCtrl.OperationType.CLI,
+      info: {
+        cliCmdName: 'ohos-displayManager',
+        subCliCmdName: 'set-brightness'
+      }
+    }],
+    needTicket: true
+  }
+}];
+abilityToolAccessCtrl.generateControllerDevicePackage(remoteUserAuthResult).then((data: Array<abilityToolAccessCtrl.RemoteAuthPackage>) => {
+  console.info('generateControllerDevicePackage success, data: ' + JSON.stringify(data));
+}).catch((err: BusinessError): void => {
+  console.error(`generateControllerDevicePackage fail, code: ${err.code}, message: ${err.message}`);
+});
+```
+

@@ -15,7 +15,7 @@ On the initial launch, the atomic service only downloads and installs the main p
 ## Modules to Import
 
 ```TypeScript
-import { NavPushPathHelper } from '@kit.ArkUI';
+import { NavPushPathHelper } from 'NavPushPathHelper';
 ```
 
 ## constructor
@@ -70,7 +70,7 @@ Checks for the target subpackage and, if it is not present, initiates a download
 | --- | --- | --- | --- |
 | moduleName | string | Yes | Module name of the package where the NavDestination page is located. |
 | info | NavPathInfo | Yes | Information about the NavDestination page. |
-| animated | boolean | No | Whether to support the transition animation. &lt;br&gt;Default value: **true**. &lt;br&gt;**true**: The transition animation is supported. &lt;br&gt;**false**: The transition animation is not supported. |
+| animated | boolean | No | Whether to support the transition animation. <br>Default value: **true**. <br>**true**: The transition animation is supported. <br>**false**: The transition animation is not supported. |
 
 **Return value:**
 
@@ -83,7 +83,7 @@ Checks for the target subpackage and, if it is not present, initiates a download
 | Error Code ID | Error Message |
 | --- | --- |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
 | [300001](../errorcode-router.md#300001-hsp-download-failure-before-redirection) | hsp silent install fail. |
 | [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
@@ -159,7 +159,7 @@ Checks for the target subpackage and, if it is not present, initiates a download
 | moduleName | string | Yes | Module name of the package where the NavDestination page is located. |
 | name | string | Yes | Name of the NavDestination page. |
 | param | Object | Yes | Settings of the NavDestination page. |
-| animated | boolean | No | Whether to support the transition animation. &lt;br&gt;Default value: **true**. &lt;br&gt;**true**: The transition animation is supported. &lt;br&gt;**false**: The transition animation is not supported. |
+| animated | boolean | No | Whether to support the transition animation. <br>Default value: **true**. <br>**true**: The transition animation is supported. <br>**false**: The transition animation is not supported. |
 
 **Return value:**
 
@@ -172,7 +172,7 @@ Checks for the target subpackage and, if it is not present, initiates a download
 | Error Code ID | Error Message |
 | --- | --- |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
 | [300001](../errorcode-router.md#300001-hsp-download-failure-before-redirection) | hsp silent install fail. |
 | [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
@@ -206,7 +206,7 @@ Checks for the target subpackage and, if it is not present, initiates a download
 | name | string | Yes | Name of the NavDestination page. |
 | param | Object | Yes | Settings of the NavDestination page. |
 | onPop | Callback&lt;PopInfo&gt; | Yes | Callback used to handle the result returned when the page is popped out of the stack. |
-| animated | boolean | No | Whether to support the transition animation. &lt;br&gt;Default value: **true**. &lt;br&gt;**true**: The transition animation is supported. &lt;br&gt;**false**: The transition animation is not supported. |
+| animated | boolean | No | Whether to support the transition animation. <br>Default value: **true**. <br>**true**: The transition animation is supported. <br>**false**: The transition animation is not supported. |
 
 **Return value:**
 
@@ -219,7 +219,7 @@ Checks for the target subpackage and, if it is not present, initiates a download
 | Error Code ID | Error Message |
 | --- | --- |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
 | [300001](../errorcode-router.md#300001-hsp-download-failure-before-redirection) | hsp silent install fail. |
 | [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
@@ -250,7 +250,7 @@ Checks for the target subpackage and, if it is not present, initiates a download
 | --- | --- | --- | --- |
 | moduleName | string | Yes | Module name of the package where the NavDestination page is located. |
 | info | NavPathInfo | Yes | Information about the NavDestination page. |
-| animated | boolean | No | Whether to support the transition animation. &lt;br&gt;Default value: **true**. &lt;br&gt;**true**: The transition animation is supported. &lt;br&gt;**false**: The transition animation is not supported. |
+| animated | boolean | No | Whether to support the transition animation. <br>Default value: **true**. <br>**true**: The transition animation is supported. <br>**false**: The transition animation is not supported. |
 
 **Return value:**
 
@@ -331,7 +331,7 @@ Checks for the target subpackage and, if it is not present, initiates a download
 | moduleName | string | Yes | Module name of the package where the NavDestination page is located. |
 | name | string | Yes | Name of the NavDestination page. |
 | param | Object | Yes | Settings of the NavDestination page. |
-| animated | boolean | No | Whether to support the transition animation. &lt;br&gt;Default value: **true**. &lt;br&gt;**true**: The transition animation is supported. &lt;br&gt;**false**: The transition animation is not supported. |
+| animated | boolean | No | Whether to support the transition animation. <br>Default value: **true**. <br>**true**: The transition animation is supported. <br>**false**: The transition animation is not supported. |
 
 **Return value:**
 
@@ -374,7 +374,7 @@ Checks for the target subpackage and, if it is not present, initiates a download
 | name | string | Yes | Name of the NavDestination page. |
 | param | Object | Yes | Settings of the NavDestination page. |
 | onPop | Callback&lt;PopInfo&gt; | Yes | Callback used to receive the result. |
-| animated | boolean | No | Whether to support the transition animation. &lt;br&gt;Default value: **true**. &lt;br&gt;**true**: The transition animation is supported. &lt;br&gt;**false**: The transition animation is not supported. |
+| animated | boolean | No | Whether to support the transition animation. <br>Default value: **true**. <br>**true**: The transition animation is supported. <br>**false**: The transition animation is not supported. |
 
 **Return value:**
 
@@ -414,7 +414,7 @@ Checks for the target subpackage and, if it is not present, initiates a download
 | --- | --- | --- | --- |
 | moduleName | string | Yes | Module name of the package where the NavDestination page is located. |
 | info | NavPathInfo | Yes | Parameters of the page to replace the top of the navigation stack. |
-| animated | boolean | No | Whether to support the transition animation. &lt;br&gt;Default value: **true**. &lt;br&gt;**true**: The transition animation is supported. &lt;br&gt;**false**: The transition animation is not supported. |
+| animated | boolean | No | Whether to support the transition animation. <br>Default value: **true**. <br>**true**: The transition animation is supported. <br>**false**: The transition animation is not supported. |
 
 **Return value:**
 
@@ -495,7 +495,7 @@ Checks for the target subpackage and, if it is not present, initiates a download
 | moduleName | string | Yes | Module name of the package where the NavDestination page is located. |
 | name | string | Yes | Name of the NavDestination page. |
 | param | Object | Yes | Settings of the NavDestination page. |
-| animated | boolean | No | Whether to support the transition animation. &lt;br&gt;Default value: **true**. &lt;br&gt;**true**: The transition animation is supported. &lt;br&gt;**false**: The transition animation is not supported. |
+| animated | boolean | No | Whether to support the transition animation. <br>Default value: **true**. <br>**true**: The transition animation is supported. <br>**false**: The transition animation is not supported. |
 
 **Return value:**
 

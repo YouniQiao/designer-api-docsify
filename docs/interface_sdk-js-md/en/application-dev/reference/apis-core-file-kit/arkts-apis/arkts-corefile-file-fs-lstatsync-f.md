@@ -3,7 +3,21 @@
 ## Modules to Import
 
 ```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
+import { ConflictFiles } from 'ConflictFiles';
+import { FileFilter } from 'FileFilter';
+import { Filter } from 'Filter';
+import { Options } from 'Options';
+import { ReaderIteratorResult } from 'ReaderIteratorResult';
+import { WatchEvent } from 'WatchEvent';
+import { WatchEventListener } from 'WatchEventListener';
+import { Watcher } from 'Watcher';
+import { ReadOptions } from 'ReadOptions';
+import { ReadTextOptions } from 'ReadTextOptions';
+import { WriteOptions } from 'WriteOptions';
+import { ListFileExtOptions } from 'ListFileExtOptions';
+import { ListFileOptions } from 'ListFileOptions';
+import { DfsListeners } from 'DfsListeners';
+import { TaskSignal } from 'TaskSignal';
 ```
 
 ## lstatSync
@@ -28,7 +42,7 @@ Obtains information about a symbolic link that is used to refer to a file or dir
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Application sandbox path or URI of the file.&lt;br&gt;**Note：**: URIs can be passed since API version 22. |
+| path | string | Yes | Application sandbox path or URI of the file.<br>**Note：**: URIs can be passed since API version 22. |
 
 **Return value:**
 

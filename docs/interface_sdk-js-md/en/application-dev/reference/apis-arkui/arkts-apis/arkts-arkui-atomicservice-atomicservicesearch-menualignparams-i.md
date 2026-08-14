@@ -15,7 +15,13 @@ Sets the alignment between the drop-down list button and the drop-down list box.
 ## Modules to Import
 
 ```TypeScript
-import { SearchParams, AtomicServiceSearch, SearchButtonParams, OperationParams, SelectParams, InputFilterParams, MenuAlignParams } from '@kit.ArkUI';
+import { AtomicServiceSearch } from 'AtomicServiceSearch';
+import { InputFilterParams } from 'InputFilterParams';
+import { SearchButtonParams } from 'SearchButtonParams';
+import { MenuAlignParams } from 'MenuAlignParams';
+import { SearchParams } from 'SearchParams';
+import { SelectParams } from 'SelectParams';
+import { OperationParams } from 'OperationParams';
 ```
 
 ## alignType

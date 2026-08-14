@@ -15,7 +15,7 @@ The Image Effect module provides basic capabilities for processing images, inclu
 ## Modules to Import
 
 ```TypeScript
-import { effectKit } from '@kit.ArkGraphics2D';
+import { effectKit } from 'effectKit';
 ```
 
 ## Summary

@@ -76,7 +76,8 @@
   <!--Del-->
   - [GatheringPolicyType(system api)](arkts-dataprotection-dlppermission-gatheringpolicytype-e-sys.md)<!--DelEnd-->
   - [PluginCmd](arkts-dataprotection-dlppermission-plugincmd-e.md)
-- [@ohos.dlpSetDlpFeature](arkts-dlpsetdlpfeature.md)
+<!--Del-->
+- [@ohos.dlpSetDlpFeature](arkts-dlpsetdlpfeature.md)<!--DelEnd-->
   <!--Del-->
   - [setDlpFeature(system api)](arkts-dataprotection-dlpsetdlpfeature-setdlpfeature-f-sys.md)<!--DelEnd-->
   <!--Del-->

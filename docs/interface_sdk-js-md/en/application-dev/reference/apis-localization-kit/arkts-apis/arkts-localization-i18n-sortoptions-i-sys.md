@@ -17,7 +17,7 @@ Represents the language or country/region sorting option.
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'i18n';
 ```
 
 ## isSuggestedFirst

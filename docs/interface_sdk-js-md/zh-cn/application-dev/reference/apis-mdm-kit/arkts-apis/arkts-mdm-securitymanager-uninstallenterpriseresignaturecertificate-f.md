@@ -58,7 +58,7 @@ let accountId: number = 100;
 try {
   securityManager.uninstallEnterpriseReSignatureCertificate(
     wantTemp, certificateAlias, accountId);
-  console.info('Success to uninstall enterprise re signature certificate.');
+  console.info('Success in uninstalling enterprise re signature certificate.');
 } catch (err) {
   console.error(`Failed to uninstall enterprise re signature certificate.
     Code: ${err.code}, message: ${err.message}`);

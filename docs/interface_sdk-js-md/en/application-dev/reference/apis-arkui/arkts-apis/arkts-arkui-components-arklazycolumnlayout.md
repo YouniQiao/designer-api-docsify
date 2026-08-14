@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { LazyColumnLayoutAttribute, LazyColumnLayout } from '@kit.ArkUI';
+import { LazyColumnLayout } from 'LazyColumnLayout';
+import { LazyColumnLayoutAttribute } from 'LazyColumnLayoutAttribute';
 ```
 
 ## Summary

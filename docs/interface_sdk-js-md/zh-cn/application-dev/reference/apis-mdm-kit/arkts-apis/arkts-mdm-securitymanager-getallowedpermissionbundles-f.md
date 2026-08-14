@@ -62,7 +62,7 @@ let accountId: number = 100;
 try {
   let result: Array<common.ApplicationInstance> = securityManager.getAllowedPermissionBundles(wantTemp, permission, accountId);
   console.info(`Succeeded in getting allowed permission bundles, result : ${JSON.stringify(result)}`);
-} catch(err) {
+} catch (err) {
   console.error(`Failed to get allowed permission bundles. Code: ${err.code}, message: ${err.message}`);
 }
 ```

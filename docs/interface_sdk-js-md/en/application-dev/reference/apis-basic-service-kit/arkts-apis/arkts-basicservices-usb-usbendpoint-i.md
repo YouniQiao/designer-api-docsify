@@ -17,7 +17,7 @@ Represents the USB endpoint from which data is sent or received. You can obtain 
 ## Modules to Import
 
 ```TypeScript
-import { usb } from '@kit.BasicServicesKit';
+import { usb } from 'usb';
 ```
 
 ## address

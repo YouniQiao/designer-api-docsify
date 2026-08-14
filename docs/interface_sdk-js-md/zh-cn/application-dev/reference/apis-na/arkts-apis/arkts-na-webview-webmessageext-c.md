@@ -214,7 +214,7 @@ Get the type of the web message.
 
 | 类型 | 说明 |
 | --- | --- |
-| [WebMessageType](arkts-na-webview-webmessagetype-e.md) | Returns data of WebMessageType type |
+| [WebMessageType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webmessagetype-e.md) | Returns data of WebMessageType type |
 
 ## setArray
 
@@ -244,7 +244,7 @@ Set the array value of the web message.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100014](../../apis-arkweb/errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
 
 ## setArrayBuffer
@@ -275,7 +275,7 @@ Set the array buffer value of the web message.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100014](../../apis-arkweb/errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
 
 ## setBoolean
@@ -306,7 +306,7 @@ Set the boolean value of the web message.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100014](../../apis-arkweb/errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
 
 ## setError
@@ -337,7 +337,7 @@ Set the error value of the web message.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100014](../../apis-arkweb/errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
 
 ## setNumber
@@ -368,7 +368,7 @@ Set the number value of the web message.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100014](../../apis-arkweb/errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
 
 ## setString
@@ -399,7 +399,7 @@ Set the string value of the web message.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100014](../../apis-arkweb/errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
 
 ## setType
@@ -424,12 +424,12 @@ Set the type of the web message.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | [WebMessageType](arkts-na-webview-webmessagetype-e.md) | 是 | set WebMessageType type data |
+| type | [WebMessageType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webmessagetype-e.md) | 是 | set WebMessageType type data |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100014](../../apis-arkweb/errorcode-webview.md#17100014-类型和值不匹配) | The type and value of the message do not match. |
 

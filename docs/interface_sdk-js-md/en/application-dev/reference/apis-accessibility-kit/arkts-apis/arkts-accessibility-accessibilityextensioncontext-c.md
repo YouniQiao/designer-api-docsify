@@ -1,6 +1,6 @@
 # AccessibilityExtensionContext
 
-The accessibility extension context. Used to configure, query information, and inject gestures.
+The **AccessibilityExtensionContext** module, inherited from **ExtensionContext**, provides context for **AccessibilityExtensionAbility**. The Accessibility Extension Context module provides capabilities related to the accessibility extension, including configuring concerned information types, querying node information, and gesture injection.
 
 **Inheritance/Implementation:** AccessibilityExtensionContext extends ExtensionContext
 
@@ -36,8 +36,8 @@ Obtains the focus element. This API uses an asynchronous callback to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isAccessibilityFocus | boolean | Yes | Whether the obtained focus element is an accessibility focus. The value **True** means that the obtained focus element is an accessibility focus, and **False** means the opposite. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Yes | Callback used to return the current focus element. |
+| isAccessibilityFocus | boolean | Yes | Whether the element obtained is an accessibility focus element. The value **true** indicates that it is an accessibility focus element, and **false** indicates the opposite. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Yes | Callback invoked to return the result. If the focus element is obtained successfully, **err** is **undefined** and **data** is the corresponding focus element; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -87,7 +87,7 @@ Obtains the focus element. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isAccessibilityFocus | boolean | No | Whether the obtained element is an accessibility focus. The value **true** indicates that the element is an accessibility focus, and **false** indicates the opposite.&lt;br&gt;Default value: **false**. |
+| isAccessibilityFocus | boolean | No | Whether to obtain the accessibility focus element. The value **true** indicates that it is an accessibility focus element, and **false** indicates that it is not an accessibility focus element. Default value: **false**. |
 
 **Return value:**
 
@@ -140,7 +140,7 @@ Obtains the focus element. This API uses an asynchronous callback to return the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Yes | Callback used to return the current focus element. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Yes | Callback used to return the focus element. If the operation is successful, **err** is **undefined** and **data** is the current focus element; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -173,7 +173,7 @@ axContext.getFocusElement((err: BusinessError, data: AccessibilityElement) => {
 getWindowRootElement(windowId: int, callback: AsyncCallback<AccessibilityElement>): void
 ```
 
-Obtains the root element of a window. This API uses an asynchronous callback to return the result.
+Obtains the root element of the specified window. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -189,8 +189,8 @@ Obtains the root element of a window. This API uses an asynchronous callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | int | Yes | ID of the window whose root element is to be obtained. If this parameter is not specified , it indicates the current active window. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Yes | Callback used to return the root element. |
+| windowId | int | Yes | Number of the specified window. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Yes | Callback used to return the result. If the root node element is obtained successfully, **err** is **undefined** and **data** is the root node element of the specified window; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -224,7 +224,7 @@ axContext.getWindowRootElement(windowId, (err: BusinessError, data: Accessibilit
 getWindowRootElement(windowId?: int): Promise<AccessibilityElement>
 ```
 
-Obtains the root element of a window. This API uses a promise to return the result.
+Obtains the root element of the specified window. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -240,7 +240,7 @@ Obtains the root element of a window. This API uses a promise to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| windowId | int | No | ID of the window whose root element is to be obtained. If this parameter is not specified , it indicates the current active window. |
+| windowId | int | No | ID of the window whose root element is to be obtained. If this parameter is not specified, it indicates the current active window. |
 
 **Return value:**
 
@@ -277,7 +277,7 @@ axContext.getWindowRootElement().then((data: AccessibilityElement) => {
 getWindowRootElement(callback: AsyncCallback<AccessibilityElement>): void
 ```
 
-Obtains the root element of a window. This API uses an asynchronous callback to return the result.
+Obtains the root element of the currently active window. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -293,7 +293,7 @@ Obtains the root element of a window. This API uses an asynchronous callback to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Yes | Callback used to return the root element. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Yes | Callback invoked to return the result. If the root node element is obtained successfully, err is undefined and data is the root node element of the currently active window; otherwise, err is an error object. |
 
 **Error codes:**
 
@@ -326,7 +326,7 @@ axContext.getWindowRootElement((err: BusinessError, data: AccessibilityElement) 
 getWindows(displayId: long, callback: AsyncCallback<Array<AccessibilityElement>>): void
 ```
 
-Obtains the list of windows on a display. This API uses an asynchronous callback to return the result.
+Obtains all windows on the specified display. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -342,8 +342,8 @@ Obtains the list of windows on a display. This API uses an asynchronous callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | long | Yes | ID of the display from which the window information is obtained. If this parameter is not specified, it indicates the default main display. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; | Yes | Callback used to return the window list. |
+| displayId | long | Yes | ID of the specified screen, used to identify the screen for which to obtain windows. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; | Yes | Callback used to return the result. If the windows are obtained successfully, **err** is **undefined** and **data** is all windows on the specified screen; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -374,7 +374,7 @@ axContext.getWindows(displayId, (err: BusinessError, data: AccessibilityElement[
 getWindows(displayId?: long): Promise<Array<AccessibilityElement>>
 ```
 
-Obtains the list of windows on a display. This API uses a promise to return the result.
+Obtains all windows on the specified display. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -424,7 +424,7 @@ axContext.getWindows().then((data: AccessibilityElement[]) => {
 getWindows(callback: AsyncCallback<Array<AccessibilityElement>>): void
 ```
 
-Obtains the list of windows on a display. This API uses an asynchronous callback to return the result.
+Obtains all windows on the default main display. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -440,7 +440,7 @@ Obtains the list of windows on a display. This API uses an asynchronous callback
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; | Yes | Callback used to return the window list. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; | Yes | Callback invoked to return the result. If the window is obtained successfully, **err** is **undefined** and **data** is all windows of the default home screen; otherwise, it is an error object. |
 
 **Error codes:**
 
@@ -470,7 +470,7 @@ axContext.getWindows((err: BusinessError, data: AccessibilityElement[]) => {
 injectGesture(gesturePath: GesturePath, callback: AsyncCallback<void>): void
 ```
 
-Injects a gesture. This API uses an asynchronous callback to return the result.
+Injects a gesture, applicable to scenarios where an accessibility app performs touch interactions on behalf of the user, such as tap and swipe operations. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -489,7 +489,7 @@ Injects a gesture. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | gesturePath | [GesturePath](arkts-accessibility-accessibility-gesturepath-gesturepath-c.md) | Yes | Path of the gesture to inject. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the gesture injection is successful, **err** is **undefined**; otherwise, it is an error object. |
 
 **Error codes:**
 
@@ -524,7 +524,7 @@ axContext.injectGesture(gesturePath, (err: BusinessError) => {
 injectGesture(gesturePath: GesturePath): Promise<void>
 ```
 
-Injects a gesture. This API uses a promise to return the result.
+Injects a gesture, applicable to scenarios where an accessibility app performs touch interactions on behalf of the user, such as tap and swipe operations. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -582,7 +582,7 @@ axContext.injectGesture(gesturePath).then(() => {
 injectGestureSync(gesturePath: GesturePath): void
 ```
 
-Injects a gesture.
+Injects a gesture, applicable to scenarios where an accessibility app performs touch interactions on behalf of the user, such as tap and swipe operations.
 
 **Since:** 10
 
@@ -626,7 +626,7 @@ axContext.injectGestureSync(gesturePath);
 setTargetBundleName(targetNames: Array<string>, callback: AsyncCallback<void>): void
 ```
 
-Sets the concerned target bundle. This API uses an asynchronous callback to return the result.
+Sets the bundle name of the concerned app. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -642,8 +642,8 @@ Sets the concerned target bundle. This API uses an asynchronous callback to retu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| targetNames | Array&lt;string&gt; | Yes | Bundle name of the concerned target application. The service receives accessibility events of the concerned application. By default, accessibility events of all applications are received. Pass in an empty array if there is no concerned application. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation fails, **err** that contains data is returned. |
+| targetNames | Array&lt;string&gt; | Yes | Package name of the app to focus on. After setting, the service receives accessibility events only from the focused app. If not set, accessibility events from all apps are received by default. To cancel the focus on an app, pass an empty array. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the target package name is set successfully, **err** is **undefined**; otherwise, it is an error object. |
 
 **Error codes:**
 
@@ -676,7 +676,7 @@ try {
 setTargetBundleName(targetNames: Array<string>): Promise<void>
 ```
 
-Sets the concerned target bundle. This API uses a promise to return the result.
+Sets the bundle name of the concerned app. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -692,7 +692,7 @@ Sets the concerned target bundle. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| targetNames | Array&lt;string&gt; | Yes | Bundle name of the concerned target application. The service receives accessibility events of the concerned application. By default, accessibility events of all applications are received. Pass in an empty array if there is no concerned application. |
+| targetNames | Array&lt;string&gt; | Yes | Sets the package names of the apps of interest. After setting, the service receives only accessibility events of the apps of interest. If not set, the service receives accessibility events of all apps by default. To cancel the focus on apps, pass an empty array. |
 
 **Return value:**
 

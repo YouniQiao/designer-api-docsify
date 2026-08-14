@@ -15,7 +15,7 @@ Provides constants of the distributed KV store.
 ## Modules to Import
 
 ```TypeScript
-import { distributedKVStore } from '@kit.ArkData';
+import { distributedKVStore } from 'distributedKVStore';
 ```
 
 ## MAX_BATCH_SIZE

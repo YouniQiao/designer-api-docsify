@@ -15,7 +15,7 @@ The certificate algorithm library framework provides certificate-related APIs. T
 ## Modules to Import
 
 ```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
+import { cert } from 'cert';
 ```
 
 ## Summary
@@ -72,7 +72,7 @@ import { cert } from '@kit.DeviceCertificateKit';
 | [CmsRecipientInfo](arkts-devicecertificate-cert-cmsrecipientinfo-i.md) | Represents recipient information for the CMS message. > **NOTE：**> > At least one recipient needs to be set. |
 | [CmsSignerConfig](arkts-devicecertificate-cert-cmssignerconfig-i.md) | Represents the configuration of the CMS signer. |
 | [CmsVerificationConfig](arkts-devicecertificate-cert-cmsverificationconfig-i.md) | Represents CMS verification configuration. |
-| [CsrAttribute](arkts-devicecertificate-cert-csrattribute-i.md) | Defines the CSR attribute representation. &lt;br&gt;CSR attribute field. Currently, only string-type attribute fields are supported. The attribute value added to the CSR is encoded in UTF-8 format. The common type is challengePassword. |
+| [CsrAttribute](arkts-devicecertificate-cert-csrattribute-i.md) | Defines the CSR attribute representation. <br>CSR attribute field. Currently, only string-type attribute fields are supported. The attribute value added to the CSR is encoded in UTF-8 format. The common type is challengePassword. |
 | [CsrGenerationConfig](arkts-devicecertificate-cert-csrgenerationconfig-i.md) | Configuration parameters for generating a CSR, including the subject name, digest algorithm, attribute, and output format. > **NOTE：**> > - subject is an X500DistinguishedName object. > > - mdName indicates the digest algorithm name. Currently, SHA1, SHA256, SHA384, and SHA512 are supported. > > - attributes is an optional parameter that specifies the attribute types and attribute values specified in > PKCS #9 to generate a CSR. For example, challengePassword. > > - outFormat specifies the format of the output CSR. If the format is not specified, the PEM format is used by > default. |
 | [DataArray](arkts-devicecertificate-cert-dataarray-i.md) | Defines a list of data arrays. |
 | [DataBlob](arkts-devicecertificate-cert-datablob-i.md) | Encapsulates binary data. The core field **data** is of the Uint8Array type. |

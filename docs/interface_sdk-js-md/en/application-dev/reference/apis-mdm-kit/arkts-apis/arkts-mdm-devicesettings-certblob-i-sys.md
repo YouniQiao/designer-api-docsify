@@ -19,7 +19,7 @@ Represents the certificate information.
 ## Modules to Import
 
 ```TypeScript
-import { deviceSettings } from '@kit.MDMKit';
+import { deviceSettings } from 'deviceSettings';
 ```
 
 ## alias

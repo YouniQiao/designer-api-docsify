@@ -17,7 +17,7 @@ Defines the interface descriptor of a USB device.
 ## Modules to Import
 
 ```TypeScript
-import { deviceManager } from '@kit.DriverDevelopmentKit';
+import { deviceManager } from 'deviceManager';
 ```
 
 ## bClass

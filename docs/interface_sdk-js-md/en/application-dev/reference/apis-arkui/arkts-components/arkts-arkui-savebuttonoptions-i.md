@@ -42,7 +42,7 @@ Background type of the **SaveButton** component. Default value: ButtonType.Capsu
 icon?: SaveIconStyle
 ```
 
-Icon style of the **SaveButton** component. &lt;br&gt;If this parameter is not specified, no icon is displayed. If neither **icon** nor **text** is provided, the component uses the default style.
+Icon style of the **SaveButton** component. <br>If this parameter is not specified, no icon is displayed. If neither **icon** nor **text** is provided, the component uses the default style.
 
 **Type:** [SaveIconStyle](arkts-arkui-saveiconstyle-e.md)
 
@@ -66,7 +66,7 @@ Icon style of the **SaveButton** component. &lt;br&gt;If this parameter is not s
 text?: SaveDescription
 ```
 
-Text on the **SaveButton** component. &lt;br&gt;If this parameter is not specified, no text is displayed. If neither **text** nor **icon** is provided, the component uses the default style.
+Text on the **SaveButton** component. <br>If this parameter is not specified, no text is displayed. If neither **text** nor **icon** is provided, the component uses the default style.
 
 **Type:** [SaveDescription](arkts-arkui-savedescription-e.md)
 

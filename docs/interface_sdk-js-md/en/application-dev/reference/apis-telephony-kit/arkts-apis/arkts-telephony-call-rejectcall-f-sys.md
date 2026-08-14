@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'call';
 ```
 
 ## rejectCall
@@ -92,7 +92,7 @@ Rejects a call. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callId | int | No | Call ID. You can obtain the value by subscribing to **callDetailsChange** events. This field is optional from API version 9. &lt;br&gt;If this field is not set, the latest ringing call will be rejected. |
+| callId | int | No | Call ID. You can obtain the value by subscribing to **callDetailsChange** events. This field is optional from API version 9. <br>If this field is not set, the latest ringing call will be rejected. |
 | options | [RejectMessageOptions](arkts-telephony-call-rejectmessageoptions-i-sys.md) | No | Options for the call rejection message. If this field is not set, no call rejection message will be sent. |
 
 **Return value:**

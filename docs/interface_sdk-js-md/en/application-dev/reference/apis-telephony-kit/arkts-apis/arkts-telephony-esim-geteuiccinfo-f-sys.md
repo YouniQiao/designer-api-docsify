@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { eSIM } from '@kit.TelephonyKit';
+import { eSIM } from 'eSIM';
 ```
 
 ## getEuiccInfo

@@ -17,7 +17,7 @@ Decodes a string or Uint8Array containing Base64 data into a newly allocated Uin
 ## Modules to Import
 
 ```TypeScript
-import { util } from '@kit.ArkTS';
+import { util } from 'util';
 ```
 
 ## constructor
@@ -39,6 +39,12 @@ A constructor used to create a **Base64** object.
 <!--Device-Base64-constructor()--><!--Device-Base64-constructor()-End-->
 
 **System capability:** SystemCapability.Utils.Lang
+
+## Examples
+
+```TypeScript
+let base64 = new  util.Base64();
+```
 
 ## decode
 
@@ -72,6 +78,17 @@ Decodes the input content into a Uint8Array object. This API uses a promise to r
 | --- | --- |
 | Promise&lt;Uint8Array&gt; | Promise used to return the Uint8Array object obtained. |
 
+## Examples
+
+```TypeScript
+let base64 = new util.Base64();
+let array = new Uint8Array([99,122,69,122]);
+base64.decode(array).then((val) => {
+  console.info(val.toString());
+  // Output: 115,49,51
+})
+```
+
 ## decodeSync
 
 ```TypeScript
@@ -103,6 +120,16 @@ Decodes the input content into a Uint8Array object.
 | Type | Description |
 | --- | --- |
 | Uint8Array | Uint8Array object obtained. |
+
+## Examples
+
+```TypeScript
+let base64 = new util.Base64();
+let buff = 'czEz';
+let result = base64.decodeSync(buff);
+console.info("result = " + result);
+// Output: result = 115,49,51
+```
 
 ## encode
 
@@ -136,6 +163,17 @@ Encodes the input content into a Uint8Array object. This API uses a promise to r
 | --- | --- |
 | Promise&lt;Uint8Array&gt; | Promise used to return the Uint8Array object obtained. |
 
+## Examples
+
+```TypeScript
+let base64 = new util.Base64();
+let array = new Uint8Array([115,49,51]);
+base64.encode(array).then((val) => {
+  console.info(val.toString());
+  // Output: 99,122,69,122
+})
+```
+
 ## encodeSync
 
 ```TypeScript
@@ -167,6 +205,16 @@ Performs Base64 encoding on the input Uint8Array byte array and returns the enco
 | Type | Description |
 | --- | --- |
 | Uint8Array | Uint8Array object obtained. |
+
+## Examples
+
+```TypeScript
+let base64 = new util.Base64();
+let array = new Uint8Array([115,49,51]);
+let result = base64.encodeSync(array);
+console.info("result = " + result);
+// Output: result = 99,122,69,122
+```
 
 ## encodeToString
 
@@ -200,6 +248,17 @@ Encodes the input content into a string. This API uses a promise to return the r
 | --- | --- |
 | Promise&lt;string&gt; | Promise used to return the string obtained. |
 
+## Examples
+
+```TypeScript
+let base64 = new util.Base64();
+let array = new Uint8Array([115,49,51]);
+base64.encodeToString(array).then((val) => {
+    console.info(val);
+    // Output: czEz
+})
+```
+
 ## encodeToStringSync
 
 ```TypeScript
@@ -231,4 +290,14 @@ Performs Base64 encoding on the input Uint8Array byte array and returns the enco
 | Type | Description |
 | --- | --- |
 | string | String obtained. |
+
+## Examples
+
+```TypeScript
+let base64 = new util.Base64();
+let array = new Uint8Array([115,49,51]);
+let result = base64.encodeToStringSync(array);
+console.info("result = " + result);
+// Output: result = czEz
+```
 

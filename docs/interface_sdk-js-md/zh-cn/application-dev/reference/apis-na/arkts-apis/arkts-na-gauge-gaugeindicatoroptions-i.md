@@ -42,7 +42,7 @@ icon?: ResourceStr
 space?: Dimension
 ```
 
-指针距离圆环外边的间距。(不支持百分比)。 默认值：8vp。 &lt;br&gt;**说明：** 对于默认的三角形样式指针，间距为黑色三角形到圆环外边的间距。
+指针距离圆环外边的间距。(不支持百分比)。 默认值：8vp。 <br>**说明：** 对于默认的三角形样式指针，间距为黑色三角形到圆环外边的间距。
 
 **类型：** [Dimension](../../apis-arkui/arkts-apis/arkts-arkui-dimension-t.md)
 

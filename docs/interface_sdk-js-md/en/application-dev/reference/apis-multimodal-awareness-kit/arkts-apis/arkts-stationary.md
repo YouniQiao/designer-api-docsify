@@ -15,7 +15,7 @@ The **stationary** module provides APIs to report the device status, including a
 ## Modules to Import
 
 ```TypeScript
-import { stationary } from '@kit.MultimodalAwarenessKit';
+import { stationary } from 'stationary';
 ```
 
 ## Summary

@@ -17,7 +17,7 @@ ASR processing controller.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'audio';
 ```
 
 ## getAsrAecMode

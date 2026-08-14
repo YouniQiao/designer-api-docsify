@@ -17,7 +17,7 @@ Represents the data change information, including the data change type, URI of t
 ## Modules to Import
 
 ```TypeScript
-import { dataShare } from '@kit.ArkData';
+import { dataShare } from 'dataShare';
 ```
 
 ## type

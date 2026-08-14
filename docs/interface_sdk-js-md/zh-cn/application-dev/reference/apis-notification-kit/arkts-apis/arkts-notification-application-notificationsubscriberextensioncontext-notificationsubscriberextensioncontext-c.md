@@ -19,6 +19,6 @@ NotificationSubscriberExtensionContext模块提供通知订阅者扩展能力。
 ## 导入模块
 
 ```TypeScript
-import { NotificationSubscriberExtensionContext } from '@kit.NotificationKit';
+import { NotificationSubscriberExtensionContext } from 'NotificationSubscriberExtensionContext';
 ```
 

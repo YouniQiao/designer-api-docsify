@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'i18n';
 ```
 
 ## getSimpleDateTimeFormatByPattern
@@ -44,6 +44,21 @@ Obtains a **SimpleDateTimeFormat** object based on the specified pattern string.
 | Error Code ID | Error Message |
 | --- | --- |
 | [8900001](../errorcode-i18n.md#8900001-parameter-verification-error) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n } from '@kit.LocalizationKit';
+
+try {
+  let locale: Intl.Locale = new Intl.Locale('zh-Hans-CN');
+  let formatter: i18n.SimpleDateTimeFormat = i18n.getSimpleDateTimeFormatByPattern("'month('M')'", locale);
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call i18n.getSimpleDateTimeFormatByPattern failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 
 
 ## getSimpleDateTimeFormatByPattern
@@ -86,4 +101,19 @@ Obtains a **SimpleDateTimeFormat** object based on the specified pattern string.
 | Error Code ID | Error Message |
 | --- | --- |
 | [890001](../errorcode-i18n.md#890001-parameter-error) | Invalid parameter. Possible causes: Parameter verification failed. |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+import { i18n, intl } from '@kit.LocalizationKit';
+
+try {
+  let locale: intl.Locale = new intl.Locale('zh-Hans-CN');
+  let formatter: i18n.SimpleDateTimeFormat = i18n.getSimpleDateTimeFormatByPattern("'month('M')'", locale);
+} catch (error) {
+  let err: BusinessError = error as BusinessError;
+  console.error(`call i18n.getSimpleDateTimeFormatByPattern failed, error code: ${err.code}, message: ${err.message}.`);
+}
+```
 

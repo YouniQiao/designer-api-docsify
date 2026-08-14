@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { RespCallback } from '@kit.AdsKit';
+import { RespCallback } from 'RespCallback';
 ```
 
 ## Summary

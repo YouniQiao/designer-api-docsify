@@ -38,7 +38,7 @@ A constructor used to create a text decorative line style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md) | Yes | Text decorative line options.&lt;br&gt;Default value:&lt;br&gt;{&lt;br&gt; type: TextDecorationType.None,&lt;br&gt; color: Color.Black,&lt;br&gt; style: TextDecorationStyle.SOLID &lt;br&gt;} |
+| value | [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md) | Yes | Text decorative line options.<br>Default value:<br>{<br> type: TextDecorationType.None,<br> color: Color.Black,<br> style: TextDecorationStyle.SOLID <br>} |
 
 ## constructor
 
@@ -66,8 +66,8 @@ Constructor of a text decoration line style, including additional configuration 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md) | Yes | Text decorative line options.&lt;br&gt;Default value:&lt;br&gt;{&lt;br&gt; type: TextDecorationType.None,&lt;br&gt; color: Color.Black,&lt;br&gt; style: TextDecorationStyle.SOLID, &lt;br&gt; thicknessScale: 1.0 &lt;br&gt;} |
-| options | [DecorationOptions](arkts-arkui-decorationoptions-i.md) | No | Additional configuration options for the text decoration line.&lt;br&gt;Default value:&lt;br&gt;{&lt;br&gt; enableMultiType: undefined&lt;br&gt;} |
+| value | [DecorationStyleInterface](arkts-arkui-decorationstyleinterface-i.md) | Yes | Text decorative line options.<br>Default value:<br>{<br> type: TextDecorationType.None,<br> color: Color.Black,<br> style: TextDecorationStyle.SOLID, <br> thicknessScale: 1.0 <br>} |
+| options | [DecorationOptions](arkts-arkui-decorationoptions-i.md) | No | Additional configuration options for the text decoration line.<br>Default value:<br>{<br> enableMultiType: undefined<br>} |
 
 ## color
 

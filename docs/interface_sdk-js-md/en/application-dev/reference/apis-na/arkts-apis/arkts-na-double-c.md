@@ -876,7 +876,7 @@ parseInt(String, int) parses from String an integer of specified radix If args (
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | s | string | Yes | the string to convert |
-| r | int | Yes | the radix of conversion; should be [2, 36]; 0 assumed to be 10 &lt;br&gt;The value should be an integer. |
+| r | int | Yes | the radix of conversion; should be [2, 36]; 0 assumed to be 10 <br>The value should be an integer. |
 
 **Return value:**
 
@@ -1620,7 +1620,7 @@ toString(d: double, r: int): string -- returns a string representation of d by r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | d | double | Yes |  |
-| r | int | Yes | &lt;br&gt;The value should be an integer. |
+| r | int | Yes | <br>The value should be an integer. |
 
 **Return value:**
 
@@ -1684,7 +1684,7 @@ Converts the specified double-precision floating-point value to its string repre
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| r | int | Yes | &lt;br&gt;The value should be an integer. |
+| r | int | Yes | <br>The value should be an integer. |
 
 **Return value:**
 

@@ -15,7 +15,7 @@ The **systemload** module allows the system to determine the system load level b
 ## Modules to Import
 
 ```TypeScript
-import { systemLoad } from '@kit.BasicServicesKit';
+import { systemLoad } from 'systemLoad';
 ```
 
 ## Summary

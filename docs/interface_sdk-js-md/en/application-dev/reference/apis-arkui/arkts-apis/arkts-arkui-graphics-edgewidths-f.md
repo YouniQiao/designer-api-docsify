@@ -26,7 +26,7 @@ Generates an **edgeWidths** object with the specified edge width for all edges.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| all | number | Yes | Edge width, in vp. &lt;br&gt;Value range: [0, +∞). |
+| all | number | Yes | Edge width, in vp. <br>Value range: [0, +∞). |
 
 **Return value:**
 

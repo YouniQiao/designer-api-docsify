@@ -15,7 +15,7 @@ The **securityLabel** module provides APIs for managing data security levels of 
 ## Modules to Import
 
 ```TypeScript
-import { securityLabel } from '@kit.CoreFileKit';
+import { securityLabel } from 'securityLabel';
 ```
 
 ## Summary

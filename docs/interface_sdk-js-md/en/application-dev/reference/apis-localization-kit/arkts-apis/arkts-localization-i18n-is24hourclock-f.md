@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'i18n';
 ```
 
 ## is24HourClock
@@ -31,4 +31,12 @@ Checks whether the 24-hour clock is used.
 | Type | Description |
 | --- | --- |
 | boolean | true** if the 24-hour clock is used, and **false** otherwise. |
+
+## Examples
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let is24HourClock: boolean = i18n.is24HourClock();
+```
 

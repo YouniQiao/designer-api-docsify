@@ -26,7 +26,7 @@ function delSimMessage(slotId: int, msgIndex: int, callback: AsyncCallback<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | int | 是 | SIM卡槽ID：&lt;br/&gt;- 0：卡槽1&lt;br/&gt;- 1：卡槽2 |
+| slotId | int | 是 | SIM卡槽ID：<br/>- 0：卡槽1<br/>- 1：卡槽2 |
 | msgIndex | int | 是 | 消息索引。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 删除SIM卡消息的回调函数。 |
 
@@ -82,7 +82,7 @@ function delSimMessage(slotId: int, msgIndex: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | int | 是 | SIM卡槽ID：&lt;br/&gt;- 0：卡槽1&lt;br/&gt;- 1：卡槽2 |
+| slotId | int | 是 | SIM卡槽ID：<br/>- 0：卡槽1<br/>- 1：卡槽2 |
 | msgIndex | int | 是 | 消息索引。 |
 
 **返回值：**

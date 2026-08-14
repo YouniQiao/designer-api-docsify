@@ -15,7 +15,7 @@ Provides the state change information of the float view.
 ## Modules to Import
 
 ```TypeScript
-import { floatView } from '@kit.ArkUI';
+import { floatView } from 'floatView';
 ```
 
 ## state

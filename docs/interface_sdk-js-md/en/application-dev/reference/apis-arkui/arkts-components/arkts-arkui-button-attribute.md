@@ -42,7 +42,7 @@ Sets the style and primacy for the button. The system automatically adjusts the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ButtonStyleMode](arkts-arkui-buttonstylemode-e.md) | Yes | Style and primacy of the button&lt;br&gt;Default value: **ButtonStyleMode.EMPHASIZED |
+| value | [ButtonStyleMode](arkts-arkui-buttonstylemode-e.md) | Yes | Style and primacy of the button<br>Default value: **ButtonStyleMode.EMPHASIZED |
 
 ## contentModifier
 
@@ -70,7 +70,7 @@ Creates a content modifier.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | ContentModifier&lt;[ButtonConfiguration](arkts-arkui-buttonconfiguration-i.md)&gt; | Yes | Content modifier to apply to the button.&lt;br&gt; **modifier**: content modifier. You need a custom class to implement the **ContentModifier** API. |
+| modifier | ContentModifier&lt;[ButtonConfiguration](arkts-arkui-buttonconfiguration-i.md)&gt; | Yes | Content modifier to apply to the button.<br> **modifier**: content modifier. You need a custom class to implement the **ContentModifier** API. |
 
 ## controlSize
 
@@ -100,7 +100,7 @@ Sets the size for the button. > **NOTE：**> > This API can be called within att
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ControlSize](arkts-arkui-controlsize-e.md) | Yes | Size of the button.&lt;br&gt;Default value: **ControlSize.NORMAL |
+| value | [ControlSize](arkts-arkui-controlsize-e.md) | Yes | Size of the button.<br>Default value: **ControlSize.NORMAL |
 
 ## fontColor
 
@@ -128,7 +128,7 @@ Sets the font color for the button.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ResourceColor | Yes | Font color of the button.&lt;br&gt;Default value: **\\$r('sys.color.font_on_primary')**, which means white |
+| value | ResourceColor | Yes | Font color of the button.<br>Default value: **\\$r('sys.color.font_on_primary')**, which means white |
 
 ## fontFamily
 
@@ -184,7 +184,7 @@ Sets the font size for the button.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Length | Yes | Font size of the button.&lt;br&gt;Default value:&lt;br&gt;**\\$r('sys.float.Body_L')** when **controlSize** is set to **ControlSize.NORMAL**&lt;br&gt;**\\$r('sys.float.Body_S')** when **controlSize** is set to **ControlSize.SMALL**&lt;br&gt;Note: For the string type, percentage values are not supported. |
+| value | Length | Yes | Font size of the button.<br>Default value:<br>**\\$r('sys.float.Body_L')** when **controlSize** is set to **ControlSize.NORMAL**<br>**\\$r('sys.float.Body_S')** when **controlSize** is set to **ControlSize.SMALL**<br>Note: For the string type, percentage values are not supported. |
 
 ## fontStyle
 
@@ -212,7 +212,7 @@ Sets the font style for the button.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | FontStyle | Yes | Font style of the button.&lt;br&gt;Default value: **FontStyle.Normal |
+| value | FontStyle | Yes | Font style of the button.<br>Default value: **FontStyle.Normal |
 
 ## fontWeight
 
@@ -240,7 +240,7 @@ Sets the font weight for the button.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| FontWeight \| string | Yes | Font weight of the button. For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a thicker font.&lt;br&gt;Default value: **500**&lt;br&gt; For the string type, only strings that represent a number, for example, **'400'**, and the following enumerated values of **FontWeight** are supported: **'bold'**, **'bolder'**, **'lighter'**, **'regular'**, and **'medium'**.&lt;br&gt;If the value is abnormal or invalid, the font weight defaults to 400. |
+| value | number \| FontWeight \| string | Yes | Font weight of the button. For the number type, the value ranges from 100 to 900, at an interval of 100. A larger value indicates a thicker font.<br>Default value: **500**<br> For the string type, only strings that represent a number, for example, **'400'**, and the following enumerated values of **FontWeight** are supported: **'bold'**, **'bolder'**, **'lighter'**, **'regular'**, and **'medium'**.<br>If the value is abnormal or invalid, the font weight defaults to 400. |
 
 ## labelStyle
 
@@ -296,7 +296,7 @@ Sets the maximum font scale factor for text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | number \| Resource | Yes | Maximum font scale factor for text.&lt;br&gt;Value range: [1, +∞)&lt;br&gt;**NOTE：**&lt;br&gt;A value less than 1 is handled as **1**. Abnormal values are ineffective by default.&lt;br&gt;If this parameter is not configured, the maximum scale for a circular button is 1x, while the maximum scale for capsule-type buttons, standard buttons, and rounded rectangle buttons defaults to the system-defined value. |
+| scale | number \| Resource | Yes | Maximum font scale factor for text.<br>Value range: [1, +∞)<br>**NOTE：**<br>A value less than 1 is handled as **1**. Abnormal values are ineffective by default.<br>If this parameter is not configured, the maximum scale for a circular button is 1x, while the maximum scale for capsule-type buttons, standard buttons, and rounded rectangle buttons defaults to the system-defined value. |
 
 ## minFontScale
 
@@ -324,7 +324,7 @@ Sets the minimum font scale factor for text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | number \| Resource | Yes | Minimum font scale factor for text.&lt;br&gt;Value range: [0, 1]&lt;br&gt;**NOTE：**&lt;br&gt;A value less than 0 is handled as **0**. A value greater than 1 is handled as **1**. Abnormal values are ineffective by default. |
+| scale | number \| Resource | Yes | Minimum font scale factor for text.<br>Value range: [0, 1]<br>**NOTE：**<br>A value less than 0 is handled as **0**. A value greater than 1 is handled as **1**. Abnormal values are ineffective by default. |
 
 ## role
 
@@ -354,7 +354,7 @@ Sets the role of the button. The system automatically adjusts the button backgro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ButtonRole](arkts-arkui-buttonrole-e.md) | Yes | Role of the button.&lt;br&gt;Default value: **ButtonRole.NORMAL |
+| value | [ButtonRole](arkts-arkui-buttonrole-e.md) | Yes | Role of the button.<br>Default value: **ButtonRole.NORMAL |
 
 ## stateEffect
 
@@ -382,7 +382,7 @@ Specifies whether to enable the pressed state effect when the button is clicked.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to enable the pressed state effect when the button is clicked.&lt;br&gt;**true**: The pressed state effect is enabled. **false**: The pressed state effect is disabled.&lt;br&gt;Default value: **true |
+| value | boolean | Yes | Whether to enable the pressed state effect when the button is clicked.<br>**true**: The pressed state effect is enabled. **false**: The pressed state effect is disabled.<br>Default value: **true |
 
 ## type
 
@@ -410,5 +410,5 @@ Sets the button type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ButtonType](arkts-arkui-buttontype-e.md) | Yes | Button type.&lt;br&gt;API version 18 and later: The default value is **ButtonType.ROUNDED_RECTANGLE**. |
+| value | [ButtonType](arkts-arkui-buttontype-e.md) | Yes | Button type.<br>API version 18 and later: The default value is **ButtonType.ROUNDED_RECTANGLE**. |
 

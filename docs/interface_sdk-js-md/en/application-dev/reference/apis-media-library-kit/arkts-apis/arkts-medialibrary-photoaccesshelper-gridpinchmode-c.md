@@ -15,7 +15,7 @@ Represents the pinch mode of the grid in the picker.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'photoAccessHelper';
 ```
 
 ## defaultGridLevel

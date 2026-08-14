@@ -60,7 +60,7 @@ The node is queried successfully.
 SEARCH_SUCCESS_NEXT_BYPASS_DESCENDANTS = 1
 ```
 
-The node is queried successfully. Use the **bypassSelfDescendants** parameter to quickly obtain the result in the next query.
+The node query is successful. It is recommended to use the parameter bypassSelfDescendants in the next query to improve query efficiency.
 
 **Since:** 23
 

@@ -45,7 +45,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 try {
   let uri = dataUriUtils.deleteId('com.example.dataUriUtils/1221');
   console.info(`delete id with the uri is: ${uri}`);
-} catch(err) {
+} catch (err) {
   console.error(`delete id err, code: ${(err as BusinessError).code}, msg: ${(err as BusinessError).message}`);
 }
 ```

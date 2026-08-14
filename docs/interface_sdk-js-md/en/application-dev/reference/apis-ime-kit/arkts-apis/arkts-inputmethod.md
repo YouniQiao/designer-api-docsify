@@ -15,7 +15,7 @@ The **inputMethod** module is oriented to common foreground applications (system
 ## Modules to Import
 
 ```TypeScript
-import { inputMethod } from '@kit.IMEKit';
+import { inputMethod } from 'inputMethod';
 ```
 
 ## Summary

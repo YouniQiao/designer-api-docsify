@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { insightIntentDriver } from '@kit.AbilityKit';
+import { insightIntentDriver } from 'insightIntentDriver';
 ```
 
 ## getInsightIntentInfoByIntentName
@@ -34,9 +34,9 @@ Obtains the intent information on the current device based on the bundle name, m
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name of the application.&lt;br&gt;**NOTE：**&lt;br&gt; If the bundle name does not exist, an empty object is returned. |
-| moduleName | string | Yes | Module name.&lt;br&gt;**NOTE：**&lt;br&gt; If the module name does not exist, an empty object is returned. |
-| intentName | string | Yes | Intent name.&lt;br&gt;**NOTE：**&lt;br&gt; If the intent name does not exist, an empty object is returned. |
+| bundleName | string | Yes | Bundle name of the application.<br>**NOTE：**<br> If the bundle name does not exist, an empty object is returned. |
+| moduleName | string | Yes | Module name.<br>**NOTE：**<br> If the module name does not exist, an empty object is returned. |
+| intentName | string | Yes | Intent name.<br>**NOTE：**<br> If the intent name does not exist, an empty object is returned. |
 | intentFlags | int | Yes | Flag of the intent information ( [InsightIntentInfo](arkts-ability-insightintentdriver-insightintentinfo-i-sys.md#InsightIntentInfo-(System-API))). It is used to query full or brief intent information. For details, see [GetInsightIntentFlag](arkts-ability-insightintentdriver-getinsightintentflag-e-sys.md#GetInsightIntentFlag-(System-API)). |
 
 **Return value:**

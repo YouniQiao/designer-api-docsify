@@ -45,10 +45,18 @@ import { sms } from '@kit.TelephonyKit';
 import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
 
 let sendCallback: AsyncCallback<sms.ISendShortMessageCallback> = (err: BusinessError, data: sms.ISendShortMessageCallback) => {
-    console.info(`sendCallback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
+    if (err) {
+        console.error('sendCallback: err->${JSON.stringify(err)}');
+        return;
+    }
+    console.info('sendCallback: data->${JSON.stringify(data)}');
 };
 let deliveryCallback: AsyncCallback<sms.IDeliveryShortMessageCallback> = (err: BusinessError, data: sms.IDeliveryShortMessageCallback) => {
-    console.info(`deliveryCallback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
+    if (err) {
+        console.error('deliveryCallback: err->${JSON.stringify(err)}');
+        return;
+    }
+    console.info('deliveryCallback: data->${JSON.stringify(data)}'); 
 };
 let options: sms.SendMessageOptions = {
     slotId: 0,
@@ -115,10 +123,18 @@ import { sms } from '@kit.TelephonyKit';
 import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
 
 let sendCallback: AsyncCallback<sms.ISendShortMessageCallback> = (err: BusinessError, data: sms.ISendShortMessageCallback) => {
-    console.info(`sendCallback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
+    if (err) {
+        console.error('sendCallback: err->${JSON.stringify(err)}');
+        return;
+    }
+    console.info('sendCallback: data->${JSON.stringify(data)}');
 };
 let deliveryCallback: AsyncCallback<sms.IDeliveryShortMessageCallback> = (err: BusinessError, data: sms.IDeliveryShortMessageCallback) => {
-    console.info(`deliveryCallback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
+    if (err) {
+        console.error('deliveryCallback: err->${JSON.stringify(err)}');
+        return;
+    }
+    console.info('deliveryCallback: data->${JSON.stringify(data)}'); 
 };
 let options: sms.SendMessageOptions = {
     slotId: 0,
@@ -133,7 +149,7 @@ let promise = sms.sendShortMessage(options);
 promise.then(() => {
     console.info(`sendShortMessage success`);
 }).catch((err: BusinessError) => {
-    console.error(`sendShortMessage failed, promise: err->${JSON.stringify(err)}`);
+    console.error(`sendShortMessage failed, promise: errCode:${err.code},errMsg:${err.message}`);
 });
 ```
 

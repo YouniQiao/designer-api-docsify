@@ -64,7 +64,7 @@ state: BlanklessFrameInterpolationState
 
 1.当前插帧状态 设备行为差异:仅支持手机平台，其他平台返回801
 
-**类型：** [BlanklessFrameInterpolationState](../../apis-na/arkts-apis/arkts-na-webview-blanklessframeinterpolationstate-e.md)
+**类型：** [BlanklessFrameInterpolationState](arkts-arkweb-webview-blanklessframeinterpolationstate-e.md)
 
 **起始版本：** 23
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { telephonyManager } from '@kit.MDMKit';
+import { telephonyManager } from 'telephonyManager';
 ```
 
 ## removeOutgoingCallPolicyNumbers

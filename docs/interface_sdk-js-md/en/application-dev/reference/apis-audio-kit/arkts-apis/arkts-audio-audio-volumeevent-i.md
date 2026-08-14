@@ -15,7 +15,7 @@ Describes the event received by the application when the volume is changed.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'audio';
 ```
 
 ## updateUi

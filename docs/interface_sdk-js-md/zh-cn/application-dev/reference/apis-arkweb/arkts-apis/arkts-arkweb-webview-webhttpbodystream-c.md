@@ -146,7 +146,7 @@ isEof(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | WebHttpBodyStream中的所有数据是否都已被读取。 &lt;br&gt;如果所有数据都已被读取，则返回true。对于分块传输类型的WebHttpBodyStream，在第一次读取尝试之前返回false。 |
+| boolean | WebHttpBodyStream中的所有数据是否都已被读取。 <br>如果所有数据都已被读取，则返回true。对于分块传输类型的WebHttpBodyStream，在第一次读取尝试之前返回false。 |
 
 ## isInMemory
 
@@ -172,7 +172,7 @@ isInMemory(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | WebHttpBodyStream中的上传数据是否在内存中。 &lt;br&gt;如果WebHttpBodyStream中的上传数据完全在内存中，并且所有读取请求都将同步成功，则返回true。对于分块传输类型的数据，预期返回false。 |
+| boolean | WebHttpBodyStream中的上传数据是否在内存中。 <br>如果WebHttpBodyStream中的上传数据完全在内存中，并且所有读取请求都将同步成功，则返回true。对于分块传输类型的数据，预期返回false。 |
 
 ## read
 
@@ -210,5 +210,5 @@ read(size: number): Promise<ArrayBuffer>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 

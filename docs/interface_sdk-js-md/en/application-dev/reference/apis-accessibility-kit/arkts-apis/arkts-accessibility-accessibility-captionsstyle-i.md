@@ -15,7 +15,7 @@ Describes the style of captions.
 ## Modules to Import
 
 ```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
+import { accessibility } from 'accessibility';
 ```
 
 ## backgroundColor
@@ -24,7 +24,7 @@ import { accessibility } from '@kit.AccessibilityKit';
 backgroundColor: int | string
 ```
 
-Background color of captions. **number**: HEX format, used to represent colors defined in either the RGB or ARGB color models. **string**: #rrggbb, #rrggbbaa, #rgb, or #rgba format. Example: opaque red; number: 0xffff0000; string: '#ff0000', '#ff0000ff', '#f00', or '#f00f'
+Describes the caption background color. number: HEX format color, supporting RGB or ARGB. string: supports '#rrggbb', '#rrggbbaa', '#rgb', and '#rgba' formats. Example: opaque red, number: 0xffff0000, string: '#ff0000', '#ff0000ff', '#f00', '#f00f'.
 
 **Type:** int \| string
 
@@ -48,7 +48,7 @@ Background color of captions. **number**: HEX format, used to represent colors d
 fontColor: int | string
 ```
 
-Font color of captions. **number**: HEX format, used to represent colors defined in either the RGB or ARGB color models. **string**: #rrggbb, #rrggbbaa, #rgb, or #rgba format. Example: opaque red; number: 0xffff0000; string: '#ff0000', '#ff0000ff', '#f00', or '#f00f'
+Describes the caption font color. number: HEX format color, supporting RGB or ARGB. string: supports '#rrggbb', '#rrggbbaa', '#rgb', and '#rgba' formats. Example: opaque red, number: 0xffff0000, string: '#ff0000', '#ff0000ff', '#f00', '#f00f'.
 
 **Type:** int \| string
 
@@ -144,7 +144,7 @@ Font scale factor of captions, in percentage. The value ranges from 1 to 200.
 windowColor: int | string
 ```
 
-Window color of captions. **number**: HEX format, used to represent colors defined in either the RGB or ARGB color models. **string**: #rrggbb, #rrggbbaa, #rgb, or #rgba format. Example: opaque red; number: 0xffff0000; string: '#ff0000', '#ff0000ff', '#f00', or '#f00f'
+Describes the caption window color. number: HEX format color, supporting RGB or ARGB. string: supports '#rrggbb', '#rrggbbaa', '#rgb', and '#rgba' formats. Example: opaque red, number: 0xffff0000, string: '#ff0000', '#ff0000ff', '#f00', '#f00f'.
 
 **Type:** int \| string
 

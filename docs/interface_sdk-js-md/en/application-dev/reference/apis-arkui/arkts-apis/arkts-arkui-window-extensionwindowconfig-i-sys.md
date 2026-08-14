@@ -17,7 +17,7 @@ Describes the parameters for creating a window for a UI ServiceExtensionAbility.
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'window';
 ```
 
 ## subWindowOptions

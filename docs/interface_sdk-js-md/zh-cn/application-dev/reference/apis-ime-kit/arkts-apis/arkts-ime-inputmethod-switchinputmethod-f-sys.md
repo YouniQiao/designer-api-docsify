@@ -52,7 +52,7 @@ import { InputMethodSubtype } from '@kit.IMEKit';
 
 async function switchInputMethodWithSubtype() {
   // 1. 获取当前输入法
-  const currentIme: inputMethod.InputMethodProperty | undefined = inputMethod.getCurrentInputMethod();
+  const currentIme: inputMethod.InputMethodProperty = inputMethod.getCurrentInputMethod();
   if (!currentIme) {
     console.error("Failed to get current input method");
     return;
@@ -65,7 +65,7 @@ async function switchInputMethodWithSubtype() {
     console.error(`Failed to switchInputMethod. Code: ${err.code}, message: ${err.message}`);
   }
   // 3. 获取当前输入法子类型
-  const currentSubtype: InputMethodSubtype | undefined = inputMethod.getCurrentInputMethodSubtype();
+  const currentSubtype: InputMethodSubtype = inputMethod.getCurrentInputMethodSubtype();
   if (!currentSubtype) {
     console.error("Failed to get current input subtype");
     return;

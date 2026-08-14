@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { config } from '@kit.AccessibilityKit';
+import { config } from 'config';
 ```
 
 ## startBlinking
@@ -12,7 +12,7 @@ import { config } from '@kit.AccessibilityKit';
 function startBlinking(mode: BlinkingMode, scenario: BlinkingScenario): BlinkResultCode
 ```
 
-Enable the flash or screen to blink for flash alert.
+Enables the flash or screen for blinking reminders.
 
 **Since:** 26.0.0
 
@@ -34,20 +34,20 @@ Enable the flash or screen to blink for flash alert.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mode | [BlinkingMode](arkts-accessibility-config-blinkingmode-e-sys.md) | Yes | Indicates the mode of screen flickering or flash light flashing. |
-| scenario | [BlinkingScenario](arkts-accessibility-config-blinkingscenario-e-sys.md) | Yes | Indicates the scenario that blinking is triggered. |
+| mode | [BlinkingMode](arkts-accessibility-config-blinkingmode-e-sys.md) | Yes | Blinking mode, indicating screen blinking or flash blinking. |
+| scenario | [BlinkingScenario](arkts-accessibility-config-blinkingscenario-e-sys.md) | Yes | Scenario that triggers blinking. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [BlinkResultCode](arkts-accessibility-config-blinkresultcode-e-sys.md) | Returns the result code. |
+| [BlinkResultCode](arkts-accessibility-config-blinkresultcode-e-sys.md) | Result code returned by the API call. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. &lt;br&gt;The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. &lt;br&gt;A non-system application calls a system API. |
-| [9300000](../errorcode-accessibility.md#9300000-accessibility-system-service-abnormal) | System abnormality.Possible causes: &lt;br&gt;1.Internal operation failed. &lt;br&gt;2.Failed to obtain the required service or client object (null pointer). &lt;br&gt;3.IPC communication failed. &lt;br&gt;4.Failed to obtain the accessibility service proxy. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. <br>The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. <br>A non-system application calls a system API. |
+| [9300000](../errorcode-accessibility.md#9300000-accessibility-system-service-abnormal) | System abnormality.Possible causes: <br>1.Internal operation failed. <br>2.Failed to obtain the required service or client object (null pointer). <br>3.IPC communication failed. <br>4.Failed to obtain the accessibility service proxy. |
 

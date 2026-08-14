@@ -15,7 +15,35 @@ Describes information about the touchpad swipe gesture option.
 ## Modules to Import
 
 ```TypeScript
-import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from '@kit.TestKit';
+import { Component } from 'Component';
+import { DisplayRotation } from 'DisplayRotation';
+import { Driver } from 'Driver';
+import { MatchPattern } from 'MatchPattern';
+import { MouseButton } from 'MouseButton';
+import { ON } from 'ON';
+import { On } from 'On';
+import { PointerMatrix } from 'PointerMatrix';
+import { ResizeDirection } from 'ResizeDirection';
+import { UIElementInfo } from 'UIElementInfo';
+import { UIEventObserver } from 'UIEventObserver';
+import { UiDirection } from 'UiDirection';
+import { UiWindow } from 'UiWindow';
+import { WindowMode } from 'WindowMode';
+import { Point } from 'Point';
+import { WindowFilter } from 'WindowFilter';
+import { Rect } from 'Rect';
+import { TouchPadSwipeOptions } from 'TouchPadSwipeOptions';
+import { InputTextMode } from 'InputTextMode';
+import { WindowChangeType } from 'WindowChangeType';
+import { ComponentEventType } from 'ComponentEventType';
+import { WindowChangeOptions } from 'WindowChangeOptions';
+import { ComponentEventOptions } from 'ComponentEventOptions';
+import { TouchOptions } from 'TouchOptions';
+import { KeyOptions } from 'KeyOptions';
+import { PenKey } from 'PenKey';
+import { PenMode } from 'PenMode';
+import { PenKeyOperation } from 'PenKeyOperation';
+import { PenKeyOperationOptions } from 'PenKeyOperationOptions';
 ```
 
 ## speed
@@ -24,7 +52,7 @@ import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPat
 speed?: int
 ```
 
-Swipe speed. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Unit: px/s. &lt;br&gt;Throws error code 17000007 if negative. &lt;br&gt;Default value: 2000
+Swipe speed. <br>Value range:[200, 40000] <br>Unit: px/s. <br>Throws error code 17000007 if negative. <br>Default value: 2000
 
 **Type:** int
 
@@ -46,7 +74,7 @@ Swipe speed. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Unit: px/s. &lt;br&gt;
 stay?: boolean
 ```
 
-Whether the swipe gesture stays on the touchpad for 1s before it is lifted. The value **true** indicates that the swipe gesture stays on the touchpad for 1s, and **false** indicates the opposite. &lt;br&gt;Default value: false
+Whether the swipe gesture stays on the touchpad for 1s before it is lifted. The value **true** indicates that the swipe gesture stays on the touchpad for 1s, and **false** indicates the opposite. <br>Default value: false
 
 **Type:** boolean
 

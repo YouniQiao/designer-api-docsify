@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { emitter } from '@kit.BasicServicesKit';
+import { emitter } from 'emitter';
 ```
 
 ## onEventData

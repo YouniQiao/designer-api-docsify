@@ -38,7 +38,7 @@ autoRefresh?(value: boolean): ColorMetrics
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 使用[resourceColor](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md#resourceColor)方法构造的ColorMetrics对象是否在系统配置变化时自动刷新颜色值。 &lt;br&gt;true表示主动监听系统配置变化，变化时值刷新为对应配置下的资源值。 &lt;br&gt;false表示不主动监听系统配置变化。 |
+| value | boolean | 是 | 使用[resourceColor](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md#resourceColor)方法构造的ColorMetrics对象是否在系统配置变化时自动刷新颜色值。 <br>true表示主动监听系统配置变化，变化时值刷新为对应配置下的资源值。 <br>false表示不主动监听系统配置变化。 |
 
 **返回值：**
 
@@ -116,7 +116,7 @@ static colorWithSpace(colorSpace: ColorSpace, red: number, green: number, blue: 
 | red | number | 是 | 颜色的R分量（红色），值是0~1的浮点数。超出范围时按边界值处理。 |
 | green | number | 是 | 颜色的G分量（绿色），值是0~1的浮点数。超出范围时按边界值处理。 |
 | blue | number | 是 | 颜色的B分量（蓝色），值是0~1的浮点数。超出范围时按边界值处理。 |
-| alpha | number | 否 | 颜色的A分量（透明度），值是0.0~1.0的浮点数，默认值为1.0，不透明。 &lt;br&gt; **说明：** alpha小于0为全透明，大于1为不透明。 |
+| alpha | number | 否 | 颜色的A分量（透明度），值是0.0~1.0的浮点数，默认值为1.0，不透明。 <br> **说明：** alpha小于0为全透明，大于1为不透明。 |
 
 **返回值：**
 
@@ -150,7 +150,7 @@ static numeric(value: number): ColorMetrics
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | HEX格式颜色，支持RGB或者ARGB。 &lt;br&gt;取值范围：[0, 0xffffffff] &lt;br&gt;超出范围时按边界值处理。 |
+| value | number | 是 | HEX格式颜色，支持RGB或者ARGB。 <br>取值范围：[0, 0xffffffff] <br>超出范围时按边界值处理。 |
 
 **返回值：**
 
@@ -228,7 +228,7 @@ static rgba(red: number, green: number, blue: number, alpha?: number): ColorMetr
 | red | number | 是 | 颜色的R分量（红色），值是0~255的整数。超出范围时按边界值处理。 |
 | green | number | 是 | 颜色的G分量（绿色），值是0~255的整数。超出范围时按边界值处理。 |
 | blue | number | 是 | 颜色的B分量（蓝色），值是0~255的整数。超出范围时按边界值处理。 |
-| alpha | number | 否 | 颜色的A分量（透明度），值是0.0~1.0的浮点数，默认值为1.0，不透明。 &lt;br&gt; **说明：** alpha小于0为全透明，大于1为不透明。 |
+| alpha | number | 否 | 颜色的A分量（透明度），值是0.0~1.0的浮点数，默认值为1.0，不透明。 <br> **说明：** alpha小于0为全透明，大于1为不透明。 |
 
 **返回值：**
 

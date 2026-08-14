@@ -20,7 +20,7 @@ Provides the method of switching the cursor position.
 caretPosition(value: int): void
 ```
 
-Called when the position of the insertion cursor is set. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;If the value is less than 0, the value 0 is used. &lt;br&gt;If the value exceeds the text length, the caret is placed at the end of the text. &lt;/p&gt;
+Called when the position of the insertion cursor is set. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>If the value is less than 0, the value 0 is used. <br>If the value exceeds the text length, the caret is placed at the end of the text. &lt;/p&gt;
 
 **Since:** 23
 
@@ -66,7 +66,7 @@ constructor. A constructor used to create a TextInputController object.
 setTextSelection(selectionStart: int, selectionEnd: int, options?: SelectionOptions): void
 ```
 
-Text selection is achieved by specifying the start and end positions of the text. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;If selectionStart or selectionEnd is set to undefined, the value 0 will be used. &lt;br&gt;If selectionMenuHidden is set to true or a 2-in-1 device is used, calling setTextSelection does not display the context menu even when options is set to MenuPolicy.SHOW. &lt;br&gt;If the selected text contains an emoji, the emoji is selected when its start position is within the text selection range. &lt;/p&gt;
+Text selection is achieved by specifying the start and end positions of the text. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>If selectionStart or selectionEnd is set to undefined, the value 0 will be used. <br>If selectionMenuHidden is set to true or a 2-in-1 device is used, calling setTextSelection does not display the context menu even when options is set to MenuPolicy.SHOW. <br>If the selected text contains an emoji, the emoji is selected when its start position is within the text selection range. &lt;/p&gt;
 
 **Since:** 23
 

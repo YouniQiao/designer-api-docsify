@@ -15,7 +15,7 @@ Provides entity recognition capabilities, which can be used to obtain the type a
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'i18n';
 ```
 
 ## constructor

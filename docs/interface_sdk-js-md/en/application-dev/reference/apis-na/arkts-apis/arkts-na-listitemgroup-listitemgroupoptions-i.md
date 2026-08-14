@@ -176,7 +176,7 @@ Describes the ListItemGroup space.
 spaceWidth?: Dimension
 ```
 
-Spacing between list items along the main axis. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;. &lt;br&gt;If this parameter is set to a negative number or a value greater than or equal to the length of the list content area, the default value is used. &lt;br&gt;If this parameter is set to a value less than the width of the list divider, the width of the list divider is used as the spacing. &lt;br&gt; Child components of &lt;em&gt;ListItemGroup&lt;/em&gt; whose &lt;em&gt;visibility&lt;/em&gt; attribute is set to &lt;em&gt;None&lt;/em&gt; are not displayed, but the spacing above and below them still takes effect. &lt;br&gt; If both spaceWidth and space are set, spaceWidth will take precedence. &lt;/p&gt;
+Spacing between list items along the main axis. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;. <br>If this parameter is set to a negative number or a value greater than or equal to the length of the list content area, the default value is used. <br>If this parameter is set to a value less than the width of the list divider, the width of the list divider is used as the spacing. <br> Child components of &lt;em&gt;ListItemGroup&lt;/em&gt; whose &lt;em&gt;visibility&lt;/em&gt; attribute is set to &lt;em&gt;None&lt;/em&gt; are not displayed, but the spacing above and below them still takes effect. <br> If both spaceWidth and space are set, spaceWidth will take precedence. &lt;/p&gt;
 
 **Type:** [Dimension](../../apis-arkui/arkts-apis/arkts-arkui-dimension-t.md)
 

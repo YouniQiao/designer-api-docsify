@@ -15,7 +15,7 @@ The serverCert field of the server certificate, which includes two attributes: F
 ## Modules to Import
 
 ```TypeScript
-import { webSocket } from '@kit.NetworkKit';
+import { webSocket } from 'webSocket';
 ```
 
 ## certPath

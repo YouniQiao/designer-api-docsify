@@ -18,7 +18,7 @@ Provide an interface for the style of a drawable indicator including margin top.
 borderRadius?: Length
 ```
 
-Rounded corner radius of the indicator. It cannot be set in percentage. &lt;br&gt;Value constraint:[0, +∞). &lt;br&gt;Default value:0.0vp.
+Rounded corner radius of the indicator. It cannot be set in percentage. <br>Value constraint:[0, +∞). <br>Default value:0.0vp.
 
 **Type:** [Length](../../apis-arkui/arkts-apis/arkts-arkui-length-t.md)
 
@@ -68,7 +68,7 @@ Define the drawable object for the indicator.
 height?: Length
 ```
 
-Height of the indicator. It cannot be set in percentage. &lt;br&gt;Value constraint:(0, +∞). &lt;br&gt;Default value:2.0vp.
+Height of the indicator. It cannot be set in percentage. <br>Value constraint:(0, +∞). <br>Default value:2.0vp.
 
 **Type:** [Length](../../apis-arkui/arkts-apis/arkts-arkui-length-t.md)
 
@@ -94,7 +94,7 @@ Height of the indicator. It cannot be set in percentage. &lt;br&gt;Value constra
 marginTop?: Length
 ```
 
-Spacing between the indicator and text.It cannot be set in percentage. &lt;br&gt;Value constraint:[0, +∞). &lt;br&gt;Default value:8.0vp.
+Spacing between the indicator and text.It cannot be set in percentage. <br>Value constraint:[0, +∞). <br>Default value:8.0vp.
 
 **Type:** [Length](../../apis-arkui/arkts-apis/arkts-arkui-length-t.md)
 
@@ -120,7 +120,7 @@ Spacing between the indicator and text.It cannot be set in percentage. &lt;br&gt
 width?: Length
 ```
 
-Width of the indicator. It cannot be set in percentage. If it is 0, the width will be equal to the width of the content &lt;br&gt;Default value:0.0vp.
+Width of the indicator. It cannot be set in percentage. If it is 0, the width will be equal to the width of the content <br>Default value:0.0vp.
 
 **Type:** [Length](../../apis-arkui/arkts-apis/arkts-arkui-length-t.md)
 

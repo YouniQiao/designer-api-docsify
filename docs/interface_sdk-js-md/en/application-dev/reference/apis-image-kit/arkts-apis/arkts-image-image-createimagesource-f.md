@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'image';
 ```
 
 ## createImageSource
@@ -30,7 +30,7 @@ Creates an ImageSource instance based on a given URI. Images occupy a large amou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | Image path. Currently, only the application sandbox path is supported. &lt;br&gt;The following formats are supported: .jpg, .png, .gif, .bmp, .webp, .dng, .heic&lt;sup&gt;12+&lt;/sup&gt; (depending on the hardware), .svg&lt;sup&gt;10+&lt;/sup&gt;, and .ico&lt;sup&gt;11+&lt;/sup&gt;. |
+| uri | string | Yes | Image path. Currently, only the application sandbox path is supported. <br>The following formats are supported: .jpg, .png, .gif, .bmp, .webp, .dng, .heic&lt;sup&gt;12+&lt;/sup&gt; (depending on the hardware), .svg&lt;sup&gt;10+&lt;/sup&gt;, and .ico&lt;sup&gt;11+&lt;/sup&gt;. |
 
 **Return value:**
 
@@ -106,7 +106,7 @@ Creates an ImageSource instance based on a given URI. Images occupy a large amou
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | Image path. Currently, only the application sandbox path is supported. &lt;br&gt;The following formats are supported: .jpg, .png, .gif, .bmp, .webp, .dng, .heic&lt;sup&gt;12+&lt;/sup&gt; (depending on the hardware), .svg&lt;sup&gt;10+&lt;/sup&gt;, and .ico&lt;sup&gt;11+&lt;/sup&gt;. |
+| uri | string | Yes | Image path. Currently, only the application sandbox path is supported. <br>The following formats are supported: .jpg, .png, .gif, .bmp, .webp, .dng, .heic&lt;sup&gt;12+&lt;/sup&gt; (depending on the hardware), .svg&lt;sup&gt;10+&lt;/sup&gt;, and .ico&lt;sup&gt;11+&lt;/sup&gt;. |
 | options | [SourceOptions](arkts-image-image-sourceoptions-i.md) | Yes | Image properties, including the image pixel density, pixel format, and image size. |
 
 **Return value:**

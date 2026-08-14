@@ -45,3 +45,31 @@ export function generateControlledDevicePackage(permissionQuery: PermissionQuery
 | [24010000](../errorcode-abilityToolAccessCtrl-sys.md#24010000-入参错误) | Invalid parameter. Permission exceeds 256 characters, specificied tokenId is invalid, etc. |
 | [24010001](../errorcode-abilityToolAccessCtrl-sys.md#24010001-系统服务工作异常) | Service is abnormal. possible cause: IPC failed. |
 
+## 示例
+
+```TypeScript
+import { abilityToolAccessCtrl } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let permissionQuery: Array<abilityToolAccessCtrl.PermissionQuery> = [{
+  operationInfo: [{
+    operationType: abilityToolAccessCtrl.OperationType.CLI,
+    info: {
+      cliCmdName: 'ohos-displayManager',
+      subCliCmdName: 'set-brightness'
+    }
+  }],
+  needTicket: true,
+  remoteInfo: {
+    role: abilityToolAccessCtrl.Role.CONTROLLER,
+    remoteId: 'device123',
+    domainId: 'domain456'
+  }
+}];
+abilityToolAccessCtrl.generateControlledDevicePackage(permissionQuery).then((data: Array<abilityToolAccessCtrl.RemoteAuthPackage>) => {
+  console.info('generateControlledDevicePackage success, data: ' + JSON.stringify(data));
+}).catch((err: BusinessError): void => {
+  console.error(`generateControlledDevicePackage fail, code: ${err.code}, message: ${err.message}`);
+});
+```
+

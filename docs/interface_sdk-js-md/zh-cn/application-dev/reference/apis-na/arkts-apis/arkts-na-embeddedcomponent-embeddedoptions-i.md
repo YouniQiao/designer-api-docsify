@@ -18,7 +18,7 @@
 areaChangePlaceholder?: Record<string, ComponentContentBase>
 ```
 
-设置尺寸变化占位符，在EmbeddedComponent尺寸发生变化并且内部渲染未完成时显示。&lt;br/&gt;key为尺寸变化场景类型（如"FOLD_TO_EXPAND"表示折叠展开场景），value为对应场景的占位符组件。 当前支持的键值包括：FOLD_TO_EXPAND。传入不支持的键值时，该占位符不生效。&lt;br/&gt;默认值：undefined，不设置尺寸变化占位符。
+设置尺寸变化占位符，在EmbeddedComponent尺寸发生变化并且内部渲染未完成时显示。<br/>key为尺寸变化场景类型（如"FOLD_TO_EXPAND"表示折叠展开场景），value为对应场景的占位符组件。 当前支持的键值包括：FOLD_TO_EXPAND。传入不支持的键值时，该占位符不生效。<br/>默认值：undefined，不设置尺寸变化占位符。
 
 **类型：** Record&lt;string, [ComponentContentBase](arkts-na-componentcontent-componentcontentbase-c.md)&gt;
 
@@ -64,7 +64,7 @@ dpiFollowStrategy?: EmbeddedDpiFollowStrategy
 placeholder?: ComponentContentBase
 ```
 
-设置占位符，在EmbeddedComponent与EmbeddedUIExtensionAbility建立连接前显示。&lt;br/&gt;默认值：undefined，不设置占位符。
+设置占位符，在EmbeddedComponent与EmbeddedUIExtensionAbility建立连接前显示。<br/>默认值：undefined，不设置占位符。
 
 **类型：** [ComponentContentBase](arkts-na-componentcontent-componentcontentbase-c.md)
 

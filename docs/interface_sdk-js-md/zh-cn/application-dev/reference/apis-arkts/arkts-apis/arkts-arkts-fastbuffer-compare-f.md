@@ -31,7 +31,7 @@ function compare(buf1: FastBuffer | Uint8Array, buf2: FastBuffer | Uint8Array): 
 
 | 类型 | 说明 |
 | --- | --- |
-| -1 | 如果buf1与buf2相同，则返回0。&lt;br/&gt;如果排序时buf1位于buf2之后，则返回1。&lt;br/&gt;如果排序时buf1位于buf2之前，则返回-1。 |
+| -1 | 如果buf1与buf2相同，则返回0。<br/>如果排序时buf1位于buf2之后，则返回1。<br/>如果排序时buf1位于buf2之前，则返回-1。 |
 
 **错误码：**
 

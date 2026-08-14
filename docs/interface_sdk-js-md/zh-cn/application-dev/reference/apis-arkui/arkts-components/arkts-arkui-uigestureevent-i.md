@@ -39,8 +39,8 @@ addGesture<T>(gesture: GestureHandler<T>, priority?: GesturePriority, mask?: Ges
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | gesture | GestureHandler&lt;T&gt; | 是 | 手势处理器对象。 |
-| priority | GesturePriority | 否 | 绑定手势的优先级。&lt;br&gt;默认值：GesturePriority.NORMAL |
-| mask | GestureMask | 否 | 事件响应设置。&lt;br&gt;默认值：GestureMask.Normal |
+| priority | GesturePriority | 否 | 绑定手势的优先级。<br>默认值：GesturePriority.NORMAL |
+| mask | GestureMask | 否 | 事件响应设置。<br>默认值：GestureMask.Normal |
 
 ## addParallelGesture
 
@@ -69,7 +69,7 @@ addParallelGesture<T>(gesture: GestureHandler<T>, mask?: GestureMask): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | gesture | GestureHandler&lt;T&gt; | 是 | 手势处理器对象。 |
-| mask | GestureMask | 否 | 事件响应设置。&lt;br&gt;默认值：GestureMask.Normal |
+| mask | GestureMask | 否 | 事件响应设置。<br>默认值：GestureMask.Normal |
 
 ## clearGestures
 

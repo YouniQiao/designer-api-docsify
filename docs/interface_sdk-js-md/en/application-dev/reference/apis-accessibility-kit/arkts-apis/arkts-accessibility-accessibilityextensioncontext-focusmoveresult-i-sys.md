@@ -1,6 +1,6 @@
 # FocusMoveResult (System API)
 
-Queries the return value type of the target accessibility nodes.
+Return value type of the accessibility node query.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ Queries the return value type of the target accessibility nodes.
 result: FocusMoveResultCode
 ```
 
-Type of the return value.
+Result type of the accessibility node query.
 
 **Type:** [FocusMoveResultCode](arkts-accessibility-accessibility-focusmoveresultcode-e-sys.md)
 
@@ -42,7 +42,7 @@ Type of the return value.
 target: Array<AccessibilityElement>
 ```
 
-Target accessibility nodes.
+List of accessibility nodes returned by the query.
 
 **Type:** Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;
 

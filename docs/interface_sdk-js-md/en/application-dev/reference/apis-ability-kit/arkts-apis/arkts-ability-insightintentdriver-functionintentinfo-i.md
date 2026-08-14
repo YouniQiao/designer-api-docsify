@@ -19,6 +19,6 @@ Defines the parameter type of the @InsightIntentFunctionMethod decorator. All pa
 ## Modules to Import
 
 ```TypeScript
-import { insightIntentDriver } from '@kit.AbilityKit';
+import { insightIntentDriver } from 'insightIntentDriver';
 ```
 

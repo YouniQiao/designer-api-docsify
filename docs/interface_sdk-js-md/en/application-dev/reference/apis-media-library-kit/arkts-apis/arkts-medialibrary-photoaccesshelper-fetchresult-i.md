@@ -15,7 +15,7 @@ FetchResult provides APIs to manage the file retrieval result.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'photoAccessHelper';
 ```
 
 ## close
@@ -521,7 +521,7 @@ Obtains the file asset array corresponding to the specified index set in the res
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: &lt;br&gt;1.The indexSet is null, undefined or empty. &lt;br&gt;2.The indexSet length is bigger than 500. &lt;br&gt;3.The max value of indexSet is equal or bigger than the fetch result length. &lt;br&gt;4.The min value of indexSet is less than 0. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes: <br>1.The indexSet is null, undefined or empty. <br>2.The indexSet length is bigger than 500. <br>3.The max value of indexSet is equal or bigger than the fetch result length. <br>4.The min value of indexSet is less than 0. |
 
 ## isAfterLast
 

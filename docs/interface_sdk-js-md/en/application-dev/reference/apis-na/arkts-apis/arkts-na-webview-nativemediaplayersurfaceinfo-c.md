@@ -18,7 +18,7 @@ Implements a **NativeMediaPlayerSurfaceInfo** object to provide the surface info
 id: string
 ```
 
-Surface ID, which is the **psurfaceid** of the native image used for rendering at the same layer.&lt;br&gt;For details, see [NativeEmbedDataInfo](../../apis-arkweb/arkts-components/arkts-arkweb-nativeembeddatainfo-i.md#NativeEmbedDataInfo).
+Surface ID, which is the **psurfaceid** of the native image used for rendering at the same layer.<br>For details, see [NativeEmbedDataInfo](../../apis-arkweb/arkts-components/arkts-arkweb-nativeembeddatainfo-i.md#NativeEmbedDataInfo).
 
 **Type:** string
 

@@ -3,7 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
-import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
+import { PanelInfo } from 'PanelInfo';
+import { PanelType } from 'PanelType';
+import { PanelFlag } from 'PanelFlag';
 ```
 
 ## Summary

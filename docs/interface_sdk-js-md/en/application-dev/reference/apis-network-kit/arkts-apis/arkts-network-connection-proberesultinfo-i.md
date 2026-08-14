@@ -15,7 +15,7 @@ Defines the probe result information.
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'connection';
 ```
 
 ## lossRate

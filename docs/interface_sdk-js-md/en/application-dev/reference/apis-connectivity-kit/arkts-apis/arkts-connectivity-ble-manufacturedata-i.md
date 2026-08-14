@@ -15,7 +15,7 @@ Describes the manufacturer data.
 ## Modules to Import
 
 ```TypeScript
-import { ble } from '@kit.ConnectivityKit';
+import { ble } from 'ble';
 ```
 
 ## manufactureId

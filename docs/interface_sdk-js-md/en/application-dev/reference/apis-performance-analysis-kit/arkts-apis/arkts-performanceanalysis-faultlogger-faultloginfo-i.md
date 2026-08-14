@@ -15,7 +15,7 @@ Defines the data structure of the fault log information.
 ## Modules to Import
 
 ```TypeScript
-import { FaultLogger } from '@kit.PerformanceAnalysisKit';
+import { FaultLogger } from 'FaultLogger';
 ```
 
 ## fullLog

@@ -15,7 +15,7 @@ Describes the settings for taking an image.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'camera';
 ```
 
 ## compressionQuality

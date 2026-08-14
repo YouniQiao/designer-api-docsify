@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'print';
 ```
 
 ## unregisterWatermarkCallback
@@ -32,7 +32,7 @@ Unregister to listen for watermark handling.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [WatermarkCallback](arkts-basicservices-print-watermarkcallback-t.md) | No | Indicates the callback type used in registering to listen for watermark handling. &lt;br&gt;Indicates the callback type used in registering to listen for watermark handling. |
+| callback | [WatermarkCallback](arkts-basicservices-print-watermarkcallback-t.md) | No | Indicates the callback type used in registering to listen for watermark handling. <br>Indicates the callback type used in registering to listen for watermark handling. |
 
 **Error codes:**
 

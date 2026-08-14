@@ -38,7 +38,7 @@ Sets whether the **LengthMetrics** object automatically updates with system conf
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether the **LengthMetrics** object constructed using [resource](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md#resource) automatically refreshes the value when the system configuration changes. &lt;br&gt;**true**: The object proactively listens to the system configuration changes, and refreshes the value to the resource value corresponding to the configuration when the configuration changes. &lt;br&gt;**false**: The object does not proactively listen to the system configuration changes. |
+| value | boolean | Yes | Whether the **LengthMetrics** object constructed using [resource](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md#resource) automatically refreshes the value when the system configuration changes. <br>**true**: The object proactively listens to the system configuration changes, and refreshes the value to the resource value corresponding to the configuration when the configuration changes. <br>**false**: The object does not proactively listen to the system configuration changes. |
 
 **Return value:**
 
@@ -72,7 +72,7 @@ A constructor used to create a **LengthMetrics** instance. If the **unit** param
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Value of the length property. &lt;br&gt;Value range: [0, +∞). |
+| value | number | Yes | Value of the length property. <br>Value range: [0, +∞). |
 | unit | [LengthUnit](../../apis-na/arkts-apis/arkts-na-graphics-lengthunit-e.md) | No | Unit of the length property. |
 
 ## fp
@@ -101,7 +101,7 @@ Creates a length property in fp.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Value of the length property. &lt;br&gt;Value range: (-∞, +∞). |
+| value | number | Yes | Value of the length property. <br>Value range: (-∞, +∞). |
 
 **Return value:**
 
@@ -135,7 +135,7 @@ Creates a length property in lpx.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Value of the length property. &lt;br&gt;Value range: (-∞, +∞). |
+| value | number | Yes | Value of the length property. <br>Value range: (-∞, +∞). |
 
 **Return value:**
 
@@ -169,7 +169,7 @@ Creates a length property in percent. The value **1** indicates 100%.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Value of the length property. &lt;br&gt;Value range: [0, 1]. |
+| value | number | Yes | Value of the length property. <br>Value range: [0, 1]. |
 
 **Return value:**
 
@@ -203,7 +203,7 @@ Creates a length property in px.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Value of the length property. &lt;br&gt;Value range: (-∞, +∞). |
+| value | number | Yes | Value of the length property. <br>Value range: (-∞, +∞). |
 
 **Return value:**
 
@@ -317,7 +317,7 @@ Creates a length property in vp.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Value of the length property. &lt;br&gt;Value range: (-∞, +∞). |
+| value | number | Yes | Value of the length property. <br>Value range: (-∞, +∞). |
 
 **Return value:**
 

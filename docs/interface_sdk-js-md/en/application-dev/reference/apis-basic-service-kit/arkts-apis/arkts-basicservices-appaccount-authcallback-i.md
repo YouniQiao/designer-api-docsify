@@ -15,7 +15,7 @@ Implements authenticator callbacks.
 ## Modules to Import
 
 ```TypeScript
-import { appAccount } from '@kit.BasicServicesKit';
+import { appAccount } from 'appAccount';
 ```
 
 ## onRequestContinued

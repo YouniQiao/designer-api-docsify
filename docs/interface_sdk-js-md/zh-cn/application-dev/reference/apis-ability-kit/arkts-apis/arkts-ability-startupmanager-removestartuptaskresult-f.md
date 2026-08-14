@@ -43,14 +43,14 @@ import { BusinessError } from '@kit.BasicServicesKit';
 export default class EntryAbility extends UIAbility {
   onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
     hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onCreate');
-    try{
+    try {
       startupManager.run(['StartupTask_001', 'libentry_001']).then(() => {
         hilog.info(0x0000, 'testTag', 'StartupTask_001 init successful');
       }).catch((error: BusinessError) => {
         hilog.error(0x0000, 'testTag', `StartupTask_001 promise catch failed, error code: ${error.code}, error msg: ${error.message}`);
       });
     } catch (error) {
-      hilog.error(0x0000, 'testTag', `StartupTask_001.run failed, error code: ${error.code}, error msg: ${error.message}`);
+      hilog.error(0x0000, 'testTag', `startupManager.run failed, error code: ${error.code}, error msg: ${error.message}`);
     }
   }
 

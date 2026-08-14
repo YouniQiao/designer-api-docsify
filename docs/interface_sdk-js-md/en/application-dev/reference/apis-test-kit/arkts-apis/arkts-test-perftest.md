@@ -3,7 +3,10 @@
 ## Modules to Import
 
 ```TypeScript
-import { PerfTestStrategy, PerfMetric, PerfTest, PerfMeasureResult } from '@kit.TestKit';
+import { PerfMetric } from 'PerfMetric';
+import { PerfTestStrategy } from 'PerfTestStrategy';
+import { PerfMeasureResult } from 'PerfMeasureResult';
+import { PerfTest } from 'PerfTest';
 ```
 
 ## Summary

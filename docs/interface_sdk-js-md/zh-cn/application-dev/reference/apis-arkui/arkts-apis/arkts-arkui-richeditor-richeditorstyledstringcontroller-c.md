@@ -38,7 +38,7 @@ getSelection(): RichEditorRange | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [RichEditorRange](arkts-arkui-richeditor-richeditorrange-i.md) | 选中区域范围。&lt;br/&gt;返回undefined时表示controller未与组件绑定。 |
+| [RichEditorRange](arkts-arkui-richeditor-richeditorrange-i.md) | 选中区域范围。<br/>返回undefined时表示controller未与组件绑定。 |
 
 ## getStyledString
 
@@ -64,7 +64,7 @@ getStyledString(): MutableStyledString | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [MutableStyledString](arkts-arkui-styledstring-mutablestyledstring-c.md) | 富文本组件显示的属性字符串。&lt;br/&gt;返回undefined时表示controller未与组件绑定。 |
+| [MutableStyledString](arkts-arkui-styledstring-mutablestyledstring-c.md) | 富文本组件显示的属性字符串。<br/>返回undefined时表示controller未与组件绑定。 |
 
 ## onContentChanged
 
@@ -116,5 +116,5 @@ setStyledString(styledString: StyledString): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| styledString | [StyledString](arkts-arkui-styledstring-styledstring-c.md) | 是 | 属性字符串。&lt;br/&gt;**说明：** &lt;br/&gt;StyledString的子类 [MutableStyledString](arkts-arkui-mutablestyledstring-c.md#MutableStyledString)也可以作为入参值。 |
+| styledString | [StyledString](arkts-arkui-styledstring-styledstring-c.md) | 是 | 属性字符串。<br/>**说明：** <br/>StyledString的子类 [MutableStyledString](arkts-arkui-mutablestyledstring-c.md#MutableStyledString)也可以作为入参值。 |
 

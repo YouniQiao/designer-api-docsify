@@ -17,7 +17,7 @@ Defines the parameter information used to update the database. The data provider
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+import { reminderAgentManager } from 'reminderAgentManager';
 ```
 
 ## equalTo

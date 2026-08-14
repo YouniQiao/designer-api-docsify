@@ -3,7 +3,21 @@
 ## Modules to Import
 
 ```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
+import { ConflictFiles } from 'ConflictFiles';
+import { FileFilter } from 'FileFilter';
+import { Filter } from 'Filter';
+import { Options } from 'Options';
+import { ReaderIteratorResult } from 'ReaderIteratorResult';
+import { WatchEvent } from 'WatchEvent';
+import { WatchEventListener } from 'WatchEventListener';
+import { Watcher } from 'Watcher';
+import { ReadOptions } from 'ReadOptions';
+import { ReadTextOptions } from 'ReadTextOptions';
+import { WriteOptions } from 'WriteOptions';
+import { ListFileExtOptions } from 'ListFileExtOptions';
+import { ListFileOptions } from 'ListFileOptions';
+import { DfsListeners } from 'DfsListeners';
+import { TaskSignal } from 'TaskSignal';
 ```
 
 ## createReadStream
@@ -29,7 +43,7 @@ Creates a readable stream. This API returns the result synchronously.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Path of the file. |
-| options | [ReadStreamOptions](../../apis-na/arkts-apis/arkts-na-file-fs-readstreamoptions-i.md) | No | The options are as follows:&lt;br&gt;- **start** (number): start position to read data, in bytes. This parameter is optional. By default, data is read from the current position.&lt;br&gt;- **end** ( number): end position to read data, in bytes. This parameter is optional. The default value is the end of the file. |
+| options | [ReadStreamOptions](../../apis-na/arkts-apis/arkts-na-file-fs-readstreamoptions-i.md) | No | The options are as follows:<br>- **start** (number): start position to read data, in bytes. This parameter is optional. By default, data is read from the current position.<br>- **end** ( number): end position to read data, in bytes. This parameter is optional. The default value is the end of the file. |
 
 **Return value:**
 

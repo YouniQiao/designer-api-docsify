@@ -19,7 +19,7 @@ Depth fusion class. It inherits from [DepthFusionQuery](arkts-camera-camera-dept
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'camera';
 ```
 
 ## enableDepthFusion

@@ -15,7 +15,11 @@ Defines the type of the param used for calling the API.
 ## Modules to Import
 
 ```TypeScript
-import { HuksCryptoExtensionCertInfo, HuksCryptoExtensionResultCode, HuksCryptoExtensionParams, HuksCryptoExtensionParam, HuksCryptoExtensionResult } from '@kit.UniversalKeystoreKit';
+import { HuksCryptoExtensionCertInfo } from 'HuksCryptoExtensionCertInfo';
+import { HuksCryptoExtensionResult } from 'HuksCryptoExtensionResult';
+import { HuksCryptoExtensionResultCode } from 'HuksCryptoExtensionResultCode';
+import { HuksCryptoExtensionParam } from 'HuksCryptoExtensionParam';
+import { HuksCryptoExtensionParams } from 'HuksCryptoExtensionParams';
 ```
 
 ## tag

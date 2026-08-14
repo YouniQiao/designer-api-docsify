@@ -70,7 +70,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 export default class EntryAbility extends UIExtensionAbility {
   onSessionCreate(want: Want, session: UIExtensionContentSession) {
     const extensionHostWindow = session.getUIExtensionHostWindowProxy();
-    // 隐藏非安全窗口
+    // 隐藏不安全窗口
     extensionHostWindow.hideNonSecureWindows(true).then(() => {
       console.info(`Succeeded in hiding the non-secure windows.`);
     }).catch((err: BusinessError) => {
@@ -80,7 +80,7 @@ export default class EntryAbility extends UIExtensionAbility {
   
   onSessionDestroy(session: UIExtensionContentSession) {
     const extensionHostWindow = session.getUIExtensionHostWindowProxy();
-    // 取消隐藏非安全窗口
+    // 取消隐藏不安全窗口
     extensionHostWindow.hideNonSecureWindows(false).then(() => {
       console.info(`Succeeded in showing the non-secure windows.`);
     }).catch((err: BusinessError) => {

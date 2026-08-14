@@ -1,6 +1,6 @@
 # AccessibilityFocusScene（系统接口）
 
-Enumeration of scenes of accessibility focus.
+表示无障碍聚焦的场景参数的枚举。
 
 **起始版本：** 26.0.0
 
@@ -20,7 +20,7 @@ Enumeration of scenes of accessibility focus.
 HOVER_FOCUS = 1
 ```
 
-Hover to move the accessibility focus.
+表示当前聚焦的场景为点击聚焦。
 
 **起始版本：** 26.0.0
 
@@ -42,7 +42,7 @@ Hover to move the accessibility focus.
 SWIPE_FOCUS = 2
 ```
 
-Swipe finger to move the accessibility focus.
+表示当前聚焦的场景为滑动聚焦。
 
 **起始版本：** 26.0.0
 
@@ -64,7 +64,7 @@ Swipe finger to move the accessibility focus.
 SCROLL_FOCUS = 3
 ```
 
-Move the accessibility focus after scrolling the component.
+表示当前聚焦的场景为滚动聚焦。
 
 **起始版本：** 26.0.0
 

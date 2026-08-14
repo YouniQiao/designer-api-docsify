@@ -58,6 +58,54 @@ cityId: string
 
 **系统接口：** 此接口为系统接口。
 
+## latitude
+
+```TypeScript
+latitude: double
+```
+
+以十进制度数表示的时区城市纬度信息(°)。
+
+**类型：** double
+
+**起始版本：** 26.1.0
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TimeZoneCityItem-latitude: double--><!--Device-TimeZoneCityItem-latitude: double-End-->
+
+**系统能力：** SystemCapability.Global.I18n
+
+**系统接口：** 此接口为系统接口。
+
+## longitude
+
+```TypeScript
+longitude: double
+```
+
+时区城市的经度信息，十进制度数(°)。
+
+**类型：** double
+
+**起始版本：** 26.1.0
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TimeZoneCityItem-longitude: double--><!--Device-TimeZoneCityItem-longitude: double-End-->
+
+**系统能力：** SystemCapability.Global.I18n
+
+**系统接口：** 此接口为系统接口。
+
 ## offset
 
 ```TypeScript

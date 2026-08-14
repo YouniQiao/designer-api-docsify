@@ -21,6 +21,6 @@ Represents the custom data type for applications only. It is a child class of [U
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from '@kit.ArkData';
+import { unifiedDataChannel } from 'unifiedDataChannel';
 ```
 

@@ -15,7 +15,7 @@ The **uriPermissionManager** module provides capabilities for granting the permi
 ## Modules to Import
 
 ```TypeScript
-import { uriPermissionManager } from '@kit.AbilityKit';
+import { uriPermissionManager } from 'uriPermissionManager';
 ```
 
 ## Summary

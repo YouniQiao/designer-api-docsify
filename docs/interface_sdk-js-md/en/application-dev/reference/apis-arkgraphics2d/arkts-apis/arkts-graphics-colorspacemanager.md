@@ -27,7 +27,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { colorSpaceManager } from '@kit.ArkGraphics2D';
+import { colorSpaceManager } from 'colorSpaceManager';
 ```
 
 ## Summary

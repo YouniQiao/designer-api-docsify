@@ -36,7 +36,7 @@ onStart(args?: ChildProcessArgs): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| args | [ChildProcessArgs](arkts-ability-app-ability-childprocessargs-childprocessargs-i.md) | 否 | 传递到子进程的参数。 |
+| args | [ChildProcessArgs](arkts-ability-app-ability-childprocessargs-childprocessargs-i.md) | 否 | 传递到子进程的参数。参数为可选，不传或传null时使用默认配置启动。 |
 
 ## 示例
 

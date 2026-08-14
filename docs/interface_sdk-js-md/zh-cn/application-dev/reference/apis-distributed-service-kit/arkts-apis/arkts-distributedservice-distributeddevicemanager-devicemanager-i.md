@@ -37,7 +37,7 @@ bindTarget(deviceId: string, bindParam: { [key: string]: Object; }, callback: As
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 设备标识。长度范围1~255字符。 |
-| bindParam | { [key: string]: Object; } | 是 | 认证参数。由开发者自行决定传入的键值对。默认会携带以下key值： &lt;br&gt;bindType 此值是绑定的类型，必填。 &lt;br /&gt;-1：PIN码。 &lt;br&gt;targetPkgName 绑定目标的包名。 &lt;br&gt;appName 尝试绑定目标的应用程序名称。 &lt;br&gt;appOperation 应用程序要绑定目标的原因。 &lt;br&gt;customDescription 操作的详细说明。 |
+| bindParam | { [key: string]: Object; } | 是 | 认证参数。由开发者自行决定传入的键值对。默认会携带以下key值： <br>bindType 此值是绑定的类型，必填。 &lt;br /&gt;-1：PIN码。 <br>targetPkgName 绑定目标的包名。 <br>appName 尝试绑定目标的应用程序名称。 <br>appOperation 应用程序要绑定目标的原因。 <br>customDescription 操作的详细说明。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;{deviceId: string;}&gt; | 是 |  |
 
 **错误码：**
@@ -111,7 +111,7 @@ bindTarget(deviceId: string, bindParam: Record<string, int | string>, callback: 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | deviceId | string | 是 | 设备标识。长度范围1~255字符。 |
-| bindParam | Record&lt;string, int \| string&gt; | 是 | 认证参数。由开发者自行决定传入的键值对。 默认会携带以下key值： &lt;br&gt;bindType 此值是绑定的类型，必填。 &lt;br /&gt;-1：PIN码。 &lt;br&gt;targetPkgName 绑定目标的包名。 &lt;br&gt;appName 尝试绑定目标的应用程序名称。 &lt;br&gt;appOperation 应用程序要绑定目标的原因。 &lt;br&gt;customDescription 操作的详细说明。 |
+| bindParam | Record&lt;string, int \| string&gt; | 是 | 认证参数。由开发者自行决定传入的键值对。 默认会携带以下key值： <br>bindType 此值是绑定的类型，必填。 &lt;br /&gt;-1：PIN码。 <br>targetPkgName 绑定目标的包名。 <br>appName 尝试绑定目标的应用程序名称。 <br>appOperation 应用程序要绑定目标的原因。 <br>customDescription 操作的详细说明。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[BindTargetResult](arkts-distributedservice-distributeddevicemanager-bindtargetresult-i.md)&gt; | 是 | 认证结果回调。 |
 
 **错误码：**
@@ -1708,8 +1708,8 @@ startDiscovering(discoverParam: { [key: string]: Object; }, filterOptions?: { [k
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| discoverParam | { [key: string]: Object; } | 是 | 发现标识。 标识发现的目标类型。 &lt;br&gt;discoverTargetType: 发现目标默认为设备，值为1。 |
-| filterOptions | { [key: string]: Object; } | 否 | 发现设备过滤信息。可选，默认为undefined，发现未上线设备。会携带以下key值： &lt;br&gt;availableStatus(0-1)：仅发现设备可信，值为0表示设备不可信。 &lt;br /&gt;-0：设备离线，客户端需要通过调用bindTarget绑定设备。 &lt;br /&gt;-1：设备已在线，客户端可以进行连接。 &lt;br&gt;discoverDistance(0-100)：发现距离本地一定距离内的设备，单位为cm。wifi场景不传该参数。 &lt;br&gt;authenticationStatus(0-1)：根据不同的认证状态发现设备： &lt;br /&gt;-0：设备未认证。 &lt;br /&gt;-1：设备已认证。 &lt;br&gt;authorizationType(0-2)：根据不同的授权类型发现设备： &lt;br /&gt;-0：根据临时协商的会话密钥认证的设备。 &lt;br /&gt;-1：基于同账号密钥进行身份验证的设备。 &lt;br /&gt;-2：基于不同账号凭据密钥认证的设备。 |
+| discoverParam | { [key: string]: Object; } | 是 | 发现标识。 标识发现的目标类型。 <br>discoverTargetType: 发现目标默认为设备，值为1。 |
+| filterOptions | { [key: string]: Object; } | 否 | 发现设备过滤信息。可选，默认为undefined，发现未上线设备。会携带以下key值： <br>availableStatus(0-1)：仅发现设备可信，值为0表示设备不可信。 &lt;br /&gt;-0：设备离线，客户端需要通过调用bindTarget绑定设备。 &lt;br /&gt;-1：设备已在线，客户端可以进行连接。 <br>discoverDistance(0-100)：发现距离本地一定距离内的设备，单位为cm。wifi场景不传该参数。 <br>authenticationStatus(0-1)：根据不同的认证状态发现设备： &lt;br /&gt;-0：设备未认证。 &lt;br /&gt;-1：设备已认证。 <br>authorizationType(0-2)：根据不同的授权类型发现设备： &lt;br /&gt;-0：根据临时协商的会话密钥认证的设备。 &lt;br /&gt;-1：基于同账号密钥进行身份验证的设备。 &lt;br /&gt;-2：基于不同账号凭据密钥认证的设备。 |
 
 **错误码：**
 
@@ -1769,8 +1769,8 @@ startDiscovering(discoverParam: Record<string, int | string>, filterOptions?: Re
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| discoverParam | Record&lt;string, int \| string&gt; | 是 | 发现标识。 标识发现的目标类型。 &lt;br&gt;discoverTargetType: 发现目标默认为设备，值为1。 |
-| filterOptions | Record&lt;string, int \| string&gt; | 否 | 发现设备过滤信息。可选，默认为undefined，发现未上线设备。 会携带以下key值： &lt;br&gt;availableStatus(0-1)：仅发现设备可信，值为0表示设备不可信。 &lt;br /&gt;-0：设备离线，客户端需要通过调用bindTarget绑定设备。 &lt;br /&gt;-1：设备已在线，客户端可以进行连接。 &lt;br&gt;discoverDistance(0-100)：发现距离本地一定距离内的设备，单位为cm。wifi场景不传该参数。 &lt;br&gt;authenticationStatus(0-1)：根据不同的认证状态发现设备： &lt;br /&gt;-0：设备未认证。 &lt;br /&gt;-1：设备已认证。 &lt;br&gt;authorizationType(0-2)：根据不同的授权类型发现设备： &lt;br /&gt;-0：根据临时协商的会话密钥认证的设备。 &lt;br /&gt;-1：基于同账号密钥进行身份验证的设备。 &lt;br /&gt;-2：基于不同账号凭据密钥认证的设备。 |
+| discoverParam | Record&lt;string, int \| string&gt; | 是 | 发现标识。 标识发现的目标类型。 <br>discoverTargetType: 发现目标默认为设备，值为1。 |
+| filterOptions | Record&lt;string, int \| string&gt; | 否 | 发现设备过滤信息。可选，默认为undefined，发现未上线设备。 会携带以下key值： <br>availableStatus(0-1)：仅发现设备可信，值为0表示设备不可信。 &lt;br /&gt;-0：设备离线，客户端需要通过调用bindTarget绑定设备。 &lt;br /&gt;-1：设备已在线，客户端可以进行连接。 <br>discoverDistance(0-100)：发现距离本地一定距离内的设备，单位为cm。wifi场景不传该参数。 <br>authenticationStatus(0-1)：根据不同的认证状态发现设备： &lt;br /&gt;-0：设备未认证。 &lt;br /&gt;-1：设备已认证。 <br>authorizationType(0-2)：根据不同的授权类型发现设备： &lt;br /&gt;-0：根据临时协商的会话密钥认证的设备。 &lt;br /&gt;-1：基于同账号密钥进行身份验证的设备。 &lt;br /&gt;-2：基于不同账号凭据密钥认证的设备。 |
 
 **错误码：**
 

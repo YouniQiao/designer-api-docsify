@@ -211,7 +211,7 @@ getCursorInfo(userId?: int): CursorInfo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| userId | int | 否 | 指定的用户ID。 <如果调用者不是用户0应用，该值默认为调用者的用户ID。 如果调用者是用户0应用，则该值默认为主屏幕的前台用户ID。 |
+| userId | int | 否 | 指定的用户ID。 &lt;如果调用者不是用户0应用，该值默认为调用者的用户ID。 如果调用者是用户0应用，则该值默认为主屏幕的前台用户ID。 |
 
 **返回值：**
 
@@ -415,7 +415,7 @@ isPanelShown(panelInfo: PanelInfo): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 面板显隐状态查询结果。&lt;br/&gt;- true表示被查询的输入法面板处于显示状态。&lt;br/&gt;- false表示被查询的输入法面板处于隐藏状态。 |
+| boolean | 面板显隐状态查询结果。<br/>- true表示被查询的输入法面板处于显示状态。<br/>- false表示被查询的输入法面板处于隐藏状态。 |
 
 **错误码：**
 
@@ -476,7 +476,7 @@ isPanelShown(panelInfo: PanelInfo, displayId: long): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 面板显隐状态查询结果。&lt;br/&gt;- true表示被查询的输入法面板处于显示状态。&lt;br/&gt;- false表示被查询的输入法面板处于隐藏状态。 |
+| boolean | 面板显隐状态查询结果。<br/>- true表示被查询的输入法面板处于显示状态。<br/>- false表示被查询的输入法面板处于隐藏状态。 |
 
 **错误码：**
 
@@ -642,7 +642,7 @@ off(type: 'imeHide', callback?: (info: Array<InputWindowInfo>) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'imeHide' | 是 | 设置监听类型，固定取值'imeHide'。 |
-| callback | (info: Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;) =&gt; void | 否 | 取消订阅的回调函数。 &lt;br&gt;参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | (info: Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;) =&gt; void | 否 | 取消订阅的回调函数。 <br>参数不填写时，取消订阅type对应的所有回调事件。 |
 
 ## 示例
 
@@ -675,7 +675,7 @@ off(type: 'imeShow', callback?: (info: Array<InputWindowInfo>) => void): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'imeShow' | 是 | 设置监听类型，固定取值'imeShow'。 |
-| callback | (info: Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;) =&gt; void | 否 | 取消订阅的回调函数。 &lt;br&gt;参数不填写时，取消订阅type对应的所有回调事件。 |
+| callback | (info: Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;) =&gt; void | 否 | 取消订阅的回调函数。 <br>参数不填写时，取消订阅type对应的所有回调事件。 |
 
 ## 示例
 

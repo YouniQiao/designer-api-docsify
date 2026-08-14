@@ -24,7 +24,7 @@ function move(mechId: int, params: MoveParams): Promise<Result>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mechId | int | 是 | 具身设备ID。 &lt;br&gt;取值限定为整数。 |
+| mechId | int | 是 | 具身设备ID。 <br>取值限定为整数。 |
 | params | [MoveParams](arkts-mechanic-mechanicmanager-moveparams-i-sys.md) | 是 | 移动参数。 |
 
 **返回值：**

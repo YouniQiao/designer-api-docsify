@@ -24,7 +24,7 @@ function stopVibration(stopMode: VibratorStopMode): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| stopMode | [VibratorStopMode](arkts-sensorservice-vibrator-vibratorstopmode-e.md) | 是 | 指定的停止振动模式，用于停止对应模式的马达振动，支持两种：&lt;br&gt;VIBRATOR_STOP_MODE_TIME：停止 [VibrateTime](arkts-sensorservice-vibrator-vibratetime-i.md#VibrateTime)类型的指定时长振动；&lt;br&gt;VIBRATOR_STOP_MODE_PRESET：停止 [VibratePreset](arkts-sensorservice-vibrator-vibratepreset-i.md#VibratePreset)类型的预置振动。&lt;br&gt;此接口无法停止自定义振动（ [VibrateFromFile](arkts-sensorservice-vibrator-vibratefromfile-i.md#VibrateFromFile)和[VibrateFromPattern](arkts-sensorservice-vibrator-vibratefrompattern-i.md#VibrateFromPattern)），请使用 [vibrator.stopVibration&lt;sup&gt;10+&lt;/sup&gt;](#stopVibration)。stopMode需与启动振动时的VibrateEffect类型对应，否则停止操作可能无效。 |
+| stopMode | [VibratorStopMode](arkts-sensorservice-vibrator-vibratorstopmode-e.md) | 是 | 指定的停止振动模式，用于停止对应模式的马达振动，支持两种：<br>VIBRATOR_STOP_MODE_TIME：停止 [VibrateTime](arkts-sensorservice-vibrator-vibratetime-i.md#VibrateTime)类型的指定时长振动；<br>VIBRATOR_STOP_MODE_PRESET：停止 [VibratePreset](arkts-sensorservice-vibrator-vibratepreset-i.md#VibratePreset)类型的预置振动。<br>此接口无法停止自定义振动（ [VibrateFromFile](arkts-sensorservice-vibrator-vibratefromfile-i.md#VibrateFromFile)和[VibrateFromPattern](arkts-sensorservice-vibrator-vibratefrompattern-i.md#VibrateFromPattern)），请使用 [vibrator.stopVibration&lt;sup&gt;10+&lt;/sup&gt;](#stopVibration)。stopMode需与启动振动时的VibrateEffect类型对应，否则停止操作可能无效。 |
 
 **返回值：**
 
@@ -36,7 +36,7 @@ function stopVibration(stopMode: VibratorStopMode): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
@@ -142,14 +142,14 @@ function stopVibration(stopMode: VibratorStopMode, callback: AsyncCallback<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| stopMode | [VibratorStopMode](arkts-sensorservice-vibrator-vibratorstopmode-e.md) | 是 | 指定的停止振动模式，用于停止对应模式的马达振动，支持两种：&lt;br&gt;VIBRATOR_STOP_MODE_TIME：停止 [VibrateTime](arkts-sensorservice-vibrator-vibratetime-i.md#VibrateTime)类型的固定时长振动；&lt;br&gt;VIBRATOR_STOP_MODE_PRESET：停止 [VibratePreset](arkts-sensorservice-vibrator-vibratepreset-i.md#VibratePreset)类型的预置振动。&lt;br&gt;此接口无法停止自定义振动（ [VibrateFromFile](arkts-sensorservice-vibrator-vibratefromfile-i.md#VibrateFromFile)和[VibrateFromPattern](arkts-sensorservice-vibrator-vibratefrompattern-i.md#VibrateFromPattern)），请使用 [vibrator.stopVibration&lt;sup&gt;10+&lt;/sup&gt;](#stopVibration)。stopMode需与启动振动时的 VibrateEffect类型对应，否则停止操作可能无效。 |
+| stopMode | [VibratorStopMode](arkts-sensorservice-vibrator-vibratorstopmode-e.md) | 是 | 指定的停止振动模式，用于停止对应模式的马达振动，支持两种：<br>VIBRATOR_STOP_MODE_TIME：停止 [VibrateTime](arkts-sensorservice-vibrator-vibratetime-i.md#VibrateTime)类型的固定时长振动；<br>VIBRATOR_STOP_MODE_PRESET：停止 [VibratePreset](arkts-sensorservice-vibrator-vibratepreset-i.md#VibratePreset)类型的预置振动。<br>此接口无法停止自定义振动（ [VibrateFromFile](arkts-sensorservice-vibrator-vibratefromfile-i.md#VibrateFromFile)和[VibrateFromPattern](arkts-sensorservice-vibrator-vibratefrompattern-i.md#VibrateFromPattern)），请使用 [vibrator.stopVibration&lt;sup&gt;10+&lt;/sup&gt;](#stopVibration)。stopMode需与启动振动时的 VibrateEffect类型对应，否则停止操作可能无效。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，当马达停止振动成功，err为undefined，否则为错误对象。回调结果可用于确认振动是否成功停止。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission denied. |
 
 ## 示例
@@ -399,7 +399,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 function vibratorDemo() {
   // 查询所有马达设备信息。
   const vibratorInfoList: vibrator.VibratorInfo[] = vibrator.getVibratorInfoSync();
-  // 根据实际业务逻辑获取目标马达, 例如查找本地马达，此处示例仅做展示，开发者需要自行调整筛选逻辑。
+  // 根据实际业务逻辑获取目标马达，例如查找本地马达，此处示例仅做展示，开发者需要自行调整筛选逻辑。
   const targetVibrator = vibratorInfoList.find((vibrator: vibrator.VibratorInfo) => {
     return vibrator.isLocalVibrator;
   });

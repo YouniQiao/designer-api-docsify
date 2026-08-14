@@ -61,7 +61,7 @@ imageSource.createPixelMap().then((pixelMap: image.PixelMap) => {
   try {
     securityManager.setScreenWatermarkImage(wantTemp, pixelMap);
     console.info(`Succeeded in setting screen watermark image.`);
-  } catch(err) {
+  } catch (err) {
     console.error(`Failed to set screen watermark image. Code: ${err.code}, message: ${err.message}`);
   }
 }).catch((err: Error) => {

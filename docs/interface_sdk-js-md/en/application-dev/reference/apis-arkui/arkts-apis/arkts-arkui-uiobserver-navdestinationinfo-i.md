@@ -15,7 +15,7 @@ Information about the **NavDestination** component, returned by the system to de
 ## Modules to Import
 
 ```TypeScript
-import { uiObserver } from '@kit.ArkUI';
+import { uiObserver } from 'uiObserver';
 ```
 
 ## index

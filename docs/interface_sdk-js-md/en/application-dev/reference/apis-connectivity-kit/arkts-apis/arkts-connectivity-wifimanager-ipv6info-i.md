@@ -15,7 +15,7 @@ Wi-Fi IPv6 information.
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'wifiManager';
 ```
 
 ## gateway

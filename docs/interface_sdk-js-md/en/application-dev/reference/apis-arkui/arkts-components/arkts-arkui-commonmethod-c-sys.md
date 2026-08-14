@@ -40,8 +40,8 @@ Defines how the component's content (including the content of it child component
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| effect | [BlendMode](arkts-arkui-blendmode-e.md) \| [Blender](arkts-arkui-blender-t-sys.md) | Yes | Blend mode or blender type, depending on the parameter type.&lt;br&gt;When the parameter type is **BlendMode**, it indicates the blend mode.&lt;br&gt;Default value: **BlendMode.NONE**&lt;br&gt;When the parameter type is **Blender**, it indicates the blender type, used to describe the blending effect.&lt;br&gt;A **Blender** instance must be created using methods, for example, uiEffect.createBrightnessBlender, from the **uiEffect** module. Using a custom object as a parameter will not take effect. |
-| type | [BlendApplyType](arkts-arkui-blendapplytype-e.md) | No | Whether the blend mode is implemented offscreen.&lt;br&gt;Default value: **BlendApplyType.FAST**&lt;br&gt;**NOTE：**&lt;br&gt;1. When this parameter is set to **BlendApplyType.FAST**, the blend mode is not implemented offscreen.&lt;br&gt;2. When this parameter is set to **BlendApplyType.OFFSCREEN**, an offscreen canvas matching the size of the current component is created. The content of the current component (including its child components) is then drawn onto the offscreen canvas, and blended with the existing content on the underlying canvas using the specified blend mode.&lt;br&gt;3. For text components, this API does not apply to emoji expressions when not offscreen.&lt;br&gt;4. Compared with **BlendApplyType.OFFSCREEN**, when this parameter is set to **BlendApplyType.OFFSCREEN_WITH_BACKGROUND**, the system first copies a canvas with a background as the initial background color (the canvas for **BlendApplyType.OFFSCREEN** starts with a transparent background) when creating an offscreen canvas matching the current component's size. The blending operation is then performed on this base. The two modes are identical in all other functional aspects. |
+| effect | [BlendMode](arkts-arkui-blendmode-e.md) \| [Blender](arkts-arkui-blender-t-sys.md) | Yes | Blend mode or blender type, depending on the parameter type.<br>When the parameter type is **BlendMode**, it indicates the blend mode.<br>Default value: **BlendMode.NONE**<br>When the parameter type is **Blender**, it indicates the blender type, used to describe the blending effect.<br>A **Blender** instance must be created using methods, for example, uiEffect.createBrightnessBlender, from the **uiEffect** module. Using a custom object as a parameter will not take effect. |
+| type | [BlendApplyType](arkts-arkui-blendapplytype-e.md) | No | Whether the blend mode is implemented offscreen.<br>Default value: **BlendApplyType.FAST**<br>**NOTE：**<br>1. When this parameter is set to **BlendApplyType.FAST**, the blend mode is not implemented offscreen.<br>2. When this parameter is set to **BlendApplyType.OFFSCREEN**, an offscreen canvas matching the size of the current component is created. The content of the current component (including its child components) is then drawn onto the offscreen canvas, and blended with the existing content on the underlying canvas using the specified blend mode.<br>3. For text components, this API does not apply to emoji expressions when not offscreen.<br>4. Compared with **BlendApplyType.OFFSCREEN**, when this parameter is set to **BlendApplyType.OFFSCREEN_WITH_BACKGROUND**, the system first copies a canvas with a background as the initial background color (the canvas for **BlendApplyType.OFFSCREEN** starts with a transparent background) when creating an offscreen canvas matching the current component's size. The blending operation is then performed on this base. The two modes are identical in all other functional aspects. |
 
 **Return value:**
 
@@ -77,7 +77,7 @@ constructor.
 edgeLight(params: EdgeLightParams | undefined): T
 ```
 
-Sets the edge light effect for the component. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;The edge light effect creates a glowing light effect along the component's edges, starting from the specified position and extending along the edge. &lt;br&gt;This effect can enhance the visual appeal and highlight important components. &lt;/p&gt;
+Sets the edge light effect for the component. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>The edge light effect creates a glowing light effect along the component's edges, starting from the specified position and extending along the edge. <br>This effect can enhance the visual appeal and highlight important components. &lt;/p&gt;
 
 **Since:** 26.0.0
 
@@ -131,7 +131,7 @@ Sets whether the current component and its child components are removed from the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| exclude | boolean \| undefined | Yes | Whether to remove the current component and its child components from the render group of the ancestor component.&lt;br&gt;**true**: yes. **false**: no.&lt;br&gt;If **exclude** is set to **undefined**, the value **false** is used. |
+| exclude | boolean \| undefined | Yes | Whether to remove the current component and its child components from the render group of the ancestor component.<br>**true**: yes. **false**: no.<br>If **exclude** is set to **undefined**, the value **false** is used. |
 
 **Return value:**
 
@@ -239,7 +239,7 @@ Specify whether the current component participates in the fusion effect of the a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean \| undefined | Yes | Whether the component participates in the fusion effect of the ancestor component **UnionEffectContainer**.&lt;br&gt;The value **true** means that the component participates in the fusion effect of the ancestor component **UnionEffectContainer**, and **false** means the opposite. &lt;br&gt;Default value: **false**. Undefined means to default value. |
+| value | boolean \| undefined | Yes | Whether the component participates in the fusion effect of the ancestor component **UnionEffectContainer**.<br>The value **true** means that the component participates in the fusion effect of the ancestor component **UnionEffectContainer**, and **false** means the opposite. <br>Default value: **false**. Undefined means to default value. |
 
 **Return value:**
 

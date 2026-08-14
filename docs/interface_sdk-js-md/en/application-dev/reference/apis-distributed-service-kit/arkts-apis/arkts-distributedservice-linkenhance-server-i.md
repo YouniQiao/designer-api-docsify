@@ -15,7 +15,7 @@ Represents a **Server** object, which provides methods for starting, stopping, a
 ## Modules to Import
 
 ```TypeScript
-import { linkEnhance } from '@kit.DistributedServiceKit';
+import { linkEnhance } from 'linkEnhance';
 ```
 
 ## close

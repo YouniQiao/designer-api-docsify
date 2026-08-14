@@ -82,7 +82,8 @@
   - [GesturePath](arkts-accessibility-accessibility-gesturepath-gesturepath-c.md)
 - [@ohos.accessibility.GesturePoint](arkts-accessibility-gesturepoint.md)
   - [GesturePoint](arkts-accessibility-accessibility-gesturepoint-gesturepoint-c.md)
-- [@ohos.accessibility.config](arkts-accessibility-config.md)
+<!--Del-->
+- [@ohos.accessibility.config](arkts-accessibility-config.md)<!--DelEnd-->
   <!--Del-->
   - [disableAbility(system api)](arkts-accessibility-config-disableability-f-sys.md)<!--DelEnd-->
   <!--Del-->

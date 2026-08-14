@@ -15,7 +15,7 @@ USB key PIN authentication request.
 ## Modules to Import
 
 ```TypeScript
-import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
+import { certificateManagerDialog } from 'certificateManagerDialog';
 ```
 
 ## keyUri

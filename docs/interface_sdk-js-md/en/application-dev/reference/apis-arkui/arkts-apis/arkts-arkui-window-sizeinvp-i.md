@@ -15,7 +15,7 @@ Describes the window size, in vp.
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'window';
 ```
 
 ## height

@@ -15,7 +15,7 @@ NotificationSubscriberExtensionAbility是通知订阅者扩展能力的基类，
 ## 导入模块
 
 ```TypeScript
-import { NotificationSubscriberExtensionAbility } from '@kit.NotificationKit';
+import { NotificationSubscriberExtensionAbility } from 'NotificationSubscriberExtensionAbility';
 ```
 
 ## onCancelMessages

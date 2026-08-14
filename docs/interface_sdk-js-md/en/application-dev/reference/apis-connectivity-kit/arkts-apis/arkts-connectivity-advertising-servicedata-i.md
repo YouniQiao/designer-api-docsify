@@ -15,7 +15,7 @@ Describes the service data.
 ## Modules to Import
 
 ```TypeScript
-import { advertising } from '@kit.ConnectivityKit';
+import { advertising } from 'advertising';
 ```
 
 ## serviceData

@@ -137,14 +137,14 @@ registerSource(audioUri: string, hapticUri: string): Promise<int>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| audioUri | string | 是 | 音频资源的Uri。 &lt;br&gt;- 对普通时延模式，音频资源格式和路径格式的支持可参考[AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md#AVPlayer)。 &lt;br&gt;- 对低时延模式，音频资源格式支持可参考[SoundPool](../../apis-media-kit/arkts-apis/arkts-media-soundpool-soundpool-i.md#SoundPool)，路径格式需满足 [fileIo.open](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-open-f.md#open)的要求。 &lt;br&gt;- 对两种时延模式，均建议传入文件的绝对路径。 |
-| hapticUri | string | 是 | 振动资源的Uri。 &lt;br&gt;振动资源格式支持可参考[HapticFileDescriptor](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-hapticfiledescriptor-i.md#HapticFileDescriptor)，路径格式需满足 [fileIo.open](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-open-f.md#open)的要求。 &lt;br&gt;建议传入文件的绝对路径。 |
+| audioUri | string | 是 | 音频资源的Uri。 <br>- 对普通时延模式，音频资源格式和路径格式的支持可参考[AVPlayer](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md#AVPlayer)。 <br>- 对低时延模式，音频资源格式支持可参考[SoundPool](../../apis-media-kit/arkts-apis/arkts-media-soundpool-soundpool-i.md#SoundPool)，路径格式需满足 [fileIo.open](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-open-f.md#open)的要求。 <br>- 对两种时延模式，均建议传入文件的绝对路径。 |
+| hapticUri | string | 是 | 振动资源的Uri。 <br>振动资源格式支持可参考[HapticFileDescriptor](../../apis-sensor-service-kit/arkts-apis/arkts-sensorservice-vibrator-hapticfiledescriptor-i.md#HapticFileDescriptor)，路径格式需满足 [fileIo.open](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-open-f.md#open)的要求。 <br>建议传入文件的绝对路径。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;int&gt; | Promise对象，返回注册的资源ID。 &lt;br&gt;正常情况下返回注册的资源ID为非负数。若返回注册的资源ID为负数，则表示注册失败，需检查注册资源数量是否超过上限。 |
+| Promise&lt;int&gt; | Promise对象，返回注册的资源ID。 <br>正常情况下返回注册的资源ID为非负数。若返回注册的资源ID为负数，则表示注册失败，需检查注册资源数量是否超过上限。 |
 
 **错误码：**
 
@@ -198,7 +198,7 @@ registerSourceFromFd(audioFd: AudioHapticFileDescriptor, hapticFd: AudioHapticFi
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;int&gt; | Promise对象，返回注册的资源ID。 &lt;br&gt;正常情况下返回注册的资源ID为非负数。若返回注册的资源ID为负数，则表示注册失败，需检查注册资源数量是否超过上限。 |
+| Promise&lt;int&gt; | Promise对象，返回注册的资源ID。 <br>正常情况下返回注册的资源ID为非负数。若返回注册的资源ID为负数，则表示注册失败，需检查注册资源数量是否超过上限。 |
 
 ## 示例
 

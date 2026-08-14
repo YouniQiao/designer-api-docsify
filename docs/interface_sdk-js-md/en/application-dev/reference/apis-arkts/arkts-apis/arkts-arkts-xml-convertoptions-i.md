@@ -15,7 +15,7 @@ Options for conversion.
 ## Modules to Import
 
 ```TypeScript
-import { convertxml } from '@kit.ArkTS';
+import { convertxml } from 'convertxml';
 ```
 
 ## attributesKey

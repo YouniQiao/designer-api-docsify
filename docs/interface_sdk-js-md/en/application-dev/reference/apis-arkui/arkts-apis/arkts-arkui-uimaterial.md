@@ -31,7 +31,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { uiMaterial } from '@kit.ArkUI';
+import { uiMaterial } from 'uiMaterial';
 ```
 
 ## Summary

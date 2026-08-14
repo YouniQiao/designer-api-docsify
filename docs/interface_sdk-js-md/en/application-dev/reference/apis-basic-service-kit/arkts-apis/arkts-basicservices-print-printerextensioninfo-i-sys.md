@@ -17,7 +17,7 @@ Provides the printer extension information.
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'print';
 ```
 
 ## extensionId

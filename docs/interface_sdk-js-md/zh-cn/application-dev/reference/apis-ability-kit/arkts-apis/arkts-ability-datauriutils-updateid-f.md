@@ -49,6 +49,7 @@ try {
     'com.example.dataUriUtils/1221',
     id
   );
+  console.info(`update id with the uri is: ${uri}`);
 } catch (err) {
   console.error(`update id err, code: ${(err as BusinessError).code}, msg: ${(err as BusinessError).message}`);
 }

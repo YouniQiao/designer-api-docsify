@@ -15,7 +15,7 @@ Describes the notification information about the change of an album.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'photoAccessHelper';
 ```
 
 ## albumChangeDatas

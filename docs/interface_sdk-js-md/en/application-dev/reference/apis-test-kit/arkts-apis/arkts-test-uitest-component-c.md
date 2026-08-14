@@ -15,7 +15,35 @@ Represents a component on the UI and provides APIs for obtaining component attri
 ## Modules to Import
 
 ```TypeScript
-import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from '@kit.TestKit';
+import { Component } from 'Component';
+import { DisplayRotation } from 'DisplayRotation';
+import { Driver } from 'Driver';
+import { MatchPattern } from 'MatchPattern';
+import { MouseButton } from 'MouseButton';
+import { ON } from 'ON';
+import { On } from 'On';
+import { PointerMatrix } from 'PointerMatrix';
+import { ResizeDirection } from 'ResizeDirection';
+import { UIElementInfo } from 'UIElementInfo';
+import { UIEventObserver } from 'UIEventObserver';
+import { UiDirection } from 'UiDirection';
+import { UiWindow } from 'UiWindow';
+import { WindowMode } from 'WindowMode';
+import { Point } from 'Point';
+import { WindowFilter } from 'WindowFilter';
+import { Rect } from 'Rect';
+import { TouchPadSwipeOptions } from 'TouchPadSwipeOptions';
+import { InputTextMode } from 'InputTextMode';
+import { WindowChangeType } from 'WindowChangeType';
+import { ComponentEventType } from 'ComponentEventType';
+import { WindowChangeOptions } from 'WindowChangeOptions';
+import { ComponentEventOptions } from 'ComponentEventOptions';
+import { TouchOptions } from 'TouchOptions';
+import { KeyOptions } from 'KeyOptions';
+import { PenKey } from 'PenKey';
+import { PenMode } from 'PenMode';
+import { PenKeyOperation } from 'PenKeyOperation';
+import { PenKeyOperationOptions } from 'PenKeyOperationOptions';
 ```
 
 ## clearText
@@ -702,7 +730,7 @@ Inputs text to a component in a specified text input mode. This API takes effect
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | text | string | Yes | Input text. Currently, English, Chinese, and special characters are supported. |
-| mode | [InputTextMode](arkts-test-uitest-inputtextmode-i.md) | Yes | Text input mode. For details, see [InputTextMode](arkts-test-uitest-inputtextmode-i.md#InputTextMode). &lt;br&gt; **Note：**: If **InputTextMode.addition** is set to **true**, the specified text is added to the end of the existing text in the component. Otherwise, the specified text overwrites the existing text of the component. &lt;br&gt; If the input text contains Chinese characters or special characters or contains more than 200 characters, the text is copied and pasted regardless of the value of [InputTextMode](arkts-test-uitest-inputtextmode-i.md#InputTextMode).paste. |
+| mode | [InputTextMode](arkts-test-uitest-inputtextmode-i.md) | Yes | Text input mode. For details, see [InputTextMode](arkts-test-uitest-inputtextmode-i.md#InputTextMode). <br> **Note：**: If **InputTextMode.addition** is set to **true**, the specified text is added to the end of the existing text in the component. Otherwise, the specified text overwrites the existing text of the component. <br> If the input text contains Chinese characters or special characters or contains more than 200 characters, the text is copied and pasted regardless of the value of [InputTextMode](arkts-test-uitest-inputtextmode-i.md#InputTextMode).paste. |
 
 **Return value:**
 
@@ -1415,8 +1443,8 @@ Scroll on this [Component](#Component)to find matched [Component](#Component),ap
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | on | [On](arkts-test-uitest-on-c.md) | Yes | the attribute requirements of the target [Component](#Component). |
-| vertical | boolean | No | Whether the swipe direction is vertical. &lt;br&gt;Default value: true |
-| offset | int | No | Offset from the swipe start/end point to the component border &lt;br&gt;Unit: px &lt;br&gt;Default value: 80 |
+| vertical | boolean | No | Whether the swipe direction is vertical. <br>Default value: true |
+| offset | int | No | Offset from the swipe start/end point to the component border <br>Unit: px <br>Default value: 80 |
 
 **Return value:**
 
@@ -1456,7 +1484,7 @@ Scrolls to the bottom of this component. This API is applicable to components th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| speed | int | No | Scroll speed. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Unit: px/s. &lt;br&gt;Throws error code 401 if negative. &lt;br&gt;Default value: 600 |
+| speed | int | No | Scroll speed. <br>Value range:[200, 40000] <br>Unit: px/s. <br>Throws error code 401 if negative. <br>Default value: 600 |
 
 **Return value:**
 
@@ -1509,7 +1537,7 @@ Scrolls to the top of this component. This API is applicable to components that 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| speed | int | No | Scroll speed. &lt;br&gt;Value range:[200, 40000] &lt;br&gt;Unit: px/s. &lt;br&gt;Throws error code 401 if negative. &lt;br&gt;Default value: 600 |
+| speed | int | No | Scroll speed. <br>Value range:[200, 40000] <br>Unit: px/s. <br>Throws error code 401 if negative. <br>Default value: 600 |
 
 **Return value:**
 

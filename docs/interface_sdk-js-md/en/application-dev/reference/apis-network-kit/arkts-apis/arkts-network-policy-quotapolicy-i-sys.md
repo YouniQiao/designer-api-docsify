@@ -17,7 +17,7 @@ Policies that limit network quota.
 ## Modules to Import
 
 ```TypeScript
-import { policy } from '@kit.NetworkKit';
+import { policy } from 'policy';
 ```
 
 ## lastLimitRemind

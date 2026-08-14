@@ -1,6 +1,6 @@
 # AccessibilityVirtualNode (System API)
 
-Defines the **AccessibilityVirtualNode**.
+Defines an accessibility virtual node.
 
 **Since:** 26.0.0
 
@@ -20,7 +20,7 @@ Defines the **AccessibilityVirtualNode**.
 accessibilityFocused?: boolean
 ```
 
-Whether the accessibility virtual node is focused for accessibility purposes. The value **true** indicates that the element is focused, and **false** indicates the opposite.
+Whether the element has gained focus for accessibility purposes. The value true indicates that the element has gained focus, and false indicates that the element has not gained focus. Default value: false.
 
 **Type:** boolean
 
@@ -44,7 +44,7 @@ Whether the accessibility virtual node is focused for accessibility purposes. Th
 accessibilityGroup?: boolean
 ```
 
-Whether the accessibility virtual node is an accessibility group. The value **true** indicates that the element is an accessibility group, and **false** indicates the opposite.
+Whether the element is an accessibility group. The value true indicates that the element is an accessibility group, and false indicates that the element is not an accessibility group. Default value: true.
 
 **Type:** boolean
 
@@ -68,7 +68,7 @@ Whether the accessibility virtual node is an accessibility group. The value **tr
 accessibilityLevel?: string
 ```
 
-This property determines whether the component can be recognized by accessibility services.
+Accessibility level of the component. 'auto': The accessibility grouping service and ArkUI jointly determine whether the component can be identified by accessibility. 'yes': The component can be identified by accessibility. 'no': The component cannot be identified by accessibility. 'no-hide-descendants': The component and all its child components cannot be identified by accessibility.
 
 **Type:** string
 
@@ -92,7 +92,7 @@ This property determines whether the component can be recognized by accessibilit
 accessibilityText?: string
 ```
 
-Accessibility text information of an accessibility virtual node.
+Accessibility text information of the element.
 
 **Type:** string
 
@@ -116,7 +116,7 @@ Accessibility text information of an accessibility virtual node.
 checkable?: boolean
 ```
 
-Whether the accessibility virtual node is checkable. The value **true** indicates that the node is checkable, and **false** indicates the opposite.
+Whether the element is checkable. The value true indicates that the element is checkable, and false indicates that the element is not checkable. Default value: false.
 
 **Type:** boolean
 
@@ -140,7 +140,7 @@ Whether the accessibility virtual node is checkable. The value **true** indicate
 checked?: boolean
 ```
 
-Whether the accessibility virtual node is checked. The value **true** indicates that the node is checked, and **false** indicates the opposite.
+Whether the element is checked. The value true indicates that the element is checked, and false indicates that the element is not checked. Default value: false.
 
 **Type:** boolean
 
@@ -164,7 +164,7 @@ Whether the accessibility virtual node is checked. The value **true** indicates 
 childNodeIds?: Array<long>
 ```
 
-List of child accessibility virtual node ids of a component.
+List of child element IDs of the component.
 
 **Type:** Array&lt;long&gt;
 
@@ -188,7 +188,7 @@ List of child accessibility virtual node ids of a component.
 clickable?: boolean
 ```
 
-Whether the accessibility virtual node is clickable. The value **true** indicates that the node is clickable, and **false** indicates the opposite.
+Whether the element is clickable. The value true indicates that the element is clickable, and false indicates that the element is not clickable. Default value: false.
 
 **Type:** boolean
 
@@ -212,7 +212,7 @@ Whether the accessibility virtual node is clickable. The value **true** indicate
 customComponentType?: string
 ```
 
-Component type of the accessibility virtual node.
+Custom component type.
 
 **Type:** string
 
@@ -236,7 +236,7 @@ Component type of the accessibility virtual node.
 elementId?: long
 ```
 
-The id of accessibility element.
+ID of the component to which the element belongs. Default value: -1.
 
 **Type:** long
 
@@ -260,7 +260,7 @@ The id of accessibility element.
 enabled?: boolean
 ```
 
-Whether the accessibility virtual node is enabled. The value **true** indicates that the node is enabled, and **false** indicates the opposite.
+Whether the element is enabled. The value true indicates that the element is enabled, and false indicates that the element is not enabled. Corresponds to the isEnable attribute of AccessibilityElement. Default value: false.
 
 **Type:** boolean
 
@@ -284,7 +284,7 @@ Whether the accessibility virtual node is enabled. The value **true** indicates 
 parentId?: long
 ```
 
-Parent element id of the accessibility element.
+Parent element ID of the component.
 
 **Type:** long
 
@@ -308,7 +308,7 @@ Parent element id of the accessibility element.
 rect?: Rect
 ```
 
-Area of the accessibility virtual node.
+Area of the element (relative to the parent node).
 
 **Type:** [Rect](arkts-accessibility-accessibilityextensioncontext-rect-i.md)
 
@@ -332,7 +332,7 @@ Area of the accessibility virtual node.
 selected?: boolean
 ```
 
-Whether the accessibility virtual node is selected. The value **true** indicates that the node is selected, and **false** indicates the opposite.
+Whether the element is selected. The value true indicates that the element is selected, and false indicates that the element is not selected. Default value: false.
 
 **Type:** boolean
 
@@ -380,7 +380,7 @@ Supported action names.
 text?: string
 ```
 
-Text of the accessibility virtual node.
+Text content of the element.
 
 **Type:** string
 
@@ -404,7 +404,7 @@ Text of the accessibility virtual node.
 touchPosition?: TouchPosition
 ```
 
-Click position of the accessibility virtual node.
+Simulated touch position.
 
 **Type:** [TouchPosition](arkts-accessibility-accessibilityextensioncontext-touchposition-i-sys.md)
 
@@ -428,7 +428,7 @@ Click position of the accessibility virtual node.
 virtualNodeId: long
 ```
 
-ID of the accessibility virtual node. Default value: **-1**.
+Custom virtual node ID of the element.
 
 **Type:** long
 

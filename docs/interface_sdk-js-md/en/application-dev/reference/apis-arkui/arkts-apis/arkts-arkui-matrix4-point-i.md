@@ -15,7 +15,7 @@ Defines the data structure of a coordinate point.
 ## Modules to Import
 
 ```TypeScript
-import { matrix4 } from '@kit.ArkUI';
+import { matrix4 } from 'matrix4';
 ```
 
 ## x

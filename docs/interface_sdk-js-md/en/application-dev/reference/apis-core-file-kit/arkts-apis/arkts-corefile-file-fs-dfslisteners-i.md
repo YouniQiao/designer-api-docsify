@@ -15,7 +15,21 @@ Provides APIs for observing events. listening for the distributed file system st
 ## Modules to Import
 
 ```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
+import { ConflictFiles } from 'ConflictFiles';
+import { FileFilter } from 'FileFilter';
+import { Filter } from 'Filter';
+import { Options } from 'Options';
+import { ReaderIteratorResult } from 'ReaderIteratorResult';
+import { WatchEvent } from 'WatchEvent';
+import { WatchEventListener } from 'WatchEventListener';
+import { Watcher } from 'Watcher';
+import { ReadOptions } from 'ReadOptions';
+import { ReadTextOptions } from 'ReadTextOptions';
+import { WriteOptions } from 'WriteOptions';
+import { ListFileExtOptions } from 'ListFileExtOptions';
+import { ListFileOptions } from 'ListFileOptions';
+import { DfsListeners } from 'DfsListeners';
+import { TaskSignal } from 'TaskSignal';
 ```
 
 ## onStatus
@@ -41,5 +55,5 @@ Called to return the specified status. Its parameters are passed in by connectDf
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | networkId | string | Yes | Network ID of the device. |
-| status | number | Yes | Status code of the distributed file system. The status code is the error code returned by **onStatus** invoked by **connectDfs**. If the device is abnormal when **connectDfs()** is called, **onStatus** will be called to return the error code:&lt;br&gt;- [13900046](../errorcode-filemanagement.md#13900046-connection-interrupted-by-software) : The connection is interrupted by software. |
+| status | number | Yes | Status code of the distributed file system. The status code is the error code returned by **onStatus** invoked by **connectDfs**. If the device is abnormal when **connectDfs()** is called, **onStatus** will be called to return the error code:<br>- [13900046](../errorcode-filemanagement.md#13900046-connection-interrupted-by-software) : The connection is interrupted by software. |
 

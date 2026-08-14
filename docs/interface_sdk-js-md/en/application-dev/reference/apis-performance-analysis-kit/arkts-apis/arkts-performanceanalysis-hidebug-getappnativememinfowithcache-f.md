@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
+import { hidebug } from 'hidebug';
 ```
 
 ## getAppNativeMemInfoWithCache
@@ -28,7 +28,7 @@ Obtains the memory information of the application process. This API uses the cac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| forceRefresh | boolean | No | Whether to ignore the cache validity and forcibly update the cache value. The default value is **false**.&lt;br&gt;The value **true** means to directly obtain the current memory data and update the cache value.&lt;br&gt;The value **false** means to directly return the cache value if the cache is valid and obtain the current memory data and update the cache value if the cache is invalid. |
+| forceRefresh | boolean | No | Whether to ignore the cache validity and forcibly update the cache value. The default value is **false**.<br>The value **true** means to directly obtain the current memory data and update the cache value.<br>The value **false** means to directly return the cache value if the cache is valid and obtain the current memory data and update the cache value if the cache is invalid. |
 
 **Return value:**
 

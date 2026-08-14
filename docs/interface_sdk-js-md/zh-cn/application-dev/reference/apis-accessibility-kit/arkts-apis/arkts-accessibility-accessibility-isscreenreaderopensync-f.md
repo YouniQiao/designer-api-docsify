@@ -6,7 +6,7 @@
 function isScreenReaderOpenSync(): boolean
 ```
 
-是否开启了屏幕朗读模式。
+查询屏幕朗读模式是否开启。
 
 **起始版本：** 23
 

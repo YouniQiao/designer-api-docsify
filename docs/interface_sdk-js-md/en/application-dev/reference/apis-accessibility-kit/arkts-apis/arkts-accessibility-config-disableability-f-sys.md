@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { config } from '@kit.AccessibilityKit';
+import { config } from 'config';
 ```
 
 ## disableAbility
@@ -12,7 +12,7 @@ import { config } from '@kit.AccessibilityKit';
 function disableAbility(name: string): Promise<void>
 ```
 
-Disables an accessibility extension ability. This API uses a promise to return the result.
+Disables an accessibility extension. This API must be used together with [config.enableAbility](arkts-accessibility-config-enableability-f-sys.md#enableAbility-(System-API)) or [config.enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md#enableAbilityWithCallback-(System-API)). This API uses a promise to return the result.
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ Disables an accessibility extension ability. This API uses a promise to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Name of the accessibility extension ability, in the format of 'bundleName/abilityName'. |
+| name | string | Yes | Name of the accessibility extension application, in the format 'bundleName/abilityName'. |
 
 **Return value:**
 
@@ -56,7 +56,7 @@ Disables an accessibility extension ability. This API uses a promise to return t
 function disableAbility(name: string, callback: AsyncCallback<void>): void
 ```
 
-Disables an accessibility extension ability. This API uses an asynchronous callback to return the result.
+Disables an accessibility extension. This API must be used together with [config.enableAbility](arkts-accessibility-config-enableability-f-sys.md#enableAbility-(System-API)) or [config.enableAbilityWithCallback](arkts-accessibility-config-enableabilitywithcallback-f-sys.md#enableAbilityWithCallback-(System-API)). This API uses an asynchronous callback to return the result.
 
 **Since:** 23
 
@@ -76,8 +76,8 @@ Disables an accessibility extension ability. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| name | string | Yes | Name of the accessibility extension ability, in the format of 'bundleName/abilityName'. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| name | string | Yes | Name of the accessibility extension app, in the format of 'bundleName/abilityName'. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the accessibility extension is disabled successfully, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 

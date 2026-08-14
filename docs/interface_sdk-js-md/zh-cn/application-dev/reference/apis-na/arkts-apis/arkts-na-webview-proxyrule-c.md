@@ -34,7 +34,7 @@ Returns the scheme filter used for this rule.
 
 | 类型 | 说明 |
 | --- | --- |
-| [ProxySchemeFilter](arkts-na-webview-proxyschemefilter-e.md) | The scheme filter used for this rule. |
+| [ProxySchemeFilter](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-proxyschemefilter-e.md) | The scheme filter used for this rule. |
 
 ## getUrl
 

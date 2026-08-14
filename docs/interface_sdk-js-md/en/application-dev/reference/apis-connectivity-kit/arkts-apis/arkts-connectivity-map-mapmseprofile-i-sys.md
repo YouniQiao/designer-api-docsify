@@ -17,7 +17,7 @@ Manager MAP MSE profile.
 ## Modules to Import
 
 ```TypeScript
-import { map } from '@kit.ConnectivityKit';
+import { map } from 'map';
 ```
 
 ## disconnect

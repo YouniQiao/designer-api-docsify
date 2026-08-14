@@ -78,7 +78,7 @@ static getInstance(id: string): Transliterator
 
 | 类型 | 说明 |
 | --- | --- |
-| [Transliterator](arkts-localization-i18n-transliterator-c.md) | 音译对象。 |
+| [Transliterator](../../apis-na/arkts-apis/arkts-na-i18n-transliterator-c.md) | 音译对象。 |
 
 ## 示例
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
+import { accessibility } from 'accessibility';
 ```
 
 ## isAnimationReduceEnabledSync
@@ -12,7 +12,7 @@ import { accessibility } from '@kit.AccessibilityKit';
 function isAnimationReduceEnabledSync(): boolean
 ```
 
-Checks whether animation reduction mode is enabled with a synchronous method.
+Checks whether animation reduction mode is enabled. This API is the synchronous version of [accessibility.isAnimationReduceEnabled](arkts-accessibility-accessibility-isanimationreduceenabled-f.md#isAnimationReduceEnabled) (asynchronous version). They have the same functionality. Use this API if you need to obtain the result immediately. Use the asynchronous version if you need to query in non-blocking scenarios.
 
 **Since:** 23
 

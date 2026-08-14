@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { systemTime } from '@kit.BasicServicesKit';
+import { systemTime } from 'systemTime';
 ```
 
 ## getRealActiveTime
@@ -30,7 +30,7 @@ Obtains the time elapsed since system startup, excluding the deep sleep time. Th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isNano | boolean | Yes | Whether the time to return is in nanoseconds.&lt;br&gt;- **true**: The result is in nanoseconds.&lt;br&gt;- **false**: The result is in milliseconds. |
+| isNano | boolean | Yes | Whether the time to return is in nanoseconds.<br>- **true**: The result is in nanoseconds.<br>- **false**: The result is in milliseconds. |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -135,7 +135,7 @@ Obtains the time elapsed since system startup, excluding the deep sleep time. Th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isNano | boolean | No | Whether the time to return is in nanoseconds. The default value is **false**.&lt;br&gt;- **true**: The result is in nanoseconds.&lt;br&gt;- **false**: The result is in milliseconds. |
+| isNano | boolean | No | Whether the time to return is in nanoseconds. The default value is **false**.<br>- **true**: The result is in nanoseconds.<br>- **false**: The result is in milliseconds. |
 
 **Return value:**
 

@@ -15,7 +15,7 @@ The **appAccount** module provides APIs for adding, deleting, modifying, and que
 ## Modules to Import
 
 ```TypeScript
-import { appAccount } from '@kit.BasicServicesKit';
+import { appAccount } from 'appAccount';
 ```
 
 ## Summary
@@ -55,5 +55,5 @@ import { appAccount } from '@kit.BasicServicesKit';
 | Name | Description |
 | --- | --- |
 | [Constants](arkts-basicservices-appaccount-constants-e.md) | Enumerates the constants. |
-| [ResultCode](arkts-basicservices-appaccount-resultcode-e.md) | Enumerates the result codes. > **NOTE：**&lt;br&gt; > > This API is supported since API version 8 and deprecated since API version 9. For details, see > [Account Management Error Codes](../../apis-basic-services-kit/errorcode-account.md). |
+| [ResultCode](arkts-basicservices-appaccount-resultcode-e.md) | Enumerates the result codes. > **NOTE：**<br> > > This API is supported since API version 8 and deprecated since API version 9. For details, see > [Account Management Error Codes](../../apis-basic-services-kit/errorcode-account.md). |
 

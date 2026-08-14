@@ -22,8 +22,8 @@
 | [getChineseCalendar](arkts-na-i18n-getchinesecalendar-f.md#getChineseCalendar) | 获取指定区域的农历对象。 |
 | [getInstance](arkts-na-i18n-getinstance-f.md#getInstance) | 创建并返回IndexUtil对象。 |
 | [getLineInstance](arkts-na-i18n-getlineinstance-f.md#getLineInstance) | 获取用于定位文本可换行点的BreakIterator对象。该对象内部维护一个换行迭代器，可以用于访问各个可换行点。 |
-| [getSimpleDateTimeFormatByPattern](arkts-na-i18n-getsimpledatetimeformatbypattern-f.md#getSimpleDateTimeFormatByPattern) | 通过模式字符串获取SimpleDateTimeFormat对象。与[getSimpleDateTimeFormatBySkeleton](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-getsimpledatetimeformatbyskeleton-f.md#getSimpleDateTimeFormatBySkeleton)接 口获取的对象在格式化后显示差异请参考[SimpleDateTimeFormat.format](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-simpledatetimeformat-c.md#format)的示例。 |
-| [getSimpleDateTimeFormatBySkeleton](arkts-na-i18n-getsimpledatetimeformatbyskeleton-f.md#getSimpleDateTimeFormatBySkeleton) | 通过框架字符串获取SimpleDateTimeFormat对象。与[getSimpleDateTimeFormatByPattern](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-getsimpledatetimeformatbypattern-f.md#getSimpleDateTimeFormatByPattern)接口获 取的对象在格式化后显示差异请参考[SimpleDateTimeFormat.format](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-simpledatetimeformat-c.md#format)的示例。 |
+| [getSimpleDateTimeFormatByPattern](arkts-na-i18n-getsimpledatetimeformatbypattern-f.md#getSimpleDateTimeFormatByPattern) | 通过模式字符串获取SimpleDateTimeFormat对象。与[getSimpleDateTimeFormatBySkeleton](arkts-na-i18n-getsimpledatetimeformatbyskeleton-f.md#getSimpleDateTimeFormatBySkeleton)接 口获取的对象在格式化后显示差异请参考[SimpleDateTimeFormat.format](arkts-na-i18n-simpledatetimeformat-c.md#format)的示例。 |
+| [getSimpleDateTimeFormatBySkeleton](arkts-na-i18n-getsimpledatetimeformatbyskeleton-f.md#getSimpleDateTimeFormatBySkeleton) | 通过框架字符串获取SimpleDateTimeFormat对象。与[getSimpleDateTimeFormatByPattern](arkts-na-i18n-getsimpledatetimeformatbypattern-f.md#getSimpleDateTimeFormatByPattern)接口获 取的对象在格式化后显示差异请参考[SimpleDateTimeFormat.format](arkts-na-i18n-simpledatetimeformat-c.md#format)的示例。 |
 | [getSimpleNumberFormatBySkeleton](arkts-na-i18n-getsimplenumberformatbyskeleton-f.md#getSimpleNumberFormatBySkeleton) | 通过框架字符串获取SimpleNumberFormat对象。 |
 | [getTimeZone](arkts-na-i18n-gettimezone-f.md#getTimeZone) | 获取时区ID对应的时区对象。 |
 | [isRTL](arkts-na-i18n-isrtl-f.md#isRTL) | 判断语言是否为镜像语言。在镜像语言下，UI界面需要[镜像显示](../../../internationalization/i18n-ui-design.md#界面镜像)。 |
@@ -35,7 +35,7 @@
 | [AdvancedMeasureFormat](arkts-na-i18n-advancedmeasureformat-c.md) | 提供数字格式化能力，支持根据单位使用场景自动转换合适的单位。 |
 | [BreakIterator](arkts-na-i18n-breakiterator-c.md) | 提供文本换行相关的能力，包括可换行点的获取、移动和识别等。 |
 | [Calendar](arkts-na-i18n-calendar-c.md) | 提供历法相关的能力，包括历法名称获取和日期计算等。 |
-| [ChineseCalendar](arkts-na-i18n-chinesecalendar-c.md) | 提供农历相关的能力，包括设置农历时间、判断指定年份某月是否存在闰月。 继承自[Calendar](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-calendar-c.md#Calendar)，支持[Calendar](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-calendar-c.md#Calendar)的方法。 |
+| [ChineseCalendar](arkts-na-i18n-chinesecalendar-c.md) | 提供农历相关的能力，包括设置农历时间、判断指定年份某月是否存在闰月。 继承自[Calendar](arkts-na-i18n-calendar-c.md#Calendar)，支持[Calendar](arkts-na-i18n-calendar-c.md#Calendar)的方法。 |
 | [EntityRecognizer](arkts-na-i18n-entityrecognizer-c.md) | 提供实体识别相关的能力，可以获取文本中实体的类型和起止位置。当前支持识别的实体包括电话号码和时间日期。 |
 | [HolidayManager](arkts-na-i18n-holidaymanager-c.md) | 提供解析节假日数据的能力，包括节假日判断和指定年份节假日列表获取等。 |
 | [I18NUtil](arkts-na-i18n-i18nutil-c.md) | 国际化工具类，提供单位转换、获取日期顺序、获取时段名称、区域匹配和路径本地化等能力。 |

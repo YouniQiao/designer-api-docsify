@@ -38,7 +38,7 @@ events: Array<VibratorEvent>
 time: int
 ```
 
-振动绝对起始时间。单位：ms。
+振动绝对起始时间。单位：ms（毫秒）。
 
 **类型：** int
 

@@ -17,7 +17,7 @@ Subscriber of the system live view notification.
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'notificationManager';
 ```
 
 ## onResponse

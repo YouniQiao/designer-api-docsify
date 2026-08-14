@@ -47,7 +47,7 @@ function installEnterpriseReSignatureCertificate(admin: Want, certificateAlias: 
 ```TypeScript
 import { securityManager } from '@kit.MDMKit';
 import { Want } from '@kit.AbilityKit';
-import { fileIo as fs } from '@kit.CoreFileKit';
+import { fileIo } from '@kit.CoreFileKit';
 
 let wantTemp: Want = {
   // 需根据实际情况进行替换
@@ -59,13 +59,13 @@ let wantTemp: Want = {
 const filePath = '/test.cer';
 // 需根据实际情况进行替换
 let certificateAlias: string = 'test.cer';
-let fd: number = fs.openSync(filePath, fs.OpenMode.READ_ONLY).fd;
+let fd: number = fileIo.openSync(filePath, fileIo.OpenMode.READ_ONLY).fd;
 // 需根据实际情况进行替换
 let accountId: number = 100;
 try {
   securityManager.installEnterpriseReSignatureCertificate(
     wantTemp, certificateAlias, fd, accountId);
-  console.info('Success to install enterprise re signature certificate.');
+  console.info('Success in installing enterprise re signature certificate.');
 } catch (err) {
   console.error(`Failed to install enterprise re signature certificate.
     Code: ${err.code}, message: ${err.message}`);

@@ -42,7 +42,7 @@ Use snapshot when Effect Component have no visual effect.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean \| undefined | Yes | &lt;br&gt;true indicates using the snapshot method, false indicates not using the snapshot method. undefined means the default value false. |
+| enable | boolean \| undefined | Yes | <br>true indicates using the snapshot method, false indicates not using the snapshot method. undefined means the default value false. |
 
 **Return value:**
 

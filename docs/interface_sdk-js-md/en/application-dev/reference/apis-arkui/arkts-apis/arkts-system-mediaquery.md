@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { MediaQueryEvent, MediaQueryList } from '@kit.ArkUI';
+import { MediaQueryEvent } from 'MediaQueryEvent';
+import { MediaQueryList } from 'MediaQueryList';
 ```
 
 ## Summary

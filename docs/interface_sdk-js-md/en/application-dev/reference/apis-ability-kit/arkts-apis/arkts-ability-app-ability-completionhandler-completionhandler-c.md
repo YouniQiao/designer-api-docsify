@@ -15,7 +15,7 @@ CompletionHandler provides two callback functions, [onRequestSuccess](#onRequest
 ## Modules to Import
 
 ```TypeScript
-import { CompletionHandler } from '@kit.AbilityKit';
+import { CompletionHandler } from 'CompletionHandler';
 ```
 
 ## onRequestFailure

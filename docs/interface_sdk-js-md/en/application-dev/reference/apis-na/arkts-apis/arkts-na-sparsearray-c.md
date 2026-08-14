@@ -36,7 +36,7 @@ Returns the element at the specified index.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | The zero-based index of the desired element. A negative index counts back from the end of the sparse array. If index is negative, it is treated as length + index (e.g., -1 refers to the last element). If index is less than -length, returns undefined. If index is greater than or equal to length, returns undefined. &lt;br&gt;The value should be an integer. |
+| index | int | Yes | The zero-based index of the desired element. A negative index counts back from the end of the sparse array. If index is negative, it is treated as length + index (e.g., -1 refers to the last element). If index is less than -length, returns undefined. If index is greater than or equal to length, returns undefined. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -120,7 +120,7 @@ Creates a new instance of SparseArray with the specified initial length.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLen | int | Yes | The initial length of the sparse array. If arrayLen is negative, it is clamped to 0. The maximum value of a positive number is int_max. &lt;br&gt;The value should be an integer. |
+| arrayLen | int | Yes | The initial length of the sparse array. If arrayLen is negative, it is clamped to 0. The maximum value of a positive number is int_max. <br>The value should be an integer. |
 
 ## constructor
 
@@ -173,9 +173,9 @@ Copies a sequence of sparse array elements within the sparse array.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | int | Yes | The zero-based index at which to copy the sequence to. &lt;br&gt;The value should be an integer. |
-| start | int | Yes | The zero-based index at which to begin copying elements from. &lt;br&gt;The value should be an integer. |
-| end | int | No | The zero-based index at which to stop copying elements from. &lt;br&gt;The value should be an integer. |
+| target | int | Yes | The zero-based index at which to copy the sequence to. <br>The value should be an integer. |
+| start | int | Yes | The zero-based index at which to begin copying elements from. <br>The value should be an integer. |
+| end | int | No | The zero-based index at which to stop copying elements from. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -266,8 +266,8 @@ Changes all sparse array elements from start to end index to a static value and 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | T | Yes | The value to fill the sparse array section with. |
-| start | int | No | The index to start filling the sparse array at. Defaults to 0. If start is negative, it is treated as length + start. &lt;br&gt;The value should be an integer. |
-| end | int | No | The index to stop filling the sparse array at. Defaults to 0. If end is negative, it is treated as length + end. &lt;br&gt;The value should be an integer. |
+| start | int | No | The index to start filling the sparse array at. Defaults to 0. If start is negative, it is treated as length + start. <br>The value should be an integer. |
+| end | int | No | The index to stop filling the sparse array at. Defaults to 0. If end is negative, it is treated as length + end. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -459,7 +459,7 @@ Returns a new sparse array with all sub-array elements concatenated into it recu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| depth | int | No | The depth level specifying how deep the nested array structure should be flattened. Defaults to 1. &lt;br&gt;The value should be an integer. |
+| depth | int | No | The depth level specifying how deep the nested array structure should be flattened. Defaults to 1. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -614,7 +614,7 @@ Determines whether the sparse array includes a certain element, returning true o
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | searchElement | T | Yes | The element to search for. |
-| fromIndex | int | No | The position in this sparse array at which to begin searching for searchElement. Defaults to 0 (the entire array is searched). If fromIndex is negative, it is used as the offset from the end of the array. &lt;br&gt;The value should be an integer. |
+| fromIndex | int | No | The position in this sparse array at which to begin searching for searchElement. Defaults to 0 (the entire array is searched). If fromIndex is negative, it is used as the offset from the end of the array. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -647,7 +647,7 @@ Returns the index of the first occurrence of a value in a sparse array, or -1 if
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | searchElement | T | Yes | The value to locate in the sparse array. |
-| fromIndex | int | No | The sparse array index at which to begin the search. If fromIndex is omitted, the search starts at index 0. &lt;br&gt;The value should be an integer. |
+| fromIndex | int | No | The sparse array index at which to begin the search. If fromIndex is omitted, the search starts at index 0. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -770,7 +770,7 @@ Returns the index of the last occurrence of a value in a sparse array, or -1 if 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | searchElement | T | Yes | The value to locate in the sparse array. |
-| fromIndex | int | No | The sparse array index at which to begin the search backwards. If fromIndex is omitted, the search starts at the last index. &lt;br&gt;The value should be an integer. |
+| fromIndex | int | No | The sparse array index at which to begin the search backwards. If fromIndex is omitted, the search starts at the last index. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -1140,8 +1140,8 @@ Returns a copy of a section of a sparse array.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | int | No | The beginning index of the specified portion of the sparse array. Defaults to 0 (the entire array is searched). If fromIndex is negative, it is used as the offset from the end of the array. &lt;br&gt;The value should be an integer. |
-| end | int | No | The end index of the specified portion of the sparse array. Defaults to 0 (the entire array is searched). If fromIndex is negative, it is used as the offset from the end of the array. &lt;br&gt;The value should be an integer. |
+| start | int | No | The beginning index of the specified portion of the sparse array. Defaults to 0 (the entire array is searched). If fromIndex is negative, it is used as the offset from the end of the array. <br>The value should be an integer. |
+| end | int | No | The end index of the specified portion of the sparse array. Defaults to 0 (the entire array is searched). If fromIndex is negative, it is used as the offset from the end of the array. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -1237,8 +1237,8 @@ Changes the contents of the sparse array by removing or replacing existing eleme
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | int | Yes | The zero-based location in the sparse array from which to start removing elements. If start is negative, it is treated as length + start (e.g., -1 refers to the last element). If start is less than -length, it is clamped to 0. If start is greater than or equal to length, no elements are removed and new elements are added at the end. &lt;br&gt;The value should be an integer. |
-| deleteCount | int | Yes | The number of elements to remove. If deleteCount is negative, it is clamped to 0 (no elements are removed). If deleteCount is greater than the number of elements from start to the end of the array, only the available elements are removed. &lt;br&gt;The value should be an integer. |
+| start | int | Yes | The zero-based location in the sparse array from which to start removing elements. If start is negative, it is treated as length + start (e.g., -1 refers to the last element). If start is less than -length, it is clamped to 0. If start is greater than or equal to length, no elements are removed and new elements are added at the end. <br>The value should be an integer. |
+| deleteCount | int | Yes | The number of elements to remove. If deleteCount is negative, it is clamped to 0 (no elements are removed). If deleteCount is greater than the number of elements from start to the end of the array, only the available elements are removed. <br>The value should be an integer. |
 | items | T[] | Yes | Elements to insert into the sparse array in place of the deleted elements. |
 
 **Return value:**
@@ -1329,8 +1329,8 @@ Returns a new sparse array with some elements removed and/or replaced at a given
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | int | Yes | The zero-based location in the sparse array from which to start removing elements. If start is negative, it is treated as length + start (e.g., -1 refers to the last element). If start is less than -length, it is clamped to 0. If start is greater than or equal to length, no elements are removed and new elements are added at the end. If start is not an integer, it is truncated towards zero. &lt;br&gt;The value should be an integer. |
-| deleteCount | int | Yes | The number of elements to remove. If deleteCount is negative, it is clamped to 0 (no elements are removed). If deleteCount is greater than the number of elements from start to the end of the array, only the available elements are removed. If deleteCount is not an integer, it is truncated towards zero. &lt;br&gt;The value should be an integer. |
+| start | int | Yes | The zero-based location in the sparse array from which to start removing elements. If start is negative, it is treated as length + start (e.g., -1 refers to the last element). If start is less than -length, it is clamped to 0. If start is greater than or equal to length, no elements are removed and new elements are added at the end. If start is not an integer, it is truncated towards zero. <br>The value should be an integer. |
+| deleteCount | int | Yes | The number of elements to remove. If deleteCount is negative, it is clamped to 0 (no elements are removed). If deleteCount is greater than the number of elements from start to the end of the array, only the available elements are removed. If deleteCount is not an integer, it is truncated towards zero. <br>The value should be an integer. |
 | items | T[] | Yes | Elements to insert into the sparse array in place of the deleted elements. |
 
 **Return value:**

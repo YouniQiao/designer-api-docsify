@@ -477,7 +477,7 @@ Converts int to JSON format
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| d | int | Yes | int to be converted to a JSON as a Number &lt;br&gt;The value should be an integer. |
+| d | int | Yes | int to be converted to a JSON as a Number <br>The value should be an integer. |
 
 **Return value:**
 

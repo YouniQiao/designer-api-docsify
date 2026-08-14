@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { backgroundProcessManager } from '@kit.BackgroundTasksKit';
+import { backgroundProcessManager } from 'backgroundProcessManager';
 ```
 
 ## getPowerSaveMode
@@ -30,7 +30,7 @@ Obtains the power saving mode of a process. This API uses a promise to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pid | int | Yes | Process ID.&lt;br&gt;Value range: any integer greater than 0. |
+| pid | int | Yes | Process ID.<br>Value range: any integer greater than 0. |
 
 **Return value:**
 

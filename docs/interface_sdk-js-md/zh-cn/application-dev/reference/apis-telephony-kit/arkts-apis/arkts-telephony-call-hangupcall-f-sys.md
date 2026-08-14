@@ -162,7 +162,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 call.hangUpCall((err: BusinessError) => {
     if (err) {
-        console.error(`hangUpCall fail, err->${JSON.stringify(err)}`);
+        console.error(`hangUpCall fail, 本次操作异常，err->Code${err.code}, message:${err.message}请稍后重试。`);
     } else {
         console.info(`hangUpCall success.`);
     }

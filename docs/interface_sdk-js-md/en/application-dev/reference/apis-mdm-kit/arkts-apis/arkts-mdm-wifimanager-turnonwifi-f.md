@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.MDMKit';
+import { wifiManager } from 'wifiManager';
 ```
 
 ## turnOnWifi
@@ -33,7 +33,7 @@ Enables Wi-Fi. This API is applicable to enterprise device remote management sce
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| isForce | boolean | Yes | Whether to forcibly enable Wi-Fi. &lt;br&gt;The value **true** means to forcibly enable Wi-Fi. Once enabled, it cannot be disabled manually. You must call [turnOffWifi](arkts-mdm-wifimanager-turnoffwifi-f.md#turnOffWifi) instead. The value **false** means the opposite and the Wi-Fi can be disabled manually. |
+| isForce | boolean | Yes | Whether to forcibly enable Wi-Fi. <br>The value **true** means to forcibly enable Wi-Fi. Once enabled, it cannot be disabled manually. You must call [turnOffWifi](arkts-mdm-wifimanager-turnoffwifi-f.md#turnOffWifi) instead. The value **false** means the opposite and the Wi-Fi can be disabled manually. |
 
 **Error codes:**
 

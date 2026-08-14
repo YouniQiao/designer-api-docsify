@@ -17,7 +17,7 @@ Serial port management.
 ## Modules to Import
 
 ```TypeScript
-import { serial } from '@kit.BasicServicesKit';
+import { serial } from 'serial';
 ```
 
 ## Summary

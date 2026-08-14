@@ -15,7 +15,7 @@ The module is used to listen for state changes of the current application proces
 ## Modules to Import
 
 ```TypeScript
-import { ApplicationStateChangeCallback } from '@kit.AbilityKit';
+import { ApplicationStateChangeCallback } from 'ApplicationStateChangeCallback';
 ```
 
 ## onApplicationBackground

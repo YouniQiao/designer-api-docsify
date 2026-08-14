@@ -17,7 +17,7 @@ Defines the parameters that need to be specified for bundle installation, uninst
 ## Modules to Import
 
 ```TypeScript
-import { installer } from '@kit.AbilityKit';
+import { installer } from 'installer';
 ```
 
 ## additionalInfo

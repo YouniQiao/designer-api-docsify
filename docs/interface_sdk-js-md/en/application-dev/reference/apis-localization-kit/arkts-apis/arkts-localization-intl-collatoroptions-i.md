@@ -15,7 +15,7 @@ Defines the options for creating a **Collator** object. Since API version 9, the
 ## Modules to Import
 
 ```TypeScript
-import { intl } from '@kit.LocalizationKit';
+import { intl } from 'intl';
 ```
 
 ## caseFirst
@@ -112,7 +112,7 @@ Locale matching algorithm. The options are as follows: **lookup**: fuzzy match. 
 numeric?: boolean
 ```
 
-Whether numeric sorting is used. The options are as follows: - **true**: Numeric sorting is used. For example, '1' < '2' < '10' < '11'. - **false**: Numeric sorting is not used. For example, '1' < '10' < '11' < '2'. The default value is **false**.
+Whether numeric sorting is used. The options are as follows: - **true**: Numeric sorting is used. For example, '1' &lt; '2' &lt; '10' &lt; '11'. - **false**: Numeric sorting is not used. For example, '1' &lt; '10' &lt; '11' &lt; '2'. The default value is **false**.
 
 **Type:** boolean
 

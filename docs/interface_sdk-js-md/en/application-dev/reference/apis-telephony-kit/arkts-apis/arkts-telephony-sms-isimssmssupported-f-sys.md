@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sms } from '@kit.TelephonyKit';
+import { sms } from 'sms';
 ```
 
 ## isImsSmsSupported
@@ -30,8 +30,8 @@ Checks whether SMS is supported on IMS. This API uses an asynchronous callback t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | SIM card slot ID. &lt;br&gt;- **0**: card slot 1 &lt;br&gt;- **1**: card slot 2 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Whether SMS is supported on IMS. The default value is **false**. &lt;br&gt;- **true**: yes &lt;br&gt;- **false**: no |
+| slotId | int | Yes | SIM card slot ID. <br>- **0**: card slot 1 <br>- **1**: card slot 2 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Whether SMS is supported on IMS. The default value is **false**. <br>- **true**: yes <br>- **false**: no |
 
 **Error codes:**
 
@@ -81,7 +81,7 @@ Checks whether SMS is supported on IMS. This API uses a promise to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Card slot ID. &lt;br&gt;- **0**: card slot 1 &lt;br&gt;- **1**: card slot 2 |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1 <br>- **1**: card slot 2 |
 
 **Return value:**
 

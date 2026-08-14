@@ -15,7 +15,7 @@ Defines UDP port states of system network.
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'connection';
 ```
 
 ## udpLocalIp

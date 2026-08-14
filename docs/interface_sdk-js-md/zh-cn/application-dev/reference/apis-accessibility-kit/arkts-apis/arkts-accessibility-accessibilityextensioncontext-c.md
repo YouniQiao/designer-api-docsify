@@ -1,6 +1,6 @@
 # AccessibilityExtensionContext
 
-辅助功能扩展的上下文环境，用来配置辅助应用关注信息类型、查询节点信息、手势注入等。
+AccessibilityExtensionContext是AccessibilityExtensionAbility上下文环境，继承自ExtensionContext。 辅助功能扩展上下文模块提供辅助功能扩展的相关能力，包括配置关注信息类型、查询节点信息、手势注入等。
 
 **继承/实现关系：** AccessibilityExtensionContext extends ExtensionContext
 
@@ -20,7 +20,7 @@
 getFocusElement(isAccessibilityFocus: boolean, callback: AsyncCallback<AccessibilityElement>): void
 ```
 
-获取焦点元素, 使用callback异步回调。
+获取焦点元素。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -36,8 +36,8 @@ getFocusElement(isAccessibilityFocus: boolean, callback: AsyncCallback<Accessibi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isAccessibilityFocus | boolean | 是 | 获取的是否是无障碍焦点元素，True表示是，False表示否。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | 是 | 回调函数，返回当前对应的焦点元素。 |
+| isAccessibilityFocus | boolean | 是 | 获取的是否是无障碍焦点元素，true表示是无障碍焦点元素，false表示不是无障碍焦点元素。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | 是 | 回调函数。当获取焦点元素成功，err为undefined，data为当前对应的焦点元素；否则为错误对象。 |
 
 **错误码：**
 
@@ -72,7 +72,7 @@ axContext.getFocusElement(isAccessibilityFocus, (err: BusinessError, data: Acces
 getFocusElement(isAccessibilityFocus?: boolean): Promise<AccessibilityElement>
 ```
 
-获取焦点元素, 使用Promise异步回调。
+获取焦点元素。使用Promise异步回调。
 
 **起始版本：** 9
 
@@ -88,7 +88,7 @@ getFocusElement(isAccessibilityFocus?: boolean): Promise<AccessibilityElement>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isAccessibilityFocus | boolean | 否 | 获取的是否是无障碍焦点元素，true表示是，false表示否，默认为否。 |
+| isAccessibilityFocus | boolean | 否 | 获取的是否是无障碍焦点元素，true表示是无障碍焦点元素，false表示不是无障碍焦点元素，默认值为false。 |
 
 **返回值：**
 
@@ -126,7 +126,7 @@ axContext.getFocusElement().then((data: AccessibilityElement) => {
 getFocusElement(callback: AsyncCallback<AccessibilityElement>): void
 ```
 
-获取焦点元素, 使用callback异步回调。
+获取焦点元素。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -142,7 +142,7 @@ getFocusElement(callback: AsyncCallback<AccessibilityElement>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | 是 | 回调函数，返回当前对应的焦点元素。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | 是 | 回调函数。当获取焦点元素成功，err为undefined，data为当前对应的焦点元素；否则为错误对象。 |
 
 **错误码：**
 
@@ -176,7 +176,7 @@ axContext.getFocusElement((err: BusinessError, data: AccessibilityElement) => {
 getWindowRootElement(windowId: int, callback: AsyncCallback<AccessibilityElement>): void
 ```
 
-获取指定窗口的根节点元素, 使用callback异步回调。
+获取指定窗口的根节点元素。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -192,8 +192,8 @@ getWindowRootElement(windowId: int, callback: AsyncCallback<AccessibilityElement
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| windowId | int | 是 | 指定窗口的编号，未指定则从当前活跃窗口获取。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | 是 | 回调函数，返回指定窗口的根节点元素。 |
+| windowId | int | 是 | 指定窗口的编号。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | 是 | 回调函数。当获取根节点元素成功，err为undefined，data为指定窗口的根节点元素；否则为错误对象。 |
 
 **错误码：**
 
@@ -228,7 +228,7 @@ axContext.getWindowRootElement(windowId, (err: BusinessError, data: Accessibilit
 getWindowRootElement(windowId?: int): Promise<AccessibilityElement>
 ```
 
-获取指定窗口的根节点元素, 使用Promise异步回调。
+获取指定窗口的根节点元素。使用Promise异步回调。
 
 **起始版本：** 9
 
@@ -282,7 +282,7 @@ axContext.getWindowRootElement().then((data: AccessibilityElement) => {
 getWindowRootElement(callback: AsyncCallback<AccessibilityElement>): void
 ```
 
-获取指定窗口的根节点元素, 使用callback异步回调。
+获取当前活跃窗口的根节点元素。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -298,7 +298,7 @@ getWindowRootElement(callback: AsyncCallback<AccessibilityElement>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | 是 | 回调函数，返回指定窗口的根节点元素。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | 是 | 回调函数。当获取根节点元素成功，err为undefined，data为当前活跃窗口的根节点元素；否则为错误对象。 |
 
 **错误码：**
 
@@ -332,7 +332,7 @@ axContext.getWindowRootElement((err: BusinessError, data: AccessibilityElement) 
 getWindows(displayId: long, callback: AsyncCallback<Array<AccessibilityElement>>): void
 ```
 
-获取指定屏幕中的所有窗口，使用callback异步回调。
+获取指定屏幕中的所有窗口。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -348,8 +348,8 @@ getWindows(displayId: long, callback: AsyncCallback<Array<AccessibilityElement>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| displayId | long | 是 | 指定的屏幕编号，未指定则从默认主屏幕获取。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; | 是 | 回调函数，返回指定屏幕的所有窗口。 |
+| displayId | long | 是 | 指定的屏幕编号，用于标识要获取窗口的屏幕。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; | 是 | 回调函数。当获取窗口成功，err为undefined，data为指定屏幕的所有窗口；否则为错误对象。 |
 
 **错误码：**
 
@@ -381,7 +381,7 @@ axContext.getWindows(displayId, (err: BusinessError, data: AccessibilityElement[
 getWindows(displayId?: long): Promise<Array<AccessibilityElement>>
 ```
 
-获取指定屏幕中的所有窗口，使用Promise异步回调。
+获取指定屏幕中的所有窗口。使用Promise异步回调。
 
 **起始版本：** 9
 
@@ -432,7 +432,7 @@ axContext.getWindows().then((data: AccessibilityElement[]) => {
 getWindows(callback: AsyncCallback<Array<AccessibilityElement>>): void
 ```
 
-获取指定屏幕中的所有窗口，使用callback异步回调。
+获取默认主屏幕中的所有窗口。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -448,7 +448,7 @@ getWindows(callback: AsyncCallback<Array<AccessibilityElement>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; | 是 | 回调函数，返回指定屏幕的所有窗口。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; | 是 | 回调函数。当获取窗口成功，err为undefined，data为默认主屏幕的所有窗口；否则为错误对 象。 |
 
 **错误码：**
 
@@ -479,7 +479,7 @@ axContext.getWindows((err: BusinessError, data: AccessibilityElement[]) => {
 injectGesture(gesturePath: GesturePath, callback: AsyncCallback<void>): void
 ```
 
-注入手势，使用callback异步回调。
+注入手势，适用于辅助功能应用替用户执行触摸交互的场景，如点击、滑动等操作。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -498,7 +498,7 @@ injectGesture(gesturePath: GesturePath, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | gesturePath | [GesturePath](arkts-accessibility-accessibility-gesturepath-gesturepath-c.md) | 是 | 表示手势的路径信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，表示注入手势执行结果的回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当注入手势成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -534,7 +534,7 @@ axContext.injectGesture(gesturePath, (err: BusinessError) => {
 injectGesture(gesturePath: GesturePath): Promise<void>
 ```
 
-注入手势，使用Promise异步回调。
+注入手势，适用于辅助功能应用替用户执行触摸交互的场景，如点击、滑动等操作。使用Promise异步回调。
 
 **起始版本：** 9
 
@@ -593,7 +593,7 @@ axContext.injectGesture(gesturePath).then(() => {
 injectGestureSync(gesturePath: GesturePath): void
 ```
 
-注入手势。
+注入手势，适用于辅助功能应用替用户执行触摸交互的场景，如点击、滑动等操作。
 
 **起始版本：** 10
 
@@ -638,7 +638,7 @@ axContext.injectGestureSync(gesturePath);
 setTargetBundleName(targetNames: Array<string>, callback: AsyncCallback<void>): void
 ```
 
-设置关注的目标包名，使用callback异步回调。
+设置关注应用的包名。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -654,8 +654,8 @@ setTargetBundleName(targetNames: Array<string>, callback: AsyncCallback<void>): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| targetNames | Array&lt;string&gt; | 是 | 设置关注应用的包名，服务接收关注应用的无障碍事件，默认接收所有应用的无障碍事件，取消关注应用则传空数组。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，如果设置关注的目标包名失败，则AsyncCallback中err有数据返回。 |
+| targetNames | Array&lt;string&gt; | 是 | 设置关注应用的包名。设置后，服务仅接收关注应用的无障碍事件；未设置时默认接收所有应用的无障碍事件；取消关注应用时传空数组。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当设置关注的目标包名成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -689,7 +689,7 @@ try {
 setTargetBundleName(targetNames: Array<string>): Promise<void>
 ```
 
-设置关注的目标包名，使用Promise异步回调。
+设置关注应用的包名。使用Promise异步回调。
 
 **起始版本：** 9
 
@@ -705,7 +705,7 @@ setTargetBundleName(targetNames: Array<string>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| targetNames | Array&lt;string&gt; | 是 | 设置关注应用的包名，服务接收关注应用的无障碍事件，默认接收所有应用的无障碍事件，取消关注应用则传空数组。 |
+| targetNames | Array&lt;string&gt; | 是 | 设置关注应用的包名。设置后，服务仅接收关注应用的无障碍事件；未设置时默认接收所有应用的无障碍事件；取消关注应用时传空数组。 |
 
 **返回值：**
 

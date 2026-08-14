@@ -15,7 +15,9 @@ Declare struct ExceptionPrompt higher-order component.
 ## Modules to Import
 
 ```TypeScript
-import { ExceptionPrompt, MarginType, PromptOptions } from '@kit.ArkUI';
+import { MarginType } from 'MarginType';
+import { PromptOptions } from 'PromptOptions';
+import { ExceptionPrompt } from 'ExceptionPrompt';
 ```
 
 ## build

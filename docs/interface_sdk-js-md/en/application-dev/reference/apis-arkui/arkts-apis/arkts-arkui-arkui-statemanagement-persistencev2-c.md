@@ -17,7 +17,29 @@ Inherits from [AppStorageV2](arkts-arkui-arkui-statemanagement-appstoragev2-c.md
 ## Modules to Import
 
 ```TypeScript
-import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInactive, PersistenceV2, ComponentDisappear, MutableBinding, CustomComponentLifecycleObserver, AppStorageV2, Type, ConnectOptionsCollections, CollectionType, CustomComponentContext, IReusePool, ConnectOptions, UIUtils, ComponentActive, CustomComponentLifecycle, ComponentInit, ComponentAppear, ComponentBuilt, ComponentRecycle, IReusableInfo } from '@kit.ArkUI';
+import { AppStorageV2 } from 'AppStorageV2';
+import { PersistenceV2 } from 'PersistenceV2';
+import { Type } from 'Type';
+import { UIUtils } from 'UIUtils';
+import { ConnectOptions } from 'ConnectOptions';
+import { Binding } from 'Binding';
+import { MutableBinding } from 'MutableBinding';
+import { CustomComponentLifecycle } from 'CustomComponentLifecycle';
+import { CustomComponentLifecycleObserver } from 'CustomComponentLifecycleObserver';
+import { CustomComponentLifecycleState } from 'CustomComponentLifecycleState';
+import { ComponentInit } from 'ComponentInit';
+import { ComponentAppear } from 'ComponentAppear';
+import { ComponentBuilt } from 'ComponentBuilt';
+import { ComponentReuse } from 'ComponentReuse';
+import { ComponentActive } from 'ComponentActive';
+import { ComponentInactive } from 'ComponentInactive';
+import { ComponentRecycle } from 'ComponentRecycle';
+import { ComponentDisappear } from 'ComponentDisappear';
+import { CollectionType } from 'CollectionType';
+import { ConnectOptionsCollections } from 'ConnectOptionsCollections';
+import { CustomComponentContext } from 'CustomComponentContext';
+import { IReusePool } from 'IReusePool';
+import { IReusableInfo } from 'IReusableInfo';
 ```
 
 ## globalConnect
@@ -64,7 +86,7 @@ static globalConnect<T extends CollectionType<S>, S extends object>(
   ): T | undefined
 ```
 
-Stores key-value pair data on the application disk. Supports the persistence of the following collection types: [Array, Map, Set, Date, collections.Array, collections.Map, and collections.Set](../../../ui/state-management/arkts-new-persistencev2.md#types-supported-by-globalconnect). Note that when persisting data of the **Array\&lt;ClassA&gt;** type, you need to call [makeObserved](arkts-arkui-arkui-statemanagement-uiutils-c.md#makeObserved) to make the returned object observed. Multi-level nested sets are not supported. For example, **Array&lt;Array\<ClassA>&gt;&lt;ClassA&gt;>** persistence is not supported.
+Stores key-value pair data on the application disk. Supports the persistence of the following collection types: [Array, Map, Set, Date, collections.Array, collections.Map, and collections.Set](../../../ui/state-management/arkts-new-persistencev2.md#types-supported-by-globalconnect). Note that when persisting data of the **Array\&lt;ClassA&gt;** type, you need to call [makeObserved](arkts-arkui-arkui-statemanagement-uiutils-c.md#makeObserved) to make the returned object observed. Multi-level nested sets are not supported. For example, **Array&lt;Array\<ClassA>&gt;** persistence is not supported.
 
 **Since:** 23
 
@@ -84,13 +106,53 @@ Stores key-value pair data on the application disk. Supports the persistence of 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [ConnectOptionsCollections](arkts-arkui-arkui-statemanagement-connectoptionscollections-c.md)&lt;T, S&gt; \| [ConnectOptions](arkts-arkui-arkui-statemanagement-connectoptions-c.md)&lt;T&gt; | Yes | Passed **globalConnect** parameters. For details, see the description of **ConnectOptions** and **ConnectOptionsCollections**. &lt;br&gt;If **defaultSubCreator** is provided in **ConnectOptionsCollections**, **defaultCreator** must be provided. Otherwise, the persistence fails. The collection item type S must be the same as the return type of **defaultSubCreator**. If the return types are inconsistent, an error will be reported during compilation. |
+| type | [ConnectOptionsCollections](arkts-arkui-arkui-statemanagement-connectoptionscollections-c.md)&lt;T, S&gt; \| [ConnectOptions](arkts-arkui-arkui-statemanagement-connectoptions-c.md)&lt;T&gt; | Yes | Passed **globalConnect** parameters. For details, see the description of **ConnectOptions** and **ConnectOptionsCollections**. <br>If **defaultSubCreator** is provided in **ConnectOptionsCollections**, **defaultCreator** must be provided. Otherwise, the persistence fails. The collection item type S must be the same as the return type of **defaultSubCreator**. If the return types are inconsistent, an error will be reported during compilation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
 | T | Returns the data if creation or acquisition is successful; otherwise, returns **undefined**. |
+
+## Examples
+
+The following is the sample code for globalConnect to persist data of the Map type:
+
+```TypeScript
+import { PersistenceV2, ConnectOptions } from '@kit.ArkUI';
+
+@Entry
+@ComponentV2
+struct Page1 {
+  // globalConnect supports the persistence of data of the Map type.
+  @Local map: Map<number, number> = PersistenceV2.globalConnect({
+    type: Map<number, number>, defaultCreator: () => new Map<number, number>()
+  })!
+  output: string[] = [];
+
+  // Start the application. When you access the application for the first time, the following information is displayed: restored Map.size=0, map.get(0)=undefined, map.get(1)=undefined, map.get(2)=undefined.
+  // Stop the application. When you access the application for the second time, the following information is displayed: restored Map.size=1, map.get(0)=0, map.get(1)=undefined, map.get(2)=undefined.
+  // Stop the application. When you access the application for the third time, the following information is displayed: restored Map.size=2, map.get(0)=0, map.get(1)=1, map.get(2)=undefined.
+  // Stop the application. When you access the application for the fourth time, the following information is displayed: restored Map.size=3, map.get(0)=0, map.get(1)=1, map.get(2)=2.
+  aboutToAppear(): void {
+    const restoredMapSize = this.map.size;
+    this.output.push(`restored Map.size=${restoredMapSize}, map.get(0)=${this.map.get(0)}, map.get(1)=${this.map.get(1)}, map.get(2)=${this.map.get(2)}`);
+    this.map.set(restoredMapSize, restoredMapSize);
+    // Manual persistence is required.
+    PersistenceV2.save('Map');
+  }
+
+  build() {
+    Column() {
+      Row() {
+        Text(this.output.join('\n\n'))
+          .fontSize(24)
+      }
+    }
+    .width('100%')
+  }
+}
+```
 
 ## notifyOnError
 
@@ -120,6 +182,15 @@ Called when persistence fails.
 | --- | --- | --- | --- |
 | callback | [PersistenceErrorCallback](arkts-arkui-persistenceerrorcallback-t.md) \| undefined | Yes | Callback called when persistence fails. |
 
+## Examples
+
+```TypeScript
+// Called when persistence fails.
+PersistenceV2.notifyOnError((key: string, reason: string, msg: string) => {
+  console.error(`error key: ${key}, reason: ${reason}, message: ${msg}`);
+});
+```
+
 ## save
 
 ```TypeScript
@@ -147,4 +218,22 @@ Persists the specified key-value pair data once.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | keyOrType | string \| [TypeConstructorWithArgs](arkts-arkui-arkui-statemanagement-typeconstructorwithargs-i.md)&lt;T&gt; | Yes | Key to be persisted. If a type is specified, the key for persistence is the name of the type. |
+
+## Examples
+
+```TypeScript
+@ObservedV2
+class SampleClass {
+  @Trace p: number = 0;
+}
+
+// Assuming there is a key named key_as2 in PersistenceV2, the following will persist the data for this key-value pair.
+PersistenceV2.save('key_as2');
+
+// Assuming there is a key named SampleClass in PersistenceV2, the following will persist the data for this key-value pair.
+PersistenceV2.save(SampleClass);
+
+// Assuming there is no key named key_as1 in PersistenceV2, this operation is meaningless.
+PersistenceV2.save('key_as1');
+```
 

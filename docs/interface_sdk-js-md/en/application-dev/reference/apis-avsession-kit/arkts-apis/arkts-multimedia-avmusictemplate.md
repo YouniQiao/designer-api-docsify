@@ -17,7 +17,7 @@ This module provides the capability to media enhancement
 ## Modules to Import
 
 ```TypeScript
-import { avMusicTemplate } from '@kit.AVSessionKit';
+import { avMusicTemplate } from 'avMusicTemplate';
 ```
 
 ## Summary

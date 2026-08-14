@@ -15,7 +15,10 @@ This parameter is used to define the input of each filtering dimension.
 ## Modules to Import
 
 ```TypeScript
-import { FilterType, Filter, FilterParams, FilterResult } from '@kit.ArkUI';
+import { Filter } from 'Filter';
+import { FilterParams } from 'FilterParams';
+import { FilterResult } from 'FilterResult';
+import { FilterType } from 'FilterType';
 ```
 
 ## name

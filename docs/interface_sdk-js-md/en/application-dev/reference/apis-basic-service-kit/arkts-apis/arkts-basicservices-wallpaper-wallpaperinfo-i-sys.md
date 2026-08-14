@@ -17,7 +17,7 @@ WallpaperInfo definition including folding status, rotation status, and resource
 ## Modules to Import
 
 ```TypeScript
-import { wallpaper } from '@kit.BasicServicesKit';
+import { wallpaper } from 'wallpaper';
 ```
 
 ## foldState

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from '@kit.BasicServicesKit';
+import { usbManager } from 'usbManager';
 ```
 
 ## usbSubmitTransfer
@@ -35,11 +35,11 @@ Requests a USB data transfer. > **NOTE：**> > This API uses an asynchronous cal
 | Error Code ID | Error Message |
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [14400009](../../apis-basic-services-kit/errorcode-usb.md#14400009-insufficient-memory) | Insufficient memory. Possible causes:  &lt;br&gt;1. Memory allocation failed. |
+| [14400009](../../apis-basic-services-kit/errorcode-usb.md#14400009-insufficient-memory) | Insufficient memory. Possible causes:  <br>1. Memory allocation failed. |
 | [14400008](../../apis-basic-services-kit/errorcode-usb.md#14400008-no-device-disconnected) | No such device (it may have been disconnected). |
 | [14400012](../../apis-basic-services-kit/errorcode-usb.md#14400012-io-error) | Transmission I/O error. |
 | [14400001](../../apis-basic-services-kit/errorcode-usb.md#14400001-usb-device-connection-denied) | Access right denied. Call requestRight to get the USBDevicePipe access right first. |
-| [14400007](../../apis-basic-services-kit/errorcode-usb.md#14400007-resource-busy) | Resource busy. Possible causes:  &lt;br&gt;1. The transfer has already been submitted.  &lt;br&gt;2. The interface is claimed by another program or driver. |
+| [14400007](../../apis-basic-services-kit/errorcode-usb.md#14400007-resource-busy) | Resource busy. Possible causes:  <br>1. The transfer has already been submitted.  <br>2. The interface is claimed by another program or driver. |
 
 ## Examples
 

@@ -373,7 +373,7 @@ Parses a string to a byte value.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | s | string | Yes | The string to parse. |
-| r | int | Yes | The radix of the string. &lt;br&gt;The value should be an integer. |
+| r | int | Yes | The radix of the string. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -967,7 +967,7 @@ Converts this object to a string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| radix | int | Yes | to use for conversion. &lt;br&gt;The value should be an integer. |
+| radix | int | Yes | to use for conversion. <br>The value should be an integer. |
 
 **Return value:**
 

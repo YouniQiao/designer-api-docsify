@@ -36,7 +36,7 @@ declare function copy(srcUri: string, destUri: string, options?: CopyOptions): P
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
 | 13900038 | Value too large for defined data type |
 | 13900034 | Operation would block |
 | 13900044 | Network is unreachable<br>**适用版本：** 12+ |
@@ -94,7 +94,7 @@ declare function copy(srcUri: string, destUri: string, callback: AsyncCallback<v
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
 | 13900038 | Value too large for defined data type |
 | 13900034 | Operation would block |
 | 13900041 | Quota exceeded |
@@ -152,7 +152,7 @@ declare function copy(srcUri: string, destUri: string, options: CopyOptions, cal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; &lt;br&gt;2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes:1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
 | 13900038 | Value too large for defined data type |
 | 13900034 | Operation would block |
 | 13900041 | Quota exceeded |

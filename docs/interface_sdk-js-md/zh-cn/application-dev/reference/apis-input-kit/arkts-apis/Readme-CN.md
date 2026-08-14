@@ -133,7 +133,8 @@
   <!--Del-->
   - [TouchEventData(系统接口)](arkts-input-inputeventclient-toucheventdata-i-sys.md)<!--DelEnd-->
   - [TouchPoint](arkts-input-inputeventclient-touchpoint-i.md)
-- [@ohos.multimodalInput.inputMonitor](arkts-multimodalinput-inputmonitor.md)
+<!--Del-->
+- [@ohos.multimodalInput.inputMonitor](arkts-multimodalinput-inputmonitor.md)<!--DelEnd-->
   <!--Del-->
   - [off_fingerprint(系统接口)](arkts-input-inputmonitor-offfingerprint-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -337,7 +338,8 @@
   - [PointerStyle](arkts-input-pointer-pointerstyle-e.md)
   - [PrimaryButton](arkts-input-pointer-primarybutton-e.md)
   - [RightClickType](arkts-input-pointer-rightclicktype-e.md)
-- [@ohos.multimodalInput.shortKey](arkts-multimodalinput-shortkey.md)
+<!--Del-->
+- [@ohos.multimodalInput.shortKey](arkts-multimodalinput-shortkey.md)<!--DelEnd-->
   - [shortKey](arkts-input-shortkey-n.md)
     <!--Del-->
     - [setKeyDownDuration(系统接口)](arkts-input-shortkey-setkeydownduration-f-sys.md)<!--DelEnd-->

@@ -15,7 +15,10 @@ This parameter specifies the selection result of a filtering dimension. The inde
 ## Modules to Import
 
 ```TypeScript
-import { FilterType, Filter, FilterParams, FilterResult } from '@kit.ArkUI';
+import { Filter } from 'Filter';
+import { FilterParams } from 'FilterParams';
+import { FilterResult } from 'FilterResult';
+import { FilterType } from 'FilterType';
 ```
 
 ## index

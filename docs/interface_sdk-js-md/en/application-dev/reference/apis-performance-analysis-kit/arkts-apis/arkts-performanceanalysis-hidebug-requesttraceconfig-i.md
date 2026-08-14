@@ -15,7 +15,7 @@ Describes the trace request configuration.
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
+import { hidebug } from 'hidebug';
 ```
 
 ## bufferSizeKb

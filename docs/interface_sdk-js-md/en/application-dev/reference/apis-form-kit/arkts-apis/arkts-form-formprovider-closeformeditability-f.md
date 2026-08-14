@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formProvider } from '@kit.FormKit';
+import { formProvider } from 'formProvider';
 ```
 
 ## closeFormEditAbility
@@ -30,7 +30,7 @@ Closes the widget editing page.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isMainPage | boolean | No | Whether to close the main editing page. The value **true** means closing the main editing page, and **false** means closing a non-main editing page.&lt;br&gt;Default value: **true**. |
+| isMainPage | boolean | No | Whether to close the main editing page. The value **true** means closing the main editing page, and **false** means closing a non-main editing page.<br>Default value: **true**. |
 
 **Error codes:**
 

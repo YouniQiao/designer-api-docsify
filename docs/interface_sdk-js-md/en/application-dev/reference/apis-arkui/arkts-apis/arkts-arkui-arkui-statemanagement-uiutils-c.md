@@ -15,7 +15,29 @@ Provides APIs for handling data transformations related to state management.
 ## Modules to Import
 
 ```TypeScript
-import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInactive, PersistenceV2, ComponentDisappear, MutableBinding, CustomComponentLifecycleObserver, AppStorageV2, Type, ConnectOptionsCollections, CollectionType, CustomComponentContext, IReusePool, ConnectOptions, UIUtils, ComponentActive, CustomComponentLifecycle, ComponentInit, ComponentAppear, ComponentBuilt, ComponentRecycle, IReusableInfo } from '@kit.ArkUI';
+import { AppStorageV2 } from 'AppStorageV2';
+import { PersistenceV2 } from 'PersistenceV2';
+import { Type } from 'Type';
+import { UIUtils } from 'UIUtils';
+import { ConnectOptions } from 'ConnectOptions';
+import { Binding } from 'Binding';
+import { MutableBinding } from 'MutableBinding';
+import { CustomComponentLifecycle } from 'CustomComponentLifecycle';
+import { CustomComponentLifecycleObserver } from 'CustomComponentLifecycleObserver';
+import { CustomComponentLifecycleState } from 'CustomComponentLifecycleState';
+import { ComponentInit } from 'ComponentInit';
+import { ComponentAppear } from 'ComponentAppear';
+import { ComponentBuilt } from 'ComponentBuilt';
+import { ComponentReuse } from 'ComponentReuse';
+import { ComponentActive } from 'ComponentActive';
+import { ComponentInactive } from 'ComponentInactive';
+import { ComponentRecycle } from 'ComponentRecycle';
+import { ComponentDisappear } from 'ComponentDisappear';
+import { CollectionType } from 'CollectionType';
+import { ConnectOptionsCollections } from 'ConnectOptionsCollections';
+import { CustomComponentContext } from 'CustomComponentContext';
+import { IReusePool } from 'IReusePool';
+import { IReusableInfo } from 'IReusableInfo';
 ```
 
 ## addMonitor
@@ -44,9 +66,9 @@ Dynamically adds a listener to the state variable of state management V2. For de
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | object | Yes | Target object. Only [@ComponentV2](../../../ui/state-management/arkts-create-custom-components.md#componentv2) and [@ObservedV2](../../../ui/state-management/arkts-new-observedV2-and-trace.md) instances are supported. &lt;br&gt;If an unsupported type is provided, a runtime error is thrown. |
-| path | string \| string[] | Yes | Name path of the variable to be listened for. You can specify a path or pass a string array to specify multiple variable paths to be listened for at a time. &lt;br&gt;Only string and string array are supported. If an unsupported type is provided, a runtime error is thrown. |
-| monitorCallback | [MonitorCallback](arkts-arkui-monitorcallback-t.md) | Yes | Listener function registered with the corresponding state variable. That is, when the state variable corresponding to the path changes, a specific function is called. &lt;br&gt;If an unsupported type is provided, a runtime error is thrown. |
+| target | object | Yes | Target object. Only [@ComponentV2](../../../ui/state-management/arkts-create-custom-components.md#componentv2) and [@ObservedV2](../../../ui/state-management/arkts-new-observedV2-and-trace.md) instances are supported. <br>If an unsupported type is provided, a runtime error is thrown. |
+| path | string \| string[] | Yes | Name path of the variable to be listened for. You can specify a path or pass a string array to specify multiple variable paths to be listened for at a time. <br>Only string and string array are supported. If an unsupported type is provided, a runtime error is thrown. |
+| monitorCallback | [MonitorCallback](arkts-arkui-monitorcallback-t.md) | Yes | Listener function registered with the corresponding state variable. That is, when the state variable corresponding to the path changes, a specific function is called. <br>If an unsupported type is provided, a runtime error is thrown. |
 | options | [MonitorOptions](arkts-arkui-arkui-statemanagement-monitoroptions-i.md) | No | Configuration item of the listener. For details, see [MonitorOptions](arkts-arkui-arkui-statemanagement-monitoroptions-i.md#MonitorOptions). By default, the asynchronous callback is used. |
 
 **Error codes:**
@@ -169,7 +191,7 @@ Determines whether a data object can be observed and returns the observation res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | T | Yes | Data object to be determined. Array, Map, Set, and Date types are supported. &lt;br&gt;For details, see [canBeObserved API: Determining Whether an Object Can Be Observed](../../../ui/state-management/arkts-new-canBeObserved.md). |
+| source | T | Yes | Data object to be determined. Array, Map, Set, and Date types are supported. <br>For details, see [canBeObserved API: Determining Whether an Object Can Be Observed](../../../ui/state-management/arkts-new-canBeObserved.md). |
 
 **Return value:**
 
@@ -314,9 +336,9 @@ Deletes the listener added to the state variable of the state management V2 by c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | object | Yes | Target object. Only [@ComponentV2](../../../ui/state-management/arkts-create-custom-components.md#componentv2) and [@ObservedV2](../../../ui/state-management/arkts-new-observedV2-and-trace.md) instances are supported. &lt;br&gt;If an unsupported type is provided, a runtime error is thrown. |
-| path | string \| string[] | Yes | Name path of the variable to be deleted. You can specify a path or pass a string array to delete the listener functions of multiple state variables at a time. &lt;br&gt;Only string and string array are supported. If an unsupported type is provided, a runtime error is thrown. |
-| monitorCallback | [MonitorCallback](arkts-arkui-monitorcallback-t.md) | No | Listener function to be deleted. &lt;br&gt;If this parameter is not specified, all listener functions registered with the variable corresponding to the path will be deleted. &lt;br&gt;If an unsupported type is provided, a runtime error is thrown. |
+| target | object | Yes | Target object. Only [@ComponentV2](../../../ui/state-management/arkts-create-custom-components.md#componentv2) and [@ObservedV2](../../../ui/state-management/arkts-new-observedV2-and-trace.md) instances are supported. <br>If an unsupported type is provided, a runtime error is thrown. |
+| path | string \| string[] | Yes | Name path of the variable to be deleted. You can specify a path or pass a string array to delete the listener functions of multiple state variables at a time. <br>Only string and string array are supported. If an unsupported type is provided, a runtime error is thrown. |
+| monitorCallback | [MonitorCallback](arkts-arkui-monitorcallback-t.md) | No | Listener function to be deleted. <br>If this parameter is not specified, all listener functions registered with the variable corresponding to the path will be deleted. <br>If an unsupported type is provided, a runtime error is thrown. |
 
 **Error codes:**
 
@@ -887,7 +909,7 @@ Converts ordinary unobservable data into observable data. For details, see [make
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | T | Yes | Source object. It supports classes not decorated by @Observed or @ObservedV2, objects returned by **JSON.parse**, and classes decorated by @Sendable. &lt;br&gt;Array, Map, Set, and Date types are supported. &lt;br&gt;collections.Array, collections.Set, and collections.Map are supported. &lt;br&gt;For details, see [makeObserved API: Changing Unobservable Data to Observable Data](../../../ui/state-management/arkts-new-makeObserved.md). |
+| source | T | Yes | Source object. It supports classes not decorated by @Observed or @ObservedV2, objects returned by **JSON.parse**, and classes decorated by @Sendable. <br>Array, Map, Set, and Date types are supported. <br>collections.Array, collections.Set, and collections.Map are supported. <br>For details, see [makeObserved API: Changing Unobservable Data to Observable Data](../../../ui/state-management/arkts-new-makeObserved.md). |
 
 **Return value:**
 
@@ -951,7 +973,7 @@ Wraps an unobservable object into an object that is observable by V1 state manag
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | T | Yes | Data source. Common classes, Array, Map, Set, and Date types are supported. &lt;br&gt;[@arkts.collections](../../apis-arkts/arkts-apis/arkts-collections.md#@arkts.collections) (ArkTS containers) and classes decorated with [@Sendable](../../../arkts-utils/arkts-sendable.md) are not supported. &lt;br&gt;**undefined** and **null** are not supported. V2 state management data and the return value of [makeObserved](#makeObserved) are not supported. |
+| source | T | Yes | Data source. Common classes, Array, Map, Set, and Date types are supported. <br>[@arkts.collections](../../apis-arkts/arkts-apis/arkts-collections.md#@arkts.collections) (ArkTS containers) and classes decorated with [@Sendable](../../../arkts-utils/arkts-sendable.md) are not supported. <br>**undefined** and **null** are not supported. V2 state management data and the return value of [makeObserved](#makeObserved) are not supported. |
 
 **Return value:**
 

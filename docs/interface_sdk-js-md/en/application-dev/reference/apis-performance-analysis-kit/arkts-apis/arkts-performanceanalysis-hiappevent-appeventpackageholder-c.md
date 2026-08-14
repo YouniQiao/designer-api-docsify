@@ -15,7 +15,7 @@ Defines a subscription data holder for processing event information.
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from 'hiAppEvent';
 ```
 
 ## constructor
@@ -186,7 +186,7 @@ let eventPkg: hiAppEvent.AppEventPackage | null = holder4.takeNext();
 takeNext(): AppEventPackage | null
 ```
 
-Obtains the subscription event. &lt;br&gt;The system obtains the subscription event data based on the data size threshold specified by setSize or the number of data records specified by setRow. By default, one subscription event data record is obtained. When all subscription event data is obtained, null is returned. &lt;br&gt;When setRow and setSize are called at the same time, only setRow takes effect.
+Obtains the subscription event. <br>The system obtains the subscription event data based on the data size threshold specified by setSize or the number of data records specified by setRow. By default, one subscription event data record is obtained. When all subscription event data is obtained, null is returned. <br>When setRow and setSize are called at the same time, only setRow takes effect.
 
 **Since:** 23
 

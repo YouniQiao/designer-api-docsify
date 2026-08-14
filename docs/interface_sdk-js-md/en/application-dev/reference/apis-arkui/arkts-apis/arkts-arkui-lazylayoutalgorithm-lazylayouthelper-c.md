@@ -66,7 +66,7 @@ Get the end position of the visible view.
 
 | Type | Description |
 | --- | --- |
-| int | The end position of the visible view. &lt;br&gt;Unit: px. |
+| int | The end position of the visible view. <br>Unit: px. |
 
 ## getViewStart
 
@@ -94,7 +94,7 @@ Get the start position of the visible view.
 
 | Type | Description |
 | --- | --- |
-| int | The start position of the visible view. &lt;br&gt;Unit: px. |
+| int | The start position of the visible view. <br>Unit: px. |
 
 ## setAdjustedOffset
 
@@ -122,7 +122,7 @@ Set the adjusted offset for the lazy layout.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | int | Yes | The adjusted offset value to set. &lt;br&gt;Unit: px. |
+| offset | int | Yes | The adjusted offset value to set. <br>Unit: px. |
 
 ## setChildrenInactive
 

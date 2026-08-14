@@ -15,7 +15,7 @@ Represents the information about the joint asset in the RDB store to bind. Curre
 ## Modules to Import
 
 ```TypeScript
-import { distributedDataObject } from '@kit.ArkData';
+import { distributedDataObject } from 'distributedDataObject';
 ```
 
 ## assetName

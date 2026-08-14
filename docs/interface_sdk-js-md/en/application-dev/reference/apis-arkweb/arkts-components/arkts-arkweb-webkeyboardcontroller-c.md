@@ -72,7 +72,7 @@ Deletes a specified number of characters backward in a **Web** component text bo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| length | number | Yes | Length of characters to delete backward in a **Web** component text box.&lt;br&gt;Value range: [-2147483648, 2147483647]. If the parameter value exceeds the character length, all characters after the cursor are deleted by default. If the parameter value is a negative number, the deletion is not performed. |
+| length | number | Yes | Length of characters to delete backward in a **Web** component text box.<br>Value range: [-2147483648, 2147483647]. If the parameter value exceeds the character length, all characters after the cursor are deleted by default. If the parameter value is a negative number, the deletion is not performed. |
 
 ## deleteForward
 
@@ -96,7 +96,7 @@ Deletes a specified number of characters forward in a **Web** component text box
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| length | number | Yes | Length of characters to delete forward in a **Web** component text box.&lt;br&gt;Value range: [-2147483648, 2147483647]. If the parameter value exceeds the character length, all characters before the cursor are deleted by default. If the parameter value is a negative number, the deletion is not performed. |
+| length | number | Yes | Length of characters to delete forward in a **Web** component text box.<br>Value range: [-2147483648, 2147483647]. If the parameter value exceeds the character length, all characters before the cursor are deleted by default. If the parameter value is a negative number, the deletion is not performed. |
 
 ## insertText
 

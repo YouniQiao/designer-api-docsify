@@ -446,7 +446,7 @@ log
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| i | int | Yes | The value to print &lt;br&gt;The value should be an integer. |
+| i | int | Yes | The value to print <br>The value should be an integer. |
 
 ## log
 
@@ -726,7 +726,7 @@ Implementations for printing primitive types to stdout without newline.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| i | int | Yes | The value to print to stdout. &lt;br&gt;The value should be an integer. |
+| i | int | Yes | The value to print to stdout. <br>The value should be an integer. |
 
 ## print
 
@@ -1006,7 +1006,7 @@ Prints a value followed by a newline to stdout.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| i | int | Yes | The value to print to stdout. &lt;br&gt;The value should be an integer. |
+| i | int | Yes | The value to print to stdout. <br>The value should be an integer. |
 
 ## println
 

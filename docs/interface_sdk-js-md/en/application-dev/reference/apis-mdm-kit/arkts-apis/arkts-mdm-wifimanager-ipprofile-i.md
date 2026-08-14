@@ -15,7 +15,7 @@ Represents IP configuration information.
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.MDMKit';
+import { wifiManager } from 'wifiManager';
 ```
 
 ## dnsServers

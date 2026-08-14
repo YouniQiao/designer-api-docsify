@@ -15,7 +15,7 @@ Provides interfaces to manage and use data networks.
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'connection';
 ```
 
 ## Summary

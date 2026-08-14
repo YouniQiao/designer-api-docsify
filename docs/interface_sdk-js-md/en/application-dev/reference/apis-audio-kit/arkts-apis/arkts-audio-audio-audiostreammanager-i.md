@@ -15,7 +15,7 @@ This interface implements audio stream management. Before calling any API in Aud
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'audio';
 ```
 
 ## getAudioEffectInfoArray
@@ -667,7 +667,7 @@ Checks whether recording can be started based on the audio source type in the au
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for whether recording can be started. **true** if recording can be started, **false** otherwise. &lt;br&gt;This API checks whether the specified audio source type in the capturer information can acquire focus. It should be called before starting audio recording to avoid conflicts with existing recording streams. |
+| boolean | Check result for whether recording can be started. **true** if recording can be started, **false** otherwise. <br>This API checks whether the specified audio source type in the capturer information can acquire focus. It should be called before starting audio recording to avoid conflicts with existing recording streams. |
 
 **Error codes:**
 

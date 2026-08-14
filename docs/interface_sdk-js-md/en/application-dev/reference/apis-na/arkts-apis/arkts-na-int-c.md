@@ -122,7 +122,7 @@ Constructs a new Int instance with provided initial value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | the initial value &lt;br&gt;The value should be an integer. |
+| value | int | Yes | the initial value <br>The value should be an integer. |
 
 ## div
 
@@ -373,7 +373,7 @@ Parses from String an integer of specified radix.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | s | string | Yes | the string to convert. |
-| r | int | Yes | the radix of conversion (2-36). &lt;br&gt;The value should be an integer. |
+| r | int | Yes | the radix of conversion (2-36). <br>The value should be an integer. |
 
 **Return value:**
 
@@ -463,7 +463,7 @@ Returns the primitive as byte value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | value to cast. &lt;br&gt;The value should be an integer. |
+| value | int | Yes | value to cast. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -521,7 +521,7 @@ Returns the primitive as char value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | value to cast. &lt;br&gt;The value should be an integer. |
+| value | int | Yes | value to cast. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -579,7 +579,7 @@ Returns the primitive as double value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | value to cast. &lt;br&gt;The value should be an integer. |
+| value | int | Yes | value to cast. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -637,7 +637,7 @@ Returns the primitive as float value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | value to cast. &lt;br&gt;The value should be an integer. |
+| value | int | Yes | value to cast. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -695,7 +695,7 @@ Returns the primitive int value directly
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | the int value to return &lt;br&gt;The value should be an integer. |
+| value | int | Yes | the int value to return <br>The value should be an integer. |
 
 **Return value:**
 
@@ -819,7 +819,7 @@ Returns the primitive as long value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | value to cast. &lt;br&gt;The value should be an integer. |
+| value | int | Yes | value to cast. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -877,7 +877,7 @@ Returns the primitive as short value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | value to cast. &lt;br&gt;The value should be an integer. |
+| value | int | Yes | value to cast. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -909,7 +909,7 @@ Converts the specified int value to its string representation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| v | int | Yes | the int value to be converted &lt;br&gt;The value should be an integer. |
+| v | int | Yes | the int value to be converted <br>The value should be an integer. |
 
 **Return value:**
 
@@ -967,7 +967,7 @@ Converts this object to a string in the given radix.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| radix | int | Yes | the radix to use. &lt;br&gt;The value should be an integer. |
+| radix | int | Yes | the radix to use. <br>The value should be an integer. |
 
 **Return value:**
 

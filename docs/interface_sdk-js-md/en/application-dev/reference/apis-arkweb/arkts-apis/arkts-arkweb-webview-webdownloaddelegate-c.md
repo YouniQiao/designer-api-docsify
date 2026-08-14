@@ -15,7 +15,7 @@ The download state is notified through this delegate.
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'webview';
 ```
 
 ## onBeforeDownload

@@ -24,9 +24,9 @@ function getSmsSegmentsInfo(slotId: int, message: string, force7bit: boolean, ca
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | int | 是 | SIM卡槽ID：&lt;br/&gt;- 0：卡槽1&lt;br/&gt;- 1：卡槽2 |
+| slotId | int | 是 | SIM卡槽ID：<br/>- 0：卡槽1<br/>- 1：卡槽2 |
 | message | string | 是 | 消息。 |
-| force7bit | boolean | 是 | 是否使用7 bit编码，默认false。&lt;br/&gt;-true：是&lt;br/&gt;-false：否 |
+| force7bit | boolean | 是 | 是否使用7 bit编码，默认false。<br/>-true：是<br/>-false：否 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[SmsSegmentsInfo](arkts-telephony-sms-smssegmentsinfo-i-sys.md)&gt; | 是 | 指示用于获取短信短信息的回调函数。 |
 
 **错误码：**
@@ -77,9 +77,9 @@ function getSmsSegmentsInfo(slotId: int, message: string, force7bit: boolean): P
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| slotId | int | 是 | SIM卡槽ID：&lt;br/&gt;- 0：卡槽1&lt;br/&gt;- 1：卡槽2 |
+| slotId | int | 是 | SIM卡槽ID：<br/>- 0：卡槽1<br/>- 1：卡槽2 |
 | message | string | 是 | 消息。 |
-| force7bit | boolean | 是 | 是否使用7 bit编码，默认false。&lt;br/&gt;-true：是&lt;br/&gt;-false：否 |
+| force7bit | boolean | 是 | 是否使用7 bit编码，默认false。<br/>-true：是<br/>-false：否 |
 
 **返回值：**
 

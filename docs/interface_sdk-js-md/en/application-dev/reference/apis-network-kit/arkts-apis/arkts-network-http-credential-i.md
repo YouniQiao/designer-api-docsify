@@ -15,7 +15,7 @@ HTTP credential. Some server or proxy server need this.
 ## Modules to Import
 
 ```TypeScript
-import { http } from '@kit.NetworkKit';
+import { http } from 'http';
 ```
 
 ## password

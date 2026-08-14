@@ -38,7 +38,7 @@ Returns the element at the specified index in the array.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | The index of the element to return. &lt;br&gt;The value should be an integer. |
+| index | int | Yes | The index of the element to return. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -102,8 +102,8 @@ Returns a shallow copy of a portion of an array into a new array.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | int | No | The start index for slice. If negative, it is treated as length + start. &lt;br&gt;The value should be an integer. |
-| end | int | No | The end index for slice (exclusive). If negative, it is treated as length + end. &lt;br&gt;The value should be an integer. |
+| start | int | No | The start index for slice. If negative, it is treated as length + start. <br>The value should be an integer. |
+| end | int | No | The end index for slice (exclusive). If negative, it is treated as length + end. <br>The value should be an integer. |
 
 **Return value:**
 

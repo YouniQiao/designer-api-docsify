@@ -18,7 +18,7 @@ The module provides all level-2 module APIs for developers to export.
 ## Modules to Import
 
 ```TypeScript
-import { ability } from '@kit.AbilityKit';
+import { ability } from 'ability';
 ```
 
 ## Summary

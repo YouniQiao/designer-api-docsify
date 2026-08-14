@@ -80,7 +80,7 @@ Event of clicking a component.
 TYPE_LONG_CLICK = 3
 ```
 
-Event of long pressing a component.
+Long press component.
 
 **Since:** 23
 
@@ -280,7 +280,7 @@ Event of auto-broadcasting.
 TYPE_REQUEST_FOCUS_FOR_ACCESSIBILITY_NOT_INTERRUPT = 13
 ```
 
-Event of auto-focusing without interruption.
+Active focus, and the focus request will not be interrupted.
 
 **Since:** 23
 
@@ -300,7 +300,7 @@ Event of auto-focusing without interruption.
 TYPE_ANNOUNCE_FOR_ACCESSIBILITY_NOT_INTERRUPT = 14
 ```
 
-Event of auto-broadcasting without interruption.
+Active announcement, and the announcement will not be interrupted.
 
 **Since:** 23
 
@@ -420,7 +420,7 @@ Event indicating the window boundary changes.
 TYPE_WINDOW_ACTIVE = 20
 ```
 
-Event indicating the window activity state changes.
+Window active state changed.
 
 **Since:** 23
 
@@ -540,7 +540,7 @@ Event indicating a touch ends.
 TYPE_PAGE_CONTENT_UPDATE = 26
 ```
 
-Event indicating the page content is updated.
+Page content updated.
 
 **Since:** 23
 
@@ -560,7 +560,7 @@ Event indicating the page content is updated.
 TYPE_PAGE_STATE_UPDATE = 27
 ```
 
-Event indicating the page state is updated.
+Page state updated.
 
 **Since:** 23
 
@@ -620,7 +620,7 @@ Event of closing a page.
 TYPE_SWIPE_LEFT = 30
 ```
 
-Event indicating the swipe-left gesture.
+Swipe left gesture.
 
 **Since:** 23
 
@@ -700,7 +700,7 @@ Event indicating the swipe-left-then-down gesture.
 TYPE_SWIPE_RIGHT = 34
 ```
 
-Event indicating the swipe-right gesture.
+Swipe right gesture.
 
 **Since:** 23
 
@@ -780,7 +780,7 @@ Event indicating the swipe-right-then-down gesture.
 TYPE_SWIPE_UP = 38
 ```
 
-Event indicating the swipe-up gesture.
+Swipe up gesture.
 
 **Since:** 23
 
@@ -860,7 +860,7 @@ Event indicating the swipe-up-then-down gesture.
 TYPE_SWIPE_DOWN = 42
 ```
 
-Event indicating the swipe-down gesture.
+Swipe down gesture.
 
 **Since:** 23
 
@@ -1400,7 +1400,7 @@ Event indicating the four-finger swipe-right gesture.
 TYPE_PAGE_ACTIVE = 69
 ```
 
-Event indicating the page is active.
+Page active state changed.
 
 **Since:** 23
 
@@ -1420,7 +1420,7 @@ Event indicating the page is active.
 TYPE_NOTIFICATION_UPDATE = 70
 ```
 
-Event indicating the notification is active.
+Notification content or state updated.
 
 **Since:** 26.0.0
 
@@ -1442,7 +1442,7 @@ Event indicating the notification is active.
 TYPE_FOCUS_INVISIBLE = 71
 ```
 
-accessibility focus element is invisible type
+Focus becomes invisible.
 
 **Since:** 26.0.0
 
@@ -1464,7 +1464,7 @@ accessibility focus element is invisible type
 TYPE_ONE_FINGER_DOUBLE_TAP = 72
 ```
 
-one finger double tap type
+Single-finger double tap gesture.
 
 **Since:** 26.0.0
 
@@ -1486,7 +1486,7 @@ one finger double tap type
 TYPE_TOUCH_GUIDE_GESTURE = 73
 ```
 
-Event indicating the touchGuide gesture.
+Touch browsing gesture event.
 
 **Since:** 26.0.0
 

@@ -42,7 +42,7 @@ Color of the divider.
 endMargin?: Dimension
 ```
 
-Distance between the divider and the end edge of the picker. The unit is vp by default. You can also specify it as px. The percentage type is not supported. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;Values less than 0 are invalid. The maximum value allowed is the width of the column. &lt;/p&gt;
+Distance between the divider and the end edge of the picker. The unit is vp by default. You can also specify it as px. The percentage type is not supported. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>Values less than 0 are invalid. The maximum value allowed is the width of the column. &lt;/p&gt;
 
 **Type:** [Dimension](../../apis-arkui/arkts-apis/arkts-arkui-dimension-t.md)
 
@@ -90,7 +90,7 @@ Distance between the divider and the start edge of the picker. The unit is vp by
 strokeWidth?: Dimension
 ```
 
-Stroke width of the divider. The unit is vp by default. You can also specify it as px. The percentage type is not supported. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;If the value is less than 0, the default value is used. &lt;br&gt;The maximum value allowed is half the height of the column. &lt;/p&gt;
+Stroke width of the divider. The unit is vp by default. You can also specify it as px. The percentage type is not supported. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>If the value is less than 0, the default value is used. <br>The maximum value allowed is half the height of the column. &lt;/p&gt;
 
 **Type:** [Dimension](../../apis-arkui/arkts-apis/arkts-arkui-dimension-t.md)
 

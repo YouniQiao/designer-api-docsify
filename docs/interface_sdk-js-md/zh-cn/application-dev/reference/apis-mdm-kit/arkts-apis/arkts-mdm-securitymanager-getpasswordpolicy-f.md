@@ -102,7 +102,7 @@ let wantTemp: Want = {
 try {
   let result: securityManager.PasswordPolicy = securityManager.getPasswordPolicy(wantTemp);
   console.info(`Succeeded in getting password policy, result : ${JSON.stringify(result)}`);
-} catch(err) {
+} catch (err) {
   console.error(`Failed to get password policy. Code: ${err.code}, message: ${err.message}`);
 }
 ```

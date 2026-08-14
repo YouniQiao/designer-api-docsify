@@ -15,7 +15,24 @@
 ## Modules to Import
 
 ```TypeScript
-import { CommonSegmentButtonOptions, SegmentButtonItemOptionsConstructorOptions, SegmentButtonIconTextItem, SegmentButtonItemOptions, SegmentButtonTextItem, CapsuleSegmentButtonOptions, SegmentButtonOptions, CapsuleSegmentButtonConstructionOptions, SegmentButtonItemTuple, SegmentButton, SegmentButtonItemArray, SegmentButtonItemOptionsArray, SegmentButtonIconItem, BorderRadiusMode, TabSegmentButtonConstructionOptions, TabSegmentButtonOptions, ItemRestriction, DimensionNoPercentage } from '@kit.ArkUI';
+import { SegmentButton } from 'SegmentButton';
+import { SegmentButtonOptions } from 'SegmentButtonOptions';
+import { SegmentButtonItemOptionsArray } from 'SegmentButtonItemOptionsArray';
+import { TabSegmentButtonOptions } from 'TabSegmentButtonOptions';
+import { TabSegmentButtonConstructionOptions } from 'TabSegmentButtonConstructionOptions';
+import { CapsuleSegmentButtonOptions } from 'CapsuleSegmentButtonOptions';
+import { CapsuleSegmentButtonConstructionOptions } from 'CapsuleSegmentButtonConstructionOptions';
+import { SegmentButtonTextItem } from 'SegmentButtonTextItem';
+import { SegmentButtonIconItem } from 'SegmentButtonIconItem';
+import { SegmentButtonIconTextItem } from 'SegmentButtonIconTextItem';
+import { DimensionNoPercentage } from 'DimensionNoPercentage';
+import { CommonSegmentButtonOptions } from 'CommonSegmentButtonOptions';
+import { ItemRestriction } from 'ItemRestriction';
+import { SegmentButtonItemTuple } from 'SegmentButtonItemTuple';
+import { SegmentButtonItemArray } from 'SegmentButtonItemArray';
+import { SegmentButtonItemOptionsConstructorOptions } from 'SegmentButtonItemOptionsConstructorOptions';
+import { SegmentButtonItemOptions } from 'SegmentButtonItemOptions';
+import { BorderRadiusMode } from 'BorderRadiusMode';
 ```
 
 ## enableStateAnimation

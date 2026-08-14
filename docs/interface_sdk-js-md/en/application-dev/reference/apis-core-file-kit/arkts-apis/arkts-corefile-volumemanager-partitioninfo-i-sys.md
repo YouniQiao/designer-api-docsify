@@ -17,7 +17,7 @@ Partition information.
 ## Modules to Import
 
 ```TypeScript
-import { volumeManager } from '@kit.CoreFileKit';
+import { volumeManager } from 'volumeManager';
 ```
 
 ## diskId
@@ -122,7 +122,7 @@ Partition number.
 sizeBytes: long
 ```
 
-Partition total size. &lt;br&gt;Unit: Byte.
+Partition total size. <br>Unit: Byte.
 
 **Type:** long
 

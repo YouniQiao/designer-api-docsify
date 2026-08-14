@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { config } from '@kit.AccessibilityKit';
+import { config } from 'config';
 ```
 
 ## setMagnificationState
@@ -12,7 +12,7 @@ import { config } from '@kit.AccessibilityKit';
 function setMagnificationState(state: boolean): void
 ```
 
-Sets the magnification state. Ensure that magnification is enabled before calling this API.
+Sets the enabled state of the magnification effect. The magnification effect depends on the magnification gesture feature. This API takes effect only when the magnification gesture feature is enabled.
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ Sets the magnification state. Ensure that magnification is enabled before callin
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | boolean | Yes | Whether to trigger or disable the magnification feature.&lt;br&gt;- **true**: to trigger the magnification feature.&lt;br&gt;- **false**: to disable the magnification feature. |
+| state | boolean | Yes | Indicates the enabled state of the magnification effect. <br>- **true**: indicates that the magnification effect is enabled. <br>- **false**: indicates that the magnification effect is disabled. |
 
 **Error codes:**
 

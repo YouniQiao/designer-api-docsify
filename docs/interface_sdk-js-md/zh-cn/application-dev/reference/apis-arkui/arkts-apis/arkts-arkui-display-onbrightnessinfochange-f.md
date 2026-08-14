@@ -42,7 +42,7 @@ try {
   display.onBrightnessInfoChange(callback);
 } catch (exception) {
   let error = exception as BusinessError;
-  console.error(`brightnessInfoChange error. Code ${error.code}, message: ${error.message}`);
+  console.error(`brightnessInfoChange error. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 

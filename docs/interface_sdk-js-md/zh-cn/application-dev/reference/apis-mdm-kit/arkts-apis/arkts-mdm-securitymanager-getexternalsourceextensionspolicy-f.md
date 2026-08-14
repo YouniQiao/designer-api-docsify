@@ -102,7 +102,7 @@ let wantTemp: Want = {
 try {
   let result: common.ManagedPolicy = securityManager.getExternalSourceExtensionsPolicy(wantTemp);
   console.info(`Succeeded in getting managed policy, result : ${result}`);
-} catch(err) {
+} catch (err) {
   console.error(`Failed to get managed policy. Code: ${err.code}, message: ${err.message}`);
 }
 ```

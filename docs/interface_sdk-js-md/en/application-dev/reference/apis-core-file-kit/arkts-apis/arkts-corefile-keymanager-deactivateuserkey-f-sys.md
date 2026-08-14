@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { keyManager } from '@kit.CoreFileKit';
+import { keyManager } from 'keyManager';
 ```
 
 ## deactivateUserKey

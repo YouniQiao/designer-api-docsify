@@ -68,7 +68,7 @@ try {
   // 设置指定应用可以继续使用ohos.permission.CAMERA权限
   securityManager.addAllowedPermissionBundle(wantTemp, permission, appInstance);
   console.info(`Succeeded in adding allowed permission bundle.`);
-} catch(err) {
+} catch (err) {
   console.error(`Failed to add allowed permission bundle. Code: ${err.code}, message: ${err.message}`);
 }
 ```

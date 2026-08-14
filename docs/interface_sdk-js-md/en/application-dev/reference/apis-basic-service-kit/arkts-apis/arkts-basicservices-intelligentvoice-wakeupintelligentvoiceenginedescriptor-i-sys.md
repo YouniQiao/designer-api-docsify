@@ -17,7 +17,7 @@ Describes wakeup intelligent voice engine.
 ## Modules to Import
 
 ```TypeScript
-import { intelligentVoice } from '@kit.BasicServicesKit';
+import { intelligentVoice } from 'intelligentVoice';
 ```
 
 ## needReconfirm

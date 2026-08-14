@@ -15,7 +15,7 @@ The **Sensor** module provides APIs for obtaining the sensor list and subscribin
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
+import { sensor } from 'sensor';
 ```
 
 ## Summary

@@ -17,7 +17,7 @@ Provides methods related to advertising. Nearby devices can scan and discover th
 ## Modules to Import
 
 ```TypeScript
-import { advertising } from '@kit.ConnectivityKit';
+import { advertising } from 'advertising';
 ```
 
 ## Summary

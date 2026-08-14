@@ -402,7 +402,7 @@ Create a specified number of FrameNode objects and return them.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | uiContext used to create the FrameNode |
-| count | int | Yes | the number of FrameNode objects to create. Returns an empty array if count <= 0 or is not an integer. |
+| count | int | Yes | the number of FrameNode objects to create. Returns an empty array if count &lt;= 0 or is not an integer. |
 
 **Return value:**
 
@@ -1749,7 +1749,7 @@ This is called to find out how big the FrameNode should be. The parent node supp
 moveTo(targetParent: FrameNode, index?: int): void
 ```
 
-Move node to the target Framenode as child. If this FrameNode is not modifiable, an exception is thrown. When targetParent is a typeNode, the API validates the type or number of child nodes. If the validation fails, an exception is thrown. For specific limitations, see typeNode. If this FrameNode is adopted, an exception is thrown. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;Currently, only the following types of TypedFrameNode are supported for the movement operations: Stack, XComponent. &lt;/p&gt;
+Move node to the target Framenode as child. If this FrameNode is not modifiable, an exception is thrown. When targetParent is a typeNode, the API validates the type or number of child nodes. If the validation fails, an exception is thrown. For specific limitations, see typeNode. If this FrameNode is adopted, an exception is thrown. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>Currently, only the following types of TypedFrameNode are supported for the movement operations: Stack, XComponent. &lt;/p&gt;
 
 **Since:** 23
 
@@ -1768,7 +1768,7 @@ Move node to the target Framenode as child. If this FrameNode is not modifiable,
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | targetParent | [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) | Yes | The target parent node. The target parent node must not be a declaratively created node, that is, a FrameNode that is not modifiable. If it does not meet the specifications, an exception is thrown. |
-| index | int | No | The index which the node is moved to. If the value is a negative number or invalid, the node is moved to the end of the target parent node. Moves to the end of the target parent node by default. If the target FrameNode has n nodes, the value range for index is [0, n). &lt;br&gt;Default value: -1 |
+| index | int | No | The index which the node is moved to. If the value is a negative number or invalid, the node is moved to the end of the target parent node. Moves to the end of the target parent node by default. If the target FrameNode has n nodes, the value range for index is [0, n). <br>Default value: -1 |
 
 **Error codes:**
 

@@ -17,7 +17,7 @@ Provides DialogAbility information, including the bundle name, module name, and 
 ## Modules to Import
 
 ```TypeScript
-import { dialogSession } from '@kit.AbilityKit';
+import { dialogSession } from 'dialogSession';
 ```
 
 ## abilityIconId

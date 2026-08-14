@@ -56,7 +56,7 @@ export default class EntryAbility extends UIAbility {
         hilog.error(0x0000, 'testTag', `StartupTask_001 promise catch failed, error code: ${error.code}, error msg: ${error.message}`);
       });
     } catch (error) {
-      hilog.error(0x0000, 'testTag', `StartupTask_001.run failed, error code: ${error.code}, error msg: ${error.message}`);
+      hilog.error(0x0000, 'testTag', `startupManager.run failed, error code: ${error.code}, error msg: ${error.message}`);
     }
   }
 
@@ -65,14 +65,14 @@ export default class EntryAbility extends UIAbility {
     let result1 = startupManager.isStartupTaskInitialized('StartupTask_001');
     let result2 = startupManager.isStartupTaskInitialized('libentry_001');
     if (result1) {
-      console.info('StartupTask_001 init successful');
+      hilog.info(0x0000, 'testTag', 'StartupTask_001 init successful');
     } else {
-      console.info('StartupTask_001 uninitialized');
+      hilog.info(0x0000, 'testTag', 'StartupTask_001 uninitialized');
     }
     if (result2) {
-      console.info('libentry_001 init successful');
+      hilog.info(0x0000, 'testTag', 'libentry_001 init successful');
     } else {
-      console.info('libentry_001 uninitialized');
+      hilog.info(0x0000, 'testTag', 'libentry_001 uninitialized');
     }
 
     windowStage.loadContent('pages/Index', (err, data) => {

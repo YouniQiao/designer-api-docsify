@@ -4,7 +4,8 @@
   - [DistributedExtensionAbility](arkts-distributedservice-application-distributedextensionability-distributedextensionability-c.md)
 - [@ohos.application.DistributedExtensionContext](arkts-application-distributedextensioncontext.md)
   - [DistributedExtensionContext](arkts-distributedservice-application-distributedextensioncontext-distributedextensioncontext-c.md)
-- [@ohos.cooperate](arkts-cooperate.md)
+<!--Del-->
+- [@ohos.cooperate](arkts-cooperate.md)<!--DelEnd-->
   <!--Del-->
   - [activate(system api)](arkts-distributedservice-cooperate-activate-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -118,7 +119,8 @@
   - [ExchangeMedium(system api)](arkts-distributedservice-devicemanager-exchangemedium-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [SubscribeCap(system api)](arkts-distributedservice-devicemanager-subscribecap-e-sys.md)<!--DelEnd-->
-- [@ohos.distributedHardware.hardwareManager](arkts-distributedhardware-hardwaremanager.md)
+<!--Del-->
+- [@ohos.distributedHardware.hardwareManager](arkts-distributedhardware-hardwaremanager.md)<!--DelEnd-->
   <!--Del-->
   - [pauseDistributedHardware(system api)](arkts-distributedservice-hardwaremanager-pausedistributedhardware-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -131,7 +133,8 @@
   - [DistributedHardwareErrorCode(system api)](arkts-distributedservice-hardwaremanager-distributedhardwareerrorcode-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [DistributedHardwareType(system api)](arkts-distributedservice-hardwaremanager-distributedhardwaretype-e-sys.md)<!--DelEnd-->
-- [@ohos.distributedSoftBus.conversation](arkts-distributedsoftbus-conversation.md)
+<!--Del-->
+- [@ohos.distributedSoftBus.conversation](arkts-distributedsoftbus-conversation.md)<!--DelEnd-->
   <!--Del-->
   - [getTrustedDevices(system api)](arkts-distributedservice-conversation-gettrusteddevices-f-sys.md)<!--DelEnd-->
   <!--Del-->

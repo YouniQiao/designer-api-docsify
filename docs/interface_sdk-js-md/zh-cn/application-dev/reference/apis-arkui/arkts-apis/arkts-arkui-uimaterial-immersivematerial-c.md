@@ -40,5 +40,5 @@ ImmersiveMaterial的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [ImmersiveOptions](../../apis-na/arkts-apis/arkts-na-uimaterial-immersiveoptions-i.md) | 否 | 系统材质配置选项，包括材质样式、材质层赋色等。&lt;br/&gt;默认值参考ImmersiveOptions接口各参数的默认值，即{style: ImmersiveStyle.REGULAR, materialColor:Color.Transparent, colorInvert:false, applyShadow:true, interactive: false, lightEffect:undefined}。 |
+| options | [ImmersiveOptions](../../apis-na/arkts-apis/arkts-na-uimaterial-immersiveoptions-i.md) | 否 | 系统材质配置选项，包括材质样式、材质层赋色等。<br/>默认值参考ImmersiveOptions接口各参数的默认值，即{style: ImmersiveStyle.REGULAR, materialColor:Color.Transparent, colorInvert:false, applyShadow:true, interactive: false, lightEffect:undefined}。 |
 

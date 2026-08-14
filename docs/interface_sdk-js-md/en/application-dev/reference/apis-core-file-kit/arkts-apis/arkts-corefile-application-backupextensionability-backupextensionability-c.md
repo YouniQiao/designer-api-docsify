@@ -15,7 +15,7 @@ Class to be override for backup extension ability.
 ## Modules to Import
 
 ```TypeScript
-import { BundleVersion } from '@kit.CoreFileKit';
+import { BundleVersion } from 'BundleVersion';
 ```
 
 ## onBackup

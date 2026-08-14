@@ -17,7 +17,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Decimal } from '@kit.ArkTS';
+import { Decimal } from 'Decimal';
 ```
 
 ## Summary

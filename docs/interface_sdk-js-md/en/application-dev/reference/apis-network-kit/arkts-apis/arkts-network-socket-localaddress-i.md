@@ -15,7 +15,7 @@ Defines a local address.
 ## Modules to Import
 
 ```TypeScript
-import { socket } from '@kit.NetworkKit';
+import { socket } from 'socket';
 ```
 
 ## address

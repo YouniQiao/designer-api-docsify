@@ -38,7 +38,7 @@ Gets the element at the specified index.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | The zero-based index of the element to get. &lt;br&gt;The value should be an integer. |
+| index | int | Yes | The zero-based index of the element to get. <br>The value should be an integer. |
 
 **Return value:**
 

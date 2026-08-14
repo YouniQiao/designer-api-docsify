@@ -36,7 +36,7 @@ Returns an instance of BigInt at passed index.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | index to look at. &lt;br&gt;The value should be an integer. |
+| index | int | Yes | index to look at. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -94,7 +94,7 @@ Assigns val as element on index.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | index to change &lt;br&gt;The value range is all integers. |
+| index | int | Yes | index to change <br>The value range is all integers. |
 | val | long | Yes | value to set |
 
 ## $_set
@@ -148,7 +148,7 @@ Returns an instance of primitive type at passed index.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | index to look at &lt;br&gt;The value should be an integer. |
+| index | int | Yes | index to look at <br>The value should be an integer. |
 
 **Return value:**
 
@@ -200,7 +200,7 @@ Creates a BigInt64Array with respect to length.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| length | int | Yes | double of elements &lt;br&gt;The value should be an integer. |
+| length | int | Yes | double of elements <br>The value should be an integer. |
 
 ## constructor
 
@@ -383,7 +383,7 @@ Creates a BigInt64Array with respect to buf and byteOffset.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | buf | ArrayBuffer | Yes | data initializer |
-| byteOffset | int | Yes | byte offset from begin of the buf &lt;br&gt;The value should be an integer. |
+| byteOffset | int | Yes | byte offset from begin of the buf <br>The value should be an integer. |
 
 ## constructor
 
@@ -437,8 +437,8 @@ Creates a BigInt64Array with respect to data, byteOffset and length.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | buf | ArrayBuffer | Yes | data initializer |
-| byteOffset | int | Yes | byte offset from begin of the buf &lt;br&gt;The value should be an integer. |
-| length | int | Yes | size of elements of type long in newly created BigInt64Array &lt;br&gt;The value should be an integer. |
+| byteOffset | int | Yes | byte offset from begin of the buf <br>The value should be an integer. |
+| length | int | Yes | size of elements of type long in newly created BigInt64Array <br>The value should be an integer. |
 
 ## constructor
 
@@ -552,7 +552,7 @@ Makes a copy of internal elements to targetPos from begin to end of BigInt64Arra
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | int | Yes | insert index to place copied elements &lt;br&gt;The value should be an integer. |
+| target | int | Yes | insert index to place copied elements <br>The value should be an integer. |
 
 **Return value:**
 
@@ -1155,7 +1155,7 @@ Determines whether BigInt64Array includes a certain element, returning true or f
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | searchElement | long | Yes | The element to search for |
-| fromIndex | int | Yes | The position in this array at which to begin searching for searchElement &lt;br&gt;The value should be an integer. |
+| fromIndex | int | Yes | The position in this array at which to begin searching for searchElement <br>The value should be an integer. |
 
 **Return value:**
 
@@ -1220,7 +1220,7 @@ Determines whether BigInt64Array includes a certain element, returning true or f
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | searchElement | BigInt | Yes | The element to search for |
-| fromIndex | int | No | The position in this array at which to begin searching for searchElement. Defaults to 0. &lt;br&gt;The value should be an integer. |
+| fromIndex | int | No | The position in this array at which to begin searching for searchElement. Defaults to 0. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -1318,7 +1318,7 @@ Returns the index of the first occurrence of a value in BigInt64Array.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | searchElement | BigInt | Yes | The value to locate in the array. |
-| fromIndex | int | No | The array index at which to begin the search. Defaults to 0. &lt;br&gt;The value should be an integer. |
+| fromIndex | int | No | The array index at which to begin the search. Defaults to 0. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -1885,7 +1885,7 @@ Assigns val as element on insertPos.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| insertPos | int | Yes | index to change &lt;br&gt;The value should be an integer. |
+| insertPos | int | Yes | index to change <br>The value should be an integer. |
 | val | long | Yes | value to set |
 
 ## set
@@ -1912,7 +1912,7 @@ Assigns val as element on insertPos.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| insertPos | int | Yes | index to change &lt;br&gt;The value should be an integer. |
+| insertPos | int | Yes | index to change <br>The value should be an integer. |
 | val | BigInt | Yes | value to set |
 
 ## set
@@ -1966,7 +1966,7 @@ Copies all elements of arr to the current BigInt64Array starting from insertPos.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | arr | FixedArray&lt;long&gt; | Yes | array to copy data from |
-| insertPos | int | Yes | start index where data from arr will be inserted &lt;br&gt;The value should be an integer. |
+| insertPos | int | Yes | start index where data from arr will be inserted <br>The value should be an integer. |
 
 ## set
 
@@ -2019,7 +2019,7 @@ Copies all elements of arr to the current BigInt64Array starting from insertPos.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | arr | FixedArray&lt;BigInt&gt; | Yes | array to copy data from |
-| insertPos | int | Yes | start index where data from arr will be inserted &lt;br&gt;The value should be an integer. |
+| insertPos | int | Yes | start index where data from arr will be inserted <br>The value should be an integer. |
 
 ## set
 
@@ -2072,7 +2072,7 @@ Copies all elements of arr to the current BigInt64Array starting from offset.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | array | [BigInt64Array](arkts-na-typedarrays-bigint64array-c.md) | Yes | array to copy data from. |
-| offset | int | Yes | start index where data from arr will be inserted. &lt;br&gt;The value range is all integers. |
+| offset | int | Yes | start index where data from arr will be inserted. <br>The value range is all integers. |
 
 ## set
 
@@ -2099,7 +2099,7 @@ Copies elements from an ArrayLike object to the BigInt64Array.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | array | ArrayLike&lt;BigInt&gt; | Yes | An ArrayLike object containing the elements to copy. |
-| offset | int | Yes | Optional. The offset into the target array at which to begin writing values from the source array. The default value is 0. &lt;br&gt;The value should be an integer. |
+| offset | int | Yes | Optional. The offset into the target array at which to begin writing values from the source array. The default value is 0. <br>The value should be an integer. |
 
 ## slice
 
@@ -2476,7 +2476,7 @@ Returns a new BigInt64Array with the element at the given index replaced by the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | index to change &lt;br&gt;The value range is all integers. |
+| index | int | Yes | index to change <br>The value range is all integers. |
 | value | long | Yes | value to set |
 
 **Return value:**
@@ -2509,7 +2509,7 @@ Returns a new BigInt64Array with the element at the given index replaced by the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | index to change &lt;br&gt;The value range is all integers. |
+| index | int | Yes | index to change <br>The value range is all integers. |
 | value | BigInt | Yes | value to set |
 
 **Return value:**

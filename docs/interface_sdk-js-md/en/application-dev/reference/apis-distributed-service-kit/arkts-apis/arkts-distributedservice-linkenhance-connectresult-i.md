@@ -15,7 +15,7 @@ Represents the connection result, which is returned after the client calls **con
 ## Modules to Import
 
 ```TypeScript
-import { linkEnhance } from '@kit.DistributedServiceKit';
+import { linkEnhance } from 'linkEnhance';
 ```
 
 ## deviceId

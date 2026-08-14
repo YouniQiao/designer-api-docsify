@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ConnectionInfo } from '@kit.ArkWeb';
+import { ConnectionInfo } from 'ConnectionInfo';
 ```
 
 ## Summary

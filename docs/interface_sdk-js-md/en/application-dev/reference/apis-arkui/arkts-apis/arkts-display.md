@@ -15,7 +15,7 @@ The **Display** module provides APIs for managing displays, such as obtaining in
 ## Modules to Import
 
 ```TypeScript
-import { display } from '@kit.ArkUI';
+import { display } from 'display';
 ```
 
 ## Summary

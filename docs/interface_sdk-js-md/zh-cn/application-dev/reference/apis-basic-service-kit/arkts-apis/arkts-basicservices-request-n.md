@@ -55,7 +55,7 @@ request模块给应用提供上传下载文件、后台代理传输的基础功�
 | [DownloadCompleteCallback](arkts-basicservices-request-downloadcompletecallback-t.md) | The callback function for the download complete event. |
 | [DownloadPauseCallback](arkts-basicservices-request-downloadpausecallback-t.md) | The callback function for the download pause event. |
 | [DownloadRemoveCallback](arkts-basicservices-request-downloadremovecallback-t.md) | The callback function for the download remove event. |
-| [DownloadFailCallback](arkts-basicservices-request-downloadfailcallback-t.md) | The callback function for the download fail event. &lt;br&gt;The value should be an integer. |
+| [DownloadFailCallback](arkts-basicservices-request-downloadfailcallback-t.md) | The callback function for the download fail event. <br>The value should be an integer. |
 | [UploadProgressCallback](arkts-basicservices-request-uploadprogresscallback-t.md) | The callback function for the download progress event. |
 | [UploadHeaderReceiveCallback](arkts-basicservices-request-uploadheaderreceivecallback-t.md) | The callback function for the HTTP Response Header event. |
 

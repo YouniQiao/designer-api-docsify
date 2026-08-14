@@ -1,6 +1,6 @@
 # AccessibilityAction (System API)
 
-Enumerates executable actions for accessibility node elements. Accessibility node elements are UI components that support accessibility actions, such as buttons, text boxes, and so on.
+Enumerates executable actions for accessibility node elements. An accessibility node element refers to a component on the UI that can perform accessibility operations, such as a button or text input box.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ Enumerates executable actions for accessibility node elements. Accessibility nod
 ACCESSIBILITY_FOCUS = 0
 ```
 
-Gain an accessibility focus.
+Gains accessibility focus. The [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#Parameter-(System-API)). accessibilityFocusScene parameter must be configured, with the parameter value being the accessibility focus scenario type.
 
 **Since:** 23
 
@@ -120,7 +120,7 @@ Click a component.
 LONG_CLICK = 5
 ```
 
-Long press a component.
+Long-presses a component.
 
 **Since:** 23
 
@@ -220,7 +220,7 @@ Select a component.
 SET_TEXT = 10
 ```
 
-Set the text of a component.
+Sets the text of a component. The [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#Parameter-(System-API)).setText parameter must be configured, with the parameter value being the text content to set.
 
 **Since:** 23
 
@@ -240,7 +240,7 @@ Set the text of a component.
 SCROLL_FORWARD = 11
 ```
 
-Scroll a component forward.
+Scrolls a component forward (toward the end of the content). The [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#Parameter-(System-API)).scrollType parameter must be configured, with the parameter value being 'fullScreen' or 'halfScreen'.
 
 **Since:** 23
 
@@ -260,7 +260,7 @@ Scroll a component forward.
 SCROLL_BACKWARD = 12
 ```
 
-Scroll a component backward.
+Scrolls a component backward (toward the beginning of the content). The [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#Parameter-(System-API)).scrollType parameter must be configured, with the parameter value being 'fullScreen' or 'halfScreen'.
 
 **Since:** 23
 
@@ -280,7 +280,7 @@ Scroll a component backward.
 SET_SELECTION = 13
 ```
 
-Select a text range in a component.
+Selects a text range within a component. The [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#Parameter-(System-API)).selectTextBegin, [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#Parameter-(System-API)).selectTextEnd, and [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#Parameter-(System-API)).selectTextInForWard parameters must be configured, with the parameter values being the start coordinate, end coordinate of the selected text, and whether to select forward.
 
 **Since:** 23
 
@@ -300,7 +300,7 @@ Select a text range in a component.
 SET_CURSOR_POSITION = 14
 ```
 
-Set the cursor position in a component.
+Sets the cursor position within a component. The [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#Parameter-(System-API)).offset parameter must be configured, with the parameter value being the character offset of the cursor.
 
 **Since:** 23
 
@@ -320,7 +320,7 @@ Set the cursor position in a component.
 HOME = 15
 ```
 
-Return to the home screen.
+Performs the operation of returning to the home screen. **Usage constraint:** This operation takes effect only on the main screen in multi-screen scenarios.
 
 **Since:** 23
 
@@ -360,7 +360,7 @@ Return to the previous screen.
 RECENT_TASK = 17
 ```
 
-Open a recent task.
+Displays recent tasks.
 
 **Since:** 23
 
@@ -380,7 +380,7 @@ Open a recent task.
 NOTIFICATION_CENTER = 18
 ```
 
-Open the notification center.
+Displays the notification center.
 
 **Since:** 23
 
@@ -400,7 +400,7 @@ Open the notification center.
 CONTROL_CENTER = 19
 ```
 
-Open the control center.
+Displays the control center.
 
 **Since:** 23
 
@@ -420,7 +420,7 @@ Open the control center.
 SPAN_CLICK = 20
 ```
 
-Click a text span.
+Performs a click operation on partial text. The [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#Parameter-(System-API)).spanId parameter must be configured, with the parameter value being the hyperlink text ID.
 
 **Since:** 23
 
@@ -440,7 +440,7 @@ Click a text span.
 INJECT_ACTION = 21
 ```
 
-Injection action.
+Injects an action that simulates a user operation. The [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#Parameter-(System-API)).injectActionType parameter must be configured, with the parameter value being the injection action type.
 
 **Since:** 26.0.0
 
@@ -462,7 +462,7 @@ Injection action.
 EXECUTE_CUSTOM_ACTION = 22
 ```
 
-Execute custom action on a component.
+Executes a custom action. The [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md#Parameter-(System-API)).customAction parameter must be configured, with the parameter value being the name of the custom action.
 
 **Since:** 26.0.0
 

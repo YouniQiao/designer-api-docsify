@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'avSession';
 ```
 
 ## getAllSessionDescriptors
@@ -39,7 +39,7 @@ Get all avsession descriptors of the system
 | Error Code ID | Error Message |
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [201](../../errorcode-universal.md#201-permission-denied) | permission denied |
+| [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
 ## Examples
@@ -97,7 +97,7 @@ Get all avsession descriptors which can be shown on system entrance.
 | Error Code ID | Error Message |
 | --- | --- |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
-| [201](../../errorcode-universal.md#201-permission-denied) | permission denied |
+| [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 9 - 22 |
 
 ## Examples

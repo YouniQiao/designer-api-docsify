@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { pointer } from '@kit.InputKit';
+import { pointer } from 'pointer';
 ```
 
 ## setMouseScrollDirection
@@ -32,7 +32,7 @@ Sets the scroll direction of the mouse wheel. This API uses a promise to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inverted | boolean | Yes | Scroll direction of the mouse wheel. &lt;br&gt;The value **true** indicates that scroll direction matches the finger movement on the wheel, and the value **false** indicates that the scroll direction is opposite to the finger movement. &lt;br&gt;The default value is **true**. |
+| inverted | boolean | Yes | Scroll direction of the mouse wheel. <br>The value **true** indicates that scroll direction matches the finger movement on the wheel, and the value **false** indicates that the scroll direction is opposite to the finger movement. <br>The default value is **true**. |
 
 **Return value:**
 

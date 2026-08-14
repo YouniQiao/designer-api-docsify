@@ -16,7 +16,7 @@
 | [BarometerResponse](arkts-sensorservice-system-sensor-barometerresponse-i.md) | 气压计传感器数据改变后的回调函数的响应对象，包含气压值数据。 |
 | [CompassResponse](arkts-sensorservice-system-sensor-compassresponse-i.md) | 罗盘数据改变后的回调函数的响应对象，包含设备面对的方向度数。 |
 | [DeviceOrientationResponse](arkts-sensorservice-system-sensor-deviceorientationresponse-i.md) | 设备方向传感器数据变化后的回调函数的响应对象，包含设备方向的三个旋转角度数据。 |
-| [GetOnBodyStateOptions](arkts-sensorservice-system-sensor-getonbodystateoptions-i.md) | 用于设置设备佩戴状态订阅的参数，包括回调函数。佩戴状态分为已穿戴和未穿戴两种。 |
+| [GetOnBodyStateOptions](arkts-sensorservice-system-sensor-getonbodystateoptions-i.md) | 获取传感器所在设备佩戴状态时的参数，包括回调函数。此接口为一次性获取，不会持续监听状态变化。 |
 | [GyroscopeResponse](arkts-sensorservice-system-sensor-gyroscoperesponse-i.md) | 陀螺仪传感器数据变化后的回调函数的响应对象，包含设备在x、y、z三轴方向的旋转角速度数据。 |
 | [HeartRateResponse](arkts-sensorservice-system-sensor-heartrateresponse-i.md) | 心率传感器数据改变后的回调函数的响应对象，包含心率值数据。 |
 | [LightResponse](arkts-sensorservice-system-sensor-lightresponse-i.md) | 光线感应数据改变后的回调函数的响应对象，包含环境光线强度数据。 |
@@ -29,7 +29,7 @@
 | [SubscribeGyroscopeOptions](arkts-sensorservice-system-sensor-subscribegyroscopeoptions-i.md) | 用于设置陀螺仪传感器订阅的参数，包括回调频率和回调函数。 |
 | [SubscribeHeartRateOptions](arkts-sensorservice-system-sensor-subscribeheartrateoptions-i.md) | 用于设置心率传感器订阅的参数，包括回调函数。心率数据回调频率固定为5秒/次，不支持通过interval参数配置。 |
 | [SubscribeLightOptions](arkts-sensorservice-system-sensor-subscribelightoptions-i.md) | 用于设置环境光传感器订阅的参数，包括回调函数。 |
-| [SubscribeOnBodyStateOptions](arkts-sensorservice-system-sensor-subscribeonbodystateoptions-i.md) | 用于设置设备佩戴状态订阅的参数，包括回调函数。佩戴状态分为已穿戴和未穿戴两种。 |
+| [SubscribeOnBodyStateOptions](arkts-sensorservice-system-sensor-subscribeonbodystateoptions-i.md) | 用于设置设备佩戴状态订阅的参数，包括回调函数。佩戴状态分为已佩戴和未佩戴两种。 |
 | [SubscribeProximityOptions](arkts-sensorservice-system-sensor-subscribeproximityoptions-i.md) | 用于设置距离传感器订阅的参数，包括回调函数。 |
 | [SubscribeStepCounterOptions](arkts-sensorservice-system-sensor-subscribestepcounteroptions-i.md) | 用于设置计步传感器订阅的参数，包括回调函数。 |
 | [subscribeAccelerometerOptions](arkts-sensorservice-system-sensor-subscribeaccelerometeroptions-i.md) | 用于设置加速度传感器订阅的参数，包括回调频率和回调函数。 |

@@ -17,7 +17,7 @@ Defines the TransferProgress data structure.
 ## Modules to Import
 
 ```TypeScript
-import { cloudSyncManager } from '@kit.CoreFileKit';
+import { cloudSyncManager } from 'cloudSyncManager';
 ```
 
 ## failedCount
@@ -26,7 +26,7 @@ import { cloudSyncManager } from '@kit.CoreFileKit';
 failedCount: int
 ```
 
-failed count in TransferProgress. The value should be an integer. &lt;br&gt;Unit:Pcs.
+failed count in TransferProgress. The value should be an integer. <br>Unit:Pcs.
 
 **Type:** int
 
@@ -98,7 +98,7 @@ Describes the state type of transfer stop reason.
 successfulCount: int
 ```
 
-successful count in TransferProgress. The value should be an integer. &lt;br&gt;Unit:Pcs.
+successful count in TransferProgress. The value should be an integer. <br>Unit:Pcs.
 
 **Type:** int
 
@@ -122,7 +122,7 @@ successful count in TransferProgress. The value should be an integer. &lt;br&gt;
 totalCount: int
 ```
 
-total count in TransferProgress. The value should be an integer. &lt;br&gt;Unit:Pcs.
+total count in TransferProgress. The value should be an integer. <br>Unit:Pcs.
 
 **Type:** int
 
@@ -146,7 +146,7 @@ total count in TransferProgress. The value should be an integer. &lt;br&gt;Unit:
 totalSize: long
 ```
 
-Total size in TransferProgress. &lt;br&gt;Unit:Byte.
+Total size in TransferProgress. <br>Unit:Byte.
 
 **Type:** long
 
@@ -170,7 +170,7 @@ Total size in TransferProgress. &lt;br&gt;Unit:Byte.
 transferredSize: long
 ```
 
-transferred size in TransferProgress. &lt;br&gt;Unit:Byte.
+transferred size in TransferProgress. <br>Unit:Byte.
 
 **Type:** long
 

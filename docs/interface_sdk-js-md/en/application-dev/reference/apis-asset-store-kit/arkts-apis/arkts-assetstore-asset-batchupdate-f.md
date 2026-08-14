@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { asset } from '@kit.AssetStoreKit';
+import { asset } from 'asset';
 ```
 
 ## batchUpdate
@@ -28,8 +28,8 @@ Updates assets in batches based on an attributes array. Only assets with the sam
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sourceAttributes | Array&lt;[AssetMap](arkts-assetstore-asset-assetmap-t.md)&gt; | Yes | an array of map objects containing asset attributes to query. &lt;br&gt;The [GROUP_ID](arkts-assetstore-asset-tag-e.md#GROUP_ID) and [REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tag-e.md#REQUIRE_ATTR_ENCRYPTED) attributes of all assets must be the same. |
-| destAttributes | Array&lt;[AssetMap](arkts-assetstore-asset-assetmap-t.md)&gt; | Yes | an array of map objects containing asset attributes to be updated. &lt;br&gt;The [GROUP_ID](arkts-assetstore-asset-tag-e.md#GROUP_ID) and [REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tag-e.md#REQUIRE_ATTR_ENCRYPTED) attributes of all assets must be the same. |
+| sourceAttributes | Array&lt;[AssetMap](arkts-assetstore-asset-assetmap-t.md)&gt; | Yes | an array of map objects containing asset attributes to query. <br>The [GROUP_ID](arkts-assetstore-asset-tag-e.md#GROUP_ID) and [REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tag-e.md#REQUIRE_ATTR_ENCRYPTED) attributes of all assets must be the same. |
+| destAttributes | Array&lt;[AssetMap](arkts-assetstore-asset-assetmap-t.md)&gt; | Yes | an array of map objects containing asset attributes to be updated. <br>The [GROUP_ID](arkts-assetstore-asset-tag-e.md#GROUP_ID) and [REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tag-e.md#REQUIRE_ATTR_ENCRYPTED) attributes of all assets must be the same. |
 
 **Return value:**
 

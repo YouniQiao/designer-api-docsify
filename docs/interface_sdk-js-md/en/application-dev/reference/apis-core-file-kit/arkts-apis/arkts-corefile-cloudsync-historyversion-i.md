@@ -15,7 +15,7 @@ Represents the historical version information of the device-cloud file when the 
 ## Modules to Import
 
 ```TypeScript
-import { cloudSync } from '@kit.CoreFileKit';
+import { cloudSync } from 'cloudSync';
 ```
 
 ## autoResolved

@@ -15,7 +15,7 @@ Represents a custom communication object. > **NOTE：**> > You can register this
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from '@kit.IMEKit';
+import { inputMethodEngine } from 'inputMethodEngine';
 ```
 
 ## onMessage

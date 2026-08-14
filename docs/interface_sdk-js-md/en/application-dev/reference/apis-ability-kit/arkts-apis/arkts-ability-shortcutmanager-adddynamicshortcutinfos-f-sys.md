@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { shortcutManager } from '@kit.AbilityKit';
+import { shortcutManager } from 'shortcutManager';
 ```
 
 ## addDynamicShortcutInfos
@@ -32,7 +32,7 @@ Adds dynamic shortcuts for the given user.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| shortcutInfo | Array&lt;ShortcutInfo&gt; | Yes | Information about the dynamic shortcuts. When the shortcut information is submitted through this API, the following validations are performed:&lt;br&gt; 1. The **sourceType** field in **ShortcutInfo** is set to **2**.&lt;br&gt; 2. If the **moduleName** field in **ShortcutInfo** does not exist in the corresponding application, error code 17700002 is thrown.&lt;br&gt; 3. If the **hostAbility** field in **ShortcutInfo** is set to a non-empty string, the system checks whether the corresponding ability exists. If it does not exist, error code 17700003 is thrown. |
+| shortcutInfo | Array&lt;ShortcutInfo&gt; | Yes | Information about the dynamic shortcuts. When the shortcut information is submitted through this API, the following validations are performed:<br> 1. The **sourceType** field in **ShortcutInfo** is set to **2**.<br> 2. If the **moduleName** field in **ShortcutInfo** does not exist in the corresponding application, error code 17700002 is thrown.<br> 3. If the **hostAbility** field in **ShortcutInfo** is set to a non-empty string, the system checks whether the corresponding ability exists. If it does not exist, error code 17700003 is thrown. |
 | userId | int | Yes | ID of the user to which the dynamic shortcuts belong. The user ID can be obtained by calling [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId) . The default value is the user ID of the caller. The value must be greater than or equal to 0. |
 
 **Return value:**

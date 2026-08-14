@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'avSession';
 ```
 
 ## castAudio
@@ -43,7 +43,7 @@ Cast Audio to the remote devices or cast back local device
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-| [201](../../errorcode-universal.md#201-permission-denied) | permission denied |
+| [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 | [6600104](../errorcode-avsession.md#6600104-remote-session-connection-failure) | The remote session connection failed. |
 
@@ -116,7 +116,7 @@ Cast Audio to the remote devices or cast back local device
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
-| [201](../../errorcode-universal.md#201-permission-denied) | permission denied |
+| [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 | [6600104](../errorcode-avsession.md#6600104-remote-session-connection-failure) | The remote session connection failed. |
 

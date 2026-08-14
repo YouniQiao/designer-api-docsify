@@ -15,7 +15,7 @@ Defines the connection of the TCPSocket client and server.
 ## Modules to Import
 
 ```TypeScript
-import { socket } from '@kit.NetworkKit';
+import { socket } from 'socket';
 ```
 
 ## close

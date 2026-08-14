@@ -15,7 +15,7 @@ Describes the camera output capability.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'camera';
 ```
 
 ## photoProfiles

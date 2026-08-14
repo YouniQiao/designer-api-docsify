@@ -56,7 +56,7 @@ let accountId: number = 100;
 try {
   securityManager.cancelWatermarkImage(wantTemp, bundleName, accountId);
   console.info(`Succeeded in cancelling watermarkImage policy.`);
-} catch(err) {
+} catch (err) {
   console.error(`Failed to cancel watermarkImage policy. Code: ${err.code}, message: ${err.message}`);
 }
 ```

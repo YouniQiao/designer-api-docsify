@@ -1,6 +1,6 @@
 # AeadParamsSpec
 
-Describes parameters in [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init) for symmetric encryption and decryption using authenticated encryption with associated data (AEAD). It inherits from [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md#ParamsSpec). &lt;br&gt;It is applicable to the CCM and GCM modes of AES. &lt;br&gt;It is applicable to the GCM mode of SM4. &lt;br&gt;It is applicable to ChaCha20-Poly1305. > **NOTE：**> > When **AeadParamsSpec** is used for encryption in AES-CCM mode: > - If the tag length is specified during encryption, the same length must be passed during decryption. > > - In CCM mode, only one of [update](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#update) and > [doFinal](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#doFinal) can be called for encryption or decryption, and each method can > be called only once.
+Describes parameters in [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init) for symmetric encryption and decryption using authenticated encryption with associated data (AEAD). It inherits from [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md#ParamsSpec). <br>It is applicable to the CCM and GCM modes of AES. <br>It is applicable to the GCM mode of SM4. <br>It is applicable to ChaCha20-Poly1305. > **NOTE：**> > When **AeadParamsSpec** is used for encryption in AES-CCM mode: > - If the tag length is specified during encryption, the same length must be passed during decryption. > > - In CCM mode, only one of [update](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#update) and > [doFinal](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#doFinal) can be called for encryption or decryption, and each method can > be called only once.
 
 **Inheritance/Implementation:** AeadParamsSpec extends [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md#ParamsSpec)
 
@@ -17,7 +17,7 @@ Describes parameters in [init()](arkts-cryptoarchitecture-cryptoframework-cipher
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from 'cryptoFramework';
 ```
 
 ## authenticatedData
@@ -74,7 +74,7 @@ Number used once. > **NOTE：**> - For AES-CCM, the nonce length ranges from 7 t
 tagLen?: int
 ```
 
-Authentication tag length, in bytes. &lt;br&gt;For encryption, the tag will be added to the end of the ciphertext. &lt;br&gt;For decryption, the tag should be at the end of the ciphertext. &lt;br&gt;The value should be an integer. > **NOTE：**> - For AES-CCM, the default value is 12. The supported values are 4, 6, 8, 10, 12, 14, and 16. > - For AES-GCM, the default value is 16. The supported values are 4, 8, 12, 13, 14, 15, and 16. > - For SM4-GCM, the default value is 16. The supported values are 4, 8, 12, 13, 14, 15, and 16. > - For ChaCha20-Poly1305, the default value is 16. The supported value is 16.
+Authentication tag length, in bytes. <br>For encryption, the tag will be added to the end of the ciphertext. <br>For decryption, the tag should be at the end of the ciphertext. <br>The value should be an integer. > **NOTE：**> - For AES-CCM, the default value is 12. The supported values are 4, 6, 8, 10, 12, 14, and 16. > - For AES-GCM, the default value is 16. The supported values are 4, 8, 12, 13, 14, 15, and 16. > - For SM4-GCM, the default value is 16. The supported values are 4, 8, 12, 13, 14, 15, and 16. > - For ChaCha20-Poly1305, the default value is 16. The supported value is 16.
 
 **Type:** int
 

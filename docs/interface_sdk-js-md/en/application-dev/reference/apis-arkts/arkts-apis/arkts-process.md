@@ -27,7 +27,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { process } from '@kit.ArkTS';
+import { process } from 'process';
 ```
 
 ## Summary

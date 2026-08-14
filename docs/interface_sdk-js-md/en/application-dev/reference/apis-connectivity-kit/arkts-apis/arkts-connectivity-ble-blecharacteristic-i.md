@@ -15,7 +15,7 @@ Describes the Gatt characteristic.
 ## Modules to Import
 
 ```TypeScript
-import { ble } from '@kit.ConnectivityKit';
+import { ble } from 'ble';
 ```
 
 ## characteristicUuid

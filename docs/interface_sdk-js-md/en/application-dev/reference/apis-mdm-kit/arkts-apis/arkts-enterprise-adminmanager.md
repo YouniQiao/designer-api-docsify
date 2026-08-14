@@ -17,7 +17,7 @@ The **adminManager** module provides administrator permission management capabil
 ## Modules to Import
 
 ```TypeScript
-import { adminManager } from '@kit.MDMKit';
+import { adminManager } from 'adminManager';
 ```
 
 ## Summary

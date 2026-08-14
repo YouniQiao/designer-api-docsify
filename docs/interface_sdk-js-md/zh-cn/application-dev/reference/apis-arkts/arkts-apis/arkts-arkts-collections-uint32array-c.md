@@ -1,6 +1,6 @@
 # Uint32Array
 
-一种线性数据结构，底层基于ArkTS ArrayBuffer实现。 > **说明：**> > - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。 > **装饰器**：\@Sendable
+一种线性数据结构，底层基于[ArkTS ArrayBuffer](arkts-collections.md#@arkts.collections)实现。 > **说明：**> > - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。 > **装饰器**：\@Sendable
 
 **起始版本：** 12
 
@@ -68,7 +68,7 @@ at(index: number): number | undefined
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | number | 是 | 所需代码单元的从零开始的索引。&lt;br/&gt;如果传入负数，则从最后一个元素开始反向计数。 |
+| index | number | 是 | 所需代码单元的从零开始的索引。<br/>如果传入负数，则从最后一个元素开始反向计数。 |
 
 **返回值：**
 
@@ -197,7 +197,7 @@ constructor(array: ArrayLike<number> | ArrayBuffer)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| array | ArrayLike&lt;number&gt; \| ArrayBuffer | 是 | 用于构造ArkTS Uint32Array的对象。当参数类型是ArrayBuffer时， buffer所占的字节数须是4的整数倍。 |
+| array | [ArrayLike](../../apis-na/arkts-apis/arkts-na-arraylike-i.md)&lt;number&gt; \| ArrayBuffer | 是 | 用于构造ArkTS Uint32Array的对象。当参数类型是ArrayBuffer时， buffer所占的字节数须是4的整数倍。 |
 
 **错误码：**
 
@@ -567,7 +567,7 @@ static from(arrayLike: ArrayLike<number>): Uint32Array
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arrayLike | ArrayLike&lt;number&gt; | 是 | 用于构造ArkTS Uint32Array的ArrayLike对象。 |
+| arrayLike | [ArrayLike](../../apis-na/arkts-apis/arkts-na-arraylike-i.md)&lt;number&gt; | 是 | 用于构造ArkTS Uint32Array的ArrayLike对象。 |
 
 **返回值：**
 
@@ -599,7 +599,7 @@ static from<T>(arrayLike: ArrayLike<T>, mapFn: TypedArrayFromMapFn<T, number>): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arrayLike | ArrayLike&lt;T&gt; | 是 | 用于构造ArrayLike对象。 |
+| arrayLike | [ArrayLike](../../apis-na/arkts-apis/arkts-na-arraylike-i.md)&lt;T&gt; | 是 | 用于构造ArrayLike对象。 |
 | mapFn | [TypedArrayFromMapFn](arkts-arkts-collections-typedarrayfrommapfn-t.md)&lt;T, number&gt; | 是 | 映射函数。 |
 
 **返回值：**
@@ -902,7 +902,7 @@ static of(...items: number[]): Uint32Array
 
 | 类型 | 说明 |
 | --- | --- |
-| Uint32Array | 新的ArkTS Uint32Array实例。可能的原因：1.必填参数未指定； &lt;br&gt;2.参数类型不正确；3.参数校验失败。 |
+| Uint32Array | 新的ArkTS Uint32Array实例。可能的原因：1.必填参数未指定； <br>2.参数类型不正确；3.参数校验失败。 |
 
 ## reduce
 
@@ -1048,7 +1048,7 @@ reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Uint32Ar
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;U, number, Uint32Array&gt; | 是 | 对Uint32Array中的每个元素调用的函数。 |
-| initialValue | U | 是 | 作为回调函数首次调用时第一个参数使用的值。 &lt;br&gt;若未提供初始值，则使用Uint32Array的最后一个元素作为初始值， &lt;br&gt;且回调函数将从倒数第二个元素开始调用。 |
+| initialValue | U | 是 | 作为回调函数首次调用时第一个参数使用的值。 <br>若未提供初始值，则使用Uint32Array的最后一个元素作为初始值， <br>且回调函数将从倒数第二个元素开始调用。 |
 
 **返回值：**
 
@@ -1159,7 +1159,7 @@ set(array: ArrayLike<number>, offset?: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| array | ArrayLike&lt;number&gt; | 是 | 用于设置的ArrayLike对象。 |
+| array | [ArrayLike](../../apis-na/arkts-apis/arkts-na-arraylike-i.md)&lt;number&gt; | 是 | 用于设置的ArrayLike对象。 |
 | offset | number | 否 | 写入的起始位置。 |
 
 **错误码：**

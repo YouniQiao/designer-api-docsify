@@ -65,7 +65,7 @@ async function openExample() {
 
   // 打开设备
   try {
-    serialManager.open(portId)
+    serialManager.open(portId);
     console.info('open usbSerial success, portId: ' + portId);
   } catch (error) {
     const err: BusinessError = error as BusinessError;

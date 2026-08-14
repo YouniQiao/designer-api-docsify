@@ -18,7 +18,7 @@ Defines the custom popup options.
 arrowHeight?: Dimension
 ```
 
-The height of the arrow. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;This parameter cannot be set in percentage. &lt;/p&gt;
+The height of the arrow. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>This parameter cannot be set in percentage. &lt;/p&gt;
 
 **类型：** [Dimension](../../apis-arkui/arkts-apis/arkts-arkui-dimension-t.md)
 
@@ -42,7 +42,7 @@ The height of the arrow. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;T
 arrowOffset?: Length
 ```
 
-The offset of the sharp corner of popup. Offset of the popup arrow relative to the popup. When the arrow is at the top or bottom of the popup: &lt;br&gt;The value 0 indicates that the arrow is located on the leftmost, and any other value indicates the distance from the arrow to the leftmost; the arrow is centered by default. When the arrow is on the left or right side of the popup: The value indicates the distance from the arrow to the top; the arrow is centered by default. When the popup is displayed on either edge of the screen, it will automatically deviate leftward or rightward to stay within the safe area. When the value is 0, the arrow always points to the bound component.
+The offset of the sharp corner of popup. Offset of the popup arrow relative to the popup. When the arrow is at the top or bottom of the popup: <br>The value 0 indicates that the arrow is located on the leftmost, and any other value indicates the distance from the arrow to the leftmost; the arrow is centered by default. When the arrow is on the left or right side of the popup: The value indicates the distance from the arrow to the top; the arrow is centered by default. When the popup is displayed on either edge of the screen, it will automatically deviate leftward or rightward to stay within the safe area. When the value is 0, the arrow always points to the bound component.
 
 **类型：** [Length](../../apis-arkui/arkts-apis/arkts-arkui-length-t.md)
 
@@ -86,7 +86,7 @@ Position of the popup arrow relative to its parent component. Available position
 arrowWidth?: Dimension
 ```
 
-Arrow thickness. If the arrow thickness exceeds the length of the edge minus twice the size of the popup rounded corner, the arrow is not drawn. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;This parameter cannot be set in percentage. &lt;/p&gt;
+Arrow thickness. If the arrow thickness exceeds the length of the edge minus twice the size of the popup rounded corner, the arrow is not drawn. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>This parameter cannot be set in percentage. &lt;/p&gt;
 
 **类型：** [Dimension](../../apis-arkui/arkts-apis/arkts-arkui-dimension-t.md)
 
@@ -110,7 +110,7 @@ Arrow thickness. If the arrow thickness exceeds the length of the edge minus twi
 autoCancel?: boolean
 ```
 
-Whether to automatically dismiss the popup when an operation is performed on the page. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;To enable the popup to disappear upon a click on it, place a layout component in the builder place the &lt;Popup&gt; component in the layout component, and modify the value of the bindPopup variable (show: boolean) in the onClick event of the layout component. &lt;/p&gt;
+Whether to automatically dismiss the popup when an operation is performed on the page. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>To enable the popup to disappear upon a click on it, place a layout component in the builder place the &lt;Popup&gt; component in the layout component, and modify the value of the bindPopup variable (show: boolean) in the onClick event of the layout component. &lt;/p&gt;
 
 **类型：** boolean
 
@@ -270,7 +270,7 @@ The width of popup's border.
 builder: CustomBuilder
 ```
 
-Popup builder. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;The popup attribute is a universal attribute. A custom popup does not support display of another popup. &lt;br&gt;The position attribute cannot be used for the first-layer container in the builder. &lt;br&gt;If the position attribute is used, the popup will not be displayed. &lt;br&gt;If a custom component is used in the builder, the aboutToAppear and aboutToDisappear lifecycle callbacks of the custom component are irrelevant to the visibility of the popup. As such, the lifecycle of the custom component cannot be used to determine whether the popup is displayed or not. &lt;/p&gt;
+Popup builder. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>The popup attribute is a universal attribute. A custom popup does not support display of another popup. <br>The position attribute cannot be used for the first-layer container in the builder. <br>If the position attribute is used, the popup will not be displayed. <br>If a custom component is used in the builder, the aboutToAppear and aboutToDisappear lifecycle callbacks of the custom component are irrelevant to the visibility of the popup. As such, the lifecycle of the custom component cannot be used to determine whether the popup is displayed or not. &lt;/p&gt;
 
 **类型：** CustomBuilder
 
@@ -612,7 +612,7 @@ Callback function before the popup closeAnimation starts.
 onWillDismiss?: boolean | Callback<DismissPopupAction>
 ```
 
-Whether to perform dismissal event interception and interception callback. 1. If this parameter is set to false, the system does not respond to the dismissal event initiated by touching the Back button, swiping left or right on the screen, or pressing the Esc key; and the system dismisses the popup only when show is set to false. If this parameter is set to true, the system responds to the dismissal event as expected. 2. If this parameter is set to a function, the dismissal event is intercepted and the callback function is executed. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;No more onWillDismiss callback is allowed in an onWillDismiss callback. &lt;/p&gt;
+Whether to perform dismissal event interception and interception callback. 1. If this parameter is set to false, the system does not respond to the dismissal event initiated by touching the Back button, swiping left or right on the screen, or pressing the Esc key; and the system dismisses the popup only when show is set to false. If this parameter is set to true, the system responds to the dismissal event as expected. 2. If this parameter is set to a function, the dismissal event is intercepted and the callback function is executed. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>No more onWillDismiss callback is allowed in an onWillDismiss callback. &lt;/p&gt;
 
 **类型：** boolean \| [Callback](arkts-na-callback-t.md)&lt;[DismissPopupAction](arkts-na-common-dismisspopupaction-i.md)&gt;
 

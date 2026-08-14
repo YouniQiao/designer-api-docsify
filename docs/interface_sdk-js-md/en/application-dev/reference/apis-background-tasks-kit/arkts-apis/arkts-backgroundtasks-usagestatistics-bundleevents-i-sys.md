@@ -15,7 +15,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usageStatistics } from '@kit.BackgroundTasksKit';
+import { usageStatistics } from 'usageStatistics';
 ```
 
 ## appGroup
@@ -90,7 +90,7 @@ The event id.
 eventOccurredTime?: long
 ```
 
-The time when this state occurred, in milliseconds. &lt;br&gt; Unit:ms
+The time when this state occurred, in milliseconds. <br> Unit:ms
 
 **Type:** long
 

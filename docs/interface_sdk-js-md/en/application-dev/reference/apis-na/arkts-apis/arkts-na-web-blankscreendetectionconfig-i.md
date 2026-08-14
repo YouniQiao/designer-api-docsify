@@ -58,7 +58,7 @@ The combination of blank screen detection methods.
 detectionTiming?: double[]
 ```
 
-The settings of the timing when web try to detect current page is blank or not. The timing is the duration after web navigation. &lt;br&gt;Length range:[0,+∞).Unit: second.Default value:[1.0,3.0,5.0].
+The settings of the timing when web try to detect current page is blank or not. The timing is the duration after web navigation. <br>Length range:[0,+∞).Unit: second.Default value:[1.0,3.0,5.0].
 
 **Type:** double[]
 

@@ -15,7 +15,7 @@ Defines the ad request parameters.
 ## Modules to Import
 
 ```TypeScript
-import { advertising } from '@kit.AdsKit';
+import { advertising } from 'advertising';
 ```
 
 ## adCount

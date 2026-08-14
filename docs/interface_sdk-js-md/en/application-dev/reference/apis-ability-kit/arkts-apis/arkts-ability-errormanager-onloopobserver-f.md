@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { errorManager } from '@kit.AbilityKit';
+import { errorManager } from 'errorManager';
 ```
 
 ## on_loopObserver

@@ -19,7 +19,7 @@ Provides the APIs for aperture settings. It inherits from [ApertureQuery](arkts-
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'camera';
 ```
 
 ## getPhysicalAperture

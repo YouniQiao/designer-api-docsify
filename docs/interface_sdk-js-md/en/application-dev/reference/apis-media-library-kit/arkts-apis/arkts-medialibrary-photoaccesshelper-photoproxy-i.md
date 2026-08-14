@@ -17,6 +17,6 @@ Photo proxy object, which is used by the camera application to write image data.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'photoAccessHelper';
 ```
 

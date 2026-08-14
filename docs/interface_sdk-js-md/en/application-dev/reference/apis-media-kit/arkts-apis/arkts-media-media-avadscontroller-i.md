@@ -15,7 +15,7 @@ Definition of the Ad Content Control Interface
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'media';
 ```
 
 ## addAdsMediaSource
@@ -43,7 +43,7 @@ Add an advertisement film source to the advertisement controller, The insertion 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | src | [MediaSource](arkts-media-media-mediasource-i.md) | Yes | Video source to be inserted into the main content for playback. |
-| start | int | Yes | Progress value of inserting data to the main media asset. &lt;br&gt;Unit: milliseconds. The value should be an integer. |
+| start | int | Yes | Progress value of inserting data to the main media asset. <br>Unit: milliseconds. The value should be an integer. |
 
 **Return value:**
 
@@ -101,7 +101,7 @@ Unregisters the event processing function when the ad content fails to be loaded
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnAdsEventLoadingErrorHandle](arkts-media-media-onadseventloadingerrorhandle-t.md) | No | Ad content loading failure processing function. &lt;br&gt;Default value: If this parameter is not specified, all processing functions of the event are deregistered. |
+| callback | [OnAdsEventLoadingErrorHandle](arkts-media-media-onadseventloadingerrorhandle-t.md) | No | Ad content loading failure processing function. <br>Default value: If this parameter is not specified, all processing functions of the event are deregistered. |
 
 ## offAdsListenerAdsCompleted
 
@@ -127,7 +127,7 @@ Unregisters the processing function of the event triggered by the completion of 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Processing function of the advertisement playing completion event. &lt;br&gt;Default value: If this parameter is not specified, all processing functions of the event are deregistered. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Processing function of the advertisement playing completion event. <br>Default value: If this parameter is not specified, all processing functions of the event are deregistered. |
 
 ## offAdsListenerAdsSkipped
 
@@ -153,7 +153,7 @@ Unregisters the processing function of the event triggered when advertisement is
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Advertisement Skipped Processing Function. &lt;br&gt;Default value: If this parameter is not specified, all processing functions of the event are deregistered. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Advertisement Skipped Processing Function. <br>Default value: If this parameter is not specified, all processing functions of the event are deregistered. |
 
 ## offAdsListenerAdsStarted
 
@@ -179,7 +179,7 @@ Unregisters the processing function for the event triggered when a new ad conten
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnAdsEventAdsStartedHandle](arkts-media-media-onadseventadsstartedhandle-t.md) | No | Processing function when the ad content starts to be played. It is usually used to switch the logic of the playback page. &lt;br&gt;Default value: If this parameter is not specified, all processing functions of the event are deregistered. |
+| callback | [OnAdsEventAdsStartedHandle](arkts-media-media-onadseventadsstartedhandle-t.md) | No | Processing function when the ad content starts to be played. It is usually used to switch the logic of the playback page. <br>Default value: If this parameter is not specified, all processing functions of the event are deregistered. |
 
 ## onAdsEventListenerLoadingError
 
@@ -205,7 +205,7 @@ Registers the event processing function when the ad content fails to be loaded.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnAdsEventLoadingErrorHandle](arkts-media-media-onadseventloadingerrorhandle-t.md) | Yes | This function is used to process ad content loading failures. This function needs to be implemented by the application. &lt;br&gt;The first parameter is used to transfer the advertisement ID, and the second parameter is used to transfer the failure cause. |
+| callback | [OnAdsEventLoadingErrorHandle](arkts-media-media-onadseventloadingerrorhandle-t.md) | Yes | This function is used to process ad content loading failures. This function needs to be implemented by the application. <br>The first parameter is used to transfer the advertisement ID, and the second parameter is used to transfer the failure cause. |
 
 ## onAdsListenerAdsCompleted
 
@@ -283,7 +283,7 @@ Registers the processing function for the event triggered when a new ad content 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnAdsEventAdsStartedHandle](arkts-media-media-onadseventadsstartedhandle-t.md) | Yes | Processing function when the ad content starts to be played. The logic for switching the playback page is commonly used. &lt;br&gt;The first parameter indicates the ID of the advertisement that is being played, and the second parameter indicates the duration of the advertisement. |
+| callback | [OnAdsEventAdsStartedHandle](arkts-media-media-onadseventadsstartedhandle-t.md) | Yes | Processing function when the ad content starts to be played. The logic for switching the playback page is commonly used. <br>The first parameter indicates the ID of the advertisement that is being played, and the second parameter indicates the duration of the advertisement. |
 
 ## release
 

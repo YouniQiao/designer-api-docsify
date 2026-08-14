@@ -15,7 +15,7 @@ Provides methods for setting general information about devices, including the de
 ## Modules to Import
 
 ```TypeScript
-import { settings } from '@kit.BasicServicesKit';
+import { settings } from 'settings';
 ```
 
 ## Summary

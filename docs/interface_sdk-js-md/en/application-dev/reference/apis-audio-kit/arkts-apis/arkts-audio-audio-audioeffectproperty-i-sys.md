@@ -17,7 +17,7 @@ Describes an audio effect property.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'audio';
 ```
 
 ## category

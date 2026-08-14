@@ -3,7 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
-import { Context, Permissions, PermissionRequestResult } from '@kit.AbilityKit';
+import { Context } from 'Context';
+import { PermissionRequestResult } from 'PermissionRequestResult';
+import { Permissions } from 'Permissions';
 ```
 
 ## createAtManager

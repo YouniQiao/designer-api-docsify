@@ -15,7 +15,7 @@ Defines a contact's note.
 ## Modules to Import
 
 ```TypeScript
-import { contact } from '@kit.ContactsKit';
+import { contact } from 'contact';
 ```
 
 ## noteContent

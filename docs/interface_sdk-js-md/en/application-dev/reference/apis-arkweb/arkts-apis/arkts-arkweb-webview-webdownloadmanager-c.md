@@ -15,7 +15,7 @@ You can trigger download manually through this interface, or resume failed or ca
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'webview';
 ```
 
 ## resumeDownload

@@ -17,7 +17,7 @@ Provides page information, which includes: * Basic page information, such as pag
 ## Modules to Import
 
 ```TypeScript
-import { onScreen } from '@kit.MultimodalAwarenessKit';
+import { onScreen } from 'onScreen';
 ```
 
 ## itemInfo

@@ -17,7 +17,7 @@ Describes the anchor point information used to maintain the relative position be
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'window';
 ```
 
 ## anchorType

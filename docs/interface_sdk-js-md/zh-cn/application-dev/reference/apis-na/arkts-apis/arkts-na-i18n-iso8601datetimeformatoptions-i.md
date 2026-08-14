@@ -116,7 +116,7 @@ timeZone?: TimeZone
 
 时区。默认值：**UTC**。
 
-**类型：** [TimeZone](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-timezone-c.md)
+**类型：** [TimeZone](arkts-na-i18n-timezone-c.md)
 
 **起始版本：** 26.0.0
 

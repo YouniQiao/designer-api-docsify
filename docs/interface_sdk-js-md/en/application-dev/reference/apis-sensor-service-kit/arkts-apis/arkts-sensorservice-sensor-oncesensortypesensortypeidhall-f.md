@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
+import { sensor } from 'sensor';
 ```
 
 ## once_SensorType.SENSOR_TYPE_ID_HALL

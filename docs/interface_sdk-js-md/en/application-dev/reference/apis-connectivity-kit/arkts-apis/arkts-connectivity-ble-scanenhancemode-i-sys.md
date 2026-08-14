@@ -17,7 +17,7 @@ Describes the configuration of scan enhance mode.
 ## Modules to Import
 
 ```TypeScript
-import { ble } from '@kit.ConnectivityKit';
+import { ble } from 'ble';
 ```
 
 ## enhanceMode

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { adminManager } from '@kit.MDMKit';
+import { adminManager } from 'adminManager';
 ```
 
 ## disableAdmin
@@ -97,7 +97,7 @@ Disables a common device administrator application for the user specified by **u
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
-| userId | number | Yes | User ID, which must be greater than or equal to 0. &lt;br&gt;The default value is the user ID of the caller. |
+| userId | number | Yes | User ID, which must be greater than or equal to 0. <br>The default value is the user ID of the caller. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
 
 **Error codes:**

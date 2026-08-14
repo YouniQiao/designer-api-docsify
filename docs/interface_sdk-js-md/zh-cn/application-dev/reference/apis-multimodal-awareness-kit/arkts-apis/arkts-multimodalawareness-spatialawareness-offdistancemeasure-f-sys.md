@@ -36,7 +36,7 @@ function offDistanceMeasure(configParams: DistanceMeasurementConfigParams,
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function can not work correctly due to &lt;br&gt; limited device capabilities. |
+| [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. Function can not work correctly due to <br> limited device capabilities. |
 | [35100004](../../apis-multimodalawareness-kit/errorcode-spatialAwareness.md#35100004-无效参数) | Parameter invalid. |
 | [35100003](../../apis-multimodalawareness-kit/errorcode-spatialAwareness.md#35100003-取消订阅失败) | Unsubscription failed. |
 | [35100001](../../apis-multimodalawareness-kit/errorcode-spatialAwareness.md#35100001-服务异常) | Service exception. |
@@ -57,10 +57,10 @@ import { spatialAwareness } from '@kit.MultimodalAwarenessKit';
    console.info('call offDistanceMeasure start');
    try {
       spatialAwareness.offDistanceMeasure(configParams, (data:spatialAwareness.DistanceMeasurementResponse) => {
-         console.info('result = ${data.distance}');
+         console.info(`result = ${data.distance}`);
       });
    } catch (err) {
-      console.error('call offDistanceMeasure failed, errCode = ' + err.code);
+      console.error(`call offDistanceMeasure failed, Code: ${err.code}, message: ${err.message}`);
    }
 ```
 

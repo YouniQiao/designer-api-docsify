@@ -15,7 +15,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundle } from '@kit.AbilityKit';
+import { bundle } from 'bundle';
 ```
 
 ## userId

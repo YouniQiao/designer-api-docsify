@@ -17,7 +17,7 @@ Callback function for registering network UID policy changes.
 ## Modules to Import
 
 ```TypeScript
-import { policy } from '@kit.NetworkKit';
+import { policy } from 'policy';
 ```
 
 ## policy

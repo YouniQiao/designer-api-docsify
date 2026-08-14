@@ -17,7 +17,20 @@ Implements communication between the Worker thread and the host thread. The post
 ## Modules to Import
 
 ```TypeScript
-import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from '@kit.ArkTS';
+import { DedicatedWorkerGlobalScope } from 'DedicatedWorkerGlobalScope';
+import { ErrorEvent } from 'ErrorEvent';
+import { Event } from 'Event';
+import { EventListener } from 'EventListener';
+import { EventTarget } from 'EventTarget';
+import { MessageEvent } from 'MessageEvent';
+import { MessageEvents } from 'MessageEvents';
+import { PostMessageOptions } from 'PostMessageOptions';
+import { ThreadWorkerGlobalScope } from 'ThreadWorkerGlobalScope';
+import { WorkerEventListener } from 'WorkerEventListener';
+import { WorkerEventTarget } from 'WorkerEventTarget';
+import { WorkerOptions } from 'WorkerOptions';
+import { ThreadWorkerPriority } from 'ThreadWorkerPriority';
+import { Priority } from 'Priority';
 ```
 
 ## callGlobalCallObjectMethod
@@ -46,7 +59,7 @@ Calls a method of an object registered with the host thread. This API is called 
 | --- | --- | --- | --- |
 | instanceName | string | Yes | Key used for registration. It is used to search for the object in the host thread. |
 | methodName | string | Yes | Name of the method to call. Note that the method cannot be modified by async or generator, or return results asynchronously by using the asynchronous mechanism at the bottom layer. Otherwise, an exception is thrown. |
-| timeout | number | Yes | Maximum duration that the current synchronous invoking waits, in ms. The value is an integer ranging from 1 to 5000. The value 0 means that the 5000 ms duration is used. The value should be an integer. &lt;br&gt;Unit:ms. |
+| timeout | number | Yes | Maximum duration that the current synchronous invoking waits, in ms. The value is an integer ranging from 1 to 5000. The value 0 means that the 5000 ms duration is used. The value should be an integer. <br>Unit:ms. |
 | args | Object[] | Yes | the method argument called on registered globalCallObject. |
 
 **Return value:**

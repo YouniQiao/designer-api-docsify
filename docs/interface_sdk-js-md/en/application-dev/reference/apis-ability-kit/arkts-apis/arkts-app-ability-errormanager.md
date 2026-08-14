@@ -15,7 +15,7 @@ The ErrorManager module provides capabilities for registering and unregistering 
 ## Modules to Import
 
 ```TypeScript
-import { errorManager } from '@kit.AbilityKit';
+import { errorManager } from 'errorManager';
 ```
 
 ## Summary

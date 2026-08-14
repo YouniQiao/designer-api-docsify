@@ -15,7 +15,7 @@ Remote device operation methods.
 ## Modules to Import
 
 ```TypeScript
-import { remoteDevice } from '@kit.ConnectivityKit';
+import { remoteDevice } from 'remoteDevice';
 ```
 
 ## getAcbState

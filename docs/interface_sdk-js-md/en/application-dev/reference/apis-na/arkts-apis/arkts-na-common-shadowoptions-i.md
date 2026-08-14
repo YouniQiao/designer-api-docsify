@@ -40,7 +40,7 @@ Color of the shadow. Default value: **Black**
 fill?: boolean
 ```
 
-Whether to fill the inside of the component with shadow. **true**: Fill the inside of the component with shadow. &lt;br&gt;**false**: Do not fill the inside of the component with shadow. &lt;br&gt;The default value is **false**. &lt;br&gt;**NOTE：**&lt;br&gt;This attribute does not take effect in textShadow.
+Whether to fill the inside of the component with shadow. **true**: Fill the inside of the component with shadow. <br>**false**: Do not fill the inside of the component with shadow. <br>The default value is **false**. <br>**NOTE：**<br>This attribute does not take effect in textShadow.
 
 **Type:** boolean
 
@@ -130,7 +130,7 @@ Blur radius of the shadow. Default value: 0px.
 type?: ShadowType
 ```
 
-Shadow type. &lt;br&gt;Default value: **COLOR**.
+Shadow type. <br>Default value: **COLOR**.
 
 **Type:** [ShadowType](arkts-na-common-shadowtype-e.md)
 

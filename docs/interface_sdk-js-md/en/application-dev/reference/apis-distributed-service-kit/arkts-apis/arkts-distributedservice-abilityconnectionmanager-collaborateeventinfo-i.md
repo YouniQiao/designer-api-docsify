@@ -15,7 +15,7 @@ Collaboration event information.
 ## Modules to Import
 
 ```TypeScript
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
+import { abilityConnectionManager } from 'abilityConnectionManager';
 ```
 
 ## eventMsg

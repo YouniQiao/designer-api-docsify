@@ -15,7 +15,7 @@ The **DriverExtensionAbility** module provides the ExtensionAbility related to d
 ## Modules to Import
 
 ```TypeScript
-import { DriverExtensionContext } from '@kit.DriverDevelopmentKit';
+import { DriverExtensionContext } from 'DriverExtensionContext';
 ```
 
 ## onConnect

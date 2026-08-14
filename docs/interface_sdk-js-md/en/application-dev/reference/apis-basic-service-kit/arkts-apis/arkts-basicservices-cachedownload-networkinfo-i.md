@@ -15,7 +15,7 @@ Describes the pre-downloaded network information.
 ## Modules to Import
 
 ```TypeScript
-import { cacheDownload } from '@kit.BasicServicesKit';
+import { cacheDownload } from 'cacheDownload';
 ```
 
 ## dnsServers

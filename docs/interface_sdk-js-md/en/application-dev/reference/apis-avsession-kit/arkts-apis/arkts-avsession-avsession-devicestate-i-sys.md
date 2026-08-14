@@ -17,7 +17,7 @@ Device state used to describe states including discovery, authentication and oth
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'avSession';
 ```
 
 ## deviceId

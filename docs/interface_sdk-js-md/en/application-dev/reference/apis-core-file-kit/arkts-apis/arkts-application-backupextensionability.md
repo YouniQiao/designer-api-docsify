@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { BundleVersion } from '@kit.CoreFileKit';
+import { BundleVersion } from 'BundleVersion';
 ```
 
 ## Summary

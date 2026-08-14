@@ -15,7 +15,7 @@ Information about all lock operations on the AsyncLock instance.
 ## Modules to Import
 
 ```TypeScript
-import { ArkTSUtils } from '@kit.ArkTS';
+import { ArkTSUtils } from 'ArkTSUtils';
 ```
 
 ## held

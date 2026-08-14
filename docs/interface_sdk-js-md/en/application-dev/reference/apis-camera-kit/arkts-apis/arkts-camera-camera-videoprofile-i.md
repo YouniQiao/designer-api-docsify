@@ -17,7 +17,7 @@ Describes the video configuration information. It inherits from [Profile](arkts-
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'camera';
 ```
 
 ## frameRateRange

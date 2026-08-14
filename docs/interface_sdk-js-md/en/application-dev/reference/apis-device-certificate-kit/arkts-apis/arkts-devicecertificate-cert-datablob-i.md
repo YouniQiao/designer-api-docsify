@@ -15,7 +15,7 @@ Encapsulates binary data. The core field **data** is of the Uint8Array type.
 ## Modules to Import
 
 ```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
+import { cert } from 'cert';
 ```
 
 ## data

@@ -17,7 +17,7 @@ Bundle monitor
 ## Modules to Import
 
 ```TypeScript
-import { bundleMonitor } from '@kit.AbilityKit';
+import { bundleMonitor } from 'bundleMonitor';
 ```
 
 ## Summary

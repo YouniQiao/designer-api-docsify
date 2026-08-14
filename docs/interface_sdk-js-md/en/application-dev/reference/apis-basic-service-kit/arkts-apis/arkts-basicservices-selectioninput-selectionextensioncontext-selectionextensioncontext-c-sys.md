@@ -19,7 +19,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { SelectionExtensionContext } from '@kit.BasicServicesKit';
+import { SelectionExtensionContext } from 'SelectionExtensionContext';
 ```
 
 ## startAbility

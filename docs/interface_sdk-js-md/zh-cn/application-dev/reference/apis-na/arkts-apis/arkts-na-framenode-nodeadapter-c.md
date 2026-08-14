@@ -409,8 +409,8 @@ reloadItem(start: int, count: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| start | int | 是 | 重新加载的节点开始索引值。&lt;br/&gt;取值范围：[0, +∞) |
-| count | int | 是 | 重新加载数据节点的数量。&lt;br/&gt;取值范围：[0, +∞) |
+| start | int | 是 | 重新加载的节点开始索引值。<br/>取值范围：[0, +∞) |
+| count | int | 是 | 重新加载数据节点的数量。<br/>取值范围：[0, +∞) |
 
 ## removeItem
 

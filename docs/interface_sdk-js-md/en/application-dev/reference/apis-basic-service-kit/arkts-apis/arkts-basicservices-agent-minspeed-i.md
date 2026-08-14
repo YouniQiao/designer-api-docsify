@@ -15,7 +15,7 @@ Defines the minimum speed of a task. If the task speed is lower than the preset 
 ## Modules to Import
 
 ```TypeScript
-import { request } from '@kit.BasicServicesKit';
+import { request } from 'request';
 ```
 
 ## duration

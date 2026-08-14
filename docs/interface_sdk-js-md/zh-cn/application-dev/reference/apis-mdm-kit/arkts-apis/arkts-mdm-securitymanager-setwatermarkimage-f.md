@@ -28,7 +28,7 @@ function setWatermarkImage(admin: Want, bundleName: string, source: string | ima
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | bundleName | string | 是 | 被设置水印的应用包名。 |
-| source | string \| image.PixelMap | 是 | string表示图像路径，图像路径为应用沙箱路径(应用沙箱路径和真实路径的对应关系可参见： [应用沙箱路径和真实物理路径的对应关系](../../../file-management/app-sandbox-directory.md#应用沙箱路径和真实物理路径的对应关系))等应用有权限访问的路径。 &lt;br&gt;image.PixelMap表示图像对象。 &lt;br&gt;图像像素占用大小不得超过500KB。 &lt;br&gt;图像像素占用大小计算公式：图像宽度(像素)×图像高度 (像素)×每个像素占用的字节数（通常为4）。例如：一张 100x100 的图片，图像像素占用大小为100×100×4=40000字节。 |
+| source | string \| image.PixelMap | 是 | string表示图像路径，图像路径为应用沙箱路径(应用沙箱路径和真实路径的对应关系可参见： [应用沙箱路径和真实物理路径的对应关系](../../../file-management/app-sandbox-directory.md#应用沙箱路径和真实物理路径的对应关系))等应用有权限访问的路径。 <br>image.PixelMap表示图像对象。 <br>图像像素占用大小不得超过500KB。 <br>图像像素占用大小计算公式：图像宽度(像素)×图像高度 (像素)×每个像素占用的字节数（通常为4）。例如：一张 100x100 的图片，图像像素占用大小为100×100×4=40000字节。 |
 | accountId | number | 是 | 用户ID。accountId可以通过@ohos.account.osAccount中的 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId)等接口来获取。*@ohos.account.osAccount** to obtain the user ID. |
 
 **错误码：**
@@ -58,7 +58,7 @@ let accountId: number = 100;
 try {
   securityManager.setWatermarkImage(wantTemp, bundleName, source, accountId);
   console.info(`Succeeded in setting watermarkImage policy.`);
-} catch(err) {
+} catch (err) {
   console.error(`Failed to set watermarkImage policy. Code: ${err.code}, message: ${err.message}`);
 }
 ```
@@ -92,7 +92,7 @@ function setWatermarkImage(admin: Want, bundleName: string, source: string | ima
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | bundleName | string | 是 | 被设置水印的应用包名。 |
-| source | string \| image.PixelMap | 是 | string表示图像路径，图像路径为应用沙箱路径(应用沙箱路径和真实路径的对应关系可参见： [应用沙箱路径和真实物理路径的对应关系](../../../file-management/app-sandbox-directory.md#应用沙箱路径和真实物理路径的对应关系))等应用有权限访问的路径。 &lt;br&gt;image.PixelMap表示图像对象。 &lt;br&gt;图像像素占用大小不得超过500KB。 &lt;br&gt;图像像素占用大小计算公式：图像宽度(像素)×图像高度 (像素)×每个像素占用的字节数（通常为4）。例如：一张 100x100 的图片，图像像素占用大小为100×100×4=40000字节。 |
+| source | string \| image.PixelMap | 是 | string表示图像路径，图像路径为应用沙箱路径(应用沙箱路径和真实路径的对应关系可参见： [应用沙箱路径和真实物理路径的对应关系](../../../file-management/app-sandbox-directory.md#应用沙箱路径和真实物理路径的对应关系))等应用有权限访问的路径。 <br>image.PixelMap表示图像对象。 <br>图像像素占用大小不得超过500KB。 <br>图像像素占用大小计算公式：图像宽度(像素)×图像高度 (像素)×每个像素占用的字节数（通常为4）。例如：一张 100x100 的图片，图像像素占用大小为100×100×4=40000字节。 |
 | accountId | number | 是 | 用户ID，指定具体用户，取值范围：大于等于0。accountId可以通过@ohos.account.osAccount中的 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId)等接口来获取。*@ohos.account.osAccount** to obtain the user ID. |
 | properties | [WatermarkProperties](arkts-mdm-securitymanager-watermarkproperties-i.md) | 是 | 配置水印的行列数。 |
 
@@ -124,11 +124,11 @@ let accountId: number = 100;
 let properties: securityManager.WatermarkProperties = {
   intervalsRow: 1,
   intervalsCol: 1
-}
+};
 try {
   securityManager.setWatermarkImage(wantTemp, bundleName, source, accountId, properties);
   console.info(`Succeeded in setting watermarkImage policy.`);
-} catch(err) {
+} catch (err) {
   console.error(`Failed to set watermarkImage policy. Code: ${err.code}, message: ${err.message}`);
 }
 ```
@@ -150,11 +150,11 @@ let accountId: number = 100;
 let properties: securityManager.WatermarkProperties = {
   intervalsRow: 27,
   intervalsCol: 12
-}
+};
 try {
   securityManager.setWatermarkImage(wantTemp, bundleName, source, accountId, properties);
   console.info(`Succeeded in setting watermarkImage policy.`);
-} catch(err) {
+} catch (err) {
   console.error(`Failed to set watermarkImage policy. Code: ${err.code}, message: ${err.message}`);
 }
 ```
@@ -176,11 +176,11 @@ let accountId: number = 100;
 let properties: securityManager.WatermarkProperties = {
   intervalsRow: 28,
   intervalsCol: 12
-}
+};
 try {
   securityManager.setWatermarkImage(wantTemp, bundleName, source, accountId, properties);
   console.info(`Succeeded in setting watermarkImage policy.`);
-} catch(err) {
+} catch (err) {
   console.error(`Failed to set watermarkImage policy. Code: ${err.code}, message: ${err.message}`);
 }
 ```

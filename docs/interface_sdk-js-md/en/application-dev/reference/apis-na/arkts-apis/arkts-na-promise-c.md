@@ -44,7 +44,7 @@ Waits for all promises to resolve from a FixedArray.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[Awaited](arkts-na-awaited-t.md)&lt;U&gt;&gt;&gt; | Promise used to return Array&lt;Awaited<U>&gt;&lt;U&gt;>. |
+| Promise&lt;Array&lt;[Awaited](arkts-na-awaited-t.md)&lt;U&gt;&gt;&gt; | Promise used to return Array&lt;Awaited<U>&gt;. |
 
 ## all
 
@@ -76,7 +76,7 @@ Waits for all promises to resolve from an Iterable.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[Awaited](arkts-na-awaited-t.md)&lt;U&gt;&gt;&gt; | Promise used to return Array&lt;Awaited<U>&gt;&lt;U&gt;>. |
+| Promise&lt;Array&lt;[Awaited](arkts-na-awaited-t.md)&lt;U&gt;&gt;&gt; | Promise used to return Array&lt;Awaited<U>&gt;. |
 
 ## allSettled
 
@@ -109,7 +109,7 @@ Waits for all promises to settle from a FixedArray.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[PromiseSettledResult](arkts-na-promisesettledresult-t.md)&lt;[Awaited](arkts-na-awaited-t.md)&lt;U&gt;&gt;[]&gt; | Promise used to return PromiseSettledResult&lt;Awaited<U>&gt;&lt;U&gt;>[]. |
+| Promise&lt;[PromiseSettledResult](arkts-na-promisesettledresult-t.md)&lt;[Awaited](arkts-na-awaited-t.md)&lt;U&gt;&gt;[]&gt; | Promise used to return PromiseSettledResult&lt;Awaited<U>&gt;[]. |
 
 ## allSettled
 
@@ -141,7 +141,7 @@ Waits for all promises to settle from an Iterable.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[PromiseSettledResult](arkts-na-promisesettledresult-t.md)&lt;[Awaited](arkts-na-awaited-t.md)&lt;U&gt;&gt;[]&gt; | Promise used to return PromiseSettledResult&lt;Awaited<U>&gt;&lt;U&gt;>[]. |
+| Promise&lt;[PromiseSettledResult](arkts-na-promisesettledresult-t.md)&lt;[Awaited](arkts-na-awaited-t.md)&lt;U&gt;&gt;[]&gt; | Promise used to return PromiseSettledResult&lt;Awaited<U>&gt;[]. |
 
 ## any
 

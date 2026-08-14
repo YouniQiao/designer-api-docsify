@@ -15,7 +15,7 @@ Describes the information of an SEI message.
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'media';
 ```
 
 ## payload

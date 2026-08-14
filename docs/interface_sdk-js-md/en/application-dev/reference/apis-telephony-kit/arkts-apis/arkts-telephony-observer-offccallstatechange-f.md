@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { observer } from '@kit.TelephonyKit';
+import { observer } from 'observer';
 ```
 
 ## offCCallStateChange
@@ -30,7 +30,7 @@ Cancels the listening on the carrier call status and obtaining of the call numbe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CCallStateInfo](arkts-telephony-observer-ccallstateinfo-i.md)&gt; | No | Callback function used to return the call status information object. &lt;br&gt;The application can obtain CCallState. &lt;br&gt; |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CCallStateInfo](arkts-telephony-observer-ccallstateinfo-i.md)&gt; | No | Callback function used to return the call status information object. <br>The application can obtain CCallState. <br> |
 
 **Error codes:**
 

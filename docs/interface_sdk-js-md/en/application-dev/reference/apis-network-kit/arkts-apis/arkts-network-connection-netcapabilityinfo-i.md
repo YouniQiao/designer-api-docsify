@@ -15,7 +15,7 @@ Receive information about changes in network capabilities.
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'connection';
 ```
 
 ## netCap

@@ -27,7 +27,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { identifySensitiveContent } from '@kit.DataProtectionKit';
+import { identifySensitiveContent } from 'identifySensitiveContent';
 ```
 
 ## Summary

@@ -46,7 +46,7 @@ dpiFollowStrategy?: SecurityDpiFollowStrategy
 isTransferringCaller?: boolean
 ```
 
-在使用SecurityUIExtensionComponent嵌套时，设置当前组件是否转发上一级调用方的Caller信息（即发起调用的Ability身份信息），用于支持多级嵌套场景下的调用链传递。&lt;br/&gt; true：转发上一级的Caller信息；false：不转发上一级的Caller信息。&lt;br/&gt; 默认值：**false** 默认值：**false**
+在使用SecurityUIExtensionComponent嵌套时，设置当前组件是否转发上一级调用方的Caller信息（即发起调用的Ability身份信息），用于支持多级嵌套场景下的调用链传递。<br/> true：转发上一级的Caller信息；false：不转发上一级的Caller信息。<br/> 默认值：**false** 默认值：**false**
 
 **类型：** boolean
 

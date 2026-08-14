@@ -1,10 +1,8 @@
 # ProcessInformation
 
-运行进程信息，可以通过appManager的 [getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getRunningProcessInformation)来获取运行进程信息 。
+**起始版本：** -1
 
-**起始版本：** 23
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为-1。
 
 **废弃版本：** -1
 
@@ -18,7 +16,7 @@
 appCloneIndex?: int
 ```
 
-分身应用索引。
+分身应用索引，用于标识不同的分身应用实例。0表示主应用，正整数表示对应的分身实例索引。
 
 **类型：** int
 
@@ -43,8 +41,6 @@ bundleNames: Array<string>
 进程中所有运行的Bundle名称。
 
 **类型：** Array&lt;string&gt;
-
-**默认值：** an array of the bundleNames running in the process
 
 **起始版本：** 23
 
@@ -114,8 +110,6 @@ pid: int
 
 **类型：** int
 
-**默认值：** process id
-
 **起始版本：** 23
 
 **ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为23。
@@ -137,8 +131,6 @@ processName: string
 进程名称。
 
 **类型：** string
-
-**默认值：** the name of the process
 
 **起始版本：** 23
 
@@ -183,8 +175,6 @@ uid: int
 应用程序的UID。
 
 **类型：** int
-
-**默认值：** user id
 
 **起始版本：** 23
 

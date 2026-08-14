@@ -17,7 +17,7 @@ class of static subscriber extension context.
 ## Modules to Import
 
 ```TypeScript
-import { FenceExtensionContext } from '@kit.LocationKit';
+import { FenceExtensionContext } from 'FenceExtensionContext';
 ```
 
 ## startAbility

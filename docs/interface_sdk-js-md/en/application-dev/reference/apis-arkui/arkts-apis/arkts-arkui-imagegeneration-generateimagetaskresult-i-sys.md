@@ -17,7 +17,7 @@ Configuration result for AI-generated image tasks.
 ## Modules to Import
 
 ```TypeScript
-import { imageGeneration } from '@kit.ArkUI';
+import { imageGeneration } from 'imageGeneration';
 ```
 
 ## imageData

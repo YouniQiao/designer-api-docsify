@@ -325,7 +325,7 @@ setAudioSeparationEffectEnabled(enabled: boolean, uid: int, streamId?: long): Pr
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | enabled | boolean | 是 | 所需的效果状态，true表示启用，false表示禁用 |
-| uid | int | 是 | 要添加效果的目标应用程序进程的uid。 &lt;br&gt;取值限定为整数。 |
+| uid | int | 是 | 要添加效果的目标应用程序进程的uid。 <br>取值限定为整数。 |
 | streamId | long | 否 | 要添加效果的目标音频播放流的ID，播放应用程序 可以使用[getAudioStreamId](arkts-audio-audio-audiorenderer-i.md#getAudioStreamId)来获取 |
 
 **返回值：**
@@ -386,7 +386,7 @@ setAudioSeparationEffectVolume(type: AudioSeparationVolumeType, volume: double):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | [AudioSeparationVolumeType](arkts-audio-audio-audioseparationvolumetype-e-sys.md) | 是 | 要设置音量的类型 |
-| volume | double | 是 | 目标卷值。 &lt;br&gt;取值范围：[0,1]。 &lt;br&gt;Value range: [0,1]. |
+| volume | double | 是 | 目标卷值。 <br>取值范围：[0,1]。 <br>Value range: [0,1]. |
 
 **返回值：**
 

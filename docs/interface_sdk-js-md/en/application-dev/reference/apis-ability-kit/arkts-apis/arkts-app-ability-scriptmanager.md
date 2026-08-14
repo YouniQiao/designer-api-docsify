@@ -17,7 +17,7 @@ Namespace for managing and organizing script information.
 ## Modules to Import
 
 ```TypeScript
-import { scriptManager } from '@kit.AbilityKit';
+import { scriptManager } from 'scriptManager';
 ```
 
 ## Summary

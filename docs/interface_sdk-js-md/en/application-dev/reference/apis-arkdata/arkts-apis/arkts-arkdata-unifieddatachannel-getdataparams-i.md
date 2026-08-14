@@ -15,7 +15,7 @@ Represents the parameters for obtaining data from UDMF, including the destinatio
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from '@kit.ArkData';
+import { unifiedDataChannel } from 'unifiedDataChannel';
 ```
 
 ## acceptableInfo

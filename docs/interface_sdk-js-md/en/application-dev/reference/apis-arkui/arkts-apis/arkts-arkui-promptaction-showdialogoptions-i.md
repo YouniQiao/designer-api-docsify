@@ -15,7 +15,9 @@ Describes the options for showing the dialog box.
 ## Modules to Import
 
 ```TypeScript
-import { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
+import { LevelMode } from 'LevelMode';
+import { ImmersiveMode } from 'ImmersiveMode';
+import { LevelOrder } from 'LevelOrder';
 ```
 
 ## alignment
@@ -24,7 +26,7 @@ import { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 alignment?: DialogAlignment
 ```
 
-Alignment mode of the dialog box in the vertical direction.&lt;br&gt; Default value: **DialogAlignment.Default**&lt;br&gt; **NOTE：**&lt;br&gt; If **showInSubWindow** is set to **true** in **UIExtension**, the dialog box is aligned with the host window based on **UIExtension**.
+Alignment mode of the dialog box in the vertical direction.<br> Default value: **DialogAlignment.Default**<br> **NOTE：**<br> If **showInSubWindow** is set to **true** in **UIExtension**, the dialog box is aligned with the host window based on **UIExtension**.
 
 **Type:** DialogAlignment
 
@@ -48,7 +50,7 @@ Alignment mode of the dialog box in the vertical direction.&lt;br&gt; Default va
 backgroundBlurStyle?: BlurStyle
 ```
 
-Background blur style of the dialog box. &lt;br&gt;Default value: **BlurStyle.COMPONENT_ULTRA_THICK** &lt;br&gt;**NOTE：**&lt;br&gt;Setting this parameter to **BlurStyle.NONE** disables the background blur. When **backgroundBlurStyle** is set to a value other than **NONE**, do not set **backgroundColor**. If you do, the color display may not produce the expected visual effect.
+Background blur style of the dialog box. <br>Default value: **BlurStyle.COMPONENT_ULTRA_THICK** <br>**NOTE：**<br>Setting this parameter to **BlurStyle.NONE** disables the background blur. When **backgroundBlurStyle** is set to a value other than **NONE**, do not set **backgroundColor**. If you do, the color display may not produce the expected visual effect.
 
 **Type:** BlurStyle
 
@@ -98,7 +100,7 @@ Options for customizing the background blur style. For details about the default
 backgroundColor?: ResourceColor
 ```
 
-Background color of the dialog box. &lt;br&gt;Default value: **Color.Transparent**. &lt;br&gt;**NOTE：**&lt;br&gt;The background color will be visually combined with the blur effect when both properties are set. If the resulting effect does not match your design requirements, you can disable the blur effect entirely by explicitly setting the **backgroundBlurStyle** property to **BlurStyle.NONE**.
+Background color of the dialog box. <br>Default value: **Color.Transparent**. <br>**NOTE：**<br>The background color will be visually combined with the blur effect when both properties are set. If the resulting effect does not match your design requirements, you can disable the blur effect entirely by explicitly setting the **backgroundBlurStyle** property to **BlurStyle.NONE**.
 
 **Type:** ResourceColor
 
@@ -170,7 +172,7 @@ Array of buttons in the dialog box. The array structure is {text:'button',&nbsp;
 enableHoverMode?: boolean
 ```
 
-Whether to respond when the device is in semi-folded mode. The value **true** means to respond when the device is in semi-folded mode. &lt;br&gt;Default value: **false**, meaning not to respond when the device is in semi-folded mode. &lt;br&gt;**NOTE：**&lt;br&gt;For a PC or 2-in-1 device, the prompt is displayed on the upper half of the screen by default when **enableHoverMode** is set to **true**. You can set **hoverModeArea** to display the prompt on the lower half of the screen. For other devices, the prompt is displayed on the lower half of the screen by default when **enableHoverMode** is set to **true**. You can set **hoverModeArea** to display the prompt on the upper half of the screen.
+Whether to respond when the device is in semi-folded mode. The value **true** means to respond when the device is in semi-folded mode. <br>Default value: **false**, meaning not to respond when the device is in semi-folded mode. <br>**NOTE：**<br>For a PC or 2-in-1 device, the prompt is displayed on the upper half of the screen by default when **enableHoverMode** is set to **true**. You can set **hoverModeArea** to display the prompt on the lower half of the screen. For other devices, the prompt is displayed on the lower half of the screen by default when **enableHoverMode** is set to **true**. You can set **hoverModeArea** to display the prompt on the upper half of the screen.
 
 **Type:** boolean
 
@@ -196,7 +198,7 @@ Whether to respond when the device is in semi-folded mode. The value **true** me
 hoverModeArea?: HoverModeAreaType
 ```
 
-Default display area of the dialog box in semi-folded mode. &lt;br&gt;Default value: **HoverModeAreaType.BOTTOM_SCREEN**
+Default display area of the dialog box in semi-folded mode. <br>Default value: **HoverModeAreaType.BOTTOM_SCREEN**
 
 **Type:** HoverModeAreaType
 
@@ -222,7 +224,7 @@ Default display area of the dialog box in semi-folded mode. &lt;br&gt;Default va
 immersiveMode?: ImmersiveMode
 ```
 
-Overlay effect for the page-level dialog box. &lt;br&gt;**NOTE：**&lt;br&gt;- Default value: **ImmersiveMode.DEFAULT** &lt;br&gt;- This parameter takes effect only when **levelMode** is set to **LevelMode.EMBEDDED**.
+Overlay effect for the page-level dialog box. <br>**NOTE：**<br>- Default value: **ImmersiveMode.DEFAULT** <br>- This parameter takes effect only when **levelMode** is set to **LevelMode.EMBEDDED**.
 
 **Type:** [ImmersiveMode](arkts-arkui-promptaction-immersivemode-e.md)
 
@@ -248,7 +250,7 @@ Overlay effect for the page-level dialog box. &lt;br&gt;**NOTE：**&lt;br&gt;- D
 isModal?: boolean
 ```
 
-Whether the dialog box is a modal, which has a mask applied and does not allow for interaction with other components around the dialog box. &lt;br&gt;**true**: The dialog box is a modal. &lt;br&gt;**false**: The dialog box is not a modal. &lt;br&gt;Default value: **true**.
+Whether the dialog box is a modal, which has a mask applied and does not allow for interaction with other components around the dialog box. <br>**true**: The dialog box is a modal. <br>**false**: The dialog box is not a modal. <br>Default value: **true**.
 
 **Type:** boolean
 
@@ -274,7 +276,7 @@ Whether the dialog box is a modal, which has a mask applied and does not allow f
 levelMode?: LevelMode
 ```
 
-Display level of the dialog box. &lt;br&gt;**NOTE：**&lt;br&gt;- Default value: **LevelMode.OVERLAY** &lt;br&gt;- This parameter takes effect only when **showInSubWindow** is set to **false**.
+Display level of the dialog box. <br>**NOTE：**<br>- Default value: **LevelMode.OVERLAY** <br>- This parameter takes effect only when **showInSubWindow** is set to **false**.
 
 **Type:** [LevelMode](arkts-arkui-promptaction-levelmode-e.md)
 
@@ -300,7 +302,7 @@ Display level of the dialog box. &lt;br&gt;**NOTE：**&lt;br&gt;- Default value:
 levelOrder?: LevelOrder
 ```
 
-Display order of the dialog box. &lt;br&gt;**NOTE：**&lt;br&gt;- Default value: **LevelOrder.clamp(0)** &lt;br&gt;- Dynamic updating is not supported.
+Display order of the dialog box. <br>**NOTE：**<br>- Default value: **LevelOrder.clamp(0)** <br>- Dynamic updating is not supported.
 
 **Type:** [LevelOrder](arkts-arkui-promptaction-levelorder-c.md)
 
@@ -326,7 +328,7 @@ Display order of the dialog box. &lt;br&gt;**NOTE：**&lt;br&gt;- Default value:
 levelUniqueId?: number
 ```
 
-Unique ID of the node under the display level for the page-level dialog box. &lt;br&gt;Value range: a number no less than 0&lt;br&gt;**NOTE：**&lt;br&gt;- This parameter takes effect only when **levelMode** is set to **LevelMode.EMBEDDED**.
+Unique ID of the node under the display level for the page-level dialog box. <br>Value range: a number no less than 0<br>**NOTE：**<br>- This parameter takes effect only when **levelMode** is set to **LevelMode.EMBEDDED**.
 
 **Type:** number
 
@@ -350,7 +352,7 @@ Unique ID of the node under the display level for the page-level dialog box. &lt
 maskRect?: Rectangle
 ```
 
-Mask area of the dialog box. Events within the mask area are blocked, while events outside the mask area are transmitted.&lt;br&gt; Default value: **{ x: 0, y: 0, width: '100%', height: '100%' }**&lt;br&gt; **NOTE：**&lt;br&gt; **maskRect** does not take effect when **showInSubWindow** is set to **true**.&lt;br&gt; If only some properties in [Rectangle](../arkui-ts/ts-methods-alert-dialog-box.md#rectangle8) are set, the unset properties default to 0.
+Mask area of the dialog box. Events within the mask area are blocked, while events outside the mask area are transmitted.<br> Default value: **{ x: 0, y: 0, width: '100%', height: '100%' }**<br> **NOTE：**<br> **maskRect** does not take effect when **showInSubWindow** is set to **true**.<br> If only some properties in [Rectangle](../arkui-ts/ts-methods-alert-dialog-box.md#rectangle8) are set, the unset properties default to 0.
 
 **Type:** Rectangle
 
@@ -374,7 +376,7 @@ Mask area of the dialog box. Events within the mask area are blocked, while even
 message?: string | Resource
 ```
 
-Text body.&lt;br&gt;Default value: **undefined**, which indicates that no content is displayed by default.
+Text body.<br>Default value: **undefined**, which indicates that no content is displayed by default.
 
 **Type:** string \| Resource
 
@@ -396,7 +398,7 @@ Text body.&lt;br&gt;Default value: **undefined**, which indicates that no conten
 offset?: Offset
 ```
 
-Offset of the dialog box relative to the alignment position.&lt;br&gt; Default value: **{&nbsp;dx:&nbsp;0&nbsp;,&nbsp;dy:&nbsp;0&nbsp;}**
+Offset of the dialog box relative to the alignment position.<br> Default value: **{&nbsp;dx:&nbsp;0&nbsp;,&nbsp;dy:&nbsp;0&nbsp;}**
 
 **Type:** Offset
 
@@ -420,7 +422,7 @@ Offset of the dialog box relative to the alignment position.&lt;br&gt; Default v
 onDidAppear?: Callback<void>
 ```
 
-Callback invoked after the dialog box appears. &lt;br&gt;**NOTE：**&lt;br&gt;1. The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDisappear > onDidDisappear. &lt;br&gt;2. You can set the callback event for changing the dialog box display effect in **onDidAppear**. The settings take effect next time the dialog box appears. &lt;br&gt;3. When a dialog box is dismissed immediately after being shown, **onWillDisappear** may be triggered before **onDidAppear**. &lt;br&gt;4. If the dialog box is dismissed before its appearance animation is finished, the animation will be interrupted, and **onDidAppear** will not be invoked.
+Callback invoked after the dialog box appears. <br>**NOTE：**<br>1. The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDisappear > onDidDisappear. <br>2. You can set the callback event for changing the dialog box display effect in **onDidAppear**. The settings take effect next time the dialog box appears. <br>3. When a dialog box is dismissed immediately after being shown, **onWillDisappear** may be triggered before **onDidAppear**. <br>4. If the dialog box is dismissed before its appearance animation is finished, the animation will be interrupted, and **onDidAppear** will not be invoked.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
@@ -444,7 +446,7 @@ Callback invoked after the dialog box appears. &lt;br&gt;**NOTE：**&lt;br&gt;1.
 onDidDisappear?: Callback<void>
 ```
 
-Callback invoked after the dialog box disappears. &lt;br&gt;**NOTE：**&lt;br&gt;1. The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDisappear > onDidDisappear.
+Callback invoked after the dialog box disappears. <br>**NOTE：**<br>1. The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDisappear > onDidDisappear.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
@@ -468,7 +470,7 @@ Callback invoked after the dialog box disappears. &lt;br&gt;**NOTE：**&lt;br&gt
 onWillAppear?: Callback<void>
 ```
 
-Callback invoked before the dialog box appearance animation. &lt;br&gt;**NOTE：**&lt;br&gt;1. The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDisappear > onDidDisappear. &lt;br&gt;2. You can set the callback event for changing the dialog box display effect in **onWillAppear**. The settings take effect next time the dialog box appears.
+Callback invoked before the dialog box appearance animation. <br>**NOTE：**<br>1. The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDisappear > onDidDisappear. <br>2. You can set the callback event for changing the dialog box display effect in **onWillAppear**. The settings take effect next time the dialog box appears.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
@@ -492,7 +494,7 @@ Callback invoked before the dialog box appearance animation. &lt;br&gt;**NOTE：
 onWillDisappear?: Callback<void>
 ```
 
-Callback invoked before the dialog box disappearance animation. &lt;br&gt;**NOTE：**&lt;br&gt;1. The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDisappear > onDidDisappear.
+Callback invoked before the dialog box disappearance animation. <br>**NOTE：**<br>1. The normal timing sequence is as follows: onWillAppear > onDidAppear > onWillDisappear > onDidDisappear.
 
 **Type:** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt;
 
@@ -516,7 +518,7 @@ Callback invoked before the dialog box disappearance animation. &lt;br&gt;**NOTE
 shadow?: ShadowOptions | ShadowStyle
 ```
 
-Shadow of the dialog box. &lt;br&gt; Default value on 2-in-1 devices: **ShadowStyle.OUTER_FLOATING_MD** when the dialog box is focused and **ShadowStyle.OUTER_FLOATING_SM** otherwise On other devices, the dialog box has no shadow by default.
+Shadow of the dialog box. <br> Default value on 2-in-1 devices: **ShadowStyle.OUTER_FLOATING_MD** when the dialog box is focused and **ShadowStyle.OUTER_FLOATING_SM** otherwise On other devices, the dialog box has no shadow by default.
 
 **Type:** ShadowOptions \| ShadowStyle
 
@@ -540,7 +542,7 @@ Shadow of the dialog box. &lt;br&gt; Default value on 2-in-1 devices: **ShadowSt
 showInSubWindow?: boolean
 ```
 
-Whether to show the dialog box in a subwindow when the dialog box needs to be displayed outside the main window. &lt;br&gt;**true**: The dialog box is shown in a subwindow. &lt;br&gt;**false** (default): The dialog box is displayed within the application, not in a separate subwindow. &lt;br&gt;Note: A dialog box whose **showInSubWindow** attribute is **true** cannot trigger the display of another dialog box whose **showInSubWindow** attribute is also **true**.
+Whether to show the dialog box in a subwindow when the dialog box needs to be displayed outside the main window. <br>**true**: The dialog box is shown in a subwindow. <br>**false** (default): The dialog box is displayed within the application, not in a separate subwindow. <br>Note: A dialog box whose **showInSubWindow** attribute is **true** cannot trigger the display of another dialog box whose **showInSubWindow** attribute is also **true**.
 
 **Type:** boolean
 
@@ -590,7 +592,7 @@ System material of the dialog box. Different materials have different effects an
 title?: string | Resource
 ```
 
-Title of the dialog box.&lt;br&gt;Default value: **undefined**, which indicates that no title is not displayed by default.
+Title of the dialog box.<br>Default value: **undefined**, which indicates that no title is not displayed by default.
 
 **Type:** string \| Resource
 

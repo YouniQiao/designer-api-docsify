@@ -15,7 +15,7 @@ Range of selected text.
 ## Modules to Import
 
 ```TypeScript
-import { inputMethod } from '@kit.IMEKit';
+import { inputMethod } from 'inputMethod';
 ```
 
 ## end

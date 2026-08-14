@@ -66,5 +66,5 @@ setStyledString(styledString: StyledString): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| styledString | StyledString | 是 | 属性字符串。 &lt;br&gt;**说明：** &lt;br&gt;StyledString的子类MutableStyledString也可以作为入参值。 |
+| styledString | StyledString | 是 | 属性字符串。 <br>**说明：** <br>StyledString的子类MutableStyledString也可以作为入参值。 |
 

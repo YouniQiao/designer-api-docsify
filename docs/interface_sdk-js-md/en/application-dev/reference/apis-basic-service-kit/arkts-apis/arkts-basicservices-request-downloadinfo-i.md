@@ -15,7 +15,7 @@ Defines the download task information, which is the callback parameter of the [g
 ## Modules to Import
 
 ```TypeScript
-import { request } from '@kit.BasicServicesKit';
+import { request } from 'request';
 ```
 
 ## description

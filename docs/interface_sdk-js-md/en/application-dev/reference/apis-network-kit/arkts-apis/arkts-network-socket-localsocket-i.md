@@ -15,7 +15,7 @@ Defines a LocalSocket connection.
 ## Modules to Import
 
 ```TypeScript
-import { socket } from '@kit.NetworkKit';
+import { socket } from 'socket';
 ```
 
 ## bind

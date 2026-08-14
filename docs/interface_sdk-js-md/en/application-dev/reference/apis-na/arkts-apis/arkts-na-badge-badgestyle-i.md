@@ -182,7 +182,7 @@ Text size. Default value: 10vp.
 fontWeight?: int | FontWeight | ResourceStr
 ```
 
-Define the font weight of the badge. Default value: FontWeight.Normal. &lt;br&gt;Value range of the number type: [100, 900], with an interval of 100. A larger value indicates a thicker font. If the number type is out of the value range, the default value 400 is used. The value of the string type must be a string of values of the number type, for example, 400. The values of bold, bolter, lighter, regular, and medium correspond to the corresponding enumerated values in FontWeight, respectively.
+Define the font weight of the badge. Default value: FontWeight.Normal. <br>Value range of the number type: [100, 900], with an interval of 100. A larger value indicates a thicker font. If the number type is out of the value range, the default value 400 is used. The value of the string type must be a string of values of the number type, for example, 400. The values of bold, bolter, lighter, regular, and medium correspond to the corresponding enumerated values in FontWeight, respectively.
 
 **Type:** int \| [FontWeight](../../apis-arkui/arkts-apis/arkts-arkui-fontweight-e.md) \| [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md)
 

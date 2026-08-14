@@ -1,6 +1,6 @@
 # WebHttpCookie
 
-Defines the Web's HTTPCookie. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; The maximum length allowed for each attribute value in a cookie string is 1024. &lt;/p&gt;
+Defines the Web's HTTPCookie. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<br> The maximum length allowed for each attribute value in a cookie string is 1024. &lt;/p&gt;
 
 **起始版本：** 23
 
@@ -160,7 +160,7 @@ samesitePolicy: WebHttpCookieSameSitePolicy
 
 获取当前cookie的samesite策略
 
-**类型：** [WebHttpCookieSameSitePolicy](../../apis-na/arkts-apis/arkts-na-webview-webhttpcookiesamesitepolicy-e.md)
+**类型：** [WebHttpCookieSameSitePolicy](arkts-arkweb-webview-webhttpcookiesamesitepolicy-e.md)
 
 **起始版本：** 23
 

@@ -70,7 +70,7 @@ dpiFollowStrategy?: DpiFollowStrategy
 isTransferringCaller?: boolean
 ```
 
-在使用UIExtensionComponent嵌套时，设置当前UIExtensionComponent是否转发上一级的Caller信息。&lt;br/&gt; true表示转发上一级的Caller信息，false表示不转发上一级的Caller信息。&lt;br/&gt; 默认值：false
+在使用UIExtensionComponent嵌套时，设置当前UIExtensionComponent是否转发上一级的Caller信息。<br/> true表示转发上一级的Caller信息，false表示不转发上一级的Caller信息。<br/> 默认值：false
 
 **类型：** boolean
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { stationary } from '@kit.MultimodalAwarenessKit';
+import { stationary } from 'stationary';
 ```
 
 ## on_ActivityType

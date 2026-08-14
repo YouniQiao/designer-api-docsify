@@ -17,7 +17,7 @@ Describes the parameters of check notifications.
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'notificationManager';
 ```
 
 ## bundleName

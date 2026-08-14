@@ -25,7 +25,7 @@ function isAbilityEnabled(info: AbilityInfo, appIndex: int): Promise<boolean>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | info | AbilityInfo | 是 | 表示关于检查ability的信息。 |
-| appIndex | int | 是 | 表示分身应用的索引。 &lt;br&gt; appIndex为0时，表示获取主应用组件的禁用或使能状态。appIndex大于0时，表示获取指定分身应用组件的禁用或使能状态。 |
+| appIndex | int | 是 | 表示分身应用的索引。 <br> appIndex为0时，表示获取主应用组件的禁用或使能状态。appIndex大于0时，表示获取指定分身应用组件的禁用或使能状态。 |
 
 **返回值：**
 

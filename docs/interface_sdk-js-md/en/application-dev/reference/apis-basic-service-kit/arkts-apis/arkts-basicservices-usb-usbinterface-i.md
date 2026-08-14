@@ -17,7 +17,7 @@ Represents a USB interface. One [USBConfig](arkts-basicservices-usb-usbconfig-i.
 ## Modules to Import
 
 ```TypeScript
-import { usb } from '@kit.BasicServicesKit';
+import { usb } from 'usb';
 ```
 
 ## alternateSetting

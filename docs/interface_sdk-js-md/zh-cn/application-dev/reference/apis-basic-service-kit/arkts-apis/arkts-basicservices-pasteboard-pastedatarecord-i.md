@@ -314,7 +314,7 @@ console.info(`Succeeded in converting to text. Text: ${text}`);
 data: Record<string, ArrayBuffer>
 ```
 
-自定义数据内容。
+自定义数据内容。对此属性的修改无效。
 
 **类型：** Record&lt;string, ArrayBuffer&gt;
 
@@ -336,7 +336,7 @@ data: Record<string, ArrayBuffer>
 htmlText: string
 ```
 
-HTML内容，需符合标准HTML格式。
+HTML内容，需符合标准HTML格式。 对此属性的修改无效，如需刷新属性值，请使用[addEntry](#addEntry)。
 
 **类型：** string
 
@@ -358,7 +358,7 @@ HTML内容，需符合标准HTML格式。
 mimeType: string
 ```
 
-默认数据类型。
+默认数据类型。对此属性的修改无效。
 
 **类型：** string
 
@@ -380,7 +380,7 @@ mimeType: string
 pixelMap: image.PixelMap
 ```
 
-PixelMap内容。
+PixelMap内容。对此属性的修改无效，如需刷新属性值，请使用[addEntry](#addEntry)。
 
 **类型：** image.PixelMap
 
@@ -402,7 +402,7 @@ PixelMap内容。
 plainText: string
 ```
 
-纯文本内容。
+纯文本内容。对此属性的修改无效，如需刷新属性值，请使用[addEntry](#addEntry)。
 
 **类型：** string
 
@@ -424,7 +424,7 @@ plainText: string
 uri: string
 ```
 
-URI内容，需符合标准URI格式。
+URI内容，需符合标准URI格式。对此属性的修改无效，如需刷新属性值，请使用[addEntry](#addEntry)。
 
 **类型：** string
 
@@ -446,7 +446,7 @@ URI内容，需符合标准URI格式。
 want: Want
 ```
 
-Want内容。
+Want内容。对此属性的修改无效，如需刷新属性值，请使用[addEntry](#addEntry)。
 
 **类型：** [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md)
 

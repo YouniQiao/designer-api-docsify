@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { featureAbility } from '@kit.AbilityKit';
+import { featureAbility } from 'featureAbility';
 ```
 
 ## hasWindowFocus
@@ -30,7 +30,7 @@ Checks whether the main window of this ability has the focus. This API uses an a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result.&lt;br&gt;If the main window has the focus, **true** is returned. Otherwise, **false** is returned. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result.<br>If the main window has the focus, **true** is returned. Otherwise, **false** is returned. |
 
 ## Examples
 

@@ -15,7 +15,7 @@ Describes the supplementary information captured in **BusinessError** in the cat
 ## Modules to Import
 
 ```TypeScript
-import { taskpool } from '@kit.ArkTS';
+import { taskpool } from 'taskpool';
 ```
 
 ## error

@@ -1,6 +1,6 @@
 # Parameter (System API)
 
-Sets the parameter for a specific operation when the accessibility node element executes this operation. For details, see [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#AccessibilityAction-(System-API)) (executable actions for accessibility node elements).
+Provides parameter values for specific settings when an accessibility node element performs a specific action. Different action types require different parameter fields. For details about the mapping between action types and parameter fields, see [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#AccessibilityAction-(System-API)) (actions that can be performed by an accessibility node element).
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ Sets the parameter for a specific operation when the accessibility node element 
 accessibilityFocusScene?: AccessibilityFocusScene
 ```
 
-Indicates the scene for AccessibilityAction.ACCESSIBILITY_FOCUS.
+Configured when executing [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#AccessibilityAction-(System-API)).ACCESSIBILITY_FOCUS. Accessibility focus scenario.
 
 **Type:** [AccessibilityFocusScene](arkts-accessibility-accessibility-accessibilityfocusscene-e-sys.md)
 
@@ -44,7 +44,7 @@ Indicates the scene for AccessibilityAction.ACCESSIBILITY_FOCUS.
 customAction?: string
 ```
 
-Indicates the action for AccessibilityAction.EXECUTE_CUSTOM_ACTION.
+Configured when executing [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#AccessibilityAction-(System-API)). EXECUTE_CUSTOM_ACTION. Name of the custom action.
 
 **Type:** string
 
@@ -68,7 +68,7 @@ Indicates the action for AccessibilityAction.EXECUTE_CUSTOM_ACTION.
 injectActionType?: InjectActionType
 ```
 
-Injection action.
+Sets the injected action type. Configured when executing [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#AccessibilityAction-(System-API)).INJECT_ACTION.
 
 **Type:** [InjectActionType](arkts-accessibility-accessibility-injectactiontype-e-sys.md)
 
@@ -92,7 +92,7 @@ Injection action.
 offset?: string
 ```
 
-Cursor offset, for example, **'1'**.
+Configured when executing [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#AccessibilityAction-(System-API)).SET_CURSOR_POSITION. Character offset for setting the cursor, for example, '1'.
 
 **Type:** string
 
@@ -114,7 +114,7 @@ Cursor offset, for example, **'1'**.
 scrollType?: string
 ```
 
-Scroll type of the component. The options are **'fullScreen'** and **'halfScreen'**.
+Configured when executing [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#AccessibilityAction-(System-API)).SCROLL_FORWARD or SCROLL_BACKWARD. Component scroll type. The value 'fullScreen' means full-screen scrolling, and 'halfScreen' means half-screen scrolling.
 
 **Type:** string
 
@@ -136,7 +136,7 @@ Scroll type of the component. The options are **'fullScreen'** and **'halfScreen
 selectTextBegin?: string
 ```
 
-Start coordinate of the selected text in the component, for example, **'2'**.
+Configured when executing [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#AccessibilityAction-(System-API)).SET_SELECTION. Start coordinate for selecting text within the component, for example, '2'. Must be set together with selectTextEnd and selectTextInForWard.
 
 **Type:** string
 
@@ -158,7 +158,7 @@ Start coordinate of the selected text in the component, for example, **'2'**.
 selectTextEnd?: string
 ```
 
-End coordinate of the selected text in the component, for example, **'8'**.
+Configured when executing [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#AccessibilityAction-(System-API)).SET_SELECTION. End coordinate for selecting text within the component, for example, '8'. Must be set together with selectTextBegin and selectTextInForWard.
 
 **Type:** string
 
@@ -180,7 +180,7 @@ End coordinate of the selected text in the component, for example, **'8'**.
 selectTextInForWard?: boolean
 ```
 
-Whether to forward select the text within the component. The value **true** indicates to forward select the text, and the value **false** indicates the opposite.
+Configured when executing [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#AccessibilityAction-(System-API)).SET_SELECTION. Whether to select forward when selecting text within the component. The value true means forward selection, and false means backward selection. Must be set together with selectTextBegin and selectTextEnd.
 
 **Type:** boolean
 
@@ -202,7 +202,7 @@ Whether to forward select the text within the component. The value **true** indi
 setText?: string
 ```
 
-Text content of the component.
+Configured when executing [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#AccessibilityAction-(System-API)).SET_TEXT. Text content to set for the component.
 
 **Type:** string
 
@@ -224,7 +224,7 @@ Text content of the component.
 spanId?: string
 ```
 
-ID of the hyperlink wrapped by the span tag.
+Configured when executing [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#AccessibilityAction-(System-API)).SPAN_CLICK. Text ID for tapping the hyperlink text.
 
 **Type:** string
 

@@ -18,7 +18,7 @@ Sets the distance between the child component and the upper and lower dividers. 
 endMargin?: Dimension
 ```
 
-Distance between the child component and the lower divider.&lt;br&gt;Default value: **0vp**&lt;br&gt;Invalid values are treated as the default value. In this case, the attribute value obtained by the [getInspectorByKey()](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-component-id.md#getinspectorbykey9)
+Distance between the child component and the lower divider.<br>Default value: **0vp**<br>Invalid values are treated as the default value. In this case, the attribute value obtained by the [getInspectorByKey()](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-component-id.md#getinspectorbykey9)
 
 **Type:** Dimension
 
@@ -44,7 +44,7 @@ Distance between the child component and the lower divider.&lt;br&gt;Default val
 startMargin?: Dimension
 ```
 
-Distance between the child component and the upper divider.&lt;br&gt;Default value: **0vp**&lt;br&gt;Invalid values are treated as the default value. In this case, the attribute value obtained by the [getInspectorByKey()](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-component-id.md#getinspectorbykey9)
+Distance between the child component and the upper divider.<br>Default value: **0vp**<br>Invalid values are treated as the default value. In this case, the attribute value obtained by the [getInspectorByKey()](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-component-id.md#getinspectorbykey9)
 
 **Type:** Dimension
 

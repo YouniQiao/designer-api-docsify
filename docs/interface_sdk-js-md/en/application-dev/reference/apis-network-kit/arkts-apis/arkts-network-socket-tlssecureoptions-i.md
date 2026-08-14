@@ -15,7 +15,7 @@ Defines TLS security options. The CA certificate is mandatory, and other paramet
 ## Modules to Import
 
 ```TypeScript
-import { socket } from '@kit.NetworkKit';
+import { socket } from 'socket';
 ```
 
 ## ca

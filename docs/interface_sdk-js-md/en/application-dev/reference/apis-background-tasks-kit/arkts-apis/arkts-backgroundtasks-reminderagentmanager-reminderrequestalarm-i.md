@@ -17,7 +17,7 @@ ReminderRequestAlarm extends ReminderRequest Defines a reminder for an alarm.
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgentManager } from '@kit.BackgroundTasksKit';
+import { reminderAgentManager } from 'reminderAgentManager';
 ```
 
 ## daysOfWeek

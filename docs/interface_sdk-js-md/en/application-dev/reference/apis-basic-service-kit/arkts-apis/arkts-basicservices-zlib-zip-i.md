@@ -15,7 +15,7 @@ Defines the **Zip** instance. It provides APIs to zip or unzip data in Zlib, Def
 ## Modules to Import
 
 ```TypeScript
-import { zlib } from '@kit.BasicServicesKit';
+import { zlib } from 'zlib';
 ```
 
 ## compress
@@ -652,7 +652,7 @@ Initializes a compression stream with the specified compression level, compressi
 | strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#ZStream). |
 | level | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | Yes | For details, see [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md#CompressLevel). |
 | method | [CompressMethod](arkts-basicservices-zlib-compressmethod-e.md) | Yes | For details, see [CompressMethod](arkts-basicservices-zlib-compressmethod-e.md#CompressMethod). |
-| windowBits | int | Yes | Memory window size. The value is restricted in certain range based on the data formats. The options are as follows:&lt;br&gt;Zlib: [1, 15]&lt;br&gt;Gzip: (15, +∞)&lt;br&gt;Raw Deflate: [-15, -1] |
+| windowBits | int | Yes | Memory window size. The value is restricted in certain range based on the data formats. The options are as follows:<br>Zlib: [1, 15]<br>Gzip: (15, +∞)<br>Raw Deflate: [-15, -1] |
 | memLevel | [MemLevel](arkts-basicservices-zlib-memlevel-e.md) | Yes | For details, see [MemLevel](arkts-basicservices-zlib-memlevel-e.md#MemLevel). |
 | strategy | [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md) | Yes | For details, see [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md#CompressStrategy). |
 
@@ -1734,7 +1734,7 @@ Initializes the internal stream state for decompression before using the **infla
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#ZStream). |
-| windowBits | long | Yes | Memory window size. The value is restricted in certain range based on the data formats. The options are as follows:&lt;br&gt;Zlib: [1, 15]&lt;br&gt;Gzip: (15, +∞)&lt;br&gt;Raw Deflate: [-15, -1] |
+| windowBits | long | Yes | Memory window size. The value is restricted in certain range based on the data formats. The options are as follows:<br>Zlib: [1, 15]<br>Gzip: (15, +∞)<br>Raw Deflate: [-15, -1] |
 | window | ArrayBuffer | Yes | Preset window buffer. |
 
 **Return value:**
@@ -2183,7 +2183,7 @@ Initializes a decompression stream with the specified **windowBits**. This API u
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#ZStream). |
-| windowBits | int | Yes | Memory window size. The value is restricted in certain range based on the data formats. The options are as follows:&lt;br&gt;Zlib: [1, 15]&lt;br&gt;Gzip: (15, +∞)&lt;br&gt;Raw Deflate: [-15, -1] |
+| windowBits | int | Yes | Memory window size. The value is restricted in certain range based on the data formats. The options are as follows:<br>Zlib: [1, 15]<br>Gzip: (15, +∞)<br>Raw Deflate: [-15, -1] |
 
 **Return value:**
 
@@ -2449,7 +2449,7 @@ Resets the status of the specified decompression stream and updates the window s
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | strm | [ZStream](arkts-basicservices-zlib-zstream-i.md) | Yes | For details, see [ZStream&lt;sup&gt;12+&lt;/sup&gt;](arkts-basicservices-zlib-zstream-i.md#ZStream). |
-| windowBits | int | Yes | Memory window size. The value is restricted in certain range based on the data formats. The options are as follows:&lt;br&gt;Zlib: [1, 15]&lt;br&gt;Gzip: (15, +∞)&lt;br&gt;Raw Deflate: [-15, -1] |
+| windowBits | int | Yes | Memory window size. The value is restricted in certain range based on the data formats. The options are as follows:<br>Zlib: [1, 15]<br>Gzip: (15, +∞)<br>Raw Deflate: [-15, -1] |
 
 **Return value:**
 

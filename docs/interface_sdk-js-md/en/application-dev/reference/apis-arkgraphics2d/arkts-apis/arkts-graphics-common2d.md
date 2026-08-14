@@ -27,7 +27,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { common2D } from '@kit.ArkGraphics2D';
+import { common2D } from 'common2D';
 ```
 
 ## Summary

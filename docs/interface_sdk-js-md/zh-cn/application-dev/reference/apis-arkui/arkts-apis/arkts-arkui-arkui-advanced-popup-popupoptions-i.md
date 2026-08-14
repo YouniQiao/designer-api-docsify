@@ -68,7 +68,7 @@ icon?: PopupIconOptions
 
 设置Popup图标。 **说明：** 当width和height设置异常值或0时不显示。 默认不显示图标。
 
-**类型：** [PopupIconOptions](arkts-arkui-arkui-advanced-popup-popupiconoptions-i.md)
+**类型：** [PopupIconOptions](../../apis-na/arkts-apis/arkts-na-arkui-advanced-popup-popupiconoptions-i.md)
 
 **起始版本：** 11
 
@@ -116,7 +116,7 @@ message: PopupTextOptions
 
 设置Popup内容文本。 **说明：** message不支持设置fontWeight。 默认不显示内容文本。
 
-**类型：** [PopupTextOptions](arkts-arkui-arkui-advanced-popup-popuptextoptions-i.md)
+**类型：** [PopupTextOptions](../../apis-na/arkts-apis/arkts-na-arkui-advanced-popup-popuptextoptions-i.md)
 
 **起始版本：** 11
 
@@ -188,7 +188,7 @@ title?: PopupTextOptions
 
 设置Popup标题文本。 默认不显示标题文本。
 
-**类型：** [PopupTextOptions](arkts-arkui-arkui-advanced-popup-popuptextoptions-i.md)
+**类型：** [PopupTextOptions](../../apis-na/arkts-apis/arkts-na-arkui-advanced-popup-popuptextoptions-i.md)
 
 **起始版本：** 11
 

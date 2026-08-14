@@ -15,7 +15,7 @@ The **inputConsumer** module implements listening for combination key events as 
 ## Modules to Import
 
 ```TypeScript
-import { inputConsumer } from '@kit.InputKit';
+import { inputConsumer } from 'inputConsumer';
 ```
 
 ## Summary

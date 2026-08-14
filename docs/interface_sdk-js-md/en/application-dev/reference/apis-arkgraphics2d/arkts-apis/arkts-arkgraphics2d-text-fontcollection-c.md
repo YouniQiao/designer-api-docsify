@@ -15,7 +15,7 @@ Represents a font collection, which manages the font resources required for text
 ## Modules to Import
 
 ```TypeScript
-import { text } from '@kit.ArkGraphics2D';
+import { text } from 'text';
 ```
 
 ## clearCaches
@@ -303,7 +303,7 @@ Loads a custom font. This API returns the result synchronously. In this API, **n
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the font. Any string is acceptable. |
 | path | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Path of the font file to load. Two formats are supported: "file:// + absolute path of the font file" or \\$rawfile('font file path'). |
-| index | int | No | Font index to be loaded when the font file format is TTC. The default value is **0**, indicating that the first font of the TTC file is loaded. &lt;br&gt;The index value of a non-TTC file is meaningless. If an index is specified, the value can only be **0**. |
+| index | int | No | Font index to be loaded when the font file format is TTC. The default value is **0**, indicating that the first font of the TTC file is loaded. <br>The index value of a non-TTC file is meaningless. If an index is specified, the value can only be **0**. |
 
 **Error codes:**
 
@@ -384,7 +384,7 @@ Loads a custom font. This API uses a promise to return the result. In this API, 
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the font. Any string is acceptable. |
 | path | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Path of the font file to load. Two formats are supported: "file:// + absolute path of the font file" or \\$rawfile('font file path'). |
-| index | int | No | Font index to be loaded when the font file format is TTC. The default value is **0**, indicating that the first font of the TTC file is loaded. &lt;br&gt;The index value of a non-TTC file is meaningless. If an index is specified, the value can only be **0**. |
+| index | int | No | Font index to be loaded when the font file format is TTC. The default value is **0**, indicating that the first font of the TTC file is loaded. <br>The index value of a non-TTC file is meaningless. If an index is specified, the value can only be **0**. |
 
 **Return value:**
 

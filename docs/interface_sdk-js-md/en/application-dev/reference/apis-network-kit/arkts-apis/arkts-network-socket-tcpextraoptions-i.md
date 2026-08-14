@@ -17,7 +17,7 @@ Defines other properties of the TCPSocket connection.
 ## Modules to Import
 
 ```TypeScript
-import { socket } from '@kit.NetworkKit';
+import { socket } from 'socket';
 ```
 
 ## OOBInline

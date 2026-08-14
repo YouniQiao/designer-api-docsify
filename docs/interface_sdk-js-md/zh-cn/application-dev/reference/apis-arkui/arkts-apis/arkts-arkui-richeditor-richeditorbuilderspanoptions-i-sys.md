@@ -42,7 +42,7 @@ dragBackgroundColor?: ColorMetrics
 isDragShadowNeeded?: boolean
 ```
 
-添加builder单独拖拽时是否需要投影。不配置或者异常值时，默认需要投影。true表示需要投影，false表示不需要投影。&lt;br/&gt; 默认值： true
+添加builder单独拖拽时是否需要投影。不配置或者异常值时，默认需要投影。true表示需要投影，false表示不需要投影。<br/> 默认值： true
 
 **类型：** boolean
 

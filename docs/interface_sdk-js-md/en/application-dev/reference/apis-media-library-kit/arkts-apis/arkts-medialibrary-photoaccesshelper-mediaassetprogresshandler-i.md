@@ -15,7 +15,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'photoAccessHelper';
 ```
 
 ## onProgress
@@ -40,5 +40,5 @@ Called when the progress of the requested video is returned.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| progress | int | Yes | Progress in percentage. &lt;br&gt;Value range: [0, 100] |
+| progress | int | Yes | Progress in percentage. <br>Value range: [0, 100] |
 

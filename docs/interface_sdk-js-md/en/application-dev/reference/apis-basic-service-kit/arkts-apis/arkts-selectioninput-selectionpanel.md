@@ -32,7 +32,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { PanelInfo, PanelType } from '@kit.BasicServicesKit';
+import { PanelInfo } from 'PanelInfo';
+import { PanelType } from 'PanelType';
 ```
 
 ## Summary

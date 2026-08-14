@@ -16,7 +16,7 @@
 | Name | Description |
 | --- | --- |
 | [SecurityUIExtensionOptions](arkts-na-securityuiextensioncomponent-securityuiextensionoptions-i-sys.md) | This interface is used to set the options for SecurityUIExtensionComponentAttribute during construction |
-| [SecurityUIExtensionProxy](arkts-na-securityuiextensioncomponent-securityuiextensionproxy-i-sys.md) | This interface is used for send data to the UIExtensionAbility.&lt;br/&gt; It is returned from onRemoteReady callback of SecurityUIExtensionComponent&lt;br/&gt; when UIExtensionAbility connects successfully |
+| [SecurityUIExtensionProxy](arkts-na-securityuiextensioncomponent-securityuiextensionproxy-i-sys.md) | This interface is used for send data to the UIExtensionAbility.<br/> It is returned from onRemoteReady callback of SecurityUIExtensionComponent<br/> when UIExtensionAbility connects successfully |
 <!--DelEnd-->
 
 <!--Del-->

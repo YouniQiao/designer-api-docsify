@@ -15,7 +15,7 @@ LinkedList is implemented based on the doubly linked list. Each node of the doub
 ## Modules to Import
 
 ```TypeScript
-import { LinkedList } from '@kit.ArkTS';
+import { LinkedList } from 'LinkedList';
 ```
 
 ## $_iterator
@@ -932,7 +932,7 @@ Removes and returns the element at the specified index in this linkedlist.
 | Error Code ID | Error Message |
 | --- | --- |
 | [10200010](../errorcode-utils.md#10200010-empty-container) | Container is empty. |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "index" is out of range. It must be >= 0 && <= \\${length}. Received value is: \\${index} |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "index" is out of range. It must be >= 0 && &lt;= \\${length}. Received value is: \\${index} |
 
 ## removeFirst
 

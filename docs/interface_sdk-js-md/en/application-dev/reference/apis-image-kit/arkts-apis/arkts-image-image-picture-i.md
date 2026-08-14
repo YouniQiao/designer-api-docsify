@@ -15,7 +15,7 @@ An image that contains special information can be decoded into a picture object,
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'image';
 ```
 
 ## getAuxiliaryPicture

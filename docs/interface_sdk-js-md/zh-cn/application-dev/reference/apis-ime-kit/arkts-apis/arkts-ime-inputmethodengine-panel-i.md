@@ -1226,7 +1226,7 @@ setPrivacyMode(isPrivacyMode: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isPrivacyMode | boolean | 是 | 是否设置隐私模式。&lt;br/&gt;- 值为true，表示将设置为隐私模式。&lt;br/&gt;- 值为false，表示将设置为非隐私模式。 |
+| isPrivacyMode | boolean | 是 | 是否设置隐私模式。<br/>- 值为true，表示将设置为隐私模式。<br/>- 值为false，表示将设置为非隐私模式。 |
 
 **错误码：**
 
@@ -1888,7 +1888,7 @@ updateRegion(inputRegion: Array<window.Rect>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| inputRegion | Array&lt;window.Rect&gt; | 是 | 面板内接收输入事件的区域。&lt;br/&gt;- 数组大小限制为[1, 4]。&lt;br/&gt;- 传入的热区位置是相对于输入法面板窗口左顶点的位置。 |
+| inputRegion | Array&lt;window.Rect&gt; | 是 | 面板内接收输入事件的区域。<br/>- 数组大小限制为[1, 4]。<br/>- 传入的热区位置是相对于输入法面板窗口左顶点的位置。 |
 
 **错误码：**
 

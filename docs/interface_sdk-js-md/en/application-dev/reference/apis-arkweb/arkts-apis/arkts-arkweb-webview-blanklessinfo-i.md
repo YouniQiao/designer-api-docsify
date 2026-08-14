@@ -15,7 +15,7 @@ Describes the prediction information about blankless loading, including the firs
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'webview';
 ```
 
 ## errCode

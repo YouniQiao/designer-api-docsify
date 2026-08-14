@@ -13,7 +13,11 @@
 ## Modules to Import
 
 ```TypeScript
-import { BluetoothDevice, BLEFoundResponse, StopBLEScanOptions, SubscribeBLEFoundOptions, StartBLEScanOptions } from '@kit.ConnectivityKit';
+import { BLEFoundResponse } from 'BLEFoundResponse';
+import { BluetoothDevice } from 'BluetoothDevice';
+import { StartBLEScanOptions } from 'StartBLEScanOptions';
+import { StopBLEScanOptions } from 'StopBLEScanOptions';
+import { SubscribeBLEFoundOptions } from 'SubscribeBLEFoundOptions';
 ```
 
 ## complete

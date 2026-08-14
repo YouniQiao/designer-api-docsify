@@ -82,7 +82,7 @@ ArkTS-Sta: setSelection(selectionStart: int, selectionEnd: int, options?: Select
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| selectionStart | int | 是 | 选中开始位置。&lt;br/&gt;取值小于0时，按0处理。 |
-| selectionEnd | int | 是 | 选中结束位置。&lt;br/&gt;取值大于文本长度时，按当前文本长度处理。 |
+| selectionStart | int | 是 | 选中开始位置。<br/>取值小于0时，按0处理。 |
+| selectionEnd | int | 是 | 选中结束位置。<br/>取值大于文本长度时，按当前文本长度处理。 |
 | options | [SelectionOptions](../arkts-components/arkts-arkui-selectionoptions-i.md) | 否 | 选择项配置。 默认值继承 [SelectionOptions](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-text-style.md#selectionoptions12对象说明)。 |
 

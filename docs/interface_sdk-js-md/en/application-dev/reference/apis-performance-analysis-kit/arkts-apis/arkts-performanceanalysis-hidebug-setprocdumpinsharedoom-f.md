@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
+import { hidebug } from 'hidebug';
 ```
 
 ## setProcDumpInSharedOOM
@@ -32,7 +32,7 @@ Changes the dump heap snapshot from the thread-level to the process-level. > **N
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | When SharedHeap OOM occurs in a process, the system dumps the heap snapshot of the corresponding level based on the information recorded when the process calls the API for the last time in its lifecycle.&lt;br&gt;**true**: process level.&lt;br&gt;**false**: thread level.&lt;br&gt; The default value is **false**. |
+| enable | boolean | Yes | When SharedHeap OOM occurs in a process, the system dumps the heap snapshot of the corresponding level based on the information recorded when the process calls the API for the last time in its lifecycle.<br>**true**: process level.<br>**false**: thread level.<br> The default value is **false**. |
 
 ## Examples
 

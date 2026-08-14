@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleMonitor } from '@kit.AbilityKit';
+import { bundleMonitor } from 'bundleMonitor';
 ```
 
 ## onUpdate

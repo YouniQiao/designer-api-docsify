@@ -17,7 +17,7 @@ Describes the start animation configuration. This API works only for full-screen
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'window';
 ```
 
 ## animationConfig

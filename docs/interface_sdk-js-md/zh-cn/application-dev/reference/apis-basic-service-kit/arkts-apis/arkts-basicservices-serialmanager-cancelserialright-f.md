@@ -66,7 +66,7 @@ async function cancelSerialRightExample() {
   // 取消已经授予的权限
   try {
     serialManager.cancelSerialRight(portId);
-    console.info('cancelSerialRight success, portId: ', portId);
+    console.info('cancelSerialRight success, portId: '+ portId);
   } catch (error) {
     const err: BusinessError = error as BusinessError;
     console.error(`Failed to cancel serial right. Code: ${err.code}, message: ${err.message}`);

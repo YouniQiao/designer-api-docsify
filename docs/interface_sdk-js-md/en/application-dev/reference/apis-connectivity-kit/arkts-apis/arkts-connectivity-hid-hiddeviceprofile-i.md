@@ -17,7 +17,7 @@ Manager HID device profile.
 ## Modules to Import
 
 ```TypeScript
-import { hid } from '@kit.ConnectivityKit';
+import { hid } from 'hid';
 ```
 
 ## connect

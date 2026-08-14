@@ -17,7 +17,9 @@ Defines the lazy waterflow layout attribute.
 ## Modules to Import
 
 ```TypeScript
-import { LazyVWaterFlowLayout, LazyWaterFlowLayoutAttribute, LazyVWaterFlowLayoutAttribute } from '@kit.ArkUI';
+import { LazyVWaterFlowLayout } from 'LazyVWaterFlowLayout';
+import { LazyVWaterFlowLayoutAttribute } from 'LazyVWaterFlowLayoutAttribute';
+import { LazyWaterFlowLayoutAttribute } from 'LazyWaterFlowLayoutAttribute';
 ```
 
 ## columnsGap
@@ -46,7 +48,7 @@ The spacing between columns.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md) \| undefined | Yes | The spacing between columns. &lt;br&gt;Default value: LengthMetrics.vp(0) |
+| value | [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md) \| undefined | Yes | The spacing between columns. <br>Default value: LengthMetrics.vp(0) |
 
 **Return value:**
 
@@ -80,7 +82,7 @@ Sets the footer of the lazy waterflow layout.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | CustomBuilder \| undefined | Yes | The footer builder function. &lt;br&gt;Passing undefined will remove the footer. |
+| builder | CustomBuilder \| undefined | Yes | The footer builder function. <br>Passing undefined will remove the footer. |
 
 **Return value:**
 
@@ -114,7 +116,7 @@ Sets the header of the lazy waterflow layout.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | CustomBuilder \| undefined | Yes | The header builder function. &lt;br&gt;Passing undefined will remove the header. |
+| builder | CustomBuilder \| undefined | Yes | The header builder function. <br>Passing undefined will remove the header. |
 
 **Return value:**
 
@@ -148,7 +150,7 @@ Called when the first or last item displayed in the component changes. It is tri
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | OnVisibleIndexesChangeCallback \| undefined | Yes | callback function, triggered when the index of child components in the visible area changes. &lt;br&gt;Passing undefined will unregister the callback. |
+| callback | OnVisibleIndexesChangeCallback \| undefined | Yes | callback function, triggered when the index of child components in the visible area changes. <br>Passing undefined will unregister the callback. |
 
 **Return value:**
 
@@ -182,7 +184,7 @@ The spacing between rows.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md) \| undefined | Yes | The spacing between rows. &lt;br&gt;Default value: LengthMetrics.vp(0) |
+| value | [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md) \| undefined | Yes | The spacing between rows. <br>Default value: LengthMetrics.vp(0) |
 
 **Return value:**
 

@@ -15,7 +15,7 @@ Represents an X.509 trust anchor, which is used to verify the certificate chain.
 ## Modules to Import
 
 ```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
+import { cert } from 'cert';
 ```
 
 ## CACert

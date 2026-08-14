@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { workScheduler } from '@kit.BackgroundTasksKit';
+import { workScheduler } from 'workScheduler';
 ```
 
 ## stopWork
@@ -31,7 +31,7 @@ Stops a deferred task.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | work | [WorkInfo](arkts-backgroundtasks-workscheduler-workinfo-i.md) | Yes | Deferred task to stop. |
-| needCancel | boolean | No | Whether to clear the task while stopping it.&lt;br&gt;The value **true** means to clear the task while stopping it, and **false** means to stop the task only. The default value is **false**. |
+| needCancel | boolean | No | Whether to clear the task while stopping it.<br>The value **true** means to clear the task while stopping it, and **false** means to stop the task only. The default value is **false**. |
 
 **Error codes:**
 

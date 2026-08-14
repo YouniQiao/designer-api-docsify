@@ -17,7 +17,7 @@ Class for the PartnerAgentExtensionAbility. Applications can use this ability to
 ## Modules to Import
 
 ```TypeScript
-import { PartnerAgentExtensionAbility } from '@kit.ConnectivityKit';
+import { PartnerAgentExtensionAbility } from 'PartnerAgentExtensionAbility';
 ```
 
 ## onDestroyWithReason

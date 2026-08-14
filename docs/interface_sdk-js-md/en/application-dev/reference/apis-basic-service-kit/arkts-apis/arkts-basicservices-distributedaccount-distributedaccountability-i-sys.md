@@ -15,7 +15,7 @@ Provides APIs for querying and updating the login state of a distributed account
 ## Modules to Import
 
 ```TypeScript
-import { distributedAccount } from '@kit.BasicServicesKit';
+import { distributedAccount } from 'distributedAccount';
 ```
 
 ## getOsAccountDistributedInfoByLocalId
@@ -177,7 +177,7 @@ Sets the distributed information for an OS account. This API uses an asynchronou
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted OS account. |
 | [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account identified by localId or by distributedInfo not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
@@ -247,7 +247,7 @@ Sets the distributed information for an OS account. This API uses a promise to r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300008](../../apis-basic-services-kit/errorcode-account.md#12300008-restricted-account) | Restricted OS account. |
 | [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account identified by localId or by distributedInfo not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |

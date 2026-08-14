@@ -17,7 +17,7 @@ Implements a generic task. **GenericsTask** inherits from [Task](arkts-arkts-tas
 ## Modules to Import
 
 ```TypeScript
-import { taskpool } from '@kit.ArkTS';
+import { taskpool } from 'taskpool';
 ```
 
 ## constructor

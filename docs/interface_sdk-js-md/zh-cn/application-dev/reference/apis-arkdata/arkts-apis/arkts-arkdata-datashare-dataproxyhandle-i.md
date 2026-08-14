@@ -587,7 +587,7 @@ putValue(uri: string, key: int, value: ValueType, config: DataProxyConfig): Prom
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 表示要操作的数据所对应的URI。 |
-| key | int | 是 | 添加的值所对应的Key，对同一个应用来说是唯一的。 &lt;br&gt;取值范围为全体整数。 |
+| key | int | 是 | 添加的值所对应的Key，对同一个应用来说是唯一的。 <br>取值范围为全体整数。 |
 | value | [ValueType](arkts-arkdata-valuetype-t.md) | 是 | 待添加的值。 |
 | config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 | 数据代理操作的配置。 |
 
@@ -631,7 +631,7 @@ removeValue(uri: string, key: int, config: DataProxyConfig): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | 表示要操作的数据所对应的URI。 |
-| key | int | 是 | 添加的值所对应的key。 &lt;br&gt;取值范围为全体整数。 |
+| key | int | 是 | 添加的值所对应的key。 <br>取值范围为全体整数。 |
 | config | [DataProxyConfig](arkts-arkdata-datashare-dataproxyconfig-i.md) | 是 | 数据代理操作的配置。 |
 
 **返回值：**

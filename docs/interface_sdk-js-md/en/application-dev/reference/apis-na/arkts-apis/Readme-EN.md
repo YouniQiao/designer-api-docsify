@@ -325,7 +325,8 @@
   - [RouterPageState](arkts-na-uiobserver-routerpagestate-e.md)
   - [ScrollEventType](arkts-na-uiobserver-scrolleventtype-e.md)
   - [TabContentState](arkts-na-uiobserver-tabcontentstate-e.md)
-- [@ohos.arkui.performanceMonitor](arkts-arkui-performancemonitor.md)
+<!--Del-->
+- [@ohos.arkui.performanceMonitor](arkts-arkui-performancemonitor.md)<!--DelEnd-->
   <!--Del-->
   - [begin(system api)](arkts-na-performancemonitor-begin-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -389,7 +390,8 @@
   - [stepsCurve](arkts-na-curves-stepscurve-f.md)
   - [ICurve](arkts-na-curves-icurve-i.md)
   - [Curve](arkts-na-curves-curve-e.md)
-- [@ohos.data.DataShareResultSet](arkts-data-datashareresultset.md)
+<!--Del-->
+- [@ohos.data.DataShareResultSet](arkts-data-datashareresultset.md)<!--DelEnd-->
   <!--Del-->
   - [DataShareResultSet(system api)](arkts-na-data-datashareresultset-datashareresultset-i-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -1624,13 +1626,15 @@
 - [WorkerLocal](arkts-workerlocal.md)
   - [WorkerLocal](arkts-na-workerlocal-c.md)
 - application<!--arkts-na-application-->
-  - [AbilityForegroundStateObserver](arkts-abilityforegroundstateobserver.md)
+  <!--Del-->
+  - [AbilityForegroundStateObserver](arkts-abilityforegroundstateobserver.md)<!--DelEnd-->
     <!--Del-->
     - [AbilityForegroundStateObserver(system api)](arkts-na-abilityforegroundstateobserver-i-sys.md)<!--DelEnd-->
   - [AbilityStartCallback](arkts-abilitystartcallback.md)
     - [AbilityStartCallback](arkts-na-abilitystartcallback-i.md)
     - [OnResultFn](arkts-na-onresultfn-t.md)
-  - [AppForegroundStateObserver](arkts-appforegroundstateobserver.md)
+  <!--Del-->
+  - [AppForegroundStateObserver](arkts-appforegroundstateobserver.md)<!--DelEnd-->
     <!--Del-->
     - [AppForegroundStateObserver(system api)](arkts-na-appforegroundstateobserver-i-sys.md)<!--DelEnd-->
   - [ApplicationStateObserver](arkts-applicationstateobserver.md)
@@ -2417,7 +2421,8 @@
     - [IndicatorComponent](arkts-na-indicatorcomponent-indicatorcomponent-f.md)
     - [IndicatorComponentController](arkts-na-indicatorcomponent-indicatorcomponentcontroller-c.md)
     - [IndicatorComponentAttribute](arkts-na-indicatorcomponent-indicatorcomponentattribute-i.md)
-  - [inspector](arkts-inspector.md)
+  <!--Del-->
+  - [inspector](arkts-inspector.md)<!--DelEnd-->
     - [Profiler](arkts-na-profiler-n.md)
       <!--Del-->
       - [registerVsyncCallback(system api)](arkts-na-profiler-registervsynccallback-f-sys.md)<!--DelEnd-->
@@ -2502,7 +2507,8 @@
     - [LoadingProgress](arkts-na-loadingprogress-loadingprogress-f.md)
     - [LoadingProgressConfiguration](arkts-na-loadingprogress-loadingprogressconfiguration-i.md)
     - [LoadingProgressStyle](arkts-na-loadingprogress-loadingprogressstyle-e.md)
-  - [mediaCachedImage](arkts-mediacachedimage.md)
+  <!--Del-->
+  - [mediaCachedImage](arkts-mediacachedimage.md)<!--DelEnd-->
     <!--Del-->
     - [MediaCachedImage(system api)](arkts-na-mediacachedimage-mediacachedimage-f-sys.md)<!--DelEnd-->
     <!--Del-->
@@ -2624,7 +2630,8 @@
     - [PatternLockController](arkts-na-patternlock-patternlockcontroller-c.md)
     - [CircleStyleOptions](arkts-na-patternlock-circlestyleoptions-i.md)
     - [PatternLockChallengeResult](arkts-na-patternlock-patternlockchallengeresult-e.md)
-  - [pluginComponent](arkts-plugincomponent.md)
+  <!--Del-->
+  - [pluginComponent](arkts-plugincomponent.md)<!--DelEnd-->
     <!--Del-->
     - [PluginComponent(system api)](arkts-na-plugincomponent-plugincomponent-f-sys.md)<!--DelEnd-->
     <!--Del-->
@@ -2883,7 +2890,8 @@
     - [ToolBarItemAttribute](arkts-na-toolbar-toolbaritemattribute-i.md)
     - [ToolBarItemOptions](arkts-na-toolbar-toolbaritemoptions-i.md)
     - [ToolBarItemPlacement](arkts-na-toolbar-toolbaritemplacement-e.md)
-  - [uiExtensionComponent](arkts-uiextensioncomponent.md)
+  <!--Del-->
+  - [uiExtensionComponent](arkts-uiextensioncomponent.md)<!--DelEnd-->
     <!--Del-->
     - [UIExtensionComponent(system api)](arkts-na-uiextensioncomponent-uiextensioncomponent-f-sys.md)<!--DelEnd-->
     <!--Del-->

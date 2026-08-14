@@ -18,7 +18,7 @@
 accessibilityFocused: boolean
 ```
 
-表示元素是否处于无障碍焦点状态。true表示元素当前处于无障碍焦点状态，false表示元素当前不处于无障碍焦点状态，默认值为false。
+表示元素是否处于无障碍焦点状态。true表示元素处于无障碍焦点状态，false表示元素不处于无障碍焦点状态，默认值为false。
 
 **类型：** boolean
 
@@ -38,7 +38,7 @@ accessibilityFocused: boolean
 accessibilityNextFocusId?: long
 ```
 
-下一个要聚焦的组件ID。通过findElement('elementId')查询到的AccessibilityElementInfo对象中可获取到用户在控件上设置的该属性值。默认值为-1。
+下一个要聚焦的组件ID。通过findElement('elementId')查询到的AccessibilityElement对象中可获取到用户在控件上设置的该属性值。默认值为-1。
 
 **类型：** long
 
@@ -58,7 +58,7 @@ accessibilityNextFocusId?: long
 accessibilityPreviousFocusId?: long
 ```
 
-上一个聚焦的组件ID。通过findElement('elementId')查询到的AccessibilityElementInfo对象中可获取到用户在控件上设置的该属性值。默认值为-1。
+上一个聚焦的组件ID。通过findElement('elementId')查询到的AccessibilityElement对象中可获取到用户在控件上设置的该属性值。默认值为-1。
 
 **类型：** long
 
@@ -78,7 +78,7 @@ accessibilityPreviousFocusId?: long
 accessibilityScrollable?: boolean
 ```
 
-表示无障碍模式下元素是否滚动，优先级高于scrollable。其中，true表示可滚动，false表示不可滚动，默认值为true。
+表示无障碍模式下元素是否可滚动，优先级高于scrollable，即以accessibilityScrollable属性值为准。其中，true表示可滚动，false表示不可滚动，默认值为true。
 
 **类型：** boolean
 
@@ -138,7 +138,7 @@ bundleName: string
 checkable: boolean
 ```
 
-表示元素是否支持点击操作。true表示元素支持点击操作，false表示元素不支持点击操作，默认值为false。
+表示元素是否可勾选。true表示元素可勾选，false表示元素不可勾选，默认值为false。
 
 **类型：** boolean
 
@@ -158,7 +158,7 @@ checkable: boolean
 checked: boolean
 ```
 
-表示元素当前的可点击状态。true表示元素当前是可点击的，false表示元素当前是不可点击的，默认值为false。
+表示元素的勾选状态。true表示元素已勾选，false表示元素未勾选，默认值为false。
 
 **类型：** boolean
 
@@ -238,7 +238,7 @@ componentId: long
 componentType: string
 ```
 
-应与元素所属的组件类型所对应，如：按钮Button类型->'Button'、图像Image类型->'Image'。
+表示元素所属的组件类型，如：按钮Button类型对应'Button'、图像Image类型对应'Image'。
 
 **类型：** string
 
@@ -278,7 +278,7 @@ contents: Array<string>
 currentIndex: int
 ```
 
-当前项的索引。默认值为0。
+当前项的索引，取值范围大于等于0。默认值为0。
 
 **类型：** int
 
@@ -298,7 +298,7 @@ currentIndex: int
 customComponentType?: string
 ```
 
-自定义组件类型。与元素的[AccessibilityRoleType枚举说明](../../apis-arkui/arkts-components/arkts-arkui-accessibilityroletype-e.md#AccessibilityRoleType)类型所对应。
+自定义组件类型。与元素的[AccessibilityRoleType](../../apis-arkui/arkts-components/arkts-arkui-accessibilityroletype-e.md#AccessibilityRoleType)类型对应。默认值为空。
 
 **类型：** string
 
@@ -358,7 +358,7 @@ editable: boolean
 endIndex: int
 ```
 
-屏幕最后显示项的列表索引。默认值为0。
+屏幕最后显示项的列表索引，取值范围大于等于0。默认值为0。
 
 **类型：** int
 
@@ -398,7 +398,7 @@ error: string
 extraInfo?: string
 ```
 
-扩展属性，用于定义一些特定组件的属性，包含： - CheckboxGroupSelectedStatus：表示CheckboxGroup组件的选中状态，其中取值0表示已选中，取值1表示部分选中，取值2表示未选中。 - Row：Grid组件中聚焦item的行信息，表示该item在第几行。 - Column：Grid组件中聚焦的item的列，表示该item在第几列。 - ListItemIndex：List组件中聚焦item的行信息，表示当前该item在第几行。 - SideBarContainerStates：表示可展开类组件（SideBarContainer、Select）的展开状态，其中取值0表示收起态，取值1表示展开态。 - ToggleType：表示Toggle组件的具体类型，其中取值0表示Checkbox，取值1表示Switch，取值2表示Button。 - BindSheet：表示BindSheet组件的状态，其中取值0表示状态高，取值1表示状态中，取值2表示状态低。 - hasRegisteredHover：表示组件是否注册了onAccessibilityHover事件回调，取值为1表示组件注册了事件回调，若未注册不会使用该字段。 - direction：表示list组件的布局方向，其中取值"vertical"表示竖向，取值"horizontal"表示横向。 - expandedState：表示list组件中listItem的展开状态，其中取值"expanded"表示展开态，取值"collapsed"表示收起态。 - componentTypeDescription：组件类型详细信息，对componentType的补充描述。
+默认值为空。扩展属性，用于定义一些特定组件的属性，包含： - CheckboxGroupSelectedStatus：表示CheckboxGroup组件的选中状态，其中取值0表示已选中，取值1表示部分选中，取值2表示未选中。 - Row：Grid组件中聚焦item的行信息，表示该item在第几行。 - Column：Grid组件中聚焦的item的列，表示该item在第几列。 - ListItemIndex：List组件中聚焦item的行信息，表示当前该item在第几行。 - SideBarContainerStates：表示可展开类组件（SideBarContainer、Select）的展开状态，其中取值0表示收起态，取值1表示展开态。 - ToggleType：表示Toggle组件的具体类型，其中取值0表示Checkbox，取值1表示Switch，取值2表示Button。 - BindSheet：表示BindSheet半模态弹窗组件的展示高度状态，其中取值0表示大高度展示态，取值1表示中高度展示态，取值2表示小高度展示态。 - hasRegisteredHover：表示组件是否注册了onAccessibilityHover事件回调，取值为1表示组件注册了事件回调，若未注册不会使用该字段。 - direction：表示List组件的布局方向，其中取值"vertical"表示竖向，取值"horizontal"表示横向。 - expandedState：表示List组件中ListItem的展开状态，其中取值"expanded"表示展开态，取值"collapsed"表示收起态。 - componentTypeDescription：组件类型详细信息，对componentType的补充描述。
 
 **类型：** string
 
@@ -478,7 +478,7 @@ hotArea: Rect
 inputType: int
 ```
 
-输入文本的类型。默认值为0。
+输入文本的类型，不同数值对应不同的输入模式：0表示无特定类型；1表示文本；2表示邮箱；3表示日期；4表示时间；5表示数字；6表示密码；7表示电话号码；8表示用户名；9表示新密码。默认值为0。
 
 **类型：** int
 
@@ -638,7 +638,7 @@ isVisible: boolean
 itemCount: int
 ```
 
-项目的总数。默认值为0。
+项目的总数，取值范围大于等于0。默认值为0。
 
 **类型：** int
 
@@ -658,7 +658,7 @@ itemCount: int
 lastContent: string
 ```
 
-最后的内容。
+列表或滚动控件中最后一项的内容。
 
 **类型：** string
 
@@ -678,7 +678,7 @@ lastContent: string
 layer: int
 ```
 
-该元素的显示层。
+该元素的显示层，取值范围大于等于0。默认值为0。
 
 **类型：** int
 
@@ -698,7 +698,7 @@ layer: int
 longClickable: boolean
 ```
 
-表示元素是否可长单击。true表示元素可长单击，false表示元素不可长单击，默认值为false。
+表示元素是否可长按。true表示元素可长按，false表示元素不可长按，默认值为false。
 
 **类型：** boolean
 
@@ -738,7 +738,7 @@ offset: double
 pageId: int
 ```
 
-页码id。默认值为-1。
+页码ID。默认值为-1。
 
 **类型：** int
 
@@ -798,7 +798,7 @@ pluralLineSupported: boolean
 rect: Rect
 ```
 
-元素的面积。
+元素的矩形区域，包含位置和尺寸信息。
 
 **类型：** [Rect](arkts-accessibility-accessibilityextensioncontext-rect-i.md)
 
@@ -838,7 +838,7 @@ resourceName: string
 rootElement: AccessibilityElement
 ```
 
-窗口元素的根元素。
+窗口元素的根节点元素。
 
 **类型：** [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)
 
@@ -878,7 +878,7 @@ screenRect: Rect
 scrollable: boolean
 ```
 
-表示元素是否可滚动。true表示元素可滚动，false表示元素不可滚动，默认值为false。
+表示元素是否可滚动。true表示元素可滚动，false表示元素不可滚动，默认值为false。在无障碍模式下，当accessibilityScrollable与scrollable取值冲突时，以 accessibilityScrollable属性值为准。
 
 **类型：** boolean
 
@@ -918,7 +918,7 @@ selected: boolean
 startIndex: int
 ```
 
-在屏幕上的第一个项目的列表索引。默认值为0。
+在屏幕上的第一个项目的列表索引，取值范围大于等于0。默认值为0。
 
 **类型：** int
 
@@ -958,7 +958,7 @@ text: string
 textLengthLimit: int
 ```
 
-元素文本的最大长度限制。
+元素文本的最大长度限制，取值范围大于等于0。默认值为0。
 
 **类型：** int
 

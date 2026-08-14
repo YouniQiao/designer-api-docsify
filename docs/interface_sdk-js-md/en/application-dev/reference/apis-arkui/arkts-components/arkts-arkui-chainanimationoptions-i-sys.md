@@ -124,7 +124,7 @@ Intensity of chain animation.
 maxSpace: Length
 ```
 
-Maximum space for chain animation. &lt;br&gt;Unit: same as **Length**.
+Maximum space for chain animation. <br>Unit: same as **Length**.
 
 **Type:** Length
 
@@ -148,7 +148,7 @@ Maximum space for chain animation. &lt;br&gt;Unit: same as **Length**.
 minSpace: Length
 ```
 
-Minimum space for chain animation. &lt;br&gt;Unit: same as **Length**.
+Minimum space for chain animation. <br>Unit: same as **Length**.
 
 **Type:** Length
 

@@ -36,7 +36,7 @@ Returns an instance of number at passed index.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | index to look at &lt;br&gt;The value should be an integer. |
+| index | int | Yes | index to look at <br>The value should be an integer. |
 
 **Return value:**
 
@@ -94,8 +94,8 @@ Assigns val as element on index.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | index to change &lt;br&gt;The value should be an integer. |
-| val | int | Yes | value to set &lt;br&gt;The value should be an integer. |
+| index | int | Yes | index to change <br>The value should be an integer. |
+| val | int | Yes | value to set <br>The value should be an integer. |
 
 ## $_set
 
@@ -121,7 +121,7 @@ Assigns val as element on index.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | index to change &lt;br&gt;The value should be an integer. |
+| index | int | Yes | index to change <br>The value should be an integer. |
 | val | double | Yes | value to set |
 
 ## at
@@ -148,7 +148,7 @@ Returns an instance of primitive type at passed index.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | index to look at &lt;br&gt;The value should be an integer. |
+| index | int | Yes | index to look at <br>The value should be an integer. |
 
 **Return value:**
 
@@ -200,7 +200,7 @@ Creates an Int32Array with respect to length.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| length | int | Yes | Number of elements &lt;br&gt;The value should be an integer. |
+| length | int | Yes | Number of elements <br>The value should be an integer. |
 
 ## constructor
 
@@ -383,7 +383,7 @@ Creates an Int32Array with respect to buf and byteOffset.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | buf | ArrayBuffer | Yes | data initializer |
-| byteOffset | int | Yes | byte offset from begin of the buf &lt;br&gt;The value should be an integer. |
+| byteOffset | int | Yes | byte offset from begin of the buf <br>The value should be an integer. |
 
 ## constructor
 
@@ -437,8 +437,8 @@ Creates an Int32Array with respect to data, byteOffset and length.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | buf | ArrayBuffer | Yes | data initializer |
-| byteOffset | int | Yes | byte offset from begin of the buf &lt;br&gt;The value should be an integer. |
-| length | int | Yes | size of elements of type int in newly created Int32Array &lt;br&gt;The value should be an integer. |
+| byteOffset | int | Yes | byte offset from begin of the buf <br>The value should be an integer. |
+| length | int | Yes | size of elements of type int in newly created Int32Array <br>The value should be an integer. |
 
 ## constructor
 
@@ -552,7 +552,7 @@ Makes a copy of internal elements to targetPos from begin to end of Int32Array. 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | int | Yes | insert index to place copied elements &lt;br&gt;The value should be an integer. |
+| target | int | Yes | insert index to place copied elements <br>The value should be an integer. |
 
 **Return value:**
 
@@ -677,8 +677,8 @@ Fills the Int32Array with specified value
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | double | Yes | new value |
-| start | int | No | start index to begin fill from. Defaults to 0. &lt;br&gt;The value should be an integer. |
-| end | int | No | last index to end fill from, excluded. Defaults to the array length. &lt;br&gt;The value should be an integer. |
+| start | int | No | start index to begin fill from. Defaults to 0. <br>The value should be an integer. |
+| end | int | No | last index to end fill from, excluded. Defaults to the array length. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -1154,8 +1154,8 @@ Determines whether Int32Array includes a certain element, returning true or fals
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| searchElement | int | Yes | The element to search for &lt;br&gt;The value should be an integer. |
-| fromIndex | int | Yes | The position in this array at which to begin searching for searchElement &lt;br&gt;The value should be an integer. |
+| searchElement | int | Yes | The element to search for <br>The value should be an integer. |
+| fromIndex | int | Yes | The position in this array at which to begin searching for searchElement <br>The value should be an integer. |
 
 **Return value:**
 
@@ -1187,7 +1187,7 @@ Determines whether Int32Array includes a certain element, returning true or fals
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| searchElement | int | Yes | The element to search for. The search starts at index 0. &lt;br&gt;The value should be an integer. |
+| searchElement | int | Yes | The element to search for. The search starts at index 0. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -1220,7 +1220,7 @@ Determines whether Int32Array includes a certain element, returning true or fals
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | searchElement | double | Yes | The element to search for |
-| fromIndex | int | No | The position in this array at which to begin searching for searchElement. Defaults to 0. &lt;br&gt;The value should be an integer. |
+| fromIndex | int | No | The position in this array at which to begin searching for searchElement. Defaults to 0. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -1252,7 +1252,7 @@ Returns the index of the first occurrence of a value in Int32Array.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| searchElement | int | Yes | The value to locate in the array. The search starts at index 0. &lt;br&gt;The value should be an integer. |
+| searchElement | int | Yes | The value to locate in the array. The search starts at index 0. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -1284,8 +1284,8 @@ Returns the index of the first occurrence of a value in Int32Array.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| searchElement | int | Yes | The value to locate in the array. &lt;br&gt;The value should be an integer. |
-| fromIndex | int | Yes | The array index at which to begin the search. &lt;br&gt;The value should be an integer. |
+| searchElement | int | Yes | The value to locate in the array. <br>The value should be an integer. |
+| fromIndex | int | Yes | The array index at which to begin the search. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -1318,7 +1318,7 @@ Returns the index of the first occurrence of a value in Int32Array.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | searchElement | double | Yes | The value to locate in the array. |
-| fromIndex | int | No | The array index at which to begin the search. Defaults to 0. &lt;br&gt;The value should be an integer. |
+| fromIndex | int | No | The array index at which to begin the search. Defaults to 0. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -1822,8 +1822,8 @@ Assigns val as element on insertPos.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| insertPos | int | Yes | index to change &lt;br&gt;The value should be an integer. |
-| val | int | Yes | value to set &lt;br&gt;The value should be an integer. |
+| insertPos | int | Yes | index to change <br>The value should be an integer. |
+| val | int | Yes | value to set <br>The value should be an integer. |
 
 ## set
 
@@ -1849,7 +1849,7 @@ Assigns val as element on insertPos.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| insertPos | int | Yes | index to change &lt;br&gt;The value should be an integer. |
+| insertPos | int | Yes | index to change <br>The value should be an integer. |
 | val | double | Yes | value to set |
 
 ## set
@@ -1903,7 +1903,7 @@ Copies all elements of arr to the current Int32Array starting from insertPos.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | arr | FixedArray&lt;int&gt; | Yes | array to copy data from |
-| insertPos | int | Yes | start index where data from arr will be inserted &lt;br&gt;The value should be an integer. |
+| insertPos | int | Yes | start index where data from arr will be inserted <br>The value should be an integer. |
 
 ## set
 
@@ -1956,7 +1956,7 @@ Copies all elements of arr to the current Int32Array starting from insertPos.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | arr | FixedArray&lt;double&gt; | Yes | array to copy data from |
-| insertPos | int | Yes | start index where data from arr will be inserted &lt;br&gt;The value should be an integer. |
+| insertPos | int | Yes | start index where data from arr will be inserted <br>The value should be an integer. |
 
 ## set
 
@@ -2009,7 +2009,7 @@ Copies all elements of arr to the current Int32Array starting from offset.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | array | Int32Array | Yes | array to copy data from |
-| offset | int | Yes | start index where data from arr will be inserted &lt;br&gt;The value should be an integer. |
+| offset | int | Yes | start index where data from arr will be inserted <br>The value should be an integer. |
 
 ## set
 
@@ -2036,7 +2036,7 @@ Copies elements from an ArrayLike object to the Int32Array.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | array | ArrayLike&lt;double&gt; | Yes | An ArrayLike object containing the elements to copy. |
-| offset | int | Yes | Optional. The offset into the target array at which to begin writing values from the source array. The default value is 0. &lt;br&gt;The value should be an integer. |
+| offset | int | Yes | Optional. The offset into the target array at which to begin writing values from the source array. The default value is 0. <br>The value should be an integer. |
 
 ## slice
 
@@ -2413,8 +2413,8 @@ Returns a new Int32Array with the element at the given index replaced by the giv
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | index to change &lt;br&gt;The value should be an integer. |
-| value | int | Yes | value to set &lt;br&gt;The value should be an integer. |
+| index | int | Yes | index to change <br>The value should be an integer. |
+| value | int | Yes | value to set <br>The value should be an integer. |
 
 **Return value:**
 
@@ -2446,7 +2446,7 @@ Returns a new Int32Array with the element at the given index replaced by the giv
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | index to change &lt;br&gt;The value should be an integer. |
+| index | int | Yes | index to change <br>The value should be an integer. |
 | value | double | Yes | value to set |
 
 **Return value:**

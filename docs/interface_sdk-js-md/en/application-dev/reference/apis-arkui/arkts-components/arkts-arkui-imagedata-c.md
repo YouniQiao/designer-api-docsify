@@ -38,9 +38,9 @@ Creates an **ImageData** object with the specified width, height, and color. If 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | number | Yes | Width of the rectangle.&lt;br&gt;Default unit: vp&lt;br&gt; Invalid values **NaN** and **Infinity** are treated as **0**. |
-| height | number | Yes | Height of the rectangle.&lt;br&gt;Default unit: vp&lt;br&gt; Invalid values **NaN** and **Infinity** are treated as **0**. |
-| data | Uint8ClampedArray | No | A one-dimensional array of color values. The values range from 0 to 255.&lt;br&gt; If the value specified is **undefined**, **data** is **undefined**.&lt;br&gt; Default value: a one-dimensional array of all 0s |
+| width | number | Yes | Width of the rectangle.<br>Default unit: vp<br> Invalid values **NaN** and **Infinity** are treated as **0**. |
+| height | number | Yes | Height of the rectangle.<br>Default unit: vp<br> Invalid values **NaN** and **Infinity** are treated as **0**. |
+| data | Uint8ClampedArray | No | A one-dimensional array of color values. The values range from 0 to 255.<br> If the value specified is **undefined**, **data** is **undefined**.<br> Default value: a one-dimensional array of all 0s |
 
 ## constructor
 
@@ -70,10 +70,10 @@ Creates an **ImageData** object with the specified width, height, and color. If 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | number | Yes | Width of the rectangle.&lt;br&gt;Default unit: vp&lt;br&gt; Invalid values **NaN** and **Infinity** are treated as **0**. |
-| height | number | Yes | Height of the rectangle.&lt;br&gt;Default unit: vp&lt;br&gt; Invalid values **NaN** and **Infinity** are treated as **0**. |
-| data | Uint8ClampedArray | No | A one-dimensional array of color values. The values range from 0 to 255.&lt;br&gt; If the value specified is **undefined**, **data** is **undefined**.&lt;br&gt; Default value: a one-dimensional array of all 0s |
-| unit | LengthMetricsUnit | No | Unit mode of the **ImageData** object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md#CanvasRenderingContext2D).&lt;br&gt; Invalid values **undefined**, **NaN** and **Infinity** are treated as the default value.&lt;br&gt; Default value: **DEFAULT**. |
+| width | number | Yes | Width of the rectangle.<br>Default unit: vp<br> Invalid values **NaN** and **Infinity** are treated as **0**. |
+| height | number | Yes | Height of the rectangle.<br>Default unit: vp<br> Invalid values **NaN** and **Infinity** are treated as **0**. |
+| data | Uint8ClampedArray | No | A one-dimensional array of color values. The values range from 0 to 255.<br> If the value specified is **undefined**, **data** is **undefined**.<br> Default value: a one-dimensional array of all 0s |
+| unit | LengthMetricsUnit | No | Unit mode of the **ImageData** object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md#CanvasRenderingContext2D).<br> Invalid values **undefined**, **NaN** and **Infinity** are treated as the default value.<br> Default value: **DEFAULT**. |
 
 ## data
 

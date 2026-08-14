@@ -3,7 +3,21 @@
 ## Modules to Import
 
 ```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
+import { ConflictFiles } from 'ConflictFiles';
+import { FileFilter } from 'FileFilter';
+import { Filter } from 'Filter';
+import { Options } from 'Options';
+import { ReaderIteratorResult } from 'ReaderIteratorResult';
+import { WatchEvent } from 'WatchEvent';
+import { WatchEventListener } from 'WatchEventListener';
+import { Watcher } from 'Watcher';
+import { ReadOptions } from 'ReadOptions';
+import { ReadTextOptions } from 'ReadTextOptions';
+import { WriteOptions } from 'WriteOptions';
+import { ListFileExtOptions } from 'ListFileExtOptions';
+import { ListFileOptions } from 'ListFileOptions';
+import { DfsListeners } from 'DfsListeners';
+import { TaskSignal } from 'TaskSignal';
 ```
 
 ## mkdir
@@ -84,7 +98,7 @@ Creates a directory. This API uses a promise to return the result. The value **t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the directory. |
-| recursion | boolean | Yes | Whether to create a directory recursively.&lt;br&gt; The value **true** means to create a directory recursively. The value **false** means to create a single-level directory. |
+| recursion | boolean | Yes | Whether to create a directory recursively.<br> The value **true** means to create a directory recursively. The value **false** means to create a single-level directory. |
 
 **Return value:**
 
@@ -186,7 +200,7 @@ Creates a directory. This API uses an asynchronous callback to return the result
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the directory. |
-| recursion | boolean | Yes | Whether to create a directory recursively.&lt;br&gt; The value **true** means to create a directory recursively. The value **false** means to create a single-level directory. |
+| recursion | boolean | Yes | Whether to create a directory recursively.<br> The value **true** means to create a directory recursively. The value **false** means to create a single-level directory. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**

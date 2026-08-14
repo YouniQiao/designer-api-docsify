@@ -15,7 +15,10 @@ Represents the parameter of the constructor used to create a **PathShape** objec
 ## Modules to Import
 
 ```TypeScript
-import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
+import { RectShape } from 'RectShape';
+import { CircleShape } from 'CircleShape';
+import { EllipseShape } from 'EllipseShape';
+import { PathShape } from 'PathShape';
 ```
 
 ## commands

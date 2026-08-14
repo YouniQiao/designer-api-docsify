@@ -15,7 +15,7 @@ The **ImageSource** class provides APIs to obtain image information. Before call
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'image';
 ```
 
 ## createImageRawData
@@ -1234,7 +1234,7 @@ Get image information from image source synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | No | Index of sequence image. If this parameter is specified, default value is 0 &lt;br&gt;The value range is all integers. |
+| index | int | No | Index of sequence image. If this parameter is specified, default value is 0 <br>The value range is all integers. |
 
 **Return value:**
 

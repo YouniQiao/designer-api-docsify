@@ -15,7 +15,7 @@ Defines the progress information. This information is reported only when [Progre
 ## Modules to Import
 
 ```TypeScript
-import { pasteboard } from '@kit.BasicServicesKit';
+import { pasteboard } from 'pasteboard';
 ```
 
 ## progress

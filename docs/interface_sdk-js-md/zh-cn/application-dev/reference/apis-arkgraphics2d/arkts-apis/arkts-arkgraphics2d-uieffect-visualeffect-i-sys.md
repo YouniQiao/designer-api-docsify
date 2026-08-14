@@ -367,6 +367,34 @@ distortionCollapse(distortionParam: DistortionParam): VisualEffect
 | --- | --- |
 | VisualEffect | 返回添加了非线性形变效果的VisualEffect。 |
 
+## 示例
+
+```TypeScript
+import { uiEffect } from '@kit.ArkGraphics2D';
+
+@Entry
+@Component
+struct Index {
+  private distortionParam: DistortionParam = {
+    topLeft: {x: 0.09, y: 0.007},
+    topRight: {x: 0.91, y: 0.007},
+    bottomRight: {x: 1.09, y: 0.702},
+    bottomLeft: {x: -0.09, y: 0.702},
+    barrelDistortion: {x: 0.551, y: 0.551, z: 0.092, w: 0.092},
+  }
+
+  build() {
+    Column() {
+      Image($r('app.media.man')).width('80%').height('80%')
+        .visualEffect(uiEffect.createEffect().distortionCollapse(this.distortionParam))
+    }
+    .justifyContent(FlexAlign.Center)
+    .height('100%')
+    .width('100%')
+  }
+}
+```
+
 ## liquidMaterial
 
 ```TypeScript

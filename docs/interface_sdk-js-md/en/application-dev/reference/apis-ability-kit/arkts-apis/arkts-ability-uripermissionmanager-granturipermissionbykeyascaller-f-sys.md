@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { uriPermissionManager } from '@kit.AbilityKit';
+import { uriPermissionManager } from 'uriPermissionManager';
 ```
 
 ## grantUriPermissionByKeyAsCaller
@@ -32,8 +32,8 @@ Grants the URI access permission of the specified application to the target appl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| key | string | Yes | Unique key of the target UDMF data. The key must be created by the application (corresponding to **callerTokenId**) through [unifiedDataChannel.insertData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-insertdata-f.md#insertData) , and the written data must be the URIs of the authorized files.&lt;br&gt;Currently, only the keys of the [UDMF data channels](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-intention-e.md#Intention) of the **SYSTEM_SHARE**, **PICKER**, and **MENU** types are supported. For details about how to create and use a key, see [Sharing Data via Unified Data Channels](../../../database/unified-data-channels.md). |
-| flag | wantConstant.Flags | Yes | Read or write permission on the file to grant. The options are as follows:&lt;br&gt;- **FLAG_AUTH_READ_URI_PERMISSION**: read permission.&lt;br&gt;- **FLAG_AUTH_WRITE_URI_PERMISSION**: write permission. |
+| key | string | Yes | Unique key of the target UDMF data. The key must be created by the application (corresponding to **callerTokenId**) through [unifiedDataChannel.insertData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-insertdata-f.md#insertData) , and the written data must be the URIs of the authorized files.<br>Currently, only the keys of the [UDMF data channels](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-intention-e.md#Intention) of the **SYSTEM_SHARE**, **PICKER**, and **MENU** types are supported. For details about how to create and use a key, see [Sharing Data via Unified Data Channels](../../../database/unified-data-channels.md). |
+| flag | wantConstant.Flags | Yes | Read or write permission on the file to grant. The options are as follows:<br>- **FLAG_AUTH_READ_URI_PERMISSION**: read permission.<br>- **FLAG_AUTH_WRITE_URI_PERMISSION**: write permission. |
 | callerTokenId | int | Yes | Identity of the caller application. You can obtain the value from the **ohos.aafwk.param.callerToken** field in [want](arkts-ability-app-ability-want-want-c.md#Want). |
 | targetTokenId | int | Yes | Identity of the target application, which can be obtained through [bundleManager.getApplicationInfo](arkts-ability-bundlemanager-getapplicationinfo-f-sys.md#getApplicationInfo-(System-API)) . |
 

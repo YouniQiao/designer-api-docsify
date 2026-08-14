@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { WantAgent } from '@kit.AbilityKit';
+import { WantAgent } from 'WantAgent';
 ```
 
 ## getWant

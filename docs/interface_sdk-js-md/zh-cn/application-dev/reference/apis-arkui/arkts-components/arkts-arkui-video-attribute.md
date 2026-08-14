@@ -66,7 +66,7 @@ autoPlay(value: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 是否自动播放。 &lt;br&gt;true：开启自动播放；false：关闭自动播放。 &lt;br&gt;默认值：false |
+| value | boolean | 是 | 是否自动播放。 <br>true：开启自动播放；false：关闭自动播放。 <br>默认值：false |
 
 ## controls
 
@@ -92,7 +92,7 @@ controls(value: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 控制视频播放的控制栏是否显示。 &lt;br&gt;true：控制栏显示；false：控制栏不显示。 &lt;br&gt;默认值：true &lt;br&gt;**说明：** &lt;br&gt;如需使用[enableAnalyzer](#enableAnalyzer)功能进行AI分析，需设置为false使用自定义控制栏。 |
+| value | boolean | 是 | 控制视频播放的控制栏是否显示。 <br>true：控制栏显示；false：控制栏不显示。 <br>默认值：true <br>**说明：** <br>如需使用[enableAnalyzer](#enableAnalyzer)功能进行AI分析，需设置为false使用自定义控制栏。 |
 
 ## enableAnalyzer
 
@@ -120,7 +120,7 @@ enableAnalyzer(enable: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean | 是 | 是否启用AI分析功能。 &lt;br&gt;true：开启AI分析功能；false：关闭AI分析功能。 &lt;br&gt;默认值：false &lt;br&gt;**说明：** &lt;br&gt;不支持与overlay属性同时使用，两者同时设置时overlay中 [CustomBuilder](../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8)属性会失效。 |
+| enable | boolean | 是 | 是否启用AI分析功能。 <br>true：开启AI分析功能；false：关闭AI分析功能。 <br>默认值：false <br>**说明：** <br>不支持与overlay属性同时使用，两者同时设置时overlay中 [CustomBuilder](../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8)属性会失效。 |
 
 ## enableShortcutKey
 
@@ -148,7 +148,7 @@ enableShortcutKey(enabled: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enabled | boolean | 是 | 是否启用快捷键响应。 &lt;br&gt;true：开启快捷键响应；false：关闭快捷键响应。 &lt;br&gt;默认值：false &lt;br&gt;**说明：** &lt;br&gt;enabled设置为false且controls属性设置为true时，仍然可以通过左右方向键控制进度条快进或快退。 |
+| enabled | boolean | 是 | 是否启用快捷键响应。 <br>true：开启快捷键响应；false：关闭快捷键响应。 <br>默认值：false <br>**说明：** <br>enabled设置为false且controls属性设置为true时，仍然可以通过左右方向键控制进度条快进或快退。 |
 
 ## loop
 
@@ -174,7 +174,7 @@ loop(value: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 是否单个视频循环播放。 &lt;br&gt;true：开启循环播放；false：关闭循环播放。 &lt;br&gt;默认值：false |
+| value | boolean | 是 | 是否单个视频循环播放。 <br>true：开启循环播放；false：关闭循环播放。 <br>默认值：false |
 
 ## muted
 
@@ -200,7 +200,7 @@ muted(value: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 视频是否静音。 &lt;br&gt;true：开启静音；false：关闭静音。 &lt;br&gt;默认值：false |
+| value | boolean | 是 | 视频是否静音。 <br>true：开启静音；false：关闭静音。 <br>默认值：false |
 
 ## objectFit
 
@@ -226,7 +226,7 @@ objectFit(value: ImageFit)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | ImageFit | 是 | 视频填充模式。 &lt;br&gt;默认值：ImageFit.Cover &lt;br&gt;约束：不支持ImageFit类型中的枚举值MATRIX，若设置，则作用效果与ImageFit.Cover一致。 &lt;br&gt;异常值：若设置异常值undefined、null，或不在ImageFit枚举范围内的值，作用效果均与ImageFit.Cover一致。 |
+| value | ImageFit | 是 | 视频填充模式。 <br>默认值：ImageFit.Cover <br>约束：不支持ImageFit类型中的枚举值MATRIX，若设置，则作用效果与ImageFit.Cover一致。 <br>异常值：若设置异常值undefined、null，或不在ImageFit枚举范围内的值，作用效果均与ImageFit.Cover一致。 |
 
 ## onError
 

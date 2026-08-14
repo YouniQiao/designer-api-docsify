@@ -371,7 +371,7 @@ addInteropAbilityMonitorSync(monitor: InteropAbilityMonitor): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| monitor | [InteropAbilityMonitor](../../apis-test-kit/arkts-apis/arkts-test-abilitydelegatorregistry-interopabilitymonitor-t.md) | 是 | InteropAbilityMonitor对象。 |
+| monitor | [InteropAbilityMonitor](arkts-ability-interopabilitymonitor-i.md) | 是 | InteropAbilityMonitor对象。 |
 
 **错误码：**
 
@@ -1650,7 +1650,7 @@ removeInteropAbilityMonitorSync(monitor: InteropAbilityMonitor): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| monitor | [InteropAbilityMonitor](../../apis-test-kit/arkts-apis/arkts-test-abilitydelegatorregistry-interopabilitymonitor-t.md) | 是 | InteropAbilityMonitor对象。 |
+| monitor | [InteropAbilityMonitor](arkts-ability-interopabilitymonitor-i.md) | 是 | InteropAbilityMonitor对象。 |
 
 **错误码：**
 

@@ -38,7 +38,7 @@ Sets whether the **ColorMetrics** object automatically updates with system confi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether the **ColorMetrics** object constructed using [resourceColor](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md#resourceColor) automatically refreshes the color value when the system configuration changes. &lt;br&gt;**true**: The object proactively listens to the system configuration changes, and refreshes the value to the resource value corresponding to the configuration when the configuration changes. &lt;br&gt;**false**: The object does not proactively listen to the system configuration changes. |
+| value | boolean | Yes | Whether the **ColorMetrics** object constructed using [resourceColor](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md#resourceColor) automatically refreshes the color value when the system configuration changes. <br>**true**: The object proactively listens to the system configuration changes, and refreshes the value to the resource value corresponding to the configuration when the configuration changes. <br>**false**: The object does not proactively listen to the system configuration changes. |
 
 **Return value:**
 
@@ -150,7 +150,7 @@ Instantiates the **ColorMetrics** class using a color in HEX format.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Color in HEX format. &lt;br&gt;RGB and ARGB color values are supported. |
+| value | number | Yes | Color in HEX format. <br>RGB and ARGB color values are supported. |
 
 **Return value:**
 
@@ -228,7 +228,7 @@ Instantiates the **ColorMetrics** class using colors in RGB or RGBA format.
 | red | number | Yes | Red component of the color. The value is an integer ranging from 0 to 255. |
 | green | number | Yes | Green component of the color. The value is an integer ranging from 0 to 255. |
 | blue | number | Yes | Blue component of the color. The value is an integer ranging from 0 to 255. |
-| alpha | number | No | Alpha component of the color. The value is a floating point number ranging from 0.0 to 1. 0. The default value is **1.0** (fully opaque). &lt;br&gt; Note: If alpha is less than 0, the color is fully transparent. If alpha is greater than 1, the color is opaque. |
+| alpha | number | No | Alpha component of the color. The value is a floating point number ranging from 0.0 to 1. 0. The default value is **1.0** (fully opaque). <br> Note: If alpha is less than 0, the color is fully transparent. If alpha is greater than 1, the color is opaque. |
 
 **Return value:**
 

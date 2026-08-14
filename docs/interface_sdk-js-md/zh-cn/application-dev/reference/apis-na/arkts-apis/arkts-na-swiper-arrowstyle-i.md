@@ -90,7 +90,7 @@ backgroundColor?: ResourceColor
 backgroundSize?: Length
 ```
 
-设置底板大小。 不支持设置百分比。 &lt;br&gt;在导航点两侧显示： 默认值：24vp 在组件两侧显示： 默认值：32vp。
+设置底板大小。 不支持设置百分比。 <br>在导航点两侧显示： 默认值：24vp 在组件两侧显示： 默认值：32vp。
 
 **类型：** [Length](../../apis-arkui/arkts-apis/arkts-arkui-length-t.md)
 

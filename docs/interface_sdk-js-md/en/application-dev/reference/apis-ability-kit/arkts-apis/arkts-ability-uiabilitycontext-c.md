@@ -838,7 +838,7 @@ export default class EntryAbility extends UIAbility {
 moveAbilityToBackground(): Promise<void>
 ```
 
-Moves this UIAbility from the foreground to the background. This API uses a promise to return the result. It can be called only on the main thread.&lt;br&gt;&lt;!--RP1--&gt;&lt;!--RP1End--&gt; Starting from API version 12, this API can be properly called on phones, wearables, and TVs. If it is called on other device types, error code 16000061 is returned. Starting from API version 13, this API can be properly called on phones, tablets, wearables, and TVs. If it is called on other device types, error code 16000061 is returned. **Atomic service API**: This API can be used in atomic services since API version 12.
+Moves this UIAbility from the foreground to the background. This API uses a promise to return the result. It can be called only on the main thread.<br>&lt;!--RP1--&gt;&lt;!--RP1End--&gt; Starting from API version 12, this API can be properly called on phones, wearables, and TVs. If it is called on other device types, error code 16000061 is returned. Starting from API version 13, this API can be properly called on phones, tablets, wearables, and TVs. If it is called on other device types, error code 16000061 is returned. **Atomic service API**: This API can be used in atomic services since API version 12.
 
 **Since:** 23
 
@@ -1651,7 +1651,7 @@ Sets the dark/light color mode for this UIAbility. Before calling this API, ensu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorMode | ConfigurationConstant.ColorMode | Yes | Color mode. The options are as follows:&lt;br&gt; - **COLOR_MODE_DARK** : dark mode.&lt;br&gt; - **COLOR_MODE_LIGHT**: light mode.&lt;br&gt; - **COLOR_MODE_NOT_SET**: not set (following the system or application). |
+| colorMode | ConfigurationConstant.ColorMode | Yes | Color mode. The options are as follows:<br> - **COLOR_MODE_DARK** : dark mode.<br> - **COLOR_MODE_LIGHT**: light mode.<br> - **COLOR_MODE_NOT_SET**: not set (following the system or application). |
 
 **Error codes:**
 
@@ -3424,7 +3424,7 @@ Starts the application's own UIAbility within the current process. This API can 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Mandatory information for starting the UIAbility. Only explicit startup is supported. [Implicit startup](../../../application-models/explicit-implicit-want-mappings.md# matching-rules-of-implicit-want) is not supported. |
-| specifiedFlag | string | Yes | ID of the UIAbility. This ID must not duplicate that of any already running UIAbility instance; otherwise, an error is returned.&lt;br&gt;**NOTE：**&lt;br&gt;When this API is used to start a UIAbility instance in [specified](../../../application-models/uiability-launch-type.md#specified) mode, the [onAcceptWant](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onAcceptWant) callback is not triggered. |
+| specifiedFlag | string | Yes | ID of the UIAbility. This ID must not duplicate that of any already running UIAbility instance; otherwise, an error is returned.<br>**NOTE：**<br>When this API is used to start a UIAbility instance in [specified](../../../application-models/uiability-launch-type.md#specified) mode, the [onAcceptWant](arkts-ability-app-ability-abilitystage-abilitystage-c.md#onAcceptWant) callback is not triggered. |
 | options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | No | Parameters used for starting the UIAbility. |
 
 **Return value:**

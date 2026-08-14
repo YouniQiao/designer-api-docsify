@@ -15,7 +15,9 @@ Declare Component ProgressButtonV2
 ## Modules to Import
 
 ```TypeScript
-import { ProgressButtonV2, ProgressButtonV2ColorOptions, ProgressButtonV2Color } from '@kit.ArkUI';
+import { ProgressButtonV2 } from 'ProgressButtonV2';
+import { ProgressButtonV2Color } from 'ProgressButtonV2Color';
+import { ProgressButtonV2ColorOptions } from 'ProgressButtonV2ColorOptions';
 ```
 
 ## colorOptions

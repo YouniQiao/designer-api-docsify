@@ -19,7 +19,7 @@ Manager a2dp source profile.
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from '@kit.ConnectivityKit';
+import { bluetooth } from 'bluetooth';
 ```
 
 ## connect
@@ -56,6 +56,13 @@ Connect to device with a2dp.
 | --- | --- |
 | boolean | Returns { |
 
+## Examples
+
+```TypeScript
+let a2dpSrc : bluetooth.A2dpSourceProfile = bluetooth.getProfile(bluetooth.ProfileId.PROFILE_A2DP_SOURCE) as bluetooth.A2dpSourceProfile;
+let ret : boolean = a2dpSrc.connect('XX:XX:XX:XX:XX:XX');
+```
+
 ## disconnect
 
 ```TypeScript
@@ -90,6 +97,13 @@ Disconnect to device with a2dp.
 | --- | --- |
 | boolean | Returns { |
 
+## Examples
+
+```TypeScript
+let a2dpSrc : bluetooth.A2dpSourceProfile = bluetooth.getProfile(bluetooth.ProfileId.PROFILE_A2DP_SOURCE) as bluetooth.A2dpSourceProfile;
+let ret : boolean = a2dpSrc.disconnect('XX:XX:XX:XX:XX:XX');
+```
+
 ## getPlayingState
 
 ```TypeScript
@@ -121,6 +135,13 @@ Obtains the playing state of device.
 | Type | Description |
 | --- | --- |
 | PlayingState | Returns { |
+
+## Examples
+
+```TypeScript
+let a2dpSrc : bluetooth.A2dpSourceProfile = bluetooth.getProfile(bluetooth.ProfileId.PROFILE_A2DP_SOURCE) as bluetooth.A2dpSourceProfile;
+let state : bluetooth.PlayingState = a2dpSrc.getPlayingState('XX:XX:XX:XX:XX:XX');
+```
 
 ## off_connectionStateChange
 

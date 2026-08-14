@@ -15,7 +15,7 @@ Defines the application collaboration information.
 ## Modules to Import
 
 ```TypeScript
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
+import { abilityConnectionManager } from 'abilityConnectionManager';
 ```
 
 ## abilityName

@@ -15,7 +15,8 @@ Defines a content form card.
 ## Modules to Import
 
 ```TypeScript
-import { ContentFormCard, FormType } from '@kit.ArkData';
+import { ContentFormCard } from 'ContentFormCard';
+import { FormType } from 'FormType';
 ```
 
 ## contentFormData

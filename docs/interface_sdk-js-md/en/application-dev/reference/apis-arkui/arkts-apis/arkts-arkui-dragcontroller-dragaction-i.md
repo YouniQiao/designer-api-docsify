@@ -15,7 +15,7 @@ One drag action object for drag process
 ## Modules to Import
 
 ```TypeScript
-import { dragController } from '@kit.ArkUI';
+import { dragController } from 'dragController';
 ```
 
 ## offStatusChange

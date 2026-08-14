@@ -15,7 +15,7 @@ The lifecycle of a [UIAbility](arkts-ability-app-ability-uiability-uiability-c.m
 ## Modules to Import
 
 ```TypeScript
-import { AbilityLifecycleCallback } from '@kit.AbilityKit';
+import { AbilityLifecycleCallback } from 'AbilityLifecycleCallback';
 ```
 
 ## onAbilityBackground

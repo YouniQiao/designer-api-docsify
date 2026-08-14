@@ -64,7 +64,7 @@ radius(radius: double | string | Array<double | string>): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| radius | double \| string \| Array&lt;double \| string&gt; | 是 | Array<double |
+| radius | double \| string \| Array&lt;double \| string&gt; | 是 | Array&lt;double |
 
 **返回值：**
 
@@ -96,7 +96,7 @@ radiusHeight(rHeight: double | string): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rHeight | double \| string | 是 | 矩形形状圆角半径的高度。 &lt;br/&gt; 类型为number时取值范围是 0, +∞)，类型为string时是[Length。&lt;br/&gt;单位：vp&lt;br/&gt;取值为异常值时按照0vp处理。 |
+| rHeight | double \| string | 是 | 矩形形状圆角半径的高度。 <br/> 类型为number时取值范围是 0, +∞)，类型为string时是[Length。<br/>单位：vp<br/>取值为异常值时按照0vp处理。 |
 
 **返回值：**
 
@@ -128,7 +128,7 @@ radiusWidth(rWidth: double | string): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rWidth | double \| string | 是 | 矩形形状圆角半径的宽度。&lt;br/&gt; 类型为double时取值范围是 0, +∞)，类型为string时是[Length。&lt;br/&gt;单位：vp&lt;br/&gt;取值为异常值时按照0vp处理。 |
+| rWidth | double \| string | 是 | 矩形形状圆角半径的宽度。<br/> 类型为double时取值范围是 0, +∞)，类型为string时是[Length。<br/>单位：vp<br/>取值为异常值时按照0vp处理。 |
 
 **返回值：**
 

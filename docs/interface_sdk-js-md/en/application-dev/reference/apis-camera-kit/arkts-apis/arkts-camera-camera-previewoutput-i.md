@@ -17,7 +17,7 @@ PreviewOutput implements preview output. It inherits from [CameraOutput](arkts-c
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'camera';
 ```
 
 ## enableBandwidthCompression
@@ -138,7 +138,7 @@ Obtains the preview rotation angle. - Device' natural orientation: the default o
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayRotation | int | No | Screen rotation angle of the display. It is obtained by calling [display.getDefaultDisplaySync](../../apis-arkui/arkts-apis/arkts-arkui-display-getdefaultdisplaysync-f.md#getDefaultDisplaySync). &lt;br&gt; Since API version 23, the input parameter **displayRotation** is optional. If no parameter is passed, the system obtains the **displayRotation** value to calculate rotation angle of a video. &lt;br&gt; The value ranges from 0 to 360, in degrees.<br>**Since:** 23 |
+| displayRotation | int | No | Screen rotation angle of the display. It is obtained by calling [display.getDefaultDisplaySync](../../apis-arkui/arkts-apis/arkts-arkui-display-getdefaultdisplaysync-f.md#getDefaultDisplaySync). <br> Since API version 23, the input parameter **displayRotation** is optional. If no parameter is passed, the system obtains the **displayRotation** value to calculate rotation angle of a video. <br> The value ranges from 0 to 360, in degrees.<br>**Since:** 23 |
 
 **Return value:**
 

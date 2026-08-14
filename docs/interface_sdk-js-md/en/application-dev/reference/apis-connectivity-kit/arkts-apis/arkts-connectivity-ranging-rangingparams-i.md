@@ -15,7 +15,7 @@ Parameters for ranging operation.
 ## Modules to Import
 
 ```TypeScript
-import { ranging } from '@kit.ConnectivityKit';
+import { ranging } from 'ranging';
 ```
 
 ## capabilityType

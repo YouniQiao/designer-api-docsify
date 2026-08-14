@@ -17,7 +17,7 @@ Provides APIs for setting device-cloud synergy, including enabling and disabling
 ## Modules to Import
 
 ```TypeScript
-import { cloudData } from '@kit.ArkData';
+import { cloudData } from 'cloudData';
 ```
 
 ## batchQueryLastSyncInfo
@@ -548,10 +548,10 @@ Synchronizes data of a specified application on the device to the cloud. This AP
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Empty conditions; &lt;br&gt;2. Missing GROUP BY clause. |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Empty conditions; <br>2. Missing GROUP BY clause. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, &lt;br&gt;usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, &lt;br&gt;application which is not a system application uses system API. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, <br>usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, <br>application which is not a system application uses system API. |
 
 ## Examples
 
@@ -605,8 +605,8 @@ Sync data to cloud. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleInfo | BundleInfo | Yes | BundleInfo configuration. &lt;br&gt;the instance object of [BundleInfo](arkts-arkdata-clouddata-bundleinfo-i-sys.md#BundleInfo-(System-API)) |
-| config | relationalStore.CloudSyncConfig | Yes | Indicates cloud sync configuration. &lt;br&gt;the instance object of [CloudSyncConfig](arkts-arkdata-relationalstore-cloudsyncconfig-i.md#CloudSyncConfig) |
+| bundleInfo | BundleInfo | Yes | BundleInfo configuration. <br>the instance object of [BundleInfo](arkts-arkdata-clouddata-bundleinfo-i-sys.md#BundleInfo-(System-API)) |
+| config | relationalStore.CloudSyncConfig | Yes | Indicates cloud sync configuration. <br>the instance object of [CloudSyncConfig](arkts-arkdata-relationalstore-cloudsyncconfig-i.md#CloudSyncConfig) |
 | progress | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;relationalStore.ProgressDetails&gt; | Yes | Callback used to return the sync progress. |
 
 **Return value:**
@@ -621,7 +621,7 @@ Sync data to cloud. This API uses a promise to return the result.
 | --- | --- |
 | [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. Empty conditions. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because the device does not support the device-cloud capability. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, &lt;br&gt;usually the result returned by VerifyAccessToken. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, <br>usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application is not a system application. |
 
 ## disableCloud
@@ -1221,7 +1221,7 @@ Remove specified observer of specified type from the database.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. bundlename is null; &lt;br&gt;2. the number of bundleInfos exceeds the upper limit or the number is 0. |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. bundlename is null; <br>2. the number of bundleInfos exceeds the upper limit or the number is 0. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because the device does not support the device-cloud capability. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
@@ -1264,7 +1264,7 @@ Subscribes to changes in the sync information of a specified application.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. bundlename is null; &lt;br&gt;2. the number of bundleInfos exceeds the upper limit or the number is 0. |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. bundlename is null; <br>2. the number of bundleInfos exceeds the upper limit or the number is 0. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because the device does not support the device-cloud capability. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
@@ -1499,8 +1499,8 @@ Stops syncing data to the cloud.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. bundlename is null; &lt;br&gt;2. the number of bundleInfos exceeds the upper limit or the number is 0. |
+| [14800001](../errorcode-data-rdb.md#14800001-invalid-arguments) | Invalid arguments. Possible causes: 1. bundlename is null; <br>2. the number of bundleInfos exceeds the upper limit or the number is 0. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because the device does not support the device-cloud capability. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, &lt;br&gt;usually the result returned by VerifyAccessToken. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, <br>usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | if permission verification failed, application which is not a system application uses system API. |
 

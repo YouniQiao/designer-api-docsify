@@ -80,7 +80,7 @@ TYPE_CLICK = 2
 TYPE_LONG_CLICK = 3
 ```
 
-表示长按点击组件。
+表示长按组件。
 
 **起始版本：** 23
 
@@ -280,7 +280,7 @@ TYPE_ANNOUNCE_FOR_ACCESSIBILITY = 12
 TYPE_REQUEST_FOCUS_FOR_ACCESSIBILITY_NOT_INTERRUPT = 13
 ```
 
-表示主动聚焦不打断。
+表示主动聚焦，且该聚焦请求不会被打断。
 
 **起始版本：** 23
 
@@ -300,7 +300,7 @@ TYPE_REQUEST_FOCUS_FOR_ACCESSIBILITY_NOT_INTERRUPT = 13
 TYPE_ANNOUNCE_FOR_ACCESSIBILITY_NOT_INTERRUPT = 14
 ```
 
-表示主动播报不打断。
+表示主动播报，且该播报不会被打断。
 
 **起始版本：** 23
 
@@ -420,7 +420,7 @@ TYPE_WINDOW_BOUNDS = 19
 TYPE_WINDOW_ACTIVE = 20
 ```
 
-表示切换窗口活动状态
+表示窗口活动状态发生变化。
 
 **起始版本：** 23
 
@@ -540,7 +540,7 @@ TYPE_TOUCH_END = 25
 TYPE_PAGE_CONTENT_UPDATE = 26
 ```
 
-表示页面内容刷新。
+表示页面内容更新。
 
 **起始版本：** 23
 
@@ -560,7 +560,7 @@ TYPE_PAGE_CONTENT_UPDATE = 26
 TYPE_PAGE_STATE_UPDATE = 27
 ```
 
-表示页面状态刷新。
+表示页面状态更新。
 
 **起始版本：** 23
 
@@ -620,7 +620,7 @@ TYPE_PAGE_CLOSE = 29
 TYPE_SWIPE_LEFT = 30
 ```
 
-表示向左的手势。
+表示向左滑动的手势。
 
 **起始版本：** 23
 
@@ -700,7 +700,7 @@ TYPE_SWIPE_LEFT_THEN_DOWN = 33
 TYPE_SWIPE_RIGHT = 34
 ```
 
-表示向右的手势。
+表示向右滑动的手势。
 
 **起始版本：** 23
 
@@ -780,7 +780,7 @@ TYPE_SWIPE_RIGHT_THEN_DOWN = 37
 TYPE_SWIPE_UP = 38
 ```
 
-表示向上的手势。
+表示向上滑动的手势。
 
 **起始版本：** 23
 
@@ -860,7 +860,7 @@ TYPE_SWIPE_UP_THEN_DOWN = 41
 TYPE_SWIPE_DOWN = 42
 ```
 
-表示向下的手势。
+表示向下滑动的手势。
 
 **起始版本：** 23
 
@@ -1400,7 +1400,7 @@ TYPE_FOUR_FINGER_SWIPE_RIGHT = 68
 TYPE_PAGE_ACTIVE = 69
 ```
 
-表示页面发生变化。
+表示页面活动状态发生变化。
 
 **起始版本：** 23
 
@@ -1420,7 +1420,7 @@ TYPE_PAGE_ACTIVE = 69
 TYPE_NOTIFICATION_UPDATE = 70
 ```
 
-表示通知发生变化。
+表示通知内容或状态发生更新。
 
 **起始版本：** 26.0.0
 
@@ -1442,7 +1442,7 @@ TYPE_NOTIFICATION_UPDATE = 70
 TYPE_FOCUS_INVISIBLE = 71
 ```
 
-accessibility focus element is invisible type
+表示焦点变为不可见状态。
 
 **起始版本：** 26.0.0
 
@@ -1464,7 +1464,7 @@ accessibility focus element is invisible type
 TYPE_ONE_FINGER_DOUBLE_TAP = 72
 ```
 
-one finger double tap type
+表示单指双击的手势。
 
 **起始版本：** 26.0.0
 
@@ -1475,6 +1475,28 @@ one finger double tap type
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-AccessibilityEventType-TYPE_ONE_FINGER_DOUBLE_TAP = 72--><!--Device-AccessibilityEventType-TYPE_ONE_FINGER_DOUBLE_TAP = 72-End-->
+
+**系统能力：** SystemCapability.BarrierFree.Accessibility.Core
+
+**系统接口：** 此接口为系统接口。
+
+## TYPE_TOUCH_GUIDE_GESTURE
+
+```TypeScript
+TYPE_TOUCH_GUIDE_GESTURE = 73
+```
+
+表示触摸浏览手势事件。
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AccessibilityEventType-TYPE_TOUCH_GUIDE_GESTURE = 73--><!--Device-AccessibilityEventType-TYPE_TOUCH_GUIDE_GESTURE = 73-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 

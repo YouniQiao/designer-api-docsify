@@ -36,7 +36,7 @@ ComposeTitleBarV2MenuItem的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| params | [ComposeTitleBarV2MenuItemParams](arkts-na-arkui-advanced-composetitlebarv2-composetitlebarv2menuitemparams-i.md) | 否 | 菜单项参数对象。 |
+| params | [ComposeTitleBarV2MenuItemParams](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composetitlebarv2-composetitlebarv2menuitemparams-i.md) | 否 | 菜单项参数对象。 |
 
 ## accessibilityDescription
 
@@ -118,7 +118,7 @@ ComposeTitleBarV2MenuItem的构造函数。
 
 触发时的动作闭包，item属性不支持触发action事件。
 
-**类型：** [OnActionCallback](arkts-na-onactioncallback-t.md)
+**类型：** [OnActionCallback](../../apis-arkui/arkts-apis/arkts-arkui-onactioncallback-t.md)
 
 **起始版本：** 26.0.0
 

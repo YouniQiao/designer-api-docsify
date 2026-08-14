@@ -15,7 +15,7 @@ Defines a print job.
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'print';
 ```
 
 ## binaryData

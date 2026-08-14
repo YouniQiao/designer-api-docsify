@@ -25,7 +25,7 @@ Returns a copy of a section of an array.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;boolean&gt; | Yes | The array to operate `slice` on. |
-| start | int | Yes | The beginning index of the specified portion of the array. &lt;br&gt;The value should be an integer. |
+| start | int | Yes | The beginning index of the specified portion of the array. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -59,8 +59,8 @@ Returns a copy of a section of an array.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;boolean&gt; | Yes | The array to operate `slice` on. |
-| start | int | No | The beginning index of the specified portion of the array. &lt;br&gt;The value should be an integer. |
-| end | int | No | The end index of the specified portion of the array. The slice includes elements up to but not including the end index. &lt;br&gt;The value should be an integer. |
+| start | int | No | The beginning index of the specified portion of the array. <br>The value should be an integer. |
+| end | int | No | The end index of the specified portion of the array. The slice includes elements up to but not including the end index. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -94,7 +94,7 @@ Returns a copy of a section of an array.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;byte&gt; | Yes | The array to operate `slice` on. |
-| start | int | Yes | The beginning index of the specified portion of the array. &lt;br&gt;The value should be an integer. |
+| start | int | Yes | The beginning index of the specified portion of the array. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -128,8 +128,8 @@ Returns a copy of a section of an array.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;byte&gt; | Yes | The array to operate `slice` on. |
-| start | int | No | The beginning index of the specified portion of the array. &lt;br&gt;The value should be an integer. |
-| end | int | No | The end index of the specified portion of the array. The slice includes elements up to but not including the end index. &lt;br&gt;The value should be an integer. |
+| start | int | No | The beginning index of the specified portion of the array. <br>The value should be an integer. |
+| end | int | No | The end index of the specified portion of the array. The slice includes elements up to but not including the end index. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -163,7 +163,7 @@ Returns a copy of a section of an array.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;short&gt; | Yes | The array to operate `slice` on. |
-| start | int | Yes | The beginning index of the specified portion of the array. &lt;br&gt;The value should be an integer. |
+| start | int | Yes | The beginning index of the specified portion of the array. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -197,8 +197,8 @@ Returns a copy of a section of an array.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;short&gt; | Yes | The array to operate `slice` on. |
-| start | int | No | The beginning index of the specified portion of the array. &lt;br&gt;The value should be an integer. |
-| end | int | No | The end index of the specified portion of the array. The slice includes elements up to but not including the end index. &lt;br&gt;The value should be an integer. |
+| start | int | No | The beginning index of the specified portion of the array. <br>The value should be an integer. |
+| end | int | No | The end index of the specified portion of the array. The slice includes elements up to but not including the end index. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -232,7 +232,7 @@ Returns a copy of a section of an array.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;int&gt; | Yes | The array to operate `slice` on. |
-| start | int | Yes | The beginning index of the specified portion of the array. &lt;br&gt;The value should be an integer. |
+| start | int | Yes | The beginning index of the specified portion of the array. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -266,8 +266,8 @@ Returns a copy of a section of an array.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;int&gt; | Yes | The array to operate `slice` on. |
-| start | int | No | The beginning index of the specified portion of the array. &lt;br&gt;The value should be an integer. |
-| end | int | No | The end index of the specified portion of the array. The slice includes elements up to but not including the end index. &lt;br&gt;The value should be an integer. |
+| start | int | No | The beginning index of the specified portion of the array. <br>The value should be an integer. |
+| end | int | No | The end index of the specified portion of the array. The slice includes elements up to but not including the end index. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -301,7 +301,7 @@ Returns a copy of a section of an array.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;long&gt; | Yes | The array to operate `slice` on. |
-| start | int | Yes | The beginning index of the specified portion of the array. &lt;br&gt;The value should be an integer. |
+| start | int | Yes | The beginning index of the specified portion of the array. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -335,8 +335,8 @@ Returns a copy of a section of an array.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;long&gt; | Yes | The array to operate `slice` on. |
-| start | int | No | The beginning index of the specified portion of the array. &lt;br&gt;The value should be an integer. |
-| end | int | No | The end index of the specified portion of the array. + The slice includes elements up to but not including the end index. &lt;br&gt;The value should be an integer. |
+| start | int | No | The beginning index of the specified portion of the array. <br>The value should be an integer. |
+| end | int | No | The end index of the specified portion of the array. + The slice includes elements up to but not including the end index. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -370,7 +370,7 @@ Returns a copy of a section of an array.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;float&gt; | Yes | The array to operate `slice` on. |
-| start | int | Yes | The beginning index of the specified portion of the array. &lt;br&gt;The value should be an integer. |
+| start | int | Yes | The beginning index of the specified portion of the array. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -404,8 +404,8 @@ Returns a copy of a section of an array.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;float&gt; | Yes | The array to operate `slice` on. |
-| start | int | No | The beginning index of the specified portion of the array. &lt;br&gt;The value should be an integer. |
-| end | int | No | The end index of the specified portion of the array. The slice includes elements up to but not including the end index. &lt;br&gt;The value should be an integer. |
+| start | int | No | The beginning index of the specified portion of the array. <br>The value should be an integer. |
+| end | int | No | The end index of the specified portion of the array. The slice includes elements up to but not including the end index. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -439,7 +439,7 @@ Returns a copy of a section of an array.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;double&gt; | Yes | The array to operate `slice` on. |
-| start | int | Yes | The beginning index of the specified portion of the array. &lt;br&gt;The value should be an integer. |
+| start | int | Yes | The beginning index of the specified portion of the array. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -473,8 +473,8 @@ Returns a copy of a section of an array.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;double&gt; | Yes | The array to operate `slice` on. |
-| start | int | No | The beginning index of the specified portion of the array. &lt;br&gt;The value should be an integer. |
-| end | int | No | The end index of the specified portion of the array. The slice includes elements up to but not including the end index. &lt;br&gt;The value should be an integer. |
+| start | int | No | The beginning index of the specified portion of the array. <br>The value should be an integer. |
+| end | int | No | The end index of the specified portion of the array. The slice includes elements up to but not including the end index. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -508,7 +508,7 @@ Returns a copy of a section of an array.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;char&gt; | Yes | The array to operate `slice` on. |
-| start | int | Yes | The beginning index of the specified portion of the array. &lt;br&gt;The value should be an integer. |
+| start | int | Yes | The beginning index of the specified portion of the array. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -542,8 +542,8 @@ Returns a copy of a section of an array.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;char&gt; | Yes | The array to operate `slice` on. |
-| start | int | No | The beginning index of the specified portion of the array. &lt;br&gt;The value should be an integer. |
-| end | int | No | The end index of the specified portion of the array. The slice includes elements up to but not including the end index. &lt;br&gt;The value should be an integer. |
+| start | int | No | The beginning index of the specified portion of the array. <br>The value should be an integer. |
+| end | int | No | The end index of the specified portion of the array. The slice includes elements up to but not including the end index. <br>The value should be an integer. |
 
 **Return value:**
 

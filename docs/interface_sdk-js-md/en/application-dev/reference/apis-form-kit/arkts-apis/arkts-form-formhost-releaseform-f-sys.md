@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formHost } from '@kit.FormKit';
+import { formHost } from 'formHost';
 ```
 
 ## releaseForm
@@ -76,7 +76,7 @@ Releases a widget. After this API is called, the application can no longer use t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formId | string | Yes | Widget ID. |
-| isReleaseCache | boolean | Yes | Whether to release the cache. &lt;br&gt;**true**: Release the cache. &lt;br&gt;**false**: Not release the cache. |
+| isReleaseCache | boolean | Yes | Whether to release the cache. <br>**true**: Release the cache. <br>**false**: Not release the cache. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the widget is released, **error** is undefined; otherwise, **error** is an error object. |
 
 **Error codes:**
@@ -120,7 +120,7 @@ Releases a widget. After this API is called, the application can no longer use t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formId | string | Yes | Widget ID. |
-| isReleaseCache | boolean | No | Whether to release the cache. The default value is **false**. &lt;br&gt;**true**: Release the cache. &lt;br&gt;**false**: Not release the cache. |
+| isReleaseCache | boolean | No | Whether to release the cache. The default value is **false**. <br>**true**: Release the cache. <br>**false**: Not release the cache. |
 
 **Return value:**
 

@@ -17,7 +17,7 @@ Describes the rule for launching an embedded atomic service.
 ## Modules to Import
 
 ```TypeScript
-import { abilityManager } from '@kit.AbilityKit';
+import { abilityManager } from 'abilityManager';
 ```
 
 ## isEmbeddedAllowed

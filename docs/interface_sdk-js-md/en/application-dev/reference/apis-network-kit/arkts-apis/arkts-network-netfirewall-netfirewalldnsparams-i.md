@@ -15,7 +15,7 @@ Firewall DNS parameters.
 ## Modules to Import
 
 ```TypeScript
-import { netFirewall } from '@kit.NetworkKit';
+import { netFirewall } from 'netFirewall';
 ```
 
 ## primaryDns

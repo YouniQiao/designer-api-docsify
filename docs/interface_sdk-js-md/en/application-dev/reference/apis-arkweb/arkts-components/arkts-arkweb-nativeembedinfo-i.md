@@ -18,7 +18,7 @@ Provides detailed information about the same-layer tag.
 height?: number
 ```
 
-The embed tag height. &lt;br&gt;Unit:px.
+The embed tag height. <br>Unit:px.
 
 **Type:** number
 
@@ -84,7 +84,7 @@ List of key-value pairs contained in the **object** tag that form a map of the O
 position?: Position
 ```
 
-Position of the same-layer tag relative to the upper left corner of the **Web** component as the coordinate origin, This position is different from the standard position. &lt;br&gt;Unit: pixels.
+Position of the same-layer tag relative to the upper left corner of the **Web** component as the coordinate origin, This position is different from the standard position. <br>Unit: pixels.
 
 **Type:** Position
 
@@ -194,7 +194,7 @@ URL of the same-layer tag.
 width?: number
 ```
 
-The embed tag width. &lt;br&gt;Unit:px.
+The embed tag width. <br>Unit:px.
 
 **Type:** number
 

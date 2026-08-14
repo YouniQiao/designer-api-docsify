@@ -15,7 +15,7 @@ Implements a PiP controller that starts, stops, or updates a PiP window and regi
 ## Modules to Import
 
 ```TypeScript
-import { PiPWindow } from '@kit.ArkUI';
+import { PiPWindow } from 'PiPWindow';
 ```
 
 ## getPiPSettingSwitch
@@ -99,7 +99,7 @@ Obtains the PIP window information. This API uses a promise to return the result
 | Error Code ID | Error Message |
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300014](../errorcode-window.md#1300014-pip-internal-error) | PiP internal error. Possible causes: &lt;br&gt;1.The PiP controller has been destroyed. &lt;br&gt;2.The PiP window is not created or has been destroyed. |
+| [1300014](../errorcode-window.md#1300014-pip-internal-error) | PiP internal error. Possible causes: <br>1.The PiP controller has been destroyed. <br>2.The PiP window is not created or has been destroyed. |
 
 ## isPiPActive
 
@@ -131,7 +131,7 @@ Check whether the PiP window is active. This API uses a promise to return the re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300014](../errorcode-window.md#1300014-pip-internal-error) | PiP internal error. Possible causes: &lt;br&gt;1.The PiP controller has been destroyed. &lt;br&gt;2.The PiP window is not created or has been destroyed. |
+| [1300014](../errorcode-window.md#1300014-pip-internal-error) | PiP internal error. Possible causes: <br>1.The PiP controller has been destroyed. <br>2.The PiP window is not created or has been destroyed. |
 
 ## Examples
 
@@ -406,7 +406,7 @@ Unsubscribes from the PiP window size change event.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 
 ## Examples
@@ -572,7 +572,7 @@ Register picture-in-picture window size change event listener
 | Error Code ID | Error Message |
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300014](../errorcode-window.md#1300014-pip-internal-error) | PiP internal error. Possible cause: &lt;br&gt;The PiP controller has been destroyed. |
+| [1300014](../errorcode-window.md#1300014-pip-internal-error) | PiP internal error. Possible cause: <br>The PiP controller has been destroyed. |
 
 ## onStateChange
 
@@ -822,7 +822,7 @@ Subscribes to PiP state events. To avoid potential memory leaks, you are advised
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'stateChange' | Yes | Event type. The value is fixed at **'stateChange'**, indicating that the PiP state changes. |
-| callback | (state: PiPState, reason: string) =&gt; void | Yes | Callback used to return the result, which includes the following information:&lt;br&gt;- **state**: [PiPState](arkts-arkui-pipwindow-pipstate-e.md#PiPState), indicating the new PiP state. &lt;br&gt;- **reason**: a string indicating the reason for the state change. &lt;br&gt;Before &lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;, the value of **reason** is always **0**, which can be ignored.&lt;br&gt;Since &lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;, **reason** indicates the reason for switching the current lifecycle. The options are as follows: &lt;br&gt;**"requestStart"**: An application calls the **startPip** API. &lt;br&gt;**"autoStart"**: The application is automatically started in PiP mode when it is switched to the background. &lt;br&gt;**"requestDelete"**: The application calls the **stopPip** API. &lt;br&gt;**"panelActionDelete"**: The user taps the close button in the PiP window. &lt;br&gt;**"dragDelete"**: The user drags the PiP window to delete. &lt;br&gt;**"panelActionRestore"**: The user taps the restore button in the PiP window (or taps the PiP window if there is no restore button) to restore the PiP window. &lt;br&gt;**"other"**: Other reasons, such as the current window or application's main window being closed due to the startup of a new PiP window. |
+| callback | (state: PiPState, reason: string) =&gt; void | Yes | Callback used to return the result, which includes the following information:<br>- **state**: [PiPState](arkts-arkui-pipwindow-pipstate-e.md#PiPState), indicating the new PiP state. <br>- **reason**: a string indicating the reason for the state change. <br>Before &lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;, the value of **reason** is always **0**, which can be ignored.<br>Since &lt;!--RP1--&gt;OpenHarmony 6.1&lt;!--RP1End--&gt;, **reason** indicates the reason for switching the current lifecycle. The options are as follows: <br>**"requestStart"**: An application calls the **startPip** API. <br>**"autoStart"**: The application is automatically started in PiP mode when it is switched to the background. <br>**"requestDelete"**: The application calls the **stopPip** API. <br>**"panelActionDelete"**: The user taps the close button in the PiP window. <br>**"dragDelete"**: The user drags the PiP window to delete. <br>**"panelActionRestore"**: The user taps the restore button in the PiP window (or taps the PiP window if there is no restore button) to restore the PiP window. <br>**"other"**: Other reasons, such as the current window or application's main window being closed due to the startup of a new PiP window. |
 
 ## Examples
 
@@ -962,8 +962,8 @@ Starts a PiP window. This API uses a promise to return the result.
 | [1300034](../errorcode-window.md#1300034-operation-of-the-float-view-conflicts-with-those-of-other-floating-windows) | This operation conflicts with other floating windows. Possible cause: App has already started float view.<br>**Applicable version:** 26.0.0 and later |
 | [1300015](../errorcode-window.md#1300015-repeated-pip-operations) | Repeated PiP operation. |
 | [1300014](../errorcode-window.md#1300014-pip-internal-error) | PiP internal error. Possible cause: Internal error, failed to show the PiP window. such as insufficient resources or abnormal window service. |
-| [1300013](../errorcode-window.md#1300013-failure-in-creating-a-pip-window) | Failed to create the PiP window. Possible causes: &lt;br&gt;1.PiP configuration parameters are invalid, such as pipOption or context is null. &lt;br&gt;2.The XComponentController or main window is null. &lt;br&gt;3.The main window is not shown (non-auto-start scenario). &lt;br&gt;4.Navigation component operation failed. |
-| [1300012](../errorcode-window.md#1300012-abnormal-pip-window-status) | The PiP window state is abnormal. Possible causes: &lt;br&gt;1.The PiP controller has been destroyed. &lt;br&gt;2.The PiP window is not created or has been destroyed. |
+| [1300013](../errorcode-window.md#1300013-failure-in-creating-a-pip-window) | Failed to create the PiP window. Possible causes: <br>1.PiP configuration parameters are invalid, such as pipOption or context is null. <br>2.The XComponentController or main window is null. <br>3.The main window is not shown (non-auto-start scenario). <br>4.Navigation component operation failed. |
+| [1300012](../errorcode-window.md#1300012-abnormal-pip-window-status) | The PiP window state is abnormal. Possible causes: <br>1.The PiP controller has been destroyed. <br>2.The PiP window is not created or has been destroyed. |
 
 ## Examples
 
@@ -1058,7 +1058,7 @@ Updates the PiP node content. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [1300014](../errorcode-window.md#1300014-pip-internal-error) | PiP internal error. Possible cause: The PiP controller has been destroyed. |
 

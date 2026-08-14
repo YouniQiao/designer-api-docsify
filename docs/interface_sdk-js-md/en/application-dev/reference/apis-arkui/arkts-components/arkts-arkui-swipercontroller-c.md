@@ -40,8 +40,8 @@ Goes to a specified page.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index of the target page in the **Swiper** component.&lt;br&gt;**NOTE：**&lt;br&gt;If the value specified is less than 0 or greater than the maximum page index, the value **0** is used. |
-| useAnimation | boolean | No | Whether to use an animation for when the target page is reached. The value **true** means to use an animation, and **false** means the opposite.&lt;br&gt;Default value: **false |
+| index | number | Yes | Index of the target page in the **Swiper** component.<br>**NOTE：**<br>If the value specified is less than 0 or greater than the maximum page index, the value **0** is used. |
+| useAnimation | boolean | No | Whether to use an animation for when the target page is reached. The value **true** means to use an animation, and **false** means the opposite.<br>Default value: **false |
 
 ## changeIndex
 
@@ -71,8 +71,8 @@ Moves to a specific page. > **NOTE：**> > This API itself supports jumping with
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index of the target page in the **Swiper** component.&lt;br&gt;**NOTE：**&lt;br&gt;If the value specified is less than 0 or greater than the maximum page index, the value **0** is used. |
-| animationMode | [SwiperAnimationMode](arkts-arkui-swiperanimationmode-e.md) \| boolean | No | Animation mode for moving to the specified page.&lt;br&gt; Default value: **SwiperAnimationMode.NO_ANIMATION**&lt;br&gt; **NOTE：**&lt;br&gt;The value **true** is equivalent to **SwiperAnimationMode.DEFAULT_ANIMATION**, which means to use the default animation. The value **false** is equivalent to **SwiperAnimationMode.NO_ANIMATION**, which means to use no animation. |
+| index | number | Yes | Index of the target page in the **Swiper** component.<br>**NOTE：**<br>If the value specified is less than 0 or greater than the maximum page index, the value **0** is used. |
+| animationMode | [SwiperAnimationMode](arkts-arkui-swiperanimationmode-e.md) \| boolean | No | Animation mode for moving to the specified page.<br> Default value: **SwiperAnimationMode.NO_ANIMATION**<br> **NOTE：**<br>The value **true** is equivalent to **SwiperAnimationMode.DEFAULT_ANIMATION**, which means to use the default animation. The value **false** is equivalent to **SwiperAnimationMode.NO_ANIMATION**, which means to use no animation. |
 
 ## constructor
 
@@ -124,13 +124,13 @@ Sets the drag distance of drag simulation. > **NOTE：**> > - The drag distance 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | Yes | The drag distance to simulate the drag. &lt;br/&gt; A positive number indicates that the layout is dragged to the start point. A negative number indicates dragging towards the end point of the layout. &lt;br&gt;Unit: vp. - Drag distance of drag simulation.&lt;br&gt;A positive number indicates dragging towards the start point of the layout, and a negative number indicates dragging towards the end point of the layout. |
+| offset | number | Yes | The drag distance to simulate the drag. <br/> A positive number indicates that the layout is dragged to the start point. A negative number indicates dragging towards the end point of the layout. <br>Unit: vp. - Drag distance of drag simulation.<br>A positive number indicates dragging towards the start point of the layout, and a negative number indicates dragging towards the end point of the layout. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether to consume the passed drag distance. &lt;br&gt;**true** means to consume any passed drag distance; **false** means not to consume the passed drag distance because it is not in the drag simulation or has been dragged to the boundary. &lt;br&gt;If the drag distance is set to **0**, it cannot be consumed. |
+| boolean | Whether to consume the passed drag distance. <br>**true** means to consume any passed drag distance; **false** means not to consume the passed drag distance because it is not in the drag simulation or has been dragged to the boundary. <br>If the drag distance is set to **0**, it cannot be consumed. |
 
 ## finishAnimation
 
@@ -188,7 +188,7 @@ Obtains whether drag simulation is enabled.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the drag simulation is enabled. &lt;br&gt;**true** indicates that drag simulation is enabled; **false** indicates the opposite. |
+| boolean | Whether the drag simulation is enabled. <br>**true** indicates that drag simulation is enabled; **false** indicates the opposite. |
 
 ## preloadItems
 
@@ -230,7 +230,7 @@ Preloads child nodes for **Swiper**. After this API is called, all specified chi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter invalid. Possible causes: &lt;br&gt; 1. The parameter type is not Array&lt;number&gt;. &lt;br&gt; 2. The parameter is an empty array. &lt;br&gt; 3. The parameter contains an invalid index. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter invalid. Possible causes: <br> 1. The parameter type is not Array&lt;number&gt;. <br> 2. The parameter is an empty array. <br> 3. The parameter contains an invalid index. |
 | [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to component. |
 
 ## showNext
@@ -305,7 +305,7 @@ Enables drag simulation. > **NOTE：**> > - If the **Swiper** component is dragg
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether to enable drag simulation. &lt;br&gt;**true** if enabled; **false** the opposite |
+| boolean | Whether to enable drag simulation. <br>**true** if enabled; **false** the opposite |
 
 ## stopFakeDrag
 
@@ -335,5 +335,5 @@ Disables drag simulation. > **NOTE：**> > After drag simulation is enabled, it 
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether drag simulation is disabled. &lt;br&gt;**true** indicates that drag simulation is disabled successfully; **false** indicates the opposite. |
+| boolean | Whether drag simulation is disabled. <br>**true** indicates that drag simulation is disabled successfully; **false** indicates the opposite. |
 

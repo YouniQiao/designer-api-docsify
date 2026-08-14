@@ -15,7 +15,7 @@ Manages a CDSM client instance. Before invoking any CDSM client method, you must
 ## Modules to Import
 
 ```TypeScript
-import { cdsm } from '@kit.ConnectivityKit';
+import { cdsm } from 'cdsm';
 ```
 
 ## getCdsmInfo

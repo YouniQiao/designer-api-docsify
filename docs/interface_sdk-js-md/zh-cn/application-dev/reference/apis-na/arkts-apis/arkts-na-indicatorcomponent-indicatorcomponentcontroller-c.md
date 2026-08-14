@@ -37,7 +37,7 @@ changeIndex(index: int | undefined, useAnimation?: boolean): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | index | int \| undefined | 是 | 指定页面在Swiper中的索引值。 |
-| useAnimation | boolean | 否 | 设置翻至指定页面时是否有动效，true表示有动效，false表示没有动效。&lt;br/&gt;默认值：false。 |
+| useAnimation | boolean | 否 | 设置翻至指定页面时是否有动效，true表示有动效，false表示没有动效。<br/>默认值：false。 |
 
 ## constructor
 

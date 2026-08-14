@@ -17,7 +17,7 @@ Screen hopping options, such as the exit position.
 ## Modules to Import
 
 ```TypeScript
-import { cooperate } from '@kit.DistributedServiceKit';
+import { cooperate } from 'cooperate';
 ```
 
 ## displayId

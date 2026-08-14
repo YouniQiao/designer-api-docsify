@@ -1,6 +1,6 @@
 # BlinkResultCode (System API)
 
-Enumerates the result codes for blinking operations.
+Enumerates the result codes of blinking operations.
 
 **Since:** 26.0.0
 
@@ -20,7 +20,7 @@ Enumerates the result codes for blinking operations.
 SUCCESS = 0
 ```
 
-Success.
+The blinking API is executed successfully.
 
 **Since:** 26.0.0
 
@@ -42,7 +42,7 @@ Success.
 ALREADY_FLASHING = 1
 ```
 
-Currently flashing.
+The device is already blinking.
 
 **Since:** 26.0.0
 
@@ -64,7 +64,7 @@ Currently flashing.
 DEVICE_IN_USE = 2
 ```
 
-Device is in use.
+The device is in use.
 
 **Since:** 26.0.0
 
@@ -86,7 +86,7 @@ Device is in use.
 FLASH_BLINKING_UNSUPPORTED = 3
 ```
 
-Flash blinking is unsupported.
+The device does not support flash blinking.
 
 **Since:** 26.0.0
 
@@ -108,7 +108,7 @@ Flash blinking is unsupported.
 SCREEN_BLINKING_UNSUPPORTED = 4
 ```
 
-Screen blinking is unsupported.
+The device does not support screen blinking.
 
 **Since:** 26.0.0
 
@@ -130,7 +130,7 @@ Screen blinking is unsupported.
 FEATURE_DISABLED = 5
 ```
 
-Feature switch is disabled.
+The blinking feature is not enabled.
 
 **Since:** 26.0.0
 

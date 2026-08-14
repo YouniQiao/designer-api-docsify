@@ -15,7 +15,7 @@ Represents information about the system version to update.
 ## Modules to Import
 
 ```TypeScript
-import { systemManager } from '@kit.MDMKit';
+import { systemManager } from 'systemManager';
 ```
 
 ## firstReceivedTime

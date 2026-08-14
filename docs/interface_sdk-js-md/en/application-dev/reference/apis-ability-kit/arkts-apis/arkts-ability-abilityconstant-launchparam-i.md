@@ -15,7 +15,7 @@ Describes the launch parameters, which mainly include the ability launch reasons
 ## Modules to Import
 
 ```TypeScript
-import { AbilityConstant } from '@kit.AbilityKit';
+import { AbilityConstant } from 'AbilityConstant';
 ```
 
 ## lastExitDetailInfo

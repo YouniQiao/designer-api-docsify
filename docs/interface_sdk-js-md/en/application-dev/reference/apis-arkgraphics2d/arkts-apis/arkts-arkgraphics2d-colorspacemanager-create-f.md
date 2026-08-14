@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { colorSpaceManager } from '@kit.ArkGraphics2D';
+import { colorSpaceManager } from 'colorSpaceManager';
 ```
 
 ## create
@@ -28,7 +28,7 @@ Creates a standard color space object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorSpaceName | ColorSpace | Yes | Type of the color space. &lt;br&gt;**UNKNOWN** and **CUSTOM** cannot be used when creating standard color space objects. |
+| colorSpaceName | ColorSpace | Yes | Type of the color space. <br>**UNKNOWN** and **CUSTOM** cannot be used when creating standard color space objects. |
 
 **Return value:**
 
@@ -84,7 +84,7 @@ Creates a custom color space object.
 
 | Type | Description |
 | --- | --- |
-| ColorSpaceManager | Color space object created. &lt;br&gt;The color space type is **CUSTOM** of [ColorSpace]{ |
+| ColorSpaceManager | Color space object created. <br>The color space type is **CUSTOM** of [ColorSpace]{ |
 
 **Error codes:**
 

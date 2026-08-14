@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'i18n';
 ```
 
 ## getFirstPreferredLanguage
@@ -31,4 +31,12 @@ Obtains the first language in the preferred language list.
 | Type | Description |
 | --- | --- |
 | string | First language in the preferred language list. |
+
+## Examples
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let firstPreferredLanguage: string = i18n.getFirstPreferredLanguage();
+```
 

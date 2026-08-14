@@ -70,7 +70,7 @@ Converts bit representation to corresponding IEEE-754 floating point representat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bits | int | Yes | bits to convert. &lt;br&gt;The value should be an integer. |
+| bits | int | Yes | bits to convert. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -1134,7 +1134,7 @@ Returns a string representation of float by radix r.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | f | float | Yes | the float value. |
-| r | int | Yes | the radix. &lt;br&gt;The value should be an integer. |
+| r | int | Yes | the radix. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -1198,7 +1198,7 @@ Converts this object to a string in the given radix.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| r | int | Yes | the radix. &lt;br&gt;The value should be an integer. |
+| r | int | Yes | the radix. <br>The value should be an integer. |
 
 **Return value:**
 

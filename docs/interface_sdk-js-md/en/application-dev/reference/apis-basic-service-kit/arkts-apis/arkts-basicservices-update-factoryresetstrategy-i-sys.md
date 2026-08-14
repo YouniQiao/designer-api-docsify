@@ -17,7 +17,7 @@ Represents the factory reset strategy, which contains the **scope** (reset scope
 ## Modules to Import
 
 ```TypeScript
-import { update } from '@kit.BasicServicesKit';
+import { update } from 'update';
 ```
 
 ## scope

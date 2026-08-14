@@ -1,6 +1,7 @@
 # ArkTS API<!--arkts-basicserviceskit-->
 
-- [@ohos.WallpaperExtensionAbility](arkts-wallpaperextensionability.md)
+<!--Del-->
+- [@ohos.WallpaperExtensionAbility](arkts-wallpaperextensionability.md)<!--DelEnd-->
   <!--Del-->
   - [WallpaperExtensionAbility(system api)](arkts-basicservices-wallpaperextensionability-c-sys.md)<!--DelEnd-->
 - [@ohos.account.appAccount](arkts-account-appaccount.md)
@@ -175,7 +176,8 @@
   - [ResultCode(system api)](arkts-basicservices-osaccount-resultcode-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [SetPropertyType(system api)](arkts-basicservices-osaccount-setpropertytype-e-sys.md)<!--DelEnd-->
-- [@ohos.ai.intelligentVoice](arkts-ai-intelligentvoice.md)
+<!--Del-->
+- [@ohos.ai.intelligentVoice](arkts-ai-intelligentvoice.md)<!--DelEnd-->
   <!--Del-->
   - [createEnrollIntelligentVoiceEngine(system api)](arkts-basicservices-intelligentvoice-createenrollintelligentvoiceengine-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -234,10 +236,12 @@
   - [PrintExtensionAbility](arkts-basicservices-app-ability-printextensionability-printextensionability-c.md)
   <!--Del-->
   - [PrintExtensionAbility(system api)](arkts-basicservices-app-ability-printextensionability-printextensionability-c-sys.md)<!--DelEnd-->
-- [@ohos.application.StaticSubscriberExtensionAbility](arkts-application-staticsubscriberextensionability.md)
+<!--Del-->
+- [@ohos.application.StaticSubscriberExtensionAbility](arkts-application-staticsubscriberextensionability.md)<!--DelEnd-->
   <!--Del-->
   - [StaticSubscriberExtensionAbility(system api)](arkts-basicservices-application-staticsubscriberextensionability-staticsubscriberextensionability-c-sys.md)<!--DelEnd-->
-- [@ohos.application.StaticSubscriberExtensionContext](arkts-application-staticsubscriberextensioncontext.md)
+<!--Del-->
+- [@ohos.application.StaticSubscriberExtensionContext](arkts-application-staticsubscriberextensioncontext.md)<!--DelEnd-->
   <!--Del-->
   - [StaticSubscriberExtensionContext(system api)](arkts-basicservices-application-staticsubscriberextensioncontext-staticsubscriberextensioncontext-c-sys.md)<!--DelEnd-->
 - [@ohos.base](arkts-base.md)
@@ -294,7 +298,8 @@
   - [BatteryHealthState](arkts-basicservices-batteryinfo-batteryhealthstate-e.md)
   - [BatteryPluggedType](arkts-basicservices-batteryinfo-batterypluggedtype-e.md)
   - [CommonEventBatteryChangedKey](arkts-basicservices-batteryinfo-commoneventbatterychangedkey-e.md)
-- [@ohos.batteryStatistics](arkts-batterystatistics.md)
+<!--Del-->
+- [@ohos.batteryStatistics](arkts-batterystatistics.md)<!--DelEnd-->
   <!--Del-->
   - [getAppPowerPercent(system api)](arkts-basicservices-batterystats-getapppowerpercent-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -309,7 +314,8 @@
   - [BatteryStatsInfo(system api)](arkts-basicservices-batterystats-batterystatsinfo-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [ConsumptionType(system api)](arkts-basicservices-batterystats-consumptiontype-e-sys.md)<!--DelEnd-->
-- [@ohos.brightness](arkts-brightness.md)
+<!--Del-->
+- [@ohos.brightness](arkts-brightness.md)<!--DelEnd-->
   <!--Del-->
   - [setValue(system api)](arkts-basicservices-brightness-setvalue-f-sys.md)<!--DelEnd-->
 - [@ohos.busManager.serial](arkts-busmanager-serial.md)
@@ -322,7 +328,8 @@
   - [DataBits](arkts-basicservices-serial-databits-e.md)
   - [Parity](arkts-basicservices-serial-parity-e.md)
   - [StopBits](arkts-basicservices-serial-stopbits-e.md)
-- [@ohos.charger](arkts-charger.md)
+<!--Del-->
+- [@ohos.charger](arkts-charger.md)<!--DelEnd-->
   <!--Del-->
   - [ChargeType(system api)](arkts-basicservices-charger-chargetype-e-sys.md)<!--DelEnd-->
 - [@ohos.commonEvent](arkts-commonevent.md)
@@ -353,7 +360,8 @@
   - [Support](arkts-basicservices-commoneventmanager-support-e.md)
   <!--Del-->
   - [Support(system api)](arkts-basicservices-commoneventmanager-support-e-sys.md)<!--DelEnd-->
-- [@ohos.configPolicy](arkts-configpolicy.md)
+<!--Del-->
+- [@ohos.configPolicy](arkts-configpolicy.md)<!--DelEnd-->
   <!--Del-->
   - [getCfgDirList(system api)](arkts-basicservices-configpolicy-getcfgdirlist-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -857,13 +865,16 @@
   - [StrongAuthReasonFlags(system api)](arkts-basicservices-screenlock-strongauthreasonflags-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [UnlockPolicy(system api)](arkts-basicservices-screenlock-unlockpolicy-e-sys.md)<!--DelEnd-->
-- [@ohos.selectionInput.SelectionExtensionAbility](arkts-selectioninput-selectionextensionability.md)
+<!--Del-->
+- [@ohos.selectionInput.SelectionExtensionAbility](arkts-selectioninput-selectionextensionability.md)<!--DelEnd-->
   <!--Del-->
   - [SelectionExtensionAbility(system api)](arkts-basicservices-selectioninput-selectionextensionability-selectionextensionability-c-sys.md)<!--DelEnd-->
-- [@ohos.selectionInput.SelectionExtensionContext](arkts-selectioninput-selectionextensioncontext.md)
+<!--Del-->
+- [@ohos.selectionInput.SelectionExtensionContext](arkts-selectioninput-selectionextensioncontext.md)<!--DelEnd-->
   <!--Del-->
   - [SelectionExtensionContext(system api)](arkts-basicservices-selectioninput-selectionextensioncontext-selectionextensioncontext-c-sys.md)<!--DelEnd-->
-- [@ohos.selectionInput.SelectionPanel](arkts-selectioninput-selectionpanel.md)
+<!--Del-->
+- [@ohos.selectionInput.SelectionPanel](arkts-selectioninput-selectionpanel.md)<!--DelEnd-->
   <!--Del-->
   - [PanelInfo(system api)](arkts-basicservices-selectioninput-selectionpanel-panelinfo-i-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -943,7 +954,8 @@
   - [openNfcSettingsPage](arkts-basicservices-settingslite-opennfcsettingspage-f.md)
   - [openPinSettingPage](arkts-basicservices-settingslite-openpinsettingpage-f.md)
   - [ClickCallback](arkts-basicservices-settingslite-clickcallback-i.md)
-- [@ohos.systemCapability](arkts-systemcapability.md)
+<!--Del-->
+- [@ohos.systemCapability](arkts-systemcapability.md)<!--DelEnd-->
   <!--Del-->
   - [querySystemCapabilities(system api)](arkts-basicservices-systemcapability-querysystemcapabilities-f-sys.md)<!--DelEnd-->
 - [@ohos.systemDateTime](arkts-systemdatetime.md)
@@ -969,7 +981,8 @@
   <!--Del-->
   - [updateNtpTime(system api)](arkts-basicservices-systemdatetime-updatentptime-f-sys.md)<!--DelEnd-->
   - [TimeType](arkts-basicservices-systemdatetime-timetype-e.md)
-- [@ohos.systemParameterEnhance](arkts-systemparameterenhance.md)
+<!--Del-->
+- [@ohos.systemParameterEnhance](arkts-systemparameterenhance.md)<!--DelEnd-->
   <!--Del-->
   - [get(system api)](arkts-basicservices-systemparameterenhance-get-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -987,7 +1000,8 @@
   - [setDate](arkts-basicservices-systemtime-setdate-f.md)
   - [setTime](arkts-basicservices-systemtime-settime-f.md)
   - [setTimezone](arkts-basicservices-systemtime-settimezone-f.md)
-- [@ohos.systemTimer](arkts-systemtimer.md)
+<!--Del-->
+- [@ohos.systemTimer](arkts-systemtimer.md)<!--DelEnd-->
   <!--Del-->
   - [createTimer(system api)](arkts-basicservices-systemtimer-createtimer-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -1000,7 +1014,8 @@
   - [TimerOptions(system api)](arkts-basicservices-systemtimer-timeroptions-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [Constants(system api)](arkts-basicservices-systemtimer-con-sys.md)<!--DelEnd-->
-- [@ohos.systemparameter](arkts-systemparameter.md)
+<!--Del-->
+- [@ohos.systemparameter](arkts-systemparameter.md)<!--DelEnd-->
   <!--Del-->
   - [get(system api)](arkts-basicservices-systemparameter-get-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -1017,7 +1032,8 @@
   - [unregisterThermalLevelCallback](arkts-basicservices-thermal-unregisterthermallevelcallback-f.md)
   - [unsubscribeThermalLevel](arkts-basicservices-thermal-unsubscribethermallevel-f.md)
   - [ThermalLevel](arkts-basicservices-thermal-thermallevel-e.md)
-- [@ohos.update](arkts-update.md)
+<!--Del-->
+- [@ohos.update](arkts-update.md)<!--DelEnd-->
   <!--Del-->
   - [getLocalUpdater(system api)](arkts-basicservices-update-getlocalupdater-f-sys.md)<!--DelEnd-->
   <!--Del-->

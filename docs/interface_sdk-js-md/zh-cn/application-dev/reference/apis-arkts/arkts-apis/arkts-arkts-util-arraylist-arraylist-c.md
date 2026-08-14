@@ -1236,7 +1236,7 @@ sort(comparator?: ArrayListComparatorFn<T>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| comparator | [ArrayListComparatorFn](arkts-arkts-arraylistcomparatorfn-t.md)&lt;T&gt; | 否 | 用于定义排序顺序的比较函数，默认为升序排序。当需要降序或自定义比较逻辑时传入此参数。&lt;br&gt;API version 23开始发生兼容性变更，在API version 22及之前的版本其类型为：`(firstValue: T, secondValue: T) => number`。<br>**起始版本：** 23 |
+| comparator | [ArrayListComparatorFn](arkts-arkts-arraylistcomparatorfn-t.md)&lt;T&gt; | 否 | 用于定义排序顺序的比较函数，默认为升序排序。当需要降序或自定义比较逻辑时传入此参数。<br>API version 23开始发生兼容性变更，在API version 22及之前的版本其类型为：`(firstValue: T, secondValue: T) => number`。<br>**起始版本：** 23 |
 
 **错误码：**
 

@@ -18,7 +18,7 @@ Defines the options of TextPicker.
 columnWidths?: LengthMetrics[]
 ```
 
-Width of each column in the picker. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;If the text length exceeds the column width, the text will be truncated. &lt;/p&gt;
+Width of each column in the picker. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>If the text length exceeds the column width, the text will be truncated. &lt;/p&gt;
 
 **Type:** [LengthMetrics](arkts-na-graphics-lengthmetrics-c.md)[]
 

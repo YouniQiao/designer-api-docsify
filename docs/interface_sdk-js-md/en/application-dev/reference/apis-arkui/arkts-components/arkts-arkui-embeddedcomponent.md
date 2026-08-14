@@ -46,7 +46,7 @@ EmbeddedComponent(
 )
 ```
 
-Construct the EmbeddedComponent.&lt;br/&gt; Called when the EmbeddedComponent is used.
+Construct the EmbeddedComponent.<br/> Called when the EmbeddedComponent is used.
 
 **Since:** 26.0.0
 

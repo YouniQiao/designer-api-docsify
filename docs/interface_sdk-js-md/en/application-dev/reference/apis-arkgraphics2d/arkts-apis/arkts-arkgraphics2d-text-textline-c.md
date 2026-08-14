@@ -15,7 +15,7 @@ Implements a carrier that describes the basic text line structure of a paragraph
 ## Modules to Import
 
 ```TypeScript
-import { text } from '@kit.ArkGraphics2D';
+import { text } from 'text';
 ```
 
 ## createTruncatedLine

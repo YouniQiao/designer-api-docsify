@@ -17,7 +17,7 @@ The class of a system configuration.
 ## Modules to Import
 
 ```TypeScript
-import { systemConfiguration } from '@kit.AbilityKit';
+import { systemConfiguration } from 'systemConfiguration';
 ```
 
 ## Summary

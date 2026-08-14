@@ -17,7 +17,7 @@ Describes the contents of the Bluetooth scan results.
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'geoLocationManager';
 ```
 
 ## deviceName

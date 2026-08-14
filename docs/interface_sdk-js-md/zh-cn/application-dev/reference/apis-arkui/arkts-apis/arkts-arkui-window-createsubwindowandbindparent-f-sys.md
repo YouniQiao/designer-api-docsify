@@ -66,6 +66,7 @@ export default class EntryAbility extends UIAbility {
       // ...
     }
     try {
+      // parentId推荐通过getWindowProperties方法获取，此处仅示意
       let promise = window.createSubWindowAndBindParent('test', 100, this.context, parentWindowEventListener);
       promise.then((data) => {
         console.info('Succeeded in creating the window. Data:' + JSON.stringify(data));

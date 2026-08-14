@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'i18n';
 ```
 
 ## getPreferredLanguageList
@@ -31,4 +31,12 @@ Obtains the list of preferred languages.
 | Type | Description |
 | --- | --- |
 | Array&lt;string&gt; | List of preferred languages. |
+
+## Examples
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let preferredLanguageList: Array<string> = i18n.getPreferredLanguageList();
+```
 

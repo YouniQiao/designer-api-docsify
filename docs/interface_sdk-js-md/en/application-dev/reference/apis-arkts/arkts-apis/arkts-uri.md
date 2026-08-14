@@ -27,7 +27,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { uri } from '@kit.ArkTS';
+import { uri } from 'uri';
 ```
 
 ## Summary

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
+import { privacyManager } from 'privacyManager';
 ```
 
 ## setPermissionUsedRecordToggleStatus
@@ -94,7 +94,7 @@ Sets whether permission usage records are collected for a specified sub-profile.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | status | boolean | Yes | Setting of the permission usage record switch. The value **true** means the switch is toggled on; the value **false** means the opposite. |
-| subProfileId | int | Yes | ID of the sub-profile. It can be obtained from [OsAccountSubProfile.id](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-osaccountsubprofile-i-sys.md#id). &lt;br&gt;The value should be an integer. Value constraint: This parameter must be an integer greater than 0. |
+| subProfileId | int | Yes | ID of the sub-profile. It can be obtained from [OsAccountSubProfile.id](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-osaccountsubprofile-i-sys.md#id). <br>The value should be an integer. Value constraint: This parameter must be an integer greater than 0. |
 
 **Return value:**
 

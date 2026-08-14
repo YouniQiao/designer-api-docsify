@@ -26,8 +26,8 @@ Changes all elements in the Array to a static value, from a start index to an en
 | --- | --- | --- | --- |
 | self | FixedArray&lt;boolean&gt; | Yes | The array to operate `fill` on. |
 | value | boolean | Yes | The value to fill the array with. |
-| start | int | No | The index at which to start filling (optional). &lt;br&gt;The value should be an integer. |
-| end | int | No | The index at which to end filling (optional, not included). &lt;br&gt;The value should be an integer. |
+| start | int | No | The index at which to start filling (optional). <br>The value should be an integer. |
+| end | int | No | The index at which to end filling (optional, not included). <br>The value should be an integer. |
 
 **Return value:**
 
@@ -62,8 +62,8 @@ Changes all elements in the Array to a static value, from a start index to an en
 | --- | --- | --- | --- |
 | self | FixedArray&lt;byte&gt; | Yes | The array to operate `fill` on. |
 | value | byte | Yes | The value to fill the array with. |
-| start | int | No | The index at which to start filling (optional). &lt;br&gt;The value should be an integer. |
-| end | int | No | The index at which to end filling (optional, not included). &lt;br&gt;The value should be an integer. |
+| start | int | No | The index at which to start filling (optional). <br>The value should be an integer. |
+| end | int | No | The index at which to end filling (optional, not included). <br>The value should be an integer. |
 
 **Return value:**
 
@@ -98,8 +98,8 @@ Changes all elements in the Array to a static value, from a start index to an en
 | --- | --- | --- | --- |
 | self | FixedArray&lt;short&gt; | Yes | The array to operate `fill` on. |
 | value | short | Yes | The value to fill the array with. |
-| start | int | No | The index at which to start filling (optional). &lt;br&gt;The value should be an integer. |
-| end | int | No | The index at which to end filling (optional, not included). &lt;br&gt;The value should be an integer. |
+| start | int | No | The index at which to start filling (optional). <br>The value should be an integer. |
+| end | int | No | The index at which to end filling (optional, not included). <br>The value should be an integer. |
 
 **Return value:**
 
@@ -133,7 +133,7 @@ Changes all elements in the Array to a static value, from a start index to an en
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;int&gt; | Yes | The array to operate `fill` on. |
-| value | int | Yes | The value to fill the array with. &lt;br&gt;The value should be an integer. |
+| value | int | Yes | The value to fill the array with. <br>The value should be an integer. |
 | start | int | No | The index at which to start filling (optional).The value should be an integer. |
 | end | int | No | The index at which to end filling (optional, not included). |
 
@@ -170,8 +170,8 @@ Changes all elements in the Array to a static value, from a start index to an en
 | --- | --- | --- | --- |
 | self | FixedArray&lt;long&gt; | Yes | The array to operate `fill` on. |
 | value | long | Yes | The value to fill the array with. |
-| start | int | No | The index at which to start filling (optional). &lt;br&gt;The value should be an integer. |
-| end | int | No | The index at which to end filling (optional, not included). &lt;br&gt;The value should be an integer. |
+| start | int | No | The index at which to start filling (optional). <br>The value should be an integer. |
+| end | int | No | The index at which to end filling (optional, not included). <br>The value should be an integer. |
 
 **Return value:**
 
@@ -278,8 +278,8 @@ Changes all elements in the Array to a static value, from a start index to an en
 | --- | --- | --- | --- |
 | self | FixedArray&lt;char&gt; | Yes | The array to operate `fill` on. |
 | value | char | Yes | The value to fill the array with. |
-| start | int | No | The index at which to start filling (optional). &lt;br&gt;The value should be an integer. |
-| end | int | No | The index at which to end filling (optional, not included). &lt;br&gt;The value should be an integer. |
+| start | int | No | The index at which to start filling (optional). <br>The value should be an integer. |
+| end | int | No | The index at which to end filling (optional, not included). <br>The value should be an integer. |
 
 **Return value:**
 

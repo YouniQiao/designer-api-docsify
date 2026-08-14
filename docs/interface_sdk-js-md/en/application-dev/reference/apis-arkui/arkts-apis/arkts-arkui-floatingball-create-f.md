@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { floatingBall } from '@kit.ArkUI';
+import { floatingBall } from 'floatingBall';
 ```
 
 ## create
@@ -40,9 +40,9 @@ Creates a floating ball controller. This API uses a promise to return the result
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) | Wrong parameters for operating the floating ball. Possible causes: &lt;br&gt;1.The context parameter is null. &lt;br&gt;2.The FloatingBallConfiguration parameter is null. |
+| [1300019](../errorcode-window.md#1300019-floating-ball-parameter-verification-error) | Wrong parameters for operating the floating ball. Possible causes: <br>1.The context parameter is null. <br>2.The FloatingBallConfiguration parameter is null. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) | Floating ball internal error. Possible causes: &lt;br&gt;1.The application context or main window is invalid. &lt;br&gt;2.System internal error, such as null pointer or insufficient memory. |
+| [1300023](../errorcode-window.md#1300023-internal-error-of-the-floating-ball) | Floating ball internal error. Possible causes: <br>1.The application context or main window is invalid. <br>2.System internal error, such as null pointer or insufficient memory. |
 
 ## Examples
 

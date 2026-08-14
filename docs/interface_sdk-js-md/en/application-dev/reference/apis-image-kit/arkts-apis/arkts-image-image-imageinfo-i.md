@@ -15,7 +15,7 @@ Describes image information.
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'image';
 ```
 
 ## alphaType

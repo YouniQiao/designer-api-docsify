@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'print';
 ```
 
 ## queryPrinterCapabilityByUri
@@ -34,8 +34,8 @@ Query printer capabilityies by printer uri.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerUri | string | Yes | Indicates the printer uri. &lt;br&gt;Printer URI in the process of connecting. |
-| printerId | string | Yes | Indicates the printer ID. &lt;br&gt;Printer ID in the process of connecting. |
+| printerUri | string | Yes | Indicates the printer uri. <br>Printer URI in the process of connecting. |
+| printerId | string | Yes | Indicates the printer ID. <br>Printer ID in the process of connecting. |
 
 **Return value:**
 

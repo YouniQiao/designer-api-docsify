@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { buffer } from '@kit.ArkTS';
+import { buffer } from 'buffer';
 ```
 
 ## compare
@@ -37,7 +37,7 @@ Compares two **Buffer** objects. This API is used for sorting **Buffer** objects
 
 | Type | Description |
 | --- | --- |
-| -1 | Returns **0** if **buf1** is the same as **buf2**. &lt;br&gt;Returns **1** if **buf1** comes after **buf2** when sorted. &lt;br&gt;Returns **-1** if **buf1** comes before **buf2** when sorted. |
+| -1 | Returns **0** if **buf1** is the same as **buf2**. <br>Returns **1** if **buf1** comes after **buf2** when sorted. <br>Returns **-1** if **buf1** comes before **buf2** when sorted. |
 
 ## Examples
 

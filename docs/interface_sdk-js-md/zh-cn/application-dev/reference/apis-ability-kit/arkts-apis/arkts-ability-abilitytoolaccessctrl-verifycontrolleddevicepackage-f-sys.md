@@ -45,3 +45,21 @@ export function verifyControlledDevicePackage(ticketInfo: RemoteAuthPackage[]): 
 | [24010000](../errorcode-abilityToolAccessCtrl-sys.md#24010000-入参错误) | Invalid parameter. Format of ticketInfo is invalid. |
 | [24010001](../errorcode-abilityToolAccessCtrl-sys.md#24010001-系统服务工作异常) | Service is abnormal. possible cause: IPC failed. |
 
+## 示例
+
+```TypeScript
+import { abilityToolAccessCtrl } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let ticketInfo: Array<abilityToolAccessCtrl.RemoteAuthPackage> = [{
+  remoteMessage: 'test_message',
+  challenge: 'test_challenge',
+  ticket: 'test_ticket'
+}];
+abilityToolAccessCtrl.verifyControlledDevicePackage(ticketInfo).then((data: Array<boolean>) => {
+  console.info('verifyControlledDevicePackage success, data: ' + JSON.stringify(data));
+}).catch((err: BusinessError): void => {
+  console.error(`verifyControlledDevicePackage fail, code: ${err.code}, message: ${err.message}`);
+});
+```
+

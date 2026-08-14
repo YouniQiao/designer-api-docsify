@@ -15,7 +15,7 @@ The definition of play information.
 ## Modules to Import
 
 ```TypeScript
-import { avMusicTemplate } from '@kit.AVSessionKit';
+import { avMusicTemplate } from 'avMusicTemplate';
 ```
 
 ## currentPlayDuration

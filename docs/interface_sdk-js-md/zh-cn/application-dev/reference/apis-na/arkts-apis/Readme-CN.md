@@ -309,7 +309,8 @@
   - [RouterPageState](arkts-na-uiobserver-routerpagestate-e.md)
   - [ScrollEventType](arkts-na-uiobserver-scrolleventtype-e.md)
   - [TabContentState](arkts-na-uiobserver-tabcontentstate-e.md)
-- [@ohos.arkui.performanceMonitor](arkts-arkui-performancemonitor.md)
+<!--Del-->
+- [@ohos.arkui.performanceMonitor](arkts-arkui-performancemonitor.md)<!--DelEnd-->
   <!--Del-->
   - [begin(系统接口)](arkts-na-performancemonitor-begin-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -811,19 +812,37 @@
   - [WebSoftKeyboardBehaviorMode](arkts-na-webview-websoftkeyboardbehaviormode-e.md)
 - [@arkts.collections](arkts-collections.md)
   - [BitVector](arkts-na-collections-bitvector-c.md)
+- [Array](arkts-array.md)
+  - [Array](arkts-na-array-c.md)
+- [ArrayBuffer](arkts-arraybuffer.md)
+  - [ArrayBuffer](arkts-na-arraybuffer-c.md)
+  - [ArrayBufferView](arkts-na-arraybuffer-arraybufferview-i.md)
+  - [ArrayBufferLike](arkts-na-arraybufferlike-t.md)
+- [ArrayLike](arkts-arraylike.md)
+  - [ArrayLike](arkts-na-arraylike-i.md)
+- [Chrono](arkts-chrono.md)
+  - [Chrono](arkts-na-chrono-c.md)
+- [Comparable](arkts-comparable.md)
+  - [Comparable](arkts-na-comparable-i.md)
 - [Global](arkts-global.md)
   - [clearInterval](arkts-na-global-clearinterval-f.md)
   - [clearTimeout](arkts-na-global-cleartimeout-f.md)
   - [setInterval](arkts-na-global-setinterval-f.md)
   - [setTimeout](arkts-na-global-settimeout-f.md)
+- [Set](arkts-set.md)
+  - [Set](arkts-na-set-c.md)
+  - [ReadonlySet](arkts-na-set-readonlyset-i.md)
+  - [SetIterator](arkts-na-set-setiterator-i.md)
 - application<!--arkts-na-application-->
-  - [AbilityForegroundStateObserver](arkts-abilityforegroundstateobserver.md)
+  <!--Del-->
+  - [AbilityForegroundStateObserver](arkts-abilityforegroundstateobserver.md)<!--DelEnd-->
     <!--Del-->
     - [AbilityForegroundStateObserver(系统接口)](arkts-na-abilityforegroundstateobserver-i-sys.md)<!--DelEnd-->
   - [AbilityStartCallback](arkts-abilitystartcallback.md)
     - [AbilityStartCallback](arkts-na-abilitystartcallback-i.md)
     - [OnResultFn](arkts-na-onresultfn-t.md)
-  - [AppForegroundStateObserver](arkts-appforegroundstateobserver.md)
+  <!--Del-->
+  - [AppForegroundStateObserver](arkts-appforegroundstateobserver.md)<!--DelEnd-->
     <!--Del-->
     - [AppForegroundStateObserver(系统接口)](arkts-na-appforegroundstateobserver-i-sys.md)<!--DelEnd-->
   - [AppServiceExtensionContext](arkts-appserviceextensioncontext.md)
@@ -831,10 +850,14 @@
   - [ApplicationStateObserver](arkts-applicationstateobserver.md)
     - [ApplicationStateObserver](arkts-na-applicationstateobserver-i.md)
     - [ProcessData](arkts-na-processdata-t.md)
-  - [ServiceExtensionContext](arkts-serviceextensioncontext.md)
+  - [ProcessData](arkts-processdata.md)
+    - [ProcessData](arkts-na-processdata-c.md)
+  <!--Del-->
+  - [ServiceExtensionContext](arkts-serviceextensioncontext.md)<!--DelEnd-->
     <!--Del-->
     - [ServiceExtensionContext(系统接口)](arkts-na-serviceextensioncontext-c-sys.md)<!--DelEnd-->
-  - [UIServiceExtensionContext](arkts-uiserviceextensioncontext.md)
+  <!--Del-->
+  - [UIServiceExtensionContext](arkts-uiserviceextensioncontext.md)<!--DelEnd-->
     <!--Del-->
     - [UIServiceExtensionContext(系统接口)](arkts-na-uiserviceextensioncontext-c-sys.md)<!--DelEnd-->
 - arkui<!--arkts-na-arkui-->
@@ -1406,7 +1429,8 @@
     - [DepthMapCallback(系统接口)](arkts-na-depthmapcallback-t-sys.md)<!--DelEnd-->
     <!--Del-->
     - [DepthSpaceType(系统接口)](arkts-na-depthcomponent-depthspacetype-e-sys.md)<!--DelEnd-->
-  - [distortionComponent](arkts-distortioncomponent.md)
+  <!--Del-->
+  - [distortionComponent](arkts-distortioncomponent.md)<!--DelEnd-->
     <!--Del-->
     - [DistortionComponent(系统接口)](arkts-na-distortioncomponent-distortioncomponent-f-sys.md)<!--DelEnd-->
     - [DistortionComponentAttribute](arkts-na-distortioncomponent-distortioncomponentattribute-i.md)
@@ -1614,7 +1638,8 @@
     - [IndicatorComponent](arkts-na-indicatorcomponent-indicatorcomponent-f.md)
     - [IndicatorComponentController](arkts-na-indicatorcomponent-indicatorcomponentcontroller-c.md)
     - [IndicatorComponentAttribute](arkts-na-indicatorcomponent-indicatorcomponentattribute-i.md)
-  - [inspector](arkts-inspector.md)
+  <!--Del-->
+  - [inspector](arkts-inspector.md)<!--DelEnd-->
     - [Profiler](arkts-na-profiler-n.md)
       <!--Del-->
       - [registerVsyncCallback(系统接口)](arkts-na-profiler-registervsynccallback-f-sys.md)<!--DelEnd-->
@@ -1775,7 +1800,8 @@
     - [PatternLockController](arkts-na-patternlock-patternlockcontroller-c.md)
     - [CircleStyleOptions](arkts-na-patternlock-circlestyleoptions-i.md)
     - [PatternLockChallengeResult](arkts-na-patternlock-patternlockchallengeresult-e.md)
-  - [pluginComponent](arkts-plugincomponent.md)
+  <!--Del-->
+  - [pluginComponent](arkts-plugincomponent.md)<!--DelEnd-->
     <!--Del-->
     - [PluginComponent(系统接口)](arkts-na-plugincomponent-plugincomponent-f-sys.md)<!--DelEnd-->
     <!--Del-->
@@ -2021,7 +2047,8 @@
     - [ToolBarItemAttribute](arkts-na-toolbar-toolbaritemattribute-i.md)
     - [ToolBarItemOptions](arkts-na-toolbar-toolbaritemoptions-i.md)
     - [ToolBarItemPlacement](arkts-na-toolbar-toolbaritemplacement-e.md)
-  - [uiExtensionComponent](arkts-uiextensioncomponent.md)
+  <!--Del-->
+  - [uiExtensionComponent](arkts-uiextensioncomponent.md)<!--DelEnd-->
     <!--Del-->
     - [UIExtensionComponent(系统接口)](arkts-na-uiextensioncomponent-uiextensioncomponent-f-sys.md)<!--DelEnd-->
     <!--Del-->

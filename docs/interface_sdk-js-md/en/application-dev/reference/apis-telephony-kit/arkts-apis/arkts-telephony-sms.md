@@ -15,7 +15,7 @@ The **sms** module provides basic SMS management functions. With the APIs provid
 ## Modules to Import
 
 ```TypeScript
-import { sms } from '@kit.TelephonyKit';
+import { sms } from 'sms';
 ```
 
 ## Summary

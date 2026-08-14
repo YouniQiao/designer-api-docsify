@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
+import { sensor } from 'sensor';
 ```
 
 ## off_SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED

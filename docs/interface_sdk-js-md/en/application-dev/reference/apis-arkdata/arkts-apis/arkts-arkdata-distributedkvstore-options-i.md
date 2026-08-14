@@ -15,7 +15,7 @@ Provides KV store configuration.
 ## Modules to Import
 
 ```TypeScript
-import { distributedKVStore } from '@kit.ArkData';
+import { distributedKVStore } from 'distributedKVStore';
 ```
 
 ## autoSync
@@ -180,7 +180,7 @@ Schema that defines the values stored in the KV store. The default value is **un
 securityLevel: SecurityLevel
 ```
 
-Security level of the KV store. SystemCapability.DistributedDataManager.KVStore.Core
+Security level of the KV store.
 
 **Type:** SecurityLevel
 

@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'notificationManager';
 ```
 
 ## isPriorityIntelligentEnabled
@@ -34,7 +34,7 @@ function isPriorityIntelligentEnabled(): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回包含优先通知智能服务使能状态的Promise对象。 &lt;br&gt; - true：优先通知智能服务为打开状态。 &lt;br&gt; - false：优先通知智能服务为关闭状态。 |
+| Promise&lt;boolean&gt; | Promise对象，返回包含优先通知智能服务使能状态的Promise对象。 <br> - true：优先通知智能服务为打开状态。 <br> - false：优先通知智能服务为关闭状态。 |
 
 **错误码：**
 

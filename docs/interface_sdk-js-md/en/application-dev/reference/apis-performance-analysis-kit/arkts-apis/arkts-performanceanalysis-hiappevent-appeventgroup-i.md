@@ -15,7 +15,7 @@ Defines parameters of the event group returned by the subscription. This API can
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from 'hiAppEvent';
 ```
 
 ## appEventInfos

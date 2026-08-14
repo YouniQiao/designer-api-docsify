@@ -64,7 +64,7 @@ iconStyle?: IconTypeV2
 
 图标样式。
 
-**类型：** [IconTypeV2](arkts-na-arkui-advanced-composelistitemv2-icontypev2-e.md)
+**类型：** [IconTypeV2](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitemv2-icontypev2-e.md)
 
 **起始版本：** 26.0.0
 

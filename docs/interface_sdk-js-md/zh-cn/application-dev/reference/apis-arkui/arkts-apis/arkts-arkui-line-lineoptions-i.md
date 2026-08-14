@@ -18,7 +18,7 @@
 height?: Length
 ```
 
-高度。&lt;br/&gt;值为异常值或缺省时按照自身内容需要的高度处理。&lt;br/&gt;默认单位：vp
+高度。<br/>值为异常值或缺省时按照自身内容需要的高度处理。<br/>默认单位：vp
 
 **类型：** [Length](arkts-arkui-length-t.md)
 
@@ -40,7 +40,7 @@ height?: Length
 width?: Length
 ```
 
-宽度。&lt;br/&gt;值为异常值或缺省时按照自身内容需要的宽度处理。&lt;br/&gt;默认单位：vp
+宽度。<br/>值为异常值或缺省时按照自身内容需要的宽度处理。<br/>默认单位：vp
 
 **类型：** [Length](arkts-arkui-length-t.md)
 

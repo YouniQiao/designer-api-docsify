@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { SwipeRefresher } from '@kit.ArkUI';
+import { SwipeRefresher } from 'SwipeRefresher';
 ```
 
 ## Summary

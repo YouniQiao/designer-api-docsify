@@ -167,7 +167,7 @@ layoutMode(value: LayoutMode): BottomTabBarStyle
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [LayoutMode](arkts-arkui-layoutmode-e.md) | 是 | 底部页签的图片、文字排布的方式，具体参照LayoutMode枚举。&lt;br/&gt;默认值：LayoutMode.VERTICAL |
+| value | [LayoutMode](arkts-arkui-layoutmode-e.md) | 是 | 底部页签的图片、文字排布的方式，具体参照LayoutMode枚举。<br/>默认值：LayoutMode.VERTICAL |
 
 **返回值：**
 
@@ -236,7 +236,7 @@ padding(value: Padding | Dimension | LocalizedPadding): BottomTabBarStyle
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Padding \| Dimension \| LocalizedPadding | 是 | 底部页签的内边距，用于设置页签内容与边界的距离（不支持百分比设置）。当需要调整页签内部空间分布、 优化视觉效果时传入自定义值。&lt;br/&gt;取值范围：[0, +∞]&lt;br/&gt;默认值：{left:4.0vp,right:4.0vp,top:0.0vp,bottom: 0.0vp}&lt;br/&gt;使用LocalizedPadding时，支持镜像能力。&lt;br /&gt;默认值：{start:LengthMetrics.vp(4),end:LengthMetrics.vp(4),&lt;br/&gt;top: LengthMetrics.vp(0),bottom:LengthMetrics.vp(0)}<br>**起始版本：** 10 - 11 |
+| value | Padding \| Dimension \| LocalizedPadding | 是 | 底部页签的内边距，用于设置页签内容与边界的距离（不支持百分比设置）。当需要调整页签内部空间分布、 优化视觉效果时传入自定义值。<br/>取值范围：[0, +∞]<br/>默认值：{left:4.0vp,right:4.0vp,top:0.0vp,bottom: 0.0vp}<br/>使用LocalizedPadding时，支持镜像能力。&lt;br /&gt;默认值：{start:LengthMetrics.vp(4),end:LengthMetrics.vp(4),<br/>top: LengthMetrics.vp(0),bottom:LengthMetrics.vp(0)}<br>**起始版本：** 10 - 11 |
 
 **返回值：**
 
@@ -270,7 +270,7 @@ symmetricExtensible(value: boolean): BottomTabBarStyle
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 底部页签的图片、文字是否可以对称借用左右底部页签的空余位置中的最小值。 传入true启用对称借用功能（当需要优化页签布局、充分利用空间时选择），传入false禁用对称借用功能（当需要保持页签固定布局、避免页签内容位置变化时选择）。&lt;br/&gt;默认值：false。 |
+| value | boolean | 是 | 底部页签的图片、文字是否可以对称借用左右底部页签的空余位置中的最小值。 传入true启用对称借用功能（当需要优化页签布局、充分利用空间时选择），传入false禁用对称借用功能（当需要保持页签固定布局、避免页签内容位置变化时选择）。<br/>默认值：false。 |
 
 **返回值：**
 
@@ -304,7 +304,7 @@ verticalAlign(value: VerticalAlign): BottomTabBarStyle
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | VerticalAlign | 是 | 底部页签的图片、文字在垂直方向上的对齐格式。&lt;br/&gt;默认值：VerticalAlign.Center |
+| value | VerticalAlign | 是 | 底部页签的图片、文字在垂直方向上的对齐格式。<br/>默认值：VerticalAlign.Center |
 
 **返回值：**
 

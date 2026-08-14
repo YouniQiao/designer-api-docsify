@@ -191,7 +191,7 @@ Close the BindSheet.
 | Error Code ID | Error Message |
 | --- | --- |
 | [120001](../../apis-arkui/errorcode-bindSheet.md#120001-incorrect-bindsheetcontent) | The bindSheetContent is incorrect. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [120003](../../apis-arkui/errorcode-bindSheet.md#120003-no-matching-modal-found) | The bindSheetContent cannot be found. |
 
 ## constructor
@@ -250,7 +250,7 @@ Create an animator object for custom animation.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 
 ## createUIContextWithoutWindow
 
@@ -290,7 +290,7 @@ Create a UI instance singleton without window and get its UIContext object.
 | Error Code ID | Error Message |
 | --- | --- |
 | [100001](../../apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. @static |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. The number of parameters is incorrect. &lt;br&gt; 2. Invalid parameter type of context. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. The number of parameters is incorrect. <br> 2. Invalid parameter type of context. |
 
 ## destroyUIContextWithoutWindow
 
@@ -676,7 +676,7 @@ Get DragController.
 getFilteredInspectorTree(filters?: Array<string>): string
 ```
 
-Obtains the component tree and component attributes. This API has a long processing time and is intended for &lt;br&gt;testing scenarios only.
+Obtains the component tree and component attributes. This API has a long processing time and is intended for <br>testing scenarios only.
 
 **Since:** 23
 
@@ -694,7 +694,7 @@ Obtains the component tree and component attributes. This API has a long process
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filters | Array&lt;string&gt; | No | List of component attributes used for filtering. Currently, only the following filter fields are supported: &lt;br&gt;**"id"**: unique ID of the component. &lt;br&gt;**"src"**: source of the resource. &lt;br&gt;**"content"**: information or data contained in the element, component, or object. &lt;br&gt;**"editable"**: whether the component is editable. &lt;br&gt;**"scrollable"**: whether the component is scrollable. &lt;br&gt;**"selectable"**: whether the component is selectable. &lt;br&gt;**"focusable"**: whether the component is focusable. &lt;br&gt;**"focused"**: whether the component is currently focused. &lt;br&gt;If **filters** includes one or more fields, unspecified fields will be filtered out from the results. &lt;br&gt;If **filters** is not provided or is an empty array, none of the aforementioned fields will be filtered out. &lt;br&gt;Other filter fields are used only in testing scenarios. |
+| filters | Array&lt;string&gt; | No | List of component attributes used for filtering. Currently, only the following filter fields are supported: <br>**"id"**: unique ID of the component. <br>**"src"**: source of the resource. <br>**"content"**: information or data contained in the element, component, or object. <br>**"editable"**: whether the component is editable. <br>**"scrollable"**: whether the component is scrollable. <br>**"selectable"**: whether the component is selectable. <br>**"focusable"**: whether the component is focusable. <br>**"focused"**: whether the component is currently focused. <br>If **filters** includes one or more fields, unspecified fields will be filtered out from the results. <br>If **filters** is not provided or is an empty array, none of the aforementioned fields will be filtered out. <br>Other filter fields are used only in testing scenarios. |
 
 **Return value:**
 
@@ -714,7 +714,7 @@ Obtains the component tree and component attributes. This API has a long process
 getFilteredInspectorTreeById(id: string, depth: int, filters?: Array<string>): string
 ```
 
-Obtains the attributes of the specified component and its child components. This API has a long processing time &lt;br&gt;and is intended for testing scenarios only.
+Obtains the attributes of the specified component and its child components. This API has a long processing time <br>and is intended for testing scenarios only.
 
 **Since:** 23
 
@@ -733,8 +733,8 @@ Obtains the attributes of the specified component and its child components. This
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | id | string | Yes | ID of the target component. |
-| depth | int | Yes | Number of layers of child components. If the value is **0**, the attributes of the specified component and all its child components are obtained. If the value is **1**, only the attributes of &lt;br&gt;the specified component are obtained. If the value is **2**, the attributes of the specified component and its &lt;br&gt;level-1 child components are obtained. The rest can be deduced by analogy. |
-| filters | Array&lt;string&gt; | No | List of component attributes used for filtering. Currently, only the following filter fields are supported: &lt;br&gt;**"id"**: unique ID of the component. &lt;br&gt;**"src"**: source of the resource. &lt;br&gt;**"content"**: information or data contained in the element, component, or object. &lt;br&gt;**"editable"**: whether the component is editable. &lt;br&gt;**"scrollable"**: whether the component is scrollable. &lt;br&gt;**"selectable"**: whether the component is selectable. &lt;br&gt;**"focusable"**: whether the component is focusable. &lt;br&gt;**"focused"**: whether the component is currently focused. &lt;br&gt;If **filters** includes one or more fields, unspecified fields will be filtered out from the results. &lt;br&gt;If **filters** is not provided or is an empty array, none of the aforementioned fields will be filtered out. &lt;br&gt;Other filter fields are used only in testing scenarios. |
+| depth | int | Yes | Number of layers of child components. If the value is **0**, the attributes of the specified component and all its child components are obtained. If the value is **1**, only the attributes of <br>the specified component are obtained. If the value is **2**, the attributes of the specified component and its <br>level-1 child components are obtained. The rest can be deduced by analogy. |
+| filters | Array&lt;string&gt; | No | List of component attributes used for filtering. Currently, only the following filter fields are supported: <br>**"id"**: unique ID of the component. <br>**"src"**: source of the resource. <br>**"content"**: information or data contained in the element, component, or object. <br>**"editable"**: whether the component is editable. <br>**"scrollable"**: whether the component is scrollable. <br>**"selectable"**: whether the component is selectable. <br>**"focusable"**: whether the component is focusable. <br>**"focused"**: whether the component is currently focused. <br>If **filters** includes one or more fields, unspecified fields will be filtered out from the results. <br>If **filters** is not provided or is an empty array, none of the aforementioned fields will be filtered out. <br>Other filter fields are used only in testing scenarios. |
 
 **Return value:**
 
@@ -1723,7 +1723,7 @@ Open the BindSheet.
 | --- | --- | --- | --- |
 | bindSheetContent | [ComponentContentBase](arkts-na-componentcontent-componentcontentbase-c.md) | Yes | The content of BindSheet. |
 | sheetOptions | SheetOptions | No | The options of sheet. |
-| targetId | int | No | The uniqueId of the FrameNode to which BindSheet is attached. &lt;br&gt;Value range:(0, +∞) |
+| targetId | int | No | The uniqueId of the FrameNode to which BindSheet is attached. <br>Value range:(0, +∞) |
 
 **Return value:**
 
@@ -1736,7 +1736,7 @@ Open the BindSheet.
 | Error Code ID | Error Message |
 | --- | --- |
 | [120001](../../apis-arkui/errorcode-bindSheet.md#120001-incorrect-bindsheetcontent) | The bindSheetContent is incorrect. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [120002](../../apis-arkui/errorcode-bindSheet.md#120002-modal-for-bindsheetcontent-already-exists) | The bindSheetContent already exists. |
 | [120005](../../apis-arkui/errorcode-bindSheet.md#120005-node-specified-by-targetid-is-not-in-the-component-tree) | The node of targetId is not in the component tree. |
 | [120004](../../apis-arkui/errorcode-bindSheet.md#120004-specified-targetid-does-not-exist) | The targetId does not exist. |
@@ -1955,7 +1955,7 @@ Require DynamicSyncScene by id.
 static resolveUIContext(): ResolvedUIContext
 ```
 
-Resolves a UIContext using priority strategy. Resolves and returns a UIContext instance following a predefined priority sequence. resolution rules in order: &lt;br&gt;1. the UIContext with current calling scope &lt;br&gt;2. Returns the unique UIContext if only one UI instance exists. &lt;br&gt;3. Returns the UIContext of the last focused UI instance if one exists. &lt;br&gt;4. Returns the UIContext of the last foregrounded UI instance if one exists. &lt;br&gt;5. Returns the UIContext of the most recently created UI instance if any UI instance exists. &lt;br&gt;6. Returns an invalid UIContext instance if none of the above conditions are met.
+Resolves a UIContext using priority strategy. Resolves and returns a UIContext instance following a predefined priority sequence. resolution rules in order: <br>1. the UIContext with current calling scope <br>2. Returns the unique UIContext if only one UI instance exists. <br>3. Returns the UIContext of the last focused UI instance if one exists. <br>4. Returns the UIContext of the last foregrounded UI instance if one exists. <br>5. Returns the UIContext of the most recently created UI instance if any UI instance exists. <br>6. Returns an invalid UIContext instance if none of the above conditions are met.
 
 **Since:** 23
 
@@ -2476,7 +2476,7 @@ Update the BindSheet with sheetOptions.
 | Error Code ID | Error Message |
 | --- | --- |
 | [120001](../../apis-arkui/errorcode-bindSheet.md#120001-incorrect-bindsheetcontent) | The bindSheetContent is incorrect. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [120003](../../apis-arkui/errorcode-bindSheet.md#120003-no-matching-modal-found) | The bindSheetContent cannot be found. |
 
 ## vp2px

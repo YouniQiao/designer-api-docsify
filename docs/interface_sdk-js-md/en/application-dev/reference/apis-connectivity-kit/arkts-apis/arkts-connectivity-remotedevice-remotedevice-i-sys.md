@@ -15,7 +15,7 @@ Remote device operation methods.
 ## Modules to Import
 
 ```TypeScript
-import { remoteDevice } from '@kit.ConnectivityKit';
+import { remoteDevice } from 'remoteDevice';
 ```
 
 ## cancelDevicePairing
@@ -355,7 +355,7 @@ Sets the alias of a remote device.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| alias | string | Yes | The alias of a remote device &lt;br&gt;The maximum length is 64 and cannot be empty. |
+| alias | string | Yes | The alias of a remote device <br>The maximum length is 64 and cannot be empty. |
 
 **Error codes:**
 
@@ -434,7 +434,7 @@ Set the passcode during pairing if the pairing type is passcode
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| passcode | string | Yes | The passcode entered by the user. It must be a 6-digit number &lt;br&gt;The length must be 6, Six digits within 10. |
+| passcode | string | Yes | The passcode entered by the user. It must be a 6-digit number <br>The length must be 6, Six digits within 10. |
 
 **Return value:**
 

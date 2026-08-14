@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'call';
 ```
 
 ## postDialProceed
@@ -33,7 +33,7 @@ Continues a call by playing a post-dial DTMF string. This API uses an asynchrono
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callId | int | Yes | Call ID. |
-| proceed | boolean | Yes | Whether to send DTMF tones. The default value is **false**. &lt;br&gt;- **true**: yes &lt;br&gt;- **false**: no |
+| proceed | boolean | Yes | Whether to send DTMF tones. The default value is **false**. <br>- **true**: yes <br>- **false**: no |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -86,7 +86,7 @@ Continues a call by playing a post-dial DTMF string. This API uses a promise to 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callId | int | Yes | Call ID. |
-| proceed | boolean | Yes | Whether to send DTMF tones. The default value is **false**. &lt;br&gt;- **true**: yes &lt;br&gt;- **false**: no |
+| proceed | boolean | Yes | Whether to send DTMF tones. The default value is **false**. <br>- **true**: yes <br>- **false**: no |
 
 **Return value:**
 

@@ -15,7 +15,7 @@ Describes the advertising parameters.
 ## Modules to Import
 
 ```TypeScript
-import { advertising } from '@kit.ConnectivityKit';
+import { advertising } from 'advertising';
 ```
 
 ## advertisingData

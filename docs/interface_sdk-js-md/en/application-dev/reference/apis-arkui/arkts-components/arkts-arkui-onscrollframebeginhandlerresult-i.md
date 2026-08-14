@@ -18,7 +18,7 @@ The data returned by the event handler when onScrollFrameBegin.
 offsetRemain: number
 ```
 
-Actual scroll offset relative to the previous frame.&lt;br&gt;Unit: vp Anonymous Object Rectification.
+Actual scroll offset relative to the previous frame.<br>Unit: vp Anonymous Object Rectification.
 
 **Type:** number
 

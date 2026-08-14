@@ -15,7 +15,7 @@ Provides an option for determining whether a call is a video call.
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'call';
 ```
 
 ## extras

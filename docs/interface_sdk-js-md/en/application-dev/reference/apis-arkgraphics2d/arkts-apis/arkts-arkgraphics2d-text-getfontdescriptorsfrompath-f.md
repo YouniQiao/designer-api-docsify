@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { text } from '@kit.ArkGraphics2D';
+import { text } from 'text';
 ```
 
 ## getFontDescriptorsFromPath
@@ -30,7 +30,7 @@ Obtains an array of font descriptors by font file path. This API uses a promise 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Path of the font file to query. Two formats are supported:&lt;br/&gt;1. Absolute path of the font file starting with "file://", for example, "file:///system/fonts/test.ttf".&lt;br/&gt;2. File in the project's resources/rawfile directory, in the format of \\$rawfile('file name'), for example, \\$rawfile('test.ttf' ). |
+| path | string \| [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | Yes | Path of the font file to query. Two formats are supported:<br/>1. Absolute path of the font file starting with "file://", for example, "file:///system/fonts/test.ttf".<br/>2. File in the project's resources/rawfile directory, in the format of \\$rawfile('file name'), for example, \\$rawfile('test.ttf' ). |
 
 **Return value:**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'print';
 ```
 
 ## queryPrinterInfoByIp
@@ -34,7 +34,7 @@ Query printer info by ip.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerIp | string | Yes | Indicates the printer IP. &lt;br&gt;Indicates the printer IP. |
+| printerIp | string | Yes | Indicates the printer IP. <br>Indicates the printer IP. |
 
 **Return value:**
 

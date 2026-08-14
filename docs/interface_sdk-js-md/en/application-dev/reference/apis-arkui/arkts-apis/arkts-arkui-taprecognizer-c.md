@@ -40,5 +40,5 @@ Obtains the number of consecutive taps required for the tap gesture to be recogn
 
 | Type | Description |
 | --- | --- |
-| number | Number of consecutive taps required for the tap gesture to be recognized. &lt;br&gt;Value range: [0, +∞) |
+| number | Number of consecutive taps required for the tap gesture to be recognized. <br>Value range: [0, +∞) |
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
+import { accessibility } from 'accessibility';
 ```
 
 ## offSeniorModeStateChangeForSelf
@@ -12,7 +12,7 @@ import { accessibility } from '@kit.AccessibilityKit';
 function offSeniorModeStateChangeForSelf(callback?: Callback<boolean>): void
 ```
 
-Unregister the observer for this application's senior mode state changes.
+Unsubscribes from the "senior mode" change event of the app itself. This API uses an asynchronous callback to return the result.
 
 **Since:** 26.0.0
 
@@ -30,5 +30,5 @@ Unregister the observer for this application's senior mode state changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | Asynchronous callback interface. &lt;br&gt;Default behavior: Unregister all callbacks for app senior mode state changes. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | Callback for the senior mode state change event. It must be the same as the callback in [accessibility.onSeniorModeStateChangeForSelf](arkts-accessibility-accessibility-onseniormodestatechangeforself-f.md#onSeniorModeStateChangeForSelf). If not specified, all registered events are unregistered. |
 

@@ -45,7 +45,7 @@ static marshalling(styledString: StyledString, callback: StyledStringMarshallCal
 
 | 类型 | 说明 |
 | --- | --- |
-| ArrayBuffer | 序列化后的buffer信息。 &lt;br&gt;**说明：** &lt;br&gt;目前支持文本和图片。 |
+| ArrayBuffer | 序列化后的buffer信息。 <br>**说明：** <br>目前支持文本和图片。 |
 
 ## marshalling
 
@@ -79,7 +79,7 @@ static marshalling(styledString: StyledString): ArrayBuffer
 
 | 类型 | 说明 |
 | --- | --- |
-| ArrayBuffer | 序列化后的buffer信息。 &lt;br&gt;**说明：** &lt;br&gt;目前支持文本和图片。 |
+| ArrayBuffer | 序列化后的buffer信息。 <br>**说明：** <br>目前支持文本和图片。 |
 
 ## unmarshalling
 
@@ -114,14 +114,14 @@ static unmarshalling(buffer: ArrayBuffer, callback: StyledStringUnmarshallCallba
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[StyledString](arkts-arkui-styledstring-c.md)&gt; | Promise对象，成功时返回属性字符串，失败时返回错误码，详见错误码部分。 &lt;br&gt;**说明：** &lt;br&gt;目前支持文本和图片。 |
+| Promise&lt;[StyledString](arkts-arkui-styledstring-c.md)&gt; | Promise对象，成功时返回属性字符串，失败时返回错误码，详见错误码部分。 <br>**说明：** <br>目前支持文本和图片。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [170002](../errorcode-styled-string.md#170002-属性字符串解码错误) | Styled string decode error. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 
 ## unmarshalling
 
@@ -155,12 +155,12 @@ static unmarshalling(buffer: ArrayBuffer): Promise<StyledString>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[StyledString](arkts-arkui-styledstring-c.md)&gt; | Promise对象，成功时返回属性字符串，失败时返回错误码，详见错误码部分。 &lt;br&gt;**说明：** &lt;br&gt;目前支持文本和图片。 |
+| Promise&lt;[StyledString](arkts-arkui-styledstring-c.md)&gt; | Promise对象，成功时返回属性字符串，失败时返回错误码，详见错误码部分。 <br>**说明：** <br>目前支持文本和图片。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [170002](../errorcode-styled-string.md#170002-属性字符串解码错误) | Styled string decode error. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 

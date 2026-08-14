@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleResourceManager } from '@kit.AbilityKit';
+import { bundleResourceManager } from 'bundleResourceManager';
 ```
 
 ## getExtensionAbilityResourceInfo

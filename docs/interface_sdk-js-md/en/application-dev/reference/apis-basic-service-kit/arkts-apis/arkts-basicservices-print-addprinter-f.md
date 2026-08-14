@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'print';
 ```
 
 ## addPrinter
@@ -32,10 +32,10 @@ Add a printer to system.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerName | string | Yes | Indicates the printer name. &lt;br&gt;Name of the printer to be added. |
-| uri | string | Yes | Indicates the printer uri. &lt;br&gt;Uri of the printer to be added. |
-| ppdName | string | No | Indicates the ppd name. &lt;br&gt;Ppd name of the printer to be added. |
-| options | string | No | Indicates the options. &lt;br&gt;Optional parameters when adding a printer. |
+| printerName | string | Yes | Indicates the printer name. <br>Name of the printer to be added. |
+| uri | string | Yes | Indicates the printer uri. <br>Uri of the printer to be added. |
+| ppdName | string | No | Indicates the ppd name. <br>Ppd name of the printer to be added. |
+| options | string | No | Indicates the options. <br>Optional parameters when adding a printer. |
 
 **Return value:**
 

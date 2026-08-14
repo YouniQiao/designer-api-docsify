@@ -34,7 +34,7 @@ Deletes all storage data used by JavaScript storage APIs, including the Web SQL 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| incognito | boolean | No | Whether to delete all data in the Web SQL Database in incognito mode. The value **true** means to delete all data in the Web SQL Database in incognito mode, and **false** means the opposite.&lt;br&gt;Default value: **false**.&lt;br&gt;If **undefined** or **null** is passed, the value is **false**. |
+| incognito | boolean | No | Whether to delete all data in the Web SQL Database in incognito mode. The value **true** means to delete all data in the Web SQL Database in incognito mode, and **false** means the opposite.<br>Default value: **false**.<br>If **undefined** or **null** is passed, the value is **false**. |
 
 ## deleteOrigin
 
@@ -101,7 +101,7 @@ Get the web storage quota with the origin.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100011](../../apis-arkweb/errorcode-webview.md#17100011-invalid-origin) | Invalid origin. @static |
 
 ## getOriginQuota
@@ -127,7 +127,7 @@ Obtains the storage quota of an origin in Web SQL Database and HTML5-supported W
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | origin | string | Yes | Index of the origin. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;double&gt; | Yes | The origin which to be inquired. - Storage quota of the origin.&lt;br&gt;**number** is a long integer ranging from -2,147,483,648 to 2,147,483,647. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;double&gt; | Yes | The origin which to be inquired. - Storage quota of the origin.<br>**number** is a long integer ranging from -2,147,483,648 to 2,147,483,647. |
 
 **Error codes:**
 

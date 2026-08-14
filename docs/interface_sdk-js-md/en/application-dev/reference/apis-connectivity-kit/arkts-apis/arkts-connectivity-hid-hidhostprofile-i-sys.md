@@ -17,7 +17,7 @@ Manager hid host profile.
 ## Modules to Import
 
 ```TypeScript
-import { hid } from '@kit.ConnectivityKit';
+import { hid } from 'hid';
 ```
 
 ## connect

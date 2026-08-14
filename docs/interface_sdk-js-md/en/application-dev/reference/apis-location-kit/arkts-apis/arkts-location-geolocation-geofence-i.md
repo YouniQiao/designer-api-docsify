@@ -19,7 +19,7 @@ Circular fence information.
 ## Modules to Import
 
 ```TypeScript
-import { geolocation } from '@kit.LocationKit';
+import { geolocation } from 'geolocation';
 ```
 
 ## expiration

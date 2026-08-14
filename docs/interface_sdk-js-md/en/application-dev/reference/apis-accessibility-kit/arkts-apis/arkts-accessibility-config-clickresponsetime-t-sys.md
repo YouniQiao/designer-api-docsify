@@ -4,7 +4,7 @@
 type ClickResponseTime = 'Short' | 'Medium' | 'Long'
 ```
 
-Defines the length of time for a click.
+Click duration of different lengths.
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ Defines the length of time for a click.
 
 | Type | Description |
 | --- | --- |
-| 'Short' | Short (default). |
+| 'Short' | Indicates short (default). |
 | 'Medium' | Medium. |
 | 'Long' | Long. |
 

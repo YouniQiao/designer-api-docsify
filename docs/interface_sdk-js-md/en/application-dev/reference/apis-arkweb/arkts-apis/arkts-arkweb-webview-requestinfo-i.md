@@ -15,7 +15,7 @@ Describes the information about the resource request sent by the **Web** compone
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'webview';
 ```
 
 ## formData

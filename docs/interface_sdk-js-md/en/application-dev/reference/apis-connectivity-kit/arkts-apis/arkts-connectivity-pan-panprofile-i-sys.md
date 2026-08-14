@@ -17,7 +17,7 @@ Manager pan host profile.
 ## Modules to Import
 
 ```TypeScript
-import { pan } from '@kit.ConnectivityKit';
+import { pan } from 'pan';
 ```
 
 ## connect

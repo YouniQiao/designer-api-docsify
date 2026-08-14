@@ -18,7 +18,7 @@
 alignContent?: Alignment
 ```
 
-Alignment of child components in the container. Default value: Alignment.Center. &lt;br&gt;Invalid values are treated as the default value.
+Alignment of child components in the container. Default value: Alignment.Center. <br>Invalid values are treated as the default value.
 
 **Type:** Alignment
 

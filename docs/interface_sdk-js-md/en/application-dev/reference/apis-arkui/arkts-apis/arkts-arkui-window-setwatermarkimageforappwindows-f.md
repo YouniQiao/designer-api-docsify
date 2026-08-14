@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'window';
 ```
 
 ## setWatermarkImageForAppWindows
@@ -28,7 +28,7 @@ Sets a watermark image for windows in the current application process. This API 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelMap | image.PixelMap \| undefined | Yes | If this parameter is set to **image.PixelMap**, a watermark image is set. If this parameter is set to **undefined**, the watermark is removed.&lt;br&gt;If the width and height of the image both surpass the window and screen sizes, error code 1300016 is returned.&lt;br&gt;If the width or height of the image goes beyond the window dimensions, the excess part is trimmed.&lt;br&gt;If the width or height of the image falls short of the window dimensions, the shortfall is automatically repeated to complete the image. |
+| pixelMap | image.PixelMap \| undefined | Yes | If this parameter is set to **image.PixelMap**, a watermark image is set. If this parameter is set to **undefined**, the watermark is removed.<br>If the width and height of the image both surpass the window and screen sizes, error code 1300016 is returned.<br>If the width or height of the image goes beyond the window dimensions, the excess part is trimmed.<br>If the width or height of the image falls short of the window dimensions, the shortfall is automatically repeated to complete the image. |
 
 **Return value:**
 

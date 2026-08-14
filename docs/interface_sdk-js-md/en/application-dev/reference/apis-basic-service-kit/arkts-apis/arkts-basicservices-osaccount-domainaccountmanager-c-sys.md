@@ -15,7 +15,7 @@ Provides APIs for domain account management.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'osAccount';
 ```
 
 ## auth
@@ -59,7 +59,7 @@ Authenticates a domain account.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300113](../../apis-basic-services-kit/errorcode-account.md#12300113-authentication-service-not-found) | The account authentication service does not exist. |
 | [12300112](../../apis-basic-services-kit/errorcode-account.md#12300112-authentication-service-does-not-respond) | The authentication service is busy. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-authentication-timed-out) | The authentication time out. |
 | [12300110](../../apis-basic-services-kit/errorcode-account.md#12300110-authentication-locked) | The authentication is locked. |
 | [12300013](../../apis-basic-services-kit/errorcode-account.md#12300013-network-exception) | Network exception. |
@@ -342,7 +342,7 @@ Obtains the service access token of a domain account. This API uses an asynchron
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-authentication-timed-out) | The operation time out. |
 | [12300014](../../apis-basic-services-kit/errorcode-account.md#12300014-domain-account-not-authenticated) | The domain account is not authenticated. |
@@ -456,7 +456,7 @@ Obtains the service access token of a domain account. This API uses a promise to
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-authentication-timed-out) | The operation time out. |
 | [12300014](../../apis-basic-services-kit/errorcode-account.md#12300014-domain-account-not-authenticated) | The domain account is not authenticated. |
@@ -570,7 +570,7 @@ Obtains information about a specified domain account. This API uses an asynchron
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-authentication-timed-out) | The operation time out. |
 | [12300014](../../apis-basic-services-kit/errorcode-account.md#12300014-domain-account-not-authenticated) | Not authenticated. |
@@ -644,7 +644,7 @@ Obtains information about a specified domain account. This API uses a promise to
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-authentication-timed-out) | The operation time out. |
 | [12300014](../../apis-basic-services-kit/errorcode-account.md#12300014-domain-account-not-authenticated) | Not authenticated. |
@@ -711,7 +711,7 @@ Checks whether a domain account exists. This API uses an asynchronous callback t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-authentication-timed-out) | The operation time out. |
 | [12300014](../../apis-basic-services-kit/errorcode-account.md#12300014-domain-account-not-authenticated) | Not authenticated. |
@@ -784,7 +784,7 @@ Checks whether a domain account exists. This API uses a promise to return the re
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [12300111](../../apis-basic-services-kit/errorcode-account.md#12300111-authentication-timed-out) | The operation time out. |
 | [12300014](../../apis-basic-services-kit/errorcode-account.md#12300014-domain-account-not-authenticated) | Not authenticated. |
@@ -855,7 +855,7 @@ Checks whether the authentication of a domain account has expired. This API uses
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Domain account not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
@@ -1032,7 +1032,7 @@ Updates the token of a domain account. An empty token means an invalid token. Th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid token. |
@@ -1103,7 +1103,7 @@ Updates the token of a domain account. An empty token means an invalid token. Th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300003](../../apis-basic-services-kit/errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [12300002](../../apis-basic-services-kit/errorcode-account.md#12300002-invalid-parameter) | Invalid token. |

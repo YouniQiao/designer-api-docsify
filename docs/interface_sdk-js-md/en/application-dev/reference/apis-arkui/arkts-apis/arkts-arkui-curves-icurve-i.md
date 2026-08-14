@@ -15,7 +15,7 @@ Represents a curve object. Different types of curve objects can be created using
 ## Modules to Import
 
 ```TypeScript
-import { curves } from '@kit.ArkUI';
+import { curves } from 'curves';
 ```
 
 ## interpolate
@@ -42,7 +42,7 @@ Calculates the interpolated value along the curve at the specified normalized ti
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fraction | number | Yes | Current normalized time.&lt;br&gt;Value range: [0, 1].&lt;br&gt;**NOTE：**&lt;br&gt;A value less than 0 is treated as **0**. A value greater than 1 is treated as **1**. |
+| fraction | number | Yes | Current normalized time.<br>Value range: [0, 1].<br>**NOTE：**<br>A value less than 0 is treated as **0**. A value greater than 1 is treated as **1**. |
 
 **Return value:**
 

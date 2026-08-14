@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { mdns } from '@kit.NetworkKit';
+import { mdns } from 'mdns';
 ```
 
 ## createDiscoveryService

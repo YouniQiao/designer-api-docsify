@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { HashMap } from '@kit.ArkTS';
+import { HashMap } from 'HashMap';
 ```
 
 ## Summary

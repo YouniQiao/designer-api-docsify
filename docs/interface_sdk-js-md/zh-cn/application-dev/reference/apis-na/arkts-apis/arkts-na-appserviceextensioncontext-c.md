@@ -76,8 +76,8 @@ const TAG: string = '[AppServiceExtensionAbility]';
 export default class AppServiceExtension extends AppServiceExtensionAbility {
   connection: number = 0;
 
-  onCreate(localWant: Want) {
-    let want: Want = {
+  onCreate(want: Want) {
+    let wantInfo: Want = {
       bundleName: 'com.example.myapp',
       abilityName: 'MyAbility'
     };
@@ -96,7 +96,7 @@ export default class AppServiceExtension extends AppServiceExtensionAbility {
 
 
     try {
-      this.connection = this.context.connectServiceExtensionAbility(want, callback);
+      this.connection = this.context.connectServiceExtensionAbility(wantInfo, callback);
     } catch (paramError) {
       commRemote = null;
       // 处理入参错误异常

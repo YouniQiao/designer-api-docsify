@@ -15,7 +15,7 @@ OIS (Optical Image Stabilization) query interface.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'camera';
 ```
 
 ## getCurrentCustomOISBias

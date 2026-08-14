@@ -15,7 +15,7 @@ Describes the audio and video recording parameters. The **audioSourceType** and 
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'media';
 ```
 
 ## audioSourceType
@@ -24,7 +24,7 @@ import { media } from '@kit.MediaKit';
 audioSourceType?: AudioSourceType
 ```
 
-Type of the audio source to record. This parameter is mandatory for audio recording.&lt;br&gt;**Atomic service API**: This API can be used in atomic services since API version 12.
+Type of the audio source to record. This parameter is mandatory for audio recording.<br>**Atomic service API**: This API can be used in atomic services since API version 12.
 
 **Type:** [AudioSourceType](arkts-media-media-audiosourcetype-e.md)
 
@@ -66,7 +66,7 @@ Mode for creating the file, which is used together with on('photoAssetAvailable'
 location?: Location
 ```
 
-Geographical location of the recorded video. By default, the geographical location information is not recorded. &lt;br&gt;This API is supported since API version 6 and deprecated since API version 12. You are advised to use **AVMetadata.location** instead. If both parameters are set, **AVMetadata.location** is used.
+Geographical location of the recorded video. By default, the geographical location information is not recorded. <br>This API is supported since API version 6 and deprecated since API version 12. You are advised to use **AVMetadata.location** instead. If both parameters are set, **AVMetadata.location** is used.
 
 **Type:** Location
 
@@ -128,7 +128,7 @@ Metadata. For details, see @AVMetadata.
 profile: AVRecorderProfile
 ```
 
-Recording profile. This parameter is mandatory.&lt;br&gt;**Atomic service API**: This API can be used in atomic services since API version 12.
+Recording profile. This parameter is mandatory.<br>**Atomic service API**: This API can be used in atomic services since API version 12.
 
 **Type:** [AVRecorderProfile](arkts-media-media-avrecorderprofile-i.md)
 
@@ -150,7 +150,7 @@ Recording profile. This parameter is mandatory.&lt;br&gt;**Atomic service API**:
 rotation?: number
 ```
 
-Rotation angle of the recorded video, in degrees. The value can be 0 (default), 90, 180, or 270 for MP4 videos. &lt;br&gt;This API is supported since API version 6 and deprecated since API version 12. You are advised to use. **AVMetadata.videoOrientation** instead. If both parameters are set, **AVMetadata.videoOrientation** is used.
+Rotation angle of the recorded video, in degrees. The value can be 0 (default), 90, 180, or 270 for MP4 videos. <br>This API is supported since API version 6 and deprecated since API version 12. You are advised to use. **AVMetadata.videoOrientation** instead. If both parameters are set, **AVMetadata.videoOrientation** is used.
 
 **Type:** number
 
@@ -172,7 +172,7 @@ Rotation angle of the recorded video, in degrees. The value can be 0 (default), 
 url: string
 ```
 
-Recording output URL: fd://xx (fd number).&lt;br&gt;This parameter is mandatory.&lt;br&gt;**Atomic service API**: This API can be used in atomic services since API version 12.
+Recording output URL: fd://xx (fd number).<br>This parameter is mandatory.<br>**Atomic service API**: This API can be used in atomic services since API version 12.
 
 **Type:** string
 

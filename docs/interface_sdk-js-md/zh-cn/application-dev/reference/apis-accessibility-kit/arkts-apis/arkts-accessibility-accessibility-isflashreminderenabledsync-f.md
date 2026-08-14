@@ -6,7 +6,7 @@
 function isFlashReminderEnabledSync(): boolean
 ```
 
-使用同步方法判断闪烁提醒模式是否开启。
+查询闪烁提醒模式是否开启。 本接口为同步版本，与[accessibility.isFlashReminderEnabled](arkts-accessibility-accessibility-isflashreminderenabled-f.md#isFlashReminderEnabled)（异步版本）功能相同，如需立即获取结果可使用本 接口，如需在非阻塞场景下查询建议使用异步版本。
 
 **起始版本：** 23
 

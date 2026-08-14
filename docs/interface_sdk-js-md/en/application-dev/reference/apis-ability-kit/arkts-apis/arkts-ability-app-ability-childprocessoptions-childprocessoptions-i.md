@@ -15,7 +15,7 @@ The module describes the startup configuration of a child process. When starting
 ## Modules to Import
 
 ```TypeScript
-import { ChildProcessOptions } from '@kit.AbilityKit';
+import { ChildProcessOptions } from 'ChildProcessOptions';
 ```
 
 ## isolationMode

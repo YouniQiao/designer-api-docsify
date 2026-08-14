@@ -40,9 +40,9 @@ Creates an offscreen canvas object. You can configure the canvas width, canvas h
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | number | Yes | Width of the offscreen canvas.&lt;br&gt;Default unit: vp&lt;br&gt; Invalid values **NaN** and **Infinity** are treated as invalid. |
-| height | number | Yes | Height of the offscreen canvas.&lt;br&gt;Default unit: vp&lt;br&gt; Invalid values **NaN** and **Infinity** are treated as invalid. |
-| settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No | Settings of the **OffscreenCanvasRenderingContext2D** object.&lt;br&gt;The value **undefined** is treated as the default value of [RenderingContextSettings](#renderingcontextsettings).&lt;br&gt; Default value: **null |
+| width | number | Yes | Width of the offscreen canvas.<br>Default unit: vp<br> Invalid values **NaN** and **Infinity** are treated as invalid. |
+| height | number | Yes | Height of the offscreen canvas.<br>Default unit: vp<br> Invalid values **NaN** and **Infinity** are treated as invalid. |
+| settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No | Settings of the **OffscreenCanvasRenderingContext2D** object.<br>The value **undefined** is treated as the default value of [RenderingContextSettings](#renderingcontextsettings).<br> Default value: **null |
 
 ## constructor
 
@@ -72,10 +72,10 @@ Creates an offscreen canvas object. You can configure the canvas width, canvas h
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | number | Yes | Width of the offscreen canvas.&lt;br&gt;Default unit: vp&lt;br&gt; Invalid values **NaN** and **Infinity** are treated as invalid. |
-| height | number | Yes | Height of the offscreen canvas.&lt;br&gt;Default unit: vp&lt;br&gt; Invalid values **NaN** and **Infinity** are treated as invalid. |
-| settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No | Settings of the **OffscreenCanvasRenderingContext2D** object.&lt;br&gt;The value **undefined** is treated as the default value of [RenderingContextSettings](#renderingcontextsettings).&lt;br&gt; Default value: **null |
-| unit | LengthMetricsUnit | No | Unit of the **OffscreenCanvasRenderingContext2D** object. The value cannot be dynamically changed once set.&lt;br&gt; Invalid values **undefined**, **NaN** and **Infinity** are treated as the default value.&lt;br&gt; Default value: **DEFAULT |
+| width | number | Yes | Width of the offscreen canvas.<br>Default unit: vp<br> Invalid values **NaN** and **Infinity** are treated as invalid. |
+| height | number | Yes | Height of the offscreen canvas.<br>Default unit: vp<br> Invalid values **NaN** and **Infinity** are treated as invalid. |
+| settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No | Settings of the **OffscreenCanvasRenderingContext2D** object.<br>The value **undefined** is treated as the default value of [RenderingContextSettings](#renderingcontextsettings).<br> Default value: **null |
+| unit | LengthMetricsUnit | No | Unit of the **OffscreenCanvasRenderingContext2D** object. The value cannot be dynamically changed once set.<br> Invalid values **undefined**, **NaN** and **Infinity** are treated as the default value.<br> Default value: **DEFAULT |
 
 ## toDataURL
 
@@ -103,8 +103,8 @@ Creates a data URL that contains a representation of an image. This API involves
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | No | Image format. &lt;br&gt;The options are **image/png**, **image/jpeg**, and **image/webp**. &lt;br&gt;Invalid values **undefined** and **null** are treated as the default value. &lt;br&gt;Default value: **image/png |
-| quality | any | No | Image quality, which ranges from 0 to 1, when the image format is **image/jpeg** or **image/webp**. If the set value is beyond the value range, the default value **0.92** is used. &lt;br&gt;Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as the default value. &lt;br&gt;Default value: **0.92 |
+| type | string | No | Image format. <br>The options are **image/png**, **image/jpeg**, and **image/webp**. <br>Invalid values **undefined** and **null** are treated as the default value. <br>Default value: **image/png |
+| quality | any | No | Image quality, which ranges from 0 to 1, when the image format is **image/jpeg** or **image/webp**. If the set value is beyond the value range, the default value **0.92** is used. <br>Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as the default value. <br>Default value: **0.92 |
 
 **Return value:**
 

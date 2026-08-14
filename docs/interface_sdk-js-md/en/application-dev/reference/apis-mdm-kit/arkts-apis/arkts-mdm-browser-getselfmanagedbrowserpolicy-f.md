@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { browser } from '@kit.MDMKit';
+import { browser } from 'browser';
 ```
 
 ## getSelfManagedBrowserPolicy

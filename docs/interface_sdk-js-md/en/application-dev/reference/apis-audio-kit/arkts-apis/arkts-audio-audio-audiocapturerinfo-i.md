@@ -15,7 +15,7 @@ Describes audio capturer information.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'audio';
 ```
 
 ## capturerFlags

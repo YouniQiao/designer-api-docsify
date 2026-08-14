@@ -15,7 +15,7 @@ Defines OAuth authenticator information.
 ## Modules to Import
 
 ```TypeScript
-import { appAccount } from '@kit.BasicServicesKit';
+import { appAccount } from 'appAccount';
 ```
 
 ## iconId

@@ -39,7 +39,7 @@ Adds a preferred language to the specified position on the preferred language li
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | language | string | Yes | Valid ID of the language to be added as a preferred language. |
-| index | int | No | Position to which the preferred language is added. The default value is the length of the preferred language list. &lt;br&gt;The value should be an integer. |
+| index | int | No | Position to which the preferred language is added. The default value is the length of the preferred language list. <br>The value should be an integer. |
 
 **Error codes:**
 
@@ -396,7 +396,7 @@ Removes a preferred language from the specified position on the preferred langua
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | Position of the preferred language to delete. &lt;br&gt;The value should be an integer. |
+| index | int | Yes | Position of the preferred language to delete. <br>The value should be an integer. |
 
 **Error codes:**
 

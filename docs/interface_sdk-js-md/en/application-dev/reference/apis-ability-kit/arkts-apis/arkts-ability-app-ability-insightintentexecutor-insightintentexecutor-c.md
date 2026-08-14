@@ -15,7 +15,7 @@ The module provides the base class for intent execution. You can use this module
 ## Modules to Import
 
 ```TypeScript
-import { InsightIntentExecutor } from '@kit.AbilityKit';
+import { InsightIntentExecutor } from 'InsightIntentExecutor';
 ```
 
 ## onExecuteInServiceExtensionAbility

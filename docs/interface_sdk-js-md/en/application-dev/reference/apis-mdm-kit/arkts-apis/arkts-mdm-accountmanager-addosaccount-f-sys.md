@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { accountManager } from '@kit.MDMKit';
+import { accountManager } from 'accountManager';
 ```
 
 ## addOsAccount
@@ -38,7 +38,7 @@ Adds an account in the background.
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. |
 | name | string | Yes | User ID, which must be greater than or equal to 0. |
-| type | osAccount.OsAccountType | Yes | Type of the account to add. &lt;br&gt;The value can be any of the following: &lt;br&gt;· **ADMIN**: administrator account. &lt;br&gt;· **NORMAL**: normal account. &lt;br&gt;· **GUEST**: guest account. |
+| type | osAccount.OsAccountType | Yes | Type of the account to add. <br>The value can be any of the following: <br>· **ADMIN**: administrator account. <br>· **NORMAL**: normal account. <br>· **GUEST**: guest account. |
 
 **Return value:**
 

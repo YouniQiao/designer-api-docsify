@@ -15,7 +15,7 @@ Represents the configuration options of a **Preferences** instance.
 ## Modules to Import
 
 ```TypeScript
-import { sendablePreferences } from '@kit.ArkData';
+import { sendablePreferences } from 'sendablePreferences';
 ```
 
 ## dataGroupId

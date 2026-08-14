@@ -17,7 +17,7 @@ Net quota policies, including matching network rule usage periods, restrictions,
 ## Modules to Import
 
 ```TypeScript
-import { policy } from '@kit.NetworkKit';
+import { policy } from 'policy';
 ```
 
 ## networkMatchRule

@@ -15,7 +15,7 @@ Define the drag event parameters
 ## Modules to Import
 
 ```TypeScript
-import { dragController } from '@kit.ArkUI';
+import { dragController } from 'dragController';
 ```
 
 ## event

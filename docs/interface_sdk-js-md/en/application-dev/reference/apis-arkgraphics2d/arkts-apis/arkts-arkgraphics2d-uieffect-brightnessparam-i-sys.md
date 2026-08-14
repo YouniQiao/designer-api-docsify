@@ -17,7 +17,7 @@ Detailed description of the material brightness parameters.
 ## Modules to Import
 
 ```TypeScript
-import { uiEffect } from '@kit.ArkGraphics2D';
+import { uiEffect } from 'uiEffect';
 ```
 
 ## cubicCoeff

@@ -15,7 +15,7 @@ TLS config.
 ## Modules to Import
 
 ```TypeScript
-import { http } from '@kit.NetworkKit';
+import { http } from 'http';
 ```
 
 ## cipherSuites

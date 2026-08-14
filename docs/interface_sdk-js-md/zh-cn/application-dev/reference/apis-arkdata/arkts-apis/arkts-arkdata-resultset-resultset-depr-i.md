@@ -236,7 +236,7 @@ getLong(columnIndex: number): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 以Long形式返回指定列的值。&lt;br/&gt;该接口支持的数据范围是：Number.MIN_SAFE_INTEGER ~ Number.MAX_SAFE_INTEGER，若超出该范围，建议使用 getDouble。 |
+| number | 以Long形式返回指定列的值。<br/>该接口支持的数据范围是：Number.MIN_SAFE_INTEGER ~ Number.MAX_SAFE_INTEGER，若超出该范围，建议使用 getDouble。 |
 
 ## 示例
 
@@ -437,6 +437,7 @@ goToNextRow(): boolean
 let predicatesgoNext = new dataRdb.RdbPredicates("EMPLOYEE");
 let promisequerygoNext = rdbStore.query(predicatesgoNext, ["ID", "NAME", "AGE", "SALARY", "CODES"]);
 promisequerygoNext.then((resultSet) => {
+  resultSet.goToNextRow();
   resultSet.close();
 }).catch((err) => {
   console.error('query failed');
@@ -475,6 +476,7 @@ goToPreviousRow(): boolean
 let predicatesgoPrev = new dataRdb.RdbPredicates("EMPLOYEE");
 let promisequerygoPrev = rdbStore.query(predicatesgoPrev, ["ID", "NAME", "AGE", "SALARY", "CODES"]);
 promisequerygoPrev.then((resultSet) => {
+  resultSet.goToPreviousRow();
   resultSet.close();
 }).catch((err) => {
   console.error('query failed');

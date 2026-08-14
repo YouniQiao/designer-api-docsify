@@ -15,7 +15,7 @@ The **DistributedExtensionAbility** module provides distributed extension capabi
 ## Modules to Import
 
 ```TypeScript
-import { DistributedExtensionAbility } from '@kit.DistributedServiceKit';
+import { DistributedExtensionAbility } from 'DistributedExtensionAbility';
 ```
 
 ## onCollaborate

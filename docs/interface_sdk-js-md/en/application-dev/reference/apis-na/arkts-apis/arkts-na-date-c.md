@@ -68,7 +68,7 @@ Returns the number of milliseconds elapsed since the epoch, which is defined as 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| year | int | Yes | to be converted to milliseconds &lt;br&gt;The value range is all integers. |
+| year | int | Yes | to be converted to milliseconds <br>The value range is all integers. |
 
 **Return value:**
 
@@ -100,13 +100,13 @@ Returns the number of milliseconds elapsed since the epoch, which is defined as 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| year | int | Yes | to be converted to milliseconds &lt;br&gt;The value range is all integers. |
-| month | int | Yes | to be converted to milliseconds &lt;br&gt;The value range is all integers. |
-| day | int | No | to be converted to milliseconds &lt;br&gt;The value range is all integers. |
-| hours | int | No | to be converted to milliseconds &lt;br&gt;The value range is all integers. |
-| minutes | int | No | to be converted to milliseconds &lt;br&gt;The value range is all integers. |
-| seconds | int | No | to be converted to milliseconds &lt;br&gt;The value range is all integers. |
-| ms | int | No | to be converted to milliseconds &lt;br&gt;The value range is all integers. |
+| year | int | Yes | to be converted to milliseconds <br>The value range is all integers. |
+| month | int | Yes | to be converted to milliseconds <br>The value range is all integers. |
+| day | int | No | to be converted to milliseconds <br>The value range is all integers. |
+| hours | int | No | to be converted to milliseconds <br>The value range is all integers. |
+| minutes | int | No | to be converted to milliseconds <br>The value range is all integers. |
+| seconds | int | No | to be converted to milliseconds <br>The value range is all integers. |
+| ms | int | No | to be converted to milliseconds <br>The value range is all integers. |
 
 **Return value:**
 
@@ -184,13 +184,13 @@ constructor(year: int, monthIndex: int, day?: int, hours?: int, minutes?: int, s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| year | int | Yes | Year &lt;br&gt;The value range is all integers. |
-| monthIndex | int | Yes | Month &lt;br&gt;The value range is all integers. |
-| day | int | No | day &lt;br&gt;The value range is all integers. |
-| hours | int | No | hours &lt;br&gt;The value range is all integers. |
-| minutes | int | No | minutes &lt;br&gt;The value range is all integers. |
-| seconds | int | No | seconds &lt;br&gt;The value range is all integers. |
-| ms | int | No | ms &lt;br&gt;The value range is all integers. |
+| year | int | Yes | Year <br>The value range is all integers. |
+| monthIndex | int | Yes | Month <br>The value range is all integers. |
+| day | int | No | day <br>The value range is all integers. |
+| hours | int | No | hours <br>The value range is all integers. |
+| minutes | int | No | minutes <br>The value range is all integers. |
+| seconds | int | No | seconds <br>The value range is all integers. |
+| ms | int | No | ms <br>The value range is all integers. |
 
 ## getDate
 
@@ -858,7 +858,7 @@ Changes the day of the month of a given Date instance, based on local time.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | new day &lt;br&gt;The value range is all integers. |
+| value | int | Yes | new day <br>The value range is all integers. |
 
 **Return value:**
 
@@ -890,7 +890,7 @@ Sets the full year for a specified date according to local time.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | new year &lt;br&gt;The value range is all integers. |
+| value | int | Yes | new year <br>The value range is all integers. |
 
 **Return value:**
 
@@ -922,8 +922,8 @@ Sets the full year for a specified date according to local time.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | new year &lt;br&gt;The value range is all integers. |
-| month | int | Yes | new month &lt;br&gt;The value range is all integers. |
+| value | int | Yes | new year <br>The value range is all integers. |
+| month | int | Yes | new month <br>The value range is all integers. |
 
 **Return value:**
 
@@ -955,9 +955,9 @@ Sets the full year for a specified date according to local time.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | new year &lt;br&gt;The value range is all integers. |
-| month | int | Yes | new month &lt;br&gt;The value range is all integers. |
-| date | int | Yes | new date &lt;br&gt;The value range is all integers. |
+| value | int | Yes | new year <br>The value range is all integers. |
+| month | int | Yes | new month <br>The value range is all integers. |
+| date | int | Yes | new date <br>The value range is all integers. |
 
 **Return value:**
 
@@ -989,7 +989,7 @@ Sets the hours for a specified date according to local time.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | new hours &lt;br&gt;The value range is all integers. |
+| value | int | Yes | new hours <br>The value range is all integers. |
 
 **Return value:**
 
@@ -1021,8 +1021,8 @@ Sets the hours for a specified date according to local time.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | new hours &lt;br&gt;The value range is all integers. |
-| min | int | Yes | minutes &lt;br&gt;The value range is all integers. |
+| value | int | Yes | new hours <br>The value range is all integers. |
+| min | int | Yes | minutes <br>The value range is all integers. |
 
 **Return value:**
 
@@ -1054,9 +1054,9 @@ Sets the hours for a specified date according to local time.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | new hours &lt;br&gt;The value range is all integers. |
-| min | int | Yes | minutes &lt;br&gt;The value range is all integers. |
-| sec | int | Yes | seconds &lt;br&gt;The value range is all integers. |
+| value | int | Yes | new hours <br>The value range is all integers. |
+| min | int | Yes | minutes <br>The value range is all integers. |
+| sec | int | Yes | seconds <br>The value range is all integers. |
 
 **Return value:**
 
@@ -1088,10 +1088,10 @@ Sets the hours for a specified date according to local time.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | new hours &lt;br&gt;The value range is all integers. |
-| min | int | Yes | minutes &lt;br&gt;The value range is all integers. |
-| sec | int | Yes | seconds &lt;br&gt;The value range is all integers. |
-| ms | int | Yes | millisecond &lt;br&gt;The value range is all integers. |
+| value | int | Yes | new hours <br>The value range is all integers. |
+| min | int | Yes | minutes <br>The value range is all integers. |
+| sec | int | Yes | seconds <br>The value range is all integers. |
+| ms | int | Yes | millisecond <br>The value range is all integers. |
 
 **Return value:**
 
@@ -1123,7 +1123,7 @@ Sets the milliseconds for a specified date according to local time.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | new ms &lt;br&gt;The value range is all integers. |
+| value | int | Yes | new ms <br>The value range is all integers. |
 
 **Return value:**
 
@@ -1155,7 +1155,7 @@ Sets the minutes for a specified date according to local time.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | new minutes &lt;br&gt;The value range is all integers. |
+| value | int | Yes | new minutes <br>The value range is all integers. |
 
 **Return value:**
 
@@ -1187,8 +1187,8 @@ Sets the minutes for a specified date according to local time.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | new minutes &lt;br&gt;The value range is all integers. |
-| sec | int | Yes | seconds &lt;br&gt;The value range is all integers. |
+| value | int | Yes | new minutes <br>The value range is all integers. |
+| sec | int | Yes | seconds <br>The value range is all integers. |
 
 **Return value:**
 
@@ -1220,9 +1220,9 @@ Sets the minutes for a specified date according to local time.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | new minutes &lt;br&gt;The value range is all integers. |
-| sec | int | Yes | seconds &lt;br&gt;The value range is all integers. |
-| ms | int | Yes | milliseconds &lt;br&gt;The value range is all integers. |
+| value | int | Yes | new minutes <br>The value range is all integers. |
+| sec | int | Yes | seconds <br>The value range is all integers. |
+| ms | int | Yes | milliseconds <br>The value range is all integers. |
 
 **Return value:**
 
@@ -1254,7 +1254,7 @@ Sets the month for a specified date according to the currently set year.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| month | int | Yes | new month &lt;br&gt;The value range is all integers. |
+| month | int | Yes | new month <br>The value range is all integers. |
 
 **Return value:**
 
@@ -1286,8 +1286,8 @@ Sets the month for a specified date according to the currently set year.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| month | int | Yes | new month &lt;br&gt;The value range is all integers. |
-| date | int | Yes | Dated &lt;br&gt;The value range is all integers. |
+| month | int | Yes | new month <br>The value range is all integers. |
+| date | int | Yes | Dated <br>The value range is all integers. |
 
 **Return value:**
 
@@ -1319,7 +1319,7 @@ Sets the seconds for a specified date according to local time.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | new seconds &lt;br&gt;The value range is all integers. |
+| value | int | Yes | new seconds <br>The value range is all integers. |
 
 **Return value:**
 
@@ -1351,8 +1351,8 @@ Sets the seconds for a specified date according to local time.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | new seconds &lt;br&gt;The value range is all integers. |
-| ms | int | Yes | milliseconds &lt;br&gt;The value range is all integers. |
+| value | int | Yes | new seconds <br>The value range is all integers. |
+| ms | int | Yes | milliseconds <br>The value range is all integers. |
 
 **Return value:**
 
@@ -1416,7 +1416,7 @@ Sets the difference, in minutes, between a date as evaluated in the UTC time zon
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | The timezone offset in minutes from UTC. &lt;br&gt;The value range is all integers. |
+| value | int | Yes | The timezone offset in minutes from UTC. <br>The value range is all integers. |
 
 **Return value:**
 
@@ -1448,7 +1448,7 @@ Changes the day of the month of a given Date instance, based on UTC time.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | new day &lt;br&gt;The value range is all integers. |
+| value | int | Yes | new day <br>The value range is all integers. |
 
 **Return value:**
 
@@ -1480,7 +1480,7 @@ Sets the numeric day of the month in the Date object using Universal Coordinated
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | The day of the week using universal time. &lt;br&gt;The value range is all integers. |
+| value | int | Yes | The day of the week using universal time. <br>The value range is all integers. |
 
 **Return value:**
 
@@ -1512,7 +1512,7 @@ Sets the full year for a specified date according to universal time.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | new year &lt;br&gt;The value range is all integers. |
+| value | int | Yes | new year <br>The value range is all integers. |
 
 **Return value:**
 
@@ -1544,8 +1544,8 @@ Sets the full year for a specified date according to universal time.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | new year &lt;br&gt;The value range is all integers. |
-| month | int | Yes | new month &lt;br&gt;The value range is all integers. |
+| value | int | Yes | new year <br>The value range is all integers. |
+| month | int | Yes | new month <br>The value range is all integers. |
 
 **Return value:**
 
@@ -1577,9 +1577,9 @@ Sets the full year for a specified date according to universal time.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | new year &lt;br&gt;The value range is all integers. |
-| month | int | Yes | new month &lt;br&gt;The value range is all integers. |
-| date | int | Yes | new date &lt;br&gt;The value range is all integers. |
+| value | int | Yes | new year <br>The value range is all integers. |
+| month | int | Yes | new month <br>The value range is all integers. |
+| date | int | Yes | new date <br>The value range is all integers. |
 
 **Return value:**
 
@@ -1611,7 +1611,7 @@ Sets the hour for a specified date according to universal time.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | new hours &lt;br&gt;The value range is all integers. |
+| value | int | Yes | new hours <br>The value range is all integers. |
 
 **Return value:**
 
@@ -1643,8 +1643,8 @@ Sets the hour for a specified date according to universal time.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | new hours &lt;br&gt;The value range is all integers. |
-| min | int | Yes | minutes &lt;br&gt;The value range is all integers. |
+| value | int | Yes | new hours <br>The value range is all integers. |
+| min | int | Yes | minutes <br>The value range is all integers. |
 
 **Return value:**
 
@@ -1676,9 +1676,9 @@ Sets the hour for a specified date according to universal time.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | new hours &lt;br&gt;The value range is all integers. |
-| min | int | Yes | minutes &lt;br&gt;The value range is all integers. |
-| sec | int | Yes | seconds &lt;br&gt;The value range is all integers. |
+| value | int | Yes | new hours <br>The value range is all integers. |
+| min | int | Yes | minutes <br>The value range is all integers. |
+| sec | int | Yes | seconds <br>The value range is all integers. |
 
 **Return value:**
 
@@ -1710,10 +1710,10 @@ Sets the hour for a specified date according to universal time.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | new hours &lt;br&gt;The value range is all integers. |
-| min | int | Yes | minutes &lt;br&gt;The value range is all integers. |
-| sec | int | Yes | seconds &lt;br&gt;The value range is all integers. |
-| ms | int | Yes | millisecond &lt;br&gt;The value range is all integers. |
+| value | int | Yes | new hours <br>The value range is all integers. |
+| min | int | Yes | minutes <br>The value range is all integers. |
+| sec | int | Yes | seconds <br>The value range is all integers. |
+| ms | int | Yes | millisecond <br>The value range is all integers. |
 
 **Return value:**
 
@@ -1745,7 +1745,7 @@ Sets the milliseconds for a specified date according to universal time.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | new ms &lt;br&gt;The value range is all integers. |
+| value | int | Yes | new ms <br>The value range is all integers. |
 
 **Return value:**
 
@@ -1777,7 +1777,7 @@ Sets the minutes for a specified date according to universal time.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | new minutes &lt;br&gt;The value range is all integers. |
+| value | int | Yes | new minutes <br>The value range is all integers. |
 
 **Return value:**
 
@@ -1809,8 +1809,8 @@ Sets the minutes for a specified date according to universal time.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | new minutes &lt;br&gt;The value range is all integers. |
-| sec | int | Yes | seconds &lt;br&gt;The value range is all integers. |
+| value | int | Yes | new minutes <br>The value range is all integers. |
+| sec | int | Yes | seconds <br>The value range is all integers. |
 
 **Return value:**
 
@@ -1842,9 +1842,9 @@ Sets the minutes for a specified date according to universal time.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | new minutes &lt;br&gt;The value range is all integers. |
-| sec | int | Yes | seconds &lt;br&gt;The value range is all integers. |
-| ms | int | Yes | milliseconds &lt;br&gt;The value range is all integers. |
+| value | int | Yes | new minutes <br>The value range is all integers. |
+| sec | int | Yes | seconds <br>The value range is all integers. |
+| ms | int | Yes | milliseconds <br>The value range is all integers. |
 
 **Return value:**
 
@@ -1876,7 +1876,7 @@ Sets the month for a specified date according to universal time.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| month | int | Yes | new month &lt;br&gt;The value range is all integers. |
+| month | int | Yes | new month <br>The value range is all integers. |
 
 **Return value:**
 
@@ -1908,8 +1908,8 @@ Sets the month for a specified date according to universal time.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| month | int | Yes | new month &lt;br&gt;The value range is all integers. |
-| date | int | Yes | Dated &lt;br&gt;The value range is all integers. |
+| month | int | Yes | new month <br>The value range is all integers. |
+| date | int | Yes | Dated <br>The value range is all integers. |
 
 **Return value:**
 
@@ -1941,7 +1941,7 @@ Sets the seconds for a specified date according to universal time.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | new seconds &lt;br&gt;The value range is all integers. |
+| value | int | Yes | new seconds <br>The value range is all integers. |
 
 **Return value:**
 
@@ -1973,8 +1973,8 @@ Sets the seconds for a specified date according to universal time.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | new seconds &lt;br&gt;The value range is all integers. |
-| ms | int | Yes | milliseconds &lt;br&gt;The value range is all integers. |
+| value | int | Yes | new seconds <br>The value range is all integers. |
+| ms | int | Yes | milliseconds <br>The value range is all integers. |
 
 **Return value:**
 
@@ -2006,7 +2006,7 @@ Sets the full year for a specified date according to local time.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | new year &lt;br&gt;The value range is all integers. |
+| value | int | Yes | new year <br>The value range is all integers. |
 
 ## toDateString
 

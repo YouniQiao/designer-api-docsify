@@ -15,7 +15,7 @@ Implements a serial queue, in which all tasks are executed in sequence.
 ## Modules to Import
 
 ```TypeScript
-import { taskpool } from '@kit.ArkTS';
+import { taskpool } from 'taskpool';
 ```
 
 ## constructor

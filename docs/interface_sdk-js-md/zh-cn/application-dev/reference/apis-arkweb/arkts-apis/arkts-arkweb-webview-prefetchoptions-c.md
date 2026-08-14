@@ -36,7 +36,7 @@ Constructor for PrefetchOptions.
 ignoreCacheControlNoStore: boolean
 ```
 
-设置是否忽略响应头中的Cache-Control: no-store。默认值：false。 &lt;p&gt;&lt;strong&gt;API 说明&lt;/strong&gt;:&lt;br&gt; 此设置控制预取操作是否绕过 HTTP Cache-Control: no-store 指令。 重要提示：默认行为（false）符合 HTTP 安全标准。若要覆盖默认行为（设置为 true），必须对非敏感资源进行明确的**风险评估**。
+设置是否忽略响应头中的Cache-Control: no-store。默认值：false。 &lt;p&gt;&lt;strong&gt;API 说明&lt;/strong&gt;:<br> 此设置控制预取操作是否绕过 HTTP Cache-Control: no-store 指令。 重要提示：默认行为（false）符合 HTTP 安全标准。若要覆盖默认行为（设置为 true），必须对非敏感资源进行明确的**风险评估**。
 
 **类型：** boolean
 

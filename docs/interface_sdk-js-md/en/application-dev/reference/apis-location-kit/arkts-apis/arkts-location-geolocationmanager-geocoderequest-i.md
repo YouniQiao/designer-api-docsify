@@ -15,7 +15,7 @@ Configuring parameters in geocode requests.
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'geoLocationManager';
 ```
 
 ## country

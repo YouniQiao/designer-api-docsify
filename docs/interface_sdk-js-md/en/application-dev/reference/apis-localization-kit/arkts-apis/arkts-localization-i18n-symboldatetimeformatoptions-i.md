@@ -17,7 +17,7 @@ Represents optional configuration items for the SymbolDateTimeFormat object. Def
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'i18n';
 ```
 
 ## amPMSymbol

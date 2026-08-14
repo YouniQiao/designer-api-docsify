@@ -6,7 +6,7 @@
 function getRotationMatrix(rotationVector: Array<double>, callback: AsyncCallback<Array<double>>): void
 ```
 
-根据旋转矢量获取旋转矩阵，使用Callback异步方式返回结果。
+根据旋转矢量获取旋转矩阵。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -29,8 +29,8 @@ function getRotationMatrix(rotationVector: Array<double>, callback: AsyncCallbac
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 ## 示例
 
@@ -87,7 +87,7 @@ try {
 function getRotationMatrix(rotationVector: Array<double>): Promise<Array<double>>
 ```
 
-根据旋转矢量获取旋转矩阵，使用Promise异步方式返回结果。
+根据旋转矢量获取旋转矩阵。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -115,8 +115,8 @@ function getRotationMatrix(rotationVector: Array<double>): Promise<Array<double>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 ## 示例
 
@@ -171,7 +171,7 @@ try {
 function getRotationMatrix(gravity: Array<double>, geomagnetic: Array<double>, callback: AsyncCallback<RotationMatrixResponse>): void
 ```
 
-根据重力矢量和地磁矢量计算旋转矩阵，使用Callback异步方式返回结果。
+根据重力矢量和地磁矢量计算旋转矩阵。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -195,8 +195,8 @@ function getRotationMatrix(gravity: Array<double>, geomagnetic: Array<double>, c
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 ## 示例
 
@@ -253,7 +253,7 @@ try {
 function getRotationMatrix(gravity: Array<double>, geomagnetic: Array<double>): Promise<RotationMatrixResponse>
 ```
 
-根据重力矢量和地磁矢量计算旋转矩阵，使用Promise异步方式返回结果。
+根据重力矢量和地磁矢量计算旋转矩阵。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -282,8 +282,8 @@ function getRotationMatrix(gravity: Array<double>, geomagnetic: Array<double>): 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; &lt;br&gt; 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 ## 示例
 

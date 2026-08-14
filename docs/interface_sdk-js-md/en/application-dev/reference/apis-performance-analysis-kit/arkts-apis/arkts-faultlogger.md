@@ -17,7 +17,7 @@ The **faultLogger** APIs can be used to query fault logs of an application cache
 ## Modules to Import
 
 ```TypeScript
-import { FaultLogger } from '@kit.PerformanceAnalysisKit';
+import { FaultLogger } from 'FaultLogger';
 ```
 
 ## Summary

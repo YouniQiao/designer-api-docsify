@@ -21,6 +21,6 @@ Represents the data of the home screen icon defined by the system. It is a child
 ## Modules to Import
 
 ```TypeScript
-import { unifiedDataChannel } from '@kit.ArkData';
+import { unifiedDataChannel } from 'unifiedDataChannel';
 ```
 

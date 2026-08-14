@@ -17,7 +17,7 @@ Provides the relative time formatting capability.
 ## Modules to Import
 
 ```TypeScript
-import { intl } from '@kit.LocalizationKit';
+import { intl } from 'intl';
 ```
 
 ## constructor

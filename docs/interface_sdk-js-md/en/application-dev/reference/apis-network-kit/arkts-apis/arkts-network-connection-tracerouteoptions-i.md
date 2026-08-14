@@ -15,7 +15,7 @@ Network traceroute option definition.
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'connection';
 ```
 
 ## maxJumpNumber

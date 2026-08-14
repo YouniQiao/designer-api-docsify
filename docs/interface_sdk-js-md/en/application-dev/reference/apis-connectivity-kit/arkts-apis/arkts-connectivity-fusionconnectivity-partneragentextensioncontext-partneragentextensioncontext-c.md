@@ -19,6 +19,6 @@ Class for the context of the PartnerAgentExtensionAbility.
 ## Modules to Import
 
 ```TypeScript
-import { PartnerAgentExtensionContext } from '@kit.ConnectivityKit';
+import { PartnerAgentExtensionContext } from 'PartnerAgentExtensionContext';
 ```
 

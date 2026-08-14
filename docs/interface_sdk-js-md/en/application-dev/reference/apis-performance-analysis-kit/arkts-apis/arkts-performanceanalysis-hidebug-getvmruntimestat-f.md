@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hidebug } from '@kit.PerformanceAnalysisKit';
+import { hidebug } from 'hidebug';
 ```
 
 ## getVMRuntimeStat
@@ -28,7 +28,7 @@ Obtains the specified system GC statistics based on parameters.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| item | string | Yes | Type of the statistics to obtain. The following statistics can be obtained:&lt;br&gt; **"ark.gc.gc-count"**: number of GC times of the current thread.&lt;br&gt;**"ark.gc.gc-time"**: total GC duration triggered by the current thread, in milliseconds.&lt;br&gt;**"ark.gc.gc-bytes-allocated"**: size of the Ark VM memory allocated to the current thread, in bytes.&lt;br&gt;**"ark.gc.gc-bytes-freed"**: memory freed by GC of the current thread, in bytes.&lt;br&gt; **"ark.gc.fullgc-longtime-count"**: number of longtime full GC times triggered by the current thread. |
+| item | string | Yes | Type of the statistics to obtain. The following statistics can be obtained:<br> **"ark.gc.gc-count"**: number of GC times of the current thread.<br>**"ark.gc.gc-time"**: total GC duration triggered by the current thread, in milliseconds.<br>**"ark.gc.gc-bytes-allocated"**: size of the Ark VM memory allocated to the current thread, in bytes.<br>**"ark.gc.gc-bytes-freed"**: memory freed by GC of the current thread, in bytes.<br> **"ark.gc.fullgc-longtime-count"**: number of longtime full GC times triggered by the current thread. |
 
 **Return value:**
 

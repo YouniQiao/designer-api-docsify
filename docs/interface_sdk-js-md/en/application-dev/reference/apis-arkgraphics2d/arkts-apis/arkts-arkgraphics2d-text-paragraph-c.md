@@ -15,7 +15,7 @@ Implements a carrier that stores the text content and style. You can perform ope
 ## Modules to Import
 
 ```TypeScript
-import { text } from '@kit.ArkGraphics2D';
+import { text } from 'text';
 ```
 
 ## didExceedMaxLines
@@ -740,7 +740,7 @@ Obtains the style configuration of a paragraph.
 
 | Type | Description |
 | --- | --- |
-| ParagraphStyle | Style configuration of the paragraph. &lt;br&gt;The `textStyle.color`, `textStyle.textShadows.color`, `textStyle.backgroundRect.color`, and `textStyle.decoration.color` properties return a 32-bit unsigned integer color value. Example: The return value `4278190080` corresponds to the pure black hexadecimal color value `0xFF000000`, which is equivalent to the [common2D.Color]{ |
+| ParagraphStyle | Style configuration of the paragraph. <br>The `textStyle.color`, `textStyle.textShadows.color`, `textStyle.backgroundRect.color`, and `textStyle.decoration.color` properties return a 32-bit unsigned integer color value. Example: The return value `4278190080` corresponds to the pure black hexadecimal color value `0xFF000000`, which is equivalent to the [common2D.Color]{ |
 
 ## getProcessState
 

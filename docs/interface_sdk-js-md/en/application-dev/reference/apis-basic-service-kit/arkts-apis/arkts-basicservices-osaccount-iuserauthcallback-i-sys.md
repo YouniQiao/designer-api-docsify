@@ -17,7 +17,7 @@ Provides callbacks for user authentication.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'osAccount';
 ```
 
 ## onAcquireInfo

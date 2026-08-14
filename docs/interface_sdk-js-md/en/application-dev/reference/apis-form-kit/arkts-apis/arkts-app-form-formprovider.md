@@ -15,7 +15,7 @@ The **formProvider** module provides APIs to obtain widget information, update w
 ## Modules to Import
 
 ```TypeScript
-import { formProvider } from '@kit.FormKit';
+import { formProvider } from 'formProvider';
 ```
 
 ## Summary

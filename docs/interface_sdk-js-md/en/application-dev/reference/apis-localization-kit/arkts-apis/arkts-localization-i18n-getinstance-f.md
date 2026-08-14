@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'i18n';
 ```
 
 ## getInstance
@@ -37,4 +37,12 @@ Creates an **IndexUtil** object.
 | Type | Description |
 | --- | --- |
 | [IndexUtil](../../apis-na/arkts-apis/arkts-na-i18n-indexutil-c.md) | IndexUtil** object created based on the specified locale ID. |
+
+## Examples
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let indexUtil: i18n.IndexUtil = i18n.getInstance('zh-CN');
+```
 

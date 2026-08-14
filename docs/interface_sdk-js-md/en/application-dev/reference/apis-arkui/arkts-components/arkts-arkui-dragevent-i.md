@@ -38,7 +38,7 @@ Sets the execution function of the custom drop animation. This parameter is vali
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| customDropAnimation | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; | Yes | Custom drop animation in this callback.&lt;br&gt; **NOTE：**&lt;br&gt;1. This API is valid only in the **onDrop** callback.&lt;br&gt; 2. Before using this API, set **useCustomDropAnimation** to **true**. Otherwise, this API does not take effect.&lt;br&gt; 3. Do not implement logic unrelated to the animation in the animation callback to avoid affecting performance. |
+| customDropAnimation | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; | Yes | Custom drop animation in this callback.<br> **NOTE：**<br>1. This API is valid only in the **onDrop** callback.<br> 2. Before using this API, set **useCustomDropAnimation** to **true**. Otherwise, this API does not take effect.<br> 3. Do not implement logic unrelated to the animation in the animation callback to avoid affecting performance. |
 
 ## getData
 
@@ -213,7 +213,7 @@ Obtains the x-coordinate of the drag point relative to the upper left corner of 
 
 | Type | Description |
 | --- | --- |
-| number | X-coordinate of the drag point relative to the upper left corner of the global screen. &lt;br&gt;Unit: vp. Value range: (-∞, +∞) |
+| number | X-coordinate of the drag point relative to the upper left corner of the global screen. <br>Unit: vp. Value range: (-∞, +∞) |
 
 ## getGlobalDisplayY
 
@@ -241,7 +241,7 @@ Obtains the y-coordinate of the drag point relative to the upper left corner of 
 
 | Type | Description |
 | --- | --- |
-| number | Y-coordinate of the drag point relative to the upper left corner of the global screen. &lt;br&gt;Unit: vp. Value range: (-∞, +∞) |
+| number | Y-coordinate of the drag point relative to the upper left corner of the global screen. <br>Unit: vp. Value range: (-∞, +∞) |
 
 ## getModifierKeyState
 
@@ -269,7 +269,7 @@ Obtains the pressed status of modifier keys.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| keys | Array&lt;string&gt; | Yes | Obtains the pressed status of modifier keys. For details about the error message, see the following error codes. The following modifier keys are supported: 'Ctrl' \| 'Alt' \| 'Shift'.&lt;br&gt;**NOTE：**&lt;br&gt;This API is not supported in stylus scenarios. |
+| keys | Array&lt;string&gt; | Yes | Obtains the pressed status of modifier keys. For details about the error message, see the following error codes. The following modifier keys are supported: 'Ctrl' \| 'Alt' \| 'Shift'.<br>**NOTE：**<br>This API is not supported in stylus scenarios. |
 
 **Return value:**
 
@@ -531,7 +531,7 @@ Obtains the x-coordinate of the drag point relative to the upper left corner of 
 
 | Type | Description |
 | --- | --- |
-| number | X-coordinate of the drag point relative to the upper left corner of the window. &lt;br&gt;Unit: vp. |
+| number | X-coordinate of the drag point relative to the upper left corner of the window. <br>Unit: vp. |
 
 ## getY
 
@@ -557,7 +557,7 @@ Obtains the y-coordinate of the drag point relative to the upper left corner of 
 
 | Type | Description |
 | --- | --- |
-| number | Y-coordinate of the drag point relative to the upper left corner of the window. &lt;br&gt;Unit: vp. |
+| number | Y-coordinate of the drag point relative to the upper left corner of the window. <br>Unit: vp. |
 
 ## isRemote
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { manager } from '@kit.ConnectivityKit';
+import { manager } from 'manager';
 ```
 
 ## setConnectionMode
@@ -35,7 +35,7 @@ Sets the NearLink connection mode for a device.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mode | [ConnectionMode](arkts-connectivity-manager-connectionmode-e-sys.md) | Yes | Indicates the NearLink connection mode to be set. |
-| duration | int | Yes | Indicates the duration in seconds for the setting mode. A value of 0 means unlimited. &lt;br&gt;Unit: Seconds, The value must be an integer greater than or equal to 0. |
+| duration | int | Yes | Indicates the duration in seconds for the setting mode. A value of 0 means unlimited. <br>Unit: Seconds, The value must be an integer greater than or equal to 0. |
 
 **Return value:**
 

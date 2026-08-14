@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'media';
 ```
 
 ## createMediaSourceWithFd
@@ -32,7 +32,7 @@ Creates a media source from file descriptor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fdSrc | [AVFileDescriptor](arkts-media-media-avfiledescriptor-i.md) | Yes | file descriptor handler. &lt;br&gt;file descriptor handler. |
+| fdSrc | [AVFileDescriptor](arkts-media-media-avfiledescriptor-i.md) | Yes | file descriptor handler. <br>file descriptor handler. |
 
 **Return value:**
 

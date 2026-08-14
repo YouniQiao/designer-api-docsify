@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { observer } from '@kit.TelephonyKit';
+import { observer } from 'observer';
 ```
 
 ## onGetSimActiveState
@@ -30,8 +30,8 @@ Registers an observer for SIM card activation state changes. This API uses an as
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Card slot ID. &lt;br&gt;- **0**: card slot 1. &lt;br&gt;- **1**: card slot 2. |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Callback function used to return whether the SIM card is activated. &lt;br&gt;- **true**: activated. &lt;br&gt;- **false**: not activated. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Callback function used to return whether the SIM card is activated. <br>- **true**: activated. <br>- **false**: not activated. |
 
 **Error codes:**
 

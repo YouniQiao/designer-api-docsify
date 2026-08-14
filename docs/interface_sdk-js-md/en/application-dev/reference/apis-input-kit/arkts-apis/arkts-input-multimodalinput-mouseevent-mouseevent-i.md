@@ -17,7 +17,12 @@ Defines the mouse event.
 ## Modules to Import
 
 ```TypeScript
-import { MouseAction, AxisValue, MouseEvent, Button, MouseToolType, Axis } from '@kit.InputKit';
+import { MouseAction } from 'Action';
+import { Axis } from 'Axis';
+import { AxisValue } from 'AxisValue';
+import { Button } from 'Button';
+import { MouseEvent } from 'MouseEvent';
+import { MouseToolType } from 'ToolType';
 ```
 
 ## action

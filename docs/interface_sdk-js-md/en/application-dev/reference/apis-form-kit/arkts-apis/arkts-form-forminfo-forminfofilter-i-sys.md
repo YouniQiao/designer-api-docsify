@@ -15,7 +15,7 @@ The optional options used as filters to ask getFormsInfo to return formInfos fro
 ## Modules to Import
 
 ```TypeScript
-import { formInfo } from '@kit.FormKit';
+import { formInfo } from 'formInfo';
 ```
 
 ## bundleName

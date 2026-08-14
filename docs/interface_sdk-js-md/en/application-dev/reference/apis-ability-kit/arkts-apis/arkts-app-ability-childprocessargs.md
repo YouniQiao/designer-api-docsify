@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ChildProcessArgs } from '@kit.AbilityKit';
+import { ChildProcessArgs } from 'ChildProcessArgs';
 ```
 
 ## Summary

@@ -15,7 +15,7 @@ PlainArray stores key-value (KV) pairs. Each key must be unique, be of the numbe
 ## Modules to Import
 
 ```TypeScript
-import { PlainArray } from '@kit.ArkTS';
+import { PlainArray } from 'PlainArray';
 ```
 
 ## $_iterator

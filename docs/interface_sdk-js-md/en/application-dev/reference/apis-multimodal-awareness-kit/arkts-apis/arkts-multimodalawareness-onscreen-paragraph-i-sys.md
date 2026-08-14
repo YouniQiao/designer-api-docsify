@@ -17,7 +17,7 @@ Defines the paragraph information.
 ## Modules to Import
 
 ```TypeScript
-import { onScreen } from '@kit.MultimodalAwarenessKit';
+import { onScreen } from 'onScreen';
 ```
 
 ## chapterId

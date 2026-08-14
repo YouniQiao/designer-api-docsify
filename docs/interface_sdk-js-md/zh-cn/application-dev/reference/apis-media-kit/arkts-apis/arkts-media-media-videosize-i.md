@@ -18,7 +18,7 @@ Describes the video Dimensions.
 height?: int
 ```
 
-height of the video resolution. The value should be an integer.Value constraint:The value must be a positive integer. &lt;br&gt;Unit:Pixel.
+height of the video resolution. The value should be an integer.Value constraint:The value must be a positive integer. <br>Unit:Pixel.
 
 **类型：** int
 
@@ -40,7 +40,7 @@ height of the video resolution. The value should be an integer.Value constraint:
 width?: int
 ```
 
-width of the video resolution. The value should be an integer.Value constraint:The value must be a positive integer. &lt;br&gt;Unit:Pixel.
+width of the video resolution. The value should be an integer.Value constraint:The value must be a positive integer. <br>Unit:Pixel.
 
 **类型：** int
 

@@ -15,7 +15,7 @@ Represents a window instance, which is the basic unit managed by the window mana
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'window';
 ```
 
 ## clearWindowMask
@@ -1582,7 +1582,7 @@ Obtains whether the current window can receive drag events.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the current window can receive drag events. &lt;br&gt;**true** if the current window can receive drag events; **false** otherwise. |
+| boolean | Whether the current window can receive drag events. <br>**true** if the current window can receive drag events; **false** otherwise. |
 
 **Error codes:**
 
@@ -1616,7 +1616,7 @@ Obtains whether the current window supports the event separation state.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the current window supports the event separation state. &lt;br&gt;**true** if support; **false** otherwise. |
+| boolean | Whether the current window supports the event separation state. <br>**true** if support; **false** otherwise. |
 
 **Error codes:**
 
@@ -1754,7 +1754,7 @@ Checks whether a floating window, modal window, or system window (**WindowType**
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result for whether the window is enabled to access the avoid area. &lt;br&gt; **true** if enabled, **false** otherwise. |
+| boolean | Check result for whether the window is enabled to access the avoid area. <br> **true** if enabled, **false** otherwise. |
 
 **Error codes:**
 
@@ -7263,8 +7263,8 @@ Sets the aspect ratio of the window content layout (excluding decorations like b
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | ratio | double | Yes | Aspect ratio of the window content layout (excluding decorations like borders and title bars). The value is a floating-point number and is restricted by the maximum and minimum sizes of the window. The minimum ratio is the value of minimum width divided by the maximum height, and the maximum ratio is the maximum width divided by the minimum height. The maximum and minimum sizes of the window are determined by the intersection of the setting of [WindowLimits](arkts-arkui-window-windowlimits-i.md#WindowLimits) and the system limit. The system limit takes precedence over [WindowLimits](arkts-arkui-window-windowlimits-i.md#WindowLimits). The valid range of **ratio** varies with [WindowLimits](arkts-arkui-window-windowlimits-i.md#WindowLimits). If [WindowLimits](arkts-arkui-window-windowlimits-i.md#WindowLimits) is set prior to **ratio**, any conflict will result in an error code when setting **ratio**. Conversely, if **ratio** is set before and then conflicts arise with the subsequently configured [WindowLimits](arkts-arkui-window-windowlimits-i.md#WindowLimits), the window's aspect ratio may not adhere to the initially configured value of **ratio**. |
-| isPersistent | boolean | No | Whether the aspect ratio should be saved persistently.&lt;br&gt;If this parameter is set to **true**, the aspect ratio is saved persistently. This means that the setting is valid in floating window mode even after the window is destroyed, the application is closed, or the device is restarted. You can call [resetAspectRatio](#resetAspectRatio) to clear the persistently saved aspect ratio.&lt;br&gt;If this parameter is set to **false**, the aspect ratio applies only to the current window and is cleared once the window is destroyed.&lt;br&gt;The default value is **true**. |
-| needUpdateRect | boolean | No | Whether the window size should be immediately updated based on the current aspect ratio.&lt;br&gt;If this parameter is set to **true**, the window size is updated immediately based on the current aspect ratio.&lt;br&gt;If this parameter is set to **false**, the window size is updated based on the current aspect ratio when the window is dragged and resized. You can manually trigger an update by calling [resize](#resize) or [resizeAsync](#resizeAsync).&lt;br&gt;The default value is **true**. |
+| isPersistent | boolean | No | Whether the aspect ratio should be saved persistently.<br>If this parameter is set to **true**, the aspect ratio is saved persistently. This means that the setting is valid in floating window mode even after the window is destroyed, the application is closed, or the device is restarted. You can call [resetAspectRatio](#resetAspectRatio) to clear the persistently saved aspect ratio.<br>If this parameter is set to **false**, the aspect ratio applies only to the current window and is cleared once the window is destroyed.<br>The default value is **true**. |
+| needUpdateRect | boolean | No | Whether the window size should be immediately updated based on the current aspect ratio.<br>If this parameter is set to **true**, the window size is updated immediately based on the current aspect ratio.<br>If this parameter is set to **false**, the window size is updated based on the current aspect ratio when the window is dragged and resized. You can manually trigger an update by calling [resize](#resize) or [resizeAsync](#resizeAsync).<br>The default value is **true**. |
 
 **Return value:**
 
@@ -7341,7 +7341,7 @@ Sets whether the modal window responds to the back gesture event. An error code 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether to respond to the back gesture event.&lt;br&gt;**true** means to respond to the back gesture event and trigger the **onBackPress** callback, **false** otherwise.&lt;br&gt; |
+| enabled | boolean | Yes | Whether to respond to the back gesture event.<br>**true** means to respond to the back gesture event and trigger the **onBackPress** callback, **false** otherwise.<br> |
 
 **Return value:**
 
@@ -7808,7 +7808,7 @@ Sets whether to enable the immersive layout for the main window. This API does n
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether to enable the immersive layout.&lt;br&gt;**true** to enable, **false** otherwise.&lt; br&gt; |
+| enabled | boolean | Yes | Whether to enable the immersive layout.<br>**true** to enable, **false** otherwise.&lt; br&gt; |
 
 **Error codes:**
 
@@ -8766,7 +8766,7 @@ setSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| names | Array&lt;'status' \| 'navigation'&gt; | Yes | Whether to show the status bar and &lt;!--RP15--&gt;three-button navigation bar&lt;!--RP15End--&gt; in full-screen mode.&lt;br&gt;For example, to show all of them, set this parameter to **['status','navigation']**. If this parameter is set to [], they are hidden. |
+| names | Array&lt;'status' \| 'navigation'&gt; | Yes | Whether to show the status bar and &lt;!--RP15--&gt;three-button navigation bar&lt;!--RP15End--&gt; in full-screen mode.<br>For example, to show all of them, set this parameter to **['status','navigation']**. If this parameter is set to [], they are hidden. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 ## setSystemBarEnable
@@ -8793,7 +8793,7 @@ setSystemBarEnable(names: Array<'status' | 'navigation'>): Promise<void>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| names | Array&lt;'status' \| 'navigation'&gt; | Yes | Whether to show the status bar and &lt;!--RP15--&gt;three-button navigation bar&lt;!--RP15End--&gt; in full-screen mode.&lt;br&gt;For example, to show all of them, set this parameter to **['status','navigation']**. If this parameter is set to [], they are hidden. |
+| names | Array&lt;'status' \| 'navigation'&gt; | Yes | Whether to show the status bar and &lt;!--RP15--&gt;three-button navigation bar&lt;!--RP15End--&gt; in full-screen mode.<br>For example, to show all of them, set this parameter to **['status','navigation']**. If this parameter is set to [], they are hidden. |
 
 **Return value:**
 
@@ -8884,8 +8884,8 @@ Sets whether to show the window title bar and dock bar when the cursor hovers ov
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isTitleHoverShown | boolean | No | Whether to show the window title bar.&lt;br&gt;**true** to show, **false** otherwise. The default value is **true**.&lt;br&gt; |
-| isDockHoverShown | boolean | No | Whether to show the dock bar.&lt;br&gt;**true** to show, **false** otherwise. The default value is **true**.&lt;br&gt; |
+| isTitleHoverShown | boolean | No | Whether to show the window title bar.<br>**true** to show, **false** otherwise. The default value is **true**.<br> |
+| isDockHoverShown | boolean | No | Whether to show the dock bar.<br>**true** to show, **false** otherwise. The default value is **true**.<br> |
 
 **Return value:**
 
@@ -9386,7 +9386,7 @@ Sets whether to enable delayed raising for the window. This API takes effect onl
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isEnabled | boolean | Yes | Whether to enable delayed raising.&lt;br&gt;**true** to enable, **false** otherwise. |
+| isEnabled | boolean | Yes | Whether to enable delayed raising.<br>**true** to enable, **false** otherwise. |
 
 **Error codes:**
 
@@ -9730,13 +9730,13 @@ Sets the size limits for this window. This API uses a promise to return the resu
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | windowLimits | [WindowLimits](arkts-arkui-window-windowlimits-i.md) | Yes | Target size limits, in px or vp. |
-| isForcible | boolean | Yes | Whether to forcibly set the window size limits.&lt;br&gt;When the unit of the input parameter [windowLimits](arkts-arkui-window-windowlimits-i.md#WindowLimits) is vp, the process is performed based on value **false** regardless of whether **isForcible** is set to **true** or **false**. The minimum and maximum values of the window width and height depend on the system limit.&lt;br&gt;When the unit of the input parameter [windowLimits](arkts-arkui-window-windowlimits-i.md#WindowLimits) is px: If **isForcible** is set to **true**, the minimum width and height of the window are subject to the smaller value between the system limit and 40 vp, and the maximum width and height of the window are subject to the system limit. If **isForcible** is set to **false**, the minimum and maximum widths and heights of the window are subject to the system limit. |
+| isForcible | boolean | Yes | Whether to forcibly set the window size limits.<br>When the unit of the input parameter [windowLimits](arkts-arkui-window-windowlimits-i.md#WindowLimits) is vp, the process is performed based on value **false** regardless of whether **isForcible** is set to **true** or **false**. The minimum and maximum values of the window width and height depend on the system limit.<br>When the unit of the input parameter [windowLimits](arkts-arkui-window-windowlimits-i.md#WindowLimits) is px: If **isForcible** is set to **true**, the minimum width and height of the window are subject to the smaller value between the system limit and 40 vp, and the maximum width and height of the window are subject to the system limit. If **isForcible** is set to **false**, the minimum and maximum widths and heights of the window are subject to the system limit. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[WindowLimits](arkts-arkui-window-windowlimits-i.md)&gt; | Promise used to return the new window size limits. &lt;br&gt;If the unit of the input parameter [windowLimits]{ |
+| Promise&lt;[WindowLimits](arkts-arkui-window-windowlimits-i.md)&gt; | Promise used to return the new window size limits. <br>If the unit of the input parameter [windowLimits]{ |
 
 **Error codes:**
 
@@ -10014,7 +10014,7 @@ setWindowSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncC
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| names | Array&lt;'status' \| 'navigation'&gt; | Yes | Whether to show the status bar and &lt;!--RP15--&gt;three-button navigation bar&lt;!--RP15End--&gt; in full-screen mode.&lt;br&gt;For example, to show all of them, set this parameter to **['status','navigation']**. If this parameter is set to [], they are hidden. |
+| names | Array&lt;'status' \| 'navigation'&gt; | Yes | Whether to show the status bar and &lt;!--RP15--&gt;three-button navigation bar&lt;!--RP15End--&gt; in full-screen mode.<br>For example, to show all of them, set this parameter to **['status','navigation']**. If this parameter is set to [], they are hidden. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**

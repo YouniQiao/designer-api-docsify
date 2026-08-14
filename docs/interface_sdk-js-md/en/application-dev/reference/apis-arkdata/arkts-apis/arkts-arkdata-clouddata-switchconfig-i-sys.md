@@ -17,7 +17,7 @@ Defines the switch configuration of a device-cloud synergy database.
 ## Modules to Import
 
 ```TypeScript
-import { cloudData } from '@kit.ArkData';
+import { cloudData } from 'cloudData';
 ```
 
 ## dbInfo

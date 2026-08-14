@@ -13,7 +13,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { bundleState } from '@kit.BackgroundTasksKit';
+import { bundleState } from 'bundleState';
 ```
 
 ## appUsagePriorityGroup
@@ -102,7 +102,7 @@ The class name.
 stateOccurredTime?: number
 ```
 
-The time when this state occurred, in milliseconds. &lt;br&gt; Unit:ms
+The time when this state occurred, in milliseconds. <br> Unit:ms
 
 **Type:** number
 

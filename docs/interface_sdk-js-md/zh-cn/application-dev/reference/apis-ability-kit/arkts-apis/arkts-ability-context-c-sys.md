@@ -176,7 +176,7 @@ createModuleResourceManager(bundleName: string, moduleName: string): resmgr.Reso
 
 | 类型 | 说明 |
 | --- | --- |
-| resmgr.ResourceManager | Object for resource management. |
+| resmgr.ResourceManager | 资源管理对象。 |
 
 **错误码：**
 
@@ -239,7 +239,7 @@ createSystemHspModuleResourceManager(bundleName: string, moduleName: string): re
 
 | 类型 | 说明 |
 | --- | --- |
-| resmgr.ResourceManager | Returns the system HSP module resource manager. |
+| resmgr.ResourceManager | 系统HSP模块资源管理对象。 |
 
 **错误码：**
 

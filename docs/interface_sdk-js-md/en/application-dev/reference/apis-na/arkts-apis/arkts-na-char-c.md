@@ -71,7 +71,7 @@ codeUnitsToEncode(int) counts a number of code units to encode the UTF-16 code p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | UTF-16 code point to be examined.. &lt;br&gt;The value should be an integer. |
+| value | int | Yes | UTF-16 code point to be examined.. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -246,7 +246,7 @@ getHighSurrogate(int) splits code point as a two code units and returns the firs
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | an encoded code point. &lt;br&gt;The value should be an integer. |
+| value | int | Yes | an encoded code point. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -278,7 +278,7 @@ getLowSurrogate(int) splits code point as a two code units and returns the secon
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | an encoded code point. &lt;br&gt;The value should be an integer. |
+| value | int | Yes | an encoded code point. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -548,7 +548,7 @@ isInBasicMultilingualPlane(int) checks if the code point is in Basic Multilingua
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | the code point to be checked. &lt;br&gt;The value should be an integer. |
+| value | int | Yes | the code point to be checked. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -870,7 +870,7 @@ isValidCodePoint() checks if the code point is correctly encoded. See UTF-16 for
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| codePoint | int | Yes | the code point to be checked. &lt;br&gt;The value should be an integer. |
+| codePoint | int | Yes | the code point to be checked. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -1482,7 +1482,7 @@ Converts this object to a string with specified radix.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| radix | int | Yes | the radix of conversion. &lt;br&gt;The value should be an integer. |
+| radix | int | Yes | the radix of conversion. <br>The value should be an integer. |
 
 **Return value:**
 

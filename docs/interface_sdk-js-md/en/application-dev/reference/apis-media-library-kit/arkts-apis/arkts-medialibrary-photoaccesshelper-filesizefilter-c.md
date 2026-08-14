@@ -15,7 +15,7 @@ Describes the configuration for file size filtering.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'photoAccessHelper';
 ```
 
 ## extraFileSize

@@ -26,7 +26,7 @@ Sorts elements of `arr` using stable sort algorithm.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | arr | FixedArray&lt;T&gt; | Yes | The array to sort. |
-| startIndex | int | Yes | The start index of sorting range. &lt;br&gt;The value should be an integer. |
-| endIndex | int | Yes | The end index of sorting range. &lt;br&gt;The value should be an integer. |
+| startIndex | int | Yes | The start index of sorting range. <br>The value should be an integer. |
+| endIndex | int | Yes | The end index of sorting range. <br>The value should be an integer. |
 | comp | (lhs: T, rhs: T) =&gt; int | Yes | Comparator function. |
 

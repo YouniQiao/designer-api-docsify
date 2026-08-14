@@ -20,7 +20,7 @@ ExtensionContext是[ExtensionAbility](arkts-ability-app-ability-extensionability
 config: Configuration
 ```
 
-所属Module的配置信息。
+当前ExtensionAbility的配置信息，可用于获取语言、颜色模式等配置。
 
 **类型：** [Configuration](arkts-ability-app-ability-configuration-configuration-i.md)
 
@@ -44,7 +44,7 @@ config: Configuration
 currentHapModuleInfo: HapModuleInfo
 ```
 
-所属Hap包的信息。
+当前ExtensionAbility所属HAP模块的信息，包含模块名称、类型、描述等。
 
 **类型：** [HapModuleInfo](arkts-ability-hapmoduleinfo-i.md)
 
@@ -68,7 +68,7 @@ currentHapModuleInfo: HapModuleInfo
 extensionAbilityInfo: ExtensionAbilityInfo
 ```
 
-所属[ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md#ExtensionAbility)的信息。
+当前[ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md#ExtensionAbility)的信息，包含名称、类型、标签ID等。
 
 **类型：** [ExtensionAbilityInfo](arkts-ability-extensionabilityinfo-i.md)
 

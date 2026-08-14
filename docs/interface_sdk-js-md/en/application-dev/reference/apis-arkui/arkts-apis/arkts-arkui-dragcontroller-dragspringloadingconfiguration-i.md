@@ -15,7 +15,7 @@ Defines parameters affecting spring loading detection. Typically, default system
 ## Modules to Import
 
 ```TypeScript
-import { dragController } from '@kit.ArkUI';
+import { dragController } from 'dragController';
 ```
 
 ## stillTimeLimit

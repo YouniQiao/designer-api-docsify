@@ -15,7 +15,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { FullScreenLaunchComponent } from '@kit.ArkUI';
+import { FullScreenLaunchComponent } from 'FullScreenLaunchComponent';
 ```
 
 ## build

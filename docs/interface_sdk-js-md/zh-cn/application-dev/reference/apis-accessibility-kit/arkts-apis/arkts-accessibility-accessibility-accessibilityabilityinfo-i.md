@@ -162,7 +162,7 @@ ability id。
 readonly label: string
 ```
 
-扩展应用在扩展服务列表中的名称。
+辅助应用在扩展服务列表中的名称。
 
 **类型：** string
 
@@ -186,7 +186,7 @@ readonly label: string
 readonly name: string
 ```
 
-ability 名。
+ability名。
 
 **类型：** string
 

@@ -17,7 +17,7 @@ Provides security event management and security model management. Based on event
 ## Modules to Import
 
 ```TypeScript
-import { securityGuard } from '@kit.SecurityGuardKit';
+import { securityGuard } from 'securityGuard';
 ```
 
 ## Summary

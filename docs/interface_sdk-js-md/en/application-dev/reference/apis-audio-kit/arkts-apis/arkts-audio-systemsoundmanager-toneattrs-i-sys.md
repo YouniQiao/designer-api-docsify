@@ -17,7 +17,7 @@ Tone attributes.
 ## Modules to Import
 
 ```TypeScript
-import { systemSoundManager } from '@kit.AudioKit';
+import { systemSoundManager } from 'systemSoundManager';
 ```
 
 ## getCategory

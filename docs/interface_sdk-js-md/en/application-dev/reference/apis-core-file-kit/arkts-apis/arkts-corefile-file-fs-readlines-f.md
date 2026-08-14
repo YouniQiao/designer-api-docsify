@@ -3,7 +3,21 @@
 ## Modules to Import
 
 ```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
+import { ConflictFiles } from 'ConflictFiles';
+import { FileFilter } from 'FileFilter';
+import { Filter } from 'Filter';
+import { Options } from 'Options';
+import { ReaderIteratorResult } from 'ReaderIteratorResult';
+import { WatchEvent } from 'WatchEvent';
+import { WatchEventListener } from 'WatchEventListener';
+import { Watcher } from 'Watcher';
+import { ReadOptions } from 'ReadOptions';
+import { ReadTextOptions } from 'ReadTextOptions';
+import { WriteOptions } from 'WriteOptions';
+import { ListFileExtOptions } from 'ListFileExtOptions';
+import { ListFileOptions } from 'ListFileOptions';
+import { DfsListeners } from 'DfsListeners';
+import { TaskSignal } from 'TaskSignal';
 ```
 
 ## readLines
@@ -29,7 +43,7 @@ Reads the text content of a file line by line. This API uses a promise to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filePath | string | Yes | Application sandbox path of the file. |
-| options | [Options](../../apis-na/arkts-apis/arkts-na-file-fs-options-i.md) | No | Options for reading the text. The options are as follows:&lt;br&gt;- **encoding** (string): format of the data to be encoded.&lt;br&gt;It is valid only when the data is of the string type.&lt;br&gt;The default value is **'utf-8'**, which is the only value supported. |
+| options | [Options](../../apis-na/arkts-apis/arkts-na-file-fs-options-i.md) | No | Options for reading the text. The options are as follows:<br>- **encoding** (string): format of the data to be encoded.<br>It is valid only when the data is of the string type.<br>The default value is **'utf-8'**, which is the only value supported. |
 
 **Return value:**
 
@@ -122,7 +136,7 @@ Reads a file text line by line. This API uses an asynchronous callback to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filePath | string | Yes | Application sandbox path of the file. |
-| options | [Options](../../apis-na/arkts-apis/arkts-na-file-fs-options-i.md) | Yes | Options for reading the text. The options are as follows:&lt;br&gt;- **encoding** (string): format of the data to be encoded.&lt;br&gt;It is valid only when the data is of the string type.&lt;br&gt;The default value is **'utf-8'**, which is the only value supported. |
+| options | [Options](../../apis-na/arkts-apis/arkts-na-file-fs-options-i.md) | Yes | Options for reading the text. The options are as follows:<br>- **encoding** (string): format of the data to be encoded.<br>It is valid only when the data is of the string type.<br>The default value is **'utf-8'**, which is the only value supported. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ReaderIterator](arkts-corefile-file-fs-readeriterator-i.md)&gt; | Yes | Callback used to return a **ReaderIterator** object. |
 
 **Error codes:**

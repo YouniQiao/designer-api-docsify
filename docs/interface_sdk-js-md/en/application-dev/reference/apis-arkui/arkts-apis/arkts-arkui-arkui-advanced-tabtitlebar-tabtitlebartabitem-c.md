@@ -15,7 +15,9 @@ Declaration of the tab item.
 ## Modules to Import
 
 ```TypeScript
-import { TabTitleBar, TabTitleBarTabItem, TabTitleBarMenuItem } from '@kit.ArkUI';
+import { TabTitleBar } from 'TabTitleBar';
+import { TabTitleBarMenuItem } from 'TabTitleBarMenuItem';
+import { TabTitleBarTabItem } from 'TabTitleBarTabItem';
 ```
 
 ## icon

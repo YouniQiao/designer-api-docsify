@@ -15,7 +15,7 @@ Defines a data processor for reporting and managing events. You can customize pr
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from 'hiAppEvent';
 ```
 
 ## appId
@@ -112,7 +112,7 @@ Name of the data processor configuration, which can be loaded from the configura
 customConfigs?: Record<string, string>
 ```
 
-Custom extended parameters. If the input parameter name and value do not meet the specifications, extended parameters are not configured by default. The specifications are as follows: &lt;br&gt;- A parameter name is a string that contains a maximum of 32 characters, including digits (0 to 9), letters (a to z)(A to Z), underscore (_), and dollar sign (\$). It must start with a letter or dollar sign (\$) and end with a digit or letter. &lt;br&gt;- A parameter value is a string contains a maximum of 1024 characters. &lt;br&gt;- The number of parameters must be less than 32. **Atomic service API**: This parameter can be used in atomic services since API version 12.
+Custom extended parameters. If the input parameter name and value do not meet the specifications, extended parameters are not configured by default. The specifications are as follows: <br>- A parameter name is a string that contains a maximum of 32 characters, including digits (0 to 9), letters (a to z)(A to Z), underscore (_), and dollar sign (\$). It must start with a letter or dollar sign (\$) and end with a digit or letter. <br>- A parameter value is a string contains a maximum of 1024 characters. <br>- The number of parameters must be less than 32. **Atomic service API**: This parameter can be used in atomic services since API version 12.
 
 **Type:** Record&lt;string, string&gt;
 

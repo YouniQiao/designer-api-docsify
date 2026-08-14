@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from 'cryptoFramework';
 ```
 
 ## createCipher
@@ -12,7 +12,7 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 function createCipher(transformation: string): Cipher
 ```
 
-Creates a **Cipher** instance. &lt;br&gt;For details about the supported specifications, seeEncryption and Decryption Algorithm Specifications. > **NOTE：**> > 1. In symmetric encryption and decryption, PKCS #5 and PKCS #7 share the same implementation, with padding > length and block size remaining consistent. In 3DES, padding is applied in 8-byte blocks; in AES, padding > is applied in 16-byte blocks. **NoPadding** means no padding is applied. > You need to understand the differences between different block cipher modes and use the correct parameter > specifications. For example, padding is required for ECB and CBC. Otherwise, ensure that the plaintext > length is an integer multiple of the block size. No padding is recommended for other modes. In this case, > the ciphertext length is the same as the plaintext length. > 2. When RSA or SM2 is used for asymmetric encryption and decryption, two **Cipher** objects must be created > to perform encryption and decryption separately. This is not required for symmetric encryption and > decryption. If the algorithm specifications are the same, the same **Cipher** object can be used for > encryption and decryption.
+Creates a **Cipher** instance. <br>For details about the supported specifications, seeEncryption and Decryption Algorithm Specifications. > **NOTE：**> > 1. In symmetric encryption and decryption, PKCS #5 and PKCS #7 share the same implementation, with padding > length and block size remaining consistent. In 3DES, padding is applied in 8-byte blocks; in AES, padding > is applied in 16-byte blocks. **NoPadding** means no padding is applied. > You need to understand the differences between different block cipher modes and use the correct parameter > specifications. For example, padding is required for ECB and CBC. Otherwise, ensure that the plaintext > length is an integer multiple of the block size. No padding is recommended for other modes. In this case, > the ciphertext length is the same as the plaintext length. > 2. When RSA or SM2 is used for asymmetric encryption and decryption, two **Cipher** objects must be created > to perform encryption and decryption separately. This is not required for symmetric encryption and > decryption. If the algorithm specifications are the same, the same **Cipher** object can be used for > encryption and decryption.
 
 **Since:** 23
 
@@ -32,7 +32,7 @@ Creates a **Cipher** instance. &lt;br&gt;For details about the supported specifi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transformation | string | Yes | Combination of the algorithm name (including the key length), encryption mode, and padding algorithm of the **Cipher** instance to create.&lt;br&gt;For details about the supported specifications, see Symmetric Key Encryption and Decryption Algorithm Specifications and Asymmetric Key Encryption and Decryption Algorithm Specifications . |
+| transformation | string | Yes | Combination of the algorithm name (including the key length), encryption mode, and padding algorithm of the **Cipher** instance to create.<br>For details about the supported specifications, see Symmetric Key Encryption and Decryption Algorithm Specifications and Asymmetric Key Encryption and Decryption Algorithm Specifications . |
 
 **Return value:**
 
@@ -44,7 +44,7 @@ Creates a **Cipher** instance. &lt;br&gt;For details about the supported specifi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | This operation is not supported. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 

@@ -15,7 +15,7 @@ Describes the window information obtained during window rotation changes.
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'window';
 ```
 
 ## displayId

@@ -15,7 +15,7 @@ The Ability class is the fundamental unit for application lifecycle scheduling. 
 ## Modules to Import
 
 ```TypeScript
-import { Ability } from '@kit.AbilityKit';
+import { Ability } from 'Ability';
 ```
 
 ## onConfigurationUpdate
@@ -85,7 +85,7 @@ Called when the available memory of the entire device changes to a specified lev
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| level | AbilityConstant.MemoryLevel | Yes | Level of the available memory.&lt;br&gt;**NOTE：**&lt;br&gt;The trigger conditions may differ across various devices. For example, on a standard device with 12 GB of memory:&lt;br&gt;- When the available memory of the entire device drops to 1700 MB to 1800 MB, the **onMemoryLevel** callback of the MEMORY_LEVEL_MODERATE type is triggered, indicating that the available memory is moderate.&lt;br&gt;- When the available memory of the entire device drops to 1600 MB to 1700 MB, the **onMemoryLevel** callback of the MEMORY_LEVEL_LOW type is triggered, indicating that the available memory is low.&lt;br&gt;- When the available memory of the entire device drops below 1600 MB , the **onMemoryLevel** callback of the MEMORY_LEVEL_CRITICAL type is triggered, indicating that the available memory is critically low. |
+| level | AbilityConstant.MemoryLevel | Yes | Level of the available memory.<br>**NOTE：**<br>The trigger conditions may differ across various devices. For example, on a standard device with 12 GB of memory:<br>- When the available memory of the entire device drops to 1700 MB to 1800 MB, the **onMemoryLevel** callback of the MEMORY_LEVEL_MODERATE type is triggered, indicating that the available memory is moderate.<br>- When the available memory of the entire device drops to 1600 MB to 1700 MB, the **onMemoryLevel** callback of the MEMORY_LEVEL_LOW type is triggered, indicating that the available memory is low.<br>- When the available memory of the entire device drops below 1600 MB , the **onMemoryLevel** callback of the MEMORY_LEVEL_CRITICAL type is triggered, indicating that the available memory is critically low. |
 
 ## Examples
 

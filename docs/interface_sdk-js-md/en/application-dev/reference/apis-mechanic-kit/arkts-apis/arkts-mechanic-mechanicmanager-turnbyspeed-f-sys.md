@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { mechanicManager } from '@kit.MechanicKit';
+import { mechanicManager } from 'mechanicManager';
 ```
 
 ## turnBySpeed
@@ -30,9 +30,9 @@ Rotate in place according to the speed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mechId | int | Yes | ID of the mechanical device. &lt;br&gt;The value should be an integer. |
+| mechId | int | Yes | ID of the mechanical device. <br>The value should be an integer. |
 | angleSpeed | double | Yes | angular velocity. |
-| duration | int | Yes | Duration of movement, unit ms. &lt;br&gt;The value should be an integer. |
+| duration | int | Yes | Duration of movement, unit ms. <br>The value should be an integer. |
 
 **Return value:**
 

@@ -15,7 +15,7 @@ Provides TCP and UDP Socket APIs.
 ## Modules to Import
 
 ```TypeScript
-import { socket } from '@kit.NetworkKit';
+import { socket } from 'socket';
 ```
 
 ## Summary

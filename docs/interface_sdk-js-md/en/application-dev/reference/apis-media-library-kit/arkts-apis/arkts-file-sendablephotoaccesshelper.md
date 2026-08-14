@@ -15,7 +15,7 @@ The module provides APIs for album management, including creating an album and a
 ## Modules to Import
 
 ```TypeScript
-import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
+import { sendablePhotoAccessHelper } from 'sendablePhotoAccessHelper';
 ```
 
 ## Summary

@@ -6,7 +6,7 @@
 function getSensorListByDeviceSync(deviceId?: int): Array<Sensor>
 ```
 
-同步获取设备的所有传感器信息。
+同步获取设备的所有传感器信息。getSensorListByDeviceSync返回设备上所有传感器信息，getSingleSensorByDeviceSync返回指定单个传感器信息。
 
 **起始版本：** 23
 

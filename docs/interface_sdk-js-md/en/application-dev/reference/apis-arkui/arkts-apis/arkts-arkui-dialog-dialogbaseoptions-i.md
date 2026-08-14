@@ -15,7 +15,12 @@ Base options shared by all dialog types.
 ## Modules to Import
 
 ```TypeScript
-import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseController, DialogBaseAlignment, DialogDismissal } from '@kit.ArkUI';
+import { DialogBaseAlignment } from 'DialogBaseAlignment';
+import { DialogButtonOrientation } from 'DialogButtonOrientation';
+import { DialogState } from 'DialogState';
+import { DialogResult } from 'DialogResult';
+import { DialogDismissal } from 'DialogDismissal';
+import { DialogBaseController } from 'DialogBaseController';
 ```
 
 ## alignment
@@ -74,7 +79,7 @@ Whether to allow dismissal by touching the mask or pressing the Back button.
 backgroundBlurStyle?: BlurStyle
 ```
 
-Background blur style of the dialog box. &lt;br&gt;Setting this parameter to BlurStyle.NONE disables the background blur.
+Background blur style of the dialog box. <br>Setting this parameter to BlurStyle.NONE disables the background blur.
 
 **Type:** BlurStyle
 
@@ -124,7 +129,7 @@ Background blur style with options.
 backgroundColor?: ResourceColor
 ```
 
-Background color of the dialog box. &lt;br&gt;When backgroundColor is set to a non-transparent color, backgroundBlurStyle must be set to BlurStyle.NONE.
+Background color of the dialog box. <br>When backgroundColor is set to a non-transparent color, backgroundBlurStyle must be set to BlurStyle.NONE.
 
 **Type:** ResourceColor
 
@@ -608,7 +613,7 @@ Display order of the dialog.
 levelUniqueId?: int
 ```
 
-Unique ID of the node under the display level for the page-level dialog box. The value should be an integer. &lt;br&gt;This parameter takes effect only when levelMode is set to LevelMode.EMBEDDED.
+Unique ID of the node under the display level for the page-level dialog box. The value should be an integer. <br>This parameter takes effect only when levelMode is set to LevelMode.EMBEDDED.
 
 **Type:** int
 
@@ -826,7 +831,7 @@ Callback function before the dialog close animation starts.
 onWillDismiss?: Callback<DialogDismissal>
 ```
 
-Callback for interactive closure of the dialog box. &lt;br&gt;If this callback is registered, the dialog box will not be closed immediately after the user touches the mask or the Back button. The reason parameter in the callback is used to determine whether the dialog can be closed.
+Callback for interactive closure of the dialog box. <br>If this callback is registered, the dialog box will not be closed immediately after the user touches the mask or the Back button. The reason parameter in the callback is used to determine whether the dialog can be closed.
 
 **Type:** Callback&lt;[DialogDismissal](arkts-arkui-arkui-dialog-dialogdismissal-i.md)&gt;
 
@@ -874,7 +879,7 @@ Shadow of the dialog box.
 showInSubWindow?: boolean
 ```
 
-Whether to display in a subwindow. &lt;br&gt;isModal = true and showInSubWindow = true cannot be used at the same time.
+Whether to display in a subwindow. <br>isModal = true and showInSubWindow = true cannot be used at the same time.
 
 **Type:** boolean
 

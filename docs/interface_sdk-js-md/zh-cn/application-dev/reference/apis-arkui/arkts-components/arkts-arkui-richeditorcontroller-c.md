@@ -78,7 +78,7 @@ addImageSpan(value: PixelMap | ResourceStr, options?: RichEditorImageSpanOptions
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | PixelMap \| ResourceStr | 是 | 图片内容。 |
-| options | [RichEditorImageSpanOptions](arkts-arkui-richeditorimagespanoptions-i.md) | 否 | 图片选项。 &lt;br&gt;当需要设置图片样式、偏移位置或段落样式时传入此参数；不传入时，图片将使用默认样式插入到内容末尾。 |
+| options | [RichEditorImageSpanOptions](arkts-arkui-richeditorimagespanoptions-i.md) | 否 | 图片选项。 <br>当需要设置图片样式、偏移位置或段落样式时传入此参数；不传入时，图片将使用默认样式插入到内容末尾。 |
 
 **返回值：**
 
@@ -113,7 +113,7 @@ addSymbolSpan(value: Resource, options?: RichEditorSymbolSpanOptions ): number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | Resource | 是 | SymbolSpan图标资源引用，用于指定系统预置或自定义的Symbol图标。 |
-| options | [RichEditorSymbolSpanOptions](arkts-arkui-richeditorsymbolspanoptions-i.md) | 否 | symbol选项。 &lt;br&gt;当需要设置SymbolSpan的偏移位置或样式时传入此参数；不传入时，SymbolSpan将使用默认样式插入到内容末尾。 |
+| options | [RichEditorSymbolSpanOptions](arkts-arkui-richeditorsymbolspanoptions-i.md) | 否 | symbol选项。 <br>当需要设置SymbolSpan的偏移位置或样式时传入此参数；不传入时，SymbolSpan将使用默认样式插入到内容末尾。 |
 
 **返回值：**
 
@@ -147,8 +147,8 @@ addTextSpan(content: ResourceStr, options?: RichEditorTextSpanOptions): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | ResourceStr | 是 | 文本内容。 &lt;br&gt;从API version 20开始，支持Resource类型。<br>**起始版本：** 20 |
-| options | [RichEditorTextSpanOptions](arkts-arkui-richeditortextspanoptions-i.md) | 否 | 文本选项。 &lt;br&gt;当需要设置偏移位置、文本样式、段落样式等信息时传入此参数；不传入时，文本将使用默认样式插入到内容末尾。 |
+| content | ResourceStr | 是 | 文本内容。 <br>从API version 20开始，支持Resource类型。<br>**起始版本：** 20 |
+| options | [RichEditorTextSpanOptions](arkts-arkui-richeditortextspanoptions-i.md) | 否 | 文本选项。 <br>当需要设置偏移位置、文本样式、段落样式等信息时传入此参数；不传入时，文本将使用默认样式插入到内容末尾。 |
 
 **返回值：**
 
@@ -216,7 +216,7 @@ fromStyledString(value: StyledString): Array<RichEditorSpan>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[RichEditorSpan](arkts-arkui-richeditorspan-t.md)&gt; | 将属性字符串解析后得到的文本和图片Span信息，可用于查询属性字符串中各Span的内容、样式和位置。 &lt;br&gt;当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
+| Array&lt;[RichEditorSpan](arkts-arkui-richeditorspan-t.md)&gt; | 将属性字符串解析后得到的文本和图片Span信息，可用于查询属性字符串中各Span的内容、样式和位置。 <br>当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
 
 **错误码：**
 
@@ -250,13 +250,13 @@ getParagraphs(value?: RichEditorRange): Array<RichEditorParagraphResult>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [RichEditorRange](arkts-arkui-richeditorrange-i.md) | 否 | 需要获取段落的范围。 &lt;br&gt;省略时，获取所有段落信息。 |
+| value | [RichEditorRange](arkts-arkui-richeditorrange-i.md) | 否 | 需要获取段落的范围。 <br>省略时，获取所有段落信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[RichEditorParagraphResult](arkts-arkui-richeditorparagraphresult-i.md)&gt; | 选中范围内的段落信息，包含各段落的样式和起始结束位置，可用于查询段落排版属性或进行段落样式更新。 &lt;br&gt;当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
+| Array&lt;[RichEditorParagraphResult](arkts-arkui-richeditorparagraphresult-i.md)&gt; | 选中范围内的段落信息，包含各段落的样式和起始结束位置，可用于查询段落排版属性或进行段落样式更新。 <br>当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
 
 ## getSelection
 
@@ -284,7 +284,7 @@ getSelection(): RichEditorSelection
 
 | 类型 | 说明 |
 | --- | --- |
-| [RichEditorSelection](arkts-arkui-richeditorselection-i.md) | 选中区域起始/结束位置及选中文本和图片的详细信息。 &lt;br&gt;当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
+| [RichEditorSelection](arkts-arkui-richeditorselection-i.md) | 选中区域起始/结束位置及选中文本和图片的详细信息。 <br>当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
 
 ## getSpans
 
@@ -312,13 +312,13 @@ getSpans(value?: RichEditorRange): Array<RichEditorImageSpanResult | RichEditorT
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [RichEditorRange](arkts-arkui-richeditorrange-i.md) | 否 | 需要获取span的范围。 &lt;br&gt;省略时，获取所有span信息。 |
+| value | [RichEditorRange](arkts-arkui-richeditorrange-i.md) | 否 | 需要获取span的范围。 <br>省略时，获取所有span信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[RichEditorImageSpanResult](arkts-arkui-richeditorimagespanresult-i.md) \| [RichEditorTextSpanResult](arkts-arkui-richeditortextspanresult-i.md)&gt; | 指定范围内的文本和图片Span详细信息，包含各Span的位置、内容、样式等属性，可用 于查询和操作组件内的文本与图片内容。 &lt;br&gt;当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
+| Array&lt;[RichEditorImageSpanResult](arkts-arkui-richeditorimagespanresult-i.md) \| [RichEditorTextSpanResult](arkts-arkui-richeditortextspanresult-i.md)&gt; | 指定范围内的文本和图片Span详细信息，包含各Span的位置、内容、样式等属性，可用 于查询和操作组件内的文本与图片内容。 <br>当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
 
 ## toStyledString
 
@@ -352,7 +352,7 @@ toStyledString(value: RichEditorRange): StyledString
 
 | 类型 | 说明 |
 | --- | --- |
-| StyledString | 组件指定范围内容转换后的属性字符串，可用于跨组件传递富文本内容或进行样式编辑操作。 &lt;br&gt;当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
+| StyledString | 组件指定范围内容转换后的属性字符串，可用于跨组件传递富文本内容或进行样式编辑操作。 <br>当controller未绑定组件或绑定controller的组件被释放时，返回undefined。 |
 
 **错误码：**
 

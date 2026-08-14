@@ -31,7 +31,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { securityManager } from '@kit.MDMKit';
+import { securityManager } from 'securityManager';
 ```
 
 ## Summary

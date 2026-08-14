@@ -18,7 +18,7 @@
 customStyle?: boolean
 ```
 
-是否使用自定义样式。&lt;br/&gt;默认值：false
+是否使用自定义样式。<br/>默认值：false
 
 **类型：** boolean
 

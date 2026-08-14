@@ -15,7 +15,7 @@ Encrypted information, including the number of read characters and the number of
 ## Modules to Import
 
 ```TypeScript
-import { util } from '@kit.ArkTS';
+import { util } from 'util';
 ```
 
 ## read

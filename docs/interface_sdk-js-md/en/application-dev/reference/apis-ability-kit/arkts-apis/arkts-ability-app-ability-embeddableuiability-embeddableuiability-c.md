@@ -17,7 +17,7 @@ EmbeddableUIAbility is an embeddable UIAbility component provided for atomic ser
 ## Modules to Import
 
 ```TypeScript
-import { EmbeddableUIAbility } from '@kit.AbilityKit';
+import { EmbeddableUIAbility } from 'EmbeddableUIAbility';
 ```
 
 ## context

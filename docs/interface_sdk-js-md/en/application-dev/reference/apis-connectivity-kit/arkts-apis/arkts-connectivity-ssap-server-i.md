@@ -15,7 +15,7 @@ Manages SSAP server. Before calling a SSAP server method, you must use [createSe
 ## Modules to Import
 
 ```TypeScript
-import { ssap } from '@kit.ConnectivityKit';
+import { ssap } from 'ssap';
 ```
 
 ## addService
@@ -112,7 +112,7 @@ Notifies the client that the value of a property on the server has changed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| address | string | Yes | Indicates the device address. &lt;br&gt;The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF. |
+| address | string | Yes | Indicates the device address. <br>The length must be 17, The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF. |
 | property | [Property](arkts-connectivity-ssap-property-i.md) | Yes | Indicates the property to notify. |
 
 **Return value:**
@@ -366,7 +366,7 @@ Removes a specific SSAP service.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| serviceUuid | string | Yes | Specific SSAP service to be removed &lt;br&gt;The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-), for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier. &lt;br&gt;NearLink standard UUIDs are not allowed. |
+| serviceUuid | string | Yes | Specific SSAP service to be removed <br>The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-), for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier. <br>NearLink standard UUIDs are not allowed. |
 
 **Error codes:**
 

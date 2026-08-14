@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cooperate } from '@kit.DistributedServiceKit';
+import { cooperate } from 'cooperate';
 ```
 
 ## deactivate
@@ -32,14 +32,14 @@ Stops screen hopping. This API uses an asynchronous callback to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isUnchained | boolean | Yes | Whether to disable the cross-device link.&lt;br&gt; The value **true** means to disable the cross-device link, and the value **false** means the opposite. |
+| isUnchained | boolean | Yes | Whether to disable the cross-device link.<br> The value **true** means to disable the cross-device link, and the value **false** means the opposite. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the operation result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. &lt;br&gt;3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
 ## Examples
@@ -87,7 +87,7 @@ Stops screen hopping. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isUnchained | boolean | Yes | Whether to disable the cross-device link.&lt;br&gt; The value **true** means to disable the cross-device link, and the value **false** means the opposite. |
+| isUnchained | boolean | Yes | Whether to disable the cross-device link.<br> The value **true** means to disable the cross-device link, and the value **false** means the opposite. |
 
 **Return value:**
 

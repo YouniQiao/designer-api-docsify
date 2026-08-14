@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'print';
 ```
 
 ## addPrinterToCups
@@ -34,9 +34,9 @@ Add a printer to cups.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerUri | string | Yes | Indicates the printer uri. &lt;br&gt;Printer URI in the process of connecting. |
-| printerName | string | Yes | Indicates the printer name. &lt;br&gt;Printer name in the process of connecting. |
-| printerMake | string | Yes | Indicates the printer make. &lt;br&gt;Printer make in the process of connecting. |
+| printerUri | string | Yes | Indicates the printer uri. <br>Printer URI in the process of connecting. |
+| printerName | string | Yes | Indicates the printer name. <br>Printer name in the process of connecting. |
+| printerMake | string | Yes | Indicates the printer make. <br>Printer make in the process of connecting. |
 
 **Return value:**
 

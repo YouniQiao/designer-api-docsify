@@ -36,7 +36,7 @@ function hasPrivateWindow(displayId: long): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3. Parameter verification failed. |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed. A non-system application calls a system API. |
 
@@ -52,19 +52,16 @@ try {
   // 获取默认Display对象
   displayClass = display.getDefaultDisplaySync();
 
-  let ret: boolean | undefined = undefined;
+  let hasPrivateWindow: boolean = false;
   try {
     // 查询默认屏幕上是否有隐私窗口
-    ret = display.hasPrivateWindow(displayClass.id);
+    hasPrivateWindow = display.hasPrivateWindow(displayClass.id);
   } catch (exception) {
     console.error(`Failed to check has privateWindow or not. Code: ${exception.code}, message: ${exception.message}`);
   }
-  if (ret === undefined) {
-    console.error('Failed to check has privateWindow or not.');
-  }
-  if (ret) {
+  if (hasPrivateWindow) {
     console.info('There has privateWindow.');
-  } else if (!ret) {
+  } else if (!hasPrivateWindow) {
     console.info('There has no privateWindow.');
   }
 } catch (exception) {

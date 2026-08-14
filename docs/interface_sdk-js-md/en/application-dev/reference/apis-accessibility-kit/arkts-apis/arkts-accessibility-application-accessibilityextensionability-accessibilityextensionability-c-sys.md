@@ -1,6 +1,6 @@
 # AccessibilityExtensionAbility
 
-The **AccessibilityExtensionAbility** module provides accessibility extension capabilities based on the ExtensionAbility framework.
+AccessibilityExtensionAbility provides the accessibility extension service capability based on the ExtensionAbility framework.
 
 **Since:** 23
 
@@ -15,7 +15,22 @@ The **AccessibilityExtensionAbility** module provides accessibility extension ca
 ## Modules to Import
 
 ```TypeScript
-import { Rect, TouchPosition, AccessibilityVirtualNode, ElementAttributeKeys, FocusCondition, AccessibilityExtensionContext, ElementAttributeValues, AccessibilityEventInfo, AccessibilityEvent, AccessibilityElement, FocusRule, FocusMoveResult, FocusType, Parameter, FocusDirection, WindowType } from '@kit.AccessibilityKit';
+import { AccessibilityElement } from 'AccessibilityElement';
+import { AccessibilityExtensionContext } from 'AccessibilityExtensionContext';
+import { ElementAttributeKeys } from 'ElementAttributeKeys';
+import { ElementAttributeValues } from 'ElementAttributeValues';
+import { FocusDirection } from 'FocusDirection';
+import { FocusType } from 'FocusType';
+import { Rect } from 'Rect';
+import { WindowType } from 'WindowType';
+import { AccessibilityEvent } from 'AccessibilityEvent';
+import { AccessibilityEventInfo } from 'AccessibilityEventInfo';
+import { Parameter } from 'Parameter';
+import { FocusRule } from 'FocusRule';
+import { FocusCondition } from 'FocusCondition';
+import { FocusMoveResult } from 'FocusMoveResult';
+import { AccessibilityVirtualNode } from 'AccessibilityVirtualNode';
+import { TouchPosition } from 'TouchPosition';
 ```
 
 ## onAccessibilityConnect
@@ -24,7 +39,7 @@ import { Rect, TouchPosition, AccessibilityVirtualNode, ElementAttributeKeys, Fo
 onAccessibilityConnect(): void
 ```
 
-Called when the AccessibilityExtensionAbility is enabled and connected to the system service. In this API, you can have the service logic initialized. This API can be overridden as required. It returns the result to notify that the ability is successfully connected.
+Callback invoked when the accessibility service is successfully connected. When the user enables AccessibilityExtensionAbility, the system service calls this API after the connection is established to notify the ability that it has been successfully connected. You can implement service logic initialization in this method. This API can be overridden as required.
 
 **Since:** 23
 
@@ -65,7 +80,7 @@ class MyAccessibilityExtensionAbility extends AccessibilityExtensionAbility {
 onAccessibilityDisconnect(): void
 ```
 
-Called when the AccessibilityExtensionAbility is successfully disconnected from the system service. In this API, you can implement the service logic of resource release and exit. This API can be overridden as required.
+Callback invoked when the accessibility service is successfully disconnected. When the user disables AccessibilityExtensionAbility, the system service calls this API after the disconnection is completed. You can implement resource reclamation and service exit operations in this method. This API can be overridden as required.
 
 **Since:** 23
 
@@ -106,7 +121,7 @@ class MyAccessibilityExtensionAbility extends AccessibilityExtensionAbility {
 onAccessibilityEventInfo(event: AccessibilityEventInfo): void
 ```
 
-Called when a specified event occurs in an application. In this API, you can implement event-specific service logic. Generally, this API needs to be overridden.
+When an accessibility event occurs, the system distributes the event to the connected AccessibilityExtensionAbility and calls this API. You can process service logic based on the event information. This API usually needs to be overridden. For details about event types, see [AccessibilityEventType](arkts-accessibility-accessibility-accessibilityeventtype-e-sys.md#AccessibilityEventType-(System-API)).
 
 **Since:** 23
 
@@ -156,7 +171,7 @@ class MyAccessibilityExtensionAbility extends AccessibilityExtensionAbility {
 onAccessibilityKeyEvent(keyEvent: KeyEvent): boolean
 ```
 
-Called when a physical key is pressed. In this API, you can determine whether to consume the event based on the service.
+Called when a key is pressed. You can determine whether to consume the event based on the service logic in this method. This API can be overridden as required.
 
 **Since:** 23
 
@@ -182,7 +197,7 @@ Called when a physical key is pressed. In this API, you can determine whether to
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if the event is consumed and will not be transferred; returns **false** otherwise. |
+| boolean | The value **true** indicates that the event is consumed and will not be propagated. <br>The value **false** indicates that the event is not consumed and will continue to be propagated. |
 
 **Error codes:**
 

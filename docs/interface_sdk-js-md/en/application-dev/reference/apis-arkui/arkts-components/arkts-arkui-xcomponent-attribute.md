@@ -40,7 +40,7 @@ Sets whether to enable the AI image analyzer, which supports subject recognition
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to enable the AI image analyzer.&lt;br&gt;**true**: enable; **false**: disable&lt;br&gt; Default value: **false**. |
+| enable | boolean | Yes | Whether to enable the AI image analyzer.<br>**true**: enable; **false**: disable<br> Default value: **false**. |
 
 ## enableSecure
 
@@ -68,7 +68,7 @@ Sets whether to enable the secure surface to protect the content rendered within
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isSecure | boolean | Yes | Whether to enable the secure surface.&lt;br&gt;The value **true** means to enable the secure surface, and **false** means the opposite.&lt;br&gt;Default value: **false**. |
+| isSecure | boolean | Yes | Whether to enable the secure surface.<br>The value **true** means to enable the secure surface, and **false** means the opposite.<br>Default value: **false**. |
 
 ## hdrBrightness
 

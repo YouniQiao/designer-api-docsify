@@ -15,7 +15,7 @@ Defines a list of data arrays.
 ## Modules to Import
 
 ```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
+import { cert } from 'cert';
 ```
 
 ## data

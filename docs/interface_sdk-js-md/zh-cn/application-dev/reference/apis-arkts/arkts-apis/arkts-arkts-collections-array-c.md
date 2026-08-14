@@ -616,7 +616,7 @@ static from<T>(arrayLike: ArrayLike<T>): Array<T>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arrayLike | ArrayLike&lt;T&gt; | 是 | 用于构造ArkTS Array的对象。 |
+| arrayLike | [ArrayLike](../../apis-na/arkts-apis/arkts-na-arraylike-i.md)&lt;T&gt; | 是 | 用于构造ArkTS Array的对象。 |
 
 **返回值：**
 
@@ -692,7 +692,7 @@ static from<T>(arrayLike: ArrayLike<T> | Iterable<T>, mapFn: ArrayFromMapFn<T, T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arrayLike | ArrayLike&lt;T&gt; \| Iterable&lt;T&gt; | 是 | 用于构造ArkTS Array的对象。 |
+| arrayLike | [ArrayLike](../../apis-na/arkts-apis/arkts-na-arraylike-i.md)&lt;T&gt; \| Iterable&lt;T&gt; | 是 | 用于构造ArkTS Array的对象。 |
 | mapFn | [ArrayFromMapFn](arkts-arkts-collections-arrayfrommapfn-t.md)&lt;T, T&gt; | 是 | 用于处理数组元素的函数。 |
 
 **返回值：**
@@ -725,7 +725,7 @@ static from<U, T>(arrayLike: ArrayLike<U> | Iterable<U>, mapFn: ArrayFromMapFn<U
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| arrayLike | ArrayLike&lt;U&gt; \| Iterable&lt;U&gt; | 是 | 用于构造ArkTS Array的对象。 |
+| arrayLike | [ArrayLike](../../apis-na/arkts-apis/arkts-na-arraylike-i.md)&lt;U&gt; \| Iterable&lt;U&gt; | 是 | 用于构造ArkTS Array的对象。 |
 | mapFn | [ArrayFromMapFn](arkts-arkts-collections-arrayfrommapfn-t.md)&lt;U, T&gt; | 是 | 用于处理数组元素的函数。 |
 
 **返回值：**
@@ -1503,7 +1503,7 @@ splice(start: number): Array<T>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| start | number | 是 | 开始索引。如果`-array.length <= start < 0`， 则从`start + array.length`开始删除。如果`start < -array.length`，则从0开始删除。 |
+| start | number | 是 | 开始索引。如果`-array.length &lt;= start &lt; 0`， 则从`start + array.length`开始删除。如果`start &lt; -array.length`，则从0开始删除。 |
 
 **返回值：**
 
@@ -1542,7 +1542,7 @@ splice(start: number, deleteCount: number, ...items: T[]): Array<T>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| start | number | 是 | 开始索引。如果`-array.length <= start < 0`， 则从`start + array.length`开始删除。如果`start < -array.length`，则从0开始删除。 |
+| start | number | 是 | 开始索引。如果`-array.length &lt;= start &lt; 0`， 则从`start + array.length`开始删除。如果`start &lt; -array.length`，则从0开始删除。 |
 | deleteCount | number | 是 | 删除元素的个数。 |
 | items | T[] | 是 | 从start位置开始插入的新元素。 如果未传入，则仅删除Array内的元素。 |
 

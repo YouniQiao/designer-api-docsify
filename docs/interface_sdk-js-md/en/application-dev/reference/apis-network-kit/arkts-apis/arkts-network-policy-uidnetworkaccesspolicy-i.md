@@ -17,6 +17,6 @@ Provides the container definition for network access policy key-value pairs.
 ## Modules to Import
 
 ```TypeScript
-import { policy } from '@kit.NetworkKit';
+import { policy } from 'policy';
 ```
 

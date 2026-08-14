@@ -38,7 +38,7 @@ A constructor used to create a text background style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| textBackgroundStyle | TextBackgroundStyle | Yes | Options of the text background color.&lt;br&gt;Default value:&lt;br&gt;{&lt; br&gt; color: Color.Transparent,&lt;br&gt; radius: 0&lt;br&gt;} |
+| textBackgroundStyle | TextBackgroundStyle | Yes | Options of the text background color.<br>Default value:<br>{&lt; br&gt; color: Color.Transparent,<br> radius: 0<br>} |
 
 ## textBackgroundStyle
 

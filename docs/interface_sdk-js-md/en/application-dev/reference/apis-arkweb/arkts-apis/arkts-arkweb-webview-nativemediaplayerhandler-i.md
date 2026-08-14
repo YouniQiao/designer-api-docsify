@@ -15,7 +15,7 @@ Implements a **NativeMediaPlayerHandler** object used as a parameter of the [Cre
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'webview';
 ```
 
 ## handleBufferedEndTimeChanged
@@ -42,7 +42,7 @@ Called to notify the ArkWeb engine of the buffer time when the buffer time chang
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bufferedEndTime | number | Yes | Duration of media data in the buffer.&lt;br&gt;Unit: second. Value range: [0, duration] |
+| bufferedEndTime | number | Yes | Duration of media data in the buffer.<br>Unit: second. Value range: [0, duration] |
 
 ## handleDurationChanged
 
@@ -68,7 +68,7 @@ Called to notify the ArkWeb engine of the total duration of the media.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| duration | number | Yes | Total duration of the media.&lt;br&gt;Unit: second. Value range: [0,+��) |
+| duration | number | Yes | Total duration of the media.<br>Unit: second. Value range: [0,+��) |
 
 ## handleEnded
 
@@ -141,7 +141,7 @@ Called to notify the ArkWeb engine of the full screen status of the player when 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fullscreen | boolean | Yes | Whether the player is in full screen.&lt;br&gt;The value **true** means that the player is in full screen, and **false** means the opposite. |
+| fullscreen | boolean | Yes | Whether the player is in full screen.<br>The value **true** means that the player is in full screen, and **false** means the opposite. |
 
 ## handleMutedChanged
 
@@ -167,7 +167,7 @@ Called to notify the ArkWeb engine of the muted status of the player when the mu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| muted | boolean | Yes | Whether the player is muted.&lt;br&gt;The value **true** indicates that the player is muted, and **false** indicates the opposite. |
+| muted | boolean | Yes | Whether the player is muted.<br>The value **true** indicates that the player is muted, and **false** indicates the opposite. |
 
 ## handleNetworkStateChanged
 
@@ -337,7 +337,7 @@ Called to notify the ArkWeb engine of the playback progress when the playback pr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| currentPlayTime | number | Yes | Current progress.&lt;br&gt;Unit: second. Value range: [0, duration] |
+| currentPlayTime | number | Yes | Current progress.<br>Unit: second. Value range: [0, duration] |
 
 ## handleVideoSizeChanged
 

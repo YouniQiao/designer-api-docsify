@@ -17,7 +17,7 @@ Provides APIs for performing cloud database operations.
 ## Modules to Import
 
 ```TypeScript
-import { cloudExtension } from '@kit.ArkData';
+import { cloudExtension } from 'cloudExtension';
 ```
 
 ## delete

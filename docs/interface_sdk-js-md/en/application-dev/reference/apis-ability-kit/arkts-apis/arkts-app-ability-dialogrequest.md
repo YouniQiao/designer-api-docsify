@@ -15,7 +15,7 @@ The dialogRequest module provides APIs related to modal dialog box processing, i
 ## Modules to Import
 
 ```TypeScript
-import { dialogRequest } from '@kit.AbilityKit';
+import { dialogRequest } from 'dialogRequest';
 ```
 
 ## Summary

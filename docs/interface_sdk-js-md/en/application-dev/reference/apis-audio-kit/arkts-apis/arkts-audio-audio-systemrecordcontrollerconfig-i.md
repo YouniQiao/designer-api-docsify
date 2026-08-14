@@ -15,7 +15,7 @@ Defines the configuration for the system recording controller panel.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'audio';
 ```
 
 ## sourceType

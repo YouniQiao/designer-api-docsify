@@ -15,7 +15,7 @@ Double-ended queue (deque) is a sequence container implemented based on the queu
 ## Modules to Import
 
 ```TypeScript
-import { Deque } from '@kit.ArkTS';
+import { Deque } from 'Deque';
 ```
 
 ## $_iterator

@@ -15,7 +15,7 @@ Represents data of the pixel map type defined by the system.
 ## Modules to Import
 
 ```TypeScript
-import { uniformDataStruct } from '@kit.ArkData';
+import { uniformDataStruct } from 'uniformDataStruct';
 ```
 
 ## details

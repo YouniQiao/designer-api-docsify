@@ -136,7 +136,7 @@ color?: ResourceColor
 enableAutoAvoidance?: boolean
 ```
 
-增加角标文本延伸显示时是否避让。 true表示避让，false表示不避让。 默认值：false。 &lt;br&gt;**说明：** 1. 避让效果为角标文本向组件内部延伸显示。 2. 当外描边的宽度大于0时，角标的延伸起点为外描边的内侧。 3. 当position设置为具体坐标值时，角标不进行避让处理。
+增加角标文本延伸显示时是否避让。 true表示避让，false表示不避让。 默认值：false。 <br>**说明：** 1. 避让效果为角标文本向组件内部延伸显示。 2. 当外描边的宽度大于0时，角标的延伸起点为外描边的内侧。 3. 当position设置为具体坐标值时，角标不进行避让处理。
 
 **类型：** boolean
 
@@ -182,7 +182,7 @@ fontSize?: double | ResourceStr
 fontWeight?: int | FontWeight | ResourceStr
 ```
 
-设置文本的字体粗细。 默认值：FontWeight.Normal。 &lt;br&gt;number类型取值范围：[100, 900]，取值间隔为100。取值越大，字体越粗。设置number类型在取值范围外时，按默认值400处理。string类型仅支持number类型取值的字符串形式，例如"400"，以及"bold"、"bolder"、"lighter" 、"regular"、"medium"，分别对应FontWeight中相应的枚举值。
+设置文本的字体粗细。 默认值：FontWeight.Normal。 <br>number类型取值范围：[100, 900]，取值间隔为100。取值越大，字体越粗。设置number类型在取值范围外时，按默认值400处理。string类型仅支持number类型取值的字符串形式，例如"400"，以及"bold"、"bolder"、"lighter" 、"regular"、"medium"，分别对应FontWeight中相应的枚举值。
 
 **类型：** int \| [FontWeight](../../apis-arkui/arkts-apis/arkts-arkui-fontweight-e.md) \| [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md)
 

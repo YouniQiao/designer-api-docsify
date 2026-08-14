@@ -15,7 +15,7 @@ The validation context of [ValidationCallback](arkts-network-http-validationcall
 ## Modules to Import
 
 ```TypeScript
-import { http } from '@kit.NetworkKit';
+import { http } from 'http';
 ```
 
 ## host

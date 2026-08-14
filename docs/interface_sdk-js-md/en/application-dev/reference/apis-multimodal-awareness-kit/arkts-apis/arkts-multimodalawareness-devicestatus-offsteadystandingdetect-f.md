@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { deviceStatus } from '@kit.MultimodalAwarenessKit';
+import { deviceStatus } from 'deviceStatus';
 ```
 
 ## offSteadyStandingDetect
@@ -34,7 +34,7 @@ Unsubscribes from steady standing status detection events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function can not work correctly due to limited &lt;br&gt; device capabilities. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function can not work correctly due to limited <br> device capabilities. |
 | [32500003](../../apis-multimodalawareness-kit/errorcode-deviceStatus.md#32500003-unsubscription-failed) | Unsubscription failed. |
 | [32500001](../../apis-multimodalawareness-kit/errorcode-deviceStatus.md#32500001-abnormal-service) | Service exception. |
 

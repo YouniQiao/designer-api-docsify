@@ -17,7 +17,7 @@ Provides a **FileAccessHelper** object.
 ## Modules to Import
 
 ```TypeScript
-import { fileAccess } from '@kit.CoreFileKit';
+import { fileAccess } from 'fileAccess';
 ```
 
 ## access

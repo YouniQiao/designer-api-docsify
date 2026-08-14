@@ -15,7 +15,9 @@ Represents the permission state change details.
 ## Modules to Import
 
 ```TypeScript
-import { Context, Permissions, PermissionRequestResult } from '@kit.AbilityKit';
+import { Context } from 'Context';
+import { PermissionRequestResult } from 'PermissionRequestResult';
+import { Permissions } from 'Permissions';
 ```
 
 ## change
@@ -68,7 +70,7 @@ Permissions whose authorization state changes. For details about the permissions
 tokenID: int
 ```
 
-ID of the subscribed application, which can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accessTokenId) field in ApplicationInfo of BundleInfo. &lt;br&gt;For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getBundleInfoSync).
+ID of the subscribed application, which can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accessTokenId) field in ApplicationInfo of BundleInfo. <br>For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getBundleInfoSync).
 
 **Type:** int
 

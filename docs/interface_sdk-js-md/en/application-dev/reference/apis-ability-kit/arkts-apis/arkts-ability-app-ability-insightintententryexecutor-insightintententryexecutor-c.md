@@ -15,7 +15,7 @@ The class of insight intent entry executor.
 ## Modules to Import
 
 ```TypeScript
-import { InsightIntentEntryExecutor } from '@kit.AbilityKit';
+import { InsightIntentEntryExecutor } from 'InsightIntentEntryExecutor';
 ```
 
 ## onExecute

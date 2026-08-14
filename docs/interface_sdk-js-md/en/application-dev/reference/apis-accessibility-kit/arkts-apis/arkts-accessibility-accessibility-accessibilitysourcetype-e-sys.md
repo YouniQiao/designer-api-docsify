@@ -1,6 +1,6 @@
 # AccessibilitySourceType (System API)
 
-Accessibility Element Source Type Enumeration
+Enumerates the source types of accessibility nodes.
 
 **Since:** 26.0.0
 
@@ -20,7 +20,7 @@ Accessibility Element Source Type Enumeration
 DEFAULT = 1
 ```
 
-Default type.
+Default node type.
 
 **Since:** 26.0.0
 
@@ -42,7 +42,7 @@ Default type.
 ADDED_FROM_ACCESSIBILITY_VIRTUAL_NODE = 2
 ```
 
-Indicates that the accessibility element was added from a virtual node.
+The current node is a newly added virtual node.
 
 **Since:** 26.0.0
 
@@ -64,7 +64,7 @@ Indicates that the accessibility element was added from a virtual node.
 UPDATED_FROM_ACCESSIBILITY_VIRTUAL_NODE = 3
 ```
 
-Indicates that the accessibility element was updated from a virtual node.
+The current node is a node with modified properties.
 
 **Since:** 26.0.0
 

@@ -17,7 +17,7 @@ Generates common parameters for a DH key based on the prime **p** length and the
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from 'cryptoFramework';
 ```
 
 ## genDHCommonParamsSpec
@@ -47,7 +47,7 @@ Generates common parameters for a DH key based on the prime **p** length and the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | pLen | int | Yes | Length of the prime **p**, in bits. |
-| skLen | int | No | Maximum length of the generated DH private key, in bits. The default value is **0**.&lt;br&gt; When this parameter is set to **0**, the maximum length of the generated DH private key is as follows:&lt;br&gt; ffdhe2048: 255 bits.&lt;br&gt;ffdhe3072: 275 bits.&lt;br&gt;ffdhe4096: 325 bits.&lt;br&gt;ffdhe6144: 375 bits.&lt;br&gt;ffdhe8192: 400 bits. |
+| skLen | int | No | Maximum length of the generated DH private key, in bits. The default value is **0**.<br> When this parameter is set to **0**, the maximum length of the generated DH private key is as follows:<br> ffdhe2048: 255 bits.<br>ffdhe3072: 275 bits.<br>ffdhe4096: 325 bits.<br>ffdhe6144: 375 bits.<br>ffdhe8192: 400 bits. |
 
 **Return value:**
 
@@ -59,7 +59,7 @@ Generates common parameters for a DH key based on the prime **p** length and the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: &lt;br&gt;1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; &lt;br&gt;3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | This operation is not supported. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |

@@ -100,7 +100,7 @@ getPhysicalCameraOrientation(): int
 
 | 类型 | 说明 |
 | --- | --- |
-| int | 返回设备当前折叠状态下的物理镜头角度。 &lt;br&gt;单位为度数（degree），取值范围为[0, 360]。 |
+| int | 返回设备当前折叠状态下的物理镜头角度。 <br>单位为度数（degree），取值范围为[0, 360]。 |
 
 ## isPhysicalCameraOrientationVariable
 

@@ -1,6 +1,6 @@
 # FocusController
 
-提供控制焦点的能力，如清除、移动和激活焦点等功能。 > **说明：** > > 以下API需先使用UIContext中的[getFocusController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getFocusController)方法获取FocusController实例，再通过该实例调用对应方法。
+提供控制焦点的能力，如清除、移动和激活焦点等功能。 > **说明：** > > 以下API需先使用UIContext中的[getFocusController()](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getFocusController)方法获取FocusController实例，再通过该实例调用对应方法。
 
 **起始版本：** 12
 
@@ -38,8 +38,8 @@ activate(isActive: boolean, autoInactive?: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isActive | boolean | 是 | 设置是否进入/退出焦点激活态。&lt;br/&gt;true表示设置进入焦点激活态，false表示设置退出焦点激活态。 |
-| autoInactive | boolean | 否 | 设置焦点激活态退出逻辑。&lt;br/&gt;为true时，会自动在触摸事件、鼠标事件触发时退出，为false时，仅受开发者API控制。&lt;br/&gt;默认值：true |
+| isActive | boolean | 是 | 设置是否进入/退出焦点激活态。<br/>true表示设置进入焦点激活态，false表示设置退出焦点激活态。 |
+| autoInactive | boolean | 否 | 设置焦点激活态退出逻辑。<br/>为true时，会自动在触摸事件、鼠标事件触发时退出，为false时，仅受开发者API控制。<br/>默认值：true |
 
 ## clearFocus
 
@@ -153,7 +153,7 @@ setAutoFocusTransfer(isAutoFocusTransfer: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isAutoFocusTransfer | boolean | 是 | 设置页面切换时，新的页面是否需要主动获取焦点，例如[Router](arkts-router.md#@ohos.router)、 Navigation、Menu、Dialog、 Popup等。true表示需要主动获取焦点，false表示不需要主动获取焦点。默认值为true。 |
+| isAutoFocusTransfer | boolean | 是 | 设置页面切换时，新的页面是否需要主动获取焦点，例如[Router](../../apis-na/arkts-apis/arkts-router.md#@ohos.router)、 Navigation、Menu、Dialog、 Popup等。true表示需要主动获取焦点，false表示不需要主动获取焦点。默认值为true。 |
 
 ## setKeyProcessingMode
 

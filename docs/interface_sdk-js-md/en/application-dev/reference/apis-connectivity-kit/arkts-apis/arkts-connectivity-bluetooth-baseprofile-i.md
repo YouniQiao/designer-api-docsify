@@ -17,7 +17,7 @@ Base interface of profile.
 ## Modules to Import
 
 ```TypeScript
-import { bluetooth } from '@kit.ConnectivityKit';
+import { bluetooth } from 'bluetooth';
 ```
 
 ## getConnectionDevices

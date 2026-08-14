@@ -17,7 +17,7 @@ Defines the parameters for installing or uninstalling a plugin.
 ## Modules to Import
 
 ```TypeScript
-import { installer } from '@kit.AbilityKit';
+import { installer } from 'installer';
 ```
 
 ## parameters

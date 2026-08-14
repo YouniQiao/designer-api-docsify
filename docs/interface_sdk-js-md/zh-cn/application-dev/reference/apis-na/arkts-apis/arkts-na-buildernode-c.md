@@ -1,6 +1,6 @@
 # BuilderNode
 
-class BuilderNode\&lt;T = undefined&gt; BuilderNode支持通过无状态的UI方法[@Builder](../../../ui/state-management/arkts-builder.md)生成组件树，并持有组件树的根节点。不支持定义为状态变量。 BuilderNode中持有的FrameNode仅用于将该BuilderNode作为子节点挂载到其他FrameNode上。对BuilderNode持有的FrameNode进行属性设置与子节点操作可能会产生未定义行为，因此不建议通过 BuilderNode的[getFrameNode](../../apis-arkui/arkts-apis/arkts-arkui-buildernode-c.md#getFrameNode)方法和FrameNode的 [getRenderNode](arkts-na-framenode-c.md#getRenderNode)方法获取RenderNode，并通过[RenderNode](../../apis-arkui/arkts-apis/arkts-arkui-rendernode-c.md#RenderNode)的接 口对其进行属性设置与子节点操作。
+class BuilderNode\&lt;T = undefined&gt; BuilderNode支持通过无状态的UI方法[@Builder](../../../ui/state-management/arkts-builder.md)生成组件树，并持有组件树的根节点。不支持定义为状态变量。 BuilderNode中持有的FrameNode仅用于将该BuilderNode作为子节点挂载到其他FrameNode上。对BuilderNode持有的FrameNode进行属性设置与子节点操作可能会产生未定义行为，因此不建议通过 BuilderNode的[getFrameNode](../../apis-arkui/arkts-apis/arkts-arkui-buildernode-c.md#getFrameNode)方法和FrameNode的 [getRenderNode](arkts-na-framenode-c.md#getRenderNode)方法获取RenderNode，并通过[RenderNode](arkts-na-rendernode-c.md#RenderNode)的接 口对其进行属性设置与子节点操作。
 
 **起始版本：** 23
 
@@ -117,8 +117,8 @@ constructor(uiContext: UIContext, options?: RenderOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | UI上下文，获取方式可参考 UIContext获取方法。 |
-| options | [RenderOptions](../../apis-arkui/arkts-apis/arkts-arkui-buildernode-renderoptions-i.md) | 否 | BuilderNode的构造可选参数。&lt;br/&gt;默认值：undefined |
+| uiContext | [UIContext](arkts-na-arkui-uicontext-uicontext-c.md) | 是 | UI上下文，获取方式可参考 UIContext获取方法。 |
+| options | [RenderOptions](../../apis-arkui/arkts-apis/arkts-arkui-buildernode-renderoptions-i.md) | 否 | BuilderNode的构造可选参数。<br/>默认值：undefined |
 
 ## dispose
 
@@ -224,7 +224,7 @@ isDisposed(): boolean
 postInputEvent(event: InputEventType): boolean
 ```
 
-将事件分发到目标节点。 offsetA为builderNode相对于父组件的偏移，offsetB为命中位置相对于builderNode的偏移，offsetC为offsetA+offsetB，最终输入给postInputEvent中的window信息。  > **说明：** > > - 传入的坐标值需要转换为px，坐标转换示例可以参考下面示例代码。 > > - 鼠标左键点击事件将转换为触摸事件，转发时应注意不在外层同时绑定触摸事件与鼠标事件，否则可能导致坐标偏移。这是由于在事件转换过程中，SourceType不会发生变化，规格可查看 > onTouch。 > > - 注入事件为轴事件（AxisEvent）时，由于轴事件中缺少旋转轴信息，因此注入的事件无法触发RotationGesture。 > > - 转发的事件会在被分发到的目标组件所在的子树里做touchtest，并触发对应手势，原始事件也会触发当前组件所在组件树中的手势。不保证两类手势的竞争结果。 > > - 如果是开发者构造的事件，必填字段必须赋值，比如触摸事件的touches字段，轴事件的scrollStep字段。要保证事件的完整，比如触摸事件的TouchType中DOWN和UP字段都要 > 有，防止出现未定义行为。 > > - [webview](arkts-web-webview.md#@ohos.web.webview)已经处理过坐标系变换，可以将事件直接下发。 > > - postTouchEvent接口需要提供手势坐标相对于post事件对端内的局部坐标，postInputEvent接口需要提供手势坐标相对于post事件对端内的窗口坐标。 > > - 不建议同一个事件转发多次。&lt;!--Del--&gt;不支持UIExtensionComponent。&lt;!--DelEnd--&gt;
+将事件分发到目标节点。 offsetA为builderNode相对于父组件的偏移，offsetB为命中位置相对于builderNode的偏移，offsetC为offsetA+offsetB，最终输入给postInputEvent中的window信息。  > **说明：** > > - 传入的坐标值需要转换为px，坐标转换示例可以参考下面示例代码。 > > - 鼠标左键点击事件将转换为触摸事件，转发时应注意不在外层同时绑定触摸事件与鼠标事件，否则可能导致坐标偏移。这是由于在事件转换过程中，SourceType不会发生变化，规格可查看 > onTouch。 > > - 注入事件为轴事件（AxisEvent）时，由于轴事件中缺少旋转轴信息，因此注入的事件无法触发RotationGesture。 > > - 转发的事件会在被分发到的目标组件所在的子树里做touchtest，并触发对应手势，原始事件也会触发当前组件所在组件树中的手势。不保证两类手势的竞争结果。 > > - 如果是开发者构造的事件，必填字段必须赋值，比如触摸事件的touches字段，轴事件的scrollStep字段。要保证事件的完整，比如触摸事件的TouchType中DOWN和UP字段都要 > 有，防止出现未定义行为。 > > - [webview](../../apis-arkweb/arkts-apis/arkts-web-webview.md#@ohos.web.webview)已经处理过坐标系变换，可以将事件直接下发。 > > - postTouchEvent接口需要提供手势坐标相对于post事件对端内的局部坐标，postInputEvent接口需要提供手势坐标相对于post事件对端内的窗口坐标。 > > - 不建议同一个事件转发多次。&lt;!--Del--&gt;不支持UIExtensionComponent。&lt;!--DelEnd--&gt;
 
 **起始版本：** 26.0.0
 
@@ -289,7 +289,7 @@ postInputEventWithStrategy(event: InputEventType, competitionStrategy?: Competit
 postTouchEvent(event: TouchEvent): boolean
 ```
 
-将原始事件派发到某个BuilderNode创建出的FrameNode上。 postTouchEvent是从组件树的中间节点往下分发，需要变换到父组件坐标系才能分发成功，参考下图。 OffsetA为buildNode相对于父组件的偏移量，可以通过FrameNode中的[getPositionToParent](arkts-na-framenode-c.md#getPositionToParent)获取。 OffsetB为point点相对于buildNode的偏移量，可以通过 [TouchEvent](../../../reference/apis-arkui/arkui-ts/ts-universal-events-touch.md#touchevent对象说明) 获取。OffsetC为 OffsetA与OffsetB的和，是传给postTouchEvent的最终结果。  > **说明：** > > - 传入的坐标值需要转换为px，如果builderNode有仿射变换，则需要再叠加仿射变换。 > > - 在[webview](arkts-web-webview.md#@ohos.web.webview)中，内部已经处理过坐标系变换，可以将TouchEvent事件直接下发。 > > - 同一时间戳，postTouchEvent只能调用一次。&lt;!--Del--&gt; > > - 不支持UIExtensionComponent。 &lt;!--DelEnd--&gt;
+将原始事件派发到某个BuilderNode创建出的FrameNode上。 postTouchEvent是从组件树的中间节点往下分发，需要变换到父组件坐标系才能分发成功，参考下图。 OffsetA为buildNode相对于父组件的偏移量，可以通过FrameNode中的[getPositionToParent](arkts-na-framenode-c.md#getPositionToParent)获取。 OffsetB为point点相对于buildNode的偏移量，可以通过 [TouchEvent](../../../reference/apis-arkui/arkui-ts/ts-universal-events-touch.md#touchevent对象说明) 获取。OffsetC为 OffsetA与OffsetB的和，是传给postTouchEvent的最终结果。  > **说明：** > > - 传入的坐标值需要转换为px，如果builderNode有仿射变换，则需要再叠加仿射变换。 > > - 在[webview](../../apis-arkweb/arkts-apis/arkts-web-webview.md#@ohos.web.webview)中，内部已经处理过坐标系变换，可以将TouchEvent事件直接下发。 > > - 同一时间戳，postTouchEvent只能调用一次。&lt;!--Del--&gt; > > - 不支持UIExtensionComponent。 &lt;!--DelEnd--&gt;
 
 **起始版本：** 23
 
@@ -313,7 +313,7 @@ postTouchEvent(event: TouchEvent): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 派发事件是否成功。true为已命中响应事件的组件，false为未命中任何可响应事件的组件。&lt;br/&gt;**说明：** &lt;br/&gt;如果未按照预期命中组件，需要确认以下几点：&lt;br/&gt;1.坐标系 是否转换正确。&lt;br/&gt;2.组件是否可交互状态。&lt;br/&gt;3.是否绑定事件。 |
+| boolean | 派发事件是否成功。true为已命中响应事件的组件，false为未命中任何可响应事件的组件。<br/>**说明：** <br/>如果未按照预期命中组件，需要确认以下几点：<br/>1.坐标系 是否转换正确。<br/>2.组件是否可交互状态。<br/>3.是否绑定事件。 |
 
 ## recycle
 

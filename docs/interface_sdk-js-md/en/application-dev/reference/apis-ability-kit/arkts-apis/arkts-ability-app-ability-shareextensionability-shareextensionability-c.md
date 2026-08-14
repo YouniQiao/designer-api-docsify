@@ -19,6 +19,6 @@ ShareExtensionAbility provides extended capabilities for integrating a share det
 ## Modules to Import
 
 ```TypeScript
-import { ShareExtensionAbility } from '@kit.AbilityKit';
+import { ShareExtensionAbility } from 'ShareExtensionAbility';
 ```
 

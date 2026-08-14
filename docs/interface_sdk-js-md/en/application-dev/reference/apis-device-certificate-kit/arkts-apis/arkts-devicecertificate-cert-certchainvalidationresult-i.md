@@ -15,7 +15,7 @@ Represents the return value of certificate chain validation.
 ## Modules to Import
 
 ```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
+import { cert } from 'cert';
 ```
 
 ## entityCert

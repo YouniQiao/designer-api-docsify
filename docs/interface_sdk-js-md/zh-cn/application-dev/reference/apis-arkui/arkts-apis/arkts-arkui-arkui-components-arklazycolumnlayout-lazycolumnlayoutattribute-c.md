@@ -40,7 +40,7 @@ alignItems(value: HorizontalAlign | undefined): LazyColumnLayoutAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [HorizontalAlign](../../apis-na/arkts-apis/arkts-na-enums-horizontalalign-e.md) \| undefined | 是 | 行内容的水平对齐。 &lt;br&gt;默认值为HorizontalAlign.Center。 |
+| value | [HorizontalAlign](../../apis-na/arkts-apis/arkts-na-enums-horizontalalign-e.md) \| undefined | 是 | 行内容的水平对齐。 <br>默认值为HorizontalAlign.Center。 |
 
 **返回值：**
 
@@ -74,7 +74,7 @@ footer(builder: CustomBuilder | undefined): LazyColumnLayoutAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| builder | CustomBuilder \| undefined | 是 | footer生成器函数 &lt;br&gt;传入undefined移除footer。 |
+| builder | CustomBuilder \| undefined | 是 | footer生成器函数 <br>传入undefined移除footer。 |
 
 **返回值：**
 
@@ -108,7 +108,7 @@ header(builder: CustomBuilder | undefined): LazyColumnLayoutAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| builder | CustomBuilder \| undefined | 是 | header生成器函数 &lt;br&gt;传递undefined将移除header。 |
+| builder | CustomBuilder \| undefined | 是 | header生成器函数 <br>传递undefined将移除header。 |
 
 **返回值：**
 
@@ -142,7 +142,7 @@ onVisibleIndexesChange(callback: OnVisibleIndexesChangeCallback | undefined): La
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnVisibleIndexesChangeCallback](../../apis-na/arkts-apis/arkts-na-onvisibleindexeschangecallback-t.md) \| undefined | 是 | 回调函数，当可见区域中子组件的索引发生变化时触发。 &lt;br&gt;传递undefined将取消注册回调。 |
+| callback | [OnVisibleIndexesChangeCallback](../../apis-na/arkts-apis/arkts-na-onvisibleindexeschangecallback-t.md) \| undefined | 是 | 回调函数，当可见区域中子组件的索引发生变化时触发。 <br>传递undefined将取消注册回调。 |
 
 **返回值：**
 
@@ -176,7 +176,7 @@ space(space: LengthMetrics | undefined): LazyColumnLayoutAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| space | [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md) \| undefined | 是 | 行之间的间距。 &lt;br&gt;默认值为0。&lt;br&gt;范围：[0, +∞)。 |
+| space | [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md) \| undefined | 是 | 行之间的间距。 <br>默认值为0。<br>范围：[0, +∞)。 |
 
 **返回值：**
 

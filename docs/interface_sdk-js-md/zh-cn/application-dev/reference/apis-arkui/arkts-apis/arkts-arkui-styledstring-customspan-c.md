@@ -89,5 +89,5 @@ abstract onMeasure(measureInfo: CustomSpanMeasureInfo): CustomSpanMetrics
 
 | 类型 | 说明 |
 | --- | --- |
-| [CustomSpanMetrics](arkts-arkui-styledstring-customspanmetrics-i.md) | 自定义绘制Span的尺寸信息。&lt;br/&gt;**说明：** &lt;br/&gt;最终的CustomSpan的高度是由当前Text组件的行高所决定的。当height不传值，则默认取 Text组件的fontSize的值作为CustomSpan的高度；当height大于当前行的其他子组件的高度时，此时height即为Text组件的行高。 |
+| [CustomSpanMetrics](arkts-arkui-styledstring-customspanmetrics-i.md) | 自定义绘制Span的尺寸信息。<br/>**说明：** <br/>最终的CustomSpan的高度是由当前Text组件的行高所决定的。当height不传值，则默认取 Text组件的fontSize的值作为CustomSpan的高度；当height大于当前行的其他子组件的高度时，此时height即为Text组件的行高。 |
 

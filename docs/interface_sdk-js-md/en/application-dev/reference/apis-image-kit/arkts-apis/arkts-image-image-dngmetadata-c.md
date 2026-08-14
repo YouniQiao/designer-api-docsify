@@ -15,7 +15,7 @@ DNG metadata.
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'image';
 ```
 
 ## activeArea

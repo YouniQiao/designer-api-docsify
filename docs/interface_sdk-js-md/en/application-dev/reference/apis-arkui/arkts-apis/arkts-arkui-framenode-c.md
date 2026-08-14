@@ -72,9 +72,9 @@ Adds the polymorphic style states supported by the component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiStates | number | Yes | UI states of the target node to be processed. &lt;br&gt;Multiple states can be specified simultaneously using bitwise OR operations, for example, **targetUIStates = UIState.PRESSED  \|  UIState.FOCUSED**. |
+| uiStates | number | Yes | UI states of the target node to be processed. <br>Multiple states can be specified simultaneously using bitwise OR operations, for example, **targetUIStates = UIState.PRESSED  \|  UIState.FOCUSED**. |
 | statesChangeHandler | [UIStatesChangeHandler](arkts-arkui-uistateschangehandler-t.md) | Yes | Callback invoked when the state changes. |
-| excludeInner | boolean | No | Whether to disable the default state style processing. Default value: **false**. &lt;br&gt; **true**: Disable default state style processing. **false**: Enable default state style processing. |
+| excludeInner | boolean | No | Whether to disable the default state style processing. Default value: **false**. <br> **true**: Disable default state style processing. **false**: Enable default state style processing. |
 
 ## Examples
 
@@ -144,7 +144,7 @@ Appends a child node to the end of this FrameNode. If this FrameNode is not modi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Child node to append. &lt;br&gt; The target node must not be a declaratively created node, that is, a FrameNode that is not modifiable. Only declarative nodes obtained from a BuilderNode can be used as child nodes. If the child node does not meet the specifications, an exception is thrown. &lt;br&gt; The FrameNode cannot have a parent node. Otherwise, an exception is thrown. |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Child node to append. <br> The target node must not be a declaratively created node, that is, a FrameNode that is not modifiable. Only declarative nodes obtained from a BuilderNode can be used as child nodes. If the child node does not meet the specifications, an exception is thrown. <br> The FrameNode cannot have a parent node. Otherwise, an exception is thrown. |
 
 **Error codes:**
 
@@ -189,7 +189,7 @@ Cancels all animations for specified properties on the FrameNode. This API execu
 
 | Type | Description |
 | --- | --- |
-| boolean | Animation cancellation status. &lt;br&gt;**true**: successful. &lt;br&gt;**false**: failed. &lt;br&gt;The possible causes are as follows: &lt;br&gt;Additional notes: &lt;br&gt; 1. The node has been released (the [dispose]{ |
+| boolean | Animation cancellation status. <br>**true**: successful. <br>**false**: failed. <br>The possible causes are as follows: <br>Additional notes: <br> 1. The node has been released (the [dispose]{ |
 
 ## Examples
 
@@ -485,15 +485,15 @@ Creates a property animation for the FrameNode.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | property | [AnimationPropertyType](../../apis-na/arkts-apis/arkts-na-enums-animationpropertytype-e.md) | Yes | Animation property type. |
-| startValue | Optional&lt;number[]&gt; | Yes | Animation start value. The value can be **undefined** or an array. If the value is **undefined**, the animation uses the last set value of the property on the node as the starting value. If the value is an array, the length must match the property type requirements: &lt;br&gt;- **AnimationPropertyType.ROTATION**: [rotationX, rotationY, rotationZ] in degrees (°). &lt;br&gt;- **AnimationPropertyType.TRANSLATION**: [translateX, translateY] in px. &lt;br&gt;- **AnimationPropertyType.SCALE**: [scaleX, scaleY] (scale factors). &lt;br&gt;- **AnimationPropertyType.OPACITY**: [opacity] (value range: [0, 1]). &lt;br&gt;For the first animation of a property, **startValue** must be explicitly specified. For subsequent animations, it is recommended that you either omit **startValue** or set it to the previous animation's end value to avoid abrupt changes. |
-| endValue | number[] | Yes | Animation end value. The value is an array. The array length must match the property type requirements: &lt;br&gt;- **AnimationPropertyType.ROTATION**: [rotationX, rotationY, rotationZ] in degrees (°). &lt;br&gt;- **AnimationPropertyType.TRANSLATION**: [translateX, translateY] in px. &lt;br&gt;- **AnimationPropertyType.SCALE**: [scaleX, scaleY] (scale factors). &lt;br&gt;- **AnimationPropertyType.OPACITY**: [opacity] (value range: [0, 1]). |
+| startValue | Optional&lt;number[]&gt; | Yes | Animation start value. The value can be **undefined** or an array. If the value is **undefined**, the animation uses the last set value of the property on the node as the starting value. If the value is an array, the length must match the property type requirements: <br>- **AnimationPropertyType.ROTATION**: [rotationX, rotationY, rotationZ] in degrees (°). <br>- **AnimationPropertyType.TRANSLATION**: [translateX, translateY] in px. <br>- **AnimationPropertyType.SCALE**: [scaleX, scaleY] (scale factors). <br>- **AnimationPropertyType.OPACITY**: [opacity] (value range: [0, 1]). <br>For the first animation of a property, **startValue** must be explicitly specified. For subsequent animations, it is recommended that you either omit **startValue** or set it to the previous animation's end value to avoid abrupt changes. |
+| endValue | number[] | Yes | Animation end value. The value is an array. The array length must match the property type requirements: <br>- **AnimationPropertyType.ROTATION**: [rotationX, rotationY, rotationZ] in degrees (°). <br>- **AnimationPropertyType.TRANSLATION**: [translateX, translateY] in px. <br>- **AnimationPropertyType.SCALE**: [scaleX, scaleY] (scale factors). <br>- **AnimationPropertyType.OPACITY**: [opacity] (value range: [0, 1]). |
 | param | AnimateParam | Yes | Animation parameters, including the duration, animation curve, and end callback. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the animation is created successfully. &lt;br&gt;Returns **true** if the animation is created successfully. If an end callback is specified in the animation parameters, it will be invoked upon animation completion. &lt;br&gt;Returns **false** if the animation creation fails. The end callback will not be invoked even if specified. &lt;br&gt;Possible failure reasons: &lt;br&gt;Additional notes: &lt;br&gt; 1. The node has been released (the [dispose]{ |
+| boolean | Whether the animation is created successfully. <br>Returns **true** if the animation is created successfully. If an end callback is specified in the animation parameters, it will be invoked upon animation completion. <br>Returns **false** if the animation creation fails. The end callback will not be invoked even if specified. <br>Possible failure reasons: <br>Additional notes: <br> 1. The node has been released (the [dispose]{ |
 
 ## Examples
 
@@ -871,7 +871,7 @@ Obtains the child node in the specified position of this node.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index of the child node to obtain. &lt;br&gt;The value range of index is [0, +∞). If the current node has n child nodes, the valid value range of index is [0, n-1]. |
+| index | number | Yes | Index of the child node to obtain. <br>The value range of index is [0, +∞). If the current node has n child nodes, the valid value range of index is [0, n-1]. |
 
 **Return value:**
 
@@ -909,8 +909,8 @@ Obtains a child node at a specified index from this FrameNode, with optional sup
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | Index of the child node to obtain. &lt;br&gt;The value range of index is [0, +∞). If the current node has n child nodes, the valid value range of index is [0, n-1]. |
-| expandMode | [ExpandMode](arkts-arkui-framenode-expandmode-e.md) | No | Expansion mode of the child node. &lt;br&gt;Default value: **ExpandMode.EXPAND**. |
+| index | number | Yes | Index of the child node to obtain. <br>The value range of index is [0, +∞). If the current node has n child nodes, the valid value range of index is [0, n-1]. |
+| expandMode | [ExpandMode](arkts-arkui-framenode-expandmode-e.md) | No | Expansion mode of the child node. <br>Default value: **ExpandMode.EXPAND**. |
 
 **Return value:**
 
@@ -1484,7 +1484,7 @@ Obtains the property value of the FrameNode.
 
 | Type | Description |
 | --- | --- |
-| number[] | Current property value from the render node. The array length corresponds to the property type. &lt;br&gt;The return value format varies by property: &lt;br&gt;- An empty array (length 0) is returned if the node has been disposed, the [dispose]{ |
+| number[] | Current property value from the render node. The array length corresponds to the property type. <br>The return value format varies by property: <br>- An empty array (length 0) is returned if the node has been disposed, the [dispose]{ |
 
 ## Examples
 
@@ -2424,7 +2424,7 @@ Inserts a child node after the specified child node of this FrameNode. If this F
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| child | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Child node to add. &lt;br&gt;The target child node must not be a declaratively created node, that is, a FrameNode that is not modifiable. Only declarative nodes obtained from a BuilderNode can be used as child nodes. If the child node does not meet the specifications, an exception is thrown. &lt;br&gt; The child node cannot have a parent node. Otherwise, an exception is thrown. |
+| child | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Child node to add. <br>The target child node must not be a declaratively created node, that is, a FrameNode that is not modifiable. Only declarative nodes obtained from a BuilderNode can be used as child nodes. If the child node does not meet the specifications, an exception is thrown. <br> The child node cannot have a parent node. Otherwise, an exception is thrown. |
 | sibling | [FrameNode](arkts-arkui-framenode-c.md) \| null | Yes | Node after which the new child node will be inserted. If this parameter is left empty, the new node is inserted before the first subnode. |
 
 **Error codes:**
@@ -2612,7 +2612,7 @@ Obtains whether the node is mounted to the main node tree.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the node is mounted to the main node tree. &lt;br&gt;The value **true** means that the node is mounted to the main node tree, and **false** means the opposite. |
+| boolean | Whether the node is mounted to the main node tree. <br>The value **true** means that the node is mounted to the main node tree, and **false** means the opposite. |
 
 ## Examples
 
@@ -2644,7 +2644,7 @@ Checks whether the node is clipped to the component area. This API returns **tru
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the node is clipped to the component area. &lt;br&gt;The value **true** means that the node is clipped to the component area, and **false** means the opposite. |
+| boolean | Whether the node is clipped to the component area. <br>The value **true** means that the node is clipped to the component area, and **false** means the opposite. |
 
 ## Examples
 
@@ -2708,7 +2708,7 @@ Checks whether this node is in render state. A node is considered to be in rende
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the node is in render state. &lt;br&gt;**true**: The node is in render state. **false**: The node is not in render state. |
+| boolean | Whether the node is in render state. <br>**true**: The node is in render state. **false**: The node is not in render state. |
 
 ## Examples
 
@@ -2803,7 +2803,7 @@ Checks whether this FrameNode is modifiable.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether this FrameNode is modifiable. &lt;br&gt;The value **true** means that the FrameNode is modifiable, and **false** means the opposite. &lt;br&gt;Returns **false** if the node is a system component proxy node in a [custom component node](../../../ui/arkts-user-defined-node.md#custom-component-node-framenode) or the node has been [disposed]{ |
+| boolean | Whether this FrameNode is modifiable. <br>The value **true** means that the FrameNode is modifiable, and **false** means the opposite. <br>Returns **false** if the node is a system component proxy node in a [custom component node](../../../ui/arkts-user-defined-node.md#custom-component-node-framenode) or the node has been [disposed]{ |
 
 ## Examples
 
@@ -2835,7 +2835,7 @@ Queries whether a node is mounted to the main node tree.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the node is mounted to the main node tree. &lt;br&gt;The value **true** means that the node is mounted to the main node tree, and **false** means the opposite. |
+| boolean | Whether the node is mounted to the main node tree. <br>The value **true** means that the node is mounted to the main node tree, and **false** means the opposite. |
 
 **Error codes:**
 
@@ -3418,7 +3418,7 @@ Obtains whether the node is visible. > **NOTE：**> > The visibility of a node i
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the node is visible. &lt;br&gt;The value **true** means that the node is visible, and **false** means the opposite. |
+| boolean | Whether the node is visible. <br>The value **true** means that the node is visible, and **false** means the opposite. |
 
 ## Examples
 
@@ -3514,8 +3514,8 @@ Moves this FrameNode to a specified position within the target FrameNode. If thi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| targetParent | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target parent node. &lt;br&gt;The target parent node must not be a declaratively created node, that is, a FrameNode that is not modifiable. If it does not meet the specifications, an exception is thrown. |
-| index | number | No | Index of the child node. The current FrameNode will be inserted before the child node at the specified sequence number in the target FrameNode. If the target FrameNode has *n* nodes, the value range for **index** is 0, *n*-1]. &lt;br&gt;If the parameter is invalid or not specified, the current FrameNode will be added to the end of the target FrameNode. &lt;br&gt;Default value: **-1 |
+| targetParent | [FrameNode](arkts-arkui-framenode-c.md) | Yes | Target parent node. <br>The target parent node must not be a declaratively created node, that is, a FrameNode that is not modifiable. If it does not meet the specifications, an exception is thrown. |
+| index | number | No | Index of the child node. The current FrameNode will be inserted before the child node at the specified sequence number in the target FrameNode. If the target FrameNode has *n* nodes, the value range for **index** is 0, *n*-1]. <br>If the parameter is invalid or not specified, the current FrameNode will be added to the end of the target FrameNode. <br>Default value: **-1 |
 
 **Error codes:**
 
@@ -3752,7 +3752,7 @@ Removes the state processing registration from the component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uiStates | number | Yes | UI states to be removed. &lt;br&gt;Multiple states can be specified simultaneously using bitwise OR operations, for example, **targetUIStates = UIState.PRESSED  \|  UIState.FOCUSED**. |
+| uiStates | number | Yes | UI states to be removed. <br>Multiple states can be specified simultaneously using bitwise OR operations, for example, **targetUIStates = UIState.PRESSED  \|  UIState.FOCUSED**. |
 
 ## Examples
 

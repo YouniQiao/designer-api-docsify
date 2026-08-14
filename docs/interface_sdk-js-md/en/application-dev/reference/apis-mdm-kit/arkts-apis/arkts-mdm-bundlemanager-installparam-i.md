@@ -15,7 +15,7 @@ Defines the parameters for application installation.
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@kit.MDMKit';
+import { bundleManager } from 'bundleManager';
 ```
 
 ## installFlag

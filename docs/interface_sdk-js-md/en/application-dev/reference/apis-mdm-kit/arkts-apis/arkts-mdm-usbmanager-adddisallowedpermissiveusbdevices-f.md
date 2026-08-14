@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from '@kit.MDMKit';
+import { usbManager } from 'usbManager';
 ```
 
 ## addDisallowedPermissiveUsbDevices

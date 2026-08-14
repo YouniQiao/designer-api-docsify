@@ -19,7 +19,7 @@ The distributedBundle module manages distributed bundles. > **NOTE：**> > The A
 ## Modules to Import
 
 ```TypeScript
-import { distributedBundle } from '@kit.AbilityKit';
+import { distributedBundle } from 'distributedBundle';
 ```
 
 ## Summary

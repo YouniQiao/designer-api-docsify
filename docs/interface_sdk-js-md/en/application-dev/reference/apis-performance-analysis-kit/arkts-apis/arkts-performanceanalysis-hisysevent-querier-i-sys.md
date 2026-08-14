@@ -17,7 +17,7 @@ Defines an event query instance.
 ## Modules to Import
 
 ```TypeScript
-import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
+import { hiSysEvent } from 'hiSysEvent';
 ```
 
 ## onComplete

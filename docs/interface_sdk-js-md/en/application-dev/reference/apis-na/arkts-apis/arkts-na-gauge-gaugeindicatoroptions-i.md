@@ -42,7 +42,7 @@ Current indicator icon path.
 space?: Dimension
 ```
 
-Current indicator space. Default value: 8vp. &lt;br&gt;**Note: * * For the default triangle style pointer, the spacing is the distance from the black triangle to the outer edge of the ring.
+Current indicator space. Default value: 8vp. <br>**Note: * * For the default triangle style pointer, the spacing is the distance from the black triangle to the outer edge of the ring.
 
 **Type:** [Dimension](../../apis-arkui/arkts-apis/arkts-arkui-dimension-t.md)
 

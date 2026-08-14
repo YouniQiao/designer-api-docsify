@@ -17,7 +17,7 @@ Interface of formObserver.
 ## Modules to Import
 
 ```TypeScript
-import { formObserver } from '@kit.FormKit';
+import { formObserver } from 'formObserver';
 ```
 
 ## Summary

@@ -15,7 +15,7 @@ ArrayList is a linear data structure that is implemented based on arrays. ArrayL
 ## Modules to Import
 
 ```TypeScript
-import { ArrayList } from '@kit.ArkTS';
+import { ArrayList } from 'ArrayList';
 ```
 
 ## $_iterator
@@ -972,7 +972,7 @@ Sorts elements in an ArrayList according to the order defined by the specified c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| comparator | [ArrayListComparatorFn](arkts-arkts-arraylistcomparatorfn-t.md)&lt;T&gt; | No | Callback invoked for sorting. The default value is the callback function for sorting elements in ascending order.&lt;br&gt; There has been a compatibility change since API version 2 3. In API version 22 and earlier versions, the type is `(firstValue: T, secondValue: T) => number`.<br>**Since:** 23 |
+| comparator | [ArrayListComparatorFn](arkts-arkts-arraylistcomparatorfn-t.md)&lt;T&gt; | No | Callback invoked for sorting. The default value is the callback function for sorting elements in ascending order.<br> There has been a compatibility change since API version 2 3. In API version 22 and earlier versions, the type is `(firstValue: T, secondValue: T) => number`.<br>**Since:** 23 |
 
 **Error codes:**
 

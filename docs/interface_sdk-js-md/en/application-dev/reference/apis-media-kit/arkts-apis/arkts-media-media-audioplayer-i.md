@@ -17,7 +17,7 @@ AudioPlayer is a class for audio playback management. It provides APIs to manage
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'media';
 ```
 
 ## getTrackDescription
@@ -124,7 +124,7 @@ Subscribes to the audio buffering update event. This API works only under online
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'bufferingUpdate' | Yes | Event type, which is **'bufferingUpdate'** in this case. |
-| callback | (infoType: BufferingInfoType, value: number) =&gt; void | Yes | Callback invoked when the event is triggered.&lt;br&gt;The value of [BufferingInfoType](arkts-media-media-bufferinginfotype-e.md#BufferingInfoType) is fixed at **0**. |
+| callback | (infoType: BufferingInfoType, value: number) =&gt; void | Yes | Callback invoked when the event is triggered.<br>The value of [BufferingInfoType](arkts-media-media-bufferinginfotype-e.md#BufferingInfoType) is fixed at **0**. |
 
 ## on_dataLoad
 
@@ -150,7 +150,7 @@ Subscribes to the audio playback events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | Yes | Event type. The following events are supported:&lt;br&gt;- 'play': triggered when the [play()](#play) API is called and audio playback starts.&lt;br&gt;- 'pause': triggered when the [pause()](#pause) API is called and audio playback is paused.&lt;br&gt;- 'stop': triggered when the [stop()](#stop) API is called and audio playback stops.&lt;br&gt;- 'reset': triggered when the [reset()](#reset) API is called and audio playback is reset.&lt;br&gt;- 'dataLoad': triggered when the audio data is loaded, that is, when the **src** property is configured.&lt;br&gt;- 'finish': triggered when the audio playback is finished.&lt;br&gt;- 'volumeChange': triggered when the [setVolume()](#setVolume) API is called and the playback volume is changed. |
+| type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | Yes | Event type. The following events are supported:<br>- 'play': triggered when the [play()](#play) API is called and audio playback starts.<br>- 'pause': triggered when the [pause()](#pause) API is called and audio playback is paused.<br>- 'stop': triggered when the [stop()](#stop) API is called and audio playback stops.<br>- 'reset': triggered when the [reset()](#reset) API is called and audio playback is reset.<br>- 'dataLoad': triggered when the audio data is loaded, that is, when the **src** property is configured.<br>- 'finish': triggered when the audio playback is finished.<br>- 'volumeChange': triggered when the [setVolume()](#setVolume) API is called and the playback volume is changed. |
 | callback | () =&gt; void | Yes | Callback invoked when the event is triggered. |
 
 ## on_error
@@ -177,7 +177,7 @@ Subscribes to audio playback error events. After an error event is reported, you
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type, which is **'error'** in this case.&lt;br&gt;This event is triggered when an error occurs during audio playback. |
+| type | 'error' | Yes | Event type, which is **'error'** in this case.<br>This event is triggered when an error occurs during audio playback. |
 | callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback invoked when the event is triggered. |
 
 ## on_finish
@@ -204,7 +204,7 @@ Subscribes to the audio playback events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | Yes | Event type. The following events are supported:&lt;br&gt;- 'play': triggered when the [play()](#play) API is called and audio playback starts.&lt;br&gt;- 'pause': triggered when the [pause()](#pause) API is called and audio playback is paused.&lt;br&gt;- 'stop': triggered when the [stop()](#stop) API is called and audio playback stops.&lt;br&gt;- 'reset': triggered when the [reset()](#reset) API is called and audio playback is reset.&lt;br&gt;- 'dataLoad': triggered when the audio data is loaded, that is, when the **src** property is configured.&lt;br&gt;- 'finish': triggered when the audio playback is finished.&lt;br&gt;- 'volumeChange': triggered when the [setVolume()](#setVolume) API is called and the playback volume is changed. |
+| type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | Yes | Event type. The following events are supported:<br>- 'play': triggered when the [play()](#play) API is called and audio playback starts.<br>- 'pause': triggered when the [pause()](#pause) API is called and audio playback is paused.<br>- 'stop': triggered when the [stop()](#stop) API is called and audio playback stops.<br>- 'reset': triggered when the [reset()](#reset) API is called and audio playback is reset.<br>- 'dataLoad': triggered when the audio data is loaded, that is, when the **src** property is configured.<br>- 'finish': triggered when the audio playback is finished.<br>- 'volumeChange': triggered when the [setVolume()](#setVolume) API is called and the playback volume is changed. |
 | callback | () =&gt; void | Yes | Callback invoked when the event is triggered. |
 
 ## on_pause
@@ -231,7 +231,7 @@ Subscribes to the audio playback events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | Yes | Event type. The following events are supported:&lt;br&gt;- 'play': triggered when the [play()](#play) API is called and audio playback starts.&lt;br&gt;- 'pause': triggered when the [pause()](#pause) API is called and audio playback is paused.&lt;br&gt;- 'stop': triggered when the [stop()](#stop) API is called and audio playback stops.&lt;br&gt;- 'reset': triggered when the [reset()](#reset) API is called and audio playback is reset.&lt;br&gt;- 'dataLoad': triggered when the audio data is loaded, that is, when the **src** property is configured.&lt;br&gt;- 'finish': triggered when the audio playback is finished.&lt;br&gt;- 'volumeChange': triggered when the [setVolume()](#setVolume) API is called and the playback volume is changed. |
+| type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | Yes | Event type. The following events are supported:<br>- 'play': triggered when the [play()](#play) API is called and audio playback starts.<br>- 'pause': triggered when the [pause()](#pause) API is called and audio playback is paused.<br>- 'stop': triggered when the [stop()](#stop) API is called and audio playback stops.<br>- 'reset': triggered when the [reset()](#reset) API is called and audio playback is reset.<br>- 'dataLoad': triggered when the audio data is loaded, that is, when the **src** property is configured.<br>- 'finish': triggered when the audio playback is finished.<br>- 'volumeChange': triggered when the [setVolume()](#setVolume) API is called and the playback volume is changed. |
 | callback | () =&gt; void | Yes | Callback invoked when the event is triggered. |
 
 ## on_play
@@ -258,7 +258,7 @@ Subscribes to the audio playback events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | Yes | Event type. The following events are supported:&lt;br&gt;- 'play': triggered when the [play()](#play) API is called and audio playback starts.&lt;br&gt;- 'pause': triggered when the [pause()](#pause) API is called and audio playback is paused.&lt;br&gt;- 'stop': triggered when the [stop()](#stop) API is called and audio playback stops.&lt;br&gt;- 'reset': triggered when the [reset()](#reset) API is called and audio playback is reset.&lt;br&gt;- 'dataLoad': triggered when the audio data is loaded, that is, when the **src** property is configured.&lt;br&gt;- 'finish': triggered when the audio playback is finished.&lt;br&gt;- 'volumeChange': triggered when the [setVolume()](#setVolume) API is called and the playback volume is changed. |
+| type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | Yes | Event type. The following events are supported:<br>- 'play': triggered when the [play()](#play) API is called and audio playback starts.<br>- 'pause': triggered when the [pause()](#pause) API is called and audio playback is paused.<br>- 'stop': triggered when the [stop()](#stop) API is called and audio playback stops.<br>- 'reset': triggered when the [reset()](#reset) API is called and audio playback is reset.<br>- 'dataLoad': triggered when the audio data is loaded, that is, when the **src** property is configured.<br>- 'finish': triggered when the audio playback is finished.<br>- 'volumeChange': triggered when the [setVolume()](#setVolume) API is called and the playback volume is changed. |
 | callback | () =&gt; void | Yes | Callback invoked when the event is triggered. |
 
 ## on_reset
@@ -285,7 +285,7 @@ Subscribes to the audio playback events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | Yes | Event type. The following events are supported:&lt;br&gt;- 'play': triggered when the [play()](#play) API is called and audio playback starts.&lt;br&gt;- 'pause': triggered when the [pause()](#pause) API is called and audio playback is paused.&lt;br&gt;- 'stop': triggered when the [stop()](#stop) API is called and audio playback stops.&lt;br&gt;- 'reset': triggered when the [reset()](#reset) API is called and audio playback is reset.&lt;br&gt;- 'dataLoad': triggered when the audio data is loaded, that is, when the **src** property is configured.&lt;br&gt;- 'finish': triggered when the audio playback is finished.&lt;br&gt;- 'volumeChange': triggered when the [setVolume()](#setVolume) API is called and the playback volume is changed. |
+| type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | Yes | Event type. The following events are supported:<br>- 'play': triggered when the [play()](#play) API is called and audio playback starts.<br>- 'pause': triggered when the [pause()](#pause) API is called and audio playback is paused.<br>- 'stop': triggered when the [stop()](#stop) API is called and audio playback stops.<br>- 'reset': triggered when the [reset()](#reset) API is called and audio playback is reset.<br>- 'dataLoad': triggered when the audio data is loaded, that is, when the **src** property is configured.<br>- 'finish': triggered when the audio playback is finished.<br>- 'volumeChange': triggered when the [setVolume()](#setVolume) API is called and the playback volume is changed. |
 | callback | () =&gt; void | Yes | Callback invoked when the event is triggered. |
 
 ## on_stop
@@ -312,7 +312,7 @@ Subscribes to the audio playback events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | Yes | Event type. The following events are supported:&lt;br&gt;- 'play': triggered when the [play()](#play) API is called and audio playback starts.&lt;br&gt;- 'pause': triggered when the [pause()](#pause) API is called and audio playback is paused.&lt;br&gt;- 'stop': triggered when the [stop()](#stop) API is called and audio playback stops.&lt;br&gt;- 'reset': triggered when the [reset()](#reset) API is called and audio playback is reset.&lt;br&gt;- 'dataLoad': triggered when the audio data is loaded, that is, when the **src** property is configured.&lt;br&gt;- 'finish': triggered when the audio playback is finished.&lt;br&gt;- 'volumeChange': triggered when the [setVolume()](#setVolume) API is called and the playback volume is changed. |
+| type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | Yes | Event type. The following events are supported:<br>- 'play': triggered when the [play()](#play) API is called and audio playback starts.<br>- 'pause': triggered when the [pause()](#pause) API is called and audio playback is paused.<br>- 'stop': triggered when the [stop()](#stop) API is called and audio playback stops.<br>- 'reset': triggered when the [reset()](#reset) API is called and audio playback is reset.<br>- 'dataLoad': triggered when the audio data is loaded, that is, when the **src** property is configured.<br>- 'finish': triggered when the audio playback is finished.<br>- 'volumeChange': triggered when the [setVolume()](#setVolume) API is called and the playback volume is changed. |
 | callback | () =&gt; void | Yes | Callback invoked when the event is triggered. |
 
 ## on_timeUpdate
@@ -339,7 +339,7 @@ Subscribes to the **'timeUpdate'** event. This event is reported every second wh
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'timeUpdate' | Yes | Event type, which is **'timeUpdate'** in this case.&lt;br&gt;The **'timeUpdate'** event is triggered when the audio playback starts after an audio playback timestamp update. |
+| type | 'timeUpdate' | Yes | Event type, which is **'timeUpdate'** in this case.<br>The **'timeUpdate'** event is triggered when the audio playback starts after an audio playback timestamp update. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | Callback invoked when the event is triggered. The input parameter is the updated timestamp. |
 
 ## on_volumeChange
@@ -366,7 +366,7 @@ Subscribes to the audio playback events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | Yes | Event type. The following events are supported:&lt;br&gt;- 'play': triggered when the [play()](#play) API is called and audio playback starts.&lt;br&gt;- 'pause': triggered when the [pause()](#pause) API is called and audio playback is paused.&lt;br&gt;- 'stop': triggered when the [stop()](#stop) API is called and audio playback stops.&lt;br&gt;- 'reset': triggered when the [reset()](#reset) API is called and audio playback is reset.&lt;br&gt;- 'dataLoad': triggered when the audio data is loaded, that is, when the **src** property is configured.&lt;br&gt;- 'finish': triggered when the audio playback is finished.&lt;br&gt;- 'volumeChange': triggered when the [setVolume()](#setVolume) API is called and the playback volume is changed. |
+| type | 'play' \| 'pause' \| 'stop' \| 'reset' \| 'dataLoad' \| 'finish' \| 'volumeChange' | Yes | Event type. The following events are supported:<br>- 'play': triggered when the [play()](#play) API is called and audio playback starts.<br>- 'pause': triggered when the [pause()](#pause) API is called and audio playback is paused.<br>- 'stop': triggered when the [stop()](#stop) API is called and audio playback stops.<br>- 'reset': triggered when the [reset()](#reset) API is called and audio playback is reset.<br>- 'dataLoad': triggered when the audio data is loaded, that is, when the **src** property is configured.<br>- 'finish': triggered when the audio playback is finished.<br>- 'volumeChange': triggered when the [setVolume()](#setVolume) API is called and the playback volume is changed. |
 | callback | () =&gt; void | Yes | Callback invoked when the event is triggered. |
 
 ## pause

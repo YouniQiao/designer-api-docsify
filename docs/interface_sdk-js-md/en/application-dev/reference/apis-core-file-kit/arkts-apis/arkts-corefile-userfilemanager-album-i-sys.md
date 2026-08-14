@@ -21,7 +21,7 @@ Provides APIs to manage albums.
 ## Modules to Import
 
 ```TypeScript
-import { userFileManager } from '@kit.CoreFileKit';
+import { userFileManager } from 'userFileManager';
 ```
 
 ## addPhotoAssets

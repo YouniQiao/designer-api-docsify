@@ -15,7 +15,7 @@ Provides the result returned after the **PluginManager.Request** API is called.
 ## Modules to Import
 
 ```TypeScript
-import { PluginComponentTemplate } from '@kit.ArkUI';
+import { PluginComponentTemplate } from 'PluginComponentTemplate';
 ```
 
 ## componentTemplate

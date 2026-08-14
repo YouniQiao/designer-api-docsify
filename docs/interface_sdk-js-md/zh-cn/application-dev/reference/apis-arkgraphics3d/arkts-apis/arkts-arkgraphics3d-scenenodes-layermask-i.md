@@ -58,8 +58,8 @@ function layerMask(): void {
           let enabled: boolean = node.layerMask.getEnabled(1);
       }
     }
-  }).catch((error: Error) => {
-    console.error('Scene load failed:', error);
+  }).catch((err: Error) => {
+    console.error(`Failed to load scene. Message: ${err.message}`);
   });
 }
 ```
@@ -105,8 +105,8 @@ function layerMask(): void {
           node.layerMask.setEnabled(1, true);
       }
     }
-  }).catch((error: Error) => {
-    console.error('Scene load failed:', error);
+  }).catch((err: Error) => {
+    console.error(`Failed to load scene. Message: ${err.message}`);
   });
 }
 ```

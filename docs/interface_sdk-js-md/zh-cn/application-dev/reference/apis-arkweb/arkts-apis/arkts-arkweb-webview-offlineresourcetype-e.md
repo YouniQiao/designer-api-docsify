@@ -1,6 +1,6 @@
 # OfflineResourceType
 
-[OfflineResourceMap](../../apis-na/arkts-apis/arkts-na-webview-offlineresourcemap-i.md#OfflineResourceMap)对象对应的本地离线资源的接口类型。
+[OfflineResourceMap](arkts-arkweb-webview-offlineresourcemap-i.md#OfflineResourceMap)对象对应的本地离线资源的接口类型。
 
 **起始版本：** 12
 

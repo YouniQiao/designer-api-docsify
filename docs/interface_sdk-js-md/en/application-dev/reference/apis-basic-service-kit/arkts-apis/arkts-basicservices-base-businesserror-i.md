@@ -17,7 +17,10 @@ Defines an error parameter. This API inherits from the **Error** class and is us
 ## Modules to Import
 
 ```TypeScript
-import { Callback, BusinessError, ErrorCallback, AsyncCallback } from '@kit.BasicServicesKit';
+import { AsyncCallback } from 'AsyncCallback';
+import { BusinessError } from 'BusinessError';
+import { Callback } from 'Callback';
+import { ErrorCallback } from 'ErrorCallback';
 ```
 
 ## code

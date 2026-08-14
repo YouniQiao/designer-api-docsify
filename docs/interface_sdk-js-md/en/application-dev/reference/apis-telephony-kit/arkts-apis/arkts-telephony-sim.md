@@ -15,7 +15,7 @@ Provides applications with APIs for obtaining SIM card status, card file informa
 ## Modules to Import
 
 ```TypeScript
-import { sim } from '@kit.TelephonyKit';
+import { sim } from 'sim';
 ```
 
 ## Summary

@@ -64,7 +64,7 @@ localNames?: Array<HolidayLocalName>
 
 节假日的本地名称列表。
 
-**类型：** Array&lt;[HolidayLocalName](arkts-localization-i18n-holidaylocalname-i.md)&gt;
+**类型：** Array&lt;[HolidayLocalName](../../apis-na/arkts-apis/arkts-na-i18n-holidaylocalname-i.md)&gt;
 
 **起始版本：** 23
 

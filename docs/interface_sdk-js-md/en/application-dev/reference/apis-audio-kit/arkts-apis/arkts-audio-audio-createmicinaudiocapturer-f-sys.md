@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'audio';
 ```
 
 ## createMicInAudioCapturer
@@ -50,7 +50,7 @@ Obtains a special [AudioCapturer](arkts-audio-audio-audiocapturer-i.md#AudioCapt
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied, including background recording. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 | [6800301](../errorcode-audio.md#6800301-system-error) | Audio system internal error, such as system process crash. |
-| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Capturer creation is not supported, may caused by following problems: &lt;br&gt; 1. Source type is unsupported for this capturer, only [SOURCE_TYPE_UNPROCESSED_VOICE_ASSISTANT](arkts-audio-audio-sourcetype-e-sys.md#SOURCE_TYPE_UNPROCESSED_VOICE_ASSISTANT) is supported currently. &lt;br&gt; 2. Echo reference signal's config is unsupported, echo reference's sampling rate and format must be the same as MicIn audio data currently. |
+| [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Capturer creation is not supported, may caused by following problems: <br> 1. Source type is unsupported for this capturer, only [SOURCE_TYPE_UNPROCESSED_VOICE_ASSISTANT](arkts-audio-audio-sourcetype-e-sys.md#SOURCE_TYPE_UNPROCESSED_VOICE_ASSISTANT) is supported currently. <br> 2. Echo reference signal's config is unsupported, echo reference's sampling rate and format must be the same as MicIn audio data currently. |
 
 ## Examples
 

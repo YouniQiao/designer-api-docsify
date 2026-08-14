@@ -23,6 +23,6 @@ Enumerates the states of an accessibility application.
 | Type | Description |
 | --- | --- |
 | 'enable' | The accessibility application is enabled. |
-| 'disable' | The accessibility application is disabled. |
-| 'install' | The accessibility application has been installed. |
+| 'disable' | The accessibility app is disabled. |
+| 'install' | The accessibility app is installed. |
 

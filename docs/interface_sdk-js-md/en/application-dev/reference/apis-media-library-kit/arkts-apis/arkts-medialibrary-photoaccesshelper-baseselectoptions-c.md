@@ -15,7 +15,7 @@ Defines the basic options for selecting media files from Gallery.
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'photoAccessHelper';
 ```
 
 ## MIMEType

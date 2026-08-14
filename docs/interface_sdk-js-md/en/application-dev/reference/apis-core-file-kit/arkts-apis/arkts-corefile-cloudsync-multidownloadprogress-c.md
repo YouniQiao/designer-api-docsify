@@ -15,7 +15,7 @@ Represents the batch download progress of a file from the Drive Kit.
 ## Modules to Import
 
 ```TypeScript
-import { cloudSync } from '@kit.CoreFileKit';
+import { cloudSync } from 'cloudSync';
 ```
 
 ## getFailedFiles
@@ -46,7 +46,7 @@ Obtains the list of files that fail to be downloaded in batches.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 22400005 | Inner error. Possible causes: &lt;br&gt;1.Failed to access the database or execute the SQL statement. &lt;br&gt;2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
+| 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
 
 ## Examples
 
@@ -108,7 +108,7 @@ Obtains the list of files that are successfully downloaded in batches.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 22400005 | Inner error. Possible causes: &lt;br&gt;1.Failed to access the database or execute the SQL statement. &lt;br&gt;2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
+| 22400005 | Inner error. Possible causes: <br>1.Failed to access the database or execute the SQL statement. <br>2.System error, such as a null pointer, insufficient memory or a JS engine exception. |
 
 ## Examples
 

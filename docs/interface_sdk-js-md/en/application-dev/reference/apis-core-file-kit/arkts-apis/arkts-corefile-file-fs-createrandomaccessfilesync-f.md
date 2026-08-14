@@ -3,7 +3,21 @@
 ## Modules to Import
 
 ```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
+import { ConflictFiles } from 'ConflictFiles';
+import { FileFilter } from 'FileFilter';
+import { Filter } from 'Filter';
+import { Options } from 'Options';
+import { ReaderIteratorResult } from 'ReaderIteratorResult';
+import { WatchEvent } from 'WatchEvent';
+import { WatchEventListener } from 'WatchEventListener';
+import { Watcher } from 'Watcher';
+import { ReadOptions } from 'ReadOptions';
+import { ReadTextOptions } from 'ReadTextOptions';
+import { WriteOptions } from 'WriteOptions';
+import { ListFileExtOptions } from 'ListFileExtOptions';
+import { ListFileOptions } from 'ListFileOptions';
+import { DfsListeners } from 'DfsListeners';
+import { TaskSignal } from 'TaskSignal';
 ```
 
 ## createRandomAccessFileSync
@@ -30,8 +44,8 @@ Creates a **RandomAccessFile** instance based on a file path or file object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | file | string \| [File](arkts-corefile-file-fs-file-i.md) | Yes | Application sandbox path of the file or an opened file object. |
-| mode | number | No | Mode for creating the **RandomAccessFile** instance. This parameter is valid only when the application sandbox path of the file is passed in. One of the following options must be specified:&lt;br&gt;- **OpenMode.READ_ONLY(0o0)**: Create the file in read-only mode. This is the default value.&lt;br&gt;- **OpenMode.WRITE_ONLY(0o1)**: Create the file in write-only mode. &lt;br&gt;- **OpenMode.READ_WRITE(0o2)**: Create the file in read/write mode.&lt;br&gt;You can also specify the following options, separated by a bitwise OR operator (\|). By default, no additional options are given.&lt;br&gt;- **OpenMode.CREATE(0o100)**: If the file does not exist, create it.&lt;br&gt;- **OpenMode.TRUNC(0o1000)**: If the **RandomAccessFile** object already exists and is created in write mode, truncate the file length to 0.&lt;br&gt;- **OpenMode.APPEND(0o2000)**: Create the file in append mode. New data will be added to the end of the **RandomAccessFile** object. &lt;br&gt;- **OpenMode.NONBLOCK(0o4000)**: If **path** points to a named pipe (also known as a FIFO), block special file, or character special file, perform non-blocking operations on the opened file and in subsequent I/Os.&lt;br&gt;- **OpenMode.DIR(0o200000)**: If **path** does not point to a directory, throw an exception. The write permission is not allowed.&lt;br&gt;- **OpenMode.NOFOLLOW(0o400000)**: If **path** points to a symbolic link, throw an exception.&lt;br&gt;- **OpenMode.SYNC(0o4010000)**: Create a **RandomAccessFile** instance in synchronous I/O mode. |
-| options | [RandomAccessFileOptions](../../apis-na/arkts-apis/arkts-na-file-fs-randomaccessfileoptions-i.md) | No | The options are as follows:&lt;br&gt;- **start** (number): start position to read data, in bytes. This parameter is optional. By default, data is read from the current position.&lt;br&gt;- **end** (number): end position to read data, in bytes. This parameter is optional. The default value is the end of the file.&lt;br&gt;This parameter takes effect only for file stream objects obtained by [getreadstream](arkts-corefile-file-fs-randomaccessfile-i.md#getReadStream) and [getwritestream](arkts-corefile-file-fs-randomaccessfile-i.md#getWriteStream) .<br>**Since:** 12 |
+| mode | number | No | Mode for creating the **RandomAccessFile** instance. This parameter is valid only when the application sandbox path of the file is passed in. One of the following options must be specified:<br>- **OpenMode.READ_ONLY(0o0)**: Create the file in read-only mode. This is the default value.<br>- **OpenMode.WRITE_ONLY(0o1)**: Create the file in write-only mode. <br>- **OpenMode.READ_WRITE(0o2)**: Create the file in read/write mode.<br>You can also specify the following options, separated by a bitwise OR operator (\|). By default, no additional options are given.<br>- **OpenMode.CREATE(0o100)**: If the file does not exist, create it.<br>- **OpenMode.TRUNC(0o1000)**: If the **RandomAccessFile** object already exists and is created in write mode, truncate the file length to 0.<br>- **OpenMode.APPEND(0o2000)**: Create the file in append mode. New data will be added to the end of the **RandomAccessFile** object. <br>- **OpenMode.NONBLOCK(0o4000)**: If **path** points to a named pipe (also known as a FIFO), block special file, or character special file, perform non-blocking operations on the opened file and in subsequent I/Os.<br>- **OpenMode.DIR(0o200000)**: If **path** does not point to a directory, throw an exception. The write permission is not allowed.<br>- **OpenMode.NOFOLLOW(0o400000)**: If **path** points to a symbolic link, throw an exception.<br>- **OpenMode.SYNC(0o4010000)**: Create a **RandomAccessFile** instance in synchronous I/O mode. |
+| options | [RandomAccessFileOptions](../../apis-na/arkts-apis/arkts-na-file-fs-randomaccessfileoptions-i.md) | No | The options are as follows:<br>- **start** (number): start position to read data, in bytes. This parameter is optional. By default, data is read from the current position.<br>- **end** (number): end position to read data, in bytes. This parameter is optional. The default value is the end of the file.<br>This parameter takes effect only for file stream objects obtained by [getreadstream](arkts-corefile-file-fs-randomaccessfile-i.md#getReadStream) and [getwritestream](arkts-corefile-file-fs-randomaccessfile-i.md#getWriteStream) .<br>**Since:** 12 |
 
 **Return value:**
 

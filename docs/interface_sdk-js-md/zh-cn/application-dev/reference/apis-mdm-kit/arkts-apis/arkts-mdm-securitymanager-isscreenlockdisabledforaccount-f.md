@@ -57,7 +57,7 @@ let wantTemp: Want = {
 try {
   let result: boolean = securityManager.isScreenLockDisabledForAccount(wantTemp);
   console.info(`Succeeded in checking screen lock disabled for account, result : ${result}`);
-} catch(err) {
+} catch (err) {
   console.error(`Failed to check screen lock disabled for account. Code: ${err.code}, message: ${err.message}`);
 }
 ```

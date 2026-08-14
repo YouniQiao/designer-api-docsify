@@ -27,7 +27,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { transfer } from '@kit.ArkTS';
+import { transfer } from 'transfer';
 ```
 
 ## Summary

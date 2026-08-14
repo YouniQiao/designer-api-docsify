@@ -18,7 +18,7 @@ Defines the embed info.
 height?: int
 ```
 
-The embed tag height, in px. The value should be an integer. &lt;br&gt;Unit:px.
+The embed tag height, in px. The value should be an integer. <br>Unit:px.
 
 **Type:** int
 
@@ -178,7 +178,7 @@ The embed tag url.
 width?: int
 ```
 
-The embed tag width. The value should be an integer. &lt;br&gt;Unit:px.
+The embed tag width. The value should be an integer. <br>Unit:px.
 
 **Type:** int
 

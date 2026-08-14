@@ -15,7 +15,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { abilityDelegatorRegistry } from '@kit.TestKit';
+import { abilityDelegatorRegistry } from 'abilityDelegatorRegistry';
 ```
 
 ## Summary

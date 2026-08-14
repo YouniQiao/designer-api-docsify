@@ -15,7 +15,7 @@ Provides manages model function. Including get inputs, predict ,resize.
 ## Modules to Import
 
 ```TypeScript
-import { mindSporeLite } from '@kit.MindSporeLiteKit';
+import { mindSporeLite } from 'mindSporeLite';
 ```
 
 ## exportModel
@@ -455,7 +455,7 @@ Setup training with virtual batches
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| virtualBatchMultiplier | int | Yes | virtual batch multiplier, use any number < 1 to disable |
+| virtualBatchMultiplier | int | Yes | virtual batch multiplier, use any number &lt; 1 to disable |
 | lr | double | Yes | learning rate to use for virtual batch, -1 for internal configuration |
 | momentum | double | Yes | batch norm momentum to use for virtual batch, -1 for internal configuration |
 

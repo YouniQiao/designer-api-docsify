@@ -15,7 +15,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'camera';
 ```
 
 ## close
@@ -106,7 +106,7 @@ Obtains the physical camera orientation in the current fold state of the device.
 
 | Type | Description |
 | --- | --- |
-| int | Physical camera orientation. &lt;br&gt;The value ranges from 0 to 360, in degrees. |
+| int | Physical camera orientation. <br>The value ranges from 0 to 360, in degrees. |
 
 ## isPhysicalCameraOrientationVariable
 

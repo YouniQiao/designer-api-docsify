@@ -181,7 +181,7 @@ function cleanBundleCacheFiles(bundleName: string, appIndex: int): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 表示要清理其缓存数据的应用程序的bundleName。 |
-| appIndex | int | 是 | 表示要清理其缓存数据的应用程序的分身应用索引。&lt;br&gt;appIndex为0时，表示清理主应用缓存数据。appIndex大于0时，表示清理指定分身应用缓存数据。 |
+| appIndex | int | 是 | 表示要清理其缓存数据的应用程序的分身应用索引。<br>appIndex为0时，表示清理主应用缓存数据。appIndex大于0时，表示清理指定分身应用缓存数据。 |
 
 **返回值：**
 

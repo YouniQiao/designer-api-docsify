@@ -204,7 +204,7 @@ onActionUpdate(event: Callback<GestureEvent>): PanGestureHandler
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 | 滑动手势处理器更新回调。&lt;br/&gt;fingerList为多根手指时，该回调监听每次只会更新一根手指的位置信息。 |
+| event | Callback&lt;[GestureEvent](arkts-arkui-gestureevent-i.md)&gt; | 是 | 滑动手势处理器更新回调。<br/>fingerList为多根手指时，该回调监听每次只会更新一根手指的位置信息。 |
 
 **返回值：**
 

@@ -15,7 +15,7 @@ The ProxyRule used by insertProxyRule.
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'webview';
 ```
 
 ## getSchemeFilter

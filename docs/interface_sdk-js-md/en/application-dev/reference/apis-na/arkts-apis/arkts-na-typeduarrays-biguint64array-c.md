@@ -36,7 +36,7 @@ Returns an instance of BigInt at passed index.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| i | int | Yes | index to look at &lt;br&gt;The value should be an integer. |
+| i | int | Yes | index to look at <br>The value should be an integer. |
 
 **Return value:**
 
@@ -94,8 +94,8 @@ Assigns val as element on index.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | index to change &lt;br&gt;The value should be an integer. |
-| val | int | Yes | value to set &lt;br&gt;The value should be an integer. |
+| index | int | Yes | index to change <br>The value should be an integer. |
+| val | int | Yes | value to set <br>The value should be an integer. |
 
 ## $_set
 
@@ -121,7 +121,7 @@ Assigns val as element on index.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | index to change &lt;br&gt;The value should be an integer. |
+| index | int | Yes | index to change <br>The value should be an integer. |
 | val | long | Yes | value to set |
 
 ## $_set
@@ -175,7 +175,7 @@ Returns an instance of primitive type at passed index if index is correct.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | index to look at &lt;br&gt;The value should be an integer. |
+| index | int | Yes | index to look at <br>The value should be an integer. |
 
 **Return value:**
 
@@ -227,7 +227,7 @@ Creates an BigUint64Array with respect to length.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| length | int | Yes | Number of elements &lt;br&gt;The value should be an integer. |
+| length | int | Yes | Number of elements <br>The value should be an integer. |
 
 ## constructor
 
@@ -410,8 +410,8 @@ Creates an BigUint64Array with respect to data, byteOffset and length.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | buf | ArrayBufferLike | Yes | data initializer |
-| byteOffset | int | Yes | byte offset from begin of the buf &lt;br&gt;The value should be an integer. |
-| length | int | Yes | size of elements of type long in newly created BigUint64Array &lt;br&gt;The value should be an integer. |
+| byteOffset | int | Yes | byte offset from begin of the buf <br>The value should be an integer. |
+| length | int | Yes | size of elements of type long in newly created BigUint64Array <br>The value should be an integer. |
 
 ## constructor
 
@@ -438,7 +438,7 @@ Creates an BigUint64Array with respect to buf and byteOffset.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | buf | ArrayBuffer | Yes | data initializer |
-| byteOffset | int | Yes | byte offset from begin of the buf &lt;br&gt;The value should be an integer. |
+| byteOffset | int | Yes | byte offset from begin of the buf <br>The value should be an integer. |
 
 ## constructor
 
@@ -545,9 +545,9 @@ Makes a copy of internal elements to targetPos from startPos to endPos.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | int | Yes | insert index to place copied elements &lt;br&gt;The value should be an integer. |
-| start | int | Yes | start index to begin copy from &lt;br&gt;The value should be an integer. |
-| end | int | No | last index to end copy from, excluded. Defaults to the array length. &lt;br&gt;The value should be an integer. |
+| target | int | Yes | insert index to place copied elements <br>The value should be an integer. |
+| start | int | Yes | start index to begin copy from <br>The value should be an integer. |
+| end | int | No | last index to end copy from, excluded. Defaults to the array length. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -579,7 +579,7 @@ Makes a copy of internal elements to targetPos from begin to end of BigUint64Arr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | int | Yes | insert index to place copied elements &lt;br&gt;The value should be an integer. |
+| target | int | Yes | insert index to place copied elements <br>The value should be an integer. |
 
 **Return value:**
 
@@ -670,8 +670,8 @@ Fills the BigUint64Array with specified value
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | long | Yes | new value. |
-| start | int | No | start index to begin fill from &lt;br&gt;The value should be an integer. |
-| end | int | No | last index to end fill from, excluded &lt;br&gt;The value should be an integer. |
+| start | int | No | start index to begin fill from <br>The value should be an integer. |
+| end | int | No | last index to end fill from, excluded <br>The value should be an integer. |
 
 **Return value:**
 
@@ -704,8 +704,8 @@ Fills the BigUint64Array with specified value
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | BigInt | Yes | new value. |
-| start | int | No | start index to begin fill from &lt;br&gt;The value should be an integer. |
-| end | int | No | last index to end fill from, excluded &lt;br&gt;The value should be an integer. |
+| start | int | No | start index to begin fill from <br>The value should be an integer. |
+| end | int | No | last index to end fill from, excluded <br>The value should be an integer. |
 
 **Return value:**
 
@@ -1150,7 +1150,7 @@ Determines whether BigUint64Array includes a certain element, returning true or 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | searchElement | long | Yes | The element to search for |
-| fromIndex | int | Yes | The position in this array at which to begin searching for searchElement &lt;br&gt;The value should be an integer. |
+| fromIndex | int | Yes | The position in this array at which to begin searching for searchElement <br>The value should be an integer. |
 
 **Return value:**
 
@@ -1215,7 +1215,7 @@ Determines whether BigUint64Array includes a certain element, returning true or 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | searchElement | BigInt | Yes | The element to search for. |
-| fromIndex | int | No | The position in this array at which to begin searching. Defaults to 0. &lt;br&gt;The value should be an integer. |
+| fromIndex | int | No | The position in this array at which to begin searching. Defaults to 0. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -1880,7 +1880,7 @@ Assigns val as element on index.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| insertPos | int | Yes | index to change &lt;br&gt;The value should be an integer. |
+| insertPos | int | Yes | index to change <br>The value should be an integer. |
 | val | long | Yes | value to set |
 
 ## set
@@ -1907,7 +1907,7 @@ Assigns val as element on index.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| insertPos | int | Yes | index to change &lt;br&gt;The value should be an integer. |
+| insertPos | int | Yes | index to change <br>The value should be an integer. |
 | val | BigInt | Yes | value to set |
 
 ## set
@@ -1935,7 +1935,7 @@ Copies all elements of arr to the current BigUint64Array starting from insertPos
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | arr | FixedArray&lt;long&gt; | Yes | array to copy data from |
-| insertPos | int | Yes | start index where data from arr will be inserted &lt;br&gt;The value should be an integer. |
+| insertPos | int | Yes | start index where data from arr will be inserted <br>The value should be an integer. |
 
 ## set
 
@@ -1962,7 +1962,7 @@ Copies all elements of arr to the current BigUint64Array starting from insertPos
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | arr | FixedArray&lt;BigInt&gt; | Yes | array to copy data from |
-| insertPos | int | Yes | start index where data from arr will be inserted &lt;br&gt;The value should be an integer. |
+| insertPos | int | Yes | start index where data from arr will be inserted <br>The value should be an integer. |
 
 ## set
 
@@ -2067,7 +2067,7 @@ Copies all elements of arr to the current BigUint64Array.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | array | [BigUint64Array](arkts-na-typeduarrays-biguint64array-c.md) | Yes | array to copy data from |
-| offset | int | Yes | start index where data from arr will be inserted &lt;br&gt;The value should be an integer. |
+| offset | int | Yes | start index where data from arr will be inserted <br>The value should be an integer. |
 
 ## set
 
@@ -2094,7 +2094,7 @@ Copies elements from an ArrayLike object to the BigUint64Array.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | array | ArrayLike&lt;BigInt&gt; | Yes | An ArrayLike object containing the elements to copy. |
-| offset | int | Yes | Optional. The offset into the target array at which to begin writing values from the source array. The default value is 0. &lt;br&gt;The value should be an integer. |
+| offset | int | Yes | Optional. The offset into the target array at which to begin writing values from the source array. The default value is 0. <br>The value should be an integer. |
 
 ## slice
 
@@ -2120,8 +2120,8 @@ Creates a slice of current BigUint64Array using range [begin, end]
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| begin | int | No | start - index to be taken into slice. Defaults to 0. &lt;br&gt;The value should be an integer. |
-| end | int | No | last index to be taken into slice. Defaults to the array length. &lt;br&gt;The value should be an integer. |
+| begin | int | No | start - index to be taken into slice. Defaults to 0. <br>The value should be an integer. |
+| end | int | No | last index to be taken into slice. Defaults to the array length. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -2153,7 +2153,7 @@ Creates a slice of current BigUint64Array using range [begin, this.lengthInt].
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| begin | int | Yes | start index to be taken into slice. &lt;br&gt;The value should be an integer. |
+| begin | int | Yes | start index to be taken into slice. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -2275,8 +2275,8 @@ Creates a new BigUint64Array that shares the same underlying ArrayBuffer as the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| begin | int | No | start index, inclusive. Defaults to 0. &lt;br&gt;The value should be an integer. |
-| end | int | No | last index, exclusive. Defaults to the array length. &lt;br&gt;The value should be an integer. |
+| begin | int | No | start index, inclusive. Defaults to 0. <br>The value should be an integer. |
+| end | int | No | last index, exclusive. Defaults to the array length. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -2471,7 +2471,7 @@ Returns a new BigUint64Array with the element at the given index replaced by the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | index to change &lt;br&gt;The value should be an integer. |
+| index | int | Yes | index to change <br>The value should be an integer. |
 | value | long | Yes | value to set |
 
 **Return value:**
@@ -2504,7 +2504,7 @@ Returns a new BigUint64Array with the element at the given index replaced by the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | index to change &lt;br&gt;The value should be an integer. |
+| index | int | Yes | index to change <br>The value should be an integer. |
 | value | BigInt | Yes | value to set |
 
 **Return value:**

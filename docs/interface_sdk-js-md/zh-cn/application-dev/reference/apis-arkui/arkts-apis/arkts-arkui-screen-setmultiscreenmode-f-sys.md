@@ -56,7 +56,7 @@ let secondaryScreenId: number = 12; // 扩展屏ID
 let screenMode: screen.MultiScreenMode = screen.MultiScreenMode.SCREEN_MIRROR;
 // 设置扩展屏幕的显示模式为镜像模式
 screen.setMultiScreenMode(primaryScreenId, secondaryScreenId, screenMode).then(() => {
-  console.info('Succeeded in setting multi screen mode. Data: ');
+  console.info('Succeeded in setting multi screen mode.');
 }).catch((err: BusinessError) => {
   console.error(`Failed to set multi screen mode. Code: ${err.code}, message: ${err.message}`);
 });

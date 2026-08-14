@@ -17,7 +17,7 @@ Describes the significant motion sensor data. It extends from [Response](arkts-s
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
+import { sensor } from 'sensor';
 ```
 
 ## scalar

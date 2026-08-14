@@ -1,6 +1,7 @@
 # ArkTS API<!--arkts-securityguardkit-->
 
-- [@ohos.security.securityGuard](arkts-security-securityguard.md)
+<!--Del-->
+- [@ohos.security.securityGuard](arkts-security-securityguard.md)<!--DelEnd-->
   <!--Del-->
   - [getModelResult(system api)](arkts-securityguard-securityguard-getmodelresult-f-sys.md)<!--DelEnd-->
   <!--Del-->

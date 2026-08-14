@@ -42,7 +42,7 @@ static measureText(options: MeasureOptions): double
 
 | 类型 | 说明 |
 | --- | --- |
-| double | 文本宽度。&lt;br/&gt;单位：px |
+| double | 文本宽度。<br/>单位：px |
 
 ## measureTextSize
 
@@ -74,5 +74,5 @@ static measureTextSize(options: MeasureOptions): SizeOptions
 
 | 类型 | 说明 |
 | --- | --- |
-| [SizeOptions](arkts-na-units-sizeoptions-i.md) | 返回文本所占布局宽度和高度。&lt;br/&gt;**说明：** &lt;br/&gt;文本宽度以及高度返回值单位均为px。 |
+| [SizeOptions](arkts-na-units-sizeoptions-i.md) | 返回文本所占布局宽度和高度。<br/>**说明：** <br/>文本宽度以及高度返回值单位均为px。 |
 

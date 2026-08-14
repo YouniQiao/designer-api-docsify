@@ -17,7 +17,7 @@ Describes audio capturer configuration that can capture microphone input (mic-in
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'audio';
 ```
 
 ## capturerInfo

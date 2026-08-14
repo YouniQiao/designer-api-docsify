@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { advertising } from '@kit.ConnectivityKit';
+import { advertising } from 'advertising';
 ```
 
 ## stopAdvertising
@@ -32,7 +32,7 @@ Stops advertising with advertising ID.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| advertisingId | int | Yes | Indicates the ID for this advertising &lt;br&gt;The value must be an integer greater than or equal to 0, The value is the current advertising ID. |
+| advertisingId | int | Yes | Indicates the ID for this advertising <br>The value must be an integer greater than or equal to 0, The value is the current advertising ID. |
 
 **Return value:**
 

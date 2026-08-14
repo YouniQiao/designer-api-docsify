@@ -78,7 +78,7 @@ struct UIServiceExtensionAbility {
             middle: { anchor: '__container__', align: HorizontalAlign.Center }
           })
           .onClick(() => {
-            this.myConnectUIServiceExtensionAbility()
+            this.myDisconnectUIServiceExtensionAbility()
           });
       }
       .width('100%')
@@ -312,7 +312,7 @@ struct UIServiceExtensionAbility {
     .height('100%')
   }
 
-  myConnectUIServiceExtensionAbility() {
+  myDisconnectUIServiceExtensionAbility() {
     // 获取上下文
     let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
     // 断开连接的UIServiceExtensionAbility

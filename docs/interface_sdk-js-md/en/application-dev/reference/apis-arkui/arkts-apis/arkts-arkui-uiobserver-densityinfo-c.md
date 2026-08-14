@@ -15,7 +15,7 @@ Provides the information contained in the callback when the screen pixel density
 ## Modules to Import
 
 ```TypeScript
-import { uiObserver } from '@kit.ArkUI';
+import { uiObserver } from 'uiObserver';
 ```
 
 ## context

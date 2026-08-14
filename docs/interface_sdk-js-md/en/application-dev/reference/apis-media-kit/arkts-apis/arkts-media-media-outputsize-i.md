@@ -15,7 +15,7 @@ This interface is used to define the output image size.
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'media';
 ```
 
 ## height

@@ -17,7 +17,7 @@ Implements management of color space objects. ColorSpaceManager is a core class 
 ## Modules to Import
 
 ```TypeScript
-import { sendableColorSpaceManager } from '@kit.ArkGraphics2D';
+import { sendableColorSpaceManager } from 'sendableColorSpaceManager';
 ```
 
 ## getColorSpaceName

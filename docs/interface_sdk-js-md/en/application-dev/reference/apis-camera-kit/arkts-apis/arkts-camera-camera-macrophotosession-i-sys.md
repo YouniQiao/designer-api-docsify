@@ -19,7 +19,7 @@ Implements a macro photo session, which sets the parameters of the macro photo m
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'camera';
 ```
 
 ## offError

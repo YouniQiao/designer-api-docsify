@@ -1,6 +1,6 @@
 # Font
 
-Font用于管理自定义字体和系统字体信息，支持注册自定义字体、获取系统字体列表、查询字体详细信息等功能，适用于需要在应用中使用自定义字体或查询系统字体资源的场景。 > **说明：**> > - 以下API需先使用UIContext中的[getFont()](arkts-arkui-arkui-uicontext-uicontext-c.md#getFont)方法获取到Font对象，再通过该对象调用对应方法。 > > - 推荐使用字体引擎的[loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadFontSync)接口注册自定义字体。
+Font用于管理自定义字体和系统字体信息，支持注册自定义字体、获取系统字体列表、查询字体详细信息等功能，适用于需要在应用中使用自定义字体或查询系统字体资源的场景。 > **说明：**> > - 以下API需先使用UIContext中的[getFont()](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getFont)方法获取到Font对象，再通过该对象调用对应方法。 > > - 推荐使用字体引擎的[loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadFontSync)接口注册自定义字体。
 
 **起始版本：** 10
 
@@ -44,7 +44,7 @@ getFontByName(fontName: string): font.FontInfo
 
 | 类型 | 说明 |
 | --- | --- |
-| font.FontInfo | 字体的详细信息。&lt;br&gt;如果查询不到字体，返回undefined。 |
+| font.FontInfo | 字体的详细信息。<br>如果查询不到字体，返回undefined。 |
 
 ## getSystemFontList
 
@@ -100,5 +100,5 @@ registerFont(options: font.FontOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | font.FontOptions | 是 | 注册的自定义字体信息。 &lt;br&gt;**说明：**&lt;br&gt;设置注册字体文件的路径，读取系统沙箱路径内的资源时，建议使用file://路径前缀的字符串，需要确保沙箱目录路径下的文件存在并且有可读权限。 |
+| options | font.FontOptions | 是 | 注册的自定义字体信息。 <br>**说明：**<br>设置注册字体文件的路径，读取系统沙箱路径内的资源时，建议使用file://路径前缀的字符串，需要确保沙箱目录路径下的文件存在并且有可读权限。 |
 

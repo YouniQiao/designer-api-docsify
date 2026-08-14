@@ -5,7 +5,7 @@ This module provides basic capabilities for component effects, including blur, b
 ## Modules to Import
 
 ```TypeScript
-import { uiEffect } from '@kit.ArkGraphics2D';
+import { uiEffect } from 'uiEffect';
 ```
 
 ## Summary

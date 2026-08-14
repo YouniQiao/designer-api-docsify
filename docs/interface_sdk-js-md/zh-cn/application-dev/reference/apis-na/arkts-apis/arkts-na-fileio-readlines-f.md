@@ -23,7 +23,7 @@ function readLines(filePath: string, options?: Options): Promise<ReaderIterator>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | filePath | string | 是 | 文件的应用沙箱路径。 |
-| options | [Options](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-options-i.md) | 否 | 可选项。支持以下选项：&lt;br/&gt;- encoding，string类型，当数据是 string 类型时有效，表示数据的编码方式， 默认 'utf-8'，仅支持 'utf-8'。 |
+| options | [Options](arkts-na-file-fs-options-i.md) | 否 | 可选项。支持以下选项：<br/>- encoding，string类型，当数据是 string 类型时有效，表示数据的编码方式， 默认 'utf-8'，仅支持 'utf-8'。 |
 
 **返回值：**
 
@@ -116,7 +116,7 @@ function readLines(filePath: string, options: Options, callback: AsyncCallback<R
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | filePath | string | 是 | 文件的应用沙箱路径。 |
-| options | [Options](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-options-i.md) | 是 | 读取选项。支持以下选项：&lt;br/&gt;- encoding，string类型，当数据是 string 类型时有效，表示数据的编码方式， 默认 'utf-8'，仅支持 'utf-8'。 |
+| options | [Options](arkts-na-file-fs-options-i.md) | 是 | 读取选项。支持以下选项：<br/>- encoding，string类型，当数据是 string 类型时有效，表示数据的编码方式， 默认 'utf-8'，仅支持 'utf-8'。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ReaderIterator](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-readeriterator-i.md)&gt; | 是 | 回调函数，返回文件读取迭代器。 |
 
 **错误码：**

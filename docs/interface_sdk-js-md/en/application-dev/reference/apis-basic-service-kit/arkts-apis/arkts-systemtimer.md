@@ -17,7 +17,7 @@ The **systemTimer** module provides system timer features. You can use the APIs 
 ## Modules to Import
 
 ```TypeScript
-import { systemTimer } from '@kit.BasicServicesKit';
+import { systemTimer } from 'systemTimer';
 ```
 
 ## Summary

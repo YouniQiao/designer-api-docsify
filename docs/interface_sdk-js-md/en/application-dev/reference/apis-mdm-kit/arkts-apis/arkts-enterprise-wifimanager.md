@@ -19,7 +19,7 @@ This module provides Wi-Fi management capabilities for enterprise devices, inclu
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.MDMKit';
+import { wifiManager } from 'wifiManager';
 ```
 
 ## Summary

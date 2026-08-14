@@ -15,7 +15,7 @@ Defines an HTTP Interceptor. User can implement this interface to define the han
 ## Modules to Import
 
 ```TypeScript
-import { http } from '@kit.NetworkKit';
+import { http } from 'http';
 ```
 
 ## interceptorHandle

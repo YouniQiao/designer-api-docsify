@@ -15,7 +15,7 @@ Defines a contact.
 ## Modules to Import
 
 ```TypeScript
-import { contact } from '@kit.ContactsKit';
+import { contact } from 'contact';
 ```
 
 ## INVALID_CONTACT_ID

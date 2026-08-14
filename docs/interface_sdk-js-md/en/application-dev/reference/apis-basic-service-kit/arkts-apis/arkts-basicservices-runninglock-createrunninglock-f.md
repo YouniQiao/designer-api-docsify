@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { runningLock } from '@kit.BasicServicesKit';
+import { runningLock } from 'runningLock';
 ```
 
 ## createRunningLock

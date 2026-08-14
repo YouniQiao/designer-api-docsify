@@ -3,7 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
-import { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
+import { LevelMode } from 'LevelMode';
+import { ImmersiveMode } from 'ImmersiveMode';
+import { LevelOrder } from 'LevelOrder';
 ```
 
 ## openCustomDialog
@@ -34,7 +36,7 @@ Opens a custom dialog box. This API uses a promise to return the result. &lt;!--
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [CustomDialogOptions](arkts-arkui-promptaction-customdialogoptions-i.md) | Yes | Content of the custom dialog box. &lt;br&gt;Note: If both isModal and showInSubWindow in **BaseDialogOptions** are set to **true**, only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. |
+| options | [CustomDialogOptions](arkts-arkui-promptaction-customdialogoptions-i.md) | Yes | Content of the custom dialog box. <br>Note: If both isModal and showInSubWindow in **BaseDialogOptions** are set to **true**, only **showInSubWindow** takes effect. In this case, the non-modal dialog box is displayed without mask in the subwindow. |
 
 **Return value:**
 
@@ -47,7 +49,7 @@ Opens a custom dialog box. This API uses a promise to return the result. &lt;!--
 | Error Code ID | Error Message |
 | --- | --- |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 
 ## Examples
 

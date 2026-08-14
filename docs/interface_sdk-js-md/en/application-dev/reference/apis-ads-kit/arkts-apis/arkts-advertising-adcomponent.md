@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { AdComponent } from '@kit.AdsKit';
+import { AdComponent } from 'AdComponent';
 ```
 
 ## Summary

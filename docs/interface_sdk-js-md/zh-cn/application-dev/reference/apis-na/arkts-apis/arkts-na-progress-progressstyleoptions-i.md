@@ -20,7 +20,7 @@
 scaleCount?: int
 ```
 
-设置环形进度条总刻度数。 取值范围：[2, min(width, height)/scaleWidth/2/π]。默认值：120。 &lt;br&gt;超出取值范围时，样式显示为环形无刻度进度条。
+设置环形进度条总刻度数。 取值范围：[2, min(width, height)/scaleWidth/2/π]。默认值：120。 <br>超出取值范围时，样式显示为环形无刻度进度条。
 
 **类型：** int
 

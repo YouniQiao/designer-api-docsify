@@ -17,7 +17,7 @@ Defines the key event information injected by the user.
 ## Modules to Import
 
 ```TypeScript
-import { inputEventClient } from '@kit.InputKit';
+import { inputEventClient } from 'inputEventClient';
 ```
 
 ## KeyEvent

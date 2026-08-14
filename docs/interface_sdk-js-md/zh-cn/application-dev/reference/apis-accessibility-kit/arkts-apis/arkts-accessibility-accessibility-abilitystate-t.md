@@ -23,6 +23,6 @@ type AbilityState = 'enable' | 'disable' | 'install'
 | 类型 | 说明 |
 | --- | --- |
 | 'enable' | 表示辅助应用已启用。 |
-| 'disable' | 辅助应用已禁用。 |
-| 'install' | 辅助应用已安装。 |
+| 'disable' | 表示辅助应用已禁用。 |
+| 'install' | 表示辅助应用已安装。 |
 

@@ -17,7 +17,7 @@ Defines the detailed information about a device.
 ## Modules to Import
 
 ```TypeScript
-import { deviceManager } from '@kit.DriverDevelopmentKit';
+import { deviceManager } from 'deviceManager';
 ```
 
 ## deviceId

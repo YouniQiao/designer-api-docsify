@@ -19,7 +19,20 @@ Specifies the worker thread running environment, which is isolated from the host
 ## Modules to Import
 
 ```TypeScript
-import { MessageEvents, PostMessageOptions, MessageEvent, Priority, WorkerEventTarget, ThreadWorkerPriority, ThreadWorkerGlobalScope, DedicatedWorkerGlobalScope, ErrorEvent, Event, EventListener, WorkerOptions, EventTarget, WorkerEventListener } from '@kit.ArkTS';
+import { DedicatedWorkerGlobalScope } from 'DedicatedWorkerGlobalScope';
+import { ErrorEvent } from 'ErrorEvent';
+import { Event } from 'Event';
+import { EventListener } from 'EventListener';
+import { EventTarget } from 'EventTarget';
+import { MessageEvent } from 'MessageEvent';
+import { MessageEvents } from 'MessageEvents';
+import { PostMessageOptions } from 'PostMessageOptions';
+import { ThreadWorkerGlobalScope } from 'ThreadWorkerGlobalScope';
+import { WorkerEventListener } from 'WorkerEventListener';
+import { WorkerEventTarget } from 'WorkerEventTarget';
+import { WorkerOptions } from 'WorkerOptions';
+import { ThreadWorkerPriority } from 'ThreadWorkerPriority';
+import { Priority } from 'Priority';
 ```
 
 ## close

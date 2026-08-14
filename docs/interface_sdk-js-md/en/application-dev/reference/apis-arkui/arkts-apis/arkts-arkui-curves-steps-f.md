@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { curves } from '@kit.ArkUI';
+import { curves } from 'curves';
 ```
 
 ## steps
@@ -31,7 +31,7 @@ Creates a step curve.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | count | number | Yes | Number of steps. The value must be a positive integer. |
-| end | boolean | Yes | Whether the step change occurs at the start or end of each interval.&lt;br&gt;- **true**: The step change occurs at the end of each interval.&lt;br&gt;- **false**: The step change occurs at the start of each interval. |
+| end | boolean | Yes | Whether the step change occurs at the start or end of each interval.<br>- **true**: The step change occurs at the end of each interval.<br>- **false**: The step change occurs at the start of each interval. |
 
 **Return value:**
 

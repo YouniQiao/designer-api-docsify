@@ -38,7 +38,7 @@ abstract initialize(src: image.PixelMap | ResourceStr | DrawableDescriptor): Ima
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | image.PixelMap \| ResourceStr \| [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | 是 |  |
+| src | image.PixelMap \| ResourceStr \| [DrawableDescriptor](arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md) | 是 |  |
 
 **返回值：**
 
@@ -70,7 +70,7 @@ abstract initialize(src: image.PixelMap | ResourceStr | DrawableDescriptor | Ima
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | image.PixelMap \| ResourceStr \| [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) \| ImageContent | 是 |  |
+| src | image.PixelMap \| ResourceStr \| [DrawableDescriptor](arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md) \| ImageContent | 是 |  |
 
 **返回值：**
 
@@ -102,7 +102,7 @@ abstract initialize(src: image.PixelMap | ResourceStr | DrawableDescriptor, valu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | image.PixelMap \| ResourceStr \| [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | 是 |  |
+| src | image.PixelMap \| ResourceStr \| [DrawableDescriptor](arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md) | 是 |  |
 | value | ImageAIOptions | 是 |  |
 
 **返回值：**

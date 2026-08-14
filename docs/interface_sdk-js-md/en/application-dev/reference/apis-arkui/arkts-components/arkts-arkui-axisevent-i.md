@@ -68,7 +68,7 @@ Obtains the horizontal axis value of this axis event.
 
 | Type | Description |
 | --- | --- |
-| number | Horizontal axis value. &lt;br&gt;Unit: vp |
+| number | Horizontal axis value. <br>Unit: vp |
 
 ## getPinchAxisScaleValue
 
@@ -96,7 +96,7 @@ Obtains the two-finger pinch zoom ratio from the axis event.
 
 | Type | Description |
 | --- | --- |
-| number | Two-finger pinch zoom ratio. &lt;br&gt; Note: This ratio is calculated as the current distance between two fingers during a touchpad pinch event divided by the initial distance when the fingers first made contact. &lt;br&gt;Default value: **0**. &lt;br&gt;Value range: [0, +∞). &lt;br&gt; |
+| number | Two-finger pinch zoom ratio. <br> Note: This ratio is calculated as the current distance between two fingers during a touchpad pinch event divided by the initial distance when the fingers first made contact. <br>Default value: **0**. <br>Value range: [0, +∞). <br> |
 
 ## getVerticalAxisValue
 
@@ -124,7 +124,7 @@ Obtains the vertical axis value of this axis event.
 
 | Type | Description |
 | --- | --- |
-| number | Vertical axis value. &lt;br&gt;Unit: vp |
+| number | Vertical axis value. <br>Unit: vp |
 
 ## hasAxis
 
@@ -158,7 +158,7 @@ Checks whether this axis event contains the specified axis type.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the axis event contains the specified axis type. &lt;br&gt;**true** if the axis event contains the specified axis type; **false** otherwise. |
+| boolean | Whether the axis event contains the specified axis type. <br>**true** if the axis event contains the specified axis type; **false** otherwise. |
 
 ## action
 

@@ -17,7 +17,7 @@ Describes the parameters for scan.
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from '@kit.ConnectivityKit';
+import { bluetoothManager } from 'bluetoothManager';
 ```
 
 ## dutyMode

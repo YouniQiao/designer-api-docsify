@@ -15,7 +15,7 @@ Implements a task group, in which tasks are associated with each other and all t
 ## Modules to Import
 
 ```TypeScript
-import { taskpool } from '@kit.ArkTS';
+import { taskpool } from 'taskpool';
 ```
 
 ## addTask

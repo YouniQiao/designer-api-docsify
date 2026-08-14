@@ -19,7 +19,7 @@ ManualExposure extends [ManualExposureQuery](arkts-camera-camera-manualexposureq
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'camera';
 ```
 
 ## getExposure

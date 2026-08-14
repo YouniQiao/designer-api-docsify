@@ -15,7 +15,7 @@ Describes the audio-haptic file descriptor. > **NOTE：**> > Ensure that **fd** 
 ## Modules to Import
 
 ```TypeScript
-import { audioHaptic } from '@kit.AudioKit';
+import { audioHaptic } from 'audioHaptic';
 ```
 
 ## fd

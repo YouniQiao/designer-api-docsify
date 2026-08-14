@@ -60,5 +60,5 @@ setStyledString(styledString: StyledString): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| styledString | [StyledString](arkts-arkui-styledstring-styledstring-c.md) | 是 | 属性字符串。&lt;br/&gt;**说明：** &lt;br/&gt;StyledString的子类 [MutableStyledString](../../../reference/apis-arkui/arkui-ts/ts-universal-styled-string.md#mutablestyledstring) 也可以作为入参值。 |
+| styledString | [StyledString](arkts-arkui-styledstring-styledstring-c.md) | 是 | 属性字符串。<br/>**说明：** <br/>StyledString的子类 [MutableStyledString](../../../reference/apis-arkui/arkui-ts/ts-universal-styled-string.md#mutablestyledstring) 也可以作为入参值。 |
 

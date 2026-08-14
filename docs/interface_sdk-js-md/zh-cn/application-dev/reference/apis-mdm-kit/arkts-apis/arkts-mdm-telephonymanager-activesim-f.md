@@ -57,9 +57,9 @@ let slotId: number = 0;
 try {
   // 启用指定卡槽的SIM卡
   telephonyManager.activeSim(wantTemp, slotId);
-  console.info(`success to active SIM`);
+  console.info(`success in activating SIM card on slot ${slotId}`);
 } catch (err) {
-  console.error(`Failed to active SIM. Code: ${err.code}, message: ${err.message}`);
+  console.error(`Failed to activate SIM on slot ${slotId}. Code: ${err.code}, message: ${err.message}`);
 }
 ```
 

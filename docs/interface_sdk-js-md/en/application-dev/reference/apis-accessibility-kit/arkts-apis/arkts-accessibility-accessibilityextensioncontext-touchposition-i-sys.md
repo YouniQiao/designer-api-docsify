@@ -1,6 +1,6 @@
 # TouchPosition (System API)
 
-Indicates touch position of accessibility virtual node.
+Touch tap position.
 
 **Since:** 26.0.0
 
@@ -20,7 +20,7 @@ Indicates touch position of accessibility virtual node.
 x: int
 ```
 
-X coordinate of the touch position on the virtual accessibility node, in pixels (px). Unit: px, The value range is all integers.
+X-coordinate of the tap position, in px.
 
 **Type:** int
 
@@ -44,7 +44,7 @@ X coordinate of the touch position on the virtual accessibility node, in pixels 
 y: int
 ```
 
-Y coordinate of the touch position on the virtual accessibility node, in pixels (px). Unit: px, The value range is all integers.
+Y-coordinate of the tap position, in px.
 
 **Type:** int
 

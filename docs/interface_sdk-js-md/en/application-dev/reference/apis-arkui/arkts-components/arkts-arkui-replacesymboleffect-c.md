@@ -42,7 +42,7 @@ A constructor used to create an **AppearSymbolEffect** instance, which comes wit
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scope | [EffectScope](arkts-arkui-effectscope-e.md) | No | Effect scope.&lt;br&gt;Default value: **EffectScope.LAYER |
+| scope | [EffectScope](arkts-arkui-effectscope-e.md) | No | Effect scope.<br>Default value: **EffectScope.LAYER |
 
 ## constructor
 
@@ -72,8 +72,8 @@ A constructor used to create a **ReplaceSymbolEffect** instance, which comes wit
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scope | [EffectScope](arkts-arkui-effectscope-e.md) | No | Effect scope.&lt;br&gt;Default value: **EffectScope.LAYER |
-| replaceType | [ReplaceEffectType](arkts-arkui-replaceeffecttype-e.md) | No | Replacement effect type.&lt;br&gt;Default value: **ReplaceEffectType.SEQUENTIAL |
+| scope | [EffectScope](arkts-arkui-effectscope-e.md) | No | Effect scope.<br>Default value: **EffectScope.LAYER |
+| replaceType | [ReplaceEffectType](arkts-arkui-replaceeffecttype-e.md) | No | Replacement effect type.<br>Default value: **ReplaceEffectType.SEQUENTIAL |
 
 ## replaceType
 

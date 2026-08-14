@@ -15,7 +15,7 @@ Describes all transient task information.
 ## Modules to Import
 
 ```TypeScript
-import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
+import { backgroundTaskManager } from 'backgroundTaskManager';
 ```
 
 ## remainingQuota
@@ -24,7 +24,7 @@ import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 remainingQuota: int
 ```
 
-Remaining quota of the application on the current day, in ms. &lt;br&gt;Unit:ms
+Remaining quota of the application on the current day, in ms. <br>Unit:ms
 
 **Type:** int
 

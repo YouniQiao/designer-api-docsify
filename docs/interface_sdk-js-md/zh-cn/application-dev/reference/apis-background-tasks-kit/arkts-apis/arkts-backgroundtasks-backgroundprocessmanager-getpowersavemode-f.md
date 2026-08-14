@@ -24,7 +24,7 @@ function getPowerSaveMode(pid: int): Promise<PowerSaveMode>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| pid | int | 是 | 进程号。&lt;br&gt;取值范围：大于0的整数。 |
+| pid | int | 是 | 进程号。<br>取值范围：大于0的整数。 |
 
 **返回值：**
 

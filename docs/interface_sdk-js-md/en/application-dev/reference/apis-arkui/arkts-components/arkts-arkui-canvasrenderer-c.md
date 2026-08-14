@@ -62,10 +62,10 @@ Clears the content in a rectangle on the canvas.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | number | Yes | X-coordinate of the rectangle's top-left corner.&lt;br&gt;**undefined**, **null**, **NaN**, and **Infinity** are treated as invalid values and no rendering will be performed.&lt;br&gt; Default unit: vp |
-| y | number | Yes | Y-coordinate of the rectangle's top-left corner.&lt;br&gt;**undefined**, **null**, **NaN**, and **Infinity** are treated as invalid values and no rendering will be performed.&lt;br&gt; Default unit: vp |
-| w | number | Yes | Width of the rectangle.&lt;br&gt;**undefined**, **null**, **NaN**, and **Infinity** are treated as invalid values and no rendering will be performed.&lt;br&gt;Default unit: vp |
-| h | number | Yes | Height of the rectangle.&lt;br&gt;**undefined**, **null**, **NaN**, and **Infinity** are treated as invalid values and no rendering will be performed.&lt;br&gt;Default unit: vp |
+| x | number | Yes | X-coordinate of the rectangle's top-left corner.<br>**undefined**, **null**, **NaN**, and **Infinity** are treated as invalid values and no rendering will be performed.<br> Default unit: vp |
+| y | number | Yes | Y-coordinate of the rectangle's top-left corner.<br>**undefined**, **null**, **NaN**, and **Infinity** are treated as invalid values and no rendering will be performed.<br> Default unit: vp |
+| w | number | Yes | Width of the rectangle.<br>**undefined**, **null**, **NaN**, and **Infinity** are treated as invalid values and no rendering will be performed.<br>Default unit: vp |
+| h | number | Yes | Height of the rectangle.<br>**undefined**, **null**, **NaN**, and **Infinity** are treated as invalid values and no rendering will be performed.<br>Default unit: vp |
 
 ## clip
 
@@ -93,7 +93,7 @@ Sets the current path to a clipping path.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | No | Rule by which to determine whether a point is inside or outside the area to clip.&lt;br&gt;The options are **"nonzero"** and **"evenodd"**.&lt;br&gt;Invalid values **undefined** and **null** are treated as the default value.&lt;br&gt;Default value: **"nonzero" |
+| fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | No | Rule by which to determine whether a point is inside or outside the area to clip.<br>The options are **"nonzero"** and **"evenodd"**.<br>Invalid values **undefined** and **null** are treated as the default value.<br>Default value: **"nonzero" |
 
 ## clip
 
@@ -121,8 +121,8 @@ Sets a specified path as the clipping path.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | [Path2D](arkts-arkui-path2d-c.md) | Yes | Path2D** path to clip.&lt;br&gt;**undefined** and **null** are treated as invalid values. |
-| fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | No | Rule by which to determine whether a point is inside or outside the area to clip.&lt;br&gt;The options are **"nonzero"** and **"evenodd"**.&lt;br&gt;Invalid values **undefined** and **null** are treated as the default value.&lt;br&gt;Default value: **"nonzero" |
+| path | [Path2D](arkts-arkui-path2d-c.md) | Yes | Path2D** path to clip.<br>**undefined** and **null** are treated as invalid values. |
+| fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | No | Rule by which to determine whether a point is inside or outside the area to clip.<br>The options are **"nonzero"** and **"evenodd"**.<br>Invalid values **undefined** and **null** are treated as the default value.<br>Default value: **"nonzero" |
 
 ## createConicGradient
 
@@ -154,9 +154,9 @@ Creates a conic gradient.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startAngle | number | Yes | Angle at which the gradient starts. The angle measurement starts horizontally from the right side of the center and moves clockwise.&lt;br&gt;Invalid values **undefined** and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid.&lt;br&gt;Unit: radian |
-| x | number | Yes | X-coordinate of the center of the conic gradient.&lt;br&gt;Invalid values **undefined** and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid.&lt;br&gt; Default unit: vp |
-| y | number | Yes | Y-coordinate of the center of the conic gradient.&lt;br&gt;Invalid values **undefined** and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid.&lt;br&gt; Default unit: vp |
+| startAngle | number | Yes | Angle at which the gradient starts. The angle measurement starts horizontally from the right side of the center and moves clockwise.<br>Invalid values **undefined** and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid.<br>Unit: radian |
+| x | number | Yes | X-coordinate of the center of the conic gradient.<br>Invalid values **undefined** and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid.<br> Default unit: vp |
+| y | number | Yes | Y-coordinate of the center of the conic gradient.<br>Invalid values **undefined** and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid.<br> Default unit: vp |
 
 **Return value:**
 
@@ -190,8 +190,8 @@ Creates a blank ImageData object of a specified size. This API involves time-con
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sw | number | Yes | Width of the **ImageData** object.&lt;br&gt;Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as **0**.&lt;br&gt;Default unit: vp |
-| sh | number | Yes | Height of the **ImageData** object.&lt;br&gt;Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as **0**.&lt;br&gt;Default unit: vp |
+| sw | number | Yes | Width of the **ImageData** object.<br>Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as **0**.<br>Default unit: vp |
+| sh | number | Yes | Height of the **ImageData** object.<br>Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as **0**.<br>Default unit: vp |
 
 **Return value:**
 
@@ -225,7 +225,7 @@ Creates an **ImageData** object with the same width and height of an existing **
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| imageData | [ImageData](arkts-arkui-imagedata-c.md) | Yes | Existing **ImageData** object.&lt;br&gt;Values **undefined** and **null** are treated as **ImageData** with its width and height set to **0**. |
+| imageData | [ImageData](arkts-arkui-imagedata-c.md) | Yes | Existing **ImageData** object.<br>Values **undefined** and **null** are treated as **ImageData** with its width and height set to **0**. |
 
 **Return value:**
 
@@ -259,10 +259,10 @@ Creates a linear gradient.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x0 | number | Yes | X-coordinate of the start point.&lt;br&gt;If the value is **undefined** or **null**, this API returns **undefined**. **NaN** and **Infinity** are treated as invalid values.&lt;br&gt; Default unit: vp |
-| y0 | number | Yes | Y-coordinate of the start point.&lt;br&gt;If the value is **undefined** or **null**, this API returns **undefined**. **NaN** and **Infinity** are treated as invalid values.&lt;br&gt; Default unit: vp |
-| x1 | number | Yes | X-coordinate of the end point.&lt;br&gt;If the value is **undefined** or **null**, this API returns **undefined**. **NaN** and **Infinity** are treated as invalid values.&lt;br&gt; Default unit: vp |
-| y1 | number | Yes | Y-coordinate of the end point.&lt;br&gt;If the value is **undefined** or **null**, this API returns **undefined**. **NaN** and **Infinity** are treated as invalid values.&lt;br&gt; Default unit: vp |
+| x0 | number | Yes | X-coordinate of the start point.<br>If the value is **undefined** or **null**, this API returns **undefined**. **NaN** and **Infinity** are treated as invalid values.<br> Default unit: vp |
+| y0 | number | Yes | Y-coordinate of the start point.<br>If the value is **undefined** or **null**, this API returns **undefined**. **NaN** and **Infinity** are treated as invalid values.<br> Default unit: vp |
+| x1 | number | Yes | X-coordinate of the end point.<br>If the value is **undefined** or **null**, this API returns **undefined**. **NaN** and **Infinity** are treated as invalid values.<br> Default unit: vp |
+| y1 | number | Yes | Y-coordinate of the end point.<br>If the value is **undefined** or **null**, this API returns **undefined**. **NaN** and **Infinity** are treated as invalid values.<br> Default unit: vp |
 
 **Return value:**
 
@@ -296,8 +296,8 @@ Creates a pattern for image filling based on a specified source image and repeti
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| image | [ImageBitmap](arkts-arkui-imagebitmap-c.md) | Yes | Source image. For details, see **ImageBitmap**.&lt;br&gt;**undefined** and **null** are treated as invalid values. |
-| repetition | string \| null | Yes | Repetition mode.&lt;br&gt;**'repeat'**: The image is repeated along both the x-axis and y-axis.&lt;br&gt;**'repeat-x'**: The image is repeated along the x-axis.&lt;br&gt; **'repeat-y'**: The image is repeated along the y-axis.&lt;br&gt;**'no-repeat'**: The image is not repeated.&lt;br&gt;**'clamp'**: Coordinates outside the original bounds are clamped to the edge of the image.&lt;br&gt;**'mirror'**: The image is mirrored with each repetition along the x-axis and y-axis.&lt;br&gt; **undefined** and **null** are treated as invalid values. |
+| image | [ImageBitmap](arkts-arkui-imagebitmap-c.md) | Yes | Source image. For details, see **ImageBitmap**.<br>**undefined** and **null** are treated as invalid values. |
+| repetition | string \| null | Yes | Repetition mode.<br>**'repeat'**: The image is repeated along both the x-axis and y-axis.<br>**'repeat-x'**: The image is repeated along the x-axis.<br> **'repeat-y'**: The image is repeated along the y-axis.<br>**'no-repeat'**: The image is not repeated.<br>**'clamp'**: Coordinates outside the original bounds are clamped to the edge of the image.<br>**'mirror'**: The image is mirrored with each repetition along the x-axis and y-axis.<br> **undefined** and **null** are treated as invalid values. |
 
 **Return value:**
 
@@ -331,12 +331,12 @@ Creates a radial gradient.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x0 | number | Yes | X-coordinate of the center of the start circle.&lt;br&gt;If the value is **undefined** or **null**, this API returns **undefined**. **NaN** and **Infinity** are treated as invalid values. &lt;br&gt;Default unit: vp |
-| y0 | number | Yes | Y-coordinate of the center of the start circle.&lt;br&gt;If the value is **undefined** or **null**, this API returns **undefined**. **NaN** and **Infinity** are treated as invalid values. &lt;br&gt;Default unit: vp |
-| r0 | number | Yes | Radius of the start circle, which must be a non-negative finite number.&lt;br&gt; If the value is **undefined** or **null**, this API returns **undefined**. **NaN** and **Infinity** are treated as invalid values.&lt;br&gt;Default unit: vp |
-| x1 | number | Yes | X-coordinate of the center of the end circle.&lt;br&gt;If the value is **undefined** or **null**, this API returns **undefined**. **NaN** and **Infinity** are treated as invalid values. &lt;br&gt;Default unit: vp |
-| y1 | number | Yes | Y-coordinate of the center of the end circle.&lt;br&gt;If the value is **undefined** or **null**, this API returns **undefined**. **NaN** and **Infinity** are treated as invalid values. &lt;br&gt;Default unit: vp |
-| r1 | number | Yes | Radius of the end circle, which must be a non-negative finite number.&lt;br&gt; If the value is **undefined** or **null**, this API returns **undefined**. **NaN** and **Infinity** are treated as invalid values.&lt;br&gt;Default unit: vp |
+| x0 | number | Yes | X-coordinate of the center of the start circle.<br>If the value is **undefined** or **null**, this API returns **undefined**. **NaN** and **Infinity** are treated as invalid values. <br>Default unit: vp |
+| y0 | number | Yes | Y-coordinate of the center of the start circle.<br>If the value is **undefined** or **null**, this API returns **undefined**. **NaN** and **Infinity** are treated as invalid values. <br>Default unit: vp |
+| r0 | number | Yes | Radius of the start circle, which must be a non-negative finite number.<br> If the value is **undefined** or **null**, this API returns **undefined**. **NaN** and **Infinity** are treated as invalid values.<br>Default unit: vp |
+| x1 | number | Yes | X-coordinate of the center of the end circle.<br>If the value is **undefined** or **null**, this API returns **undefined**. **NaN** and **Infinity** are treated as invalid values. <br>Default unit: vp |
+| y1 | number | Yes | Y-coordinate of the center of the end circle.<br>If the value is **undefined** or **null**, this API returns **undefined**. **NaN** and **Infinity** are treated as invalid values. <br>Default unit: vp |
+| r1 | number | Yes | Radius of the end circle, which must be a non-negative finite number.<br> If the value is **undefined** or **null**, this API returns **undefined**. **NaN** and **Infinity** are treated as invalid values.<br>Default unit: vp |
 
 **Return value:**
 
@@ -370,9 +370,9 @@ Draws an image on the canvas.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| image | [ImageBitmap](arkts-arkui-imagebitmap-c.md) \| PixelMap | Yes | Image resource. For details, see **ImageBitmap** or **PixelMap**.&lt;br&gt;**undefined** and **null** are treated as invalid values and no rendering will be performed. |
-| dx | number | Yes | X-coordinate of the top-left corner of the drawing area on the canvas.&lt;br&gt; Invalid values **undefined** and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed.&lt;br&gt;Default unit: vp |
-| dy | number | Yes | Y-coordinate of the top-left corner of the drawing area on the canvas.&lt;br&gt; Invalid values **undefined** and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed.&lt;br&gt;Default unit: vp |
+| image | [ImageBitmap](arkts-arkui-imagebitmap-c.md) \| PixelMap | Yes | Image resource. For details, see **ImageBitmap** or **PixelMap**.<br>**undefined** and **null** are treated as invalid values and no rendering will be performed. |
+| dx | number | Yes | X-coordinate of the top-left corner of the drawing area on the canvas.<br> Invalid values **undefined** and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed.<br>Default unit: vp |
+| dy | number | Yes | Y-coordinate of the top-left corner of the drawing area on the canvas.<br> Invalid values **undefined** and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed.<br>Default unit: vp |
 
 ## drawImage
 
@@ -400,11 +400,11 @@ Draws an image by stretching or compressing it to the specified dimensions.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| image | [ImageBitmap](arkts-arkui-imagebitmap-c.md) \| PixelMap | Yes | Image resource. For details, see **ImageBitmap** or **PixelMap**.&lt;br&gt;**undefined** and **null** are treated as invalid values and no rendering will be performed. |
-| dx | number | Yes | X-coordinate of the top-left corner of the drawing area on the canvas.&lt;br&gt; Invalid values **undefined** and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed.&lt;br&gt;Default unit: vp |
-| dy | number | Yes | Y-coordinate of the top-left corner of the drawing area on the canvas.&lt;br&gt; Invalid values **undefined** and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed.&lt;br&gt;Default unit: vp |
-| dw | number | Yes | Width of the drawing area. If the width of the drawing area is different from that of the cropped image, the latter will be stretched or compressed to the former.&lt;br&gt;Negative values, **undefined**, and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed.&lt;br&gt;Default unit: vp |
-| dh | number | Yes | Height of the drawing area. If the height of the drawing area is different from that of the cropped image, the latter will be stretched or compressed to the former.&lt;br&gt;Negative values, **undefined**, and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed.&lt;br&gt;Default unit: vp |
+| image | [ImageBitmap](arkts-arkui-imagebitmap-c.md) \| PixelMap | Yes | Image resource. For details, see **ImageBitmap** or **PixelMap**.<br>**undefined** and **null** are treated as invalid values and no rendering will be performed. |
+| dx | number | Yes | X-coordinate of the top-left corner of the drawing area on the canvas.<br> Invalid values **undefined** and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed.<br>Default unit: vp |
+| dy | number | Yes | Y-coordinate of the top-left corner of the drawing area on the canvas.<br> Invalid values **undefined** and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed.<br>Default unit: vp |
+| dw | number | Yes | Width of the drawing area. If the width of the drawing area is different from that of the cropped image, the latter will be stretched or compressed to the former.<br>Negative values, **undefined**, and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed.<br>Default unit: vp |
+| dh | number | Yes | Height of the drawing area. If the height of the drawing area is different from that of the cropped image, the latter will be stretched or compressed to the former.<br>Negative values, **undefined**, and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed.<br>Default unit: vp |
 
 ## drawImage
 
@@ -442,15 +442,15 @@ Draws a cropped portion of an image by stretching or compressing it to the speci
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| image | [ImageBitmap](arkts-arkui-imagebitmap-c.md) \| PixelMap | Yes | Image resource. For details, see **ImageBitmap** or **PixelMap**.&lt;br&gt;**undefined** and **null** are treated as invalid values and no rendering will be performed. |
-| sx | number | Yes | X-coordinate of the top-left corner of the rectangle used to crop the source image.&lt;br&gt;Invalid values **undefined** and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed.&lt;br&gt;If the type of **image** is **ImageBitmap**, the default unit is vp.&lt;br&gt;If the type of **image** is **PixelMap**, the default unit is px in versions earlier than API version 18 and vp in API version 18 and later. |
-| sy | number | Yes | Y-coordinate of the top-left corner of the rectangle used to crop the source image.&lt;br&gt;Invalid values **undefined** and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed.&lt;br&gt;If the type of **image** is **ImageBitmap**, the default unit is vp.&lt;br&gt;If the type of **image** is **PixelMap**, the default unit is px in versions earlier than API version 18 and vp in API version 18 and later. |
-| sw | number | Yes | Target width to crop the source image.&lt;br&gt;Negative values, **undefined**, and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed.&lt;br&gt;If the type of **image** is **ImageBitmap**, the default unit is vp.&lt;br&gt;If the type of **image** is **PixelMap**, the default unit is px in versions earlier than API version 18 and vp in API version 18 and later. |
-| sh | number | Yes | Target height to crop the source image.&lt;br&gt;Negative values, **undefined**, and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed.&lt;br&gt;If the type of **image** is **ImageBitmap**, the default unit is vp.&lt;br&gt;If the type of **image** is **PixelMap**, the default unit is px in versions earlier than API version 18 and vp in API version 18 and later. |
-| dx | number | Yes | X-coordinate of the top-left corner of the drawing area on the canvas.&lt;br&gt; Invalid values **undefined** and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed.&lt;br&gt;Default unit: vp |
-| dy | number | Yes | Y-coordinate of the top-left corner of the drawing area on the canvas.&lt;br&gt; Invalid values **undefined** and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed.&lt;br&gt;Default unit: vp |
-| dw | number | Yes | Width of the drawing area.&lt;br&gt;Negative values, **undefined**, and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed. If the width of the drawing area is different from that of the cropped image, the latter will be stretched or compressed to the former.&lt;br&gt;Default unit: vp |
-| dh | number | Yes | Height of the drawing area.&lt;br&gt;Negative values, **undefined**, and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed. If the height of the drawing area is different from that of the cropped image, the latter will be stretched or compressed to the former.&lt;br&gt;Default unit: vp |
+| image | [ImageBitmap](arkts-arkui-imagebitmap-c.md) \| PixelMap | Yes | Image resource. For details, see **ImageBitmap** or **PixelMap**.<br>**undefined** and **null** are treated as invalid values and no rendering will be performed. |
+| sx | number | Yes | X-coordinate of the top-left corner of the rectangle used to crop the source image.<br>Invalid values **undefined** and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed.<br>If the type of **image** is **ImageBitmap**, the default unit is vp.<br>If the type of **image** is **PixelMap**, the default unit is px in versions earlier than API version 18 and vp in API version 18 and later. |
+| sy | number | Yes | Y-coordinate of the top-left corner of the rectangle used to crop the source image.<br>Invalid values **undefined** and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed.<br>If the type of **image** is **ImageBitmap**, the default unit is vp.<br>If the type of **image** is **PixelMap**, the default unit is px in versions earlier than API version 18 and vp in API version 18 and later. |
+| sw | number | Yes | Target width to crop the source image.<br>Negative values, **undefined**, and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed.<br>If the type of **image** is **ImageBitmap**, the default unit is vp.<br>If the type of **image** is **PixelMap**, the default unit is px in versions earlier than API version 18 and vp in API version 18 and later. |
+| sh | number | Yes | Target height to crop the source image.<br>Negative values, **undefined**, and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed.<br>If the type of **image** is **ImageBitmap**, the default unit is vp.<br>If the type of **image** is **PixelMap**, the default unit is px in versions earlier than API version 18 and vp in API version 18 and later. |
+| dx | number | Yes | X-coordinate of the top-left corner of the drawing area on the canvas.<br> Invalid values **undefined** and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed.<br>Default unit: vp |
+| dy | number | Yes | Y-coordinate of the top-left corner of the drawing area on the canvas.<br> Invalid values **undefined** and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed.<br>Default unit: vp |
+| dw | number | Yes | Width of the drawing area.<br>Negative values, **undefined**, and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed. If the width of the drawing area is different from that of the cropped image, the latter will be stretched or compressed to the former.<br>Default unit: vp |
+| dh | number | Yes | Height of the drawing area.<br>Negative values, **undefined**, and **null** are treated as **0**. **NaN** and **Infinity** are treated as invalid and no rendering will be performed. If the height of the drawing area is different from that of the cropped image, the latter will be stretched or compressed to the former.<br>Default unit: vp |
 
 ## fill
 
@@ -478,7 +478,7 @@ Fills the current path.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | No | Rule by which to determine whether a point is inside or outside the area to fill.&lt;br&gt;The options are **"nonzero"** and **"evenodd"**.&lt;br&gt;Invalid values **undefined** and **null** are treated as the default value.&lt;br&gt;Default value: **"nonzero" |
+| fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | No | Rule by which to determine whether a point is inside or outside the area to fill.<br>The options are **"nonzero"** and **"evenodd"**.<br>Invalid values **undefined** and **null** are treated as the default value.<br>Default value: **"nonzero" |
 
 ## fill
 
@@ -506,8 +506,8 @@ Fills a specified path.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | [Path2D](arkts-arkui-path2d-c.md) | Yes | Path2D** path to fill.&lt;br&gt;**undefined** and **null** are treated as invalid values. |
-| fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | No | Rule by which to determine whether a point is inside or outside the area to fill.&lt;br&gt;The options are **"nonzero"** and **"evenodd"**.&lt;br&gt;Invalid values **undefined** and **null** are treated as the default value.&lt;br&gt;Default value: **"nonzero" |
+| path | [Path2D](arkts-arkui-path2d-c.md) | Yes | Path2D** path to fill.<br>**undefined** and **null** are treated as invalid values. |
+| fillRule | [CanvasFillRule](arkts-arkui-canvasfillrule-t.md) | No | Rule by which to determine whether a point is inside or outside the area to fill.<br>The options are **"nonzero"** and **"evenodd"**.<br>Invalid values **undefined** and **null** are treated as the default value.<br>Default value: **"nonzero" |
 
 ## fillRect
 
@@ -535,10 +535,10 @@ Fills a rectangle on the canvas.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | number | Yes | X-coordinate of the rectangle's top-left corner.&lt;br&gt;**undefined**, **null**, **NaN**, and **Infinity** are treated as invalid values and no rendering will be performed.&lt;br&gt; Default unit: vp |
-| y | number | Yes | Y-coordinate of the rectangle's top-left corner.&lt;br&gt;**undefined**, **null**, **NaN**, and **Infinity** are treated as invalid values and no rendering will be performed.&lt;br&gt; Default unit: vp |
-| w | number | Yes | Width of the rectangle.&lt;br&gt;**undefined**, **null**, **NaN**, and **Infinity** are treated as invalid values and no rendering will be performed.&lt;br&gt;Default unit: vp |
-| h | number | Yes | Height of the rectangle.&lt;br&gt;**undefined**, **null**, **NaN**, and **Infinity** are treated as invalid values and no rendering will be performed.&lt;br&gt;Default unit: vp |
+| x | number | Yes | X-coordinate of the rectangle's top-left corner.<br>**undefined**, **null**, **NaN**, and **Infinity** are treated as invalid values and no rendering will be performed.<br> Default unit: vp |
+| y | number | Yes | Y-coordinate of the rectangle's top-left corner.<br>**undefined**, **null**, **NaN**, and **Infinity** are treated as invalid values and no rendering will be performed.<br> Default unit: vp |
+| w | number | Yes | Width of the rectangle.<br>**undefined**, **null**, **NaN**, and **Infinity** are treated as invalid values and no rendering will be performed.<br>Default unit: vp |
+| h | number | Yes | Height of the rectangle.<br>**undefined**, **null**, **NaN**, and **Infinity** are treated as invalid values and no rendering will be performed.<br>Default unit: vp |
 
 ## fillText
 
@@ -566,10 +566,10 @@ Draws filled text on the canvas.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | Text to draw.&lt;br&gt;**undefined** and **null** are treated as invalid values and no rendering will be performed. |
-| x | number | Yes | X-coordinate of the start point for text rendering.&lt;br&gt;**undefined**, **null**, **NaN**, and **Infinity** are treated as invalid values and no rendering will be performed.&lt;br&gt; Default unit: vp |
-| y | number | Yes | Y-coordinate of the start point for text rendering.&lt;br&gt;**undefined**, **null**, **NaN**, and **Infinity** are treated as invalid values and no rendering will be performed.&lt;br&gt; Default unit: vp |
-| maxWidth | number | No | Maximum width allowed for the text.&lt;br&gt;**null** is treated as an invalid value and no rendering will be performed. **undefined**, **NaN**, or **Infinity** is treated as the default value.&lt;br&gt;Default value: no width restriction&lt;br&gt;Default unit: vp |
+| text | string | Yes | Text to draw.<br>**undefined** and **null** are treated as invalid values and no rendering will be performed. |
+| x | number | Yes | X-coordinate of the start point for text rendering.<br>**undefined**, **null**, **NaN**, and **Infinity** are treated as invalid values and no rendering will be performed.<br> Default unit: vp |
+| y | number | Yes | Y-coordinate of the start point for text rendering.<br>**undefined**, **null**, **NaN**, and **Infinity** are treated as invalid values and no rendering will be performed.<br> Default unit: vp |
+| maxWidth | number | No | Maximum width allowed for the text.<br>**null** is treated as an invalid value and no rendering will be performed. **undefined**, **NaN**, or **Infinity** is treated as the default value.<br>Default value: no width restriction<br>Default unit: vp |
 
 ## getImageData
 
@@ -597,10 +597,10 @@ Obtains the **ImageData** object created with the pixels within the specified ar
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sx | number | Yes | X-coordinate of the top-left corner of the output area.&lt;br&gt; Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as **0**.&lt;br&gt; Default unit: vp |
-| sy | number | Yes | Y-coordinate of the top-left corner of the output area.&lt;br&gt; Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as **0**.&lt;br&gt; Default unit: vp |
-| sw | number | Yes | Width of the output area.&lt;br&gt;Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as **0**.&lt;br&gt;Default unit: vp |
-| sh | number | Yes | Height of the output area.&lt;br&gt;Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as **0**.&lt;br&gt;Default unit: vp |
+| sx | number | Yes | X-coordinate of the top-left corner of the output area.<br> Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as **0**.<br> Default unit: vp |
+| sy | number | Yes | Y-coordinate of the top-left corner of the output area.<br> Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as **0**.<br> Default unit: vp |
+| sw | number | Yes | Width of the output area.<br>Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as **0**.<br>Default unit: vp |
+| sh | number | Yes | Height of the output area.<br>Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as **0**.<br>Default unit: vp |
 
 **Return value:**
 
@@ -634,7 +634,7 @@ Obtains the dash line style.
 
 | Type | Description |
 | --- | --- |
-| number[] | Interval of alternate line segments and the length of spacing.&lt;br&gt;Values undefined and null are treated as invalid.&lt;br&gt;Default unit: vp |
+| number[] | Interval of alternate line segments and the length of spacing.<br>Values undefined and null are treated as invalid.<br>Default unit: vp |
 
 ## getPixelMap
 
@@ -660,10 +660,10 @@ Obtains the **PixelMap** object created with the pixels within the specified are
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sx | number | Yes | X-coordinate of the top-left corner of the output area.&lt;br&gt; Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as **0**.&lt;br&gt; Default unit: vp |
-| sy | number | Yes | Y-coordinate of the top-left corner of the output area.&lt;br&gt; Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as **0**.&lt;br&gt; Default unit: vp |
-| sw | number | Yes | Width of the output area.&lt;br&gt;Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as **0**.&lt;br&gt;Default unit: vp |
-| sh | number | Yes | Height of the output area.&lt;br&gt;Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as **0**.&lt;br&gt;Default unit: vp |
+| sx | number | Yes | X-coordinate of the top-left corner of the output area.<br> Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as **0**.<br> Default unit: vp |
+| sy | number | Yes | Y-coordinate of the top-left corner of the output area.<br> Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as **0**.<br> Default unit: vp |
+| sw | number | Yes | Width of the output area.<br>Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as **0**.<br>Default unit: vp |
+| sh | number | Yes | Height of the output area.<br>Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as **0**.<br>Default unit: vp |
 
 **Return value:**
 
@@ -731,7 +731,7 @@ Returns a **TextMetrics** object used to obtain the width of specified text. Not
 
 | Type | Description |
 | --- | --- |
-| [TextMetrics](arkts-arkui-textmetrics-i.md) | TextMetrics** object.&lt;br&gt;If the input value is **undefined** or **null**, the value is calculated based on "undefined" or "null". |
+| [TextMetrics](arkts-arkui-textmetrics-i.md) | TextMetrics** object.<br>If the input value is **undefined** or **null**, the value is calculated based on "undefined" or "null". |
 
 ## putImageData
 
@@ -759,9 +759,9 @@ Puts an **ImageData** object onto a rectangular area on the canvas.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| imageData | [ImageData](arkts-arkui-imagedata-c.md) | Yes | ImageData** object with pixels to put onto the canvas.&lt;br&gt; **undefined** and **null** are treated as invalid values and no rendering will be performed. |
-| dx | number \| string | Yes | X-axis offset of the rectangular area on the canvas.&lt;br&gt; Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as **0**.&lt;br&gt; Default unit: vp |
-| dy | number \| string | Yes | Y-axis offset of the rectangular area on the canvas.&lt;br&gt; Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as **0**.&lt;br&gt; Default unit: vp |
+| imageData | [ImageData](arkts-arkui-imagedata-c.md) | Yes | ImageData** object with pixels to put onto the canvas.<br> **undefined** and **null** are treated as invalid values and no rendering will be performed. |
+| dx | number \| string | Yes | X-axis offset of the rectangular area on the canvas.<br> Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as **0**.<br> Default unit: vp |
+| dy | number \| string | Yes | Y-axis offset of the rectangular area on the canvas.<br> Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as **0**.<br> Default unit: vp |
 
 ## putImageData
 
@@ -797,13 +797,13 @@ Fills the new rectangular area with the **ImageData** data after cropping.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| imageData | [ImageData](arkts-arkui-imagedata-c.md) | Yes | ImageData** object with pixels to put onto the canvas.&lt;br&gt; **undefined** and **null** are treated as invalid values and no rendering will be performed. |
-| dx | number \| string | Yes | X-axis offset of the rectangular area on the canvas.&lt;br&gt; Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as **0**.&lt;br&gt; Default unit: vp |
-| dy | number \| string | Yes | Y-axis offset of the rectangular area on the canvas.&lt;br&gt; Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as **0**.&lt;br&gt; Default unit: vp |
-| dirtyX | number \| string | Yes | X-axis offset of the upper left corner of the rectangular area relative to that of the source image.&lt;br&gt;Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as **0**.&lt;br&gt;Default unit: vp |
-| dirtyY | number \| string | Yes | Y-axis offset of the upper left corner of the rectangular area relative to that of the source image.&lt;br&gt;Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as **0**.&lt;br&gt;Default unit: vp |
-| dirtyWidth | number \| string | Yes | Width of the rectangular area to crop the source image.&lt;br&gt; Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as **0**.&lt;br&gt; Default unit: vp |
-| dirtyHeight | number \| string | Yes | Height of the rectangular area to crop the source image.&lt;br&gt; Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as **0**.&lt;br&gt; Default unit: vp |
+| imageData | [ImageData](arkts-arkui-imagedata-c.md) | Yes | ImageData** object with pixels to put onto the canvas.<br> **undefined** and **null** are treated as invalid values and no rendering will be performed. |
+| dx | number \| string | Yes | X-axis offset of the rectangular area on the canvas.<br> Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as **0**.<br> Default unit: vp |
+| dy | number \| string | Yes | Y-axis offset of the rectangular area on the canvas.<br> Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as **0**.<br> Default unit: vp |
+| dirtyX | number \| string | Yes | X-axis offset of the upper left corner of the rectangular area relative to that of the source image.<br>Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as **0**.<br>Default unit: vp |
+| dirtyY | number \| string | Yes | Y-axis offset of the upper left corner of the rectangular area relative to that of the source image.<br>Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as **0**.<br>Default unit: vp |
+| dirtyWidth | number \| string | Yes | Width of the rectangular area to crop the source image.<br> Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as **0**.<br> Default unit: vp |
+| dirtyHeight | number \| string | Yes | Height of the rectangular area to crop the source image.<br> Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as **0**.<br> Default unit: vp |
 
 ## reset
 
@@ -855,7 +855,7 @@ Resets the current transform to the identity matrix.
 restore(): void
 ```
 
-Restores the saved drawing context. > **NOTE：**> > When the number of calls to **restore()** does not exceed the number of calls to **save()**, > this API pops the saved drawing state from the stack and restores the attributes, clipping > path, and transformation matrix of the **CanvasRenderingContext2D** object.&lt;br&gt; > If the number of calls to **restore()** exceeds the number of calls to **save()**, this API > does nothing.&lt;br&gt; > If there is no saved state, this API does nothing.
+Restores the saved drawing context. > **NOTE：**> > When the number of calls to **restore()** does not exceed the number of calls to **save()**, > this API pops the saved drawing state from the stack and restores the attributes, clipping > path, and transformation matrix of the **CanvasRenderingContext2D** object.<br> > If the number of calls to **restore()** exceeds the number of calls to **save()**, this API > does nothing.<br> > If there is no saved state, this API does nothing.
 
 **Since:** 8
 
@@ -919,7 +919,7 @@ Rotates a canvas clockwise around its coordinate axes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| angle | number | Yes | Clockwise rotation angle. You can convert degrees to radians using the following formula: degree Math.PI/180.&lt;br&gt;In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly.&lt;br&gt;Unit: radian |
+| angle | number | Yes | Clockwise rotation angle. You can convert degrees to radians using the following formula: degree Math.PI/180.<br>In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly.<br>Unit: radian |
 
 ## save
 
@@ -991,8 +991,8 @@ Scales the canvas based on the given scale factors.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | number | Yes | Horizontal scale factor.&lt;br&gt;In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **0**, **null**, **undefined**, and negative numbers cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **0**, **null**, **undefined**, and negative numbers cause the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly. |
-| y | number | Yes | Vertical scaling factor. Negative numbers are not supported.&lt;br&gt; In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **0**, **null**, **undefined**, and negative numbers cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **0**, **null**, **undefined**, and negative numbers cause the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly. |
+| x | number | Yes | Horizontal scale factor.<br>In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **0**, **null**, **undefined**, and negative numbers cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **0**, **null**, **undefined**, and negative numbers cause the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly. |
+| y | number | Yes | Vertical scaling factor. Negative numbers are not supported.<br> In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **0**, **null**, **undefined**, and negative numbers cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **0**, **null**, **undefined**, and negative numbers cause the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly. |
 
 ## setLineDash
 
@@ -1020,7 +1020,7 @@ Sets the dash line style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| segments | number[] | Yes | An array of numbers that specify distances to alternately draw a line and a gap.&lt;br&gt;**undefined** and **null** are treated as invalid values.&lt;br&gt; Default unit: vp |
+| segments | number[] | Yes | An array of numbers that specify distances to alternately draw a line and a gap.<br>**undefined** and **null** are treated as invalid values.<br> Default unit: vp |
 
 ## setPixelMap
 
@@ -1046,7 +1046,7 @@ Draws the input **PixelMap** object on the canvas. The example is the same as th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | PixelMap | No | PixelMap** object that contains pixel values.&lt;br&gt; **undefined** and **null** are treated as invalid values and no rendering will be performed.&lt;br&gt;Default value: **null |
+| value | PixelMap | No | PixelMap** object that contains pixel values.<br> **undefined** and **null** are treated as invalid values and no rendering will be performed.<br>Default value: **null |
 
 ## setTransform
 
@@ -1074,12 +1074,12 @@ Resets the existing transformation matrix and creates a new transformation matri
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| a | number | Yes | scaleX**: horizontal scaling value. A negative value is supported.&lt;br&gt; In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly. |
-| b | number | Yes | skewY**: vertical skewing value. A negative value is supported.&lt;br&gt; In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly. |
-| c | number | Yes | skewX**: horizontal skewing value. A negative value is supported.&lt;br&gt; In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly. |
-| d | number | Yes | scaleY**: vertical scaling value. A negative value is supported.&lt;br&gt; In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly. |
-| e | number | Yes | translateX**: horizontal translation distance. A negative value is supported.&lt;br&gt;In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly.&lt;br&gt;Default unit: vp |
-| f | number | Yes | translateY**: vertical translation distance. A negative value is supported.&lt;br&gt;In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly.&lt;br&gt;Default unit: vp |
+| a | number | Yes | scaleX**: horizontal scaling value. A negative value is supported.<br> In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly. |
+| b | number | Yes | skewY**: vertical skewing value. A negative value is supported.<br> In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly. |
+| c | number | Yes | skewX**: horizontal skewing value. A negative value is supported.<br> In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly. |
+| d | number | Yes | scaleY**: vertical scaling value. A negative value is supported.<br> In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly. |
+| e | number | Yes | translateX**: horizontal translation distance. A negative value is supported.<br>In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly.<br>Default unit: vp |
+| f | number | Yes | translateY**: vertical translation distance. A negative value is supported.<br>In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly.<br>Default unit: vp |
 
 ## setTransform
 
@@ -1107,7 +1107,7 @@ Resets the current transformation to the identity matrix, and then creates a new
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transform | Matrix2D | No | Transformation matrix.&lt;br&gt;**undefined** and **null** are treated as invalid values.&lt;br&gt;Default value: **null |
+| transform | Matrix2D | No | Transformation matrix.<br>**undefined** and **null** are treated as invalid values.<br>Default value: **null |
 
 ## stroke
 
@@ -1185,10 +1185,10 @@ Draws an outlined rectangle on the canvas without filling its interior.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | number | Yes | X-coordinate of the rectangle's top-left corner.&lt;br&gt;**undefined**, **null**, **NaN**, and **Infinity** are treated as invalid values and no rendering will be performed.&lt;br&gt; Default unit: vp |
-| y | number | Yes | Y-coordinate of the rectangle's top-left corner.&lt;br&gt;**undefined**, **null**, **NaN**, and **Infinity** are treated as invalid values and no rendering will be performed.&lt;br&gt; Default unit: vp |
-| w | number | Yes | Width of the rectangle.&lt;br&gt;**undefined**, **null**, **NaN**, and **Infinity** are treated as invalid values and no rendering will be performed.&lt;br&gt;Default unit: vp |
-| h | number | Yes | Height of the rectangle.&lt;br&gt;**undefined**, **null**, **NaN**, and **Infinity** are treated as invalid values and no rendering will be performed.&lt;br&gt;Default unit: vp |
+| x | number | Yes | X-coordinate of the rectangle's top-left corner.<br>**undefined**, **null**, **NaN**, and **Infinity** are treated as invalid values and no rendering will be performed.<br> Default unit: vp |
+| y | number | Yes | Y-coordinate of the rectangle's top-left corner.<br>**undefined**, **null**, **NaN**, and **Infinity** are treated as invalid values and no rendering will be performed.<br> Default unit: vp |
+| w | number | Yes | Width of the rectangle.<br>**undefined**, **null**, **NaN**, and **Infinity** are treated as invalid values and no rendering will be performed.<br>Default unit: vp |
+| h | number | Yes | Height of the rectangle.<br>**undefined**, **null**, **NaN**, and **Infinity** are treated as invalid values and no rendering will be performed.<br>Default unit: vp |
 
 ## strokeText
 
@@ -1216,10 +1216,10 @@ Draws stroked text on the canvas.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | Text to draw.&lt;br&gt;**undefined** and **null** are treated as invalid values and no rendering will be performed. |
-| x | number | Yes | X-coordinate of the start point for text rendering.&lt;br&gt;**undefined**, **null**, **NaN**, and **Infinity** are treated as invalid values and no rendering will be performed.&lt;br&gt; Default unit: vp |
-| y | number | Yes | Y-coordinate of the start point for text rendering.&lt;br&gt;**undefined**, **null**, **NaN**, and **Infinity** are treated as invalid values and no rendering will be performed.&lt;br&gt; Default unit: vp |
-| maxWidth | number | No | Maximum width of the text.&lt;br&gt;**null** is treated as an invalid value and no rendering will be performed. **undefined**, **NaN**, or **Infinity** is treated as the default value.&lt;br&gt;Default unit: vp&lt;br&gt;Default value: no width restriction |
+| text | string | Yes | Text to draw.<br>**undefined** and **null** are treated as invalid values and no rendering will be performed. |
+| x | number | Yes | X-coordinate of the start point for text rendering.<br>**undefined**, **null**, **NaN**, and **Infinity** are treated as invalid values and no rendering will be performed.<br> Default unit: vp |
+| y | number | Yes | Y-coordinate of the start point for text rendering.<br>**undefined**, **null**, **NaN**, and **Infinity** are treated as invalid values and no rendering will be performed.<br> Default unit: vp |
+| maxWidth | number | No | Maximum width of the text.<br>**null** is treated as an invalid value and no rendering will be performed. **undefined**, **NaN**, or **Infinity** is treated as the default value.<br>Default unit: vp<br>Default value: no width restriction |
 
 ## transferFromImageBitmap
 
@@ -1275,12 +1275,12 @@ Defines a transformation matrix. To transform a graph, you only need to set para
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| a | number | Yes | Cell at row 1, column 1 of the transformation matrix. **scaleX**: horizontal scaling value. A negative value is supported.&lt;br&gt;In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly. |
-| b | number | Yes | Cell at row 2, column 1 of the transformation matrix. **skewY**: vertical skewing value. A negative value is supported.&lt;br&gt;In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly. |
-| c | number | Yes | Cell at row 1, column 2 of the transformation matrix. **skewX**: horizontal skewing value. A negative value is supported.&lt;br&gt;In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly. |
-| d | number | Yes | Cell at row 2, column 2 of the transformation matrix. **scaleY**: vertical scaling value. A negative value is supported.&lt;br&gt;In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly. |
-| e | number | Yes | Cell at row 1, column 3 of the transformation matrix. **translateX**: horizontal translation distance. A negative value is supported.&lt;br&gt;In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly.&lt;br&gt; Default unit: vp |
-| f | number | Yes | Cell at row 2, column 3 of the transformation matrix. **translateY**: vertical translation distance. A negative value is supported.&lt;br&gt;In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly.&lt;br&gt; Default unit: vp |
+| a | number | Yes | Cell at row 1, column 1 of the transformation matrix. **scaleX**: horizontal scaling value. A negative value is supported.<br>In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly. |
+| b | number | Yes | Cell at row 2, column 1 of the transformation matrix. **skewY**: vertical skewing value. A negative value is supported.<br>In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly. |
+| c | number | Yes | Cell at row 1, column 2 of the transformation matrix. **skewX**: horizontal skewing value. A negative value is supported.<br>In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly. |
+| d | number | Yes | Cell at row 2, column 2 of the transformation matrix. **scaleY**: vertical scaling value. A negative value is supported.<br>In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly. |
+| e | number | Yes | Cell at row 1, column 3 of the transformation matrix. **translateX**: horizontal translation distance. A negative value is supported.<br>In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly.<br> Default unit: vp |
+| f | number | Yes | Cell at row 2, column 3 of the transformation matrix. **translateY**: vertical translation distance. A negative value is supported.<br>In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly.<br> Default unit: vp |
 
 ## translate
 
@@ -1308,8 +1308,8 @@ Moves the origin of the coordinate system.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | number | Yes | Distance to translate on the x-axis.&lt;br&gt;In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly.&lt;br&gt;Default unit: vp |
-| y | number | Yes | Distance to translate on the y-axis.&lt;br&gt;In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly.&lt;br&gt;Default unit: vp |
+| x | number | Yes | Distance to translate on the x-axis.<br>In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly.<br>Default unit: vp |
+| y | number | Yes | Distance to translate on the y-axis.<br>In versions earlier than API version 18, values **NaN** and **Infinity** cause the failure to call the drawing APIs following this API for rendering. Values **null** and **undefined** cause the current API to have no effect. Since API version 18, **NaN**, **Infinity**, **null**, or **undefined** causes the current API to have no effect, and other drawing APIs with valid arguments continue to render correctly.<br>Default unit: vp |
 
 ## antialias
 
@@ -1627,7 +1627,7 @@ Sets the dashed line offset of the canvas. The value is of the float type. This 
 lineJoin: CanvasLineJoin
 ```
 
-Sets the line join. This attribute is write-only. You can set its value through an assignment statement, but cannot obtain its current value through a read operation. If you attempt to read its current value, **undefined** will be returned. For details, see [CanvasLineJoin](arkts-arkui-canvaslinejoin-t.md#CanvasLineJoin). &lt;br&gt;Available values are as follows: &lt;br&gt;- **'round'**: The shape used to join line segments is a sector, whose radius at the rounded corner is equal to the line width. &lt;br&gt;- **'bevel'**: The shape used to join line segments is a triangle. The rectangular corner of each line is independent. &lt;br&gt;- **'miter'**: The shape used to join line segments has a mitered corner by extending the outside edges of the lines until they meet. You can view the effect of this attribute in **miterLimit**. &lt;br&gt;Default value: **'miter'**
+Sets the line join. This attribute is write-only. You can set its value through an assignment statement, but cannot obtain its current value through a read operation. If you attempt to read its current value, **undefined** will be returned. For details, see [CanvasLineJoin](arkts-arkui-canvaslinejoin-t.md#CanvasLineJoin). <br>Available values are as follows: <br>- **'round'**: The shape used to join line segments is a sector, whose radius at the rounded corner is equal to the line width. <br>- **'bevel'**: The shape used to join line segments is a triangle. The rectangular corner of each line is independent. <br>- **'miter'**: The shape used to join line segments has a mitered corner by extending the outside edges of the lines until they meet. You can view the effect of this attribute in **miterLimit**. <br>Default value: **'miter'**
 
 **Type:** [CanvasLineJoin](arkts-arkui-canvaslinejoin-t.md)
 

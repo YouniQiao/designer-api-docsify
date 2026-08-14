@@ -38,7 +38,7 @@ Get the element at the specified index.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| idx | int | Yes | The index of the element to get. &lt;br&gt;The value must be an integer greater than or equal to 0. |
+| idx | int | Yes | The index of the element to get. <br>The value must be an integer greater than or equal to 0. |
 
 **Return value:**
 
@@ -128,7 +128,7 @@ Set the element at the specified index.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| idx | int | Yes | The index of the element to set. &lt;br&gt;The value must be an integer greater than or equal to 0. |
+| idx | int | Yes | The index of the element to set. <br>The value must be an integer greater than or equal to 0. |
 | val | T | Yes | The value to set at the specified index. |
 
 ## at
@@ -155,7 +155,7 @@ Takes an integer value and returns the item at that index, allowing for positive
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | Zero-based index of the array element to be returned. &lt;br&gt;The value must be an integer greater than or equal to 0. |
+| index | int | Yes | Zero-based index of the array element to be returned. <br>The value must be an integer greater than or equal to 0. |
 
 **Return value:**
 
@@ -266,7 +266,7 @@ Creates a new instance of Array with a specific length and initializes each elem
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLen | int | Yes | The amount of elements in the array. &lt;br&gt;The value must be an integer greater than or equal to 0. |
+| arrayLen | int | Yes | The amount of elements in the array. <br>The value must be an integer greater than or equal to 0. |
 | initializer | (index: int) =&gt; T | Yes | A function that generates an element for a given index. |
 
 ## copyWithin
@@ -293,7 +293,7 @@ Makes a shallow copy of the Array part to another location in the same Array and
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | int | Yes | Zero-based index at which to copy the sequence to. &lt;br&gt;The value should be an integer. |
+| target | int | Yes | Zero-based index at which to copy the sequence to. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -325,8 +325,8 @@ Makes a shallow copy of the Array part to another location in the same Array and
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | int | Yes | Zero-based index at which to copy the sequence to. &lt;br&gt;The value should be an integer. |
-| start | int | Yes | Zero-based index at which to start copying elements from. &lt;br&gt;The value should be an integer. |
+| target | int | Yes | Zero-based index at which to copy the sequence to. <br>The value should be an integer. |
+| start | int | Yes | Zero-based index at which to start copying elements from. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -358,9 +358,9 @@ Makes a shallow copy of the Array part to another location in the same Array and
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | int | Yes | Zero-based index at which to copy the sequence to. &lt;br&gt;The value should be an integer. |
-| start | int | Yes | Zero-based index at which to start copying elements from. &lt;br&gt;The value should be an integer. |
-| end | int | No | Zero-based index at which to end copying elements from. &lt;br&gt;The value should be an integer. |
+| target | int | Yes | Zero-based index at which to copy the sequence to. <br>The value should be an integer. |
+| start | int | Yes | Zero-based index at which to start copying elements from. <br>The value should be an integer. |
+| end | int | No | Zero-based index at which to end copying elements from. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -392,7 +392,7 @@ Creates a new Array of the specified length, filled with the specified initial v
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLength | int | Yes | The amount of elements in the new array. &lt;br&gt;The value must be an integer greater than or equal to 0. |
+| arrayLength | int | Yes | The amount of elements in the new array. <br>The value must be an integer greater than or equal to 0. |
 | initialValue | T | Yes | The value to fill the array with. |
 
 **Return value:**
@@ -483,7 +483,7 @@ Extends the Array with new elements up to the specified length.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLength | int | Yes | The new length of the array. &lt;br&gt;The value must be an integer greater than or equal to 0. |
+| arrayLength | int | Yes | The new length of the array. <br>The value must be an integer greater than or equal to 0. |
 | initialValue | T | Yes | The initial value for the added elements. |
 
 ## fill
@@ -511,8 +511,8 @@ Changes all elements in the Array to a static value, from a start index to an en
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | T | Yes | The value to fill the array with. |
-| start | int | No | The index at which to start filling (optional).If start is greater than or equal to the array length, no elements are filled. If start is negative, it is treated as 0. &lt;br&gt;The value should be an integer. |
-| end | int | No | The index at which to end filling (optional, not included). If end is greater than the array length, the array length is used as the end index. If end is negative, it is treated as 0. &lt;br&gt;The value should be an integer. |
+| start | int | No | The index at which to start filling (optional).If start is greater than or equal to the array length, no elements are filled. If start is negative, it is treated as 0. <br>The value should be an integer. |
+| end | int | No | The index at which to end filling (optional, not included). If end is greater than the array length, the array length is used as the end index. If end is negative, it is treated as 0. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -704,7 +704,7 @@ Creates a new Array with all sub-array elements concatenated into it recursively
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| depth | int | Yes | The depth level specifying how deep a nested array structure should be flattened. &lt;br&gt;The value must be an integer greater than or equal to 0. |
+| depth | int | Yes | The depth level specifying how deep a nested array structure should be flattened. <br>The value must be an integer greater than or equal to 0. |
 
 **Return value:**
 
@@ -983,7 +983,7 @@ Determines whether an array includes a certain value among its entries, returnin
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | val | T | Yes | The value to search for. |
-| fromIndex | int | No | The position in this array at which to begin searching for value. &lt;br&gt;The value must be an integer greater than or equal to 0. |
+| fromIndex | int | No | The position in this array at which to begin searching for value. <br>The value must be an integer greater than or equal to 0. |
 
 **Return value:**
 
@@ -1048,7 +1048,7 @@ Returns the first index at which a given element can be found in the array, or -
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | val | T | Yes | The element to locate in the array. |
-| fromIndex | int | No | The index to start the search at. &lt;br&gt;The value must be an integer greater than or equal to 0. |
+| fromIndex | int | No | The index to start the search at. <br>The value must be an integer greater than or equal to 0. |
 
 **Return value:**
 
@@ -1203,7 +1203,7 @@ Returns the last index at which a given element can be found in the array, or -1
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | searchElement | T | Yes | The element to locate in the array. |
-| fromIndex | int | No | The index at which to start searching backwards. &lt;br&gt;The value must be an integer greater than or equal to 0. |
+| fromIndex | int | No | The index at which to start searching backwards. <br>The value must be an integer greater than or equal to 0. |
 
 **Return value:**
 
@@ -1509,7 +1509,7 @@ Shrinks the Array to the specified length. Elements beyond the new length are re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| arrayLength | int | Yes | The length at which to shrink the array. &lt;br&gt;The value must be an integer greater than or equal to 0. |
+| arrayLength | int | Yes | The length at which to shrink the array. <br>The value must be an integer greater than or equal to 0. |
 
 ## slice
 
@@ -1535,7 +1535,7 @@ Returns a copy of a section of an array.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | int | Yes | The beginning index of the specified portion of the array. If start is greater than or equal to the array length, an empty array is returned. If start is negative, it is treated as length + start. &lt;br&gt;The value should be an integer. |
+| start | int | Yes | The beginning index of the specified portion of the array. If start is greater than or equal to the array length, an empty array is returned. If start is negative, it is treated as length + start. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -1567,8 +1567,8 @@ Returns a copy of a section of an array.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | int | No | The beginning index of the specified portion of the array.If start is greater than or equal to the array length, an empty array is returned. If start is negative, it is treated as length + start. &lt;br&gt;The value should be an integer. |
-| end | int | No | The end index of the specified portion of the array. If end is greater than the array length,the array length is used as the end index. If end is negative, it is treated as 0. &lt;br&gt;The value should be an integer. |
+| start | int | No | The beginning index of the specified portion of the array.If start is greater than or equal to the array length, an empty array is returned. If start is negative, it is treated as length + start. <br>The value should be an integer. |
+| end | int | No | The end index of the specified portion of the array. If end is greater than the array length,the array length is used as the end index. If end is negative, it is treated as 0. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -1664,7 +1664,7 @@ Changes the contents of an array by removing or replacing existing elements and/
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | int | Yes | The index at which to start changing the array. &lt;br&gt;The value must be an integer greater than or equal to 0. |
+| start | int | Yes | The index at which to start changing the array. <br>The value must be an integer greater than or equal to 0. |
 | del | int \| undefined | Yes | The number of items to remove after the start index, If the input is undefined, it means 0, and no elements are deleted. |
 | items | T[] | Yes | The elements to add to the array, beginning from start. |
 
@@ -1698,7 +1698,7 @@ Changes the contents of an array by removing existing elements in place from the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | int | Yes | The index at which to start changing the array. &lt;br&gt;The value should be an integer. |
+| start | int | Yes | The index at which to start changing the array. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -1847,7 +1847,7 @@ Returns a new array with some elements removed and/or replaced at a given index.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | int | Yes | The zero-based index at which to start changing the array. &lt;br&gt;The value must be an integer greater than or equal to 0. |
+| start | int | Yes | The zero-based index at which to start changing the array. <br>The value must be an integer greater than or equal to 0. |
 
 **Return value:**
 
@@ -1879,8 +1879,8 @@ Returns a new array with some elements removed and/or replaced at a given index.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | int | Yes | The zero-based index at which to start changing the array. &lt;br&gt;The value must be an integer greater than or equal to 0. |
-| del | int | Yes | The number of elements to remove. &lt;br&gt;The value must be an integer greater than or equal to 0. |
+| start | int | Yes | The zero-based index at which to start changing the array. <br>The value must be an integer greater than or equal to 0. |
+| del | int | Yes | The number of elements to remove. <br>The value must be an integer greater than or equal to 0. |
 | items | FixedArray&lt;T&gt; | Yes | The elements to add to the array. |
 
 **Return value:**
@@ -1913,8 +1913,8 @@ Returns a new array with some elements removed and/or replaced at a given index.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | int | No | The zero-based index at which to start changing the array. &lt;br&gt;The value must be an integer greater than or equal to 0. |
-| del | int | No | The number of elements to remove. &lt;br&gt;The value must be an integer greater than or equal to 0. |
+| start | int | No | The zero-based index at which to start changing the array. <br>The value must be an integer greater than or equal to 0. |
+| del | int | No | The number of elements to remove. <br>The value must be an integer greater than or equal to 0. |
 
 **Return value:**
 
@@ -2030,7 +2030,7 @@ Returns a new Array with the element at the given index replaced with the given 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | The zero-based index at which to replace the value. &lt;br&gt;The value should be an integer. |
+| index | int | Yes | The zero-based index at which to replace the value. <br>The value should be an integer. |
 | value | T | Yes | The new value to insert at the given index. |
 
 **Return value:**

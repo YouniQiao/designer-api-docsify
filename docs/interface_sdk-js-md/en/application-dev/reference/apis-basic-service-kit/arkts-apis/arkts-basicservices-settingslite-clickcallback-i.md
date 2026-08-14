@@ -15,7 +15,7 @@ Defines a callback used to return whether the application started by double-pres
 ## Modules to Import
 
 ```TypeScript
-import { settingsLite } from '@kit.BasicServicesKit';
+import { settingsLite } from 'settingsLite';
 ```
 
 ## onResult

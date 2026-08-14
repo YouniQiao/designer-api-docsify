@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'notificationManager';
 ```
 
 ## snoozeNotification
@@ -12,7 +12,7 @@ import { notificationManager } from '@kit.NotificationKit';
 function snoozeNotification(hashCode: string, delayTime: long): Promise<void>
 ```
 
-Snoozes a notification. The notification will be reminded again after the specified time. Each setting will trigger only one reminder, and the reminder mode will be the same as that of the notification.&lt;br&gt;The notification will be deleted after the setting.
+Snoozes a notification. The notification will be reminded again after the specified time. Each setting will trigger only one reminder, and the reminder mode will be the same as that of the notification.<br>The notification will be deleted after the setting.
 
 **Since:** 26.0.0
 
@@ -35,7 +35,7 @@ Snoozes a notification. The notification will be reminded again after the specif
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | hashCode | string | Yes | Unique ID of the notification to be snoozed. |
-| delayTime | long | Yes | Interval for the snoozed notification. &lt;br&gt;Unit: second. |
+| delayTime | long | Yes | Interval for the snoozed notification. <br>Unit: second. |
 
 **Return value:**
 

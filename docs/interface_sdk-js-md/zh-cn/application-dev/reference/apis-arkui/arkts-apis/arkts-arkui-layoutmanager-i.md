@@ -40,8 +40,8 @@ getCharacterPositionAtCoordinate(x: number, y: number): PositionWithAffinity | u
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | number | 是 | 相对于组件的横坐标。 &lt;br&gt;单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) |
-| y | number | 是 | 相对于组件的纵坐标。 &lt;br&gt;单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) |
+| x | number | 是 | 相对于组件的横坐标。 <br>单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) |
+| y | number | 是 | 相对于组件的纵坐标。 <br>单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) |
 
 **返回值：**
 
@@ -76,8 +76,8 @@ getCharacterPositionAtCoordinate(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | number | 是 | 相对于组件的横坐标。&lt;br&gt;单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) |
-| y | number | 是 | 相对于组件的纵坐标。&lt;br&gt;单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) |
+| x | number | 是 | 相对于组件的横坐标。<br>单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) |
+| y | number | 是 | 相对于组件的纵坐标。<br>单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) |
 | encoding | [TextEncoding](arkts-arkui-textencoding-e.md) | 否 | 字符位置使用的编码类型，默认值为**TextEncoding.TEXT_ENCODING_UTF8**。 |
 
 **返回值：**
@@ -118,7 +118,7 @@ getCharacterRangeForGlyphRange(glyphRange: TextRange): Array<TextRange> | undefi
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[TextRange](arkts-arkui-textrange-i.md)&gt; | 数组中含有两个元素，第一个元素是字符范围，第二个元素是实际的字形范围。 &lt;br&gt;当返回的范围是异常值时，范围内元素为-1。 &lt;br&gt;当[LayoutManager]{ |
+| Array&lt;[TextRange](arkts-arkui-textrange-i.md)&gt; | 数组中含有两个元素，第一个元素是字符范围，第二个元素是实际的字形范围。 <br>当返回的范围是异常值时，范围内元素为-1。 <br>当[LayoutManager]{ |
 
 ## getCharacterRangeForGlyphRange
 
@@ -153,7 +153,7 @@ getCharacterRangeForGlyphRange(glyphRange: TextRange, encoding?: TextEncoding): 
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[TextRange](arkts-arkui-textrange-i.md)&gt; | 数组中含有两个元素，第一个元素是字符范围，第二个元素是实际的字形范围。 &lt;br&gt;当返回的范围是异常值时，范围内元素为-1。 &lt;br&gt;当[LayoutManager]{ |
+| Array&lt;[TextRange](arkts-arkui-textrange-i.md)&gt; | 数组中含有两个元素，第一个元素是字符范围，第二个元素是实际的字形范围。 <br>当返回的范围是异常值时，范围内元素为-1。 <br>当[LayoutManager]{ |
 
 ## getGlyphPositionAtCoordinate
 
@@ -181,8 +181,8 @@ getGlyphPositionAtCoordinate(x: number, y: number): PositionWithAffinity
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | number | 是 | 相对于组件的横坐标。 &lt;br&gt;单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) |
-| y | number | 是 | 相对于组件的纵坐标。 &lt;br&gt;单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) |
+| x | number | 是 | 相对于组件的横坐标。 <br>单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) |
+| y | number | 是 | 相对于组件的纵坐标。 <br>单位：[px](../../../reference/apis-arkui/arkui-ts/ts-pixel-units.md#基本像素单位) |
 
 **返回值：**
 
@@ -222,7 +222,7 @@ getGlyphRangeForCharacterRange(charRange: TextRange): Array<TextRange> | undefin
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[TextRange](arkts-arkui-textrange-i.md)&gt; | 数组中含有两个元素，第一个元素是字形范围，第二个元素是实际的字符范围。 &lt;br&gt;当返回的范围是异常值时，范围内元素为-1。 &lt;br&gt;当[LayoutManager]{ |
+| Array&lt;[TextRange](arkts-arkui-textrange-i.md)&gt; | 数组中含有两个元素，第一个元素是字形范围，第二个元素是实际的字符范围。 <br>当返回的范围是异常值时，范围内元素为-1。 <br>当[LayoutManager]{ |
 
 ## getGlyphRangeForCharacterRange
 
@@ -257,7 +257,7 @@ getGlyphRangeForCharacterRange(charRange: TextRange, encoding?: TextEncoding): A
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[TextRange](arkts-arkui-textrange-i.md)&gt; | 数组中含有两个元素，第一个元素是字形范围，第二个元素是实际的字符范围。 &lt;br&gt;当返回的范围是异常值时，范围内元素为-1。 &lt;br&gt;当[LayoutManager]{ |
+| Array&lt;[TextRange](arkts-arkui-textrange-i.md)&gt; | 数组中含有两个元素，第一个元素是字形范围，第二个元素是实际的字符范围。 <br>当返回的范围是异常值时，范围内元素为-1。 <br>当[LayoutManager]{ |
 
 ## getLineCount
 
@@ -319,7 +319,7 @@ getLineMetrics(lineNumber: number): LineMetrics
 
 | 类型 | 说明 |
 | --- | --- |
-| [LineMetrics](arkts-arkui-linemetrics-t.md) | 行信息、文本样式信息、以及字体属性信息。 &lt;br&gt;当行号小于0或超出实际行，返回无效值。当[LayoutManager]{ |
+| [LineMetrics](arkts-arkui-linemetrics-t.md) | 行信息、文本样式信息、以及字体属性信息。 <br>当行号小于0或超出实际行，返回无效值。当[LayoutManager]{ |
 
 ## getRectsForRange
 

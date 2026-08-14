@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { asset } from '@kit.AssetStoreKit';
+import { asset } from 'asset';
 ```
 
 ## batchRemove
@@ -28,7 +28,7 @@ Removes assets in batches based on an alias list. Only assets with the same [GRO
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| assetsToBeRemoved | Array&lt;[AssetMap](arkts-assetstore-asset-assetmap-t.md)&gt; | Yes | an array of attributes of the asset to remove, such as the asset alias, access control attributes, and custom data. &lt;br&gt;The [GROUP_ID](arkts-assetstore-asset-tag-e.md#GROUP_ID) and [REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tag-e.md#REQUIRE_ATTR_ENCRYPTED) attributes of all data must be the same. |
+| assetsToBeRemoved | Array&lt;[AssetMap](arkts-assetstore-asset-assetmap-t.md)&gt; | Yes | an array of attributes of the asset to remove, such as the asset alias, access control attributes, and custom data. <br>The [GROUP_ID](arkts-assetstore-asset-tag-e.md#GROUP_ID) and [REQUIRE_ATTR_ENCRYPTED](arkts-assetstore-asset-tag-e.md#REQUIRE_ATTR_ENCRYPTED) attributes of all data must be the same. |
 
 **Return value:**
 

@@ -18,7 +18,7 @@ IReusableInfo is a reuse pool information interface for custom component.
 readonly count: int
 ```
 
-Current number of @Reuseable/V2 component instances in pool. count is usually <= maxCount. It is allowed to be larger for short time because pool clean happens asynchronously.
+Current number of @Reuseable/V2 component instances in pool. count is usually &lt;= maxCount. It is allowed to be larger for short time because pool clean happens asynchronously.
 
 **Type:** int
 

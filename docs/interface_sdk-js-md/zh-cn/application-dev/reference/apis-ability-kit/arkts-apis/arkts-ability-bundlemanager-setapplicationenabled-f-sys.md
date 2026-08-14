@@ -27,7 +27,7 @@ function setApplicationEnabled(bundleName: string, appIndex: int, isEnabled: boo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 表示应用程序的bundleName。 |
-| appIndex | int | 是 | 表示分身应用的索引。&lt;br&gt; appIndex为0时，表示设置主应用的禁用或使能状态。appIndex大于0时，表示设置指定分身应用的禁用或使能状态。 |
+| appIndex | int | 是 | 表示分身应用的索引。<br> appIndex为0时，表示设置主应用的禁用或使能状态。appIndex大于0时，表示设置指定分身应用的禁用或使能状态。 |
 | isEnabled | boolean | 是 | 值为true表示使能，值为false表示禁用。 |
 
 **返回值：**
@@ -121,7 +121,7 @@ function setApplicationEnabled(bundleName: string, appIndex: int, isEnabled: boo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 应用包名 |
-| appIndex | int | 是 | 应用的分身索引 &lt;br&gt;取值范围为全体整数。 |
+| appIndex | int | 是 | 应用的分身索引 <br>取值范围为全体整数。 |
 | isEnabled | boolean | 是 | true表示启用应用程序，false表示禁用应用程序。 |
 | killProcess | boolean | 是 | true表示应用进程在禁用时会杀死应用进程，而值为false表示禁用时不会杀死应用程序进程 |
 

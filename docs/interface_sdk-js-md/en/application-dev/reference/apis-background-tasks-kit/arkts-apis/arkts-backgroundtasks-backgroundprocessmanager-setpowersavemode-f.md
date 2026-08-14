@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { backgroundProcessManager } from '@kit.BackgroundTasksKit';
+import { backgroundProcessManager } from 'backgroundProcessManager';
 ```
 
 ## setPowerSaveMode
@@ -46,7 +46,7 @@ Sets the power saving mode for a process. This API uses a promise to return the 
 | [31800004](../../apis-backgroundtasks-kit/errorcode-backgroundProcessManager.md#31800004-setting-failure-due-to-system-scheduling) | The setting failed due to system scheduling reasons. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [31800003](../../apis-backgroundtasks-kit/errorcode-backgroundProcessManager.md#31800003-setting-overriden-by-task-manager) | Setup error, This setting is overridden by settings in Task Manager |
-| [31800002](../../apis-backgroundtasks-kit/errorcode-backgroundProcessManager.md#31800002-invalid-parameter) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified; &lt;br&gt; 2. Incorrect parameter types; 3. PowerSaveMode status is out of range. |
+| [31800002](../../apis-backgroundtasks-kit/errorcode-backgroundProcessManager.md#31800002-invalid-parameter) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. PowerSaveMode status is out of range. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 
 ## Examples

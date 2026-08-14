@@ -94,7 +94,7 @@ action?: OnActionCallback
 
 触发时的动作闭包，item属性不支持触发action事件。
 
-**类型：** [OnActionCallback](../../apis-na/arkts-apis/arkts-na-onactioncallback-t.md)
+**类型：** [OnActionCallback](arkts-arkui-onactioncallback-t.md)
 
 **起始版本：** 26.0.0
 

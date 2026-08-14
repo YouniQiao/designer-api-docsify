@@ -40,5 +40,5 @@ Constructor of material class.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [MaterialOptions](../../apis-arkui/arkts-apis/arkts-arkui-uimaterial-materialoptions-i-sys.md) | No | the options to construct a material. &lt;br&gt;Default value:{type:uiMaterial.MaterialType.NONE} |
+| options | [MaterialOptions](../../apis-arkui/arkts-apis/arkts-arkui-uimaterial-materialoptions-i-sys.md) | No | the options to construct a material. <br>Default value:{type:uiMaterial.MaterialType.NONE} |
 

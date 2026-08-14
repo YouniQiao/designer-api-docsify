@@ -17,7 +17,7 @@ Bundle information configuration.
 ## Modules to Import
 
 ```TypeScript
-import { cloudData } from '@kit.ArkData';
+import { cloudData } from 'cloudData';
 ```
 
 ## bundleName

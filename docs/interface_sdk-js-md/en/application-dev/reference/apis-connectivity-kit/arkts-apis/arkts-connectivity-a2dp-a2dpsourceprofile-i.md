@@ -17,7 +17,7 @@ Manager a2dp source profile.
 ## Modules to Import
 
 ```TypeScript
-import { a2dp } from '@kit.ConnectivityKit';
+import { a2dp } from 'a2dp';
 ```
 
 ## getPlayingState
@@ -63,4 +63,16 @@ Obtains the playing state of device.
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+try {
+    let a2dpSrc = a2dp.createA2dpSrcProfile();
+    let state = a2dpSrc.getPlayingState('XX:XX:XX:XX:XX:XX');
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+}
+```
 

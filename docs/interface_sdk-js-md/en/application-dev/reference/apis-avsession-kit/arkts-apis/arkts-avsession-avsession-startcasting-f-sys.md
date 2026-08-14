@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'avSession';
 ```
 
 ## startCasting
@@ -41,9 +41,9 @@ Cast resource to remote device.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600108](../errorcode-avsession.md#6600108-device-connection-failure) | Device connecting failed |
-| [201](../../errorcode-universal.md#201-permission-denied) | permission denied |
+| [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
 ## Examples
@@ -111,9 +111,9 @@ Cast resource to remote device.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600108](../errorcode-avsession.md#6600108-device-connection-failure) | Device connecting failed |
-| [201](../../errorcode-universal.md#201-permission-denied) | permission denied |
+| [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
 ## Examples

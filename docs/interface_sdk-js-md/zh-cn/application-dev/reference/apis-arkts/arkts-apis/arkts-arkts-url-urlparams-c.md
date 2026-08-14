@@ -150,7 +150,7 @@ ArkTS-Sta: constructor(init?: [string, string][] | Record&lt;string, string&gt; 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| init | string[][] \| Record&lt;string, string&gt; \| string \| [URLParams](arkts-arkts-url-urlparams-c.md) | 否 | 入参对象。 &lt;br/&gt;- string[][]：字符串二维数组。 &lt;br/&gt;- Record&lt;string, string&gt;：对象列表。 &lt;br/&gt;- string：URL查询参数字符串。 &lt;br/&gt;- URLParams：URLParams实例对象。 &lt;br/&gt;- 默认值：null。 |
+| init | string[][] \| Record&lt;string, string&gt; \| string \| [URLParams](arkts-arkts-url-urlparams-c.md) | 否 | 入参对象。 <br/>- string[][]：字符串二维数组。 <br/>- Record&lt;string, string&gt;：对象列表。 <br/>- string：URL查询参数字符串。 <br/>- URLParams：URLParams实例对象。 <br/>- 默认值：null。 |
 
 ## 示例
 

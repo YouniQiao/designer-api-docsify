@@ -21,7 +21,7 @@ Provides APIs for managing the system albums. This API will be deprecated. Use [
 ## Modules to Import
 
 ```TypeScript
-import { userFileManager } from '@kit.CoreFileKit';
+import { userFileManager } from 'userFileManager';
 ```
 
 ## delete

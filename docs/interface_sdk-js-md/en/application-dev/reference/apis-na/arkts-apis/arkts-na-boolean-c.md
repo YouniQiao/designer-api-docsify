@@ -264,7 +264,7 @@ Constructs a new Boolean with provided int value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | value to construct class instance with &lt;br&gt;The value should be an integer. |
+| value | int | Yes | value to construct class instance with <br>The value should be an integer. |
 
 ## constructor
 

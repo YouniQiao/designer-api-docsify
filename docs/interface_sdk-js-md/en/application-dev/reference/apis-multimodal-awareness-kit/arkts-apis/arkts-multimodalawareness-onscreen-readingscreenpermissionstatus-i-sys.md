@@ -17,7 +17,7 @@ Returns the status of the permission for reading screen information.
 ## Modules to Import
 
 ```TypeScript
-import { onScreen } from '@kit.MultimodalAwarenessKit';
+import { onScreen } from 'onScreen';
 ```
 
 ## readingCode

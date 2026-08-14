@@ -15,7 +15,7 @@ Describes SSAP connection state.
 ## Modules to Import
 
 ```TypeScript
-import { ssap } from '@kit.ConnectivityKit';
+import { ssap } from 'ssap';
 ```
 
 ## address

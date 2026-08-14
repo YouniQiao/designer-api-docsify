@@ -17,7 +17,7 @@ Provides APIs for domain account authentication.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'osAccount';
 ```
 
 ## auth

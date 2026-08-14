@@ -15,7 +15,7 @@ Represents the parameters of a serial port.
 ## Modules to Import
 
 ```TypeScript
-import { serialManager } from '@kit.BasicServicesKit';
+import { serialManager } from 'serialManager';
 ```
 
 ## deviceName

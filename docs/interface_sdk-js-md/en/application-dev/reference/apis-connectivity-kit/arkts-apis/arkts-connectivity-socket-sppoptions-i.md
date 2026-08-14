@@ -15,7 +15,7 @@ Describes the spp parameters.
 ## Modules to Import
 
 ```TypeScript
-import { socket } from '@kit.ConnectivityKit';
+import { socket } from 'socket';
 ```
 
 ## psm

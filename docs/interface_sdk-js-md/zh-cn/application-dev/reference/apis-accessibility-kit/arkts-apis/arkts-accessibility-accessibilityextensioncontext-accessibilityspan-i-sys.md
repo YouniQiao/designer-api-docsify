@@ -42,7 +42,7 @@ accessibilityDescription: string
 accessibilityLevel: string
 ```
 
-超链接文本的辅助功能级别。
+超链接文本的辅助功能级别。'auto'：由系统综合判断是否可被辅助功能识别；'yes'：可被辅助功能识别；'no'：不可被辅助功能识别；'no-hide-descendants'：当前文本及其子内容不可被辅助功能识别。
 
 **类型：** string
 

@@ -15,7 +15,7 @@ The relational database (RDB) manages data based on relational models. The **rel
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from '@kit.ArkData';
+import { relationalStore } from 'relationalStore';
 ```
 
 ## Summary

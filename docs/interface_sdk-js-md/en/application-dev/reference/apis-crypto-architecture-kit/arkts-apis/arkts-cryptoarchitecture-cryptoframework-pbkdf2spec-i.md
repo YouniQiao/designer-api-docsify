@@ -19,7 +19,7 @@ Defines the child class of [KdfSpec](arkts-cryptoarchitecture-cryptoframework-kd
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from 'cryptoFramework';
 ```
 
 ## iterations

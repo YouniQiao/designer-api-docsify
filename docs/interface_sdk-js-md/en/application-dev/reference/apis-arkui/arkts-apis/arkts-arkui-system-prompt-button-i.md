@@ -15,7 +15,11 @@ Defines the prompt info of button.
 ## Modules to Import
 
 ```TypeScript
-import { ShowActionMenuOptions, Button, ShowToastOptions, ShowDialogOptions, ShowDialogSuccessResponse } from '@kit.ArkUI';
+import { Button } from 'Button';
+import { ShowActionMenuOptions } from 'ShowActionMenuOptions';
+import { ShowDialogOptions } from 'ShowDialogOptions';
+import { ShowDialogSuccessResponse } from 'ShowDialogSuccessResponse';
+import { ShowToastOptions } from 'ShowToastOptions';
 ```
 
 ## color

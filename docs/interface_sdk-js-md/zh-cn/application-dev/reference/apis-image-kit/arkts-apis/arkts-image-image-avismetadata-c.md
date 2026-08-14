@@ -18,7 +18,7 @@ Avis metadata.
 readonly delayTime?: int
 ```
 
-Delay of each frame. Unit: ms, The value should be an integer. &lt;br&gt;Unit:ms.
+Delay of each frame. Unit: ms, The value should be an integer. <br>Unit:ms.
 
 **类型：** int
 

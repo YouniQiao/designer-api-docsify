@@ -15,7 +15,7 @@ Describes the ranging state change information.
 ## Modules to Import
 
 ```TypeScript
-import { ranging } from '@kit.ConnectivityKit';
+import { ranging } from 'ranging';
 ```
 
 ## cause

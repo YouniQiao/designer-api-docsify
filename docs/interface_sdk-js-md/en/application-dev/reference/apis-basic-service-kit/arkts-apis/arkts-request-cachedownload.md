@@ -15,7 +15,7 @@ The **request** module provides applications with the basic capabilities of file
 ## Modules to Import
 
 ```TypeScript
-import { cacheDownload } from '@kit.BasicServicesKit';
+import { cacheDownload } from 'cacheDownload';
 ```
 
 ## Summary

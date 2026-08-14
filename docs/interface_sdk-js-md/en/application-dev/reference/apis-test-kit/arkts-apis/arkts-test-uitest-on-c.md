@@ -15,7 +15,35 @@ Since API version 9, the UiTest framework provides a wide range of UI component 
 ## Modules to Import
 
 ```TypeScript
-import { ResizeDirection, WindowMode, PenMode, PenKeyOperation, Driver, MatchPattern, UiDirection, TouchOptions, ComponentEventType, PointerMatrix, WindowChangeType, Component, ON, PenKey, Rect, InputTextMode, UIEventObserver, WindowFilter, WindowChangeOptions, UiWindow, TouchPadSwipeOptions, Point, KeyOptions, DisplayRotation, UIElementInfo, PenKeyOperationOptions, ComponentEventOptions, MouseButton, On } from '@kit.TestKit';
+import { Component } from 'Component';
+import { DisplayRotation } from 'DisplayRotation';
+import { Driver } from 'Driver';
+import { MatchPattern } from 'MatchPattern';
+import { MouseButton } from 'MouseButton';
+import { ON } from 'ON';
+import { On } from 'On';
+import { PointerMatrix } from 'PointerMatrix';
+import { ResizeDirection } from 'ResizeDirection';
+import { UIElementInfo } from 'UIElementInfo';
+import { UIEventObserver } from 'UIEventObserver';
+import { UiDirection } from 'UiDirection';
+import { UiWindow } from 'UiWindow';
+import { WindowMode } from 'WindowMode';
+import { Point } from 'Point';
+import { WindowFilter } from 'WindowFilter';
+import { Rect } from 'Rect';
+import { TouchPadSwipeOptions } from 'TouchPadSwipeOptions';
+import { InputTextMode } from 'InputTextMode';
+import { WindowChangeType } from 'WindowChangeType';
+import { ComponentEventType } from 'ComponentEventType';
+import { WindowChangeOptions } from 'WindowChangeOptions';
+import { ComponentEventOptions } from 'ComponentEventOptions';
+import { TouchOptions } from 'TouchOptions';
+import { KeyOptions } from 'KeyOptions';
+import { PenKey } from 'PenKey';
+import { PenMode } from 'PenMode';
+import { PenKeyOperation } from 'PenKeyOperation';
+import { PenKeyOperationOptions } from 'PenKeyOperationOptions';
 ```
 
 ## afterComponent
@@ -118,7 +146,7 @@ Specifies the display to which the target component belongs.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | int | Yes | ID of the display to which the component belongs. The value is an integer greater than or equal to 0. &lt;br&gt;**Note：**: If the input **displayId** does not exist, the exception **17000007** is reported. You can use [getAllDisplays](../../apis-arkui/arkts-apis/arkts-arkui-display-getalldisplays-f.md#getAllDisplays) to obtain all current **display** objects and use them to obtain the corresponding display IDs.&lt;!--RP2--&gt;&lt;!--RP2End--&gt; |
+| displayId | int | Yes | ID of the display to which the component belongs. The value is an integer greater than or equal to 0. <br>**Note：**: If the input **displayId** does not exist, the exception **17000007** is reported. You can use [getAllDisplays](../../apis-arkui/arkts-apis/arkts-arkui-display-getalldisplays-f.md#getAllDisplays) to obtain all current **display** objects and use them to obtain the corresponding display IDs.&lt;!--RP2--&gt;&lt;!--RP2End--&gt; |
 
 **Return value:**
 
@@ -307,7 +335,7 @@ Specifies the description of the target component. Multiple match patterns are s
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | val | string | Yes | Description of the component.&lt;!--RP2--&gt;&lt;!--RP2End--&gt; |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | Match pattern [MatchPattern](arkts-test-uitest-matchpattern-e.md#MatchPattern) . &lt;br&gt;Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#EQUALS) |
+| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | Match pattern [MatchPattern](arkts-test-uitest-matchpattern-e.md#MatchPattern) . <br>Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#EQUALS) |
 
 **Return value:**
 
@@ -449,7 +477,7 @@ Specifies the hint text attribute of the target component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | val | string | Yes | The specified hint text of the component.&lt;!--RP2--&gt;&lt;!--RP2End--&gt; |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | Match pattern[MatchPattern](arkts-test-uitest-matchpattern-e.md#MatchPattern). &lt;br&gt;Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#EQUALS) |
+| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | Match pattern[MatchPattern](arkts-test-uitest-matchpattern-e.md#MatchPattern). <br>Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#EQUALS) |
 
 **Return value:**
 
@@ -782,7 +810,7 @@ Specifies the text content and text matching pattern of the component. > **NOTE�
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | text | string | Yes | Component text, used to match the target component.&lt;!--RP2--&gt;&lt;!--RP2End--&gt; |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | Match pattern[MatchPattern](arkts-test-uitest-matchpattern-e.md#MatchPattern). &lt;br&gt;Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#EQUALS) |
+| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | Match pattern[MatchPattern](arkts-test-uitest-matchpattern-e.md#MatchPattern). <br>Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#EQUALS) |
 
 **Return value:**
 
@@ -924,7 +952,7 @@ Specifies the text attribute of the target component. Multiple match patterns ar
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | txt | string | Yes | Component text, used to match the target component.&lt;!--RP2--&gt;&lt;!--RP2End--&gt; |
-| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | Match pattern [MatchPattern](arkts-test-uitest-matchpattern-e.md#MatchPattern) . &lt;br&gt;Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#EQUALS) |
+| pattern | [MatchPattern](arkts-test-uitest-matchpattern-e.md) | No | Match pattern [MatchPattern](arkts-test-uitest-matchpattern-e.md#MatchPattern) . <br>Default value: [EQUALS](arkts-test-uitest-matchpattern-e.md#EQUALS) |
 
 **Return value:**
 

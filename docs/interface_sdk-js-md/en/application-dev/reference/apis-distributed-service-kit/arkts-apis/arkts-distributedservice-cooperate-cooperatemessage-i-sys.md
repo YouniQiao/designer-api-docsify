@@ -17,7 +17,7 @@ Defines a screen hopping status change event.
 ## Modules to Import
 
 ```TypeScript
-import { cooperate } from '@kit.DistributedServiceKit';
+import { cooperate } from 'cooperate';
 ```
 
 ## networkId

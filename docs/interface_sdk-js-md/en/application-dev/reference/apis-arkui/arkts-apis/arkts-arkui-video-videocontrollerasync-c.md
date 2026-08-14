@@ -154,7 +154,7 @@ Sets the current playback time with specified seek mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | double | Yes | &lt;br&gt;Unit: Seconds, The value must be greater than or equal to 0, The value must be greater than or equal to 0, The maximum value is the total duration of the video. If the duration exceeds the maximum value, the system jumps to the end of the video. |
+| value | double | Yes | <br>Unit: Seconds, The value must be greater than or equal to 0, The value must be greater than or equal to 0, The maximum value is the total duration of the video. If the duration exceeds the maximum value, the system jumps to the end of the video. |
 | seekMode | [SeekMode](arkts-arkui-video-seekmode-e.md) | No |  |
 
 ## start

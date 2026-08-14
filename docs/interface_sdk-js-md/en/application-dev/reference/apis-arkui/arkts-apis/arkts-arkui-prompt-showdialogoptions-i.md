@@ -17,7 +17,7 @@ Defines the option of show dialog.
 ## Modules to Import
 
 ```TypeScript
-import { prompt } from '@kit.ArkUI';
+import { prompt } from 'prompt';
 ```
 
 ## buttons

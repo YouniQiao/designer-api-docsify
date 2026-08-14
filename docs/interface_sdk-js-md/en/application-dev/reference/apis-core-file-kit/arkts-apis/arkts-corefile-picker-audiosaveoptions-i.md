@@ -17,6 +17,6 @@ Defines the options for saving audio clips.
 ## Modules to Import
 
 ```TypeScript
-import { picker } from '@kit.CoreFileKit';
+import { picker } from 'picker';
 ```
 

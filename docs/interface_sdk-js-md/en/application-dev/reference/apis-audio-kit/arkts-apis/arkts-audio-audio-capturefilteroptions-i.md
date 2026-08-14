@@ -17,7 +17,7 @@ Defines the options for filtering the played audio streams to be recorded.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'audio';
 ```
 
 ## usages

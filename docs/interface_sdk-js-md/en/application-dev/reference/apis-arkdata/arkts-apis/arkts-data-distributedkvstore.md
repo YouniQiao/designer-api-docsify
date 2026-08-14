@@ -17,7 +17,7 @@ The **distributedKVStore** module implements collaboration between databases for
 ## Modules to Import
 
 ```TypeScript
-import { distributedKVStore } from '@kit.ArkData';
+import { distributedKVStore } from 'distributedKVStore';
 ```
 
 ## Summary
@@ -66,7 +66,7 @@ import { distributedKVStore } from '@kit.ArkData';
 | Name | Description |
 | --- | --- |
 | [Constants](arkts-arkdata-distributedkvstore-constants-e.md) | KVStore constants |
-| [KVStoreType](arkts-arkdata-distributedkvstore-kvstoretype-e.md) | Enumerates the distributed KV store types. \| Name \| Value\| Description \| \| -------------------- \| - \| ------------------------------------------------------------ \| \| DEVICE_COLLABORATION \| 0 \| Device KV store.&lt;br&gt;The device KV store manages data by device, which eliminates conflicts. Data can be queried by device.&lt;br&gt;**System capability**: SystemCapability.DistributedDataManager.KVStore.DistributedKVStore\| \| SINGLE_VERSION \| 1 \| Single KV store.&lt;br&gt;The single KV store does not differentiate data by device. If entries with the same key are modified on different devices, the value will be overwritten.&lt;br&gt;**System capability**: SystemCapability.DistributedDataManager.KVStore.Core\| |
+| [KVStoreType](arkts-arkdata-distributedkvstore-kvstoretype-e.md) | Enumerates the distributed KV store types. \| Name \| Value\| Description \| \| -------------------- \| - \| ------------------------------------------------------------ \| \| DEVICE_COLLABORATION \| 0 \| Device KV store.<br>The device KV store manages data by device, which eliminates conflicts. Data can be queried by device.<br>**System capability**: SystemCapability.DistributedDataManager.KVStore.DistributedKVStore\| \| SINGLE_VERSION \| 1 \| Single KV store.<br>The single KV store does not differentiate data by device. If entries with the same key are modified on different devices, the value will be overwritten.<br>**System capability**: SystemCapability.DistributedDataManager.KVStore.Core\| |
 | [SecurityLevel](arkts-arkdata-distributedkvstore-securitylevel-e.md) | Enumerates the KV store security levels. > **NOTE：**> > For the scenarios involving a single device, you can upgrade the security level of a KV store by modifying the > **securityLevel** parameter. When upgrading the database security level, observe the following: > > * This operation does not apply to the databases that require cross-device sync. Data cannot be synced between > databases of different security levels. If you want to upgrade the security level of a database, you are advised > to create a database of a higher security level. > > * You need to close the database before modifying the **securityLevel** parameter, and open it after the security > level is upgraded. > > * You cannot downgrade the database security level. For example, you can change the database security level from > S2 to S3, but cannot change it from S3 to S2. |
 | [SubscribeType](arkts-arkdata-distributedkvstore-subscribetype-e.md) | Enumerates the subscription types. |
 | [SyncMode](arkts-arkdata-distributedkvstore-syncmode-e.md) | Enumerates the sync modes. |

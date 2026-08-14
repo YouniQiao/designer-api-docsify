@@ -17,7 +17,7 @@ Defines the quick fix information at the HAP file level.
 ## Modules to Import
 
 ```TypeScript
-import { quickFixManager } from '@kit.AbilityKit';
+import { quickFixManager } from 'quickFixManager';
 ```
 
 ## moduleName

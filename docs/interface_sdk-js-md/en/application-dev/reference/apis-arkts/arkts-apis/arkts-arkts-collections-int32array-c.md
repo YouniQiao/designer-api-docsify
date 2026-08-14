@@ -15,7 +15,7 @@ A linear data structure that is implemented on [ArkTS ArrayBuffer](arkts-collect
 ## Modules to Import
 
 ```TypeScript
-import { collections } from '@kit.ArkTS';
+import { collections } from 'collections';
 ```
 
 ## [Symbol.iterator]
@@ -74,7 +74,7 @@ Returns the element at the given index. If no element is found, **undefined** is
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | number | Yes | The zero-based index of the desired code unit.&lt;br/&gt; A negative index will count back from the last item. |
+| index | number | Yes | The zero-based index of the desired code unit.<br/> A negative index will count back from the last item. |
 
 **Return value:**
 
@@ -908,7 +908,7 @@ Creates an ArkTS Int32Array with a variable number of parameters.
 
 | Type | Description |
 | --- | --- |
-| Int32Array | New ArkTS Int32Array instance. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| Int32Array | New ArkTS Int32Array instance. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
 ## reduce
 
@@ -1054,7 +1054,7 @@ Reversely traverses this ArkTS Int32Array, applies a reduce function for each el
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callbackFn | [TypedArrayReduceCallback](arkts-arkts-collections-typedarrayreducecallback-t.md)&lt;U, number, Int32Array&gt; | Yes | A function that is called for each element in the Int32Array. |
-| initialValue | U | Yes | A value to use as the first argument to the first call of the callback. &lt;br&gt;If no initial value is provided, the last element of the Int32Array will be used, &lt;br&gt;and the callback will start with the second-to-last element. |
+| initialValue | U | Yes | A value to use as the first argument to the first call of the callback. <br>If no initial value is provided, the last element of the Int32Array will be used, <br>and the callback will start with the second-to-last element. |
 
 **Return value:**
 

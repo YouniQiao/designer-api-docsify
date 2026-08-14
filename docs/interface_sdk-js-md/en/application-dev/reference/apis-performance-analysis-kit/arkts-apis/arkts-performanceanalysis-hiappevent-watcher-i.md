@@ -15,7 +15,7 @@ Defines parameters for a **Watcher** object. This API is used to configure and m
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from 'hiAppEvent';
 ```
 
 ## appEventFilters

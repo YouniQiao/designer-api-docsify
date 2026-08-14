@@ -15,7 +15,7 @@ Describes audio renderer configurations.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'audio';
 ```
 
 ## originalAppIdInfo

@@ -18,7 +18,7 @@
 static getAppDefaultTimeZone(): TimeZone
 ```
 
-获取应用使用的默认时区对象。若调用[setAppDefaultTimeZoneById](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-timezone-c.md#setAppDefaultTimeZoneById)设置了默认时区，则返回设置的默认时区对象；否 则，返回系统时区对象。
+获取应用使用的默认时区对象。若调用[setAppDefaultTimeZoneById](#setAppDefaultTimeZoneById)设置了默认时区，则返回设置的默认时区对象；否 则，返回系统时区对象。
 
 **起始版本：** 26.0.0
 
@@ -38,7 +38,7 @@ static getAppDefaultTimeZone(): TimeZone
 
 | 类型 | 说明 |
 | --- | --- |
-| [TimeZone](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-timezone-c.md) | 应用使用的默认时区对象。 |
+| [TimeZone](arkts-na-i18n-timezone-c.md) | 应用使用的默认时区对象。 |
 
 ## getAvailableIDs
 
@@ -272,7 +272,7 @@ static getTimezoneFromCity(cityID: string): TimeZone
 
 | 类型 | 说明 |
 | --- | --- |
-| [TimeZone](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-timezone-c.md) | 时区城市对应的时区对象。 |
+| [TimeZone](arkts-na-i18n-timezone-c.md) | 时区城市对应的时区对象。 |
 
 ## getTimezonesByLocation
 
@@ -305,7 +305,7 @@ static getTimezonesByLocation(longitude: double, latitude: double): Array<TimeZo
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[TimeZone](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-timezone-c.md)&gt; | 时区对象数组，数组中对象对应的时区为该地理位置推荐的时区。 |
+| Array&lt;[TimeZone](arkts-na-i18n-timezone-c.md)&gt; | 时区对象数组，数组中对象对应的时区为该地理位置推荐的时区。 |
 
 **错误码：**
 
@@ -338,7 +338,7 @@ public getZoneRules(): ZoneRules
 
 | 类型 | 说明 |
 | --- | --- |
-| [ZoneRules](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-zonerules-c.md) | 时区跳变规则，包含跳变的时间点、跳变前后的偏移量信息。 |
+| [ZoneRules](arkts-na-i18n-zonerules-c.md) | 时区跳变规则，包含跳变的时间点、跳变前后的偏移量信息。 |
 
 ## isDaylightSavingTime
 
@@ -366,7 +366,7 @@ public isDaylightSavingTime(date: Date): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| date | Date | 是 | 时间日期。 &lt;br&gt;**说明：** &lt;br&gt;月份从0开始计数，0表示一月。 |
+| date | Date | 是 | 时间日期。 <br>**说明：** <br>月份从0开始计数，0表示一月。 |
 
 **返回值：**
 

@@ -15,7 +15,7 @@ Defines a contact's phone number.
 ## Modules to Import
 
 ```TypeScript
-import { contact } from '@kit.ContactsKit';
+import { contact } from 'contact';
 ```
 
 ## CUSTOM_LABEL

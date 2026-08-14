@@ -15,7 +15,20 @@ Indicates the options of the left icon.
 ## Modules to Import
 
 ```TypeScript
-import { EditableSaveButtonV2, EditableTitleBarStyleV2Options, EditableTitleBarStyleV2, EditableTitleBarItemV2, EditableLeftIconV2Options, EditableTitleBarMenuItemV2, EditableTitleBarV2, EditableTitleBarMenuItemV2Options, EditableSaveButtonV2Options, EditableTitleBarItemV2Options, EditableTitleV2Options, EditableTitleV2, EditableLeftIconV2, EditableLeftIconTypeV2 } from '@kit.ArkUI';
+import { EditableLeftIconTypeV2 } from 'EditableLeftIconTypeV2';
+import { EditableTitleBarV2 } from 'EditableTitleBarV2';
+import { EditableLeftIconV2 } from 'EditableLeftIconV2';
+import { EditableLeftIconV2Options } from 'EditableLeftIconV2Options';
+import { EditableTitleV2 } from 'EditableTitleV2';
+import { EditableTitleV2Options } from 'EditableTitleV2Options';
+import { EditableTitleBarItemV2 } from 'EditableTitleBarItemV2';
+import { EditableTitleBarItemV2Options } from 'EditableTitleBarItemV2Options';
+import { EditableTitleBarMenuItemV2 } from 'EditableTitleBarMenuItemV2';
+import { EditableTitleBarMenuItemV2Options } from 'EditableTitleBarMenuItemV2Options';
+import { EditableSaveButtonV2 } from 'EditableSaveButtonV2';
+import { EditableSaveButtonV2Options } from 'EditableSaveButtonV2Options';
+import { EditableTitleBarStyleV2 } from 'EditableTitleBarStyleV2';
+import { EditableTitleBarStyleV2Options } from 'EditableTitleBarStyleV2Options';
 ```
 
 ## defaultFocus

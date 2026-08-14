@@ -1,6 +1,6 @@
 # AccessibilityGrid (System API)
 
-Defines accessibility grid information. For details, see the currentItem attribute in [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md#AccessibilityElement).
+Accessibility grid information. For details, see the property currentItem in [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md#AccessibilityElement).
 
 **Since:** 23
 
@@ -20,7 +20,7 @@ Defines accessibility grid information. For details, see the currentItem attribu
 columnIndex: int
 ```
 
-Column index.
+Grid column index.
 
 **Type:** int
 
@@ -42,7 +42,7 @@ Column index.
 rowIndex: int
 ```
 
-Row index.
+Grid row index.
 
 **Type:** int
 

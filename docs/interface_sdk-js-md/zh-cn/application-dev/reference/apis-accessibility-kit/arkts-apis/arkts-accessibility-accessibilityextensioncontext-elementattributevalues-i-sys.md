@@ -90,7 +90,7 @@ belongTreeId?: int
 childrenIds?: Array<long>
 ```
 
-表示元素的子组件ID。
+表示元素的子组件ID列表。
 
 **类型：** Array&lt;long&gt;
 
@@ -138,7 +138,7 @@ childrenTreeId?: int
 currentItem?: AccessibilityGrid
 ```
 
-表示当前元素所在网格中的位置。
+表示组件网格中的当前项。
 
 **类型：** [AccessibilityGrid](arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md)
 
@@ -162,7 +162,7 @@ currentItem?: AccessibilityGrid
 customActions?: Array<string>
 ```
 
-Indicates the custom actions supported by the component.
+元素支持的自定义操作列表。
 
 **类型：** Array&lt;string&gt;
 
@@ -276,13 +276,37 @@ parentId?: long
 
 **系统接口：** 此接口为系统接口。
 
+## sourceType
+
+```TypeScript
+sourceType?: AccessibilitySourceType
+```
+
+Indicates the source of this element.
+
+**类型：** [AccessibilitySourceType](arkts-accessibility-accessibility-accessibilitysourcetype-e-sys.md)
+
+**起始版本：** 26.0.0
+
+**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.0.0。
+
+**废弃版本：** -1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ElementAttributeValues-sourceType?: AccessibilitySourceType--><!--Device-ElementAttributeValues-sourceType?: AccessibilitySourceType-End-->
+
+**系统能力：** SystemCapability.BarrierFree.Accessibility.Core
+
+**系统接口：** 此接口为系统接口。
+
 ## span
 
 ```TypeScript
 span?: AccessibilitySpan[]
 ```
 
-表示元素在网格布局中所跨越的行列范围数组。
+表示元素的超链接文本信息数组。
 
 **类型：** [AccessibilitySpan](arkts-accessibility-accessibilityextensioncontext-accessibilityspan-i-sys.md)[]
 

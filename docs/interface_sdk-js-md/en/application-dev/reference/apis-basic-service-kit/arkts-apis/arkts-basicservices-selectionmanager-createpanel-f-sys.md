@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { selectionManager } from '@kit.BasicServicesKit';
+import { selectionManager } from 'selectionManager';
 ```
 
 ## createPanel

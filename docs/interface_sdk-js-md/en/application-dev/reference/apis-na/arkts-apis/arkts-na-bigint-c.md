@@ -366,7 +366,7 @@ Creates a new `BigInt` instance from an int value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| d | int | Yes | The int value to convert. &lt;br&gt;The value should be an integer. |
+| d | int | Yes | The int value to convert. <br>The value should be an integer. |
 
 ## constructor
 
@@ -523,7 +523,7 @@ Creates a new `BigInt` instance from internal components.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | v | FixedArray&lt;int&gt; | Yes | The array of digits. |
-| sign | int | Yes | The sign of the number. &lt;br&gt;The value should be an integer. |
+| sign | int | Yes | The sign of the number. <br>The value should be an integer. |
 
 ## doubleValue
 
@@ -1451,7 +1451,7 @@ Returns a string representation of the BigInt object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| radix | int | Yes | An integer in the range 2 through 36 specifying the base to use for representing numeric values. &lt;br&gt;The value should be an integer. |
+| radix | int | Yes | An integer in the range 2 through 36 specifying the base to use for representing numeric values. <br>The value should be an integer. |
 
 **Return value:**
 

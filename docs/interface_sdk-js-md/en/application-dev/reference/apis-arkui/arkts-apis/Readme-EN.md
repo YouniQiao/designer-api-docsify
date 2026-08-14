@@ -28,7 +28,8 @@
   - [VideoLiveControlGroup](arkts-arkui-pipwindow-videolivecontrolgroup-e.md)
   - [VideoMeetingControlGroup](arkts-arkui-pipwindow-videomeetingcontrolgroup-e.md)
   - [VideoPlayControlGroup](arkts-arkui-pipwindow-videoplaycontrolgroup-e.md)
-- [@ohos.animation.windowAnimationManager](arkts-animation-windowanimationmanager.md)
+<!--Del-->
+- [@ohos.animation.windowAnimationManager](arkts-animation-windowanimationmanager.md)<!--DelEnd-->
   <!--Del-->
   - [minimizeWindowWithAnimation(system api)](arkts-arkui-windowanimationmanager-minimizewindowwithanimation-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -58,7 +59,8 @@
   - [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md)
   - [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md)
   - [AnimatorResult](arkts-arkui-animator-animatorresult-i.md)
-- [@ohos.application.WindowExtensionAbility](arkts-application-windowextensionability.md)
+<!--Del-->
+- [@ohos.application.WindowExtensionAbility](arkts-application-windowextensionability.md)<!--DelEnd-->
   <!--Del-->
   - [WindowExtensionAbility(system api)](arkts-arkui-application-windowextensionability-windowextensionability-c-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -413,7 +415,8 @@
   - [FullScreenLaunchComponent](arkts-arkui-arkui-advanced-fullscreenlaunchcomponent-fullscreenlaunchcomponent-s.md)
   - [ContentBuilder](arkts-arkui-contentbuilder-t.md)
 - [@ohos.arkui.advanced.GridObjectSortComponent](arkts-arkui-advanced-gridobjectsortcomponent.md)
-- [@ohos.arkui.advanced.InnerFullScreenLaunchComponent](arkts-arkui-advanced-innerfullscreenlaunchcomponent.md)
+<!--Del-->
+- [@ohos.arkui.advanced.InnerFullScreenLaunchComponent](arkts-arkui-advanced-innerfullscreenlaunchcomponent.md)<!--DelEnd-->
   <!--Del-->
   - [LaunchController(system api)](arkts-arkui-arkui-advanced-innerfullscreenlaunchcomponent-launchcontroller-c-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -655,7 +658,8 @@
 - [@ohos.arkui.inspector](arkts-arkui-inspector.md)
   - [createComponentObserver](arkts-arkui-inspector-createcomponentobserver-f.md)
   - [ComponentObserver](arkts-arkui-inspector-componentobserver-i.md)
-- [@ohos.arkui.intelligence.imageGeneration](arkts-arkui-intelligence-imagegeneration.md)
+<!--Del-->
+- [@ohos.arkui.intelligence.imageGeneration](arkts-arkui-intelligence-imagegeneration.md)<!--DelEnd-->
   <!--Del-->
   - [closeGeneratorDialog(system api)](arkts-arkui-imagegeneration-closegeneratordialog-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -712,7 +716,8 @@
   - [CustomImportCallback(system api)](arkts-arkui-imagegeneration-customimportcallback-t-sys.md)<!--DelEnd-->
   <!--Del-->
   - [PartialResultType(system api)](arkts-arkui-imagegeneration-partialresulttype-e-sys.md)<!--DelEnd-->
-- [@ohos.arkui.intelligence.imageGeneration](arkts-arkui-intelligence-imagegeneration.md)
+<!--Del-->
+- [@ohos.arkui.intelligence.imageGeneration](arkts-arkui-intelligence-imagegeneration.md)<!--DelEnd-->
   <!--Del-->
   - [closeGeneratorDialog(system api)](arkts-arkui-imagegeneration-closegeneratordialog-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -799,7 +804,8 @@
   - [RouterPageState](arkts-arkui-uiobserver-routerpagestate-e.md)
   - [ScrollEventType](arkts-arkui-uiobserver-scrolleventtype-e.md)
   - [TabContentState](arkts-arkui-uiobserver-tabcontentstate-e.md)
-- [@ohos.arkui.performanceMonitor](arkts-arkui-performancemonitor.md)
+<!--Del-->
+- [@ohos.arkui.performanceMonitor](arkts-arkui-performancemonitor.md)<!--DelEnd-->
   <!--Del-->
   - [begin(system api)](arkts-arkui-performancemonitor-begin-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -861,7 +867,8 @@
   - [MaterialType](arkts-arkui-uimaterial-materialtype-e.md)
   <!--Del-->
   - [MaterialType(system api)](arkts-arkui-uimaterial-materialtype-e-sys.md)<!--DelEnd-->
-- [@ohos.atomicservice.AtomicServiceMenuBar](arkts-atomicservice-atomicservicemenubar.md)
+<!--Del-->
+- [@ohos.atomicservice.AtomicServiceMenuBar](arkts-atomicservice-atomicservicemenubar.md)<!--DelEnd-->
   <!--Del-->
   - [AtomicServiceMenuBar(system api)](arkts-arkui-atomicservice-atomicservicemenubar-atomicservicemenubar-c-sys.md)<!--DelEnd-->
 - [@ohos.atomicservice.AtomicServiceNavigation](arkts-atomicservice-atomicservicenavigation.md)
@@ -937,7 +944,8 @@
   <!--Del-->
   - [TrailOptimization(system api)](arkts-arkui-curves-trailoptimization-i-sys.md)<!--DelEnd-->
   - [Curve](arkts-arkui-curves-curve-e.md)
-- [@ohos.deviceStatus.dragInteraction](arkts-devicestatus-draginteraction.md)
+<!--Del-->
+- [@ohos.deviceStatus.dragInteraction](arkts-devicestatus-draginteraction.md)<!--DelEnd-->
   <!--Del-->
   - [getDataSummary(system api)](arkts-arkui-draginteraction-getdatasummary-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -1193,7 +1201,8 @@
   - [RouterOptions](arkts-arkui-router-routeroptions-i.md)
   - [RouterState](arkts-arkui-router-routerstate-i.md)
   - [RouterMode](arkts-arkui-router-routermode-e.md)
-- @ohos.screen
+<!--Del-->
+- @ohos.screen<!--DelEnd-->
   <!--Del-->
   - [createVirtualScreen(system api)](arkts-arkui-screen-createvirtualscreen-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -1290,7 +1299,8 @@
   - [Size(system api)](arkts-arkui-screenshot-size-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [DisplayIntentType(system api)](arkts-arkui-screenshot-displayintenttype-e-sys.md)<!--DelEnd-->
-- [@ohos.uiAppearance](arkts-uiappearance.md)
+<!--Del-->
+- [@ohos.uiAppearance](arkts-uiappearance.md)<!--DelEnd-->
   <!--Del-->
   - [getDarkMode(system api)](arkts-arkui-uiappearance-getdarkmode-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -1305,7 +1315,8 @@
   - [setFontWeightScale(system api)](arkts-arkui-uiappearance-setfontweightscale-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [DarkMode(system api)](arkts-arkui-uiappearance-darkmode-e-sys.md)<!--DelEnd-->
-- [@ohos.uiExtensionHost](arkts-uiextensionhost.md)
+<!--Del-->
+- [@ohos.uiExtensionHost](arkts-uiextensionhost.md)<!--DelEnd-->
   <!--Del-->
   - [UIExtensionHostWindowProxy(system api)](arkts-arkui-uiextensionhost-uiextensionhostwindowproxy-i-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -1821,7 +1832,8 @@
   - [ImageAIOptions](arkts-arkui-imageaioptions-i.md)
   - [ImageAnalyzerConfig](arkts-arkui-imageanalyzerconfig-i.md)
   - [ImageAnalyzerType](arkts-arkui-imageanalyzertype-e.md)
-- [inspector](arkts-inspector.md)
+<!--Del-->
+- [inspector](arkts-inspector.md)<!--DelEnd-->
   - [Profiler](arkts-arkui-profiler-n.md)
     <!--Del-->
     - [registerVsyncCallback(system api)](arkts-arkui-profiler-registervsynccallback-f-sys.md)<!--DelEnd-->
@@ -1833,7 +1845,8 @@
   - [getInspectorNodes(system api)](arkts-arkui-inspector-getinspectornodes-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [setAppBgColor(system api)](arkts-arkui-inspector-setappbgcolor-f-sys.md)<!--DelEnd-->
-- [isolated_component](arkts-isolated_component.md)
+<!--Del-->
+- [isolated_component](arkts-isolated_component.md)<!--DelEnd-->
   <!--Del-->
   - [IsolatedOptions(system api)](arkts-arkui-isolatedoptions-i-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -2050,7 +2063,8 @@
   - [WithThemeInterface](arkts-arkui-withthemeinterface-t.md)
   - [Constants](arkts-arkui-with-theme-con.md)
 - application<!--arkts-arkui-application-->
-  - [WindowExtensionContext](arkts-windowextensioncontext.md)
+  <!--Del-->
+  - [WindowExtensionContext](arkts-windowextensioncontext.md)<!--DelEnd-->
     <!--Del-->
     - [WindowExtensionContext(system api)](arkts-arkui-windowextensioncontext-c-sys.md)<!--DelEnd-->
 - arkui<!--arkts-arkui-arkui-->

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'call';
 ```
 
 ## setCallWaiting
@@ -32,8 +32,8 @@ Specifies whether to enable the call waiting service. This API uses an asynchron
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Card slot ID. &lt;br&gt;- **0**: card slot 1. &lt;br&gt;- **1**: card slot 2. |
-| activate | boolean | Yes | Whether to enable call waiting. &lt;br&gt;- **false**: Disable call waiting. &lt;br&gt;- **true**: Enable call waiting. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2. |
+| activate | boolean | Yes | Whether to enable call waiting. <br>- **false**: Disable call waiting. <br>- **true**: Enable call waiting. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -89,8 +89,8 @@ Specifies whether to enable the call waiting service. This API uses a promise to
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Card slot ID. &lt;br&gt;- **0**: card slot 1. &lt;br&gt;- **1**: card slot 2. |
-| activate | boolean | Yes | Whether to enable call waiting. &lt;br&gt;- **false**: Disable call waiting. &lt;br&gt;- **true**: Enable call waiting. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2. |
+| activate | boolean | Yes | Whether to enable call waiting. <br>- **false**: Disable call waiting. <br>- **true**: Enable call waiting. |
 
 **Return value:**
 

@@ -17,7 +17,12 @@ Options for the custom-style dialog. The dialog content is provided as the first
 ## Modules to Import
 
 ```TypeScript
-import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseController, DialogBaseAlignment, DialogDismissal } from '@kit.ArkUI';
+import { DialogBaseAlignment } from 'DialogBaseAlignment';
+import { DialogButtonOrientation } from 'DialogButtonOrientation';
+import { DialogState } from 'DialogState';
+import { DialogResult } from 'DialogResult';
+import { DialogDismissal } from 'DialogDismissal';
+import { DialogBaseController } from 'DialogBaseController';
 ```
 
 ## customStyle

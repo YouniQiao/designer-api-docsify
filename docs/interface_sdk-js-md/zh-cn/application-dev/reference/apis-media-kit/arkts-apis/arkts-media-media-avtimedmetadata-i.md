@@ -62,7 +62,7 @@ Key-value pair set corresponding to time primitive information
 duration: int
 ```
 
-Duration of the time primitive information The value should be an integer. &lt;br&gt;Unit:milliseconds.
+Duration of the time primitive information The value should be an integer. <br>Unit:milliseconds.
 
 **类型：** int
 
@@ -106,7 +106,7 @@ Defines the unique token of the time base metadata, The tag must be unique in ot
 start: int
 ```
 
-Defines the offset value of the time primitive information relative to the start time of the entire media. The value should be an integer. &lt;br&gt;Unit:milliseconds.
+Defines the offset value of the time primitive information relative to the start time of the entire media. The value should be an integer. <br>Unit:milliseconds.
 
 **类型：** int
 

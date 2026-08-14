@@ -15,7 +15,7 @@ You must first use on('inputStart') to obtain a **InputClient** instance, and th
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from '@kit.IMEKit';
+import { inputMethodEngine } from 'inputMethodEngine';
 ```
 
 ## deleteBackward
@@ -1320,7 +1320,7 @@ Moves the cursor. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| direction | int | Yes | Direction in which the cursor moves. &lt;br&gt;- **1**: upward. &lt;br&gt;- **2**: downward. &lt;br&gt;- **3**: leftward. &lt;br&gt;- **4**: rightward. which cannot be less than 0. |
+| direction | int | Yes | Direction in which the cursor moves. <br>- **1**: upward. <br>- **2**: downward. <br>- **3**: leftward. <br>- **4**: rightward. which cannot be less than 0. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -1366,7 +1366,7 @@ Moves the cursor. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| direction | int | Yes | Direction in which the cursor moves. &lt;br&gt;- **1**: upward. &lt;br&gt;- **2**: downward. &lt;br&gt;- **3**: leftward. &lt;br&gt;- **4**: rightward. which cannot be less than 0. |
+| direction | int | Yes | Direction in which the cursor moves. <br>- **1**: upward. <br>- **2**: downward. <br>- **3**: leftward. <br>- **4**: rightward. which cannot be less than 0. |
 
 **Return value:**
 
@@ -1415,7 +1415,7 @@ Moves the cursor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| direction | int | Yes | Direction in which the cursor moves. &lt;br&gt;- **1**: upward. &lt;br&gt;- **2**: downward. &lt;br&gt;- **3**: leftward. &lt;br&gt;- **4**: rightward. which cannot be less than 0. |
+| direction | int | Yes | Direction in which the cursor moves. <br>- **1**: upward. <br>- **2**: downward. <br>- **3**: leftward. <br>- **4**: rightward. which cannot be less than 0. |
 
 **Error codes:**
 
@@ -1584,7 +1584,7 @@ Registers or unregisters MessageHandler. > **NOTE：**> > The [MessageHandler](a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| msgHandler | MessageHandler | No | This object receives custom communication data from the edit box application attached to the input method application through [onMessage](arkts-ime-inputmethodengine-messagehandler-i.md#onMessage) and receives a message for terminating the subscription to this object through [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onTerminated). &lt;br&gt;If no parameter is set, unregister [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md#MessageHandler). Its [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onTerminated) callback will be triggered. |
+| msgHandler | MessageHandler | No | This object receives custom communication data from the edit box application attached to the input method application through [onMessage](arkts-ime-inputmethodengine-messagehandler-i.md#onMessage) and receives a message for terminating the subscription to this object through [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onTerminated). <br>If no parameter is set, unregister [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md#MessageHandler). Its [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onTerminated) callback will be triggered. |
 
 **Error codes:**
 
@@ -2001,7 +2001,7 @@ Sends the function key. This API uses an asynchronous callback to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| action | int | Yes | Action of the function key. &lt;br&gt;- **0**: invalid key. &lt;br&gt;- **1**: confirm key (Enter key). |
+| action | int | Yes | Action of the function key. <br>- **0**: invalid key. <br>- **1**: confirm key (Enter key). |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -2053,7 +2053,7 @@ Sends the function key. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| action | int | Yes | Action of the function key. &lt;br&gt;**0**: invalid key. &lt;br&gt;**1**: confirm key (Enter key). |
+| action | int | Yes | Action of the function key. <br>**0**: invalid key. <br>**1**: confirm key (Enter key). |
 
 **Return value:**
 
@@ -2222,7 +2222,7 @@ Sets the preview text. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | text | string | Yes | Preview text to set. |
-| range | Range | Yes | Range of the preview text. &lt;br&gt;- If the value is { start: -1, end: -1 }, **text** replaces the entire text in the current preview area by default. &lt;br&gt;- If **start** is equal to **end**, **text** is inserted into the cursor position specified by **start**. &lt;br&gt;- If **start** is not equal to **end**, **text** replaces the text of the specified range. &lt;br&gt;- If the values of **start** and **end** are negative values, a parameter error is returned. &lt;br&gt;- If there is preview text in the text box, the value of **range** cannot exceed the range of the preview text. Otherwise, a parameter error is returned. &lt;br&gt;- If there is no preview text in the text box, the value of **range** cannot exceed the text range of the text box. Otherwise, a parameter error is returned. |
+| range | Range | Yes | Range of the preview text. <br>- If the value is { start: -1, end: -1 }, **text** replaces the entire text in the current preview area by default. <br>- If **start** is equal to **end**, **text** is inserted into the cursor position specified by **start**. <br>- If **start** is not equal to **end**, **text** replaces the text of the specified range. <br>- If the values of **start** and **end** are negative values, a parameter error is returned. <br>- If there is preview text in the text box, the value of **range** cannot exceed the range of the preview text. Otherwise, a parameter error is returned. <br>- If there is no preview text in the text box, the value of **range** cannot exceed the text range of the text box. Otherwise, a parameter error is returned. |
 
 **Return value:**
 
@@ -2274,7 +2274,7 @@ Sets the preview text.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | text | string | Yes | Preview text to set. |
-| range | Range | Yes | Range of the preview text. &lt;br&gt;- If the value is { start: -1, end: -1 }, **text** replaces the entire text in the current preview area by default. &lt;br&gt;- If **start** is equal to **end**, **text** is inserted into the cursor position specified by **start**. &lt;br&gt;- If **start** is not equal to **end**, **text** replaces the text of the specified range. &lt;br&gt;- If the values of **start** and **end** are negative values, a parameter error is returned. &lt;br&gt;- If there is preview text in the text box, the value of **range** cannot exceed the range of the preview text. Otherwise, a parameter error is returned. &lt;br&gt;- If there is no preview text in the text box, the value of **range** cannot exceed the text range of the text box. Otherwise, a parameter error is returned. |
+| range | Range | Yes | Range of the preview text. <br>- If the value is { start: -1, end: -1 }, **text** replaces the entire text in the current preview area by default. <br>- If **start** is equal to **end**, **text** is inserted into the cursor position specified by **start**. <br>- If **start** is not equal to **end**, **text** replaces the text of the specified range. <br>- If the values of **start** and **end** are negative values, a parameter error is returned. <br>- If there is preview text in the text box, the value of **range** cannot exceed the range of the preview text. Otherwise, a parameter error is returned. <br>- If there is no preview text in the text box, the value of **range** cannot exceed the text range of the text box. Otherwise, a parameter error is returned. |
 
 **Error codes:**
 

@@ -211,7 +211,7 @@ off(type:'error', callback?: ErrorCallback):void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'error' | 是 | 转码错误事件回调类型'error'。 &lt;br&gt;- 'error'：转码过程中发生错误，触发该事件。 |
+| type | 'error' | 是 | 转码错误事件回调类型'error'。 <br>- 'error'：转码过程中发生错误，触发该事件。 |
 | callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 否 | 错误事件回调方法。 |
 
 ## off_progressUpdate
@@ -377,7 +377,7 @@ on(type:'error', callback: ErrorCallback):void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'error' | 是 | 转码错误事件回调类型'error'。 &lt;br&gt;- 'error'：录制过程中发生错误，触发该事件。 |
+| type | 'error' | 是 | 转码错误事件回调类型'error'。 <br>- 'error'：录制过程中发生错误，触发该事件。 |
 | callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 是 | 转码错误事件回调方法。 |
 
 **错误码：**

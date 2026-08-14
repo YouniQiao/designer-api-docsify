@@ -17,7 +17,7 @@ Implements audio effect management.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'audio';
 ```
 
 ## getAudioEffectProperty
@@ -304,7 +304,7 @@ Sets audio separation effect enable or disable for specific application process,
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | enabled | boolean | Yes | The required effect state, true for enabled, false for disabled. |
-| uid | int | Yes | The uid of target application process to add effect. &lt;br&gt;The value should be an integer. |
+| uid | int | Yes | The uid of target application process to add effect. <br>The value should be an integer. |
 | streamId | long | No | The id of target audio playback stream to add effect, the playback application can use [getAudioStreamId](arkts-audio-audio-audiorenderer-i.md#getAudioStreamId) to obtain it. |
 
 **Return value:**
@@ -352,7 +352,7 @@ Sets audio separation effect volume for specific volume type. This API uses a pr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | [AudioSeparationVolumeType](arkts-audio-audio-audioseparationvolumetype-e-sys.md) | Yes | The type to set volume. |
-| volume | double | Yes | The target volume value. &lt;br&gt;Value range: [0,1]. |
+| volume | double | Yes | The target volume value. <br>Value range: [0,1]. |
 
 **Return value:**
 

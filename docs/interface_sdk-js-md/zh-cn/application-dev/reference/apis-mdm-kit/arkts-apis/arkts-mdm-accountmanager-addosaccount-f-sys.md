@@ -32,7 +32,7 @@ function addOsAccount(admin: Want, name: string, type: osAccount.OsAccountType):
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 企业设备管理扩展组件。Want中必须包含企业设备管理扩展能力的abilityName和所在应用的bundleName。 |
 | name | string | 是 | 用户ID，指定具体用户，取值范围：大于等于0。 |
-| type | osAccount.OsAccountType | 是 | 要添加的账号的类型。&lt;br/&gt;取值范围：ADMIN、NORMAL、GUEST。&lt;br/&gt;· ADMIN：管理员账号。&lt;br/&gt;· NORMAL：普 通账号。&lt;br/&gt;· GUEST：访客账号。 |
+| type | osAccount.OsAccountType | 是 | 要添加的账号的类型。<br/>取值范围：ADMIN、NORMAL、GUEST。<br/>· ADMIN：管理员账号。<br/>· NORMAL：普 通账号。<br/>· GUEST：访客账号。 |
 
 **返回值：**
 

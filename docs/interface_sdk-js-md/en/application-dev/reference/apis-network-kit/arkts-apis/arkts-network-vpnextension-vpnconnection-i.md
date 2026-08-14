@@ -15,7 +15,7 @@ Defines a VPN connection.
 ## Modules to Import
 
 ```TypeScript
-import { vpnExtension } from '@kit.NetworkKit';
+import { vpnExtension } from 'vpnExtension';
 ```
 
 ## create

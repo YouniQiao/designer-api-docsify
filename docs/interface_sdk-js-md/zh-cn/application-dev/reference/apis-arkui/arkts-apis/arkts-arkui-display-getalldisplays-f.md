@@ -41,12 +41,12 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let displayClass: Array<display.Display> = [];
 display.getAllDisplays((err: BusinessError, data: Array<display.Display>) => {
-  displayClass = data;
   const errCode: number = err.code;
   if (errCode) {
     console.error(`Failed to obtain all the display objects. Code: ${err.code}, message: ${err.message}`);
     return;
   }
+  displayClass = data;
   console.info(`Succeeded in obtaining all the display objects. Data: ${JSON.stringify(data)}`);
 });
 ```
@@ -107,7 +107,7 @@ ArkTS-Dyn示例：
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let displayClass: Array<display.Display> =[];
+let displayClass: Array<display.Display> = [];
 let promise: Promise<Array<display.Display>> = display.getAllDisplays();
 promise.then((data: Array<display.Display>) => {
   displayClass = data;

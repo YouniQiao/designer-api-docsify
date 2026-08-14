@@ -15,7 +15,7 @@ Provides interfaces to manage ethernet.
 ## Modules to Import
 
 ```TypeScript
-import { ethernet } from '@kit.NetworkKit';
+import { ethernet } from 'ethernet';
 ```
 
 ## Summary

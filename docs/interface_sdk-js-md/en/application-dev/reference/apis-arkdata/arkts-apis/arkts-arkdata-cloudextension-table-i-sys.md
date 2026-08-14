@@ -17,7 +17,7 @@ Represents the table information.
 ## Modules to Import
 
 ```TypeScript
-import { cloudExtension } from '@kit.ArkData';
+import { cloudExtension } from 'cloudExtension';
 ```
 
 ## alias

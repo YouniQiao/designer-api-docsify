@@ -27,7 +27,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { JSON } from '@kit.ArkTS';
+import { JSON } from 'JSON';
 ```
 
 ## Summary

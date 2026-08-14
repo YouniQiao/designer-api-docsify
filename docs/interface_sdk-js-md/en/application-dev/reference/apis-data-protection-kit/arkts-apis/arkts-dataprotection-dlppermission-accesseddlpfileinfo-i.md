@@ -15,7 +15,7 @@ Represents the information about a DLP file opened.
 ## Modules to Import
 
 ```TypeScript
-import { dlpPermission } from '@kit.DataProtectionKit';
+import { dlpPermission } from 'dlpPermission';
 ```
 
 ## lastOpenTime

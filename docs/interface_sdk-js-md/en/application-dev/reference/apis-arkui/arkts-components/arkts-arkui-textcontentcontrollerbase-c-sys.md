@@ -40,7 +40,7 @@ Obtains the text content within a specified range.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | TextRange | No | Range of the text content to obtain, defined by start and end positions.&lt;br&gt;If the range is not specified, the entire text is obtained by default. If the start position is not specified, it defaults to index 0. If the end position is not specified, it defaults to the end of the text. |
+| range | TextRange | No | Range of the text content to obtain, defined by start and end positions.<br>If the range is not specified, the entire text is obtained by default. If the start position is not specified, it defaults to index 0. If the end position is not specified, it defaults to the end of the text. |
 
 **Return value:**
 

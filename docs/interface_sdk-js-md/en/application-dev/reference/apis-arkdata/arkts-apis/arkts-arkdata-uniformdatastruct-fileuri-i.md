@@ -15,7 +15,7 @@ Represents data of the file URI type.
 ## Modules to Import
 
 ```TypeScript
-import { uniformDataStruct } from '@kit.ArkData';
+import { uniformDataStruct } from 'uniformDataStruct';
 ```
 
 ## details

@@ -36,7 +36,7 @@ getLazyLayoutDirection(): LazyLayoutDirection
 
 | 类型 | 说明 |
 | --- | --- |
-| [LazyLayoutDirection](arkts-na-lazylayoutalgorithm-lazylayoutdirection-e.md) | The lazy layout direction. |
+| [LazyLayoutDirection](../../apis-arkui/arkts-apis/arkts-arkui-lazylayoutalgorithm-lazylayoutdirection-e.md) | The lazy layout direction. |
 
 ## getViewEnd
 
@@ -62,7 +62,7 @@ getViewEnd(): int
 
 | 类型 | 说明 |
 | --- | --- |
-| int | The end position of the visible view. &lt;br&gt;Unit: px. |
+| int | The end position of the visible view. <br>Unit: px. |
 
 ## getViewStart
 
@@ -88,7 +88,7 @@ getViewStart(): int
 
 | 类型 | 说明 |
 | --- | --- |
-| int | The start position of the visible view. &lt;br&gt;Unit: px. |
+| int | The start position of the visible view. <br>Unit: px. |
 
 ## setAdjustedOffset
 
@@ -114,7 +114,7 @@ setAdjustedOffset(offset: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offset | int | 是 | 设置要的调整偏移值。 &lt;br&gt;单位:单位：px。 |
+| offset | int | 是 | 设置要的调整偏移值。 <br>单位:单位：px。 |
 
 ## setChildrenInactive
 

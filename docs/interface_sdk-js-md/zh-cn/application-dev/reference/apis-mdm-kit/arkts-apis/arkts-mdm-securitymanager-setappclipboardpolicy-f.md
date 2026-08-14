@@ -55,7 +55,7 @@ let tokenId: number = 586874394;
 try {
   securityManager.setAppClipboardPolicy(wantTemp, tokenId, securityManager.ClipboardPolicy.IN_APP);
   console.info(`Succeeded in setting clipboard policy.`);
-} catch(err) {
+} catch (err) {
   console.error(`Failed to set clipboard policy. Code: ${err.code}, message: ${err.message}`);
 }
 ```
@@ -117,7 +117,7 @@ let accountId: number = 100;
 try {
   securityManager.setAppClipboardPolicy(wantTemp, bundleName, accountId, securityManager.ClipboardPolicy.IN_APP);
   console.info(`Succeeded in setting clipboard policy.`);
-} catch(err) {
+} catch (err) {
   console.error(`Failed to set clipboard policy. Code: ${err.code}, message: ${err.message}`);
 }
 ```

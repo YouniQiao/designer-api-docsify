@@ -130,7 +130,7 @@ Sets the offset of the caret.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the caret offset is set successfully. &lt;br&gt;Returns **true** if it is set successfully; returns **false** otherwise. |
+| boolean | Whether the caret offset is set successfully. <br>Returns **true** if it is set successfully; returns **false** otherwise. |
 
 ## stopEditing
 

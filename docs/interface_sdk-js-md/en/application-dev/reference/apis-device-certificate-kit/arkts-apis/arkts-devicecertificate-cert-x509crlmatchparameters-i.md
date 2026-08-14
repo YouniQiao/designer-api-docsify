@@ -15,7 +15,7 @@ Represents the parameters used to match a certificate revocation list (CRL). If 
 ## Modules to Import
 
 ```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
+import { cert } from 'cert';
 ```
 
 ## issuer

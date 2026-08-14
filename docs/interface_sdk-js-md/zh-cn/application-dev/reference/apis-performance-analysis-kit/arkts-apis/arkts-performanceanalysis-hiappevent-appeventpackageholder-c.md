@@ -180,7 +180,7 @@ let eventPkg: hiAppEvent.AppEventPackage | null = holder4.takeNext();
 takeNext(): AppEventPackage | null
 ```
 
-获取订阅事件。 &lt;br&gt;系统根据 **setSize** 设置的数据大小阈值或 **setRow** 设置的条数来取出订阅事件数据，默认取1条订阅事件。 当订阅事件数据全部被取出时返回null。 &lt;br&gt;当 **setRow** 和 **setSize** 同时调用时仅 **setRow** 生效。
+获取订阅事件。 <br>系统根据 **setSize** 设置的数据大小阈值或 **setRow** 设置的条数来取出订阅事件数据，默认取1条订阅事件。 当订阅事件数据全部被取出时返回null。 <br>当 **setRow** 和 **setSize** 同时调用时仅 **setRow** 生效。
 
 **起始版本：** 23
 

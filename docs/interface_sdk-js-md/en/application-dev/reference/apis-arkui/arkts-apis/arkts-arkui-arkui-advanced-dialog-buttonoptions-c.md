@@ -15,7 +15,15 @@ Declare ButtonOptions
 ## Modules to Import
 
 ```TypeScript
-import { AlertDialog, SelectDialog, ButtonOptions, PopoverOptions, TipsDialog, PopoverDialog, LoadingDialog, CustomContentDialog, ConfirmDialog } from '@kit.ArkUI';
+import { AlertDialog } from 'AlertDialog';
+import { ButtonOptions } from 'ButtonOptions';
+import { ConfirmDialog } from 'ConfirmDialog';
+import { LoadingDialog } from 'LoadingDialog';
+import { SelectDialog } from 'SelectDialog';
+import { TipsDialog } from 'TipsDialog';
+import { CustomContentDialog } from 'CustomContentDialog';
+import { PopoverDialog } from 'PopoverDialog';
+import { PopoverOptions } from 'PopoverOptions';
 ```
 
 ## action

@@ -38,8 +38,8 @@ Obtains the position of the character nearest to the specified coordinate.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | number | Yes | X coordinate relative to the component.&lt;br&gt;Unit: px |
-| y | number | Yes | Y coordinate relative to the component.&lt;br&gt;Unit: px |
+| x | number | Yes | X coordinate relative to the component.<br>Unit: px |
+| y | number | Yes | Y coordinate relative to the component.<br>Unit: px |
 
 **Return value:**
 
@@ -74,8 +74,8 @@ Obtains the position of the character nearest to the specified coordinate based 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | number | Yes | X coordinate relative to the component.&lt;br&gt;Unit: px |
-| y | number | Yes | Y coordinate relative to the component.&lt;br&gt;Unit: px |
+| x | number | Yes | X coordinate relative to the component.<br>Unit: px |
+| y | number | Yes | Y coordinate relative to the component.<br>Unit: px |
 | encoding | [TextEncoding](arkts-arkui-textencoding-e.md) | No | Encoding type used for the character position. The default value is **TextEncoding.TEXT_ENCODING_UTF8**. |
 
 **Return value:**
@@ -179,8 +179,8 @@ Obtains the position of a glyph close to a given coordinate.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | number | Yes | X coordinate relative to the component.&lt;br&gt;Unit: px |
-| y | number | Yes | Y coordinate relative to the component.&lt;br&gt;Unit: px |
+| x | number | Yes | X coordinate relative to the component.<br>Unit: px |
+| y | number | Yes | Y coordinate relative to the component.<br>Unit: px |
 
 **Return value:**
 
@@ -317,7 +317,7 @@ Obtains the information about the specified line, including line metrics, text s
 
 | Type | Description |
 | --- | --- |
-| [LineMetrics](arkts-arkui-linemetrics-t.md) | Information about the specified line, including line metrics, text style information, and font properties. &lt;br&gt;Returns an invalid value if the line number is less than 0 or exceeds the actual number of lines. |
+| [LineMetrics](arkts-arkui-linemetrics-t.md) | Information about the specified line, including line metrics, text style information, and font properties. <br>Returns an invalid value if the line number is less than 0 or exceeds the actual number of lines. |
 
 ## getRectsForRange
 

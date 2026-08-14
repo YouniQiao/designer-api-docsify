@@ -15,7 +15,7 @@ VisualEffect class, used to apply background color blending, border lighting, co
 ## Modules to Import
 
 ```TypeScript
-import { uiEffect } from '@kit.ArkGraphics2D';
+import { uiEffect } from 'uiEffect';
 ```
 
 ## backgroundColorBlender

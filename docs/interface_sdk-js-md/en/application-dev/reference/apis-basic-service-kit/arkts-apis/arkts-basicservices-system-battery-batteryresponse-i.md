@@ -15,7 +15,8 @@ Defines a response that returns the charging status and remaining power of the d
 ## Modules to Import
 
 ```TypeScript
-import { GetStatusOptions, BatteryResponse } from '@kit.BasicServicesKit';
+import { BatteryResponse } from 'BatteryResponse';
+import { GetStatusOptions } from 'GetStatusOptions';
 ```
 
 ## charging

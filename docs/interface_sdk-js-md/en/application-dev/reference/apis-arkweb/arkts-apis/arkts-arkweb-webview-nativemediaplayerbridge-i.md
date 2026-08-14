@@ -15,7 +15,7 @@ Instance of the API class between the web media player and the ArkWeb kernel. Th
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'webview';
 ```
 
 ## enterFullscreen

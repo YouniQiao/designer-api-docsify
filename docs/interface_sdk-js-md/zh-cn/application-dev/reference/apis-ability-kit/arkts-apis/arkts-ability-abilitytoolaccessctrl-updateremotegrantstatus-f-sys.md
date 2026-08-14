@@ -44,3 +44,16 @@ export function updateRemoteGrantStatus(remoteGrantStatus: RemoteGrantStatus): P
 | [24010000](../errorcode-abilityToolAccessCtrl-sys.md#24010000-入参错误) | Invalid parameter. RemoteGrantStatus is invalid. |
 | [24010001](../errorcode-abilityToolAccessCtrl-sys.md#24010001-系统服务工作异常) | Service is abnormal. possible cause: IPC failed. |
 
+## 示例
+
+```TypeScript
+import { abilityToolAccessCtrl } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+abilityToolAccessCtrl.updateRemoteGrantStatus(abilityToolAccessCtrl.RemoteGrantStatus.ENABLE).then(() => {
+  console.info('updateRemoteGrantStatus success');
+}).catch((err: BusinessError): void => {
+  console.error(`updateRemoteGrantStatus fail, code: ${err.code}, message: ${err.message}`);
+});
+```
+

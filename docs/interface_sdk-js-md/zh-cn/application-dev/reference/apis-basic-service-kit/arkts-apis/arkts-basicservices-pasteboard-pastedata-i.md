@@ -591,7 +591,7 @@ getRecord(index: int): PasteDataRecord
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [12900001](../../apis-basic-services-kit/errorcode-pasteboard.md#12900001-索引超过范围) | The index is out of the record. |
+| [12900001](../../apis-basic-services-kit/errorcode-pasteboard.md#12900001-索引超过范围) | The index is out of range. |
 
 ## 示例
 
@@ -958,7 +958,7 @@ removeRecord(index: int): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [12900001](../../apis-basic-services-kit/errorcode-pasteboard.md#12900001-索引超过范围) | The index is out of the record. |
+| [12900001](../../apis-basic-services-kit/errorcode-pasteboard.md#12900001-索引超过范围) | The index is out of range. |
 
 ## 示例
 
@@ -1053,7 +1053,7 @@ replaceRecord(index: int, record: PasteDataRecord): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
-| [12900001](../../apis-basic-services-kit/errorcode-pasteboard.md#12900001-索引超过范围) | The index is out of the record. |
+| [12900001](../../apis-basic-services-kit/errorcode-pasteboard.md#12900001-索引超过范围) | The index is out of range. |
 
 ## 示例
 

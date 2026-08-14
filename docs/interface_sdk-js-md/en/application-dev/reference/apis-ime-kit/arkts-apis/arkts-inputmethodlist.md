@@ -3,7 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
-import { Pattern, InputMethodListDialog, PatternOptions } from '@kit.IMEKit';
+import { InputMethodListDialog } from 'InputMethodListDialog';
+import { PatternOptions } from 'PatternOptions';
+import { Pattern } from 'Pattern';
 ```
 
 ## Summary

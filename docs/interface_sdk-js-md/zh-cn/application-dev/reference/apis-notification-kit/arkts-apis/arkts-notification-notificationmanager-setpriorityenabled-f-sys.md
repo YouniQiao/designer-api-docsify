@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'notificationManager';
 ```
 
 ## setPriorityEnabled
@@ -32,7 +32,7 @@ function setPriorityEnabled(enable: boolean): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean | 是 | 所有通知的优先使能状态。&lt;br&gt; - true：允许设置为优先通知。&lt;br&gt; - false：禁止设置为优先通知。 |
+| enable | boolean | 是 | 所有通知的优先使能状态。<br> - true：允许设置为优先通知。<br> - false：禁止设置为优先通知。 |
 
 **返回值：**
 

@@ -17,7 +17,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { fileExtensionInfo } from '@kit.CoreFileKit';
+import { fileExtensionInfo } from 'fileExtensionInfo';
 ```
 
 ## Summary

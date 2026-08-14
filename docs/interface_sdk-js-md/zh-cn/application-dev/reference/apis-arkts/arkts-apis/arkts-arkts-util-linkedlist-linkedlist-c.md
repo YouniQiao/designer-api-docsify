@@ -1151,7 +1151,7 @@ removeByIndex(index: int): T | undefined
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [10200010](../errorcode-utils.md#10200010-容器为空) | Container is empty. |
-| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "index" is out of range. It must be >= 0 && <= \\${length}. Received value is: \\${index} |
+| [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of "index" is out of range. It must be >= 0 && &lt;= \\${length}. Received value is: \\${index} |
 
 ## 示例
 

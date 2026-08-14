@@ -330,7 +330,7 @@ padding(value: Padding | Dimension): SubTabBarStyle
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Padding \| Dimension | 是 | 子页签的内边距属性（不支持百分比设置），用于调整页签内容与边界的距离。&lt;br/&gt;取值范围：[0, +∞]&lt;br/&gt;异常值时取默认值。&lt;br /&gt;默认值： {left:8.0vp,right:8.0vp,top:17.0vp,bottom:18.0vp}&lt;br/&gt;**说明：**&lt;br/&gt;从API version 12开始， 参数支持[LocalizedPadding](ts-types.md#localizedpadding12)类型，支持镜像能力。 |
+| value | Padding \| Dimension | 是 | 子页签的内边距属性（不支持百分比设置），用于调整页签内容与边界的距离。<br/>取值范围：[0, +∞]<br/>异常值时取默认值。&lt;br /&gt;默认值： {left:8.0vp,right:8.0vp,top:17.0vp,bottom:18.0vp}<br/>**说明：**<br/>从API version 12开始， 参数支持[LocalizedPadding](ts-types.md#localizedpadding12)类型，支持镜像能力。 |
 
 **返回值：**
 
@@ -364,7 +364,7 @@ padding(padding: LocalizedPadding): SubTabBarStyle
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| padding | LocalizedPadding | 是 | 子页签的内边距属性（不支持百分比设置），用于调整页签内容与边界的距离，支持镜像能力。 &lt;br/&gt;取值范围：[0, +∞]&lt;br/&gt;异常值时取默认值。&lt;br /&gt;默认值： {start:LengthMetrics.vp(8),end:LengthMetrics.vp(8),&lt;br/&gt;top:LengthMetrics.vp(17),bottom:LengthMetrics.vp(18)} |
+| padding | LocalizedPadding | 是 | 子页签的内边距属性（不支持百分比设置），用于调整页签内容与边界的距离，支持镜像能力。 <br/>取值范围：[0, +∞]<br/>异常值时取默认值。&lt;br /&gt;默认值： {start:LengthMetrics.vp(8),end:LengthMetrics.vp(8),<br/>top:LengthMetrics.vp(17),bottom:LengthMetrics.vp(18)} |
 
 **返回值：**
 

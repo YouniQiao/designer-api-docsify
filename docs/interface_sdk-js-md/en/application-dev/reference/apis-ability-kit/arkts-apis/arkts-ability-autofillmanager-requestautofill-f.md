@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { autoFillManager } from '@kit.AbilityKit';
+import { autoFillManager } from 'autoFillManager';
 ```
 
 ## requestAutoFill

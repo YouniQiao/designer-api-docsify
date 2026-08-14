@@ -17,7 +17,8 @@ Defines attributes of the word selection panel, including its type, position, an
 ## Modules to Import
 
 ```TypeScript
-import { PanelInfo, PanelType } from '@kit.BasicServicesKit';
+import { PanelInfo } from 'PanelInfo';
+import { PanelType } from 'PanelType';
 ```
 
 ## height

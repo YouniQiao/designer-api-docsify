@@ -192,7 +192,7 @@ clickAtWithOptions(point: Point, options?: TouchOptions): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | point | [Point](arkts-test-uitest-point-i.md) | 是 | 手指接触屏幕的坐标点。 |
-| options | [TouchOptions](arkts-test-uitest-touchoptions-i.md) | 否 | 单击操作的选项。 只有''属性适用于此方法。 设置其他属性将导致BusinessError 17000007。 &lt;br&gt;默认值：参考TouchOptions的默认值。 |
+| options | [TouchOptions](arkts-test-uitest-touchoptions-i.md) | 否 | 单击操作的选项。 只有''属性适用于此方法。 设置其他属性将导致BusinessError 17000007。 <br>默认值：参考TouchOptions的默认值。 |
 
 **返回值：**
 
@@ -655,7 +655,7 @@ dragBetweenWithOptions(from: Point, to: Point, options?: TouchOptions): Promise<
 | --- | --- | --- | --- |
 | from | [Point](arkts-test-uitest-point-i.md) | 是 | 手指接触屏幕的坐标点。 |
 | to | [Point](arkts-test-uitest-point-i.md) | 是 | 手指离开屏幕的坐标点。 |
-| options | [TouchOptions](arkts-test-uitest-touchoptions-i.md) | 否 | 拖动操作的选项。 只有“压力”、“速度”和“持续时间”属性适用于此方法。 设置其他属性将导致BusinessError 17000007。 &lt;br&gt;默认值：参考TouchOptions的默认值。 |
+| options | [TouchOptions](arkts-test-uitest-touchoptions-i.md) | 否 | 拖动操作的选项。 只有“压力”、“速度”和“持续时间”属性适用于此方法。 设置其他属性将导致BusinessError 17000007。 <br>默认值：参考TouchOptions的默认值。 |
 
 **返回值：**
 
@@ -2131,7 +2131,7 @@ longClickAtWithOptions(point: Point, options?: TouchOptions): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | point | [Point](arkts-test-uitest-point-i.md) | 是 | 手指接触屏幕的坐标点。 |
-| options | [TouchOptions](arkts-test-uitest-touchoptions-i.md) | 否 | 用于长单击操作的选项。 只有“持续时间”和“压力”属性适用于此方法。 设置其他属性将导致BusinessError 17000007。 &lt;br&gt;默认值：参考TouchOptions的默认值。 |
+| options | [TouchOptions](arkts-test-uitest-touchoptions-i.md) | 否 | 用于长单击操作的选项。 只有“持续时间”和“压力”属性适用于此方法。 设置其他属性将导致BusinessError 17000007。 <br>默认值：参考TouchOptions的默认值。 |
 
 **返回值：**
 
@@ -2404,8 +2404,8 @@ mouseDragWithOptions(from: Point, to: Point, touchOptions?: TouchOptions, keyOpt
 | --- | --- | --- | --- |
 | from | [Point](arkts-test-uitest-point-i.md) | 是 | 起点。 |
 | to | [Point](arkts-test-uitest-point-i.md) | 是 | 终点。 |
-| touchOptions | [TouchOptions](arkts-test-uitest-touchoptions-i.md) | 否 | 速度和持续时间设置的触摸选项。 在此方法中，只有“速度”和“持续时间”属性有效。 设置其他属性会导致BusinessError 17000007。 &lt;br&gt;默认值：参考TouchOptions的默认值。 |
-| keyOptions | [KeyOptions](arkts-test-uitest-keyoptions-i.md) | 否 | 拖动期间要按的键代码的键选项。 &lt;br&gt;默认值：参考keyOptions的默认值。 |
+| touchOptions | [TouchOptions](arkts-test-uitest-touchoptions-i.md) | 否 | 速度和持续时间设置的触摸选项。 在此方法中，只有“速度”和“持续时间”属性有效。 设置其他属性会导致BusinessError 17000007。 <br>默认值：参考TouchOptions的默认值。 |
+| keyOptions | [KeyOptions](arkts-test-uitest-keyoptions-i.md) | 否 | 拖动期间要按的键代码的键选项。 <br>默认值：参考keyOptions的默认值。 |
 
 **返回值：**
 
@@ -3559,7 +3559,7 @@ swipeBetweenWithOptions(from: Point, to: Point, options?: TouchOptions): Promise
 | --- | --- | --- | --- |
 | from | [Point](arkts-test-uitest-point-i.md) | 是 | 手指接触屏幕的坐标点。 |
 | to | [Point](arkts-test-uitest-point-i.md) | 是 | 手指离开屏幕的坐标点。 |
-| options | [TouchOptions](arkts-test-uitest-touchoptions-i.md) | 否 | 滑动操作的选项。 只有“速度”和“压力”属性适用于此方法。 设置其他属性将导致BusinessError 17000007。 &lt;br&gt;默认值：参考TouchOptions的默认值。 |
+| options | [TouchOptions](arkts-test-uitest-touchoptions-i.md) | 否 | 滑动操作的选项。 只有“速度”和“压力”属性适用于此方法。 设置其他属性将导致BusinessError 17000007。 <br>默认值：参考TouchOptions的默认值。 |
 
 **返回值：**
 
@@ -3940,7 +3940,7 @@ Trigger pen key operation. Supported combinations: - HANDWRITING mode: HANDWRITI
 | key | [PenKey](arkts-test-uitest-penkey-e.md) | 是 | the pen key to operate. |
 | mode | [PenMode](arkts-test-uitest-penmode-e.md) | 是 | the pen mode. |
 | operation | [PenKeyOperation](arkts-test-uitest-penkeyoperation-e.md) | 是 | the operation type. |
-| options | [PenKeyOperationOptions](arkts-test-uitest-penkeyoperationoptions-i.md) | 否 | the operation options, including optional coordinate point. Default value: Refer to the default value of PenKeyOperationOption. &lt;br&gt;默认值：参考PenKeyOperationOption的默认值。 |
+| options | [PenKeyOperationOptions](arkts-test-uitest-penkeyoperationoptions-i.md) | 否 | the operation options, including optional coordinate point. Default value: Refer to the default value of PenKeyOperationOption. <br>默认值：参考PenKeyOperationOption的默认值。 |
 
 **返回值：**
 

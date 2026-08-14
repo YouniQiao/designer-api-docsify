@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
+import { accessibility } from 'accessibility';
 ```
 
 ## onFlashReminderStateChange
@@ -12,7 +12,7 @@ import { accessibility } from '@kit.AccessibilityKit';
 function onFlashReminderStateChange(callback: Callback<boolean>): void
 ```
 
-Subscribes to the state changes in flash alerts mode. This API uses an asynchronous callback to return the result. > **NOTE：**> > - The callback parameter for registering a listener must use a named function instead of an anonymous function. > Otherwise, a new underlying object is created each time the function is called, causing memory leakage. > > - After calling this method, you must use > [accessibility.offFlashReminderStateChange](arkts-accessibility-accessibility-offflashreminderstatechange-f.md#offFlashReminderStateChange) > to cancel the listener before the object's lifecycle ends. Otherwise, a crash may occur.
+Subscribes to the state changes of flash alerts mode. This API uses an asynchronous callback to return the result. > **NOTE：**> > - The callback parameter for registering a listener must use a named function instead of an anonymous function. > Otherwise, a new underlying object is created each time the function is called, causing memory leakage. > > - After calling this method, ensure that > [accessibility.offFlashReminderStateChange](arkts-accessibility-accessibility-offflashreminderstatechange-f.md#offFlashReminderStateChange) is used to > unsubscribe before the component instance is destroyed (for example, in the **aboutToDisappear** lifecycle > callback). Otherwise, a crash may occur.
 
 **Since:** 23
 
@@ -30,7 +30,7 @@ Subscribes to the state changes in flash alerts mode. This API uses an asynchron
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Callback function. Returns **true** if flash alerts mode is enabled; returns **false** otherwise. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. It notifies the state when the flashing reminder mode enabled state changes. The value **true** indicates that the flashing reminder mode is enabled, and **false** indicates that the flashing reminder mode is disabled. |
 
 ## Examples
 

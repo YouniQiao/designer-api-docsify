@@ -15,7 +15,7 @@ The **RPC** module implements communication between processes, including inter-p
 ## Modules to Import
 
 ```TypeScript
-import { rpc } from '@kit.IPCKit';
+import { rpc } from 'rpc';
 ```
 
 ## Summary

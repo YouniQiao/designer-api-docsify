@@ -15,7 +15,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usageStatistics } from '@kit.BackgroundTasksKit';
+import { usageStatistics } from 'usageStatistics';
 ```
 
 ## abilityInFgTotalTime
@@ -24,7 +24,7 @@ import { usageStatistics } from '@kit.BackgroundTasksKit';
 abilityInFgTotalTime?: long
 ```
 
-The total duration, in milliseconds. &lt;br&gt; Unit:ms
+The total duration, in milliseconds. <br> Unit:ms
 
 **Type:** long
 
@@ -46,7 +46,7 @@ The total duration, in milliseconds. &lt;br&gt; Unit:ms
 abilityPrevAccessTime?: long
 ```
 
-The last time when the application was accessed, in milliseconds. &lt;br&gt; Unit:ms
+The last time when the application was accessed, in milliseconds. <br> Unit:ms
 
 **Type:** long
 
@@ -68,7 +68,7 @@ The last time when the application was accessed, in milliseconds. &lt;br&gt; Uni
 abilityPrevSeenTime?: long
 ```
 
-The last time when the application was visible in the foreground, in milliseconds. &lt;br&gt; Unit:ms
+The last time when the application was visible in the foreground, in milliseconds. <br> Unit:ms
 
 **Type:** long
 
@@ -90,7 +90,7 @@ The last time when the application was visible in the foreground, in millisecond
 abilitySeenTotalTime?: long
 ```
 
-The total duration, in milliseconds. &lt;br&gt; Unit:ms
+The total duration, in milliseconds. <br> Unit:ms
 
 **Type:** long
 
@@ -156,7 +156,7 @@ The bundle name of the application.
 fgAbilityAccessTotalTime?: long
 ```
 
-The total duration, in milliseconds. &lt;br&gt; Unit:ms
+The total duration, in milliseconds. <br> Unit:ms
 
 **Type:** long
 
@@ -178,7 +178,7 @@ The total duration, in milliseconds. &lt;br&gt; Unit:ms
 fgAbilityPrevAccessTime?: long
 ```
 
-The last time when the foreground application was accessed, in milliseconds. &lt;br&gt; Unit:ms
+The last time when the foreground application was accessed, in milliseconds. <br> Unit:ms
 
 **Type:** long
 
@@ -222,7 +222,7 @@ The identifier of BundleStatsInfo.
 infosBeginTime?: long
 ```
 
-The time of the first bundle usage record in this {@code BundleActiveInfo} object, in milliseconds. &lt;br&gt; Unit:ms
+The time of the first bundle usage record in this {@code BundleActiveInfo} object, in milliseconds. <br> Unit:ms
 
 **Type:** long
 
@@ -244,7 +244,7 @@ The time of the first bundle usage record in this {@code BundleActiveInfo} objec
 infosEndTime?: long
 ```
 
-The time of the last bundle usage record in this {@code BundleActiveInfo} object, in milliseconds. &lt;br&gt; Unit:ms
+The time of the last bundle usage record in this {@code BundleActiveInfo} object, in milliseconds. <br> Unit:ms
 
 **Type:** long
 

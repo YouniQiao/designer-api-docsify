@@ -15,7 +15,7 @@ Describe the HID device capability fields of this endpoint being queried.
 ## Modules to Import
 
 ```TypeScript
-import { hid } from '@kit.ConnectivityKit';
+import { hid } from 'hid';
 ```
 
 ## description

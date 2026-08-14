@@ -15,7 +15,7 @@ MediaKeySession implements media key management. Before calling any API in Media
 ## Modules to Import
 
 ```TypeScript
-import { drm } from '@kit.DrmKit';
+import { drm } from 'drm';
 ```
 
 ## checkMediaKeyStatus

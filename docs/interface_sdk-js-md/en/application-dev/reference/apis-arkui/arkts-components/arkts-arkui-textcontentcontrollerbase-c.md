@@ -117,7 +117,7 @@ Deletes text within a specified range in the editable content. > **NOTE：**> > 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | TextRange | No | Range of the text to be deleted, including the start and end positions.&lt;br&gt;If the range is not specified, the entire text is deleted. If the start position is not specified, deletion starts from index 0. If the end position is not specified, deletion ends at the end of the text. |
+| range | TextRange | No | Range of the text to be deleted, including the start and end positions.<br>If the range is not specified, the entire text is deleted. If the start position is not specified, deletion starts from index 0. If the end position is not specified, deletion ends at the end of the text. |
 
 ## getCaretOffset
 
@@ -145,7 +145,7 @@ Obtains the position information of the caret. > **NOTE：**> > - If this API is
 
 | Type | Description |
 | --- | --- |
-| [CaretOffset](arkts-arkui-caretoffset-i.md) | Position of the caret relative to the text box. &lt;br&gt;If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
+| [CaretOffset](arkts-arkui-caretoffset-i.md) | Position of the caret relative to the text box. <br>If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
 
 ## getSelection
 
@@ -173,7 +173,7 @@ Obtains the current text selection range.
 
 | Type | Description |
 | --- | --- |
-| TextRange | Current text selection range, or cursor position if no text is selected. &lt;br&gt;If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
+| TextRange | Current text selection range, or cursor position if no text is selected. <br>If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
 
 ## getTextContentLineCount
 
@@ -201,7 +201,7 @@ Obtains the number of lines of the edited text.
 
 | Type | Description |
 | --- | --- |
-| number | Number of lines of the edited text. &lt;br&gt;If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
+| number | Number of lines of the edited text. <br>If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
 
 ## getTextContentRect
 
@@ -229,7 +229,7 @@ Obtains the position of the edited text area relative to the component and its s
 
 | Type | Description |
 | --- | --- |
-| [RectResult](arkts-arkui-rectresult-i.md) | Position of the edited text area relative to the component and its size. &lt;br&gt;If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
+| [RectResult](arkts-arkui-rectresult-i.md) | Position of the edited text area relative to the component and its size. <br>If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
 
 ## scrollToVisible
 
@@ -257,7 +257,7 @@ Passes the start and end indexes to the bound text box components (**TextInput**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | TextRange | No | Text range to be scrolled to the visible area, including the start and end positions. of the text.&lt;br&gt;The start position must be less than or equal to the end position. Otherwise, the API call is invalid. If the start position is less than 0, it is treated as the value **0**. If the end position is greater than the length of the entire text, it is treated as the length of the entire text.&lt;br&gt;If no range is specified, the entire text is used by default. If the start position is not specified, the default start position is 0. If the end position is not specified, the default end position is the length of the entire text. |
+| range | TextRange | No | Text range to be scrolled to the visible area, including the start and end positions. of the text.<br>The start position must be less than or equal to the end position. Otherwise, the API call is invalid. If the start position is less than 0, it is treated as the value **0**. If the end position is greater than the length of the entire text, it is treated as the length of the entire text.<br>If no range is specified, the entire text is used by default. If the start position is not specified, the default start position is 0. If the end position is not specified, the default end position is the length of the entire text. |
 
 ## setStyledPlaceholder
 
@@ -285,5 +285,5 @@ Binds or updates the styled placeholder string. > **NOTE：**> > When the contro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styledString | StyledString | Yes | Styled string for the placeholder. This takes precedence over the plain text. **placeholder** attribute.&lt;br&gt;The placeholder does not support gesture events or hyperlink navigation within styled strings. |
+| styledString | StyledString | Yes | Styled string for the placeholder. This takes precedence over the plain text. **placeholder** attribute.<br>The placeholder does not support gesture events or hyperlink navigation within styled strings. |
 

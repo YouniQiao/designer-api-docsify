@@ -15,7 +15,7 @@ Describes thumbnail decoding parameters.
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'image';
 ```
 
 ## generateThumbnailIfAbsent
@@ -24,7 +24,7 @@ import { image } from '@kit.ImageKit';
 generateThumbnailIfAbsent?: boolean
 ```
 
-Flag to specify whether the thumbnail should be generated, if the image does not have a thumbnail. &lt;br&gt;Default value: true.
+Flag to specify whether the thumbnail should be generated, if the image does not have a thumbnail. <br>Default value: true.
 
 **Type:** boolean
 
@@ -46,7 +46,7 @@ Flag to specify whether the thumbnail should be generated, if the image does not
 maxGeneratedPixelDimension?: int
 ```
 
-This parameter is valid only when generateThumbnailIfAbsent is set to true. The width and height of the image cannot exceed the value of this parameter. The value should be an integer. &lt;br&gt;Unit:px. &lt;br&gt;Default value:512.
+This parameter is valid only when generateThumbnailIfAbsent is set to true. The width and height of the image cannot exceed the value of this parameter. The value should be an integer. <br>Unit:px. <br>Default value:512.
 
 **Type:** int
 

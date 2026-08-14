@@ -15,7 +15,7 @@ DeflatePending return value information.
 ## Modules to Import
 
 ```TypeScript
-import { zlib } from '@kit.BasicServicesKit';
+import { zlib } from 'zlib';
 ```
 
 ## bits

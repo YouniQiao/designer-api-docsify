@@ -15,7 +15,7 @@ Describes the curved area on a waterfall display.
 ## Modules to Import
 
 ```TypeScript
-import { display } from '@kit.ArkUI';
+import { display } from 'display';
 ```
 
 ## bottom

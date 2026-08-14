@@ -17,7 +17,7 @@ class of window extension ability.
 ## Modules to Import
 
 ```TypeScript
-import { WindowExtensionContext } from '@kit.ArkUI';
+import { WindowExtensionContext } from 'WindowExtensionContext';
 ```
 
 ## onConnect

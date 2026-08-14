@@ -38,7 +38,7 @@ Set or reset the callback which is triggered when the scrolling reaches the end 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [VoidCallback](../../apis-arkui/arkts-apis/arkts-arkui-voidcallback-t.md) \| undefined | Yes | callback function, triggered when the scrolling reaches the end position. &lt;br&gt;Passing undefined will unregister the callback. |
+| callback | [VoidCallback](../../apis-arkui/arkts-apis/arkts-arkui-voidcallback-t.md) \| undefined | Yes | callback function, triggered when the scrolling reaches the end position. <br>Passing undefined will unregister the callback. |
 
 ## setOnReachStart
 
@@ -64,7 +64,7 @@ Set or reset the callback which is triggered when the scrolling reaches the star
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [VoidCallback](../../apis-arkui/arkts-apis/arkts-arkui-voidcallback-t.md) \| undefined | Yes | callback function, triggered when the scrolling reaches the start position. &lt;br&gt;Passing undefined will unregister the callback. |
+| callback | [VoidCallback](../../apis-arkui/arkts-apis/arkts-arkui-voidcallback-t.md) \| undefined | Yes | callback function, triggered when the scrolling reaches the start position. <br>Passing undefined will unregister the callback. |
 
 ## setOnScrollFrameBegin
 
@@ -90,7 +90,7 @@ Set or reset the callback which is triggered when scrolling begin each frame.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnScrollFrameBeginCallback](../../apis-arkui/arkts-components/arkts-arkui-onscrollframebegincallback-t.md) \| undefined | Yes | callback function, triggered when the scrolling begin each frame. &lt;br&gt;Passing undefined will unregister the callback. |
+| callback | [OnScrollFrameBeginCallback](../../apis-arkui/arkts-components/arkts-arkui-onscrollframebegincallback-t.md) \| undefined | Yes | callback function, triggered when the scrolling begin each frame. <br>Passing undefined will unregister the callback. |
 
 ## setOnScrollStart
 
@@ -116,7 +116,7 @@ Set or reset the callback which is triggered when the scrolling started.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [VoidCallback](../../apis-arkui/arkts-apis/arkts-arkui-voidcallback-t.md) \| undefined | Yes | callback function, triggered when the scrolling started. &lt;br&gt;Passing undefined will unregister the callback. |
+| callback | [VoidCallback](../../apis-arkui/arkts-apis/arkts-arkui-voidcallback-t.md) \| undefined | Yes | callback function, triggered when the scrolling started. <br>Passing undefined will unregister the callback. |
 
 ## setOnScrollStop
 
@@ -142,5 +142,5 @@ Set or reset the callback which is triggered when the scrolling stopped.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [VoidCallback](../../apis-arkui/arkts-apis/arkts-arkui-voidcallback-t.md) \| undefined | Yes | callback function, triggered when the scrolling stopped. &lt;br&gt;Passing undefined will unregister the callback. |
+| callback | [VoidCallback](../../apis-arkui/arkts-apis/arkts-arkui-voidcallback-t.md) \| undefined | Yes | callback function, triggered when the scrolling stopped. <br>Passing undefined will unregister the callback. |
 

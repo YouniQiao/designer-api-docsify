@@ -167,7 +167,7 @@ Sets the layout mode of the images and texts on the bottom tab.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [LayoutMode](arkts-arkui-layoutmode-e.md) | Yes | Layout mode of the images and text on the bottom tab.&lt;br&gt;Default value: **LayoutMode.VERTICAL |
+| value | [LayoutMode](arkts-arkui-layoutmode-e.md) | Yes | Layout mode of the images and text on the bottom tab.<br>Default value: **LayoutMode.VERTICAL |
 
 **Return value:**
 
@@ -236,7 +236,7 @@ Sets the padding of the bottom tab. It cannot be set in percentage. When the par
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Padding \| Dimension \| LocalizedPadding | Yes | Padding of the bottom tab.&lt;br&gt;Value range: [0, +∞]&lt;br&gt; Default value: **{left:4.0vp,right:4.0vp,top:0.0vp,bottom:0.0vp}**&lt;br&gt;If of the LocalizedPadding type, this attribute supports the mirroring capability.&lt;br&gt;Default value: **{start:LengthMetrics.vp(4),end:LengthMetrics.vp(4),**&lt;br&gt; **top:LengthMetrics.vp(0),bottom:LengthMetrics.vp(0)}<br>**Since:** 12 |
+| value | Padding \| Dimension \| LocalizedPadding | Yes | Padding of the bottom tab.<br>Value range: [0, +∞]<br> Default value: **{left:4.0vp,right:4.0vp,top:0.0vp,bottom:0.0vp}**<br>If of the LocalizedPadding type, this attribute supports the mirroring capability.<br>Default value: **{start:LengthMetrics.vp(4),end:LengthMetrics.vp(4),**<br> **top:LengthMetrics.vp(0),bottom:LengthMetrics.vp(0)}<br>**Since:** 12 |
 
 **Return value:**
 
@@ -270,7 +270,7 @@ Sets whether the images and text on the bottom tab can be symmetrically extended
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether the images and text on the bottom tab can be symmetrically extended by the minimum value of the available space on the left and right bottom tabs.&lt;br&gt;Default value: **false**, indicating that the images and text on the bottom tab cannot be symmetrically extended by the minimum value of the available space on the left and right bottom tabs. |
+| value | boolean | Yes | Whether the images and text on the bottom tab can be symmetrically extended by the minimum value of the available space on the left and right bottom tabs.<br>Default value: **false**, indicating that the images and text on the bottom tab cannot be symmetrically extended by the minimum value of the available space on the left and right bottom tabs. |
 
 **Return value:**
 
@@ -304,7 +304,7 @@ Sets the vertical alignment mode of the images and text on the bottom tab.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | VerticalAlign | Yes | Vertical alignment mode of the images and text on the bottom tab.&lt;br&gt;Default value: **VerticalAlign.Center |
+| value | VerticalAlign | Yes | Vertical alignment mode of the images and text on the bottom tab.<br>Default value: **VerticalAlign.Center |
 
 **Return value:**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { buffer } from '@kit.ArkTS';
+import { buffer } from 'buffer';
 ```
 
 ## from
@@ -87,7 +87,7 @@ Creates a **Buffer** object of the specified length that shares memory with Arra
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[byteOffset/length]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [byteOffset/length] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[byteOffset/length]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [byteOffset/length] |
 
 ## Examples
 
@@ -138,7 +138,7 @@ This creates a view of the ArrayBuffer without copying the underlying memory.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[byteOffset/length]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [byteOffset/length] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[byteOffset/length]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [byteOffset/length] |
 
 
 ## from
@@ -217,7 +217,7 @@ Creates a **Buffer** object based on the specified object.
 | --- | --- | --- | --- |
 | object | Object | Yes | Object that supports **Symbol.toPrimitive** or **valueOf()**. |
 | offsetOrEncoding | int \| string | Yes | Byte offset or encoding format. |
-| length | int | Yes | Length of the **Buffer** object to create, in bytes. This parameter is valid only when the return value of **valueOf()** of **object** is **ArrayBuffer**. Value range: 0 <= length <= ArrayBuffer.byteLength. Error 10200001 is reported if a value outside this range is reported. In other cases, you can set this parameter to any value of the number type. This parameter does not affect the result. |
+| length | int | Yes | Length of the **Buffer** object to create, in bytes. This parameter is valid only when the return value of **valueOf()** of **object** is **ArrayBuffer**. Value range: 0 &lt;= length &lt;= ArrayBuffer.byteLength. Error 10200001 is reported if a value outside this range is reported. In other cases, you can set this parameter to any value of the number type. This parameter does not affect the result. |
 
 **Return value:**
 

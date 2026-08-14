@@ -24,7 +24,7 @@ Deletes an RDB store. This API uses an asynchronous callback to return the resul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context.&lt;br&gt;For details about the application context of the FA model, see Context. &lt;br&gt;For details about the application context of the stage model, see Context. |
+| context | Context | Yes | Application context.<br>For details about the application context of the FA model, see Context. <br>For details about the application context of the stage model, see Context. |
 | name | string | Yes | Name of the RDB store to delete. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
@@ -53,7 +53,7 @@ Deletes an RDB store. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | Context | Yes | Application context.&lt;br&gt;For details about the application context of the FA model, see Context. &lt;br&gt;For details about the application context of the stage model, see Context. |
+| context | Context | Yes | Application context.<br>For details about the application context of the FA model, see Context. <br>For details about the application context of the stage model, see Context. |
 | name | string | Yes | Name of the RDB store to delete. |
 
 **Return value:**

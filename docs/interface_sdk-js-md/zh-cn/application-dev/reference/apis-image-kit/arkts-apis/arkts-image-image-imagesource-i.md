@@ -761,7 +761,7 @@ createThumbnail(options?: DecodingOptionsForThumbnail): Promise<PixelMap | undef
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [DecodingOptionsForThumbnail](arkts-image-image-decodingoptionsforthumbnail-i.md) | 否 | 解码参数，控制是否生成缩略图以及生成缩略图的目标尺寸。 &lt;br&gt;默认表现： &lt;br&gt;- 当图像有缩略图时，解码原始缩略图，返回的PixelMap对象的宽和高与原缩略图保持一致。 &lt;br&gt;- 当原图文件无缩略图时，对原图进行解码后，根据解码参数options下采样生成缩略图，生成后的缩略图PixelMap对象宽和高都限制在512像素以内。 |
+| options | [DecodingOptionsForThumbnail](arkts-image-image-decodingoptionsforthumbnail-i.md) | 否 | 解码参数，控制是否生成缩略图以及生成缩略图的目标尺寸。 <br>默认表现： <br>- 当图像有缩略图时，解码原始缩略图，返回的PixelMap对象的宽和高与原缩略图保持一致。 <br>- 当原图文件无缩略图时，对原图进行解码后，根据解码参数options下采样生成缩略图，生成后的缩略图PixelMap对象宽和高都限制在512像素以内。 |
 
 **返回值：**
 
@@ -804,7 +804,7 @@ createThumbnailSync(options?: DecodingOptionsForThumbnail): PixelMap | undefined
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [DecodingOptionsForThumbnail](arkts-image-image-decodingoptionsforthumbnail-i.md) | 否 | 解码参数，控制是否生成缩略图以及生成缩略图的目标尺寸。 &lt;br&gt;默认表现： &lt;br&gt;- 当图像有缩略图时，解码原始缩略图，返回的PixelMap对象的宽和高与原缩略图保持一致。 &lt;br&gt;- 当原图文件无缩略图时，对原图进行解码后，根据解码参数options下采样生成缩略图，生成后的缩略图PixelMap对象宽和高都限制在512像素以内。 |
+| options | [DecodingOptionsForThumbnail](arkts-image-image-decodingoptionsforthumbnail-i.md) | 否 | 解码参数，控制是否生成缩略图以及生成缩略图的目标尺寸。 <br>默认表现： <br>- 当图像有缩略图时，解码原始缩略图，返回的PixelMap对象的宽和高与原缩略图保持一致。 <br>- 当原图文件无缩略图时，对原图进行解码后，根据解码参数options下采样生成缩略图，生成后的缩略图PixelMap对象宽和高都限制在512像素以内。 |
 
 **返回值：**
 
@@ -1228,7 +1228,7 @@ Get image information from image source synchronously.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | int | 否 | Index of sequence image. If this parameter is specified, default value is 0 &lt;br&gt;The value range is all integers. |
+| index | int | 否 | Index of sequence image. If this parameter is specified, default value is 0 <br>The value range is all integers. |
 
 **返回值：**
 

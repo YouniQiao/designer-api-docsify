@@ -15,7 +15,7 @@ The **Router** module provides APIs to access pages through URLs. You can use th
 ## Modules to Import
 
 ```TypeScript
-import { router } from '@kit.ArkUI';
+import { router } from 'router';
 ```
 
 ## Summary

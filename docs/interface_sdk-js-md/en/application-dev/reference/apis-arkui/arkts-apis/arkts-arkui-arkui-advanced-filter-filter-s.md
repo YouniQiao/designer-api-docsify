@@ -15,7 +15,10 @@ Declare Filter.The Filter is used in scenarios where multi-dimensional filtering
 ## Modules to Import
 
 ```TypeScript
-import { FilterType, Filter, FilterParams, FilterResult } from '@kit.ArkUI';
+import { Filter } from 'Filter';
+import { FilterParams } from 'FilterParams';
+import { FilterResult } from 'FilterResult';
+import { FilterType } from 'FilterType';
 ```
 
 ## additionFilters

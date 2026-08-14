@@ -15,7 +15,7 @@ Describes the metadata keys used by a gain map, that is, the values available fo
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'image';
 ```
 
 ## alternateHeadroom

@@ -61,7 +61,7 @@ let appInstance: common.ApplicationInstance = {
 try {
   securityManager.removeAllowedPermissionBundle(wantTemp, permission, appInstance);
   console.info(`Succeeded in removing allowed permission bundle.`);
-} catch(err) {
+} catch (err) {
   console.error(`Failed to remove allowed permission bundle. Code: ${err.code}, message: ${err.message}`);
 }
 ```

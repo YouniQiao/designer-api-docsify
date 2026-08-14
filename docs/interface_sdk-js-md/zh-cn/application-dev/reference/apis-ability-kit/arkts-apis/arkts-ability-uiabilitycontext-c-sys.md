@@ -446,7 +446,7 @@ requestModalUIExtensionWithAccount(pickerWant: Want, accountId: int): Promise<vo
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | pickerWant | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 需要用于启动UIExtensionAbility的信息 |
-| accountId | int | 是 | 要请求的帐户 &lt;br&gt;取值范围为全体整数。 |
+| accountId | int | 是 | 要请求的帐户 <br>取值范围为全体整数。 |
 
 **返回值：**
 

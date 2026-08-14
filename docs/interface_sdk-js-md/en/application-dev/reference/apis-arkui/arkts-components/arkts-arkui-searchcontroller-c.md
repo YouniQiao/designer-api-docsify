@@ -40,7 +40,7 @@ Sets the position of the caret.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Length from the start of the character string to the position where the caret is located. &lt;br&gt;Values less than 0 are treated as **0**. Values greater than the string length are treated as the string length. |
+| value | number | Yes | Length from the start of the character string to the position where the caret is located. <br>Values less than 0 are treated as **0**. Values greater than the string length are treated as the string length. |
 
 ## constructor
 
@@ -88,9 +88,9 @@ Sets the text selection range and highlights the selected text when the componen
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| selectionStart | number | Yes | Start position of the text selection range. The start position of text in the text box is 0.&lt;br&gt;A value less than 0 is handled as **0**. A value greater than the maximum text length is handled as the maximum text length.&lt;br&gt; |
-| selectionEnd | number | Yes | End position of the text selection range.&lt;br&gt;A value less than 0 is handled as **0**. A value greater than the maximum text length is handled as the maximum text length.&lt;br&gt; |
-| options | SelectionOptions | No | Configuration options for text selection.&lt;br&gt;Default value: **MenuPolicy.DEFAULT |
+| selectionStart | number | Yes | Start position of the text selection range. The start position of text in the text box is 0.<br>A value less than 0 is handled as **0**. A value greater than the maximum text length is handled as the maximum text length.<br> |
+| selectionEnd | number | Yes | End position of the text selection range.<br>A value less than 0 is handled as **0**. A value greater than the maximum text length is handled as the maximum text length.<br> |
+| options | SelectionOptions | No | Configuration options for text selection.<br>Default value: **MenuPolicy.DEFAULT |
 
 ## stopEditing
 

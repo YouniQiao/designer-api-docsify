@@ -15,7 +15,7 @@ Defines application instance data. It is used as an input parameter in the [addU
 ## Modules to Import
 
 ```TypeScript
-import { common } from '@kit.MDMKit';
+import { common } from 'common';
 ```
 
 ## accountId

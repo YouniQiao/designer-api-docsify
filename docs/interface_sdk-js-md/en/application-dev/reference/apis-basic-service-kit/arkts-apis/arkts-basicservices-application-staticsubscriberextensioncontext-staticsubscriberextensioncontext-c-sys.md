@@ -19,7 +19,7 @@ The **StaticSubscriberExtensionContext** module, inherited from **ExtensionConte
 ## Modules to Import
 
 ```TypeScript
-import { StaticSubscriberExtensionContext } from '@kit.BasicServicesKit';
+import { StaticSubscriberExtensionContext } from 'StaticSubscriberExtensionContext';
 ```
 
 ## startAbility

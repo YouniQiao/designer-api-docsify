@@ -27,7 +27,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hichecker } from '@kit.PerformanceAnalysisKit';
+import { hichecker } from 'hichecker';
 ```
 
 ## Summary

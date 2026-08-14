@@ -39,7 +39,7 @@ addBuilderSpan(value: CustomBuilder, options?: RichEditorBuilderSpanOptions): in
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | CustomBuilder | 是 | 自定义组件。 |
-| options | [RichEditorBuilderSpanOptions](arkts-arkui-richeditor-richeditorbuilderspanoptions-i.md) | 否 | builder选项。&lt;br/&gt;缺省时，按照 [RichEditorBuilderSpanOptions](arkts-arkui-richeditor-richeditorbuilderspanoptions-i.md#RichEditorBuilderSpanOptions)中的默认值生效。 |
+| options | [RichEditorBuilderSpanOptions](arkts-arkui-richeditor-richeditorbuilderspanoptions-i.md) | 否 | builder选项。<br/>缺省时，按照 [RichEditorBuilderSpanOptions](arkts-arkui-richeditor-richeditorbuilderspanoptions-i.md#RichEditorBuilderSpanOptions)中的默认值生效。 |
 
 **返回值：**
 
@@ -72,13 +72,13 @@ addImageSpan(value: PixelMap | ResourceStr, options?: RichEditorImageSpanOptions
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | [PixelMap](../arkts-components/arkts-arkui-pixelmap-t.md) \| [ResourceStr](arkts-arkui-resourcestr-t.md) | 是 | 图片内容。 |
-| options | [RichEditorImageSpanOptions](arkts-arkui-richeditor-richeditorimagespanoptions-i.md) | 否 | 图片选项。&lt;br/&gt;缺省时，按照 [RichEditorImageSpanOptions](arkts-arkui-richeditor-richeditorimagespanoptions-i.md#RichEditorImageSpanOptions)中的默认值生效。 |
+| options | [RichEditorImageSpanOptions](arkts-arkui-richeditor-richeditorimagespanoptions-i.md) | 否 | 图片选项。<br/>缺省时，按照 [RichEditorImageSpanOptions](arkts-arkui-richeditor-richeditorimagespanoptions-i.md#RichEditorImageSpanOptions)中的默认值生效。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| int | 添加完成的ImageSpan所在的位置。&lt;br/&gt;返回undefined时表示controller未与组件绑定。 |
+| int | 添加完成的ImageSpan所在的位置。<br/>返回undefined时表示controller未与组件绑定。 |
 
 ## addSymbolSpan
 
@@ -105,7 +105,7 @@ addSymbolSpan(value: Resource, options?: RichEditorSymbolSpanOptions): int | und
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md) | 是 | 组件内容。 |
-| options | [RichEditorSymbolSpanOptions](arkts-arkui-richeditor-richeditorsymbolspanoptions-i.md) | 否 | 组件选项。&lt;br/&gt;缺省时，按照 [RichEditorSymbolSpanOptions](arkts-arkui-richeditor-richeditorsymbolspanoptions-i.md#RichEditorSymbolSpanOptions)中的默认值生效。 |
+| options | [RichEditorSymbolSpanOptions](arkts-arkui-richeditor-richeditorsymbolspanoptions-i.md) | 否 | 组件选项。<br/>缺省时，按照 [RichEditorSymbolSpanOptions](arkts-arkui-richeditor-richeditorsymbolspanoptions-i.md#RichEditorSymbolSpanOptions)中的默认值生效。 |
 
 **返回值：**
 
@@ -137,14 +137,14 @@ addTextSpan(content: ResourceStr, options?: RichEditorTextSpanOptions): int | un
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | [ResourceStr](arkts-arkui-resourcestr-t.md) | 是 | 文本内容。 &lt;br&gt;从API version 20开始，支持Resource类型。 |
-| options | [RichEditorTextSpanOptions](arkts-arkui-richeditor-richeditortextspanoptions-i.md) | 否 | 文本选项。&lt;br/&gt;缺省时，按照 [RichEditorTextSpanOptions](arkts-arkui-richeditor-richeditortextspanoptions-i.md#RichEditorTextSpanOptions)中的默认值生效。 |
+| content | [ResourceStr](arkts-arkui-resourcestr-t.md) | 是 | 文本内容。 <br>从API version 20开始，支持Resource类型。 |
+| options | [RichEditorTextSpanOptions](arkts-arkui-richeditor-richeditortextspanoptions-i.md) | 否 | 文本选项。<br/>缺省时，按照 [RichEditorTextSpanOptions](arkts-arkui-richeditor-richeditortextspanoptions-i.md#RichEditorTextSpanOptions)中的默认值生效。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| int | 添加完成的TextSpan所在的位置。&lt;br/&gt;返回undefined时表示controller未与组件绑定。 |
+| int | 添加完成的TextSpan所在的位置。<br/>返回undefined时表示controller未与组件绑定。 |
 
 ## deleteSpans
 
@@ -202,7 +202,7 @@ fromStyledString(value: StyledString): Array<RichEditorSpan> | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[RichEditorSpan](arkts-arkui-richeditorspan-t.md)&gt; | 文本和图片Span信息。&lt;br/&gt;返回undefined时表示controller未与组件绑定。 |
+| Array&lt;[RichEditorSpan](arkts-arkui-richeditorspan-t.md)&gt; | 文本和图片Span信息。<br/>返回undefined时表示controller未与组件绑定。 |
 
 **错误码：**
 
@@ -234,13 +234,13 @@ getParagraphs(value?: RichEditorRange): Array<RichEditorParagraphResult> | undef
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [RichEditorRange](arkts-arkui-richeditor-richeditorrange-i.md) | 否 | 需要获取段落的范围。&lt;br/&gt;缺省时，获取所有段落信息。 |
+| value | [RichEditorRange](arkts-arkui-richeditor-richeditorrange-i.md) | 否 | 需要获取段落的范围。<br/>缺省时，获取所有段落信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[RichEditorParagraphResult](arkts-arkui-richeditor-richeditorparagraphresult-i.md)&gt; | 选中段落的信息。&lt;br/&gt;返回undefined时表示controller未与组件绑定。 |
+| Array&lt;[RichEditorParagraphResult](arkts-arkui-richeditor-richeditorparagraphresult-i.md)&gt; | 选中段落的信息。<br/>返回undefined时表示controller未与组件绑定。 |
 
 ## getSelection
 
@@ -266,7 +266,7 @@ getSelection(): RichEditorSelection | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [RichEditorSelection](arkts-arkui-richeditor-richeditorselection-i.md) | 选中内容信息。&lt;br/&gt;返回undefined时表示controller未与组件绑定。 |
+| [RichEditorSelection](arkts-arkui-richeditor-richeditorselection-i.md) | 选中内容信息。<br/>返回undefined时表示controller未与组件绑定。 |
 
 ## getSpans
 
@@ -292,13 +292,13 @@ getSpans(value?: RichEditorRange): Array<RichEditorImageSpanResult | RichEditorT
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [RichEditorRange](arkts-arkui-richeditor-richeditorrange-i.md) | 否 | 需要获取span范围。&lt;br/&gt;缺省时，获取所有span信息。 |
+| value | [RichEditorRange](arkts-arkui-richeditor-richeditorrange-i.md) | 否 | 需要获取span范围。<br/>缺省时，获取所有span信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[RichEditorImageSpanResult](arkts-arkui-richeditor-richeditorimagespanresult-i.md) \| [RichEditorTextSpanResult](arkts-arkui-richeditor-richeditortextspanresult-i.md)&gt; | 文本和图片Span信息。&lt;br/&gt;返回undefined 时表示controller未与组件绑定。 |
+| Array&lt;[RichEditorImageSpanResult](arkts-arkui-richeditor-richeditorimagespanresult-i.md) \| [RichEditorTextSpanResult](arkts-arkui-richeditor-richeditortextspanresult-i.md)&gt; | 文本和图片Span信息。<br/>返回undefined 时表示controller未与组件绑定。 |
 
 ## toStyledString
 
@@ -330,7 +330,7 @@ toStyledString(value: RichEditorRange): StyledString | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [StyledString](arkts-arkui-styledstring-styledstring-c.md) | 转换后的属性字符串。&lt;br/&gt;返回undefined时表示controller未与组件绑定。 |
+| [StyledString](arkts-arkui-styledstring-styledstring-c.md) | 转换后的属性字符串。<br/>返回undefined时表示controller未与组件绑定。 |
 
 **错误码：**
 

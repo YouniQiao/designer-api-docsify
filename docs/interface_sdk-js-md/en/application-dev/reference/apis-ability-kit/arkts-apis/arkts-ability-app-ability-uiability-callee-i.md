@@ -15,7 +15,11 @@ Background communication object created by the system for the UIAbility, known a
 ## Modules to Import
 
 ```TypeScript
-import { Callee, Caller, OnReleaseCallback, OnRemoteStateChangeCallback, CalleeCallback } from '@kit.AbilityKit';
+import { Callee } from 'Callee';
+import { CalleeCallback } from 'CalleeCallback';
+import { Caller } from 'Caller';
+import { OnReleaseCallback } from 'OnReleaseCallback';
+import { OnRemoteStateChangeCallback } from 'OnRemoteStateChangeCallback';
 ```
 
 ## off_string

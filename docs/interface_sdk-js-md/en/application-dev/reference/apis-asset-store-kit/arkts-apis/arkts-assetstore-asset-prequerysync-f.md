@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { asset } from '@kit.AssetStoreKit';
+import { asset } from 'asset';
 ```
 
 ## preQuerySync
@@ -36,7 +36,7 @@ Performs preprocessing for the asset query. This API is used when user authentic
 
 | Type | Description |
 | --- | --- |
-| Uint8Array | Challenge value. &lt;br&gt;**Note：**: The challenge value is used for subsequent user authentication. |
+| Uint8Array | Challenge value. <br>**Note：**: The challenge value is used for subsequent user authentication. |
 
 **Error codes:**
 

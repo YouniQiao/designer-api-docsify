@@ -15,7 +15,7 @@ Describes packet information returned in real time by the transfer callback.
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from '@kit.BasicServicesKit';
+import { usbManager } from 'usbManager';
 ```
 
 ## actualLength

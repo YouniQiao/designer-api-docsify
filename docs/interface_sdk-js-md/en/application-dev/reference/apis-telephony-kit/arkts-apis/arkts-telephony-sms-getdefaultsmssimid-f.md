@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sms } from '@kit.TelephonyKit';
+import { sms } from 'sms';
 ```
 
 ## getDefaultSmsSimId
@@ -28,7 +28,7 @@ Obtains the default ID of the SIM card used to send SMS messages. This API uses 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. &lt;br&gt;The return value is bound to the SIM card and increases from 1. &lt;br&gt;The return value is **-1** if no SIM card is detected. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | Yes | Callback used to return the result. <br>The return value is bound to the SIM card and increases from 1. <br>The return value is **-1** if no SIM card is detected. |
 
 **Error codes:**
 
@@ -76,7 +76,7 @@ Obtains the default ID of the SIM card used to send SMS messages. This API uses 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;int&gt; | Promise used to return the result. &lt;br&gt;The return value is bound to the SIM card and increases from 1. &lt;br&gt;The return value is **-1** if no SIM card is detected. |
+| Promise&lt;int&gt; | Promise used to return the result. <br>The return value is bound to the SIM card and increases from 1. <br>The return value is **-1** if no SIM card is detected. |
 
 **Error codes:**
 

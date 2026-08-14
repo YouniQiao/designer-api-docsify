@@ -17,7 +17,7 @@ Represents the brief application information.
 ## Modules to Import
 
 ```TypeScript
-import { cloudExtension } from '@kit.ArkData';
+import { cloudExtension } from 'cloudExtension';
 ```
 
 ## appId

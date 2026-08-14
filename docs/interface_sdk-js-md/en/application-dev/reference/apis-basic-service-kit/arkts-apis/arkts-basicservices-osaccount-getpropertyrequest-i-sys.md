@@ -17,7 +17,7 @@ Defines the request for obtaining property information.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'osAccount';
 ```
 
 ## accountId

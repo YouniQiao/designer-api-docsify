@@ -15,7 +15,7 @@ Implements a **GeolocationPermissions** object. > **NOTE：**> > - The sample ef
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'webview';
 ```
 
 ## allowGeolocation
@@ -43,13 +43,13 @@ Allows the specified origin to use the geolocation information.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | origin | string | Yes | Index of the origin. |
-| incognito | boolean | No | Whether to allow the specified origin to use the geolocation information in incognito mode. The value **true** means to allow the specified origin to use the geolocation information in incognito mode, and **false** means the opposite.&lt;br&gt;Default value: **false**.&lt;br&gt;If **null** or **undefined** is passed in, the value is **false**.<br>**Since:** 11 |
+| incognito | boolean | No | Whether to allow the specified origin to use the geolocation information in incognito mode. The value **true** means to allow the specified origin to use the geolocation information in incognito mode, and **false** means the opposite.<br>Default value: **false**.<br>If **null** or **undefined** is passed in, the value is **false**.<br>**Since:** 11 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100011](../errorcode-webview.md#17100011-invalid-origin) | Invalid origin. The origin format must follow defined in RFC 6454. |
 
 ## deleteAllGeolocation
@@ -76,7 +76,7 @@ Clears the geolocation permission status of all sources.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| incognito | boolean | No | Whether to clear the geolocation permission status of all sources in incognito mode. The value **true** means to clear the geolocation permission status of all sources in incognito mode, and **false** means the opposite.&lt;br&gt;Default value: **false**.&lt;br&gt;If **null** or **undefined** is passed in, the value is **false**.<br>**Since:** 11 |
+| incognito | boolean | No | Whether to clear the geolocation permission status of all sources in incognito mode. The value **true** means to clear the geolocation permission status of all sources in incognito mode, and **false** means the opposite.<br>Default value: **false**.<br>If **null** or **undefined** is passed in, the value is **false**.<br>**Since:** 11 |
 
 ## deleteGeolocation
 
@@ -103,13 +103,13 @@ Clears the geolocation permission status of a specified origin.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | origin | string | Yes | Index of the origin. |
-| incognito | boolean | No | Whether to clear the geolocation permission status of a specified origin in incognito mode. The value **true** means to clear the geolocation permission status of a specified origin in incognito mode, and **false** means the opposite.&lt;br&gt;Default value: **false**.&lt;br&gt;If **null** or **undefined** is passed in, the value is **false**.<br>**Since:** 11 |
+| incognito | boolean | No | Whether to clear the geolocation permission status of a specified origin in incognito mode. The value **true** means to clear the geolocation permission status of a specified origin in incognito mode, and **false** means the opposite.<br>Default value: **false**.<br>If **null** or **undefined** is passed in, the value is **false**.<br>**Since:** 11 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100011](../errorcode-webview.md#17100011-invalid-origin) | Invalid origin. The origin format must follow defined in RFC 6454. |
 
 ## getAccessibleGeolocation
@@ -137,19 +137,19 @@ Obtains the geolocation permission status of the specified origin. This API uses
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | origin | string | Yes | Index of the origin. |
-| incognito | boolean | No | Whether to obtain the geolocation permission status of the specified origin in incognito mode. The value **true** means to obtain the geolocation permission status of the specified origin in incognito mode, and **false** means the opposite.&lt;br&gt;Default value: **false**.&lt;br&gt;If **null** or **undefined** is passed, error code **401** is thrown.<br>**Since:** 11 |
+| incognito | boolean | No | Whether to obtain the geolocation permission status of the specified origin in incognito mode. The value **true** means to obtain the geolocation permission status of the specified origin in incognito mode, and **false** means the opposite.<br>Default value: **false**.<br>If **null** or **undefined** is passed, error code **401** is thrown.<br>**Since:** 11 |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the geolocation permission status of the specified origin. &lt;br&gt;If the operation is successful, the value **true** means that the geolocation permission is granted, and **false** means the opposite. &lt;br&gt;If the operation fails, the geolocation permission status of the specified origin is not found. |
+| Promise&lt;boolean&gt; | Promise used to return the geolocation permission status of the specified origin. <br>If the operation is successful, the value **true** means that the geolocation permission is granted, and **false** means the opposite. <br>If the operation fails, the geolocation permission status of the specified origin is not found. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100011](../errorcode-webview.md#17100011-invalid-origin) | Invalid origin. The origin format must follow defined in RFC 6454. |
 
 ## getAccessibleGeolocation
@@ -177,14 +177,14 @@ Obtains the geolocation permission status of the specified origin. This API uses
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | origin | string | Yes | Index of the origin. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the geolocation permission status of the specified origin.&lt;br&gt;If the operation is successful, the value **true** means that the geolocation permission is granted, and **false** means the opposite.&lt;br&gt;If the operation fails, the geolocation permission status of the specified origin is not found. |
-| incognito | boolean | No | Whether to obtain the geolocation permission status of the specified origin in incognito mode. The value **true** means to obtain the geolocation permission status of the specified origin in incognito mode, and **false** means the opposite.&lt;br&gt;Default value: **false**.&lt;br&gt;If **null** or **undefined** is passed, error code **401** is thrown.<br>**Since:** 11 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the geolocation permission status of the specified origin.<br>If the operation is successful, the value **true** means that the geolocation permission is granted, and **false** means the opposite.<br>If the operation fails, the geolocation permission status of the specified origin is not found. |
+| incognito | boolean | No | Whether to obtain the geolocation permission status of the specified origin in incognito mode. The value **true** means to obtain the geolocation permission status of the specified origin in incognito mode, and **false** means the opposite.<br>Default value: **false**.<br>If **null** or **undefined** is passed, error code **401** is thrown.<br>**Since:** 11 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100011](../errorcode-webview.md#17100011-invalid-origin) | Invalid origin. The origin format must follow defined in RFC 6454. |
 
 ## getStoredGeolocation
@@ -211,7 +211,7 @@ Obtains the geolocation permission status of all origins. This API uses a promis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| incognito | boolean | No | Whether to obtain the geolocation permission status of all origins in incognito mode. The value **true** means to obtain the geolocation permission status of all origins in incognito mode, and **false** means the opposite.&lt;br&gt;Default value: **false**.&lt;br&gt;If **null** or **undefined** is passed, error code **401** is thrown.<br>**Since:** 11 |
+| incognito | boolean | No | Whether to obtain the geolocation permission status of all origins in incognito mode. The value **true** means to obtain the geolocation permission status of all origins in incognito mode, and **false** means the opposite.<br>Default value: **false**.<br>If **null** or **undefined** is passed, error code **401** is thrown.<br>**Since:** 11 |
 
 **Return value:**
 
@@ -223,7 +223,7 @@ Obtains the geolocation permission status of all origins. This API uses a promis
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 
 ## getStoredGeolocation
 
@@ -250,11 +250,11 @@ Obtains the geolocation permission status of all origins. This API uses an async
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the geolocation permission status of all origins. |
-| incognito | boolean | No | Whether to obtain the geolocation permission status of all origins in incognito mode. The value **true** means to obtain the geolocation permission status of all origins in incognito mode, and **false** means the opposite.&lt;br&gt;Default value: **false**.&lt;br&gt;If **null** or **undefined** is passed, error code **401** is thrown.<br>**Since:** 11 |
+| incognito | boolean | No | Whether to obtain the geolocation permission status of all origins in incognito mode. The value **true** means to obtain the geolocation permission status of all origins in incognito mode, and **false** means the opposite.<br>Default value: **false**.<br>If **null** or **undefined** is passed, error code **401** is thrown.<br>**Since:** 11 |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 

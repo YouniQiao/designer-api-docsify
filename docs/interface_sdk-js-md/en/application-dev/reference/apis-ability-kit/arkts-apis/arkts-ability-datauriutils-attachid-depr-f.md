@@ -6,7 +6,7 @@
 function attachId(uri: string, id: number): string
 ```
 
-Attaches the given ID to the end of the path component of the given uri.
+Attaches an ID to the end of a given URI.
 
 **Since:** 7
 
@@ -24,14 +24,14 @@ Attaches the given ID to the end of the path component of the given uri.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | Indicates the uri string from which the ID is to be obtained. |
-| id | number | Yes | Indicates the ID to attach. |
+| uri | string | Yes | Target URI object. |
+| id | number | Yes | ID to be attached. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Returns the uri object with the given ID attached. |
+| string | URI object with the ID attached. |
 
 ## Examples
 

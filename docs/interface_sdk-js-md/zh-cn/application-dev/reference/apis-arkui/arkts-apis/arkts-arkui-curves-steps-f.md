@@ -25,7 +25,7 @@ function steps(count: number, end: boolean): string
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | count | number | 是 | 阶梯的数量，需要为正整数。 |
-| end | boolean | 是 | 在每个间隔的起点或是终点发生阶跃变化。&lt;br&gt;-true：在终点发生阶跃变化。&lt;br&gt;-false：在起点发生阶跃变化。 |
+| end | boolean | 是 | 在每个间隔的起点或是终点发生阶跃变化。<br>-true：在终点发生阶跃变化。<br>-false：在起点发生阶跃变化。 |
 
 **返回值：**
 

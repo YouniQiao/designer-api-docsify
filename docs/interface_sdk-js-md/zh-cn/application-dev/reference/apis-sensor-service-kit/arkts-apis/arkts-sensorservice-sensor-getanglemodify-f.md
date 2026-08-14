@@ -91,11 +91,11 @@ const promise = sensor.getAngleModify([1, 0, 0, 0, 1, 0, 0, 0, 1], [1, 0, 0, 0, 
 promise.then((data: Array<number>) => {
   console.info('Succeeded in getting AngleModify_promise.');
   for (let i = 0; i < data.length; i++) {
-    console.info("Succeeded in getting data[" + i + "]: " + data[i]);
+    console.info('Succeeded in getting data[' + i + ']: ' + data[i]);
   }
 }).catch((reason: BusinessError) => {
   let e: BusinessError = reason as BusinessError;
-  console.info("Succeeded in getting promise::catch", e);
+  console.info('Succeeded in getting promise::catch', e);
 })
 ```
 

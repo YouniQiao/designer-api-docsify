@@ -17,7 +17,7 @@ Define AppIntentEntity.
 ## Modules to Import
 
 ```TypeScript
-import { insightIntent } from '@kit.AbilityKit';
+import { insightIntent } from 'insightIntent';
 ```
 
 ## onQueryEntity

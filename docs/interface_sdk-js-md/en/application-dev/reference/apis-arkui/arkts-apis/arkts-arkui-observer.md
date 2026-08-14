@@ -17,7 +17,7 @@ Provides APIs for listening for UI component behavior changes. > **NOTE：**> > 
 ## Modules to Import
 
 ```TypeScript
-import { uiObserver } from '@kit.ArkUI';
+import { uiObserver } from 'uiObserver';
 ```
 
 ## Summary

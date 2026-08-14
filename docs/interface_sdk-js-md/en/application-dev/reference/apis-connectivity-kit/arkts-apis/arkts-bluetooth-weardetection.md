@@ -15,7 +15,7 @@ Provides methods to manage the wearing detection function.
 ## Modules to Import
 
 ```TypeScript
-import { wearDetection } from '@kit.ConnectivityKit';
+import { wearDetection } from 'wearDetection';
 ```
 
 ## Summary

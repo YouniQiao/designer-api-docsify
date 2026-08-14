@@ -15,7 +15,7 @@ Describes the configuration for window animation.
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'window';
 ```
 
 ## curve

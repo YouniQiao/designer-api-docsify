@@ -15,7 +15,29 @@ For details about how to use AppStorageV2, see [AppStorageV2: Storing Applicatio
 ## Modules to Import
 
 ```TypeScript
-import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInactive, PersistenceV2, ComponentDisappear, MutableBinding, CustomComponentLifecycleObserver, AppStorageV2, Type, ConnectOptionsCollections, CollectionType, CustomComponentContext, IReusePool, ConnectOptions, UIUtils, ComponentActive, CustomComponentLifecycle, ComponentInit, ComponentAppear, ComponentBuilt, ComponentRecycle, IReusableInfo } from '@kit.ArkUI';
+import { AppStorageV2 } from 'AppStorageV2';
+import { PersistenceV2 } from 'PersistenceV2';
+import { Type } from 'Type';
+import { UIUtils } from 'UIUtils';
+import { ConnectOptions } from 'ConnectOptions';
+import { Binding } from 'Binding';
+import { MutableBinding } from 'MutableBinding';
+import { CustomComponentLifecycle } from 'CustomComponentLifecycle';
+import { CustomComponentLifecycleObserver } from 'CustomComponentLifecycleObserver';
+import { CustomComponentLifecycleState } from 'CustomComponentLifecycleState';
+import { ComponentInit } from 'ComponentInit';
+import { ComponentAppear } from 'ComponentAppear';
+import { ComponentBuilt } from 'ComponentBuilt';
+import { ComponentReuse } from 'ComponentReuse';
+import { ComponentActive } from 'ComponentActive';
+import { ComponentInactive } from 'ComponentInactive';
+import { ComponentRecycle } from 'ComponentRecycle';
+import { ComponentDisappear } from 'ComponentDisappear';
+import { CollectionType } from 'CollectionType';
+import { ConnectOptionsCollections } from 'ConnectOptionsCollections';
+import { CustomComponentContext } from 'CustomComponentContext';
+import { IReusePool } from 'IReusePool';
+import { IReusableInfo } from 'IReusableInfo';
 ```
 
 ## connect
@@ -58,6 +80,26 @@ Stores key-value pair data in the application memory. If the given key already e
 | --- | --- |
 | T | Returns data if the creation or data acquisition from AppStorageV2 is successful; returns **undefined** otherwise. |
 
+## Examples
+
+```TypeScript
+import { AppStorageV2 } from '@kit.ArkUI';
+
+@ObservedV2
+class SampleClass {
+  @Trace p: number = 0;
+}
+
+// Store the key-value pair with the key SampleClass and the value as a new instance of SampleClass() in memory, and assign it to variable as1.
+const as1: SampleClass | undefined = AppStorageV2.connect(SampleClass, () => new SampleClass());
+
+// Store the key-value pair with the key key_as2 and the value as a new instance of SampleClass() in memory, and assign it to variable as2.
+const as2: SampleClass = AppStorageV2.connect(SampleClass, 'key_as2', () => new SampleClass())!;
+
+// As the key SampleClass already exists in AppStorageV2, the value associated with the key is returned to variable as3.
+const as3: SampleClass = AppStorageV2.connect(SampleClass) as SampleClass;
+```
+
 ## keys
 
 ```TypeScript
@@ -86,6 +128,13 @@ Obtains all keys in [AppStorageV2](../../../ui/state-management/arkts-new-appsto
 | --- | --- |
 | Array&lt;string&gt; | All keys stored in AppStorageV2. |
 
+## Examples
+
+```TypeScript
+// Assuming there are two keys (key_as1 and key_as2) in AppStorageV2, the following will return an array containing these keys and assign it to keys.
+const keys: Array<string> = AppStorageV2.keys();
+```
+
 ## remove
 
 ```TypeScript
@@ -113,4 +162,17 @@ Removes the specified key-value pair from [AppStorageV2](../../../ui/state-manag
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | keyOrType | string \| [TypeConstructorWithArgs](arkts-arkui-arkui-statemanagement-typeconstructorwithargs-i.md)&lt;T&gt; | Yes | Key to be removed. If a type is specified, the key to be removed is the name of that type. |
+
+## Examples
+
+```TypeScript
+// Assuming that there is a key named key_as2 in AppStorageV2, the following will remove the corresponding key-value pair from AppStorageV2.
+AppStorageV2.remove('key_as2');
+
+// Assuming that there is a key named SampleClass in AppStorageV2, the following will remove the corresponding key-value pair from AppStorageV2.
+AppStorageV2.remove(SampleClass);
+
+// Assuming there is no key named key_as1 in AppStorageV2, the following will result in a warning.
+AppStorageV2.remove('key_as1');
+```
 

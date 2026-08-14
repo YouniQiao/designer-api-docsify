@@ -18,7 +18,7 @@
 backgroundColor?: ColorMetrics
 ```
 
-按钮背景颜色。&lt;br/&gt;默认值：\\$r('sys.color.ohos_id_color_foreground_contrary')
+按钮背景颜色。<br/>默认值：\\$r('sys.color.ohos_id_color_foreground_contrary')
 
 **类型：** [ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md)
 
@@ -42,7 +42,7 @@ backgroundColor?: ColorMetrics
 borderColor?: ColorMetrics
 ```
 
-按钮描边颜色。&lt;br/&gt;默认值：#330A59F7
+按钮描边颜色。<br/>默认值：#330A59F7
 
 **类型：** [ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md)
 
@@ -66,7 +66,7 @@ borderColor?: ColorMetrics
 progressColor?: ColorMetrics
 ```
 
-进度条颜色。&lt;br/&gt;默认值：#330A59F7
+进度条颜色。<br/>默认值：#330A59F7
 
 **类型：** [ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md)
 
@@ -90,7 +90,7 @@ progressColor?: ColorMetrics
 textColor?: ColorMetrics
 ```
 
-按钮文本颜色。&lt;br/&gt;默认值：系统默认值(#CE000000)
+按钮文本颜色。<br/>默认值：系统默认值(#CE000000)
 
 **类型：** [ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md)
 

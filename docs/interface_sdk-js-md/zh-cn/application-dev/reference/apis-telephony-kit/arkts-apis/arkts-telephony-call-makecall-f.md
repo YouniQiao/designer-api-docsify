@@ -44,7 +44,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 // 从API15开始支持tel格式电话号码，如："tel:13xxxx"
 call.makeCall("138xxxxxxxx", (err: BusinessError) => {
     if (err) {
-        console.error(`makeCall fail, err->${JSON.stringify(err)}`);
+        console.error(`makeCall fail, 本次操作异常，err->Code${err.code}, message:${err.message}请稍后重试。`);
     } else {
         console.info(`makeCall success`);
     }
@@ -102,7 +102,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 call.makeCall("138xxxxxxxx").then(() => {
     console.info(`makeCall success`);
 }).catch((err: BusinessError) => {
-    console.error(`makeCall fail, promise: err->${JSON.stringify(err)}`);
+    console.error(`makeCall fail, promise: 本次操作异常，err->Code${err.code}, message:${err.message}请稍后重试。`);
 });
 ```
 
@@ -153,16 +153,17 @@ function makeCall(phoneNumber: string, options?: MakeCallOptions): Promise<void>
 
 ```TypeScript
 import { call } from '@kit.TelephonyKit';
+import { BusinessError } from '@kit.BasicServicesKit';
 
-// 设置通话结束后是否返回当前App
+// 设置是否隐藏拨号界面
 let makeOptions: call.MakeCallOptions = {
   isHideDialScreen: true
-}
+};
 
 call.makeCall("138xxxxxxxx", makeOptions).then(() => {
     console.info(`makeCall success`);
 }).catch((err: BusinessError) => {
-    console.error(`makeCall fail, promise: err->${JSON.stringify(err)}`);
+    console.error(`makeCall fail, promise: 本次操作异常，err->Code${err.code}, message:${err.message}请稍后重试。`);
 });
 ```
 
@@ -220,7 +221,7 @@ let context = this.getUIContext().getHostContext() as Context;
 call.makeCall(context, "138xxxxxxxx").then(() => {
     console.info(`makeCall success`);
 }).catch((err: BusinessError) => {
-    console.error(`makeCall fail, promise: err->${JSON.stringify(err)}`);
+    console.error(`makeCall fail, promise: 本次操作异常，err->Code${err.code}, message:${err.message}请稍后重试。`);
 });
 ```
 

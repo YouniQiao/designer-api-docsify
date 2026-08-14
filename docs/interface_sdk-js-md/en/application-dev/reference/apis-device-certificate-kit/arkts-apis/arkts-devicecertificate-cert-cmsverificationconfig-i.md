@@ -15,7 +15,7 @@ Represents CMS verification configuration.
 ## Modules to Import
 
 ```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
+import { cert } from 'cert';
 ```
 
 ## contentData

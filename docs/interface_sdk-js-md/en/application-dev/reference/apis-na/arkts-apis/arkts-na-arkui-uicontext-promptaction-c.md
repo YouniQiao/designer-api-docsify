@@ -48,7 +48,7 @@ Close the custom dialog with frameNode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [103301](../../apis-arkui/errorcode-promptAction.md#103301-dialog-content-error) | The ComponentContent is incorrect. |
 | [103303](../../apis-arkui/errorcode-promptAction.md#103303-custom-dialog-box-not-found) | The ComponentContent cannot be found. |
 
@@ -83,7 +83,7 @@ Close the custom dialog.
 | Error Code ID | Error Message |
 | --- | --- |
 | [100001](../../apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 
 ## closeMenu
 
@@ -121,7 +121,7 @@ Close menu with frameNode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [103301](../../apis-arkui/errorcode-promptAction.md#103301-dialog-content-error) | The ComponentContent is incorrect. |
 | [103303](../../apis-arkui/errorcode-promptAction.md#103303-custom-dialog-box-not-found) | The ComponentContent cannot be found. |
 
@@ -161,7 +161,7 @@ Close popup with frameNode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [103301](../../apis-arkui/errorcode-promptAction.md#103301-dialog-content-error) | The ComponentContent is incorrect. |
 | [103303](../../apis-arkui/errorcode-promptAction.md#103303-custom-dialog-box-not-found) | The ComponentContent cannot be found. |
 
@@ -196,7 +196,7 @@ Close the notification text.
 | Error Code ID | Error Message |
 | --- | --- |
 | [100001](../../apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [103401](../../apis-arkui/errorcode-promptAction.md#103401-toast-not-found) | Cannot find the toast. |
 
 ## getBottomOrder
@@ -289,7 +289,7 @@ Open the custom dialog with frameNode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [103301](../../apis-arkui/errorcode-promptAction.md#103301-dialog-content-error) | The ComponentContent is incorrect. |
 | [103302](../../apis-arkui/errorcode-promptAction.md#103302-custom-dialog-box-already-exists) | Dialog content already exists. |
 
@@ -330,7 +330,7 @@ Open the custom dialog.
 | Error Code ID | Error Message |
 | --- | --- |
 | [100001](../../apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 
 ## openCustomDialogWithController
 
@@ -372,7 +372,7 @@ Open the custom dialog with frameNode and controller.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [103301](../../apis-arkui/errorcode-promptAction.md#103301-dialog-content-error) | The ComponentContent is incorrect. |
 | [103302](../../apis-arkui/errorcode-promptAction.md#103302-custom-dialog-box-already-exists) | Dialog content already exists. |
 
@@ -414,7 +414,7 @@ Open menu with frameNode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [103301](../../apis-arkui/errorcode-promptAction.md#103301-dialog-content-error) | The content is incorrect. |
 | [103302](../../apis-arkui/errorcode-promptAction.md#103302-custom-dialog-box-already-exists) | The content already exists. |
 | [103305](../../apis-arkui/errorcode-promptAction.md#103305-node-not-mounted) | The target node is not in the component tree. |
@@ -459,7 +459,7 @@ Open popup with frameNode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [103301](../../apis-arkui/errorcode-promptAction.md#103301-dialog-content-error) | The content is incorrect. |
 | [103302](../../apis-arkui/errorcode-promptAction.md#103302-custom-dialog-box-already-exists) | The content already exists. |
 | [103305](../../apis-arkui/errorcode-promptAction.md#103305-node-not-mounted) | The target node is not in the component tree. |
@@ -502,7 +502,7 @@ Displays the notification text.
 | Error Code ID | Error Message |
 | --- | --- |
 | [100001](../../apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 
 ## presentCustomDialog
 
@@ -544,7 +544,7 @@ Present the custom dialog with controller.
 | Error Code ID | Error Message |
 | --- | --- |
 | [100001](../../apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 
 ## showActionMenu
 
@@ -579,7 +579,7 @@ Displays the menu.
 | Error Code ID | Error Message |
 | --- | --- |
 | [100001](../../apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 
 ## showActionMenu
 
@@ -618,7 +618,7 @@ Displays the menu.
 | Error Code ID | Error Message |
 | --- | --- |
 | [100001](../../apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 
 ## showDialog
 
@@ -653,7 +653,7 @@ Displays the dialog box.
 | Error Code ID | Error Message |
 | --- | --- |
 | [100001](../../apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 
 ## showDialog
 
@@ -692,7 +692,7 @@ Displays the dialog box.
 | Error Code ID | Error Message |
 | --- | --- |
 | [100001](../../apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 
 ## showToast
 
@@ -725,7 +725,7 @@ Displays the notification text.
 | Error Code ID | Error Message |
 | --- | --- |
 | [100001](../../apis-arkui/errorcode-internal.md#100001-internal-error) | Internal error. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 
 ## updateCustomDialog
 
@@ -765,7 +765,7 @@ Update the custom dialog with frameNode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [103301](../../apis-arkui/errorcode-promptAction.md#103301-dialog-content-error) | The ComponentContent is incorrect. |
 | [103303](../../apis-arkui/errorcode-promptAction.md#103303-custom-dialog-box-not-found) | The ComponentContent cannot be found. |
 
@@ -808,7 +808,7 @@ Update menu with frameNode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [103301](../../apis-arkui/errorcode-promptAction.md#103301-dialog-content-error) | The ComponentContent is incorrect. |
 | [103303](../../apis-arkui/errorcode-promptAction.md#103303-custom-dialog-box-not-found) | The ComponentContent cannot be found. |
 
@@ -851,7 +851,7 @@ Update popup with frameNode.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [103301](../../apis-arkui/errorcode-promptAction.md#103301-dialog-content-error) | The ComponentContent is incorrect. |
 | [103303](../../apis-arkui/errorcode-promptAction.md#103303-custom-dialog-box-not-found) | The ComponentContent cannot be found. |
 

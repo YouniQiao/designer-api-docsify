@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cdsm } from '@kit.ConnectivityKit';
+import { cdsm } from 'cdsm';
 ```
 
 ## createCdsmClient
@@ -32,7 +32,7 @@ Creates a CDSM client instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| address | string | Yes | Indicates the address of CDSM server. &lt;br&gt;The length must be 17. Value constraint: The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF. |
+| address | string | Yes | Indicates the address of CDSM server. <br>The length must be 17. Value constraint: The value consists of hexadecimal digits and colons (:), for example, 11:22:33:AA:BB:FF. |
 
 **Return value:**
 

@@ -6,7 +6,7 @@
 function isAudioMonoEnabled(): Promise<boolean>
 ```
 
-判断单声道音频模式是否开启。使用Promise异步回调。
+查询单声道音频模式是否开启。使用Promise异步回调。
 
 **起始版本：** 23
 

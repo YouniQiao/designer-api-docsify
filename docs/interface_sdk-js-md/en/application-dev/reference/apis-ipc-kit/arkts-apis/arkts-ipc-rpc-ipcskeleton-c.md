@@ -15,7 +15,7 @@ Obtains IPC context, including the UID and PID, local and remote device IDs, and
 ## Modules to Import
 
 ```TypeScript
-import { rpc } from '@kit.IPCKit';
+import { rpc } from 'rpc';
 ```
 
 ## flushCmdBuffer

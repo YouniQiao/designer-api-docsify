@@ -15,7 +15,7 @@ MediaAssetDataHandler is a media asset handler used to customize the media asset
 ## Modules to Import
 
 ```TypeScript
-import { photoAccessHelper } from '@kit.MediaLibraryKit';
+import { photoAccessHelper } from 'photoAccessHelper';
 ```
 
 ## onDataPrepared

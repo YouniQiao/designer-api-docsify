@@ -15,7 +15,7 @@ Manages SSAP client. Before calling a SSAP client method, you must use [createCl
 ## Modules to Import
 
 ```TypeScript
-import { ssap } from '@kit.ConnectivityKit';
+import { ssap } from 'ssap';
 ```
 
 ## callMethod
@@ -245,7 +245,7 @@ Writes the descriptor of a server. This method does not support writing client p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| descriptor | PropertyDescriptor | Yes | Indicates the descriptor to write. &lt;br&gt;The descriptor type should not be CLIENT_PROPERTY_CONFIG. |
+| descriptor | PropertyDescriptor | Yes | Indicates the descriptor to write. <br>The descriptor type should not be CLIENT_PROPERTY_CONFIG. |
 
 **Return value:**
 

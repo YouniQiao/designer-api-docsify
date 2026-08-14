@@ -1,6 +1,6 @@
 # AtomicServiceOptions
 
-**AtomicServiceOptions** is used as an input parameter of [openAtomicService()](arkts-ability-uiabilitycontext-c.md#openAtomicService) to carry arguments. It inherits from [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md#StartOptions).
+**AtomicServiceOptions**可以作为 [openAtomicService()](arkts-ability-uiabilitycontext-c.md#openAtomicService)的入参，用于携带参数。继承自 [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md#StartOptions)。
 
 **继承/实现关系：** AtomicServiceOptions extends [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md#StartOptions)
 

@@ -236,7 +236,7 @@ Obtains the value from the specified column in the current row as a Long.
 
 | Type | Description |
 | --- | --- |
-| number | Value in the specified column as a Long. &lt;br&gt;The value range supported by this API is **Number.MIN_SAFE_INTEGER** to **Number.MAX_SAFE_INTEGER**. If the value is out of this range, use [getDouble]{ |
+| number | Value in the specified column as a Long. <br>The value range supported by this API is **Number.MIN_SAFE_INTEGER** to **Number.MAX_SAFE_INTEGER**. If the value is out of this range, use [getDouble]{ |
 
 ## Examples
 

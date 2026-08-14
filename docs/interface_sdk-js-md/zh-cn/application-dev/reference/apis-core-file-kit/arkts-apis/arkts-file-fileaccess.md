@@ -8,7 +8,7 @@ fileAccess模块是基于[extension](../../../application-models/extensionabilit
 
 **废弃版本：** 23
 
-**替代接口：** [fileIo](arkts-corefile-fileio-n.md#fileIo)
+**替代接口：** [fileIo](../../apis-na/arkts-apis/arkts-na-fileio-n.md#fileIo)
 
 <!--Device-unnamed-declare namespace fileAccess--><!--Device-unnamed-declare namespace fileAccess-End-->
 

@@ -661,7 +661,7 @@ isRecordingAvailable(capturerInfo: AudioCapturerInfo): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 代表录制是否可以启动成功。true表示成功，false表示失败。 &lt;br&gt;仅检测是否可以获取音频采集器信息中音源类型的焦点。通常在音频录制启动前调用，否则已存在的录制流可能会拒绝其启动。 |
+| boolean | 代表录制是否可以启动成功。true表示成功，false表示失败。 <br>仅检测是否可以获取音频采集器信息中音源类型的焦点。通常在音频录制启动前调用，否则已存在的录制流可能会拒绝其启动。 |
 
 **错误码：**
 

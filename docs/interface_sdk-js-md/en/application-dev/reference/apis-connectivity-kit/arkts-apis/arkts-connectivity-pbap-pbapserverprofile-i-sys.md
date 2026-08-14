@@ -17,7 +17,7 @@ Manager PBAP server profile.
 ## Modules to Import
 
 ```TypeScript
-import { pbap } from '@kit.ConnectivityKit';
+import { pbap } from 'pbap';
 ```
 
 ## disconnect

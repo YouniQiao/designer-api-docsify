@@ -155,7 +155,7 @@ getLoadedTimeRanges(): Promise<Array<Range>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[Range](arkts-media-multimedia-media-range-i.md)&gt;&gt; | Promise对象，返回播放器当前已加载的时间区间段的列表。 &lt;br&gt;时间区间段以播放时间轴上的[start, end]位置表示，单位为毫秒。 |
+| Promise&lt;Array&lt;[Range](arkts-media-multimedia-media-range-i.md)&gt;&gt; | Promise对象，返回播放器当前已加载的时间区间段的列表。 <br>时间区间段以播放时间轴上的[start, end]位置表示，单位为毫秒。 |
 
 ## getPlaybackInfo
 
@@ -253,7 +253,7 @@ getSeekableTimeRanges(): Promise<Array<Range>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[Range](arkts-media-multimedia-media-range-i.md)&gt;&gt; | Promise对象，返回播放器当前可跳转的时间区间段的列表。 &lt;br&gt;时间区间段以播放时间轴上的[start, end]位置表示，单位为毫秒。 |
+| Promise&lt;Array&lt;[Range](arkts-media-multimedia-media-range-i.md)&gt;&gt; | Promise对象，返回播放器当前可跳转的时间区间段的列表。 <br>时间区间段以播放时间轴上的[start, end]位置表示，单位为毫秒。 |
 
 ## getSelectedTracks
 
@@ -731,7 +731,7 @@ seek(timeMs: int, mode?: SeekMode): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| timeMs | int | 是 | 指定的跳转时间节点，单位毫秒（ms），取值范围为 [0, [duration](../../../reference/apis-media-kit/arkts-apis-media-AVPlayer.md#属性)]。&lt;br&gt;当模式为 SEEK_CONTINUOUS时，可以取值-1，表示SEEK_CONTINUOUS模式结束。该值必须为整数。 |
+| timeMs | int | 是 | 指定的跳转时间节点，单位毫秒（ms），取值范围为 [0, [duration](../../../reference/apis-media-kit/arkts-apis-media-AVPlayer.md#属性)]。<br>当模式为 SEEK_CONTINUOUS时，可以取值-1，表示SEEK_CONTINUOUS模式结束。该值必须为整数。 |
 | mode | [SeekMode](arkts-media-multimedia-media-seekmode-e.md) | 否 | 基于视频I帧的跳转模式，默认为SEEK_PREV_SYNC模式，**仅在视频资源播放时设置**。 |
 
 ## seekToDefaultPosition
@@ -786,8 +786,8 @@ selectTrack(index: int, mode?: SwitchMode): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | int | 是 | 多音视频资源的轨道索引。该值必须为整数。&lt;br&gt;取值约束：可通过 [getTrackDescription](#getTrackDescription)接口返回的音视频轨道信息 MediaDescription中读取的key为MD_KEY_TRACK_INDEX所对应的值。&lt;br&gt;每个 key值的Object类型和范围，请参考MediaDescriptionKey对应Key值的说明。 |
-| mode | [SwitchMode](arkts-media-multimedia-media-switchmode-e.md) | 否 | 切换轨道的模式。&lt;br&gt;取值约束：该模式仅适用于视频轨道的切换。&lt;br&gt;默认值：SMOOTH模式，在片段末尾进行切换，以确保视频播放的连续性。 **仅在DASH/HLS协议网络流视频轨切换时生效。**&lt;br&gt;从API版本26.0.0开始支持HLS协议网络流视频。<br>**起始版本：** 26.0.0 |
+| index | int | 是 | 多音视频资源的轨道索引。该值必须为整数。<br>取值约束：可通过 [getTrackDescription](#getTrackDescription)接口返回的音视频轨道信息 MediaDescription中读取的key为MD_KEY_TRACK_INDEX所对应的值。<br>每个 key值的Object类型和范围，请参考MediaDescriptionKey对应Key值的说明。 |
+| mode | [SwitchMode](arkts-media-multimedia-media-switchmode-e.md) | 否 | 切换轨道的模式。<br>取值约束：该模式仅适用于视频轨道的切换。<br>默认值：SMOOTH模式，在片段末尾进行切换，以确保视频播放的连续性。 **仅在DASH/HLS协议网络流视频轨切换时生效。**<br>从API版本26.0.0开始支持HLS协议网络流视频。<br>**起始版本：** 26.0.0 |
 
 **返回值：**
 
@@ -826,8 +826,8 @@ setMediaMuted(mediaType: MediaType, muted: boolean): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| mediaType | [MediaType](arkts-media-multimedia-media-mediatype-e.md) | 是 | 媒体类型枚举。&lt;br&gt;**API version 12-19**：仅支持设置MEDIA_TYPE_AUD。&lt;br&gt;**API version 20及以后**：增 加支持设置MEDIA_TYPE_VID。 |
-| muted | boolean | 是 | API version 12-19**：仅支持设置音频播放策略，表示音频是否静音播放。true为静音播放，false为取消静音播放。&lt;br&gt; **API version 20及以后**：增加支持设置视频播放策略，表示视频画面是否关闭。true为关闭画面，false为恢复画面。 |
+| mediaType | [MediaType](arkts-media-multimedia-media-mediatype-e.md) | 是 | 媒体类型枚举。<br>**API version 12-19**：仅支持设置MEDIA_TYPE_AUD。<br>**API version 20及以后**：增 加支持设置MEDIA_TYPE_VID。 |
+| muted | boolean | 是 | API version 12-19**：仅支持设置音频播放策略，表示音频是否静音播放。true为静音播放，false为取消静音播放。<br> **API version 20及以后**：增加支持设置视频播放策略，表示视频画面是否关闭。true为关闭画面，false为恢复画面。 |
 
 **返回值：**
 
@@ -879,7 +879,7 @@ setMediaSource(src: MediaSource, strategy?: PlaybackStrategy): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
 
 ## setPlaybackStrategy

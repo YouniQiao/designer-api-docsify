@@ -254,7 +254,7 @@ padding(value: Padding | Dimension): SubTabBarStyle
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Padding](../../apis-arkui/arkts-apis/arkts-arkui-padding-t.md) \| [Dimension](../../apis-arkui/arkts-apis/arkts-arkui-dimension-t.md) | 是 | 子页签的内边距属性。&lt;br/&gt;取值范围：[0, +∞]&lt;br/&gt;异常值时取默认值。&lt;br /&gt;默认值：{left:8.0vp,right:8.0vp, top:17.0vp,bottom:18.0vp} |
+| value | [Padding](../../apis-arkui/arkts-apis/arkts-arkui-padding-t.md) \| [Dimension](../../apis-arkui/arkts-apis/arkts-arkui-dimension-t.md) | 是 | 子页签的内边距属性。<br/>取值范围：[0, +∞]<br/>异常值时取默认值。&lt;br /&gt;默认值：{left:8.0vp,right:8.0vp, top:17.0vp,bottom:18.0vp} |
 
 **返回值：**
 
@@ -286,7 +286,7 @@ padding(padding: LocalizedPadding): SubTabBarStyle
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| padding | [LocalizedPadding](../../apis-arkui/arkts-apis/arkts-arkui-localizedpadding-i.md) | 是 | 子页签的内边距属性。&lt;br/&gt;异常值时取默认值。&lt;br/&gt;取值范围：[0, +∞]&lt;br/&gt;异常值时取默认值。&lt;br /&gt;默认值：{start: LengthMetrics.vp(8),end:LengthMetrics.vp(8),&lt;br/&gt;top:LengthMetrics.vp(17),bottom:LengthMetrics.vp(18)} |
+| padding | [LocalizedPadding](../../apis-arkui/arkts-apis/arkts-arkui-localizedpadding-i.md) | 是 | 子页签的内边距属性。<br/>异常值时取默认值。<br/>取值范围：[0, +∞]<br/>异常值时取默认值。&lt;br /&gt;默认值：{start: LengthMetrics.vp(8),end:LengthMetrics.vp(8),<br/>top:LengthMetrics.vp(17),bottom:LengthMetrics.vp(18)} |
 
 **返回值：**
 

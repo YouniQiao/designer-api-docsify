@@ -20,7 +20,7 @@ callback?: Callback<BlanklessFrameInterpolationInfo>
 
 Callback for the blankless frame interpolation, which is used to return the blankless frame interpolation information. Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[BlanklessFrameInterpolationInfo](arkts-na-webview-blanklessframeinterpolationinfo-i.md)&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[BlanklessFrameInterpolationInfo](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-blanklessframeinterpolationinfo-i.md)&gt;
 
 **起始版本：** 23
 
@@ -40,7 +40,7 @@ Callback for the blankless frame interpolation, which is used to return the blan
 duration?: int
 ```
 
-Duration of the frame interpolation. The valid range is the union of {0} and [200, 2000]. Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned. The value must be an integer. &lt;br&gt;Unit: ms.
+Duration of the frame interpolation. The valid range is the union of {0} and [200, 2000]. Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned. The value must be an integer. <br>Unit: ms.
 
 **类型：** int
 

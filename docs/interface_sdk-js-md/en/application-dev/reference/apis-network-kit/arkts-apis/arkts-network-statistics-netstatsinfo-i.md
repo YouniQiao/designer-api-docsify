@@ -15,7 +15,7 @@ Detailed information of statistics.
 ## Modules to Import
 
 ```TypeScript
-import { statistics } from '@kit.NetworkKit';
+import { statistics } from 'statistics';
 ```
 
 ## rxBytes

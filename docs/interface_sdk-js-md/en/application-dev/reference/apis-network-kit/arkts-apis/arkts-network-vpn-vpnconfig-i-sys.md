@@ -17,7 +17,7 @@ Define configuration of the VPN network.
 ## Modules to Import
 
 ```TypeScript
-import { vpn } from '@kit.NetworkKit';
+import { vpn } from 'vpn';
 ```
 
 ## addresses

@@ -16,7 +16,7 @@ The module provides basic audio control capabilities, including volume adjustmen
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'audio';
 ```
 
 ## Summary

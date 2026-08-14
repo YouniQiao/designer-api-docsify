@@ -278,7 +278,7 @@ Gets the value for the sec-ch-ua-wow64.
 setArchitecture(arch: string): void
 ```
 
-Sets User-Agent metadata architecture. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; The default value is empty string which means the system default value will be used. &lt;/p&gt;
+Sets User-Agent metadata architecture. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<br> The default value is empty string which means the system default value will be used. &lt;/p&gt;
 
 **Since:** 24
 
@@ -330,7 +330,7 @@ Sets User-Agent metadata bitness default is "".
 setBrandVersionList(brandVersionList: Array<UserAgentBrandVersion>): void
 ```
 
-Sets User-Agent metadata brands and their versions. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; The default value is an empty list which means the system default User-Agent metadata brands and versions will be used to generate the User-Agent client hints. &lt;/p&gt;
+Sets User-Agent metadata brands and their versions. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<br> The default value is an empty list which means the system default User-Agent metadata brands and versions will be used to generate the User-Agent client hints. &lt;/p&gt;
 
 **Since:** 24
 
@@ -356,7 +356,7 @@ Sets User-Agent metadata brands and their versions. &lt;p&gt;&lt;strong&gt;API N
 setFormFactors(formFactors: Array<UserAgentFormFactor>): void
 ```
 
-Sets User-Agent metadata form factors. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; The default value is empty list which means the system default value will be used. Form factor value should be one or more of DESKTOP, AUTOMOTIVE, MOBILE, TABLET, XR, EINK, WATCH. &lt;/p&gt;
+Sets User-Agent metadata form factors. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<br> The default value is empty list which means the system default value will be used. Form factor value should be one or more of DESKTOP, AUTOMOTIVE, MOBILE, TABLET, XR, EINK, WATCH. &lt;/p&gt;
 
 **Since:** 24
 
@@ -382,7 +382,7 @@ Sets User-Agent metadata form factors. &lt;p&gt;&lt;strong&gt;API Note&lt;/stron
 setFullVersion(fullVersion: string): void
 ```
 
-Sets User-Agent metadata full version. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; The default value is empty string which means the system default value will be used. &lt;/p&gt;
+Sets User-Agent metadata full version. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<br> The default value is empty string which means the system default value will be used. &lt;/p&gt;
 
 **Since:** 24
 
@@ -434,7 +434,7 @@ Sets User-Agent metadata mobile, default is true.
 setModel(model: string): void
 ```
 
-Sets User-Agent metadata model. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; The default value is empty string which means the system default value will be used. &lt;/p&gt;
+Sets User-Agent metadata model. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<br> The default value is empty string which means the system default value will be used. &lt;/p&gt;
 
 **Since:** 24
 
@@ -460,7 +460,7 @@ Sets User-Agent metadata model. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&
 setPlatform(platform: string): void
 ```
 
-Sets User-Agent metadata platform. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; The default value is empty string which means the system default value will be used. &lt;/p&gt;
+Sets User-Agent metadata platform. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<br> The default value is empty string which means the system default value will be used. &lt;/p&gt;
 
 **Since:** 24
 
@@ -486,7 +486,7 @@ Sets User-Agent metadata platform. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt
 setPlatformVersion(platformVersion: string): void
 ```
 
-Sets User-Agent metadata platform version. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; The default value is empty string which means the system default value will be used. &lt;/p&gt;
+Sets User-Agent metadata platform version. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<br> The default value is empty string which means the system default value will be used. &lt;/p&gt;
 
 **Since:** 24
 

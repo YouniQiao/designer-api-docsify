@@ -17,7 +17,7 @@ This module is used to obtain business ability information of various applicatio
 ## Modules to Import
 
 ```TypeScript
-import { businessAbilityRouter } from '@kit.AbilityKit';
+import { businessAbilityRouter } from 'businessAbilityRouter';
 ```
 
 ## Summary

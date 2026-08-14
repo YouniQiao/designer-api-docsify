@@ -17,7 +17,7 @@ Describes upload file information.
 ## Modules to Import
 
 ```TypeScript
-import { intelligentVoice } from '@kit.BasicServicesKit';
+import { intelligentVoice } from 'intelligentVoice';
 ```
 
 ## filesContent

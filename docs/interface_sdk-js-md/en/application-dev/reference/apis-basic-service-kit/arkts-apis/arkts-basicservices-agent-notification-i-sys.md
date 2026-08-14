@@ -15,7 +15,7 @@ Describes the custom information of the notification bar.
 ## Modules to Import
 
 ```TypeScript
-import { request } from '@kit.BasicServicesKit';
+import { request } from 'request';
 ```
 
 ## disable

@@ -27,8 +27,8 @@ Sorts the array in-place.
 | --- | --- | --- | --- |
 | array | FixedArray&lt;byte&gt; | Yes | The array to sort. |
 | cmp | (lhs: byte, rhs: byte) =&gt; int | Yes | The comparator function. |
-| begin | int | Yes | The index to start sorting from. &lt;br&gt;The value should be an integer. |
-| end | int | Yes | The index to end sorting at. &lt;br&gt;The value should be an integer. |
+| begin | int | Yes | The index to start sorting from. <br>The value should be an integer. |
+| end | int | Yes | The index to end sorting at. <br>The value should be an integer. |
 
 **Return value:**
 

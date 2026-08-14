@@ -60,32 +60,6 @@ backgroundColor?: ResourceColor
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## defaultFocus
-
-```TypeScript
-defaultFocus?: boolean
-```
-
-按钮是否为默认焦点。
-
-**类型：** boolean
-
-**默认值：** false
-
-**起始版本：** 26.1.0
-
-**ArkTS模式：** 仅支持ArkTS-Dyn，起始版本为26.1.0。
-
-**废弃版本：** -1
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务API中使用。
-
-<!--Device-DialogButton-defaultFocus?: boolean--><!--Device-DialogButton-defaultFocus?: boolean-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 ## enabled
 
 ```TypeScript

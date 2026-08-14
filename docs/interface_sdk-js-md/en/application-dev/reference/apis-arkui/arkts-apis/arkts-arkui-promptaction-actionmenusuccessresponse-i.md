@@ -15,7 +15,9 @@ Describes the action menu response result.
 ## Modules to Import
 
 ```TypeScript
-import { LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
+import { LevelMode } from 'LevelMode';
+import { ImmersiveMode } from 'ImmersiveMode';
+import { LevelOrder } from 'LevelOrder';
 ```
 
 ## index

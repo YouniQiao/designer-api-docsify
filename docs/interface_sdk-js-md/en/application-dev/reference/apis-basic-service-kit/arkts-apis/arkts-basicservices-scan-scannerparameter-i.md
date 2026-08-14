@@ -15,7 +15,7 @@ Defines the scanner parameters.
 ## Modules to Import
 
 ```TypeScript
-import { scan } from '@kit.BasicServicesKit';
+import { scan } from 'scan';
 ```
 
 ## optionConstraintInt

@@ -59,7 +59,7 @@ call.getCallTransferInfo(type, number)
         console.info(`getCallTransferInfo success, data->${JSON.stringify(data)}`);
     })
     .catch((err:BusinessError) => {
-        console.error(`getCallTransferInfo fail, err->${JSON.stringify(err)}`);
+        console.error(`getCallTransferInfo fail, 本次操作异常，err->Code${err.code}, message:${err.message}请稍后重试。`);
     });
 ```
 

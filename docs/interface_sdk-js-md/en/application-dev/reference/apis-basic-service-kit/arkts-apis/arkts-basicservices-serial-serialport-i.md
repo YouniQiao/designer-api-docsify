@@ -15,7 +15,7 @@ Serial port object, which provides information and communication capabilities of
 ## Modules to Import
 
 ```TypeScript
-import { serial } from '@kit.BasicServicesKit';
+import { serial } from 'serial';
 ```
 
 ## close
@@ -211,7 +211,7 @@ Cancels listening for data receiving events on the serial port.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Uint8Array&gt; | No | Callback used to return the data received by the serial port. &lt;br&gt;Default value: Clear all listeners for data receiving events on the serial port. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Uint8Array&gt; | No | Callback used to return the data received by the serial port. <br>Default value: Clear all listeners for data receiving events on the serial port. |
 
 **Error codes:**
 
@@ -244,7 +244,7 @@ This command is used to cancel the monitoring of the USB virtual serial port dis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback of the USB virtual serial port disconnection event. &lt;br&gt;Default value: Clears all callbacks for USB virtual serial port disconnection events. |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback of the USB virtual serial port disconnection event. <br>Default value: Clears all callbacks for USB virtual serial port disconnection events. |
 
 **Error codes:**
 
@@ -344,7 +344,7 @@ Enables the port. This API returns the result asynchronously through a promise.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [SerialConfigs](arkts-basicservices-serial-serialconfigs-i.md) | No | Serial port communication parameter. &lt;br&gt;Default value: Refer to the default value of SerialConfigs. |
+| config | [SerialConfigs](arkts-basicservices-serial-serialconfigs-i.md) | No | Serial port communication parameter. <br>Default value: Refer to the default value of SerialConfigs. |
 
 **Return value:**
 
@@ -500,8 +500,8 @@ Sends data. This API returns the result asynchronously through a promise.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| data | Uint8Array | Yes | Data to be sent. &lt;br&gt;Length range: (0, 4096] |
-| timeout | int | No | Timeout interval. &lt;br&gt;Length range: [0, 300000]. The value must be an integer, in milliseconds. The default value is 0, indicating that when data cannot be written to the port, the API does not wait and directly returns 0. |
+| data | Uint8Array | Yes | Data to be sent. <br>Length range: (0, 4096] |
+| timeout | int | No | Timeout interval. <br>Length range: [0, 300000]. The value must be an integer, in milliseconds. The default value is 0, indicating that when data cannot be written to the port, the API does not wait and directly returns 0. |
 
 **Return value:**
 

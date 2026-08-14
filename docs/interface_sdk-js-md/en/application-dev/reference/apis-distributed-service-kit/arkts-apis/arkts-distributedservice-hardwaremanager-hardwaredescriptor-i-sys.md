@@ -17,7 +17,7 @@ Represents the distributed hardware information.
 ## Modules to Import
 
 ```TypeScript
-import { hardwareManager } from '@kit.DistributedServiceKit';
+import { hardwareManager } from 'hardwareManager';
 ```
 
 ## srcNetworkId

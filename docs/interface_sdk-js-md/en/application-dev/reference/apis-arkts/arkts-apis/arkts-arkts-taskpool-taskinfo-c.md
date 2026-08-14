@@ -15,7 +15,7 @@ Describes the internal information about a task.
 ## Modules to Import
 
 ```TypeScript
-import { taskpool } from '@kit.ArkTS';
+import { taskpool } from 'taskpool';
 ```
 
 ## duration
@@ -46,7 +46,7 @@ Duration that the task has been executed, in ms. The default value is **0**. If 
 name: string
 ```
 
-Task name. You are advised not to change the value.&lt;br&gt; This API can be used in atomic services since API version 12.
+Task name. You are advised not to change the value.<br> This API can be used in atomic services since API version 12.
 
 **Type:** string
 
@@ -68,7 +68,7 @@ Task name. You are advised not to change the value.&lt;br&gt; This API can be us
 state: State
 ```
 
-Task state. You are advised not to change the value.&lt;br&gt; This API can be used in atomic services since API version 11.
+Task state. You are advised not to change the value.<br> This API can be used in atomic services since API version 11.
 
 **Type:** State
 
@@ -92,7 +92,7 @@ Task state. You are advised not to change the value.&lt;br&gt; This API can be u
 taskId: number
 ```
 
-Task ID, which is globally unique by default. You are advised not to change the value.&lt;br&gt; This API can be used in atomic services since API version 11.
+Task ID, which is globally unique by default. You are advised not to change the value.<br> This API can be used in atomic services since API version 11.
 
 **Type:** number
 

@@ -15,7 +15,9 @@ Defines the option of RequestFullWindow interface.
 ## Modules to Import
 
 ```TypeScript
-import { AppResponse, ScreenOnVisibleOptions, RequestFullWindowOptions } from '@kit.ArkUI';
+import { AppResponse } from 'AppResponse';
+import { RequestFullWindowOptions } from 'RequestFullWindowOptions';
+import { ScreenOnVisibleOptions } from 'ScreenOnVisibleOptions';
 ```
 
 ## duration

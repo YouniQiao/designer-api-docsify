@@ -15,7 +15,7 @@ List is implemented based on the singly linked list. Each node has a reference p
 ## Modules to Import
 
 ```TypeScript
-import { List } from '@kit.ArkTS';
+import { List } from 'List';
 ```
 
 ## $_iterator
@@ -1022,7 +1022,7 @@ Find the corresponding element according to the index.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "index" is out of range. It must be >= 0 && <= \\${length - 1}. Received value is: \\${index} |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "index" is out of range. It must be >= 0 && &lt;= \\${length - 1}. Received value is: \\${index} |
 
 ## replaceAllElements
 
@@ -1180,7 +1180,7 @@ Sorts elements in this List.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| comparator | [ListComparatorFn](arkts-arkts-listcomparatorfn-t.md)&lt;T&gt; | Yes | Callback used to return the result.&lt;br&gt; There has been a compatibility change since API version 23. In API version 22 and earlier versions, the type is `(firstValue: T, secondValue: T) => number`.<br>**Since:** 23 |
+| comparator | [ListComparatorFn](arkts-arkts-listcomparatorfn-t.md)&lt;T&gt; | Yes | Callback used to return the result.<br> There has been a compatibility change since API version 23. In API version 22 and earlier versions, the type is `(firstValue: T, secondValue: T) => number`.<br>**Since:** 23 |
 
 **Error codes:**
 

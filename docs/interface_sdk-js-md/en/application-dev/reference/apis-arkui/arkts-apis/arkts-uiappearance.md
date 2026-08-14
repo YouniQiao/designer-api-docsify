@@ -17,7 +17,7 @@ This module provides basic capabilities for obtaining system appearance configur
 ## Modules to Import
 
 ```TypeScript
-import { uiAppearance } from '@kit.ArkUI';
+import { uiAppearance } from 'uiAppearance';
 ```
 
 ## Summary

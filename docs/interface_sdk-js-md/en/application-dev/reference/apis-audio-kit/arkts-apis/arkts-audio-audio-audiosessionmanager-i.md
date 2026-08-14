@@ -15,7 +15,7 @@ This interface implements audio session management. Before calling any API in Au
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'audio';
 ```
 
 ## activateAudioSession
@@ -242,7 +242,7 @@ Obtains the default audio output device set by calling [setDefaultOutputDevice](
 
 | Type | Description |
 | --- | --- |
-| DeviceType | Device type. &lt;br&gt;The options are **EARPIECE**, **SPEAKER**, and **DEFAULT**. |
+| DeviceType | Device type. <br>The options are **EARPIECE**, **SPEAKER**, and **DEFAULT**. |
 
 **Error codes:**
 
@@ -1034,7 +1034,7 @@ Sets audio session behavior parameters. (Multiple flags can be combined.) > **NO
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| behavior | int | Yes | Specifies the audio session behavior.&lt;br&gt;This can be a single flag or a bitwise OR combination of multiple flags.&lt;br&gt;For details about the supported audio session behaviors, see [AudioSessionBehaviorFlags](arkts-audio-audio-audiosessionbehaviorflags-e.md#AudioSessionBehaviorFlags). |
+| behavior | int | Yes | Specifies the audio session behavior.<br>This can be a single flag or a bitwise OR combination of multiple flags.<br>For details about the supported audio session behaviors, see [AudioSessionBehaviorFlags](arkts-audio-audio-audiosessionbehaviorflags-e.md#AudioSessionBehaviorFlags). |
 
 **Error codes:**
 
@@ -1172,7 +1172,7 @@ Sets the default audio output device. This API uses a promise to return the resu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceType | DeviceType | Yes | Device type.&lt;br&gt;The options are **EARPIECE**, **SPEAKER**, and **DEFAULT**. |
+| deviceType | DeviceType | Yes | Device type.<br>The options are **EARPIECE**, **SPEAKER**, and **DEFAULT**. |
 
 **Return value:**
 

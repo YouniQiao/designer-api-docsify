@@ -18,7 +18,7 @@ Provides attribute names and value types of a node element.
 accessibilityFocused: boolean
 ```
 
-Whether the element is focused for accessibility purposes. The value **true** indicates that the element is focused , and **false** indicates the opposite. Default value: **false**.
+Whether the element is in the accessibility focus state. The value **true** indicates that the element is in the accessibility focus state, and **false** indicates the opposite. The default value is **false**.
 
 **Type:** boolean
 
@@ -38,7 +38,7 @@ Whether the element is focused for accessibility purposes. The value **true** in
 accessibilityNextFocusId?: long
 ```
 
-ID of the next component to be focused on. You can use **findElement('elementId')** to obtain the value of this attribute set on the component from the **AccessibilityElementInfo** object. Default value: **-1**.
+ID of the next component to be focused. This attribute value set by the user on the control can be obtained from the AccessibilityElement object queried through findElement('elementId'). The default value is **-1**.
 
 **Type:** long
 
@@ -58,7 +58,7 @@ ID of the next component to be focused on. You can use **findElement('elementId'
 accessibilityPreviousFocusId?: long
 ```
 
-ID of the previous component to be focused on. You can use **findElement('elementId')** to obtain the value of this attribute set on the component from the **AccessibilityElementInfo** object. Default value: **-1**.
+ID of the previously focused component. This attribute value set by the user on the control can be obtained from the AccessibilityElement object queried through findElement('elementId'). The default value is **-1**.
 
 **Type:** long
 
@@ -78,7 +78,7 @@ ID of the previous component to be focused on. You can use **findElement('elemen
 accessibilityScrollable?: boolean
 ```
 
-Whether an element is scrollable for accessibility. This attribute has a higher priority than **scrollable**. - **true** (default): the element is scrollable. - **false**: the element is not scrollable.
+Whether the element is scrollable in accessibility mode. This attribute takes precedence over scrollable, meaning the accessibilityScrollable attribute value prevails. The value **true** indicates scrollable, and **false** indicates not scrollable. The default value is **true**.
 
 **Type:** boolean
 
@@ -138,7 +138,7 @@ Bundle name.
 checkable: boolean
 ```
 
-Whether the element is checkable. The value **true** indicates that the element is checkable, and **false** indicates the opposite. Default value: **false**.
+Whether the element is checkable. The value **true** indicates that the element is checkable, and **false** indicates the opposite. The default value is **false**.
 
 **Type:** boolean
 
@@ -158,7 +158,7 @@ Whether the element is checkable. The value **true** indicates that the element 
 checked: boolean
 ```
 
-Whether the element is checked. The value **true** indicates that the element is checked, and **false** indicates the opposite. Default value: **false**.
+Whether the element is checked. The value **true** indicates that the element is checked, and **false** indicates the opposite. The default value is **false**.
 
 **Type:** boolean
 
@@ -238,7 +238,7 @@ ID of the component to which the element belongs. Default value: **-1**.
 componentType: string
 ```
 
-Type of the component to which the element belongs, for example, **Button** for the button component and **Image** for the image component.
+Component type of the element, for example, 'Button' for the Button component and 'Image' for the Image component.
 
 **Type:** string
 
@@ -278,7 +278,7 @@ List of contents. Set this parameter based on site requirements. No special rest
 currentIndex: int
 ```
 
-Index of the current item. Default value: **0**.
+Index of the current item. The value range is greater than or equal to 0. The default value is **0**.
 
 **Type:** int
 
@@ -298,7 +298,7 @@ Index of the current item. Default value: **0**.
 customComponentType?: string
 ```
 
-Custom component type. It corresponds to [AccessibilityRoleType Enumeration Description](../../apis-arkui/arkts-components/arkts-arkui-accessibilityroletype-e.md#AccessibilityRoleType) of the element.
+Custom component type. Corresponds to the [AccessibilityRoleType](../../apis-arkui/arkts-components/arkts-arkui-accessibilityroletype-e.md#AccessibilityRoleType) of the element. The default value is an empty string.
 
 **Type:** string
 
@@ -358,7 +358,7 @@ Whether the element is editable. The value **true** indicates that the element i
 endIndex: int
 ```
 
-Index of the last list item displayed on the screen. Default value: **0**.
+List index of the last displayed item on the screen. The value range is greater than or equal to 0. The default value is **0**.
 
 **Type:** int
 
@@ -398,7 +398,7 @@ Error status.
 extraInfo?: string
 ```
 
-Extended attributes, which are used to define the attributes of specific components, including: - **CheckboxGroupSelectedStatus**: selection status of the **CheckboxGroup** component. The options are as follows: **0**: selected **1**: partially selected **2**: not selected - **Row**: row where a focused item is located in **Grid**. - **Column**: column where a focused item is located in **Grid**. - **ListItemIndex**: row where a focused item is located in **List**. - **SideBarContainerStates**: expansion state of the expandable components (such as **SideBarContainer** and **Select**). The options are as follows: **0**: collapsed **1**: expanded - **ToggleType**: type of the **Toggle** component. The options are as follows: **0**: checkbox **1**: switch **2**: button - **BindSheet**: position of the **BindSheet** component on the screen. The options are as follows: **0**: high **1**: middle **2**: low - **hasRegisteredHover**: whether the component has registered the **onAccessibilityHover** event callback. The value **1** indicates that the component has registered the event callback; otherwise, this field is not used. - **direction**: layout direction of the **List** component. The value can be **vertical** or **horizontal**. - **expandedState**: expanded state of list items in the **List** component. The value can be **expanded** or **collapsed**. - **componentTypeDescription**: detailed information about the component type.
+Extended attribute used to define properties of specific components. The default value is an empty string. It includes: - CheckboxGroupSelectedStatus: indicates the selection state of the CheckboxGroup component, where **0** indicates selected, **1** indicates partially selected, and **2** indicates unselected. - Row: row information of the focused item in the Grid component, indicating the row number of the item. - Column: column information of the focused item in the Grid component, indicating the column number of the item. - ListItemIndex: row information of the focused item in the List component, indicating the row number of the current item. - SideBarContainerStates: indicates the expanded state of expandable components (SideBarContainer, Select), where **0** indicates collapsed and **1** indicates expanded. - ToggleType: indicates the specific type of the Toggle component, where **0** indicates Checkbox, **1** indicates Switch, and **2** indicates Button. - BindSheet: indicates the display height state of the BindSheet half-modal dialog box component, where **0** indicates large height display state, **1** indicates medium height display state, and **2** indicates small height display state. - hasRegisteredHover: indicates whether the component has registered the onAccessibilityHover event callback. The value **1** indicates that the component has registered the event callback. This field is not used if the callback is not registered. - direction: indicates the layout direction of the List component, where "vertical" indicates vertical and " horizontal" indicates horizontal. - expandedState: indicates the expanded state of a ListItem in the List component, where "expanded" indicates expanded and "collapsed" indicates collapsed. - componentTypeDescription: detailed information about the component type, serving as a supplementary description for componentType.
 
 **Type:** string
 
@@ -478,7 +478,7 @@ Touchable area of an element.
 inputType: int
 ```
 
-Type of the input text. Default value: **0**.
+Type of the input text. Different values correspond to different input modes: **0** indicates no specific type; **1** indicates text; **2** indicates email; **3** indicates date; **4** indicates time; **5** indicates number; **6** indicates password; **7** indicates phone number; **8** indicates username; **9** indicates new password. The default value is **0**.
 
 **Type:** int
 
@@ -638,7 +638,7 @@ Whether the element is visible. The value **true** indicates that the element is
 itemCount: int
 ```
 
-Total number of items. Default value: **0**.
+Total number of items. The value range is greater than or equal to 0. The default value is **0**.
 
 **Type:** int
 
@@ -658,7 +658,7 @@ Total number of items. Default value: **0**.
 lastContent: string
 ```
 
-Last content.
+Content of the last item in a list or scrollable control.
 
 **Type:** string
 
@@ -678,7 +678,7 @@ Last content.
 layer: int
 ```
 
-Display layer of the element.
+Display layer of the element. The value range is greater than or equal to 0. The default value is **0**.
 
 **Type:** int
 
@@ -698,7 +698,7 @@ Display layer of the element.
 longClickable: boolean
 ```
 
-Whether the element is long-clickable. The value **true** indicates that the element is long-clickable, and **false** indicates the opposite. Default value: **false**.
+Whether the element is long-clickable. The value **true** indicates that the element is long-clickable, and **false** indicates the opposite. The default value is **false**.
 
 **Type:** boolean
 
@@ -738,7 +738,7 @@ For scrollable components such as **List** and **Grid**, this attribute indicate
 pageId: int
 ```
 
-Page ID. Default value: **-1**.
+Page ID. The default value is **-1**.
 
 **Type:** int
 
@@ -798,7 +798,7 @@ Whether the element supports multiple lines of text. The value **true** indicate
 rect: Rect
 ```
 
-Area of the element.
+Rectangular area of the element, including position and size information.
 
 **Type:** [Rect](arkts-accessibility-accessibilityextensioncontext-rect-i.md)
 
@@ -838,7 +838,7 @@ Resource name of the element.
 rootElement: AccessibilityElement
 ```
 
-Root element of the window element.
+Root node element of the window element.
 
 **Type:** [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)
 
@@ -878,7 +878,7 @@ Display area of the element.
 scrollable: boolean
 ```
 
-Whether the element is scrollable. The value **true** indicates that the element is scrollable, and **false** indicates the opposite. Default value: **false**.
+Whether the element is scrollable. The value **true** indicates that the element is scrollable, and **false** indicates the opposite. The default value is **false**. In accessibility mode, when the values of accessibilityScrollable and scrollable conflict, the accessibilityScrollable attribute takes precedence.
 
 **Type:** boolean
 
@@ -918,7 +918,7 @@ Whether the element is selected. The value **true** indicates that the element i
 startIndex: int
 ```
 
-Index of the first list item on the screen. Default value: **0**.
+List index of the first item on the screen. The value range is greater than or equal to 0. The default value is **0**.
 
 **Type:** int
 
@@ -958,7 +958,7 @@ Text of the element.
 textLengthLimit: int
 ```
 
-Maximum text length of the element.
+Maximum length limit of the element text. The value range is greater than or equal to 0. The default value is **0**.
 
 **Type:** int
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { overlay } from '@kit.AbilityKit';
+import { overlay } from 'overlay';
 ```
 
 ## setOverlayEnabledByBundleName

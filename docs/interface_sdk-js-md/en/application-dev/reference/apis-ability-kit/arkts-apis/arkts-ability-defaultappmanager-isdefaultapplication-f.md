@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { defaultAppManager } from '@kit.AbilityKit';
+import { defaultAppManager } from 'defaultAppManager';
 ```
 
 ## isDefaultApplication

@@ -15,7 +15,7 @@ Underlying data structure of the ArkTS TypedArray ([Int8Array](arkts-collections
 ## Modules to Import
 
 ```TypeScript
-import { collections } from '@kit.ArkTS';
+import { collections } from 'collections';
 ```
 
 ## constructor

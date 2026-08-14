@@ -32,10 +32,10 @@ function addPermissionUsedRecord(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| tokenID | int | 是 | 目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accessTokenId)字段获取。传入无效值时返回错误码12100001。 &lt;br&gt;取值限定为整数。取值约束：该参数必须为大于0的整数。 &lt;br&gt;BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getBundleInfoSync)。 |
-| permissionName | Permissions | 是 | 需要记录的权限名称。传入无效值时返回错误码12100001。 &lt;br&gt;取值约束：权限名长度不能超过256个字符。 |
-| successCount | int | 是 | 访问成功的次数。传入无效值时返回错误码12100001。 &lt;br&gt;取值限定为整数。取值约束：取值必须为非负整数。 |
-| failCount | int | 是 | 访问失败的次数。传入无效值时返回错误码12100001。 &lt;br&gt;取值限定为整数。取值约束：取值必须为非负整数。 |
+| tokenID | int | 是 | 目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accessTokenId)字段获取。传入无效值时返回错误码12100001。 <br>取值限定为整数。取值约束：该参数必须为大于0的整数。 <br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getBundleInfoSync)。 |
+| permissionName | Permissions | 是 | 需要记录的权限名称。传入无效值时返回错误码12100001。 <br>取值约束：权限名长度不能超过256个字符。 |
+| successCount | int | 是 | 访问成功的次数。传入无效值时返回错误码12100001。 <br>取值限定为整数。取值约束：取值必须为非负整数。 |
+| failCount | int | 是 | 访问失败的次数。传入无效值时返回错误码12100001。 <br>取值限定为整数。取值约束：取值必须为非负整数。 |
 | options | [AddPermissionUsedRecordOptions](arkts-ability-privacymanager-addpermissionusedrecordoptions-i-sys.md) | 否 | 添加权限使用记录可选参数，用于指定敏感权限使用类型和扩展身份。当需要区分权限访问方式（如通过Picker或安全控件访问）或标识调用方扩展身份时传入此参数。<br>**起始版本：** 12 |
 
 **返回值：**
@@ -142,10 +142,10 @@ function addPermissionUsedRecord(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| tokenID | int | 是 | 目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accessTokenId)字段获取。传入无效值时返回错误码12100001。 &lt;br&gt;取值限定为整数。取值约束：该参数必须为大于0的整数。 &lt;br&gt;BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getBundleInfoSync)。 |
-| permissionName | Permissions | 是 | 需要记录的权限名称。传入无效值时返回错误码12100001。 &lt;br&gt;取值约束：权限名长度不能超过256个字符。 |
-| successCount | int | 是 | 访问成功的次数。传入无效值时返回错误码12100001。 &lt;br&gt;取值限定为整数。取值约束：取值必须为非负整数。 |
-| failCount | int | 是 | 访问失败的次数。传入无效值时返回错误码12100001。 &lt;br&gt;取值限定为整数。取值约束：取值必须为非负整数。 |
+| tokenID | int | 是 | 目标应用的身份标识。可通过应用BundleInfo中的ApplicationInfo中的[accessTokenId](arkts-ability-applicationinfo-i.md#accessTokenId)字段获取。传入无效值时返回错误码12100001。 <br>取值限定为整数。取值约束：该参数必须为大于0的整数。 <br>BundleInfo获取可参考：[bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getBundleInfoSync)。 |
+| permissionName | Permissions | 是 | 需要记录的权限名称。传入无效值时返回错误码12100001。 <br>取值约束：权限名长度不能超过256个字符。 |
+| successCount | int | 是 | 访问成功的次数。传入无效值时返回错误码12100001。 <br>取值限定为整数。取值约束：取值必须为非负整数。 |
+| failCount | int | 是 | 访问失败的次数。传入无效值时返回错误码12100001。 <br>取值限定为整数。取值约束：取值必须为非负整数。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当添加使用记录成功时，err为undefined；否则为错误对象。 |
 
 **错误码：**

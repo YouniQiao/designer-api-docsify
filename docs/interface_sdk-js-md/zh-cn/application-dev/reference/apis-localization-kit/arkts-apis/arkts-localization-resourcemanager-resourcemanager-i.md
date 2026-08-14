@@ -1950,7 +1950,7 @@ getDouble(resId: long): double
 
 | 类型 | 说明 |
 | --- | --- |
-| double | 资源ID值对应的数值。 &lt;br&gt;float类型资源不带单位时返回资源文件中定义的原始数值，带"vp"或"fp"单位时返回转换后的像素(px)值。转换公式：像素值 = 原始数值 × densityPixels。 |
+| double | 资源ID值对应的数值。 <br>float类型资源不带单位时返回资源文件中定义的原始数值，带"vp"或"fp"单位时返回转换后的像素(px)值。转换公式：像素值 = 原始数值 × densityPixels。 |
 
 **错误码：**
 
@@ -2027,7 +2027,7 @@ getDoubleByName(resName: string): double
 
 | 类型 | 说明 |
 | --- | --- |
-| double | 资源名称对应的数值。 &lt;br&gt;float类型资源不带单位时返回资源文件中定义的原始数值，带"vp"或"fp"单位时返回转换后的像素(px)值。转换公式：像素值 = 原始数值 × densityPixels。 |
+| double | 资源名称对应的数值。 <br>float类型资源不带单位时返回资源文件中定义的原始数值，带"vp"或"fp"单位时返回转换后的像素(px)值。转换公式：像素值 = 原始数值 × densityPixels。 |
 
 **错误码：**
 
@@ -2100,7 +2100,7 @@ getDoublePluralStringByNameSync(resName: string, num: number, ...args: Array<str
 | --- | --- | --- | --- |
 | resName | string | 是 | 资源名称。 |
 | num | number | 是 | 数量值（浮点数）。根据当前语言的 [单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)获取该数量值对应的字符串。 |
-| args | Array&lt;string \| number&gt; | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字\\$d`、`%数字\\$f`和`%数字\\$s`。 &lt;br&gt;**说明：** &lt;br&gt;- `%%`转义为`%`，如`%%d`格式化后为`%d`。 &lt;br&gt;- `%数字\\$d`中的数字表示参数索引，从`1`开始计数。如`%1\\$d`表示使用`args[0]`格式化，`%2\\$d`表示使用`args[1]`格式化，依此类推。 |
+| args | Array&lt;string \| number&gt; | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字\\$d`、`%数字\\$f`和`%数字\\$s`。 <br>**说明：** <br>- `%%`转义为`%`，如`%%d`格式化后为`%d`。 <br>- `%数字\\$d`中的数字表示参数索引，从`1`开始计数。如`%1\\$d`表示使用`args[0]`格式化，`%2\\$d`表示使用`args[1]`格式化，依此类推。 |
 
 **返回值：**
 
@@ -2188,7 +2188,7 @@ getDoublePluralStringByNameSync(resName: string, num: double, ...args: (string |
 | --- | --- | --- | --- |
 | resName | string | 是 | 资源名称。 |
 | num | double | 是 | 数量值（浮点数）。根据当前语言的 [单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)获取该数量值对应的字符串。 |
-| args | (string \| double)[] | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字\\$d`、`%数字\\$f`和`%数字\\$s`。 &lt;br&gt;**说明：** &lt;br&gt;- `%%`转义为`%`，如`%%d`格式化后为`%d`。 &lt;br&gt;- `%数字\\$d`中的数字表示参数索引，从`1`开始计数。如`%1\\$d`表示使用`args[0]`格式化，`%2\\$d`表示使用`args[1]`格式化，依此类推。 |
+| args | (string \| double)[] | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字\\$d`、`%数字\\$f`和`%数字\\$s`。 <br>**说明：** <br>- `%%`转义为`%`，如`%%d`格式化后为`%d`。 <br>- `%数字\\$d`中的数字表示参数索引，从`1`开始计数。如`%1\\$d`表示使用`args[0]`格式化，`%2\\$d`表示使用`args[1]`格式化，依此类推。 |
 
 **返回值：**
 
@@ -2231,7 +2231,7 @@ getDoublePluralStringValueSync(resId: number, num: number, ...args: Array<string
 | --- | --- | --- | --- |
 | resId | number | 是 | 资源ID值。 |
 | num | number | 是 | 数量值（浮点数）。根据当前语言的 [单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)获取该数量值对应的字符串。 |
-| args | Array&lt;string \| number&gt; | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字\\$d`、`%数字\\$f`和`%数字\\$s`。 &lt;br&gt;**说明：** &lt;br&gt;- `%%`转义为`%`，如`%%d`格式化后为`%d`。 &lt;br&gt;- `%数字\\$d`中的数字表示参数索引，从`1`开始计数。如`%1\\$d`表示使用`args[0]`格式化，`%2\\$d`表示使用`args[1]`格式化，依此类推。 |
+| args | Array&lt;string \| number&gt; | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字\\$d`、`%数字\\$f`和`%数字\\$s`。 <br>**说明：** <br>- `%%`转义为`%`，如`%%d`格式化后为`%d`。 <br>- `%数字\\$d`中的数字表示参数索引，从`1`开始计数。如`%1\\$d`表示使用`args[0]`格式化，`%2\\$d`表示使用`args[1]`格式化，依此类推。 |
 
 **返回值：**
 
@@ -2346,7 +2346,7 @@ getDoublePluralStringValueSync(resId: long, num: double, ...args: (string | doub
 | --- | --- | --- | --- |
 | resId | long | 是 | 资源ID值。 |
 | num | double | 是 | 数量值（浮点数）。根据当前语言的 [单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)获取该数量值对应的字符串。 |
-| args | (string \| double)[] | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字\\$d`、`%数字\\$f`和`%数字\\$s`。 &lt;br&gt;**说明：** &lt;br&gt;- `%%`转义为`%`，如`%%d`格式化后为`%d`。 &lt;br&gt;- `%数字\\$d`中的数字表示参数索引，从`1`开始计数。如`%1\\$d`表示使用`args[0]`格式化，`%2\\$d`表示使用`args[1]`格式化，依此类推。 |
+| args | (string \| double)[] | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字\\$d`、`%数字\\$f`和`%数字\\$s`。 <br>**说明：** <br>- `%%`转义为`%`，如`%%d`格式化后为`%d`。 <br>- `%数字\\$d`中的数字表示参数索引，从`1`开始计数。如`%1\\$d`表示使用`args[0]`格式化，`%2\\$d`表示使用`args[1]`格式化，依此类推。 |
 
 **返回值：**
 
@@ -2393,7 +2393,7 @@ getDoublePluralStringValueSync(resource: Resource, num: number, ...args: Array<s
 | --- | --- | --- | --- |
 | resource | Resource | 是 | 资源信息。 |
 | num | number | 是 | 数量值（浮点数）。根据当前语言的 [单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)获取该数量值对应的字符串。 |
-| args | Array&lt;string \| number&gt; | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字\\$d`、`%数字\\$f`和`%数字\\$s`。 &lt;br&gt;**说明：** &lt;br&gt;- `%%`转义为`%`，如`%%d`格式化后为`%d`。 &lt;br&gt;- `%数字\\$d`中的数字表示参数索引，从`1`开始计数。如`%1\\$d`表示使用`args[0]`格式化，`%2\\$d`表示使用`args[1]`格式化，依此类推。 |
+| args | Array&lt;string \| number&gt; | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字\\$d`、`%数字\\$f`和`%数字\\$s`。 <br>**说明：** <br>- `%%`转义为`%`，如`%%d`格式化后为`%d`。 <br>- `%数字\\$d`中的数字表示参数索引，从`1`开始计数。如`%1\\$d`表示使用`args[0]`格式化，`%2\\$d`表示使用`args[1]`格式化，依此类推。 |
 
 **返回值：**
 
@@ -2482,13 +2482,13 @@ getDrawableDescriptor(resId: long, density?: int, type?: int): DrawableDescripto
 | --- | --- | --- | --- |
 | resId | long | 是 | 资源ID值。 |
 | density | int | 否 | 资源获取需要的屏幕密度，0或缺省表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity)。 |
-| type | int | 否 | 图标类型。默认值为0。 &lt;br&gt;0：表示获取应用自身图标资源。 &lt;br&gt;1：表示获取主题资源包中应用的分层图标资源。 |
+| type | int | 否 | 图标类型。默认值为0。 <br>0：表示获取应用自身图标资源。 <br>1：表示获取主题资源包中应用的分层图标资源。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | 资源ID值对应的DrawableDescriptor对象。 |
+| [DrawableDescriptor](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md) | 资源ID值对应的DrawableDescriptor对象。 |
 
 **错误码：**
 
@@ -2604,13 +2604,13 @@ getDrawableDescriptor(resource: Resource, density?: number, type?: number): Draw
 | --- | --- | --- | --- |
 | resource | Resource | 是 | 资源信息。 |
 | density | number | 否 | 资源获取需要的屏幕密度，0或缺省表示默认屏幕密度。取值具体请参考枚举 [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity)。 |
-| type | number | 否 | 图标类型。默认值为0。 &lt;br&gt;0：表示获取应用自身图标资源。 &lt;br&gt;1：表示获取主题资源包中应用的分层图标资源。 |
+| type | number | 否 | 图标类型。默认值为0。 <br>0：表示获取应用自身图标资源。 <br>1：表示获取主题资源包中应用的分层图标资源。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | 资源ID值对应的DrawableDescriptor对象。 |
+| [DrawableDescriptor](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md) | 资源ID值对应的DrawableDescriptor对象。 |
 
 **错误码：**
 
@@ -2681,13 +2681,13 @@ getDrawableDescriptorByName(resName: string, density?: int, type?: int): Drawabl
 | --- | --- | --- | --- |
 | resName | string | 是 | 资源名称。 |
 | density | int | 否 | 资源获取需要的屏幕密度，0或缺省表示默认屏幕密度。取值具体请参考枚举[ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md#ScreenDensity)。 |
-| type | int | 否 | 图标类型。默认值为0。 &lt;br&gt;0：表示获取应用自身图标资源。 &lt;br&gt;1：表示获取主题资源包中应用的分层图标资源。 &lt;br&gt;2：表示获取主题资源包中应用的动态图标资源。 |
+| type | int | 否 | 图标类型。默认值为0。 <br>0：表示获取应用自身图标资源。 <br>1：表示获取主题资源包中应用的分层图标资源。 <br>2：表示获取主题资源包中应用的动态图标资源。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | 资源名称对应的DrawableDescriptor对象。 |
+| [DrawableDescriptor](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md) | 资源名称对应的DrawableDescriptor对象。 |
 
 **错误码：**
 
@@ -2764,7 +2764,7 @@ getInt(resId: long): int
 
 | 类型 | 说明 |
 | --- | --- |
-| int | 资源ID值对应的数值。 &lt;br&gt;integer类型资源返回资源文件中定义的原始数值。 |
+| int | 资源ID值对应的数值。 <br>integer类型资源返回资源文件中定义的原始数值。 |
 
 **错误码：**
 
@@ -2840,7 +2840,7 @@ getIntByName(resName: string): int
 
 | 类型 | 说明 |
 | --- | --- |
-| int | 资源名称对应的数值。 &lt;br&gt;integer类型资源返回资源文件中定义的原始数值。 |
+| int | 资源名称对应的数值。 <br>integer类型资源返回资源文件中定义的原始数值。 |
 
 **错误码：**
 
@@ -2911,7 +2911,7 @@ getIntPluralStringByNameSync(resName: string, num: number, ...args: Array<string
 | --- | --- | --- | --- |
 | resName | string | 是 | 资源名称。 |
 | num | number | 是 | 数量值（整数）。根据当前语言的 [单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)获取该数量值对应的字符串。 |
-| args | Array&lt;string \| number&gt; | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字\\$d`、`%数字\\$f`和`%数字\\$s`。 &lt;br&gt;**说明：** &lt;br&gt;- `%%`转义为`%`，如`%%d`格式化后为`%d`。 &lt;br&gt;- `%数字\\$d`中的数字表示参数索引，从`1`开始计数。如`%1\\$d`表示使用`args[0]`格式化，`%2\\$d`表示使用`args[1]`格式化，依此类推。 |
+| args | Array&lt;string \| number&gt; | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字\\$d`、`%数字\\$f`和`%数字\\$s`。 <br>**说明：** <br>- `%%`转义为`%`，如`%%d`格式化后为`%d`。 <br>- `%数字\\$d`中的数字表示参数索引，从`1`开始计数。如`%1\\$d`表示使用`args[0]`格式化，`%2\\$d`表示使用`args[1]`格式化，依此类推。 |
 
 **返回值：**
 
@@ -2998,8 +2998,8 @@ getIntPluralStringByNameSync(resName: string, num: int, ...args: (string | doubl
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resName | string | 是 | 资源名称。 |
-| num | int | 是 | 数量值（整数）。根据当前语言的 [单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)获取该数量值对应的字符串。 &lt;br&gt;取值限定为整数。 |
-| args | (string \| double)[] | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字\\$d`、`%数字\\$f`和`%数字\\$s`。 &lt;br&gt;**说明：** &lt;br&gt;- `%%`转义为`%`，如`%%d`格式化后为`%d`。 &lt;br&gt;- `%数字\\$d`中的数字表示参数索引，从`1`开始计数。如`%1\\$d`表示使用`args[0]`格式化，`%2\\$d`表示使用`args[1]`格式化，依此类推。 |
+| num | int | 是 | 数量值（整数）。根据当前语言的 [单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)获取该数量值对应的字符串。 <br>取值限定为整数。 |
+| args | (string \| double)[] | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字\\$d`、`%数字\\$f`和`%数字\\$s`。 <br>**说明：** <br>- `%%`转义为`%`，如`%%d`格式化后为`%d`。 <br>- `%数字\\$d`中的数字表示参数索引，从`1`开始计数。如`%1\\$d`表示使用`args[0]`格式化，`%2\\$d`表示使用`args[1]`格式化，依此类推。 |
 
 **返回值：**
 
@@ -3042,7 +3042,7 @@ getIntPluralStringValueSync(resId: number, num: number,...args: Array<string | n
 | --- | --- | --- | --- |
 | resId | number | 是 | 资源ID值。 |
 | num | number | 是 | 数量值（整数）。根据当前语言的 [单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)获取该数量值对应的字符串。 |
-| args | Array&lt;string \| number&gt; | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字\\$d`、`%数字\\$f`和`%数字\\$s`。 &lt;br&gt;**说明：** &lt;br&gt;- `%%`转义为`%`，如`%%d`格式化后为`%d`。 &lt;br&gt;- `%数字\\$d`中的数字表示参数索引，从`1`开始计数。如`%1\\$d`表示使用`args[0]`格式化，`%2\\$d`表示使用`args[1]`格式化，依此类推。 |
+| args | Array&lt;string \| number&gt; | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字\\$d`、`%数字\\$f`和`%数字\\$s`。 <br>**说明：** <br>- `%%`转义为`%`，如`%%d`格式化后为`%d`。 <br>- `%数字\\$d`中的数字表示参数索引，从`1`开始计数。如`%1\\$d`表示使用`args[0]`格式化，`%2\\$d`表示使用`args[1]`格式化，依此类推。 |
 
 **返回值：**
 
@@ -3156,8 +3156,8 @@ getIntPluralStringValueSync(resId: long, num: int,...args: (string | double)[]):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resId | long | 是 | 资源ID值。 |
-| num | int | 是 | 数量值（整数）。根据当前语言的 [单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)获取该数量值对应的字符串。 &lt;br&gt;取值限定为整数。 |
-| args | (string \| double)[] | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字\\$d`、`%数字\\$f`和`%数字\\$s`。 &lt;br&gt;**说明：** &lt;br&gt;- `%%`转义为`%`，如`%%d`格式化后为`%d`。 &lt;br&gt;- `%数字\\$d`中的数字表示参数索引，从`1`开始计数。如`%1\\$d`表示使用`args[0]`格式化，`%2\\$d`表示使用`args[1]`格式化，依此类推。 |
+| num | int | 是 | 数量值（整数）。根据当前语言的 [单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)获取该数量值对应的字符串。 <br>取值限定为整数。 |
+| args | (string \| double)[] | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字\\$d`、`%数字\\$f`和`%数字\\$s`。 <br>**说明：** <br>- `%%`转义为`%`，如`%%d`格式化后为`%d`。 <br>- `%数字\\$d`中的数字表示参数索引，从`1`开始计数。如`%1\\$d`表示使用`args[0]`格式化，`%2\\$d`表示使用`args[1]`格式化，依此类推。 |
 
 **返回值：**
 
@@ -3204,7 +3204,7 @@ getIntPluralStringValueSync(resource: Resource, num: number, ...args: Array<stri
 | --- | --- | --- | --- |
 | resource | Resource | 是 | 资源信息。 |
 | num | number | 是 | 数量值（整数）。根据当前语言的 [单复数规则](https://www.unicode.org/cldr/charts/45/supplemental/language_plural_rules.html)获取该数量值对应的字符串。 |
-| args | Array&lt;string \| number&gt; | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字\\$d`、`%数字\\$f`和`%数字\\$s`。 &lt;br&gt;**说明：** &lt;br&gt;- `%%`转义为`%`，如`%%d`格式化后为`%d`。 &lt;br&gt;- `%数字\\$d`中的数字表示参数索引，从`1`开始计数。如`%1\\$d`表示使用`args[0]`格式化，`%2\\$d`表示使用`args[1]`格式化，依此类推。 |
+| args | Array&lt;string \| number&gt; | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字\\$d`、`%数字\\$f`和`%数字\\$s`。 <br>**说明：** <br>- `%%`转义为`%`，如`%%d`格式化后为`%d`。 <br>- `%数字\\$d`中的数字表示参数索引，从`1`开始计数。如`%1\\$d`表示使用`args[0]`格式化，`%2\\$d`表示使用`args[1]`格式化，依此类推。 |
 
 **返回值：**
 
@@ -3291,7 +3291,7 @@ getLocales(includeSystem?: boolean): Array<string>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| includeSystem | boolean | 否 | 是否包含系统资源，默认值为false。 &lt;br&gt; - false：表示仅获取应用资源的语言列表。 &lt;br&gt; - true：表示获取系统资源和应用资源的语言列表。 &lt;br&gt;当使用系统资源管理对象获取语言列表时，includeSystem值无效，始终返回系统资源语言列表。 |
+| includeSystem | boolean | 否 | 是否包含系统资源，默认值为false。 <br> - false：表示仅获取应用资源的语言列表。 <br> - true：表示获取系统资源和应用资源的语言列表。 <br>当使用系统资源管理对象获取语言列表时，includeSystem值无效，始终返回系统资源语言列表。 |
 
 **返回值：**
 
@@ -6021,7 +6021,7 @@ getNumber(resId: number): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 资源ID值对应的数值。 &lt;br&gt;integer类型资源返回资源文件中定义的原始数值。 &lt;br&gt;float类型资源不带单位时返回资源文件中定义的原始数值，带"vp"或"fp"单位时返回转换后的像素(px)值。转换公式：像素值 = 原始数值 × densityPixels。 |
+| number | 资源ID值对应的数值。 <br>integer类型资源返回资源文件中定义的原始数值。 <br>float类型资源不带单位时返回资源文件中定义的原始数值，带"vp"或"fp"单位时返回转换后的像素(px)值。转换公式：像素值 = 原始数值 × densityPixels。 |
 
 **错误码：**
 
@@ -6127,7 +6127,7 @@ getNumber(resource: Resource): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | resource对象对应的数值。 &lt;br&gt;integer类型资源返回资源文件中定义的原始数值。 &lt;br&gt;float类型资源不带单位时返回资源文件中定义的原始数值，带"vp"或"fp"单位时返回转换后的像素(px)值。转换公式：像素值 = 原始数值 × densityPixels。 |
+| number | resource对象对应的数值。 <br>integer类型资源返回资源文件中定义的原始数值。 <br>float类型资源不带单位时返回资源文件中定义的原始数值，带"vp"或"fp"单位时返回转换后的像素(px)值。转换公式：像素值 = 原始数值 × densityPixels。 |
 
 **错误码：**
 
@@ -6203,7 +6203,7 @@ getNumberByName(resName: string): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 资源名称对应的数值。 &lt;br&gt;integer类型资源返回资源文件中定义的原始数值。 &lt;br&gt;float类型资源不带单位时返回资源文件中定义的原始数值，带"vp"或"fp"单位时返回转换后的像素(px)值。转换公式：像素值 = 原始数值 × densityPixels。 |
+| number | 资源名称对应的数值。 <br>integer类型资源返回资源文件中定义的原始数值。 <br>float类型资源不带单位时返回资源文件中定义的原始数值，带"vp"或"fp"单位时返回转换后的像素(px)值。转换公式：像素值 = 原始数值 × densityPixels。 |
 
 **错误码：**
 
@@ -6348,7 +6348,7 @@ getOverrideResourceManager(configuration?: Configuration): ResourceManager
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| configuration | Configuration | 否 | 指定想要获取的资源配置。 &lt;br&gt;通过[getOverrideConfiguration](#getOverrideConfiguration)获取差异化配置后，根据需求 修改配置项，再作为参数传入该函数。 &lt;br&gt;若缺省则表示使用当前系统的configuration。 |
+| configuration | Configuration | 否 | 指定想要获取的资源配置。 <br>通过[getOverrideConfiguration](#getOverrideConfiguration)获取差异化配置后，根据需求 修改配置项，再作为参数传入该函数。 <br>若缺省则表示使用当前系统的configuration。 |
 
 **返回值：**
 
@@ -7920,7 +7920,7 @@ getRawFileList(path: string, callback: _AsyncCallback<Array<string>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | string | 是 | 相对resources/rawfile目录的rawfile子目录路径，如"subdir"，不以"/"开头。 &lt;br&gt;空字符串""表示获取rawfile根目录下的文件夹及文件列表。 |
+| path | string | 是 | 相对resources/rawfile目录的rawfile子目录路径，如"subdir"，不以"/"开头。 <br>空字符串""表示获取rawfile根目录下的文件夹及文件列表。 |
 | callback | _AsyncCallback&lt;Array&lt;string&gt;&gt; | 是 | 回调函数，返回rawfile子目录下的文件夹及文件列表。 |
 
 **错误码：**
@@ -8012,7 +8012,7 @@ getRawFileList(path: string): Promise<Array<string>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | string | 是 | 相对resources/rawfile目录的rawfile子目录路径，如"subdir"，不以"/"开头。 &lt;br&gt;空字符串""表示获取rawfile根目录下的文件夹及文件列表。 |
+| path | string | 是 | 相对resources/rawfile目录的rawfile子目录路径，如"subdir"，不以"/"开头。 <br>空字符串""表示获取rawfile根目录下的文件夹及文件列表。 |
 
 **返回值：**
 
@@ -8109,7 +8109,7 @@ getRawFileListSync(path: string): Array<string>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| path | string | 是 | 相对resources/rawfile目录的rawfile子目录路径，如"subdir"，不以"/"开头。 &lt;br&gt;空字符串""表示获取rawfile根目录下的文件夹及文件列表。 |
+| path | string | 是 | 相对resources/rawfile目录的rawfile子目录路径，如"subdir"，不以"/"开头。 <br>空字符串""表示获取rawfile根目录下的文件夹及文件列表。 |
 
 **返回值：**
 
@@ -9606,7 +9606,7 @@ getStringByNameSync(resName: string, ...args: Array<string | number>): string
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resName | string | 是 | 资源名称。 |
-| args | Array&lt;string \| number&gt; | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字\\$d`、`%数字\\$f`和`%数字\\$s`。 &lt;br&gt;**说明：** &lt;br&gt;- `%%`转义为`%`，如`%%d`格式化后为`%d`。 &lt;br&gt;- `%数字\\$d`中的数字表示参数索引，从`1`开始计数。如`%1\\$d`表示使用`args[0]`格式化，`%2\\$d`表示使用`args[1]`格式化，依此类推。 |
+| args | Array&lt;string \| number&gt; | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字\\$d`、`%数字\\$f`和`%数字\\$s`。 <br>**说明：** <br>- `%%`转义为`%`，如`%%d`格式化后为`%d`。 <br>- `%数字\\$d`中的数字表示参数索引，从`1`开始计数。如`%1\\$d`表示使用`args[0]`格式化，`%2\\$d`表示使用`args[1]`格式化，依此类推。 |
 
 **返回值：**
 
@@ -9683,7 +9683,7 @@ getStringByNameSync(resName: string, ...args: (string | double)[]): string
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resName | string | 是 | 资源名称。 |
-| args | (string \| double)[] | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字\\$d`、`%数字\\$f`和`%数字\\$s`。 &lt;br&gt;**说明：** &lt;br&gt;- `%%`转义为`%`，如`%%d`格式化后为`%d`。 &lt;br&gt;- `%数字\\$d`中的数字表示参数索引，从`1`开始计数。如`%1\\$d`表示使用`args[0]`格式化，`%2\\$d`表示使用`args[1]`格式化，依此类推。 |
+| args | (string \| double)[] | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字\\$d`、`%数字\\$f`和`%数字\\$s`。 <br>**说明：** <br>- `%%`转义为`%`，如`%%d`格式化后为`%d`。 <br>- `%数字\\$d`中的数字表示参数索引，从`1`开始计数。如`%1\\$d`表示使用`args[0]`格式化，`%2\\$d`表示使用`args[1]`格式化，依此类推。 |
 
 **返回值：**
 
@@ -9800,7 +9800,7 @@ getStringSync(resId: number, ...args: Array<string | number>): string
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resId | number | 是 | 资源ID值。 |
-| args | Array&lt;string \| number&gt; | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字\\$d`、`%数字\\$f`和`%数字\\$s`。 &lt;br&gt;**说明：** &lt;br&gt;- `%%`转义为`%`，如`%%d`格式化后为`%d`。 &lt;br&gt;- `%数字\\$d`中的数字表示参数索引，从`1`开始计数。如`%1\\$d`表示使用`args[0]`格式化，`%2\\$d`表示使用`args[1]`格式化，依此类推。 |
+| args | Array&lt;string \| number&gt; | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字\\$d`、`%数字\\$f`和`%数字\\$s`。 <br>**说明：** <br>- `%%`转义为`%`，如`%%d`格式化后为`%d`。 <br>- `%数字\\$d`中的数字表示参数索引，从`1`开始计数。如`%1\\$d`表示使用`args[0]`格式化，`%2\\$d`表示使用`args[1]`格式化，依此类推。 |
 
 **返回值：**
 
@@ -9902,7 +9902,7 @@ getStringSync(resId: long, ...args: (string | double)[]): string
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resId | long | 是 | 资源ID值。 |
-| args | (string \| double)[] | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字\\$d`、`%数字\\$f`和`%数字\\$s`。 &lt;br&gt;**说明：** &lt;br&gt;- `%%`转义为`%`，如`%%d`格式化后为`%d`。 &lt;br&gt;- `%数字\\$d`中的数字表示参数索引，从`1`开始计数。如`%1\\$d`表示使用`args[0]`格式化，`%2\\$d`表示使用`args[1]`格式化，依此类推。 |
+| args | (string \| double)[] | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字\\$d`、`%数字\\$f`和`%数字\\$s`。 <br>**说明：** <br>- `%%`转义为`%`，如`%%d`格式化后为`%d`。 <br>- `%数字\\$d`中的数字表示参数索引，从`1`开始计数。如`%1\\$d`表示使用`args[0]`格式化，`%2\\$d`表示使用`args[1]`格式化，依此类推。 |
 
 **返回值：**
 
@@ -10027,7 +10027,7 @@ getStringSync(resource: Resource, ...args: Array<string | number>): string
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | resource | Resource | 是 | 资源信息。 |
-| args | Array&lt;string \| number&gt; | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字\\$d`、`%数字\\$f`和`%数字\\$s`。 &lt;br&gt;**说明：** &lt;br&gt;- `%%`转义为`%`，如`%%d`格式化后为`%d`。 &lt;br&gt;- `%数字\\$d`中的数字表示参数索引，从`1`开始计数。如`%1\\$d`表示使用`args[0]`格式化，`%2\\$d`表示使用`args[1]`格式化，依此类推。 |
+| args | Array&lt;string \| number&gt; | 是 | 格式化字符串资源参数。支持的参数类型包括`%d`、`%f`、`%s`、`%%`、`%数字\\$d`、`%数字\\$f`和`%数字\\$s`。 <br>**说明：** <br>- `%%`转义为`%`，如`%%d`格式化后为`%d`。 <br>- `%数字\\$d`中的数字表示参数索引，从`1`开始计数。如`%1\\$d`表示使用`args[0]`格式化，`%2\\$d`表示使用`args[1]`格式化，依此类推。 |
 
 **返回值：**
 
@@ -10677,7 +10677,7 @@ isRawDir(path: string): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 是否为rawfile下的目录。 &lt;br&gt; - true：表示是rawfile下的目录。 &lt;br&gt; - false：表示非rawfile下的目录。 |
+| boolean | 是否为rawfile下的目录。 <br> - true：表示是rawfile下的目录。 <br> - false：表示非rawfile下的目录。 |
 
 **错误码：**
 

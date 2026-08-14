@@ -24,7 +24,7 @@ function init(curve?: Curve): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| curve | Curve | 否 | 曲线类型。&lt;br/&gt;默认值：Curve.Linear |
+| curve | Curve | 否 | 曲线类型。<br/>默认值：Curve.Linear |
 
 **返回值：**
 

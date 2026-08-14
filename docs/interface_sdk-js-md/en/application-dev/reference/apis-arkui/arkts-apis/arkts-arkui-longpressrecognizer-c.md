@@ -40,7 +40,7 @@ Obtains the maximum movement distance allowed for gesture recognition by the lon
 
 | Type | Description |
 | --- | --- |
-| number | Maximum movement distance recognized by the long press gesture recognizer, in px. &lt;br&gt;Value range: (0, +∞) |
+| number | Maximum movement distance recognized by the long press gesture recognizer, in px. <br>Value range: (0, +∞) |
 
 ## getDuration
 
@@ -68,7 +68,7 @@ Obtains the minimum duration required for the long press gesture to be recognize
 
 | Type | Description |
 | --- | --- |
-| number | Minimum duration, in ms. &lt;br&gt;Value range: [0, +∞) |
+| number | Minimum duration, in ms. <br>Value range: [0, +∞) |
 
 ## isRepeat
 

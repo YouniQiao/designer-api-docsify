@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
+import { accessibility } from 'accessibility';
 ```
 
 ## setSeniorModeStateForSelf
@@ -12,7 +12,7 @@ import { accessibility } from '@kit.AccessibilityKit';
 function setSeniorModeStateForSelf(state: boolean): Promise<void>
 ```
 
-Set this application's senior mode.
+Sets whether the app has "senior mode" enabled. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -30,13 +30,13 @@ Set this application's senior mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | boolean | Yes | Indicates whether to enable senior mode for this application. |
+| state | boolean | Yes | Whether to enable "senior mode" for the app. The value **true** indicates that "senior mode" is enabled, and **false** indicates that "senior mode" is disabled. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

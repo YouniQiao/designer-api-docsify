@@ -15,7 +15,7 @@ Provides VPN related interfaces.
 ## Modules to Import
 
 ```TypeScript
-import { vpnExtension } from '@kit.NetworkKit';
+import { vpnExtension } from 'vpnExtension';
 ```
 
 ## Summary

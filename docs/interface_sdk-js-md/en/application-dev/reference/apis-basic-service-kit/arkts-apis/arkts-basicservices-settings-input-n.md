@@ -15,7 +15,7 @@ Provides methods for setting information about input methods, including automati
 ## Modules to Import
 
 ```TypeScript
-import { settings } from '@kit.BasicServicesKit';
+import { settings } from 'settings';
 ```
 
 ## Summary

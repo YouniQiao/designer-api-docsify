@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { config } from '@kit.AccessibilityKit';
+import { config } from 'config';
 ```
 
 ## getSeniorModeStateForApp
@@ -12,7 +12,7 @@ import { config } from '@kit.AccessibilityKit';
 function getSeniorModeStateForApp(bundleName: string, appIndex?: int): Promise<boolean>
 ```
 
-Get the senior mode state for app.
+Queries the senior mode state of an app. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -34,21 +34,21 @@ Get the senior mode state for app.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Indicates the bundle name of the application to be queried &lt;br&gt;The bundle name must follow the reverse domain naming convention (e.g., "com.example.app"). |
-| appIndex | int | No | Indicates the index of clone app. &lt;br&gt;The value must be an integer greater than or equal to 0. Default value: 0. |
+| bundleName | string | Yes | Bundle name of the app whose senior mode state is to be queried. |
+| appIndex | int | No | Clone index of the app bundle. <br>Value range: an integer greater than or equal to 0. If not specified, the default value is **0**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns { |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the senior mode is enabled for the app, and **false** indicates that the senior mode is not enabled for the app. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [9300008](../errorcode-accessibility.md#9300008-app-clone-index-invalid) | The appIndex is invalid. Possible causes: &lt;br&gt;1.The appIndex is out of the valid range. &lt;br&gt;2.The application corresponding to the appIndex does not exist. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. &lt;br&gt;The application does not have the permission required to call the API. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. &lt;br&gt;A non-system application calls a system API. |
+| [9300008](../errorcode-accessibility.md#9300008-app-clone-index-invalid) | The appIndex is invalid. Possible causes: <br>1.The appIndex is out of the valid range. <br>2.The application corresponding to the appIndex does not exist. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. <br>The application does not have the permission required to call the API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. <br>A non-system application calls a system API. |
 | [9300000](../errorcode-accessibility.md#9300000-accessibility-system-service-abnormal) | System abnormality. |
 

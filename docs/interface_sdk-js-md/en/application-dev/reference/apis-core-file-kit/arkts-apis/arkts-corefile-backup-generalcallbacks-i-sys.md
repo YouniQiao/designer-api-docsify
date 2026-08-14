@@ -17,7 +17,7 @@ General callbacks for both backup and restore procedure. The backup service will
 ## Modules to Import
 
 ```TypeScript
-import { backup } from '@kit.CoreFileKit';
+import { backup } from 'backup';
 ```
 
 ## onProcess

@@ -40,7 +40,7 @@ Constructs a canvas object, which supports configuration of parameters for the *
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No | Settings of the **CanvasRenderingContext2D** object. For details, see [RenderingContextSettings](#renderingcontextsettings). &lt;br&gt;If the value is **undefined** or **null**, the default value of [RenderingContextSettings](#renderingcontextsettings) is used. |
+| settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No | Settings of the **CanvasRenderingContext2D** object. For details, see [RenderingContextSettings](#renderingcontextsettings). <br>If the value is **undefined** or **null**, the default value of [RenderingContextSettings](#renderingcontextsettings) is used. |
 
 ## constructor
 
@@ -70,8 +70,8 @@ Creates a **CanvasRenderingContext2D** object, allowing for initial configuratio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No | Settings of the **CanvasRenderingContext2D** object. For details, see [RenderingContextSettings](#renderingcontextsettings). &lt;br&gt;If the value is **undefined** or **null**, the default value of [RenderingContextSettings](#renderingcontextsettings) is used. |
-| unit | LengthMetricsUnit | No | Unit mode of the **CanvasRenderingContext2D** object. The value cannot be dynamically changed once set. &lt;br&gt;Invalid values **undefined**, **NaN** and **Infinity** are treated as the default value. &lt;br&gt;Default value: **DEFAULT**. |
+| settings | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No | Settings of the **CanvasRenderingContext2D** object. For details, see [RenderingContextSettings](#renderingcontextsettings). <br>If the value is **undefined** or **null**, the default value of [RenderingContextSettings](#renderingcontextsettings) is used. |
+| unit | LengthMetricsUnit | No | Unit mode of the **CanvasRenderingContext2D** object. The value cannot be dynamically changed once set. <br>Invalid values **undefined**, **NaN** and **Infinity** are treated as the default value. <br>Default value: **DEFAULT**. |
 
 ## getContext2DFromDrawingContext
 
@@ -99,8 +99,8 @@ Obtains a **CanvasRenderingContext2D** object from a **DrawingRenderingContext**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| drawingContext | [DrawingRenderingContext](arkts-arkui-drawingrenderingcontext-c.md) | Yes | An object of the **DrawingRenderingContext** type.&lt;br&gt;**undefined** and **null** are treated as invalid values. |
-| options | [RenderingContextOptions](arkts-arkui-renderingcontextoptions-i.md) | No | Configuration options of the rendering context. &lt;br&gt;Default value: **{ antialias: false } |
+| drawingContext | [DrawingRenderingContext](arkts-arkui-drawingrenderingcontext-c.md) | Yes | An object of the **DrawingRenderingContext** type.<br>**undefined** and **null** are treated as invalid values. |
+| options | [RenderingContextOptions](arkts-arkui-renderingcontextoptions-i.md) | No | Configuration options of the rendering context. <br>Default value: **{ antialias: false } |
 
 **Return value:**
 
@@ -140,8 +140,8 @@ Unsubscribes from the event when a **CanvasRenderingContext2D** object is bound 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'onAttach' | Yes | Event type, which is **'onAttach'** in this case.&lt;br&gt; **undefined** and **null** are treated as invalid values. |
-| callback | Callback&lt;void&gt; | No | If this parameter is left empty, all callbacks triggered after the **CanvasRenderingContext2D** object is bound to the **Canvas** component are unsubscribed.&lt;br&gt;If this parameter is not left empty, the callback corresponding to the bind event is unsubscribed.&lt;br&gt;**undefined** and **null** are treated as invalid values. |
+| type | 'onAttach' | Yes | Event type, which is **'onAttach'** in this case.<br> **undefined** and **null** are treated as invalid values. |
+| callback | Callback&lt;void&gt; | No | If this parameter is left empty, all callbacks triggered after the **CanvasRenderingContext2D** object is bound to the **Canvas** component are unsubscribed.<br>If this parameter is not left empty, the callback corresponding to the bind event is unsubscribed.<br>**undefined** and **null** are treated as invalid values. |
 
 **Error codes:**
 
@@ -175,8 +175,8 @@ Unsubscribes from the event when a **CanvasRenderingContext2D** object is unboun
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'onDetach' | Yes | Event type, which is **'onDetach'** in this case.&lt;br&gt; **undefined** and **null** are treated as invalid values. |
-| callback | Callback&lt;void&gt; | No | If this parameter is left empty, all callbacks triggered after the **CanvasRenderingContext2D** object is unbound from the **Canvas** component are unsubscribed.&lt;br&gt;If this parameter is not left empty, the callback corresponding to the unbind event is unsubscribed.&lt;br&gt;**undefined** and **null** are treated as invalid values. |
+| type | 'onDetach' | Yes | Event type, which is **'onDetach'** in this case.<br> **undefined** and **null** are treated as invalid values. |
+| callback | Callback&lt;void&gt; | No | If this parameter is left empty, all callbacks triggered after the **CanvasRenderingContext2D** object is unbound from the **Canvas** component are unsubscribed.<br>If this parameter is not left empty, the callback corresponding to the unbind event is unsubscribed.<br>**undefined** and **null** are treated as invalid values. |
 
 **Error codes:**
 
@@ -190,7 +190,7 @@ Unsubscribes from the event when a **CanvasRenderingContext2D** object is unboun
 on(type: 'onAttach', callback: Callback<void>): void
 ```
 
-Subscribes to the event when a **CanvasRenderingContext2D** object is bound to a **Canvas** component. > **NOTE：**> > A **CanvasRenderingContext2D** object can only be bound to one **Canvas** component > at a time.&lt;br&gt; > When a **CanvasRenderingContext2D** object is bound to a **Canvas** component, the > **onAttach** callback is triggered, indicating that the > [canvas](#canvas) > object is accessible.&lt;br&gt; > Avoid performing drawing operations in the **onAttach** callback. Make sure the > **Canvas** component has completed its > onReady > event before performing any drawing.&lt;br&gt; > The **onAttach** callback is triggered when:&lt;br&gt; > 1. A **Canvas** component is created and bound to a **CanvasRenderingContext2D** > object.&lt;br&gt; > 2. A **CanvasRenderingContext2D** object is bound to a new **Canvas** component.
+Subscribes to the event when a **CanvasRenderingContext2D** object is bound to a **Canvas** component. > **NOTE：**> > A **CanvasRenderingContext2D** object can only be bound to one **Canvas** component > at a time.<br> > When a **CanvasRenderingContext2D** object is bound to a **Canvas** component, the > **onAttach** callback is triggered, indicating that the > [canvas](#canvas) > object is accessible.<br> > Avoid performing drawing operations in the **onAttach** callback. Make sure the > **Canvas** component has completed its > onReady > event before performing any drawing.<br> > The **onAttach** callback is triggered when:<br> > 1. A **Canvas** component is created and bound to a **CanvasRenderingContext2D** > object.<br> > 2. A **CanvasRenderingContext2D** object is bound to a new **Canvas** component.
 
 **Since:** 13
 
@@ -210,8 +210,8 @@ Subscribes to the event when a **CanvasRenderingContext2D** object is bound to a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'onAttach' | Yes | Event type, which is **'onAttach'** in this case.&lt;br&gt; **undefined** and **null** are treated as invalid values. |
-| callback | Callback&lt;void&gt; | Yes | Callback triggered when the **CanvasRenderingContext2D** object is bound to the **Canvas** component.&lt;br&gt;**undefined** and **null** are treated as invalid values. |
+| type | 'onAttach' | Yes | Event type, which is **'onAttach'** in this case.<br> **undefined** and **null** are treated as invalid values. |
+| callback | Callback&lt;void&gt; | Yes | Callback triggered when the **CanvasRenderingContext2D** object is bound to the **Canvas** component.<br>**undefined** and **null** are treated as invalid values. |
 
 **Error codes:**
 
@@ -225,7 +225,7 @@ Subscribes to the event when a **CanvasRenderingContext2D** object is bound to a
 on(type: 'onDetach', callback: Callback<void>): void
 ```
 
-Subscribes to the event when a **CanvasRenderingContext2D** object is unbound from a **Canvas** component. > **NOTE：**> > When a **CanvasRenderingContext2D** object is unbound from a **Canvas** component, > the **onDetach** callback is triggered. In this case, cease any drawing operations.&lt;br&gt; > The **onDetach** callback is triggered when:&lt;br&gt; > 1. A **Canvas** component is destroyed and unbound from a **CanvasRenderingContext2D** > object.&lt;br&gt; > 2. A **CanvasRenderingContext2D** object is bound to a different **Canvas** component, > causing the existing binding to be released.
+Subscribes to the event when a **CanvasRenderingContext2D** object is unbound from a **Canvas** component. > **NOTE：**> > When a **CanvasRenderingContext2D** object is unbound from a **Canvas** component, > the **onDetach** callback is triggered. In this case, cease any drawing operations.<br> > The **onDetach** callback is triggered when:<br> > 1. A **Canvas** component is destroyed and unbound from a **CanvasRenderingContext2D** > object.<br> > 2. A **CanvasRenderingContext2D** object is bound to a different **Canvas** component, > causing the existing binding to be released.
 
 **Since:** 13
 
@@ -245,8 +245,8 @@ Subscribes to the event when a **CanvasRenderingContext2D** object is unbound fr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'onDetach' | Yes | Event type, which is **'onDetach'** in this case.&lt;br&gt; **undefined** and **null** are treated as invalid values. |
-| callback | Callback&lt;void&gt; | Yes | Callback triggered when the **CanvasRenderingContext2D** object is unbound from the **Canvas** component.&lt;br&gt;**undefined** and **null** are treated as invalid values. |
+| type | 'onDetach' | Yes | Event type, which is **'onDetach'** in this case.<br> **undefined** and **null** are treated as invalid values. |
+| callback | Callback&lt;void&gt; | Yes | Callback triggered when the **CanvasRenderingContext2D** object is unbound from the **Canvas** component.<br>**undefined** and **null** are treated as invalid values. |
 
 **Error codes:**
 
@@ -260,7 +260,7 @@ Subscribes to the event when a **CanvasRenderingContext2D** object is unbound fr
 startImageAnalyzer(config: ImageAnalyzerConfig): Promise<void>
 ```
 
-Configures and starts the AI analyzer. This API uses a promise to return the result. Before use, set enableAnalyzer to **true** to enable the image AI analyzer.&lt;br&gt;Because the image frame used for analysis is the one captured when this API is called, pay attention to the invoking time of this API.&lt;br&gt; Repeated calls to this method before completion trigger an error callback. For the sample code, see the code for **stopImageAnalyzer**. > **NOTE：**> > The image analysis type cannot be dynamically modified. > When image changes are detected, the analysis result is automatically destroyed. You can > call this API again to start analysis. > This API depends on device capabilities. If it is called on an incompatible device, an > error code is returned.
+Configures and starts the AI analyzer. This API uses a promise to return the result. Before use, set enableAnalyzer to **true** to enable the image AI analyzer.<br>Because the image frame used for analysis is the one captured when this API is called, pay attention to the invoking time of this API.<br> Repeated calls to this method before completion trigger an error callback. For the sample code, see the code for **stopImageAnalyzer**. > **NOTE：**> > The image analysis type cannot be dynamically modified. > When image changes are detected, the analysis result is automatically destroyed. You can > call this API again to start analysis. > This API depends on device capabilities. If it is called on an incompatible device, an > error code is returned.
 
 **Since:** 12
 
@@ -280,7 +280,7 @@ Configures and starts the AI analyzer. This API uses a promise to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | ImageAnalyzerConfig | Yes | Settings of the AI analyzer.&lt;br&gt;**undefined** and **null** are treated as invalid values. |
+| config | ImageAnalyzerConfig | Yes | Settings of the AI analyzer.<br>**undefined** and **null** are treated as invalid values. |
 
 **Return value:**
 
@@ -344,8 +344,8 @@ Creates a data URL that contains a representation of an image. This API involves
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | string | No | Image format. &lt;br&gt;The options are **image/png**, **image/jpeg**, and **image/webp**. &lt;br&gt;Invalid values **undefined** and **null** are treated as the default value. &lt;br&gt;Default value: **image/png |
-| quality | any | No | Image quality, which ranges from 0 to 1, when the image format is **image/jpeg** or **image/webp**. If the set value is beyond the value range, the default value **0.92** is used. &lt;br&gt;Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as the default value. &lt;br&gt;Default value: **0.92 |
+| type | string | No | Image format. <br>The options are **image/png**, **image/jpeg**, and **image/webp**. <br>Invalid values **undefined** and **null** are treated as the default value. <br>Default value: **image/png |
+| quality | any | No | Image quality, which ranges from 0 to 1, when the image format is **image/jpeg** or **image/webp**. If the set value is beyond the value range, the default value **0.92** is used. <br>Invalid values **undefined**, **null**, **NaN**, and **Infinity** are treated as the default value. <br>Default value: **0.92 |
 
 **Return value:**
 

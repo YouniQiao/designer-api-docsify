@@ -15,7 +15,7 @@ Describes a series of consecutive glyphs with the same attributes in a text blob
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
+import { drawing } from 'drawing';
 ```
 
 ## glyph

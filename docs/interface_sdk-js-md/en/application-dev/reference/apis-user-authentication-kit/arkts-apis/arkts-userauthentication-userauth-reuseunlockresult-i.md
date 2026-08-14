@@ -15,7 +15,7 @@ Represents information about the authentication result reuse. This API is used t
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
+import { userAuth } from 'userAuth';
 ```
 
 ## reuseDuration

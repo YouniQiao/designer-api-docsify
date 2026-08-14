@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'i18n';
 ```
 
 ## getDisplayLanguage
@@ -39,4 +39,13 @@ Obtains the localized script for the specified language.
 | Type | Description |
 | --- | --- |
 | string | Localized script for the specified language. |
+
+## Examples
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let languageName: string = i18n.getDisplayLanguage('zh', 'en-GB', true); // languageName = 'Chinese'
+languageName = i18n.getDisplayLanguage('zh', 'en-GB'); // languageName = 'Chinese'
+```
 

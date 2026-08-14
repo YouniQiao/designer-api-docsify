@@ -26,8 +26,8 @@ Sorts the array in-place.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | arr | FixedArray&lt;boolean&gt; | Yes | The array to sort. |
-| startIndex | int | Yes | The index to start sorting with, inclusive. &lt;br&gt;The value should be an integer. |
-| endIndex | int | Yes | The index to end sorting, exclusive. &lt;br&gt;The value should be an integer. |
+| startIndex | int | Yes | The index to start sorting with, inclusive. <br>The value should be an integer. |
+| endIndex | int | Yes | The index to end sorting, exclusive. <br>The value should be an integer. |
 | mustPrecede | (lhs: boolean, rhs: boolean) =&gt; boolean | Yes | The must precede function. |
 
 
@@ -86,7 +86,7 @@ Sorts the subarray of the array in-place.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | arr | FixedArray&lt;boolean&gt; | Yes | The array to sort. |
-| startIndex | int | Yes | The index to start sorting from. &lt;br&gt;The value should be an integer. |
+| startIndex | int | Yes | The index to start sorting from. <br>The value should be an integer. |
 | mustPrecede | (lhs: boolean, rhs: boolean) =&gt; boolean | Yes | The must precede function. |
 
 
@@ -116,8 +116,8 @@ Sorts the array in-place.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | arr | FixedArray&lt;byte&gt; | Yes | The array to sort. |
-| startIndex | int | Yes | The index to start sorting with, inclusive. &lt;br&gt;The value should be an integer. |
-| endIndex | int | Yes | The index to end sorting, exclusive. &lt;br&gt;The value should be an integer. |
+| startIndex | int | Yes | The index to start sorting with, inclusive. <br>The value should be an integer. |
+| endIndex | int | Yes | The index to end sorting, exclusive. <br>The value should be an integer. |
 | mustPrecede | (lhs: byte, rhs: byte) =&gt; boolean | Yes | The must precede function. |
 
 
@@ -176,7 +176,7 @@ Sorts the subarray of the array in-place.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | arr | FixedArray&lt;byte&gt; | Yes | The array to sort. |
-| startIndex | int | Yes | The index to start sorting from. &lt;br&gt;The value should be an integer. |
+| startIndex | int | Yes | The index to start sorting from. <br>The value should be an integer. |
 | mustPrecede | (lhs: byte, rhs: byte) =&gt; boolean | Yes | The must precede function. |
 
 
@@ -206,8 +206,8 @@ Sorts the array in-place.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | arr | FixedArray&lt;short&gt; | Yes | The array to sort. |
-| startIndex | int | Yes | The index to start sorting with, inclusive. &lt;br&gt;The value should be an integer. |
-| endIndex | int | Yes | The index to end sorting, exclusive. &lt;br&gt;The value should be an integer. |
+| startIndex | int | Yes | The index to start sorting with, inclusive. <br>The value should be an integer. |
+| endIndex | int | Yes | The index to end sorting, exclusive. <br>The value should be an integer. |
 | mustPrecede | (lhs: short, rhs: short) =&gt; boolean | Yes | The must precede function. |
 
 
@@ -266,7 +266,7 @@ Sorts the subarray of the array in-place.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | arr | FixedArray&lt;short&gt; | Yes | The array to sort. |
-| startIndex | int | Yes | The index to start sorting from. &lt;br&gt;The value should be an integer. |
+| startIndex | int | Yes | The index to start sorting from. <br>The value should be an integer. |
 | mustPrecede | (lhs: short, rhs: short) =&gt; boolean | Yes | The must precede function. |
 
 
@@ -296,8 +296,8 @@ Sorts the array in-place.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | arr | FixedArray&lt;int&gt; | Yes | The array to sort. |
-| startIndex | int | Yes | The index to start sorting with, inclusive. &lt;br&gt;The value should be an integer. |
-| endIndex | int | Yes | The index to end sorting, exclusive. &lt;br&gt;The value should be an integer. |
+| startIndex | int | Yes | The index to start sorting with, inclusive. <br>The value should be an integer. |
+| endIndex | int | Yes | The index to end sorting, exclusive. <br>The value should be an integer. |
 | mustPrecede | (lhs: int, rhs: int) =&gt; boolean | Yes | The must precede function. |
 
 
@@ -356,7 +356,7 @@ Sorts the subarray of the array in-place.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | arr | FixedArray&lt;int&gt; | Yes | The array to sort. |
-| startIndex | int | Yes | The index to start sorting from. &lt;br&gt;The value should be an integer. |
+| startIndex | int | Yes | The index to start sorting from. <br>The value should be an integer. |
 | mustPrecede | (lhs: int, rhs: int) =&gt; boolean | Yes | The must precede function. |
 
 
@@ -386,8 +386,8 @@ Sorts the array in-place.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | arr | FixedArray&lt;long&gt; | Yes | The array to sort. |
-| startIndex | int | Yes | The index to start sorting with, inclusive. &lt;br&gt;The value should be an integer. |
-| endIndex | int | Yes | The index to end sorting, exclusive. &lt;br&gt;The value should be an integer. |
+| startIndex | int | Yes | The index to start sorting with, inclusive. <br>The value should be an integer. |
+| endIndex | int | Yes | The index to end sorting, exclusive. <br>The value should be an integer. |
 | mustPrecede | (lhs: long, rhs: long) =&gt; boolean | Yes | The must precede function. |
 
 
@@ -446,7 +446,7 @@ Sorts the subarray of the array in-place.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | arr | FixedArray&lt;long&gt; | Yes | The array to sort. |
-| startIndex | int | Yes | The index to start sorting from. &lt;br&gt;The value should be an integer. |
+| startIndex | int | Yes | The index to start sorting from. <br>The value should be an integer. |
 | mustPrecede | (lhs: long, rhs: long) =&gt; boolean | Yes | The must precede function. |
 
 
@@ -476,8 +476,8 @@ Sorts the array in-place.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | arr | FixedArray&lt;float&gt; | Yes | The array to sort. |
-| startIndex | int | Yes | The index to start sorting with, inclusive. &lt;br&gt;The value should be an integer. |
-| endIndex | int | Yes | The index to end sorting, exclusive. &lt;br&gt;The value should be an integer. |
+| startIndex | int | Yes | The index to start sorting with, inclusive. <br>The value should be an integer. |
+| endIndex | int | Yes | The index to end sorting, exclusive. <br>The value should be an integer. |
 | mustPrecede | (lhs: float, rhs: float) =&gt; boolean | Yes | The must precede function. |
 
 
@@ -536,7 +536,7 @@ Sorts the subarray of the array in-place.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | arr | FixedArray&lt;float&gt; | Yes | The array to sort. |
-| startIndex | int | Yes | The index to start sorting from. &lt;br&gt;The value should be an integer. |
+| startIndex | int | Yes | The index to start sorting from. <br>The value should be an integer. |
 | mustPrecede | (lhs: float, rhs: float) =&gt; boolean | Yes | The must precede function. |
 
 
@@ -566,8 +566,8 @@ Sorts the array in-place.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | arr | FixedArray&lt;double&gt; | Yes | The array to sort. |
-| startIndex | int | Yes | The index to start sorting with, inclusive. &lt;br&gt;The value should be an integer. |
-| endIndex | int | Yes | The index to end sorting, exclusive. &lt;br&gt;The value should be an integer. |
+| startIndex | int | Yes | The index to start sorting with, inclusive. <br>The value should be an integer. |
+| endIndex | int | Yes | The index to end sorting, exclusive. <br>The value should be an integer. |
 | mustPrecede | (lhs: double, rhs: double) =&gt; boolean | Yes | The must precede function. |
 
 
@@ -626,7 +626,7 @@ Sorts the subarray of the array in-place.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | arr | FixedArray&lt;double&gt; | Yes | The array to sort. |
-| startIndex | int | Yes | The index to start sorting from. &lt;br&gt;The value should be an integer. |
+| startIndex | int | Yes | The index to start sorting from. <br>The value should be an integer. |
 | mustPrecede | (lhs: double, rhs: double) =&gt; boolean | Yes | The must precede function. |
 
 
@@ -656,8 +656,8 @@ Sorts the array in-place.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | arr | FixedArray&lt;char&gt; | Yes | The array to sort. |
-| startIndex | int | Yes | The index to start sorting with, inclusive. &lt;br&gt;The value should be an integer. |
-| endIndex | int | Yes | The index to end sorting, exclusive. &lt;br&gt;The value should be an integer. |
+| startIndex | int | Yes | The index to start sorting with, inclusive. <br>The value should be an integer. |
+| endIndex | int | Yes | The index to end sorting, exclusive. <br>The value should be an integer. |
 | mustPrecede | (lhs: char, rhs: char) =&gt; boolean | Yes | The must precede function. |
 
 
@@ -716,7 +716,7 @@ Sorts the subarray of the array in-place.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | arr | FixedArray&lt;char&gt; | Yes | The array to sort. |
-| startIndex | int | Yes | The index to start sorting from. &lt;br&gt;The value should be an integer. |
+| startIndex | int | Yes | The index to start sorting from. <br>The value should be an integer. |
 | mustPrecede | (lhs: char, rhs: char) =&gt; boolean | Yes | The must precede function. |
 
 
@@ -746,8 +746,8 @@ Sorts the array in-place.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | arr | FixedArray&lt;T&gt; | Yes | The array to sort. |
-| startIndex | int | Yes | The index to start sorting with, inclusive. &lt;br&gt;The value should be an integer. |
-| endIndex | int | Yes | The index to end sorting, exclusive. &lt;br&gt;The value should be an integer. |
+| startIndex | int | Yes | The index to start sorting with, inclusive. <br>The value should be an integer. |
+| endIndex | int | Yes | The index to end sorting, exclusive. <br>The value should be an integer. |
 | mustPrecede | (lhs: T, rhs: T) =&gt; boolean | Yes | The must precede function. |
 
 
@@ -806,6 +806,6 @@ Sorts the subarray of the array in-place.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | arr | FixedArray&lt;T&gt; | Yes | The array to sort. |
-| startIndex | int | Yes | The index to start sorting from. &lt;br&gt;The value should be an integer. |
+| startIndex | int | Yes | The index to start sorting from. <br>The value should be an integer. |
 | mustPrecede | (lhs: T, rhs: T) =&gt; boolean | Yes | The must precede function. |
 

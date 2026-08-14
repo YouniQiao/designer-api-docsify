@@ -15,7 +15,7 @@ Provides APIs for managing a distributed data object. Before using any API of th
 ## Modules to Import
 
 ```TypeScript
-import { distributedDataObject } from '@kit.ArkData';
+import { distributedDataObject } from 'distributedDataObject';
 ```
 
 ## bindAssetStore

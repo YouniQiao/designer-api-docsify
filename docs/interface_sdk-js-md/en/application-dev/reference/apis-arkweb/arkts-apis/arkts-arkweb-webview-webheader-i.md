@@ -15,7 +15,7 @@ Defines the Web's request/response header.
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'webview';
 ```
 
 ## headerKey

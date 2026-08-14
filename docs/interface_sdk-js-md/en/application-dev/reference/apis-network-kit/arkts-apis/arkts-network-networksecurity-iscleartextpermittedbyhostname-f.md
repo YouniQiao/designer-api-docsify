@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { networkSecurity } from '@kit.NetworkKit';
+import { networkSecurity } from 'networkSecurity';
 ```
 
 ## isCleartextPermittedByHostName

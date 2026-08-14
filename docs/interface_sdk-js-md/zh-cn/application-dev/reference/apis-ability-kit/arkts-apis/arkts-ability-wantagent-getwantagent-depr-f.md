@@ -105,7 +105,7 @@ function getWantAgent(info: WantAgentInfo): Promise<WantAgent>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[WantAgent](arkts-ability-wantagent-depr-t.md)&gt; | 以Promise形式返回WantAgent。 |
+| Promise&lt;[WantAgent](arkts-ability-wantagent-depr-t.md)&gt; | Promise对象，返回用于触发指定操作的WantAgent实例。 |
 
 ## 示例
 

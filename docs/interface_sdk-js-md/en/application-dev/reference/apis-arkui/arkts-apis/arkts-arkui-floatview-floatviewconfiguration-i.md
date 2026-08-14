@@ -15,7 +15,7 @@ Provides parameter configuration required for creating a float view controller.
 ## Modules to Import
 
 ```TypeScript
-import { floatView } from '@kit.ArkUI';
+import { floatView } from 'floatView';
 ```
 
 ## context

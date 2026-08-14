@@ -15,7 +15,7 @@ Manager OPP server profile.
 ## Modules to Import
 
 ```TypeScript
-import { opp } from '@kit.ConnectivityKit';
+import { opp } from 'opp';
 ```
 
 ## cancelTransfer

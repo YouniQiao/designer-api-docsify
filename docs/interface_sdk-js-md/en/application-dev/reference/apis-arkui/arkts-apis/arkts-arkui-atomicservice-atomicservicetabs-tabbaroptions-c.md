@@ -15,7 +15,11 @@ Array of tab bar container configurations.
 ## Modules to Import
 
 ```TypeScript
-import { TabBarPosition, TabBarOptions, AtomicServiceTabs, TabContentBuilder, OnContentWillChangeCallback } from '@kit.ArkUI';
+import { AtomicServiceTabs } from 'AtomicServiceTabs';
+import { TabBarOptions } from 'TabBarOptions';
+import { TabBarPosition } from 'TabBarPosition';
+import { TabContentBuilder } from 'TabContentBuilder';
+import { OnContentWillChangeCallback } from 'OnContentWillChangeCallback';
 ```
 
 ## constructor
@@ -45,6 +49,6 @@ A constructor used to create a **TabBarOptions** instance.
 | --- | --- | --- | --- |
 | icon | ResourceStr \| TabBarSymbol | Yes | Image for the tab. |
 | text | ResourceStr | Yes | Text of the tab. |
-| unselectedColor | ResourceColor | No | Color of the tab when it is not selected. &lt;br&gt;Default value: **#99182431 |
-| selectedColor | ResourceColor | No | Color of the tab when it is selected. &lt;br&gt;Default value: **#FF007DFF |
+| unselectedColor | ResourceColor | No | Color of the tab when it is not selected. <br>Default value: **#99182431 |
+| selectedColor | ResourceColor | No | Color of the tab when it is selected. <br>Default value: **#FF007DFF |
 

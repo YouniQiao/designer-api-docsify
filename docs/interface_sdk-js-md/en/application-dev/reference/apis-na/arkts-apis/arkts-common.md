@@ -136,7 +136,7 @@ Defines the namespace of focus controller.
 | [MultiShadowOptions](arkts-na-common-multishadowoptions-i.md) | Defines the options of Shadow. |
 | [NestedScrollOptions](arkts-na-common-nestedscrolloptions-i.md) | Define nested scroll options |
 | [OverlayOffset](arkts-na-common-overlayoffset-i.md) | Defines the OverlayOffset. |
-| [OverlayOptions](arkts-na-common-overlayoptions-i.md) | Defines the OverlayOptions interface. &lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt; When both align and offset are set, the effects are combined. The overlay is first aligned relative to the component and then offset from its current upper left corner. |
+| [OverlayOptions](arkts-na-common-overlayoptions-i.md) | Defines the OverlayOptions interface. &lt;strong&gt;NOTE&lt;/strong&gt;:<br> When both align and offset are set, the effects are combined. The overlay is first aligned relative to the component and then offset from its current upper left corner. |
 | [PickerDialogButtonStyle](arkts-na-common-pickerdialogbuttonstyle-i.md) | Provide an interface for the button style of picker |
 | [PickerTextStyle](arkts-na-common-pickertextstyle-i.md) | Provide an interface for the text style of picker |
 | [PixelRoundPolicy](arkts-na-common-pixelroundpolicy-i.md) | Defines the direction of pixel rounding at the component level. |
@@ -222,7 +222,7 @@ Defines the namespace of focus controller.
 | [ChainStyle](arkts-na-common-chainstyle-e.md) | Enumerates the chain styles in relative container. |
 | [ContentClipMode](arkts-na-common-contentclipmode-e.md) | Enum of scrollable containers' content clip mode. |
 | [DismissReason](arkts-na-common-dismissreason-e.md) | Dismiss reason type. |
-| [DragBehavior](arkts-na-common-dragbehavior-e.md) | Enum for Drag Behavior. &lt;strong&gt;NOTE&lt;/strong&gt;:&lt;br&gt; DragBehavior serves to inform you about the intended method of data handling, whether it's a copy or a move, but it does not actually dictate the real processing of the data. |
+| [DragBehavior](arkts-na-common-dragbehavior-e.md) | Enum for Drag Behavior. &lt;strong&gt;NOTE&lt;/strong&gt;:<br> DragBehavior serves to inform you about the intended method of data handling, whether it's a copy or a move, but it does not actually dictate the real processing of the data. |
 | [DragPreviewMode](arkts-na-common-dragpreviewmode-e.md) | Defines the drag preview mode. |
 | [DragResult](arkts-na-common-dragresult-e.md) | Enum for Drag Result. |
 | [DraggingSizeChangeEffect](arkts-na-common-draggingsizechangeeffect-e.md) | Define drag start animation effect from drag preview to the handle drag image |

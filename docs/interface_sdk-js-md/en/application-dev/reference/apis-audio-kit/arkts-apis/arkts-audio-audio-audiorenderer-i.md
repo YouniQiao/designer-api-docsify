@@ -15,7 +15,7 @@ This interface provides APIs for audio rendering. Before calling any API in Audi
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'audio';
 ```
 
 ## drain
@@ -370,7 +370,7 @@ Obtains a reasonable minimum buffer size in bytes for rendering. This API uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the minimum buffer size obtained; otherwise, **err** is an error object.&lt;br&gt;The unit is bytes. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the minimum buffer size obtained; otherwise, **err** is an error object.<br>The unit is bytes. |
 
 ## getBufferSize
 
@@ -394,7 +394,7 @@ Obtains a reasonable minimum buffer size in bytes for rendering. This API uses a
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;long&gt; | Promise used to return the buffer size. &lt;br&gt;The unit is bytes. |
+| Promise&lt;long&gt; | Promise used to return the buffer size. <br>The unit is bytes. |
 
 ## getBufferSizeSync
 
@@ -602,7 +602,7 @@ Obtains the maximum volume of the audio stream. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;double&gt; | Promise used to return the maximum volume of the audio stream. &lt;br&gt;The volume range is [0.0, 1.0]. |
+| Promise&lt;double&gt; | Promise used to return the maximum volume of the audio stream. <br>The volume range is [0.0, 1.0]. |
 
 ## getMaxStreamVolumeSync
 
@@ -674,7 +674,7 @@ Obtains the minimum volume of the audio stream. This API uses a promise to retur
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;double&gt; | Promise used to return the minimum volume of the audio stream. &lt;br&gt;The volume range is [0.0, 1.0]. |
+| Promise&lt;double&gt; | Promise used to return the minimum volume of the audio stream. <br>The volume range is [0.0, 1.0]. |
 
 ## getMinStreamVolumeSync
 
@@ -1463,7 +1463,7 @@ Unsubscribes from the audio data write event. This API uses an asynchronous call
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'writeData' | Yes | Event type. The event **'writeData'** is triggered when audio data needs to be written. |
-| callback | [AudioRendererWriteDataCallback](arkts-audio-audio-audiorendererwritedatacallback-t.md) | No | Callback used to write the data to the buffer.&lt;br&gt;API version 11 does not support the return of the callback result. API version 12 and later support the return of the callback result [AudioDataCallbackResult](arkts-audio-audio-audiodatacallbackresult-e.md#AudioDataCallbackResult) .<br>**Since:** 12 |
+| callback | [AudioRendererWriteDataCallback](arkts-audio-audio-audiorendererwritedatacallback-t.md) | No | Callback used to write the data to the buffer.<br>API version 11 does not support the return of the callback result. API version 12 and later support the return of the callback result [AudioDataCallbackResult](arkts-audio-audio-audiodatacallbackresult-e.md#AudioDataCallbackResult) .<br>**Since:** 12 |
 
 **Error codes:**
 
@@ -1862,7 +1862,7 @@ Subscribes to the audio data write event, which is triggered when audio data nee
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'writeData' | Yes | Event type. The event **'writeData'** is triggered when audio data needs to be written. |
-| callback | [AudioRendererWriteDataCallback](arkts-audio-audio-audiorendererwritedatacallback-t.md) | Yes | Callback used to write the data to the buffer.&lt;br&gt;API version 11 does not support the return of the callback result. API version 12 and later support the return of the callback result [AudioDataCallbackResult](arkts-audio-audio-audiodatacallbackresult-e.md#AudioDataCallbackResult) .<br>**Since:** 12 |
+| callback | [AudioRendererWriteDataCallback](arkts-audio-audio-audiorendererwritedatacallback-t.md) | Yes | Callback used to write the data to the buffer.<br>API version 11 does not support the return of the callback result. API version 12 and later support the return of the callback result [AudioDataCallbackResult](arkts-audio-audio-audiodatacallbackresult-e.md#AudioDataCallbackResult) .<br>**Since:** 12 |
 
 **Error codes:**
 
@@ -2131,7 +2131,7 @@ Sets the independent audio session strategy and behavior parameters. > **NOTE：
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | strategy | [AudioSessionStrategy](arkts-audio-audio-audiosessionstrategy-i.md) | Yes | Audio session strategy. |
-| behavior | int | Yes | Specifies the audio session behavior.&lt;br&gt;This can be a single flag or a bitwise OR combination of multiple flags.&lt;br&gt;For details about the supported audio session behaviors, see [AudioSessionBehaviorFlags](arkts-audio-audio-audiosessionbehaviorflags-e.md#AudioSessionBehaviorFlags). |
+| behavior | int | Yes | Specifies the audio session behavior.<br>This can be a single flag or a bitwise OR combination of multiple flags.<br>For details about the supported audio session behaviors, see [AudioSessionBehaviorFlags](arkts-audio-audio-audiosessionbehaviorflags-e.md#AudioSessionBehaviorFlags). |
 
 **Error codes:**
 
@@ -2486,7 +2486,7 @@ Starts this audio renderer. This API uses an asynchronous callback to return the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. If the operation fails, an error object with one of the following error codes is returned:&lt;br&gt;Error code 6800301: indicates abnormal status, focus preemption failure, and abnormal system processing. For details, see system logs. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. If the operation fails, an error object with one of the following error codes is returned:<br>Error code 6800301: indicates abnormal status, focus preemption failure, and abnormal system processing. For details, see system logs. |
 
 ## start
 
@@ -2510,7 +2510,7 @@ Starts this audio renderer. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise object, which indicates that the renderer is started successfully. If the operation fails, an error object with one of the following error codes is returned: &lt;br&gt;Error code 6800301: indicates abnormal status, focus preemption failure, and abnormal system processing. For details, see system logs. |
+| Promise&lt;void&gt; | Promise object, which indicates that the renderer is started successfully. If the operation fails, an error object with one of the following error codes is returned: <br>Error code 6800301: indicates abnormal status, focus preemption failure, and abnormal system processing. For details, see system logs. |
 
 ## stop
 

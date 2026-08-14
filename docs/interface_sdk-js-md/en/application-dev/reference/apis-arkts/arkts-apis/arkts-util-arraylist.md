@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ArrayList } from '@kit.ArkTS';
+import { ArrayList } from 'ArrayList';
 ```
 
 ## Summary

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'print';
 ```
 
 ## notifyWatermarkComplete
@@ -32,8 +32,8 @@ Notify watermark complete.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| jobId | string | Yes | Indicates the job ID. &lt;br&gt;Print job ID in preview. |
-| result | [WatermarkHandleResult](arkts-basicservices-print-watermarkhandleresult-e.md) | Yes | Indicates the result. &lt;br&gt;Watermark processing results. |
+| jobId | string | Yes | Indicates the job ID. <br>Print job ID in preview. |
+| result | [WatermarkHandleResult](arkts-basicservices-print-watermarkhandleresult-e.md) | Yes | Indicates the result. <br>Watermark processing results. |
 
 **Error codes:**
 

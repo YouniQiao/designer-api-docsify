@@ -20,7 +20,7 @@
 
 **Deprecated since:** 9
 
-**Substitutes:** [dataUriUtils/dataUriUtils](arkts-app-ability-datauriutils.md#@ohos.app.ability.dataUriUtils)
+**Substitutes:** [dataUriUtils](arkts-app-ability-datauriutils.md#@ohos.app.ability.dataUriUtils)
 
 <!--Device-unnamed-declare namespace dataUriUtils--><!--Device-unnamed-declare namespace dataUriUtils-End-->
 
@@ -32,8 +32,8 @@
 
 | Name | Description |
 | --- | --- |
-| [attachId](arkts-ability-datauriutils-attachid-depr-f.md#attachId) | Attaches the given ID to the end of the path component of the given uri. |
-| [deleteId](arkts-ability-datauriutils-deleteid-depr-f.md#deleteId) | Deletes the ID from the end of the path component of the given uri. |
-| [getId](arkts-ability-datauriutils-getid-depr-f.md#getId) | Obtains the ID attached to the end of the path component of the given uri. |
-| [updateId](arkts-ability-datauriutils-updateid-depr-f.md#updateId) | Updates the ID in the specified uri |
+| [attachId](arkts-ability-datauriutils-attachid-depr-f.md#attachId) | Attaches an ID to the end of a given URI. |
+| [deleteId](arkts-ability-datauriutils-deleteid-depr-f.md#deleteId) | Deletes the ID from the end of a given URI. |
+| [getId](arkts-ability-datauriutils-getid-depr-f.md#getId) | Obtains the ID attached to the end of a given URI. |
+| [updateId](arkts-ability-datauriutils-updateid-depr-f.md#updateId) | Updates the ID in a given URI. |
 

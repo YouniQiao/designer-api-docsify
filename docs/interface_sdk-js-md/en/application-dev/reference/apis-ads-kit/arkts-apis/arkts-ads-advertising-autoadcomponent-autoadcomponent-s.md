@@ -15,7 +15,7 @@ The AutoAdComponent module provides the capability of displaying carousel ads.
 ## Modules to Import
 
 ```TypeScript
-import { AutoAdComponent } from '@kit.AdsKit';
+import { AutoAdComponent } from 'AutoAdComponent';
 ```
 
 ## build

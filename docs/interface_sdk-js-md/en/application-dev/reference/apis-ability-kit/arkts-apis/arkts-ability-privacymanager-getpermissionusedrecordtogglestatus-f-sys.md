@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
+import { privacyManager } from 'privacyManager';
 ```
 
 ## getPermissionUsedRecordToggleStatus
@@ -90,7 +90,7 @@ A system application can call this API to obtain the permission usage record tog
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| subProfileId | int | Yes | ID of the sub-profile. It can be obtained from [OsAccountSubProfile.id](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-osaccountsubprofile-i-sys.md#id). &lt;br&gt;The value should be an integer. Value constraint: This parameter must be an integer greater than 0. |
+| subProfileId | int | Yes | ID of the sub-profile. It can be obtained from [OsAccountSubProfile.id](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-osaccountsubprofile-i-sys.md#id). <br>The value should be an integer. Value constraint: This parameter must be an integer greater than 0. |
 
 **Return value:**
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { StaticSubscriberExtensionAbility } from '@kit.BasicServicesKit';
+import { StaticSubscriberExtensionAbility } from 'StaticSubscriberExtensionAbility';
 ```
 
 ## Summary

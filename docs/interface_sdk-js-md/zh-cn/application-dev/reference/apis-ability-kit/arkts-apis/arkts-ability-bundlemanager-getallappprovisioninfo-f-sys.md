@@ -26,7 +26,7 @@ function getAllAppProvisionInfo(userId?: int): Promise<Array<AppProvisionInfo>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| userId | int | 否 | 表示用户ID，可以通过 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId) 获取。&lt;br&gt;默认值：调用方所在用户ID。&lt;br&gt;取值范围：大于等于0。 |
+| userId | int | 否 | 表示用户ID，可以通过 [getOsAccountLocalId](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getOsAccountLocalId) 获取。<br>默认值：调用方所在用户ID。<br>取值范围：大于等于0。 |
 
 **返回值：**
 

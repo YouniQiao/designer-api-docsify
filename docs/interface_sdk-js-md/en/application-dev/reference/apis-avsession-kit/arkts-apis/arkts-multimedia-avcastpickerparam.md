@@ -3,7 +3,9 @@
 ## Modules to Import
 
 ```TypeScript
-import { AVCastPickerColorMode, AVCastPickerState, AVCastPickerStyle } from '@kit.AVSessionKit';
+import { AVCastPickerState } from 'AVCastPickerState';
+import { AVCastPickerStyle } from 'AVCastPickerStyle';
+import { AVCastPickerColorMode } from 'AVCastPickerColorMode';
 ```
 
 ## Summary

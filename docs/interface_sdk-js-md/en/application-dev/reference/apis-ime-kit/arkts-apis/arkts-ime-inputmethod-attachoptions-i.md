@@ -15,7 +15,7 @@ Attach options.
 ## Modules to Import
 
 ```TypeScript
-import { inputMethod } from '@kit.IMEKit';
+import { inputMethod } from 'inputMethod';
 ```
 
 ## requestKeyboardReason

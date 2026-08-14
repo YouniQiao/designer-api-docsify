@@ -88,7 +88,7 @@ Deregisters a callback with the corresponding query conditiion by using the hand
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int[]&gt; | No | callback of the listened event. &lt;br&gt;Default value undefined |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int[]&gt; | No | callback of the listened event. <br>Default value undefined |
 
 ## offLayout
 

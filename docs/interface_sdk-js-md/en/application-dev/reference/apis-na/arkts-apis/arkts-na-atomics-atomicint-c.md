@@ -36,8 +36,8 @@ Atomically compares the current value with the expected value and replaces it if
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| expected | int | Yes | the expected current value. &lt;br&gt;The value should be an integer. |
-| val | int | Yes | the new value to store if the comparison succeeds. &lt;br&gt;The value should be an integer. |
+| expected | int | Yes | the expected current value. <br>The value should be an integer. |
+| val | int | Yes | the new value to store if the comparison succeeds. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -69,7 +69,7 @@ Constructs a new AtomicInt with the provided initial value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| val | int | Yes | the initial value. &lt;br&gt;The value should be an integer. |
+| val | int | Yes | the initial value. <br>The value should be an integer. |
 
 ## exchange
 
@@ -95,7 +95,7 @@ Atomically exchanges the current value with a new value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| val | int | Yes | the new value to exchange with. &lt;br&gt;The value should be an integer. |
+| val | int | Yes | the new value to exchange with. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -127,7 +127,7 @@ Atomically adds a value to the current value and returns the previous value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| val | int | Yes | the value to add. &lt;br&gt;The value should be an integer. |
+| val | int | Yes | the value to add. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -159,7 +159,7 @@ Atomically performs a bitwise AND operation and returns the previous value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| val | int | Yes | the value to AND with. &lt;br&gt;The value should be an integer. |
+| val | int | Yes | the value to AND with. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -191,7 +191,7 @@ Atomically performs a bitwise OR operation and returns the previous value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| val | int | Yes | the value to OR with. &lt;br&gt;The value should be an integer. |
+| val | int | Yes | the value to OR with. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -223,7 +223,7 @@ Atomically subtracts a value from the current value and returns the previous val
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| val | int | Yes | the value to subtract. &lt;br&gt;The value should be an integer. |
+| val | int | Yes | the value to subtract. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -255,7 +255,7 @@ Atomically performs a bitwise XOR operation and returns the previous value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| val | int | Yes | the value to XOR with. &lt;br&gt;The value should be an integer. |
+| val | int | Yes | the value to XOR with. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -339,5 +339,5 @@ Atomically stores a new value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| val | int | Yes | the new value to store. &lt;br&gt;The value should be an integer. |
+| val | int | Yes | the new value to store. <br>The value should be an integer. |
 

@@ -15,7 +15,7 @@ Defines the custom vibration effect.
 ## Modules to Import
 
 ```TypeScript
-import { vibrator } from '@kit.SensorServiceKit';
+import { vibrator } from 'vibrator';
 ```
 
 ## pattern

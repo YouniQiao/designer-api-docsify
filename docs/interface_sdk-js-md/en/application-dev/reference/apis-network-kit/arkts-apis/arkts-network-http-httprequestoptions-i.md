@@ -15,7 +15,7 @@ Specifies the type and value range of the optional parameters in the HTTP reques
 ## Modules to Import
 
 ```TypeScript
-import { http } from '@kit.NetworkKit';
+import { http } from 'http';
 ```
 
 ## addressFamily

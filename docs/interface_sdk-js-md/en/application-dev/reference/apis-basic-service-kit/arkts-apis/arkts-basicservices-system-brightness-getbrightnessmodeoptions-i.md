@@ -15,7 +15,13 @@ Options for obtaining the screen brightness mode.
 ## Modules to Import
 
 ```TypeScript
-import { BrightnessResponse, BrightnessModeResponse, SetBrightnessModeOptions, GetBrightnessModeOptions, SetBrightnessOptions, GetBrightnessOptions, SetKeepScreenOnOptions } from '@kit.BasicServicesKit';
+import { BrightnessModeResponse } from 'BrightnessModeResponse';
+import { BrightnessResponse } from 'BrightnessResponse';
+import { GetBrightnessModeOptions } from 'GetBrightnessModeOptions';
+import { GetBrightnessOptions } from 'GetBrightnessOptions';
+import { SetBrightnessModeOptions } from 'SetBrightnessModeOptions';
+import { SetBrightnessOptions } from 'SetBrightnessOptions';
+import { SetKeepScreenOnOptions } from 'SetKeepScreenOnOptions';
 ```
 
 ## complete

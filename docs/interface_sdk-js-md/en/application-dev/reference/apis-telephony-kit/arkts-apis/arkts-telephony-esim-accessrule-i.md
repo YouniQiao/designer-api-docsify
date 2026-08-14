@@ -15,7 +15,7 @@ Establishes a single UICC access rule pursuant to the GlobalPlatform Secure Elem
 ## Modules to Import
 
 ```TypeScript
-import { eSIM } from '@kit.TelephonyKit';
+import { eSIM } from 'eSIM';
 ```
 
 ## accessType

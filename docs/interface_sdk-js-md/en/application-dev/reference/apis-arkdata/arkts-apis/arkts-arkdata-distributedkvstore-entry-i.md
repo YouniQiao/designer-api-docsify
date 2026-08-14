@@ -15,7 +15,7 @@ Provides key-value pairs stored in the distributedKVStore.
 ## Modules to Import
 
 ```TypeScript
-import { distributedKVStore } from '@kit.ArkData';
+import { distributedKVStore } from 'distributedKVStore';
 ```
 
 ## key

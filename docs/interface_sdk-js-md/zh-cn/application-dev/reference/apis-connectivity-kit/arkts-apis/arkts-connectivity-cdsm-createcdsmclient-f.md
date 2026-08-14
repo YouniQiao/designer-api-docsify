@@ -26,7 +26,7 @@ function createCdsmClient(address: string): CdsmClient
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| address | string | 是 | CDSM服务端地址。 &lt;br&gt;长度必须为17。取值约束：由十六进制数字和冒号组成，例如：11:22:33:AA:BB:FF。 |
+| address | string | 是 | CDSM服务端地址。 <br>长度必须为17。取值约束：由十六进制数字和冒号组成，例如：11:22:33:AA:BB:FF。 |
 
 **返回值：**
 

@@ -15,7 +15,7 @@ Implements an asynchronous queue, for which you can specify the task execution c
 ## Modules to Import
 
 ```TypeScript
-import { taskpool } from '@kit.ArkTS';
+import { taskpool } from 'taskpool';
 ```
 
 ## constructor

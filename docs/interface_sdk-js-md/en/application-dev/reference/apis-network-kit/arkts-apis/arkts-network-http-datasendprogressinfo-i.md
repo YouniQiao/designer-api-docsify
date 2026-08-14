@@ -15,7 +15,7 @@ This interface is used to monitor the progress of sending data.
 ## Modules to Import
 
 ```TypeScript
-import { http } from '@kit.NetworkKit';
+import { http } from 'http';
 ```
 
 ## sendSize

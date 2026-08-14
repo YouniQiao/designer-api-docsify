@@ -17,7 +17,7 @@ Indicates IMS registration information.
 ## Modules to Import
 
 ```TypeScript
-import { radio } from '@kit.TelephonyKit';
+import { radio } from 'radio';
 ```
 
 ## imsRegState

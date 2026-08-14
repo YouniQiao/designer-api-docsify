@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { StartOptions } from '@kit.AbilityKit';
+import { StartOptions } from 'StartOptions';
 ```
 
 ## Summary

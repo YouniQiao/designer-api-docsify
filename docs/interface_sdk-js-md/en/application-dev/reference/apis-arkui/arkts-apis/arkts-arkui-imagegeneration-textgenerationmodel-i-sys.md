@@ -17,7 +17,7 @@ AI Text Model Abstract Interface.
 ## Modules to Import
 
 ```TypeScript
-import { imageGeneration } from '@kit.ArkUI';
+import { imageGeneration } from 'imageGeneration';
 ```
 
 ## cancelTextGeneration
@@ -46,7 +46,7 @@ Cancel AI text generation task.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sessionId | int | Yes | The session id for cancel an AI text generation task. &lt;br&gt;Value: range: [0, +∞] |
+| sessionId | int | Yes | The session id for cancel an AI text generation task. <br>Value: range: [0, +∞] |
 
 ## onComplain
 
@@ -74,7 +74,7 @@ User use complaint menu to complain the result of an AI-generated text task.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sessionId | int | Yes | The session id of AI text generation task. &lt;br&gt;Value: range: [0, +∞] |
+| sessionId | int | Yes | The session id of AI text generation task. <br>Value: range: [0, +∞] |
 | request | string | Yes | The origin request for AI-generated text task. |
 | result | [GenerateTextTaskResult](arkts-arkui-imagegeneration-generatetexttaskresult-i-sys.md) | Yes | The result for AI-generated text task. |
 
@@ -105,7 +105,7 @@ Request AI text generation task to get the generated text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| sessionId | int | Yes | The session id for requesting an AI text generation task. &lt;br&gt;Value: range: [0, +∞] |
+| sessionId | int | Yes | The session id for requesting an AI text generation task. <br>Value: range: [0, +∞] |
 | value | string | Yes | Parameters for requesting an AI text generation task. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[GenerateTextTaskPartialResult](arkts-arkui-imagegeneration-generatetexttaskpartialresult-i-sys.md)&gt; | Yes | the callback used to return the GenerateTextTaskPartialResult. |
 

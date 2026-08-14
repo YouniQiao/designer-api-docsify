@@ -86,7 +86,7 @@ getHttpBodyStream(): WebHttpBodyStream | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [WebHttpBodyStream](../../apis-na/arkts-apis/arkts-na-webview-webhttpbodystream-c.md) | Return http body stream. If request has no http body stream, return null. |
+| [WebHttpBodyStream](arkts-arkweb-webview-webhttpbodystream-c.md) | Return http body stream. If request has no http body stream, return null. |
 
 ## getReferrer
 
@@ -162,7 +162,7 @@ getRequestResourceType(): WebResourceType
 
 | 类型 | 说明 |
 | --- | --- |
-| [WebResourceType](../../apis-na/arkts-apis/arkts-na-webview-webresourcetype-e.md) | 返回资源请求的资源类型。 |
+| [WebResourceType](arkts-arkweb-webview-webresourcetype-e.md) | 返回资源请求的资源类型。 |
 
 ## getRequestUrl
 

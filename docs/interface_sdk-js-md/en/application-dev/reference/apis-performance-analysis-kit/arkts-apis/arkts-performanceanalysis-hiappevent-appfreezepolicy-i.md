@@ -15,7 +15,7 @@ Defines the application freeze event configuration policy.
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from 'hiAppEvent';
 ```
 
 ## pageSwitchLogEnable

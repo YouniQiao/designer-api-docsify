@@ -17,7 +17,7 @@ Describes the cloud pair device.
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.ConnectivityKit';
+import { connection } from 'connection';
 ```
 
 ## trustedPairedDevices

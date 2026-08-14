@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { List } from '@kit.ArkTS';
+import { List } from 'List';
 ```
 
 ## Summary

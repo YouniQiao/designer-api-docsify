@@ -17,7 +17,32 @@ Defines chip symbol icon.
 ## Modules to Import
 
 ```TypeScript
-import { ChipV2SuffixSymbolIconConfig, ChipV2Label, ChipV2PrefixSymbolIconConfig, IChipV2OptionsConfig, ChipV2SymbolIcon, ChipV2SuffixImageIconConfig, ChipV2LocalizedLabelMarginConfig, ChipV2SymbolIconConfig, ChipV2LabelConfig, ChipV2SuffixSymbolIcon, ChipV2AccessibilityConfig, ChipV2Icon, ChipV2Size, ChipV2CloseConfig, ChipV2SuffixImageIcon, ChipV2Accessibility, ChipV2Options, ChipV2ImageIconConfig, ChipV2ImageIcon, ChipV2PrefixImageIcon, ChipV2LabelMarginConfig, ChipV2PrefixSymbolIcon, ChipV2, ChipV2CloseIcon, ChipV2PrefixImageIconConfig, ChipV2AccessibilitySelectedType } from '@kit.ArkUI';
+import { ChipV2Size } from 'ChipV2Size';
+import { ChipV2AccessibilitySelectedType } from 'ChipV2AccessibilitySelectedType';
+import { ChipV2ImageIconConfig } from 'ChipV2ImageIconConfig';
+import { ChipV2ImageIcon } from 'ChipV2ImageIcon';
+import { ChipV2SuffixImageIconConfig } from 'ChipV2SuffixImageIconConfig';
+import { ChipV2SuffixImageIcon } from 'ChipV2SuffixImageIcon';
+import { ChipV2Icon } from 'ChipV2Icon';
+import { ChipV2PrefixImageIconConfig } from 'ChipV2PrefixImageIconConfig';
+import { ChipV2PrefixImageIcon } from 'ChipV2PrefixImageIcon';
+import { ChipV2AccessibilityConfig } from 'ChipV2AccessibilityConfig';
+import { ChipV2Accessibility } from 'ChipV2Accessibility';
+import { ChipV2CloseConfig } from 'ChipV2CloseConfig';
+import { ChipV2CloseIcon } from 'ChipV2CloseIcon';
+import { ChipV2SymbolIconConfig } from 'ChipV2SymbolIconConfig';
+import { ChipV2SymbolIcon } from 'ChipV2SymbolIcon';
+import { ChipV2PrefixSymbolIconConfig } from 'ChipV2PrefixSymbolIconConfig';
+import { ChipV2PrefixSymbolIcon } from 'ChipV2PrefixSymbolIcon';
+import { ChipV2SuffixSymbolIconConfig } from 'ChipV2SuffixSymbolIconConfig';
+import { ChipV2SuffixSymbolIcon } from 'ChipV2SuffixSymbolIcon';
+import { ChipV2LabelMarginConfig } from 'ChipV2LabelMarginConfig';
+import { ChipV2LocalizedLabelMarginConfig } from 'ChipV2LocalizedLabelMarginConfig';
+import { ChipV2LabelConfig } from 'ChipV2LabelConfig';
+import { ChipV2Label } from 'ChipV2Label';
+import { IChipV2OptionsConfig } from 'IChipV2OptionsConfig';
+import { ChipV2Options } from 'ChipV2Options';
+import { ChipV2 } from 'ChipV2';
 ```
 
 ## constructor

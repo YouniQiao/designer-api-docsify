@@ -46,7 +46,7 @@ dpiFollowStrategy?: SecurityDpiFollowStrategy
 isTransferringCaller?: boolean
 ```
 
-在使用SecurityUIExtensionComponent嵌套时，设置当前组件是否转发上一级调用方的Caller信息（即发起调用的Ability身份信息），用于支持多级嵌套场景下的调用链传递。&lt;br/&gt; true：转发上一级的Caller信息；false：不转发上一级的Caller信息。&lt;br/&gt; 默认值：false
+在使用SecurityUIExtensionComponent嵌套时，设置当前组件是否转发上一级调用方的Caller信息（即发起调用的Ability身份信息），用于支持多级嵌套场景下的调用链传递。<br/> true：转发上一级的Caller信息；false：不转发上一级的Caller信息。<br/> 默认值：false
 
 **类型：** boolean
 
@@ -74,7 +74,7 @@ placeholder?: ComponentContent
 
 设置占位符，在SecurityUIExtensionComponent与UIExtensionAbility建立连接前显示。 未设置时不显示占位符。
 
-**类型：** [ComponentContent](arkts-na-componentcontent-c.md)
+**类型：** [ComponentContent](../../apis-arkui/arkts-apis/arkts-arkui-componentcontent-c.md)
 
 **起始版本：** 26.0.0
 

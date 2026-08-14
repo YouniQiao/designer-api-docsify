@@ -15,7 +15,7 @@ Describes the scanned Wi-Fi information.
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'wifiManager';
 ```
 
 ## band

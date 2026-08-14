@@ -15,7 +15,15 @@ Provides a SelectionContainer component interface.
 ## Modules to Import
 
 ```TypeScript
-import { SelectionContainerInstance, SelectionContainer, OnMenuItemClickWithTextCallback, SelectionContainerOptions, SelectionContainerAttribute, SelectionContainerEditMenuOptions, SelectionContainerTextJoinStyle, SelectionContainerController, SelectionContainerMenuOptions } from '@kit.ArkUI';
+import { OnMenuItemClickWithTextCallback } from 'OnMenuItemClickWithTextCallback';
+import { SelectionContainer } from 'SelectionContainer';
+import { SelectionContainerAttribute } from 'SelectionContainerAttribute';
+import { SelectionContainerEditMenuOptions } from 'SelectionContainerEditMenuOptions';
+import { SelectionContainerInstance } from 'SelectionContainerInstance';
+import { SelectionContainerMenuOptions } from 'SelectionContainerMenuOptions';
+import { SelectionContainerTextJoinStyle } from 'SelectionContainerTextJoinStyle';
+import { SelectionContainerOptions } from 'SelectionContainerOptions';
+import { SelectionContainerController } from 'SelectionContainerController';
 ```
 
 ## constructor

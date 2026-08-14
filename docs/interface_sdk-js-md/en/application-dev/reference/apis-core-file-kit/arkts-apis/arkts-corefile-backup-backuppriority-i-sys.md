@@ -17,7 +17,7 @@ Control backup and restore priority sequence
 ## Modules to Import
 
 ```TypeScript
-import { backup } from '@kit.CoreFileKit';
+import { backup } from 'backup';
 ```
 
 ## priority

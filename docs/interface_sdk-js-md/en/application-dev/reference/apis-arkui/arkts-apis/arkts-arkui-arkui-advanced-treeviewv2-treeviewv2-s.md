@@ -15,7 +15,12 @@ Declare TreeViewV2 Component
 ## Modules to Import
 
 ```TypeScript
-import { TreeListenerManagerV2, NodeParamV2, CallbackParamV2, TreeControllerV2, TreeViewV2, TreeListenerV2 } from '@kit.ArkUI';
+import { CallbackParamV2 } from 'CallbackParamV2';
+import { NodeParamV2 } from 'NodeParamV2';
+import { TreeControllerV2 } from 'TreeControllerV2';
+import { TreeListenerV2 } from 'TreeListenerV2';
+import { TreeListenerManagerV2 } from 'TreeListenerManagerV2';
+import { TreeViewV2 } from 'TreeViewV2';
 ```
 
 ## treeControllerV2

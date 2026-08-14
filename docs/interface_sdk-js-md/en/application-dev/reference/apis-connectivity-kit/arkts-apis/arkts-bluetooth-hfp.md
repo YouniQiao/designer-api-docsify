@@ -15,7 +15,7 @@ Provides methods to accessing bluetooth call-related capabilities.
 ## Modules to Import
 
 ```TypeScript
-import { hfp } from '@kit.ConnectivityKit';
+import { hfp } from 'hfp';
 ```
 
 ## Summary

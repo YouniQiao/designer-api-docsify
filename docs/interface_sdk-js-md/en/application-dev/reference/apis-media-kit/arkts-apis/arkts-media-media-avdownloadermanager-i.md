@@ -15,7 +15,7 @@ Definition of the Offline Download Management Interface
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'media';
 ```
 
 ## addAVDownloadTask
@@ -42,7 +42,7 @@ Create a download task based on the media description.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | [MediaSource](arkts-media-media-mediasource-i.md) | Yes | Media description, including at least the resource URL. &lt;br&gt;Value constraint:The value cannot be null. |
+| source | [MediaSource](arkts-media-media-mediasource-i.md) | Yes | Media description, including at least the resource URL. <br>Value constraint:The value cannot be null. |
 
 **Return value:**
 
@@ -100,7 +100,7 @@ Obtains all offline download tasks in the Task Manager. Ended download tasks are
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | If a task exists in the task manager, the taskID array is returned. Otherwise null. |
+| Array&lt;string&gt; | If a task exists in the task manager, the task ID array is returned. Otherwise null. |
 
 ## getTaskCacheDirectory
 
@@ -240,7 +240,7 @@ Deregisters a specified function's listening on task progress change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnAVDownloadProgressChangeHandle](arkts-media-media-onavdownloadprogresschangehandle-t.md) | No | Prototype of the function called by the event. The first parameter indicates the offline download task ID. The second parameter indicates the progress of an offline download task. The progress value ranges from 0.0 to 1.0, If the value is -1, the size of the resource is unknown. &lt;br&gt;Default value: If no parameter is set, all listening functions for the event are canceled. |
+| callback | [OnAVDownloadProgressChangeHandle](arkts-media-media-onavdownloadprogresschangehandle-t.md) | No | Prototype of the function called by the event. The first parameter indicates the offline download task ID. The second parameter indicates the progress of an offline download task. The progress value ranges from 0.0 to 1.0, If the value is -1, the size of the resource is unknown. <br>Default value: If no parameter is set, all listening functions for the event are canceled. |
 
 ## offStatusChange
 
@@ -266,7 +266,7 @@ Deregisters a specified function's listening on task status change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnAVDownloadTaskStateHandle](arkts-media-media-onavdownloadtaskstatehandle-t.md) | No | Prototype of the function invoked by the event. The first parameter indicates the ID of the offline download task. The second parameter indicates the latest status of the offline download task. &lt;br&gt;Default value: If no parameter is set, all listening functions for the event are canceled. |
+| callback | [OnAVDownloadTaskStateHandle](arkts-media-media-onavdownloadtaskstatehandle-t.md) | No | Prototype of the function invoked by the event. The first parameter indicates the ID of the offline download task. The second parameter indicates the latest status of the offline download task. <br>Default value: If no parameter is set, all listening functions for the event are canceled. |
 
 ## onProgressChange
 
@@ -397,7 +397,7 @@ Remove a download task from the offline download manager
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| taskId | string | No | Specifies the ID of an offline download task. &lt;br&gt;Default value: If this parameter is not specified, all offline download tasks are cleared.. |
+| taskId | string | No | Specifies the ID of an offline download task. <br>Default value: If this parameter is not specified, all offline download tasks are cleared.. |
 
 **Error codes:**
 
@@ -411,7 +411,7 @@ Remove a download task from the offline download manager
 resumeDownloadTask(taskId?: string): void
 ```
 
-Resuming Offline download of a Specified Task
+Resuming Offline Download of a Specified Task
 
 **Since:** 26.0.0
 
@@ -462,5 +462,5 @@ Sets the network timeout interval for HTTP requests. If the timeout interval is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timeout | int | Yes | Timeout duration, in ms. If is not set, the default timeout duration is used. The value should be an integer. &lt;br&gt;**Description**&lt;/br&gt; &lt;ul&gt;&lt;li&gt;If the value is less than 0, there is no timeout duration.&lt;/li&gt;&lt;/ul&gt;. |
+| timeout | int | Yes | Timeout duration, in ms. If is not set, the default timeout duration is used. The value should be an integer. <br>**Description**&lt;/br&gt; &lt;ul&gt;&lt;li&gt;If the value is less than 0, there is no timeout duration.&lt;/li&gt;&lt;/ul&gt;. |
 

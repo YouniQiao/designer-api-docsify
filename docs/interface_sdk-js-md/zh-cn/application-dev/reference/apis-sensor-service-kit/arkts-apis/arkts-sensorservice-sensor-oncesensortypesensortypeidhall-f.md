@@ -6,7 +6,7 @@
 function once(type: SensorType.SENSOR_TYPE_ID_HALL, callback: Callback<HallResponse>): void
 ```
 
-监听霍尔传感器数据变化一次。适用于仅需一次性获取当前霍尔数据的场景。
+监听霍尔传感器数据变化一次。适用于仅需一次性获取当前霍尔数据的场景。 > **说明：** > > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.HALL] > once > 替代。
 
 **起始版本：** 8
 

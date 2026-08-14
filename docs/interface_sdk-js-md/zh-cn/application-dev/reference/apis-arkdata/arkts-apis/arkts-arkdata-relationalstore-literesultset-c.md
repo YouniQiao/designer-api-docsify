@@ -490,7 +490,7 @@ getLong(columnIndex: int): long
 
 | 类型 | 说明 |
 | --- | --- |
-| long | 以Long形式返回指定列的值。 &lt;br&gt;该接口支持的精度范围是：Number.MIN_SAFE_INTEGER ~ Number.MAX_SAFE_INTEGER，若超出该范围，建议对于DOUBLE类型的值使用 [getDouble]{ |
+| long | 以Long形式返回指定列的值。 <br>该接口支持的精度范围是：Number.MIN_SAFE_INTEGER ~ Number.MAX_SAFE_INTEGER，若超出该范围，建议对于DOUBLE类型的值使用 [getDouble]{ |
 
 **错误码：**
 

@@ -15,7 +15,7 @@ Implements a **WebDataBase** object. > **NOTE：**> > - The sample effect is sub
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'webview';
 ```
 
 ## deleteHttpAuthCredentials
@@ -62,7 +62,7 @@ Checks whether any saved HTTP authentication credentials exist. This API returns
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether any saved HTTP authentication credentials exist. &lt;br&gt;**true** is returned if any saved HTTP authentication credentials exist; otherwise, **false** is returned. |
+| boolean | Whether any saved HTTP authentication credentials exist. <br>**true** is returned if any saved HTTP authentication credentials exist; otherwise, **false** is returned. |
 
 ## getHttpAuthCredentials
 
@@ -101,7 +101,7 @@ Retrieves HTTP authentication credentials for a given host and realm. This API r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 
 ## saveHttpAuthCredentials
 
@@ -136,5 +136,5 @@ Saves HTTP authentication credentials for a given host and realm. This API retur
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 

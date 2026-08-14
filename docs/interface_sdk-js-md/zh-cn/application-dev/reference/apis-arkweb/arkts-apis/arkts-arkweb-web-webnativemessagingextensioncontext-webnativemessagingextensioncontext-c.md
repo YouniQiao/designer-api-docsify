@@ -86,16 +86,20 @@ import { BusinessError } from '@kit.BasicServicesKit';
 export class MyWebNativeMessagingExtension extends WebNativeMessagingExtensionAbility {
   onConnectNative(info: ConnectionInfo): void {
     const abilityWant: Want = {
-    bundleName: 'com.example.mybundle',
-    abilityName: 'MainAbility'
+      bundleName: 'com.example.mybundle',
+      abilityName: 'MainAbility'
     };
     try {
-        const context = this.context; // 获取 WebNativeMessagingExtensionContext 实例
-        context.startAbility(abilityWant);
+      const context = this.context; // 获取 WebNativeMessagingExtensionContext 实例
+      context.startAbility(abilityWant).then(() => {
         console.info('Ability started successfully');
+      }).catch((err: BusinessError) => {
+        console.error(`Failed to start ability. Code: ${err.code},
+          Message: ${err.message}`);
+      });
     } catch (err) {
-        console.error(`Failed to start ability. Code: ${(err as BusinessError).code},
-        Message: ${(err as BusinessError).message}`);
+      console.error(`Failed to start ability. Code: ${(err as BusinessError).code},
+      Message: ${(err as BusinessError).message}`);
     }
   }
 }
@@ -307,8 +311,12 @@ export class MyWebNativeMessagingExtension extends WebNativeMessagingExtensionAb
     const CONNECTION_ID = 12345; // 实际的连接 ID
     try {
         const context = this.context;// 获取 WebNativeMessagingExtensionContext 实例
-        context.stopNativeConnection(CONNECTION_ID);
-        console.info('Native connection stopped successfully');
+        context.stopNativeConnection(CONNECTION_ID).then(() => {
+          console.info('Native connection stopped successfully');
+        }).catch((err: BusinessError) => {
+          console.error(`Failed to stop native connection. Code: ${err.code},
+          Message: ${err.message}`);
+        })
     } catch (err) {
         console.error(`Failed to stop native connection. Code: ${(err as BusinessError).code},
         Message: ${(err as BusinessError).message}`);
@@ -387,8 +395,12 @@ export class MyWebNativeMessagingExtension extends WebNativeMessagingExtensionAb
   onConnectNative(info: ConnectionInfo): void {
     try {
         const context = this.context; // 获取 WebNativeMessagingExtensionContext 实例
-        context.terminateSelf();
-        console.info('Extension terminated successfully');
+        context.terminateSelf().then(() => {
+          console.info('Extension terminated successfully');
+        }).catch((err: BusinessError) => {
+          console.error(`Failed to terminate extension. Code: ${err.code},
+          Message: ${err.message}`);
+        });       
     } catch (err) {
         console.error(`Failed to terminate extension. Code: ${(err as BusinessError).code},
         Message: ${(err as BusinessError).message}`);

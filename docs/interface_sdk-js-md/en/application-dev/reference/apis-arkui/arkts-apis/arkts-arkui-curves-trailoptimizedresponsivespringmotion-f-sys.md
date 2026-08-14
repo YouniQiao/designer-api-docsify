@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { curves } from '@kit.ArkUI';
+import { curves } from 'curves';
 ```
 
 ## trailOptimizedResponsiveSpringMotion
@@ -32,14 +32,14 @@ Creates a responsive spring animation curve. It is a special case of [springMoti
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| response | number | No | See **response** in **springMotion**.&lt;br&gt;Default value: **0.15**&lt;br&gt;Unit: second&lt;br&gt; Value range: (0, +∞)&lt;br&gt;**NOTE：**&lt;br&gt;If this parameter is set to a value less than or equal to 0, the default value **0.15** is used. |
-| dampingFraction | number | No | See **dampingFraction** in **springMotion**.&lt;br&gt;Default value: **0.86**&lt;br&gt; Unit: second&lt;br&gt;Value range: 0, +∞)&lt;br&gt;**NOTE：**&lt;br&gt;A value less than 0 evaluates to the default value **0.86**. |
-| overlapDuration | number | No | See **overlapDuration** in **springMotion**.&lt;br&gt;Default value: **0.25**&lt;br&gt; Unit: second&lt;br&gt;Value range: [0, +∞)&lt;br&gt;**NOTE：**&lt;br&gt;A value less than 0 evaluates to the default value **0.25**.&lt;br&gt;**ResponsiveSpringMotion** is a special case of **springMotion**, with the only difference in the default values. To apply custom settings for a spring animation, you are advised to use **springMotion**. When using **responsiveSpringMotion**, you are advised to retain the default settings.&lt;br&gt;The duration of the responsive spring animation depends on the **responsiveSpringMotion** parameters and the previous velocity, rather than the duration parameter in [animation, animateTo, or pageTransition. In addition, the interpolation cannot be obtained using the **interpolate** function of the curve. |
+| response | number | No | See **response** in **springMotion**.<br>Default value: **0.15**<br>Unit: second<br> Value range: (0, +∞)<br>**NOTE：**<br>If this parameter is set to a value less than or equal to 0, the default value **0.15** is used. |
+| dampingFraction | number | No | See **dampingFraction** in **springMotion**.<br>Default value: **0.86**<br> Unit: second<br>Value range: 0, +∞)<br>**NOTE：**<br>A value less than 0 evaluates to the default value **0.86**. |
+| overlapDuration | number | No | See **overlapDuration** in **springMotion**.<br>Default value: **0.25**<br> Unit: second<br>Value range: [0, +∞)<br>**NOTE：**<br>A value less than 0 evaluates to the default value **0.25**.<br>**ResponsiveSpringMotion** is a special case of **springMotion**, with the only difference in the default values. To apply custom settings for a spring animation, you are advised to use **springMotion**. When using **responsiveSpringMotion**, you are advised to retain the default settings.<br>The duration of the responsive spring animation depends on the **responsiveSpringMotion** parameters and the previous velocity, rather than the duration parameter in [animation, animateTo, or pageTransition. In addition, the interpolation cannot be obtained using the **interpolate** function of the curve. |
 | trail | [TrailOptimization](arkts-arkui-curves-trailoptimization-i-sys.md) | No | Trail optimization configuration. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| ICurve | Curve. &lt;br&gt;**NOTE：**&lt;br&gt;1. To apply custom settings for a spring animation, you are advised to use **springMotion**. When using **responsiveSpringMotion**, you are advised to retain the default settings. &lt;br&gt;2. The duration of the responsive spring animation depends on the **responsiveSpringMotion** parameters and the previous velocity, rather than the duration parameter in [animation]{ |
+| ICurve | Curve. <br>**NOTE：**<br>1. To apply custom settings for a spring animation, you are advised to use **springMotion**. When using **responsiveSpringMotion**, you are advised to retain the default settings. <br>2. The duration of the responsive spring animation depends on the **responsiveSpringMotion** parameters and the previous velocity, rather than the duration parameter in [animation]{ |
 

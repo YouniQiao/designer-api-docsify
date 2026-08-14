@@ -17,7 +17,7 @@ Provides OAuth authenticator callbacks. > **NOTE：**> > This API is supported s
 ## Modules to Import
 
 ```TypeScript
-import { appAccount } from '@kit.BasicServicesKit';
+import { appAccount } from 'appAccount';
 ```
 
 ## onRequestRedirected

@@ -34,7 +34,7 @@ next(): ReaderIteratorResult
 
 | 类型 | 说明 |
 | --- | --- |
-| [ReaderIteratorResult](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-readeriteratorresult-i.md) | 文件读取迭代器返回结果。 |
+| [ReaderIteratorResult](arkts-na-file-fs-readeriteratorresult-i.md) | 文件读取迭代器返回结果。 |
 
 **错误码：**
 

@@ -196,7 +196,7 @@ Appends an int as string to the builder's internal buffer
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| i | int | Yes | value to be appended &lt;br&gt;The value should be an integer. |
+| i | int | Yes | value to be appended <br>The value should be an integer. |
 
 **Return value:**
 
@@ -641,7 +641,7 @@ Converts the primitive to a string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| i | int | Yes | value to be converted &lt;br&gt;The value should be an integer. |
+| i | int | Yes | value to be converted <br>The value should be an integer. |
 
 **Return value:**
 

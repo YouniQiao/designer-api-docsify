@@ -1,6 +1,6 @@
 # GesturePoint
 
-The **GesturePoint** module provides APIs for creating gesture touch point information required for an accessibility application to inject gestures.
+GesturePoint represents a gesture touch point and is the basic unit that constitutes a gesture path (GesturePath). This module is used to create touch point information for gesture paths, for use by accessibility applications to inject gestures.
 
 **Since:** 9
 
@@ -15,7 +15,7 @@ The **GesturePoint** module provides APIs for creating gesture touch point infor
 ## Modules to Import
 
 ```TypeScript
-import { GesturePoint } from '@kit.AccessibilityKit';
+import { GesturePoint } from 'GesturePoint';
 ```
 
 ## constructor
@@ -24,7 +24,7 @@ import { GesturePoint } from '@kit.AccessibilityKit';
 constructor(positionX: double, positionY: double)
 ```
 
-Defines a constructor used to create a **GesturePoint** instance.
+Creates a **GesturePoint** instance based on the given X and Y coordinates.
 
 **Since:** 9
 

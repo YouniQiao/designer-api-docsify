@@ -36,7 +36,7 @@ Creates a pan gesture configuration object. The **PanGestureOptions** API enable
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | { fingers?: number; direction?: PanDirection; distance?: number } | No | Pan gesture configuration. &lt;br&gt;**fingers**: minimum number of fingers required. The value ranges from 1 to 10.&lt;br&gt;Default value: **1** &lt;br&gt;**direction**: pan direction. The value supports the AND (&) and OR (\|) operations.&lt;br&gt;Default value: **PanDirection.All** &lt;br&gt;**distance**: minimum pan distance to trigger the gesture, in vp.&lt;br&gt;Default value: **8** for the stylus and **5** for other input sources. &lt;br&gt;**NOTE：**&lt;br&gt;If a pan gesture and a [tab](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-customelement-i.md#tabs) swipe occur at the same time, set **distance** to **1** to make the gesture more easily recognizable.&lt;br&gt;If the value specified is less than **0**, the default value is used.&lt;br&gt;To avoid slow response and lagging during scrolling, set a reasonable pan distance.&lt;br&gt;When the scale attribute is applied to the component, the actual pan distance is adjusted based on the **scale** ratio. |
+| value | { fingers?: number; direction?: PanDirection; distance?: number } | No | Pan gesture configuration. <br>**fingers**: minimum number of fingers required. The value ranges from 1 to 10.<br>Default value: **1** <br>**direction**: pan direction. The value supports the AND (&) and OR (\|) operations.<br>Default value: **PanDirection.All** <br>**distance**: minimum pan distance to trigger the gesture, in vp.<br>Default value: **8** for the stylus and **5** for other input sources. <br>**NOTE：**<br>If a pan gesture and a [tab](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-customelement-i.md#tabs) swipe occur at the same time, set **distance** to **1** to make the gesture more easily recognizable.<br>If the value specified is less than **0**, the default value is used.<br>To avoid slow response and lagging during scrolling, set a reasonable pan distance.<br>When the scale attribute is applied to the component, the actual pan distance is adjusted based on the **scale** ratio. |
 
 ## getDirection
 
@@ -118,7 +118,7 @@ Sets the pan direction.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [PanDirection](arkts-arkui-pandirection-e.md) | Yes | Pan direction. The value supports the AND (&) and OR (\|) operations.&lt;br&gt;Default value: **PanDirection.All |
+| value | [PanDirection](arkts-arkui-pandirection-e.md) | Yes | Pan direction. The value supports the AND (&) and OR (\|) operations.<br>Default value: **PanDirection.All |
 
 ## setDistance
 
@@ -144,7 +144,7 @@ Sets the minimum pan distance to trigger the gesture, in vp. To avoid performanc
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Minimum pan distance to trigger the gesture, in vp.&lt;br&gt;Default value: **8** for the stylus and **5** for other input sources.&lt;br&gt;**NOTE：**&lt;br&gt;If a pan gesture and a [tab](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-customelement-i.md#tabs) swipe occur at the same time, set **distance** to **1** to make the gesture more easily recognizable.&lt;br&gt;If the value specified is less than **0**, the default value is used.&lt;br&gt;To avoid slow response and lagging during scrolling, set a reasonable pan distance.&lt;br&gt;When the scale attribute is applied to the component, the actual pan distance is adjusted based on the **scale** ratio. |
+| value | number | Yes | Minimum pan distance to trigger the gesture, in vp.<br>Default value: **8** for the stylus and **5** for other input sources.<br>**NOTE：**<br>If a pan gesture and a [tab](../../apis-avsession-kit/arkts-apis/arkts-avsession-avmusictemplate-customelement-i.md#tabs) swipe occur at the same time, set **distance** to **1** to make the gesture more easily recognizable.<br>If the value specified is less than **0**, the default value is used.<br>To avoid slow response and lagging during scrolling, set a reasonable pan distance.<br>When the scale attribute is applied to the component, the actual pan distance is adjusted based on the **scale** ratio. |
 
 ## setFingers
 
@@ -170,5 +170,5 @@ Sets the minimum number of fingers to trigger the gesture.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Minimum number of fingers to trigger a pan gesture. The value ranges from 1 to 10.&lt;br&gt; Default value: **1 |
+| value | number | Yes | Minimum number of fingers to trigger a pan gesture. The value ranges from 1 to 10.<br> Default value: **1 |
 

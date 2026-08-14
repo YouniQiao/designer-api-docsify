@@ -15,7 +15,7 @@ Describes the sensor data reporting frequency.
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
+import { sensor } from 'sensor';
 ```
 
 ## interval

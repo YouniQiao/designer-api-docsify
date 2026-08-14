@@ -20,7 +20,7 @@ Spatial effect params.
 occlusionWeight?: double
 ```
 
-Occlusion weight for spatial effect. &lt;br&gt;Value range:[0, 1].Default value:0
+Occlusion weight for spatial effect. <br>Value range:[0, 1].Default value:0
 
 **Type:** double
 

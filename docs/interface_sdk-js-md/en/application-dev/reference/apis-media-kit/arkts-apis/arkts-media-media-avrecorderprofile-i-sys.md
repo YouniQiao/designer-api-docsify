@@ -15,7 +15,7 @@ Describes the audio and video recording profile.
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'media';
 ```
 
 ## enableStableQualityMode

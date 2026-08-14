@@ -42,7 +42,7 @@ Sets the corner radius of the **SaveButton** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| radius | Dimension \| BorderRadiuses | Yes | Corner radius of the **SaveButton** component. You can set the radius for each of the four corners individually. &lt;br&gt;The default value is 0 vp for all four corners. Units such as vp and px are supported, and valid values are greater than or equal to 0. Negative values are automatically clamped to **0**. &lt;br&gt;If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the corner radius setting of the icon does not take effect. |
+| radius | Dimension \| BorderRadiuses | Yes | Corner radius of the **SaveButton** component. You can set the radius for each of the four corners individually. <br>The default value is 0 vp for all four corners. Units such as vp and px are supported, and valid values are greater than or equal to 0. Negative values are automatically clamped to **0**. <br>If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the corner radius setting of the icon does not take effect. |
 
 ## iconSize
 
@@ -70,7 +70,7 @@ Sets the icon size of the **SaveButton** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | Dimension \| SizeOptions | Yes | Icon size. Pixel units such as vp and px are supported. &lt;br&gt;The default width and height are 16 vp.&lt;br&gt;Percentage strings are not supported. If a percentage string is passed as a Dimension parameter, the icon will be displayed with the default size. If either the **width** or **height** property of a SizeOptions type parameter is set to a percentage string, the icon will be displayed with a size of 0 vp. &lt;br&gt;For the system icons provided by the **SaveButton** component: &lt;br&gt;- Dimension type: Width and height are both set to the specified value. &lt;br&gt;- SizeOptions type: If width and height are different, the smaller value is used for both. If only one value is specified, it applies to both dimensions. This rule ensures square display and consistent visual appearance of system icons. &lt;br&gt;For custom icons: &lt;br&gt;- Dimension type: Width and height are both set to the specified value. &lt;br&gt;- SizeOptions type: It is recommended that you set both width and height explicitly; if only one value is set, it applies to both dimensions. Custom icons support flexible sizing to adapt to different image aspect ratios. &lt;br&gt;- If the specified size's aspect ratio does not match the custom icon's original ratio, the icon displays in ImageFit.Cover mode. |
+| size | Dimension \| SizeOptions | Yes | Icon size. Pixel units such as vp and px are supported. <br>The default width and height are 16 vp.<br>Percentage strings are not supported. If a percentage string is passed as a Dimension parameter, the icon will be displayed with the default size. If either the **width** or **height** property of a SizeOptions type parameter is set to a percentage string, the icon will be displayed with a size of 0 vp. <br>For the system icons provided by the **SaveButton** component: <br>- Dimension type: Width and height are both set to the specified value. <br>- SizeOptions type: If width and height are different, the smaller value is used for both. If only one value is specified, it applies to both dimensions. This rule ensures square display and consistent visual appearance of system icons. <br>For custom icons: <br>- Dimension type: Width and height are both set to the specified value. <br>- SizeOptions type: It is recommended that you set both width and height explicitly; if only one value is set, it applies to both dimensions. Custom icons support flexible sizing to adapt to different image aspect ratios. <br>- If the specified size's aspect ratio does not match the custom icon's original ratio, the icon displays in ImageFit.Cover mode. |
 
 ## onClick
 
@@ -98,7 +98,7 @@ Triggered when the **SaveButton** component is clicked. When a user clicks the s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [SaveButtonCallback](arkts-arkui-savebuttoncallback-t.md) | Yes | Callback object for the click event, which carries click details, authorization result and error information. &lt;br&gt;Starting from API version 18, **SaveButtonCallback** is adopted uniformly, which additionally provides error information.<br>**Since:** 18 |
+| event | [SaveButtonCallback](arkts-arkui-savebuttoncallback-t.md) | Yes | Callback object for the click event, which carries click details, authorization result and error information. <br>Starting from API version 18, **SaveButtonCallback** is adopted uniformly, which additionally provides error information.<br>**Since:** 18 |
 
 ## setIcon
 
@@ -128,7 +128,7 @@ Sets the icon of the **SaveButton** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| icon | Resource | Yes | Custom icon resource information. Only data sources of the Resource type are supported. &lt;br&gt;Images in the following formats are supported: PNG, JPG, JPEG, BMP, SVG, WebP, GIF, and HEIF. For details about the supported image formats, see Image. If the resource is not an image resource or the format is not supported, the icon is displayed as blank. &lt;br&gt;Since API version 26.0.0, data sources of the Resource type in Symbol format are supported. &lt;br&gt;If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the custom icon does not take effect and the save button uses the default style. |
+| icon | Resource | Yes | Custom icon resource information. Only data sources of the Resource type are supported. <br>Images in the following formats are supported: PNG, JPG, JPEG, BMP, SVG, WebP, GIF, and HEIF. For details about the supported image formats, see Image. If the resource is not an image resource or the format is not supported, the icon is displayed as blank. <br>Since API version 26.0.0, data sources of the Resource type in Symbol format are supported. <br>If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the custom icon does not take effect and the save button uses the default style. |
 
 ## setText
 
@@ -158,7 +158,7 @@ Sets the text of the **SaveButton** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string \| Resource | Yes | Custom text, used to replace the default system text for business-specific scenarios. When a string is passed, the text content is directly used. When a Resource is passed, multi- language adaptation is implemented via resource management. &lt;br&gt;If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, this setting does not take effect and the save button uses the default style. |
+| text | string \| Resource | Yes | Custom text, used to replace the default system text for business-specific scenarios. When a string is passed, the text content is directly used. When a Resource is passed, multi- language adaptation is implemented via resource management. <br>If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, this setting does not take effect and the save button uses the default style. |
 
 ## stateEffect
 
@@ -188,7 +188,7 @@ Sets the press effect of the **SaveButton** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether to enable the press effect. **true** to enable, **false** otherwise. &lt;br&gt;Default value: **false**.&lt;br&gt;If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the press effect setting does not take effect. |
+| enabled | boolean | Yes | Whether to enable the press effect. **true** to enable, **false** otherwise. <br>Default value: **false**.<br>If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the press effect setting does not take effect. |
 
 ## symbolFontWeight
 
@@ -218,7 +218,7 @@ Sets the font weight of the symbol icon for the save button. - Before calling th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fontWeight | number \| FontWeight \| string \| Resource | Yes | Symbol icon font weight of the save button. &lt;br&gt;For the number type: The value range is [100, 900] with an increment of 100. Larger values result in bolder font weight. &lt;br&gt;For the string type: The value can be a numeric string of the number type (for example, **"400"**) or a lowercase string of the enumerated value of FontWeight (for example, **"normal"**). &lt;br&gt;Default value: **FontWeight.Normal** (the corresponding value is **400**) &lt;br&gt;If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the setting does not take effect. |
+| fontWeight | number \| FontWeight \| string \| Resource | Yes | Symbol icon font weight of the save button. <br>For the number type: The value range is [100, 900] with an increment of 100. Larger values result in bolder font weight. <br>For the string type: The value can be a numeric string of the number type (for example, **"400"**) or a lowercase string of the enumerated value of FontWeight (for example, **"normal"**). <br>Default value: **FontWeight.Normal** (the corresponding value is **400**) <br>If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the setting does not take effect. |
 
 ## symbolIconColor
 
@@ -248,7 +248,7 @@ Sets the color of the symbol icon for the save button. - Before calling this met
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | Array&lt;ResourceColor&gt; | Yes | Symbol icon color of the save button. This parameter applies to scenarios where the symbol icon needs to be consistent with the service visual style. &lt;br&gt;Default value: varies depending on [symbolRenderingStrategy](#symbolRenderingStrategy). &lt;br&gt;If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the setting does not take effect. |
+| color | Array&lt;ResourceColor&gt; | Yes | Symbol icon color of the save button. This parameter applies to scenarios where the symbol icon needs to be consistent with the service visual style. <br>Default value: varies depending on [symbolRenderingStrategy](#symbolRenderingStrategy). <br>If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the setting does not take effect. |
 
 ## symbolRenderingStrategy
 
@@ -278,7 +278,7 @@ Sets the rendering strategy for the symbol icon of the save button. - Before cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| strategy | SymbolRenderingStrategy | Yes | Rendering strategy for the symbol icon of the save button, which defines how the symbol icon is rendered. &lt;br&gt;Default value: SymbolRenderingStrategy.SINGLE. &lt;br&gt;If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the setting does not take effect. |
+| strategy | SymbolRenderingStrategy | Yes | Rendering strategy for the symbol icon of the save button, which defines how the symbol icon is rendered. <br>Default value: SymbolRenderingStrategy.SINGLE. <br>If the app does not have the **ohos.permission.CUSTOMIZE_SAVE_BUTTON** permission, the setting does not take effect. |
 
 ## userCancelEvent
 
@@ -306,5 +306,5 @@ Sets the user authorization cancellation event for the **SaveButton** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether to receive the user authorization cancellation event of the save button. &lt;br&gt;Default value: **false**.&lt;br&gt;The value **true** indicates that when a user manually cancels authorization in the authorization dialog box, the callback returns the result **CANCELED_BY_USER**. The value **false** indicates that user cancellation is not distinguished from other scenarios. &lt;br/&gt;You are advised to enable this parameter if your service needs to distinguish between user cancellation and system errors/authorization failures. |
+| enabled | boolean | Yes | Whether to receive the user authorization cancellation event of the save button. <br>Default value: **false**.<br>The value **true** indicates that when a user manually cancels authorization in the authorization dialog box, the callback returns the result **CANCELED_BY_USER**. The value **false** indicates that user cancellation is not distinguished from other scenarios. <br/>You are advised to enable this parameter if your service needs to distinguish between user cancellation and system errors/authorization failures. |
 

@@ -17,7 +17,7 @@ Describes the contents of the scan results.
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from '@kit.ConnectivityKit';
+import { bluetoothManager } from 'bluetoothManager';
 ```
 
 ## data

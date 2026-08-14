@@ -38,7 +38,7 @@ constructor(lineSpacing: LengthMetrics, options?: LineSpacingOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| lineSpacing | LengthMetrics | 是 | 文本的行间距。 &lt;br&gt;取值范围：[0, +∞) |
+| lineSpacing | LengthMetrics | 是 | 文本的行间距。 <br>取值范围：[0, +∞) |
 | options | LineSpacingOptions | 否 | 行间距的配置项。 |
 
 ## lineSpacing

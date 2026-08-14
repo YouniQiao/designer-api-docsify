@@ -15,7 +15,7 @@ Describes the options for image encoding.
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'image';
 ```
 
 ## backgroundColor
@@ -110,7 +110,7 @@ Format of the packed image. Currently, only the following formats are supported:
 maxEmbedThumbnailDimension?: int
 ```
 
-This parameter is valid only when needsPackProperties is set to true. It specifies the maximum width and height of the thumbnail generated during encoding. If this parameter is not specified, no thumbnail will be generated during encoding. The value should be an integer. &lt;br&gt;Unit:px.
+This parameter is valid only when needsPackProperties is set to true. It specifies the maximum width and height of the thumbnail generated during encoding. If this parameter is not specified, no thumbnail will be generated during encoding. The value should be an integer. <br>Unit:px.
 
 **Type:** int
 

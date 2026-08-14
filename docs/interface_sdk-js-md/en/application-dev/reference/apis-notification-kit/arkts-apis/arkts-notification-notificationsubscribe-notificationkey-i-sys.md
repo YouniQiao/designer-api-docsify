@@ -17,7 +17,7 @@ Defines the notification key value.
 ## Modules to Import
 
 ```TypeScript
-import { notificationSubscribe } from '@kit.NotificationKit';
+import { notificationSubscribe } from 'notificationSubscribe';
 ```
 
 ## id

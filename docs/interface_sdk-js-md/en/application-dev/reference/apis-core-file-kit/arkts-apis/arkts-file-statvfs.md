@@ -15,7 +15,7 @@ This module provides APIs for obtaining file system information, including the t
 ## Modules to Import
 
 ```TypeScript
-import { statfs } from '@kit.CoreFileKit';
+import { statfs } from 'statfs';
 ```
 
 ## Summary

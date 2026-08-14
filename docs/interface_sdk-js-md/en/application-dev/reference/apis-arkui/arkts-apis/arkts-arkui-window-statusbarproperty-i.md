@@ -15,7 +15,7 @@ Describes the properties of the status bar. These properties are returned when y
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'window';
 ```
 
 ## contentColor

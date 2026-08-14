@@ -99,8 +99,8 @@ let wantTemp: Want = {
   abilityName: 'EnterpriseAdminAbility'
 };
 try {
-  systemManager.getAutoUnlockAfterReboot(wantTemp);
-  console.info('Succeeded in getting auto unlock after reboot.');
+  let result: boolean = systemManager.getAutoUnlockAfterReboot(wantTemp);
+  console.info(`Succeeded in getting auto unlock after reboot. result: ${result}`);
 } catch (err) {
   console.error(`Failed to get auto unlock after reboot. Code is ${err.code}, message is ${err.message}`);
 }

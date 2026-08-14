@@ -17,7 +17,7 @@ Creates an **AtomicServiceMenuBar** object based on the context of the current a
 ## Modules to Import
 
 ```TypeScript
-import { AtomicServiceMenuBar } from '@kit.ArkUI';
+import { AtomicServiceMenuBar } from 'AtomicServiceMenuBar';
 ```
 
 ## constructor

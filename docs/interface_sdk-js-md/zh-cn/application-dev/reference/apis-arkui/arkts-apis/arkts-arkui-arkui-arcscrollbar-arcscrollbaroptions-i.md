@@ -40,7 +40,7 @@ scroller: Scroller
 state?: BarState
 ```
 
-滚动条状态。&lt;br/&gt;默认值：BarState.Auto
+滚动条状态。<br/>默认值：BarState.Auto
 
 **类型：** BarState
 

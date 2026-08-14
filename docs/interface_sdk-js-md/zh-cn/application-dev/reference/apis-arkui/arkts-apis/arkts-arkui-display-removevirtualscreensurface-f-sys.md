@@ -97,14 +97,15 @@ struct Index {
   xComponentController: XComponentController = new XComponentController();
 
   removeVirtualScreenSurface = () => {
+    // 虚拟屏ID需从createVirtualScreen()返回值获取
     let screenId: number = 1;
     let surfaceId = this.xComponentController.getXComponentSurfaceId();
     display.removeVirtualScreenSurface(screenId, surfaceId).then(() => {
       console.info('Succeeded in removing surface for the virtual screen.');
     }).catch((err: BusinessError) => {
-      console.error(`Failed to remove surface for the virtual screen. Code:${err.code}, message is ${err.message}`);
+      console.error(`Failed to remove surface for the virtual screen. Code: ${err.code}, message: ${err.message}`);
     });
-  }
+  };
   build() {
     RelativeContainer() {
       XComponent({

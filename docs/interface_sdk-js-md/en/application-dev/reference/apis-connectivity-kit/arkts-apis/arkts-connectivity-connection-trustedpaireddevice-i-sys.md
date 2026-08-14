@@ -17,7 +17,7 @@ Describes device of cloud pair.
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.ConnectivityKit';
+import { connection } from 'connection';
 ```
 
 ## bluetoothClass

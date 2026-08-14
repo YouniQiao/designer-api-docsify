@@ -1,6 +1,6 @@
 # NativeMediaPlayerBridge
 
-[CreateNativeMediaPlayerCallback](../../apis-na/arkts-apis/arkts-na-webview-createnativemediaplayercallback-t.md#CreateNativeMediaPlayerCallback)回调函数的返回值类型。接管网页媒体 的播放器和ArkWeb内核之间的一个接口类。 ArkWeb内核通过该接口类的实例对象来控制应用创建的用来接管网页媒体的播放器。 > **说明：** > > - 本Interface首批接口从API version 12开始支持。 > > - 示例效果请以真机运行为准。
+[CreateNativeMediaPlayerCallback](arkts-arkweb-webview-createnativemediaplayercallback-t.md#CreateNativeMediaPlayerCallback)回调函数的返回值类型。接管网页媒体 的播放器和ArkWeb内核之间的一个接口类。 ArkWeb内核通过该接口类的实例对象来控制应用创建的用来接管网页媒体的播放器。 > **说明：** > > - 本Interface首批接口从API version 12开始支持。 > > - 示例效果请以真机运行为准。
 
 **起始版本：** 12
 
@@ -154,7 +154,7 @@ seek(targetTime: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| targetTime | number | 是 | 播放跳转到的时间点。&lt;br&gt;单位：秒。 |
+| targetTime | number | 是 | 播放跳转到的时间点。<br>单位：秒。 |
 
 ## setMuted
 
@@ -180,7 +180,7 @@ setMuted(muted: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| muted | boolean | 是 | 是否静音。&lt;br&gt;true表示静音，false表示未静音。 |
+| muted | boolean | 是 | 是否静音。<br>true表示静音，false表示未静音。 |
 
 ## setPlaybackRate
 
@@ -206,7 +206,7 @@ setPlaybackRate(playbackRate: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| playbackRate | number | 是 | 播放速率。&lt;br&gt;取值范围：[0, 10.0]，其中1表示原速播放。 |
+| playbackRate | number | 是 | 播放速率。<br>取值范围：[0, 10.0]，其中1表示原速播放。 |
 
 ## setVolume
 
@@ -232,7 +232,7 @@ setVolume(volume: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| volume | number | 是 | 播放器的音量。&lt;br&gt;取值范围：[0, 1.0]，其中0表示静音，1.0表示最大音量。 |
+| volume | number | 是 | 播放器的音量。<br>取值范围：[0, 1.0]，其中0表示静音，1.0表示最大音量。 |
 
 ## suspendPlayer
 
@@ -256,7 +256,7 @@ suspendPlayer?(type: SuspendType): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | [SuspendType](../../apis-na/arkts-apis/arkts-na-webview-suspendtype-e.md) | 是 | 播放器挂起类型。 |
+| type | [SuspendType](arkts-arkweb-webview-suspendtype-e.md) | 是 | 播放器挂起类型。 |
 
 ## updateRect
 
@@ -282,8 +282,8 @@ updateRect(x: number, y: number, width: number, height: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | number | 是 | surface相对于Web组件的x坐标信息。&lt;br&gt;单位：px。 |
-| y | number | 是 | surface相对于Web组件的y坐标信息。&lt;br&gt;单位：px。 |
-| width | number | 是 | surface的宽度。&lt;br&gt;单位：px。 |
-| height | number | 是 | surface的高度。&lt;br&gt;单位：px。 |
+| x | number | 是 | surface相对于Web组件的x坐标信息。<br>单位：px。 |
+| y | number | 是 | surface相对于Web组件的y坐标信息。<br>单位：px。 |
+| width | number | 是 | surface的宽度。<br>单位：px。 |
+| height | number | 是 | surface的高度。<br>单位：px。 |
 

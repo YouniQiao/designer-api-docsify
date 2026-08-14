@@ -15,7 +15,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usageStatistics } from '@kit.BackgroundTasksKit';
+import { usageStatistics } from 'usageStatistics';
 ```
 
 ## abilityDescriptionId
@@ -244,7 +244,7 @@ The label id of module.
 lastModuleUsedTime: long
 ```
 
-The last time when the module was accessed, in milliseconds. &lt;br&gt; Unit:ms
+The last time when the module was accessed, in milliseconds. <br> Unit:ms
 
 **Type:** long
 

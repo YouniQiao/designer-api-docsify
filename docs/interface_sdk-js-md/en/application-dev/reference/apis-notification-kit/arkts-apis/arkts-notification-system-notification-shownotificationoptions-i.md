@@ -13,7 +13,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { ActionResult, ShowNotificationOptions } from '@kit.NotificationKit';
+import { ActionResult } from 'ActionResult';
+import { ShowNotificationOptions } from 'ShowNotificationOptions';
 ```
 
 ## clickAction

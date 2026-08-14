@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { sms } from '@kit.TelephonyKit';
+import { sms } from 'sms';
 ```
 
 ## getSmsSegmentsInfo
@@ -30,9 +30,9 @@ Obtains SMS message segment information. This API uses an asynchronous callback 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | SIM card slot ID. &lt;br&gt;- **0**: card slot 1 &lt;br&gt;- **1**: card slot 2 |
+| slotId | int | Yes | SIM card slot ID. <br>- **0**: card slot 1 <br>- **1**: card slot 2 |
 | message | string | Yes | SMS message. |
-| force7bit | boolean | Yes | Whether to use 7-bit encoding. The default value is **false**. &lt;br&gt;- **true**: yes &lt;br&gt;- **false**: no |
+| force7bit | boolean | Yes | Whether to use 7-bit encoding. The default value is **false**. <br>- **true**: yes <br>- **false**: no |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SmsSegmentsInfo](arkts-telephony-sms-smssegmentsinfo-i-sys.md)&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -83,9 +83,9 @@ Obtains SMS message segment information. This API uses a promise to return the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | SIM card slot ID. &lt;br&gt;- **0**: card slot 1 &lt;br&gt;- **1**: card slot 2 |
+| slotId | int | Yes | SIM card slot ID. <br>- **0**: card slot 1 <br>- **1**: card slot 2 |
 | message | string | Yes | SMS message. |
-| force7bit | boolean | Yes | Whether to use 7-bit encoding. The default value is **false**. &lt;br&gt;- **true**: yes &lt;br&gt;- **false**: no |
+| force7bit | boolean | Yes | Whether to use 7-bit encoding. The default value is **false**. <br>- **true**: yes <br>- **false**: no |
 
 **Return value:**
 

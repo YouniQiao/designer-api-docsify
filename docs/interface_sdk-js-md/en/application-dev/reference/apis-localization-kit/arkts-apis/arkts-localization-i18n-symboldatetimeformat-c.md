@@ -17,7 +17,7 @@ Provide a DateTime formatting interface that supports custom symbols. This inter
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'i18n';
 ```
 
 ## constructor
@@ -220,8 +220,8 @@ Parse a date time localized string to Unix timestamp. Unix timestamp, indicating
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| text | string | Yes | Localized string to be parse. &lt;br&gt;Text to be parsed |
-| lenientMode | boolean | Yes | Indicates whether parsing allows any non-compliant localized strings. For example, "2023/02-25" is a invalid separator date string, it will parse failure when lenientMode is false, and will parse success with value (2023, 02, 25) when lenientMode is true. it's better set to false, ensure the data is not polluted. &lt;br&gt;Whether to use loose parsing rules |
+| text | string | Yes | Localized string to be parse. <br>Text to be parsed |
+| lenientMode | boolean | Yes | Indicates whether parsing allows any non-compliant localized strings. For example, "2023/02-25" is a invalid separator date string, it will parse failure when lenientMode is false, and will parse success with value (2023, 02, 25) when lenientMode is true. it's better set to false, ensure the data is not polluted. <br>Whether to use loose parsing rules |
 
 **Return value:**
 

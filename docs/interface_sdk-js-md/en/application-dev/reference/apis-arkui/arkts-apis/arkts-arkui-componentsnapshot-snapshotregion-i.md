@@ -15,7 +15,7 @@ Defines the target region information for snapshot taking.
 ## Modules to Import
 
 ```TypeScript
-import { componentSnapshot } from '@kit.ArkUI';
+import { componentSnapshot } from 'componentSnapshot';
 ```
 
 ## bottom

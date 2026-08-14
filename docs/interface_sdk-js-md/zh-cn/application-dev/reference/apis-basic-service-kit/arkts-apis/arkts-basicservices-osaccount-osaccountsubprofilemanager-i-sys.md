@@ -42,7 +42,7 @@ createOsAccountSubProfile(osAccountLocalId: int): Promise<OsAccountSubProfile>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| osAccountLocalId | int | 是 | 目标系统账号的本地标识符。 &lt;br&gt;取值范围为全体整数。 |
+| osAccountLocalId | int | 是 | 目标系统账号的本地标识符。 <br>取值范围为全体整数。 |
 
 **返回值：**
 
@@ -132,8 +132,8 @@ deleteOsAccountSubProfile(osAccountLocalId: int, subProfileId: int): Promise<voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| osAccountLocalId | int | 是 | 目标系统账号的本地标识符。 &lt;br&gt;取值范围为全体整数。 &lt;br&gt;The value range is all integers. |
-| subProfileId | int | 是 | 子身份资料的标识符。 &lt;br&gt;取值范围为全体整数。 &lt;br&gt;The value range is all integers. |
+| osAccountLocalId | int | 是 | 目标系统账号的本地标识符。 <br>取值范围为全体整数。 <br>The value range is all integers. |
+| subProfileId | int | 是 | 子身份资料的标识符。 <br>取值范围为全体整数。 <br>The value range is all integers. |
 
 **返回值：**
 
@@ -299,7 +299,7 @@ getOsAccountForegroundSubProfileId(osAccountLocalId: int): Promise<int>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| osAccountLocalId | int | 是 | 系统账号的本地标识符。 &lt;br&gt;取值范围为全体整数。 |
+| osAccountLocalId | int | 是 | 系统账号的本地标识符。 <br>取值范围为全体整数。 |
 
 **返回值：**
 
@@ -384,7 +384,7 @@ getOsAccountLocalIdForSubProfile(subProfileId: int): Promise<int>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subProfileId | int | 是 | 子身份资料的标识符 &lt;br&gt;取值范围为全体整数。 |
+| subProfileId | int | 是 | 子身份资料的标识符 <br>取值范围为全体整数。 |
 
 **返回值：**
 
@@ -470,7 +470,7 @@ getOsAccountSubProfile(subProfileId: int): Promise<OsAccountSubProfile>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| subProfileId | int | 是 | 子身份资料的标识符 &lt;br&gt;取值范围为全体整数。 &lt;br&gt;The value should be an integer. |
+| subProfileId | int | 是 | 子身份资料的标识符 <br>取值范围为全体整数。 <br>The value should be an integer. |
 
 **返回值：**
 
@@ -557,8 +557,8 @@ getOsAccountSubProfile(osAccountLocalId: int, subProfileId: int): Promise<OsAcco
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| osAccountLocalId | int | 是 | 系统账号的本地标识符。 &lt;br&gt;取值范围为全体整数。 |
-| subProfileId | int | 是 | 子身份资料的标识符。 &lt;br&gt;取值范围为全体整数。 |
+| osAccountLocalId | int | 是 | 系统账号的本地标识符。 <br>取值范围为全体整数。 |
+| subProfileId | int | 是 | 子身份资料的标识符。 <br>取值范围为全体整数。 |
 
 **返回值：**
 
@@ -725,7 +725,7 @@ getOsAccountSubProfileIds(osAccountLocalId: int): Promise<int[]>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| osAccountLocalId | int | 是 | 系统账号的本地标识符。 &lt;br&gt;取值范围为全体整数。 &lt;br&gt;The value should be an integer. |
+| osAccountLocalId | int | 是 | 系统账号的本地标识符。 <br>取值范围为全体整数。 <br>The value should be an integer. |
 
 **返回值：**
 
@@ -956,8 +956,8 @@ switchOsAccountSubProfile(osAccountLocalId: int, subProfileId: int): Promise<voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| osAccountLocalId | int | 是 | 系统账号的本地标识符。 &lt;br&gt;取值范围为全体整数。 &lt;br&gt;The value range is all integers. |
-| subProfileId | int | 是 | 子身份资料的标识符。 &lt;br&gt;取值范围为全体整数。 &lt;br&gt;The value range is all integers. |
+| osAccountLocalId | int | 是 | 系统账号的本地标识符。 <br>取值范围为全体整数。 <br>The value range is all integers. |
+| subProfileId | int | 是 | 子身份资料的标识符。 <br>取值范围为全体整数。 <br>The value range is all integers. |
 
 **返回值：**
 

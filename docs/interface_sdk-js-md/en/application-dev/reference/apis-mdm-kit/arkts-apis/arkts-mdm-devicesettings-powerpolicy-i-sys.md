@@ -17,7 +17,7 @@ Represents the power policy.
 ## Modules to Import
 
 ```TypeScript
-import { deviceSettings } from '@kit.MDMKit';
+import { deviceSettings } from 'deviceSettings';
 ```
 
 ## delayTime

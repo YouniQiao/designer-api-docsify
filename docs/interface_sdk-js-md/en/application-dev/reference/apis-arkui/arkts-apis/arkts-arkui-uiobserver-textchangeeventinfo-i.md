@@ -15,7 +15,7 @@ Text change event info
 ## Modules to Import
 
 ```TypeScript
-import { uiObserver } from '@kit.ArkUI';
+import { uiObserver } from 'uiObserver';
 ```
 
 ## content

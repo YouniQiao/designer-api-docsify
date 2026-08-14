@@ -15,7 +15,7 @@ Provides APIs for creating diverse query conditions.
 ## Modules to Import
 
 ```TypeScript
-import { dataAbility } from '@kit.ArkData';
+import { dataAbility } from 'dataAbility';
 ```
 
 ## and

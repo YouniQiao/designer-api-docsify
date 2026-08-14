@@ -15,7 +15,7 @@ Provides APIs for reading and writing data in specific format. During RPC or IPC
 ## Modules to Import
 
 ```TypeScript
-import { rpc } from '@kit.IPCKit';
+import { rpc } from 'rpc';
 ```
 
 ## closeFileDescriptor
@@ -532,7 +532,7 @@ Reads data of the ArrayBuffer type from this **MessageSequence**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| typeCode | [TypeCode](arkts-ipc-rpc-typecode-e.md) | Yes | TypedArray type of the ArrayBuffer data.&lt;br&gt;The underlying read mode is determined based on the enum value of **TypeCode** passed by the service. |
+| typeCode | [TypeCode](arkts-ipc-rpc-typecode-e.md) | Yes | TypedArray type of the ArrayBuffer data.<br>The underlying read mode is determined based on the enum value of **TypeCode** passed by the service. |
 
 **Return value:**
 
@@ -2908,7 +2908,7 @@ Writes data of the ArrayBuffer type to this **MessageSequence** object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | buf | ArrayBuffer | Yes | Data to write. |
-| typeCode | [TypeCode](arkts-ipc-rpc-typecode-e.md) | Yes | TypedArray type of the ArrayBuffer data.&lt;br&gt;The underlying write mode is determined based on the enum value of **TypeCode** passed by the service. |
+| typeCode | [TypeCode](arkts-ipc-rpc-typecode-e.md) | Yes | TypedArray type of the ArrayBuffer data.<br>The underlying write mode is determined based on the enum value of **TypeCode** passed by the service. |
 
 **Error codes:**
 

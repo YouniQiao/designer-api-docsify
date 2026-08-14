@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formProvider } from '@kit.FormKit';
+import { formProvider } from 'formProvider';
 ```
 
 ## openFormEditAbility
@@ -30,7 +30,7 @@ Opens the widget editing page.
 | --- | --- | --- | --- |
 | abilityName | string | Yes | Ability name on the editing page. |
 | formId | string | Yes | Widget ID. |
-| isMainPage | boolean | No | Whether the page is the main editing page.&lt;br&gt;- **true**: The page is the main editing page.&lt;br&gt;- **false**: The page is not the main editing page.&lt;br&gt;Default value: **true**. |
+| isMainPage | boolean | No | Whether the page is the main editing page.<br>- **true**: The page is the main editing page.<br>- **false**: The page is not the main editing page.<br>Default value: **true**. |
 
 **Error codes:**
 

@@ -13,7 +13,7 @@ UIExtensionComponent(
   )
 ```
 
-Construct the UIExtensionComponent.&lt;br/&gt; Called when the UIExtensionComponent is used.
+Construct the UIExtensionComponent.<br/> Called when the UIExtensionComponent is used.
 
 **Since:** 10
 

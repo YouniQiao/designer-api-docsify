@@ -17,7 +17,7 @@ Represents optional element for the ResolvedSymbolNumberFormatOptions object. De
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'i18n';
 ```
 
 ## groupingSeparator

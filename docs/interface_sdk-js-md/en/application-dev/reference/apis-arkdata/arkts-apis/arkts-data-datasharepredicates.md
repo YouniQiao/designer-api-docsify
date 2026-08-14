@@ -19,7 +19,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dataSharePredicates } from '@kit.ArkData';
+import { dataSharePredicates } from 'dataSharePredicates';
 ```
 
 ## Summary

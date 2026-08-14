@@ -17,7 +17,7 @@ Network policies that limit the specified UID of application to access the netwo
 ## Modules to Import
 
 ```TypeScript
-import { policy } from '@kit.NetworkKit';
+import { policy } from 'policy';
 ```
 
 ## allowCellular

@@ -17,7 +17,7 @@ Represents detailed information about the use of a permission.
 ## Modules to Import
 
 ```TypeScript
-import { privacyManager } from '@kit.AbilityKit';
+import { privacyManager } from 'privacyManager';
 ```
 
 ## permissionName

@@ -15,7 +15,7 @@ P12(PKCS #12) data, which includes private key, certificate, and other certifica
 ## Modules to Import
 
 ```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
+import { cert } from 'cert';
 ```
 
 ## cert

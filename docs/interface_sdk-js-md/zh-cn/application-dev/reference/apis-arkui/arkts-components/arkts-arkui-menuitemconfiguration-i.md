@@ -20,7 +20,7 @@
 triggerSelect(index: number, value: string): void
 ```
 
-下拉菜单选中某一项的回调函数。 &lt;br/&gt;**说明：** &lt;br/&gt;index会赋值给事件onSelect 回调中的索引参数； value会返回给Select组件显示，同时会赋值给事件 onSelect回调中的文本参数。
+下拉菜单选中某一项的回调函数。 <br/>**说明：** <br/>index会赋值给事件onSelect 回调中的索引参数； value会返回给Select组件显示，同时会赋值给事件 onSelect回调中的文本参数。
 
 **起始版本：** 12
 

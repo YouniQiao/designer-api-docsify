@@ -17,7 +17,8 @@ Defines the lazy column layout attribute.
 ## Modules to Import
 
 ```TypeScript
-import { LazyColumnLayoutAttribute, LazyColumnLayout } from '@kit.ArkUI';
+import { LazyColumnLayout } from 'LazyColumnLayout';
+import { LazyColumnLayoutAttribute } from 'LazyColumnLayoutAttribute';
 ```
 
 ## alignItems
@@ -46,7 +47,7 @@ Sets the horizontal alignment of the row content.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [HorizontalAlign](../../apis-na/arkts-apis/arkts-na-enums-horizontalalign-e.md) \| undefined | Yes | the horizontal alignment of the row content. &lt;br&gt;Default value HorizontalAlign.Center. |
+| value | [HorizontalAlign](../../apis-na/arkts-apis/arkts-na-enums-horizontalalign-e.md) \| undefined | Yes | the horizontal alignment of the row content. <br>Default value HorizontalAlign.Center. |
 
 **Return value:**
 
@@ -80,7 +81,7 @@ Sets the footer of the lazy column layout.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | CustomBuilder \| undefined | Yes | The footer builder function &lt;br&gt;Passing undefined will remove the footer. |
+| builder | CustomBuilder \| undefined | Yes | The footer builder function <br>Passing undefined will remove the footer. |
 
 **Return value:**
 
@@ -114,7 +115,7 @@ Sets the header of the lazy column layout.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | CustomBuilder \| undefined | Yes | The header builder function &lt;br&gt;Passing undefined will remove the header. |
+| builder | CustomBuilder \| undefined | Yes | The header builder function <br>Passing undefined will remove the header. |
 
 **Return value:**
 
@@ -148,7 +149,7 @@ Triggered when the index of child components in the visible area changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnVisibleIndexesChangeCallback](../../apis-na/arkts-apis/arkts-na-onvisibleindexeschangecallback-t.md) \| undefined | Yes | callback function, triggered when the index of child components in the visible area changes. &lt;br&gt;Passing undefined will unregister the callback. |
+| callback | [OnVisibleIndexesChangeCallback](../../apis-na/arkts-apis/arkts-na-onvisibleindexeschangecallback-t.md) \| undefined | Yes | callback function, triggered when the index of child components in the visible area changes. <br>Passing undefined will unregister the callback. |
 
 **Return value:**
 
@@ -182,7 +183,7 @@ The spacing between rows.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| space | [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md) \| undefined | Yes | the spacing between rows. &lt;br&gt;Default value: 0. &lt;br&gt;Range: [0, +∞). |
+| space | [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md) \| undefined | Yes | the spacing between rows. <br>Default value: 0. <br>Range: [0, +∞). |
 
 **Return value:**
 

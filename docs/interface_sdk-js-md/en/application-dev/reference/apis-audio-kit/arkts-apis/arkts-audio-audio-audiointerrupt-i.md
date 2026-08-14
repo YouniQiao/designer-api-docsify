@@ -17,7 +17,7 @@ Describes input parameters of audio interruption events.
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'audio';
 ```
 
 ## contentType

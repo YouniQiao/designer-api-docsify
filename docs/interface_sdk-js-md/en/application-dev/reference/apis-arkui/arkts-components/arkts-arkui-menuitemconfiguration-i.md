@@ -20,7 +20,7 @@ You need a custom class to implement the **ContentModifier** API. Inherits from 
 triggerSelect(index: number, value: string): void
 ```
 
-Invoked when a drop-down menu option is selected. &lt;br&gt;**NOTE：**&lt;br&gt;The value of **index** will be assigned to the **index** parameter in the onSelect callback; the value of **value** will be returned to the **Select** component for display and will also be assigned to the **value** parameter in the onSelect callback.
+Invoked when a drop-down menu option is selected. <br>**NOTE：**<br>The value of **index** will be assigned to the **index** parameter in the onSelect callback; the value of **value** will be returned to the **Select** component for display and will also be assigned to the **value** parameter in the onSelect callback.
 
 **Since:** 12
 

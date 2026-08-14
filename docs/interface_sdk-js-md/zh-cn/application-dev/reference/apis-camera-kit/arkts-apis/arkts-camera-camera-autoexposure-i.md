@@ -70,7 +70,7 @@ getExposureValue(): double
 
 | 类型 | 说明 |
 | --- | --- |
-| double | 获取曝光值。曝光补偿存在步长，如步长为0.5。则设置1.2时，获取到实际生效曝光补偿为1.0。 &lt;br&gt;接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
+| double | 获取曝光值。曝光补偿存在步长，如步长为0.5。则设置1.2时，获取到实际生效曝光补偿为1.0。 <br>接口调用失败会返回相应错误码，错误码类型[CameraErrorCode]{ |
 
 **错误码：**
 
@@ -190,7 +190,7 @@ setExposureBias(exposureBias: double): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| exposureBias | double | 是 | 曝光补偿，[getExposureBiasRange](arkts-camera-camera-autoexposurequery-i.md#getExposureBiasRange) 查询支持的范围，如果设置超过支持范围的值，自动匹配到就近临界点。 &lt;br&gt;曝光补偿存在步长，由于设备差异，步长也存在差异。例如步长为0.5，则设置1.2时，获取到实际生效曝光补偿为1.0。 &lt;br&gt;接口调用失败会返回相应错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#CameraErrorCode)。 |
+| exposureBias | double | 是 | 曝光补偿，[getExposureBiasRange](arkts-camera-camera-autoexposurequery-i.md#getExposureBiasRange) 查询支持的范围，如果设置超过支持范围的值，自动匹配到就近临界点。 <br>曝光补偿存在步长，由于设备差异，步长也存在差异。例如步长为0.5，则设置1.2时，获取到实际生效曝光补偿为1.0。 <br>接口调用失败会返回相应错误码，错误码类型[CameraErrorCode](arkts-camera-camera-cameraerrorcode-e.md#CameraErrorCode)。 |
 
 **错误码：**
 

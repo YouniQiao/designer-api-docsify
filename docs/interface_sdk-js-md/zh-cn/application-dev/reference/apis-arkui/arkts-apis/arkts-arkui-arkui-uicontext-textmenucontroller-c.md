@@ -1,6 +1,6 @@
 # TextMenuController
 
-TextMenuController用于控制文本选择菜单的行为，支持设置菜单显示选项（如优先使用独立窗口显示）、屏蔽系统服务菜单项或指定菜单项，适用于需要自定义文本选择菜单显示方式或限制特定菜单功能的应用场景，如在特定业务场景下禁用翻译、搜索等功能。 > **说明：**> - setMenuOptions接口为非静态API，需先使用UIContext中的[getTextMenuController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getTextMenuController)方法获取TextMenuController实例，再通过此实例调用对应方法。disableSystemServiceMenuItems和disableMenuItems为静态方法，可直接通过TextMenuController类调用。
+TextMenuController用于控制文本选择菜单的行为，支持设置菜单显示选项（如优先使用独立窗口显示）、屏蔽系统服务菜单项或指定菜单项，适用于需要自定义文本选择菜单显示方式或限制特定菜单功能的应用场景，如在特定业务场景下禁用翻译、搜索等功能。 > **说明：**> - setMenuOptions接口为非静态API，需先使用UIContext中的[getTextMenuController()](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getTextMenuController)方法获取TextMenuController实例，再通过此实例调用对应方法。disableSystemServiceMenuItems和disableMenuItems为静态方法，可直接通过TextMenuController类调用。
 
 **起始版本：** 16
 
@@ -94,5 +94,5 @@ setMenuOptions(options: TextMenuOptions): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [TextMenuOptions](arkts-arkui-textcommon-textmenuoptions-i.md) | 是 | 设置菜单选项，用于控制文本选择菜单的显示模式。 &lt;br&gt;默认值：{showMode: TextMenuShowMode.DEFAULT}。 |
+| options | [TextMenuOptions](arkts-arkui-textcommon-textmenuoptions-i.md) | 是 | 设置菜单选项，用于控制文本选择菜单的显示模式。 <br>默认值：{showMode: TextMenuShowMode.DEFAULT}。 |
 

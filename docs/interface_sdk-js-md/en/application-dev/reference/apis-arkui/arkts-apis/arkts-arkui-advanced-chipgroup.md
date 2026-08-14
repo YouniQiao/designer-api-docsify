@@ -3,7 +3,16 @@
 ## Modules to Import
 
 ```TypeScript
-import { ChipItemLabelOptions, ChipGroupSpaceOptions, SymbolItemOptions, SuffixImageIconOptions, IconGroupSuffix, IconItemOptions, ChipItemStyle, ChipGroupItemOptions, ChipGroup, IconOptions } from '@kit.ArkUI';
+import { IconOptions } from 'IconOptions';
+import { ChipItemLabelOptions } from 'LabelOptions';
+import { ChipGroupItemOptions } from 'ChipGroupItemOptions';
+import { ChipItemStyle } from 'ChipItemStyle';
+import { ChipGroupSpaceOptions } from 'ChipGroupSpaceOptions';
+import { IconItemOptions } from 'IconItemOptions';
+import { IconGroupSuffix } from 'IconGroupSuffix';
+import { ChipGroup } from 'ChipGroup';
+import { SuffixImageIconOptions } from 'SuffixImageIconOptions';
+import { SymbolItemOptions } from 'SymbolItemOptions';
 ```
 
 ## Summary

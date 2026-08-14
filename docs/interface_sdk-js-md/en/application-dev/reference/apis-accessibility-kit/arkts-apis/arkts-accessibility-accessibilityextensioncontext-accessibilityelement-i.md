@@ -1,6 +1,6 @@
 # AccessibilityElement
 
-Defines the **AccessibilityElement**. Before calling APIs of **AccessibilityElement**, you must call [AccessibilityExtensionContext.getFocusElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getFocusElement) or [AccessibilityExtensionContext.getWindowRootElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getWindowRootElement) to obtain an **AccessibilityElement** instance.
+An accessibility node element that provides capabilities such as querying parent/child elements, finding elements by content or focus direction, and performing accessibility actions. It is applicable to scenarios where an accessibility app needs to interact with and operate on UI nodes. Before calling methods of AccessibilityElement, obtain an AccessibilityElement instance through [AccessibilityExtensionContext.getFocusElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getFocusElement) or [AccessibilityExtensionContext.getWindowRootElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getWindowRootElement).
 
 **Since:** 23
 
@@ -18,7 +18,7 @@ Defines the **AccessibilityElement**. Before calling APIs of **AccessibilityElem
 actionNames(callback: AsyncCallback<Array<string>>): void
 ```
 
-Obtains the names of all actions supported by this element. This API uses an asynchronous callback to return the result.
+Obtains the names of all actions supported by the node element. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ Obtains the names of all actions supported by this element. This API uses an asy
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the names of all actions supported by the element. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Callback used to return the result. If the action names are obtained successfully, **err** is **undefined** and **data** contains all action names supported by the node element; otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -55,7 +55,7 @@ rootElement.actionNames((err: BusinessError, data: string[]) => {
 actionNames(): Promise<Array<string>>
 ```
 
-Obtains the names of all actions supported by this element. This API uses a promise to return the result.
+Obtains the names of all actions supported by the node element. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -92,7 +92,7 @@ rootElement.actionNames().then((data: string[]) => {
 attributeNames<T extends keyof ElementAttributeValues>(callback: AsyncCallback<Array<T>>): void
 ```
 
-Obtains all attribute names of this element. This API uses an asynchronous callback to return the result.
+Obtains all attribute names of the node element. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -108,7 +108,7 @@ Obtains all attribute names of this element. This API uses an asynchronous callb
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;T&gt;&gt; | Yes | Callback used to return all attribute names of the element. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;T&gt;&gt; | Yes | Callback invoked to return the result. If the attribute names are obtained successfully, **err** is undefined and **data** contains all attribute names of the node element; otherwise, **err** is an error object. |
 
 ## Examples
 
@@ -132,7 +132,7 @@ rootElement.attributeNames((err: BusinessError, data: ElementAttributeKeys[]) =>
 attributeNames<T extends keyof ElementAttributeValues>(): Promise<Array<T>>
 ```
 
-Obtains all attribute names of this element. This API uses a promise to return the result.
+Obtains all attribute names of the node element. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -190,7 +190,7 @@ Obtains the attribute value based on an attribute name. This API uses an asynchr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | attributeName | T | Yes | Attribute name. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ElementAttributeValues[T]&gt; | Yes | Callback used to return the attribute value. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;ElementAttributeValues[T]&gt; | Yes | Callback used to return the result. If the attribute value is obtained successfully, err is undefined and data is the value of the corresponding attribute; otherwise, the value is an error object. |
 
 **Error codes:**
 
@@ -223,7 +223,7 @@ rootElement.attributeValue(attributeName, (err: BusinessError, data: string) => 
 attributeValue<T extends keyof ElementAttributeValues>(attributeName: T): Promise<ElementAttributeValues[T]>
 ```
 
-Obtains the attribute value based on an attribute name. This API uses a promise to return the result.
+Obtains the attribute value based on the attribute name. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -292,9 +292,9 @@ Finds an element based on the content type. This API uses an asynchronous callba
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'content' | Yes | Type of element finding. The value is fixed at **'content'**. |
-| condition | string | Yes | Search criteria. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; | Yes | Callback used to return the result. |
+| type | 'content' | Yes | Fixed to 'content', which means the search type is node element content. |
+| condition | string | Yes | Keyword condition for searching, used to match the text content of node elements. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;&gt; | Yes | Callback used to return the result. If the node elements are found successfully, **err** is **undefined** and **data** is all node elements that meet the specified search keyword; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -325,7 +325,7 @@ rootElement.findElement('content', condition, (err: BusinessError, data: Accessi
 findElement(type: 'content', condition: string): Promise<Array<AccessibilityElement>>
 ```
 
-Finds an element based on the content type. This API uses a promise to return the result.
+Finds all node elements based on the node content. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -341,8 +341,8 @@ Finds an element based on the content type. This API uses a promise to return th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'content' | Yes | Type of element finding. The value is fixed at **'content'**. |
-| condition | string | Yes | Search criteria. |
+| type | 'content' | Yes | The value is fixed at 'content', indicating that the search type is node element content. |
+| condition | string | Yes | Keyword condition for the search, used to match the text content of the node element. |
 
 **Return value:**
 
@@ -377,7 +377,7 @@ rootElement.findElement('content', condition).then((data: AccessibilityElement[]
 findElement(type: 'focusType', condition: FocusType, callback: AsyncCallback<AccessibilityElement>): void
 ```
 
-Finds an element based on the focus type. This API uses an asynchronous callback to return the result.
+Finds a node element based on the focus element type. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -395,7 +395,7 @@ Finds an element based on the focus type. This API uses an asynchronous callback
 | --- | --- | --- | --- |
 | type | 'focusType' | Yes | Type of element finding. The value is fixed at **'focusType'**. |
 | condition | [FocusType](arkts-accessibility-focustype-t.md) | Yes | Focus type. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Yes | Callback invoked to return the result. If the node element is found, **err** is **undefined** and **data** is the node element that matches the specified query focus element type; otherwise, an error object is returned. |
 
 **Error codes:**
 
@@ -427,7 +427,7 @@ rootElement.findElement('focusType', condition, (err: BusinessError, data: Acces
 findElement(type: 'focusType', condition: FocusType): Promise<AccessibilityElement>
 ```
 
-Finds an element based on the focus type. This API uses a promise to return the result.
+Finds a node element based on the focus element type. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -480,7 +480,7 @@ rootElement.findElement('focusType', condition).then((data: AccessibilityElement
 findElement(type: 'focusDirection', condition: FocusDirection, callback: AsyncCallback<AccessibilityElement>): void
 ```
 
-Finds an element based on the focus direction. This API uses an asynchronous callback to return the result.
+Finds a node element based on the next focus element direction. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -496,9 +496,9 @@ Finds an element based on the focus direction. This API uses an asynchronous cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'focusDirection' | Yes | Type of element finding. The value is fixed at **'focusDirection'**. |
-| condition | [FocusDirection](arkts-accessibility-focusdirection-t.md) | Yes | Direction of the next focus element. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Yes | Callback used to return the result. |
+| type | 'focusDirection' | Yes | Fixed value **'focusDirection'**, representing the query type as the direction of the next focus element of the node. |
+| condition | [FocusDirection](arkts-accessibility-focusdirection-t.md) | Yes | Direction for querying the next focus element. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt; | Yes | Callback invoked to return the result. If the node element is found successfully, **err** is **undefined** and **data** is the node element that meets the specified direction for querying the next focus element; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -530,7 +530,7 @@ rootElement.findElement('focusDirection', condition, (err: BusinessError, data: 
 findElement(type: 'focusDirection', condition: FocusDirection): Promise<AccessibilityElement>
 ```
 
-Finds an element based on the focus direction. This API uses a promise to return the result.
+Finds a node element based on the next focus element direction. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -583,7 +583,7 @@ rootElement.findElement('focusDirection', condition).then((data: AccessibilityEl
 performAction(actionName: string, parameters: object, callback: AsyncCallback<void>): void
 ```
 
-Performs an action based on the specified action name. This API uses an asynchronous callback to return the result.
+Performs the specified action on the accessibility node element. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -599,9 +599,9 @@ Performs an action based on the specified action name. This API uses an asynchro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| actionName | string | Yes | Action name. For details, see [Action](arkts-accessibility-accessibility-action-t.md#Action). |
-| parameters | object | Yes | Parameters required for performing the target action. Empty by default. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| actionName | string | Yes | Name of the action. For the value range, see [Action](arkts-accessibility-accessibility-action-t.md#Action). |
+| parameters | object | Yes | Parameters required for executing the action. Different action types require different parameter structures. For details about the parameter format, see the description of each Action. For example, setSelection requires the selectTextBegin, selectTextEnd, and selectTextInForWard parameters, and setCursorPosition requires the offset parameter. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked to return the result. If the action is executed successfully, err is undefined; otherwise, err is an error object. |
 
 **Error codes:**
 
@@ -634,7 +634,7 @@ rootElement.performAction(actionName, parameters, (err: BusinessError) => {
 performAction(actionName: string, parameters?: object): Promise<void>
 ```
 
-Performs an action based on the specified action name. This API uses a promise to return the result.
+Performs the specified action on the accessibility node element. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -650,8 +650,8 @@ Performs an action based on the specified action name. This API uses a promise t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| actionName | string | Yes | Action name. For details, see [Action](arkts-accessibility-accessibility-action-t.md#Action). |
-| parameters | object | No | Parameters required for performing the target action. Empty by default. |
+| actionName | string | Yes | Name of the action. For the value range, see [Action](arkts-accessibility-accessibility-action-t.md#Action). |
+| parameters | object | No | Parameters required for executing the action. Different actions require different parameter key names and value types. For details about the value principles, see the definition of each Action. For example, setSelection requires the selectTextBegin, selectTextEnd, and selectTextInForWard parameters, and setCursorPosition requires the offset parameter. If not passed, this parameter is empty by default. |
 
 **Return value:**
 
@@ -733,7 +733,7 @@ rootElement.performAction('setCursorPosition', {
 performAction(actionName: string, callback: AsyncCallback<void>): void
 ```
 
-Performs an action based on the specified action name. This API uses an asynchronous callback to return the result.
+Performs the specified action on the accessibility node element. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -749,8 +749,8 @@ Performs an action based on the specified action name. This API uses an asynchro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| actionName | string | Yes | Action name. For details, see [Action](arkts-accessibility-accessibility-action-t.md#Action). |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| actionName | string | Yes | Name of the action. For the value range, see [Action](arkts-accessibility-accessibility-action-t.md#Action). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked when the operation is executed. If the operation succeeds, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 

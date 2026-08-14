@@ -15,7 +15,7 @@ Provides the functions of setting color or updating animation.
 ## Modules to Import
 
 ```TypeScript
-import { dragController } from '@kit.ArkUI';
+import { dragController } from 'dragController';
 ```
 
 ## animate

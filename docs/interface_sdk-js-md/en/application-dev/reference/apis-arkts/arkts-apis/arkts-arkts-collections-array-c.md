@@ -17,7 +17,7 @@ A linear data structure that is implemented on arrays and can be passed between 
 ## Modules to Import
 
 ```TypeScript
-import { collections } from '@kit.ArkTS';
+import { collections } from 'collections';
 ```
 
 ## [Symbol.iterator]
@@ -1509,7 +1509,7 @@ Removes elements from a specified position (start) and all elements after the sp
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | number | Yes | Index from which the removal starts. If -array.length =< start < 0, the removal starts from start + array.length. If start < -array.length, the removal starts from 0. |
+| start | number | Yes | Index from which the removal starts. If -array.length =&lt; start &lt; 0, the removal starts from start + array.length. If start &lt; -array.length, the removal starts from 0. |
 
 **Return value:**
 
@@ -1548,7 +1548,7 @@ Removes elements from a specified position in an array, and inserts new elements
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| start | number | Yes | Index from which the removal starts. If -array.length =< start < 0, the removal starts from start + array.length. If start < -array.length, the removal starts from 0. |
+| start | number | Yes | Index from which the removal starts. If -array.length =&lt; start &lt; 0, the removal starts from start + array.length. If start &lt; -array.length, the removal starts from 0. |
 | deleteCount | number | Yes | Number of elements to remove. |
 | items | T[] | Yes | New elements to insert from the start position. If no value is passed in, only the elements in the array are removed. |
 

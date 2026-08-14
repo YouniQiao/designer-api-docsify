@@ -17,7 +17,7 @@ Provides methods to operate and manage data transfer of NearLink.
 ## Modules to Import
 
 ```TypeScript
-import { dataTransfer } from '@kit.ConnectivityKit';
+import { dataTransfer } from 'dataTransfer';
 ```
 
 ## Summary

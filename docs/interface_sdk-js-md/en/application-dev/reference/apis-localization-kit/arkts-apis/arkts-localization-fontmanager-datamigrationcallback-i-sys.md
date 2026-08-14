@@ -17,7 +17,7 @@ Callback API type used during data migration, defining the callback methods for 
 ## Modules to Import
 
 ```TypeScript
-import { fontManager } from '@kit.LocalizationKit';
+import { fontManager } from 'fontManager';
 ```
 
 ## onHeartBeat
@@ -144,7 +144,7 @@ Callback function that is invoked after the data migration task is completed (wh
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | int | Yes | Data migration result. &lt;br&gt;**0**: Data migration succeeded. &lt;br&gt;**1**: No data migration is required. &lt;br&gt;**2**: Failed to obtain the user ID. &lt;br&gt;**3**: Failed to check the directory. &lt;br&gt;**4**: Failed to initialize the cache directory. &lt;br&gt;**5**: Failed to open the source file. &lt;br&gt;**6**: Failed to copy the file. &lt;br&gt;**7**: Failed to rename the file. &lt;br&gt;**8**: Failed to delete the file. |
+| result | int | Yes | Data migration result. <br>**0**: Data migration succeeded. <br>**1**: No data migration is required. <br>**2**: Failed to obtain the user ID. <br>**3**: Failed to check the directory. <br>**4**: Failed to initialize the cache directory. <br>**5**: Failed to open the source file. <br>**6**: Failed to copy the file. <br>**7**: Failed to rename the file. <br>**8**: Failed to delete the file. |
 
 ## Examples
 

@@ -36,7 +36,7 @@ hasFlash(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 表示设备是否支持闪光灯。true表示支持闪光灯，false表示不支持闪光灯。 &lt;br&gt;如果返回false，则[isFlashModeSupported]{ |
+| boolean | 表示设备是否支持闪光灯。true表示支持闪光灯，false表示不支持闪光灯。 <br>如果返回false，则[isFlashModeSupported]{ |
 
 **错误码：**
 

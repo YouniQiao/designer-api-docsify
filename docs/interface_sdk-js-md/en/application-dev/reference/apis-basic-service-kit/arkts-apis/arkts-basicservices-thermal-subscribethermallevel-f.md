@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { thermal } from '@kit.BasicServicesKit';
+import { thermal } from 'thermal';
 ```
 
 ## subscribeThermalLevel

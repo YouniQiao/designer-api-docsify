@@ -17,7 +17,7 @@ Get the user storage statistics.
 ## Modules to Import
 
 ```TypeScript
-import { storageStatistics } from '@kit.CoreFileKit';
+import { storageStatistics } from 'storageStatistics';
 ```
 
 ## app
@@ -26,7 +26,7 @@ import { storageStatistics } from '@kit.CoreFileKit';
 app: long
 ```
 
-The size of application. &lt;br&gt;Unit: Byte.
+The size of application. <br>Unit: Byte.
 
 **Type:** long
 
@@ -48,7 +48,7 @@ The size of application. &lt;br&gt;Unit: Byte.
 audio: long
 ```
 
-The size of audio file. &lt;br&gt;Unit: Byte.
+The size of audio file. <br>Unit: Byte.
 
 **Type:** long
 
@@ -70,7 +70,7 @@ The size of audio file. &lt;br&gt;Unit: Byte.
 file: long
 ```
 
-The size of other file. &lt;br&gt;Unit: Byte.
+The size of other file. <br>Unit: Byte.
 
 **Type:** long
 
@@ -92,7 +92,7 @@ The size of other file. &lt;br&gt;Unit: Byte.
 image: long
 ```
 
-The size of image file. &lt;br&gt;Unit: Byte.
+The size of image file. <br>Unit: Byte.
 
 **Type:** long
 
@@ -114,7 +114,7 @@ The size of image file. &lt;br&gt;Unit: Byte.
 total: long
 ```
 
-The total size of device. &lt;br&gt;Unit: Byte.
+The total size of device. <br>Unit: Byte.
 
 **Type:** long
 
@@ -136,7 +136,7 @@ The total size of device. &lt;br&gt;Unit: Byte.
 video: long
 ```
 
-The size of video file. &lt;br&gt;Unit: Byte.
+The size of video file. <br>Unit: Byte.
 
 **Type:** long
 

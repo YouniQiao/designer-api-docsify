@@ -20,7 +20,7 @@ Scroll controller for list component.
 closeAllSwipeActions(options?: CloseSwipeActionOptions): void
 ```
 
-Collapses the list items in the EXPANDED state and sets callback events. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;- A &lt;em&gt;ListScroller&lt;/em&gt; must be bound to the &lt;em&gt;List&lt;/em&gt; component. &lt;/p&gt;
+Collapses the list items in the EXPANDED state and sets callback events. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>- A &lt;em&gt;ListScroller&lt;/em&gt; must be bound to the &lt;em&gt;List&lt;/em&gt; component. &lt;/p&gt;
 
 **Since:** 23
 
@@ -44,7 +44,7 @@ Collapses the list items in the EXPANDED state and sets callback events. &lt;p&g
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100004](../../apis-arkui/errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
 
 ## getItemRectInGroup
@@ -53,7 +53,7 @@ Collapses the list items in the EXPANDED state and sets callback events. &lt;p&g
 getItemRectInGroup(index: int, indexInGroup: int): RectResult
 ```
 
-Obtains the size of a list item in a list item group and its position relative to the list. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;- The value of &lt;em&gt;index&lt;/em&gt; must be the index of a child component visible in the display area. Otherwise, the value is considered invalid. &lt;br&gt;- The child component for which &lt;em&gt;index&lt;/em&gt; is set must be a list item group. Otherwise, the &lt;em&gt;index &lt;/em&gt;value is considered invalid. &lt;br&gt;- The value of &lt;em&gt;indexInGroup&lt;/em&gt; must be the index of a list item in the list item group visible in the display area. Otherwise, the value is considered invalid. &lt;br&gt;- When &lt;em&gt;index&lt;/em&gt; or &lt;em&gt;indexInGroup&lt;/em&gt; is set to an invalid value, the returned size and position are both &lt;em&gt;0&lt;/em&gt;. &lt;/p&gt;
+Obtains the size of a list item in a list item group and its position relative to the list. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>- The value of &lt;em&gt;index&lt;/em&gt; must be the index of a child component visible in the display area. Otherwise, the value is considered invalid. <br>- The child component for which &lt;em&gt;index&lt;/em&gt; is set must be a list item group. Otherwise, the &lt;em&gt;index &lt;/em&gt;value is considered invalid. <br>- The value of &lt;em&gt;indexInGroup&lt;/em&gt; must be the index of a list item in the list item group visible in the display area. Otherwise, the value is considered invalid. <br>- When &lt;em&gt;index&lt;/em&gt; or &lt;em&gt;indexInGroup&lt;/em&gt; is set to an invalid value, the returned size and position are both &lt;em&gt;0&lt;/em&gt;. &lt;/p&gt;
 
 **Since:** 23
 
@@ -71,8 +71,8 @@ Obtains the size of a list item in a list item group and its position relative t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | Index of the list item group in the list. &lt;br&gt;The value should be an integer. |
-| indexInGroup | int | Yes | Index of the list item in the list item group. &lt;br&gt;The value should be an integer. |
+| index | int | Yes | Index of the list item group in the list. <br>The value should be an integer. |
+| indexInGroup | int | Yes | Index of the list item in the list item group. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -84,7 +84,7 @@ Obtains the size of a list item in a list item group and its position relative t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100004](../../apis-arkui/errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
 
 ## getVisibleListContentInfo
@@ -93,7 +93,7 @@ Obtains the size of a list item in a list item group and its position relative t
 getVisibleListContentInfo(x: double, y: double): VisibleListContentInfo
 ```
 
-Obtains the index information of the child component at the specified coordinates. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;- If the provided value of &lt;em&gt;x&lt;/em&gt; or &lt;em&gt;y&lt;/em&gt; is invalid, the returned VisibleListContentInfo object has the &lt;em&gt;index&lt;/em&gt; property set to &lt;em&gt;-1&lt;/em&gt;, and both &lt;em&gt;itemGroupArea&lt;/em&gt; and &lt;em&gt;itemIndexInGroup&lt;/em&gt; are &lt;em&gt;undefined&lt;/em&gt;. &lt;/p&gt;
+Obtains the index information of the child component at the specified coordinates. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>- If the provided value of &lt;em&gt;x&lt;/em&gt; or &lt;em&gt;y&lt;/em&gt; is invalid, the returned VisibleListContentInfo object has the &lt;em&gt;index&lt;/em&gt; property set to &lt;em&gt;-1&lt;/em&gt;, and both &lt;em&gt;itemGroupArea&lt;/em&gt; and &lt;em&gt;itemIndexInGroup&lt;/em&gt; are &lt;em&gt;undefined&lt;/em&gt;. &lt;/p&gt;
 
 **Since:** 23
 
@@ -124,7 +124,7 @@ Obtains the index information of the child component at the specified coordinate
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100004](../../apis-arkui/errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
 
 ## scrollToItemInGroup
@@ -151,15 +151,15 @@ Scrolls to the specified list item in the specified list item group.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | Index of the target list item group in the current container. &lt;br&gt;The value should be an integer. &lt;br&gt;&lt;em&gt;NOTE&lt;/em&gt; &lt;br&gt;If the value set is a negative value or greater than the maximum index of the items in the container, the value is deemed abnormal, and no scrolling will be performed. |
-| indexInGroup | int | Yes | Index of the target list item in the list item group specified by &lt;em&gt;index&lt;/em&gt;. &lt;br&gt;The value should be an integer. &lt;br&gt;&lt;em&gt;NOTE&lt;/em&gt; &lt;br&gt;If the value set is a negative value or greater than the maximum index of the items in the list item group, the value is deemed abnormal, and no scrolling will be performed. |
-| smooth | boolean | No | Whether to enable the smooth animation for scrolling to the item with the specified index. &lt;br&gt;Default value: false&lt;br/&gt;**Note: **&lt;br/&gt;When the validity period is enabled, all items that pass through the system will be processed. Load and layout calculation are performed. When a large number of items are loaded, performance problems occur. The value &lt;em&gt;true&lt;/em&gt; means to enable that the smooth animation, and &lt;em&gt;false&lt;/em&gt; means the opposite.&lt;br&gt;Default value: &lt;em&gt;false&lt;/em&gt; |
-| align | [ScrollAlign](../../apis-arkui/arkts-components/arkts-arkui-scrollalign-e.md) | No | How the list item to scroll to is aligned with the container. &lt;br&gt;Default value: &lt;em&gt;ScrollAlign.START&lt;/em&gt;. |
+| index | int | Yes | Index of the target list item group in the current container. <br>The value should be an integer. <br>&lt;em&gt;NOTE&lt;/em&gt; <br>If the value set is a negative value or greater than the maximum index of the items in the container, the value is deemed abnormal, and no scrolling will be performed. |
+| indexInGroup | int | Yes | Index of the target list item in the list item group specified by &lt;em&gt;index&lt;/em&gt;. <br>The value should be an integer. <br>&lt;em&gt;NOTE&lt;/em&gt; <br>If the value set is a negative value or greater than the maximum index of the items in the list item group, the value is deemed abnormal, and no scrolling will be performed. |
+| smooth | boolean | No | Whether to enable the smooth animation for scrolling to the item with the specified index. <br>Default value: false<br/>**Note: **<br/>When the validity period is enabled, all items that pass through the system will be processed. Load and layout calculation are performed. When a large number of items are loaded, performance problems occur. The value &lt;em&gt;true&lt;/em&gt; means to enable that the smooth animation, and &lt;em&gt;false&lt;/em&gt; means the opposite.<br>Default value: &lt;em&gt;false&lt;/em&gt; |
+| align | [ScrollAlign](../../apis-arkui/arkts-components/arkts-arkui-scrollalign-e.md) | No | How the list item to scroll to is aligned with the container. <br>Default value: &lt;em&gt;ScrollAlign.START&lt;/em&gt;. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100004](../../apis-arkui/errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
 

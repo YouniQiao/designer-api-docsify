@@ -17,7 +17,7 @@ VideoOutput implements output information used in a video session. It inherits f
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'camera';
 ```
 
 ## attachMetaSurface

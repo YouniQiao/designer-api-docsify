@@ -6,7 +6,7 @@
 function getId(uri: string): number
 ```
 
-Obtains the ID attached to the end of the path component of the given uri.
+Obtains the ID attached to the end of a given URI.
 
 **Since:** 7
 
@@ -24,13 +24,13 @@ Obtains the ID attached to the end of the path component of the given uri.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | Indicates the uri object from which the ID is to be obtained. |
+| uri | string | Yes | Target URI object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Returns the ID attached to the end of the path component; |
+| number | ID obtained. |
 
 ## Examples
 

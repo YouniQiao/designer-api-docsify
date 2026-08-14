@@ -19,7 +19,7 @@ Provides the scene detection capability. It inherits from [SceneDetectionQuery](
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'camera';
 ```
 
 ## enableSceneFeature

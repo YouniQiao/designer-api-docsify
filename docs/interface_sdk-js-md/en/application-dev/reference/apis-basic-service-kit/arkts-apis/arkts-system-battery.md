@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { GetStatusOptions, BatteryResponse } from '@kit.BasicServicesKit';
+import { BatteryResponse } from 'BatteryResponse';
+import { GetStatusOptions } from 'GetStatusOptions';
 ```
 
 ## Summary

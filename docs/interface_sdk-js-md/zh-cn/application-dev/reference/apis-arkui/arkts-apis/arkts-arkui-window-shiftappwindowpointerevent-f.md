@@ -53,6 +53,7 @@ import { window } from '@kit.ArkUI';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
+@Component
 struct Index {
   build() {
     Row() {
@@ -89,6 +90,7 @@ import { window } from '@kit.ArkUI';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
+@Component
 struct Index {
   build() {
     Row() {

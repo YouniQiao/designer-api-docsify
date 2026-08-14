@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { cacheDownload } from '@kit.BasicServicesKit';
+import { cacheDownload } from 'cacheDownload';
 ```
 
 ## setGlobalRetryOptions
@@ -30,5 +30,5 @@ Sets retry options for all tasks. Used when task-specific retry configuration is
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RetryOptions](arkts-basicservices-cachedownload-retryoptions-i.md) | No | Task retry configurations. &lt;br&gt;Default value: Refer to the default value of RetryOptions. |
+| options | [RetryOptions](arkts-basicservices-cachedownload-retryoptions-i.md) | No | Task retry configurations. <br>Default value: Refer to the default value of RetryOptions. |
 

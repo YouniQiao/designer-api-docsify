@@ -58,7 +58,7 @@ Methods of the detection policy. The value is an array. **NOTE：**1. Duplicate 
 detectionTiming?: number[]
 ```
 
-The settings of the timing when web try to detect current page is blank or not. The timing is the duration after web navigation. &lt;br&gt;Length range:[0,+∞).Default value:[1.0,3.0,5.0]. &lt;br&gt;1. Duplicate values are ignored. 2. The value must be greater than 0. If the value is less than 0, the value is ignored.Unit: second.
+The settings of the timing when web try to detect current page is blank or not. The timing is the duration after web navigation. <br>Length range:[0,+∞).Default value:[1.0,3.0,5.0]. <br>1. Duplicate values are ignored. 2. The value must be greater than 0. If the value is less than 0, the value is ignored.Unit: second.
 
 **Type:** number[]
 

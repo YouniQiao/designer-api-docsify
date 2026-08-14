@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { metadataBinding } from '@kit.MultimodalAwarenessKit';
+import { metadataBinding } from 'metadataBinding';
 ```
 
 ## notifyMetadataBindingEvent

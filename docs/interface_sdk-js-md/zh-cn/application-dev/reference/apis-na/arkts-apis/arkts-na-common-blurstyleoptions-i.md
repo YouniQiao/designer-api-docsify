@@ -18,7 +18,7 @@ Defines the options of blurStyle
 adaptiveColor?: AdaptiveColor
 ```
 
-Adaptive color mode. &lt;br&gt;Default value: **AdaptiveColor.DEFAULT**.
+Adaptive color mode. <br>Default value: **AdaptiveColor.DEFAULT**.
 
 **类型：** [AdaptiveColor](arkts-na-common-adaptivecolor-e.md)
 
@@ -66,7 +66,7 @@ Defines the options of blur
 colorMode?: ThemeColorMode
 ```
 
-Color mode used for the foreground blur. &lt;br&gt;Default value: **ThemeColorMode.SYSTEM**.
+Color mode used for the foreground blur. <br>Default value: **ThemeColorMode.SYSTEM**.
 
 **类型：** [ThemeColorMode](arkts-na-common-themecolormode-e.md)
 
@@ -90,7 +90,7 @@ Color mode used for the foreground blur. &lt;br&gt;Default value: **ThemeColorMo
 scale?: double
 ```
 
-Foreground blur scale. &lt;br&gt;Default value: **1.0**. &lt;br&gt;Value range: [0.0, 1.0].
+Foreground blur scale. <br>Default value: **1.0**. <br>Value range: [0.0, 1.0].
 
 **类型：** double
 

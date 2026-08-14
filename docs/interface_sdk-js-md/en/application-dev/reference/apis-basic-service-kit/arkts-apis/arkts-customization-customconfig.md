@@ -27,7 +27,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { customConfig } from '@kit.BasicServicesKit';
+import { customConfig } from 'customConfig';
 ```
 
 ## Summary

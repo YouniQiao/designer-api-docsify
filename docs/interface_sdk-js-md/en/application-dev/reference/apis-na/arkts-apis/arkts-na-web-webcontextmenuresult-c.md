@@ -108,7 +108,7 @@ Executes the cut operation related to this context menu.
 paste(): void
 ```
 
-Executes the paste operation related to this context menu. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; Permissions need to be configured: ohos.permission.READ_PASTEBOARD. &lt;/p&gt;
+Executes the paste operation related to this context menu. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<br> Permissions need to be configured: ohos.permission.READ_PASTEBOARD. &lt;/p&gt;
 
 **Since:** 23
 
@@ -126,7 +126,7 @@ Executes the paste operation related to this context menu. &lt;p&gt;&lt;strong&g
 pasteAndMatchStyle(): void
 ```
 
-Executes the paste and match style operation related to this context menu. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; Permissions need to be configured: ohos.permission.READ_PASTEBOARD. &lt;/p&gt;
+Executes the paste and match style operation related to this context menu. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<br> Permissions need to be configured: ohos.permission.READ_PASTEBOARD. &lt;/p&gt;
 
 **Since:** 23
 

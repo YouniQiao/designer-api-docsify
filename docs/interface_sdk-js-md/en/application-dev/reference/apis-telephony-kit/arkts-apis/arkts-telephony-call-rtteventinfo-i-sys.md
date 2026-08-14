@@ -17,7 +17,7 @@ Indicates the info of the rtt event.
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'call';
 ```
 
 ## callId

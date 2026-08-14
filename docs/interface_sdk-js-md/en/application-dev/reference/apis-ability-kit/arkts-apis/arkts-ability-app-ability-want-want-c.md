@@ -15,7 +15,7 @@ Want is a carrier for information transfer between objects (application componen
 ## Modules to Import
 
 ```TypeScript
-import { Want } from '@kit.AbilityKit';
+import { Want } from 'Want';
 ```
 
 ## abilityName

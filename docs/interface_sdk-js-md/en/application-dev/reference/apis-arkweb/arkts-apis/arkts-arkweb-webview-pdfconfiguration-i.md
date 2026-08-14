@@ -15,7 +15,7 @@ Specifies the input parameters of **createPdf()**. > **NOTE：**> > The number o
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'webview';
 ```
 
 ## height

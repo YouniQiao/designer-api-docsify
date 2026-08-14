@@ -24,7 +24,7 @@ Creates a step curve.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| count | int | Yes | Number of steps. The value must be a positive integer.&lt;br&gt;Value range: [1, INT_MAX]. &lt;p&gt;**NOTE：**: &lt;br&gt;A value less than 1 evaluates to the value **1**. &lt;/p&gt; |
+| count | int | Yes | Number of steps. The value must be a positive integer.<br>Value range: [1, INT_MAX]. &lt;p&gt;**NOTE：**: <br>A value less than 1 evaluates to the value **1**. &lt;/p&gt; |
 | end | boolean | Yes | Whether jumping occurs when the interpolation ends. **true**: Jumping occurs when the interpolation ends. **false**: Jumping occurs when the interpolation starts. |
 
 **Return value:**

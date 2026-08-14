@@ -15,7 +15,7 @@ Describes the information about the automatic camera switch status.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'camera';
 ```
 
 ## isDeviceCapabilityChanged

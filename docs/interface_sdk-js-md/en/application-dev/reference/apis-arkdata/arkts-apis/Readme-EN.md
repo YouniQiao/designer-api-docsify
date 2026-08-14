@@ -1,6 +1,7 @@
 # ArkTS API<!--arkts-arkdata-->
 
-- [@ohos.application.DataShareExtensionAbility](arkts-application-datashareextensionability.md)
+<!--Del-->
+- [@ohos.application.DataShareExtensionAbility](arkts-application-datashareextensionability.md)<!--DelEnd-->
   <!--Del-->
   - [DataShareExtensionAbility(system api)](arkts-arkdata-application-datashareextensionability-datashareextensionability-c-sys.md)<!--DelEnd-->
   <!--Del-->

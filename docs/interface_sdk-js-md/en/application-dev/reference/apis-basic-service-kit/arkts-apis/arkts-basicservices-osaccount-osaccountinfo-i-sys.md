@@ -15,7 +15,7 @@ Represents information about an OS account.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'osAccount';
 ```
 
 ## isLoggedIn

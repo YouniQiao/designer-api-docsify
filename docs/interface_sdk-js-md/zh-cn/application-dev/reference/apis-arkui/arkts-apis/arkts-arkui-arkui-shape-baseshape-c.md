@@ -38,7 +38,7 @@ height(height: Length): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| height | [Length](../../apis-na/arkts-apis/arkts-na-length-t.md) | 是 | 形状的高度。&lt;br/&gt;单位：vp&lt;br/&gt;取值为异常值时按照0vp处理。 |
+| height | [Length](../../apis-na/arkts-apis/arkts-na-length-t.md) | 是 | 形状的高度。<br/>单位：vp<br/>取值为异常值时按照0vp处理。 |
 
 **返回值：**
 
@@ -102,7 +102,7 @@ width(width: Length): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| width | [Length](../../apis-na/arkts-apis/arkts-na-length-t.md) | 是 | 形状的宽度。&lt;br/&gt;单位：vp&lt;br/&gt;取值为异常值时按照0vp处理。 |
+| width | [Length](../../apis-na/arkts-apis/arkts-na-length-t.md) | 是 | 形状的宽度。<br/>单位：vp<br/>取值为异常值时按照0vp处理。 |
 
 **返回值：**
 

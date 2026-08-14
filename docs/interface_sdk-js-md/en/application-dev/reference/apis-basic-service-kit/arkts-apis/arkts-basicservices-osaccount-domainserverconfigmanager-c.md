@@ -15,7 +15,7 @@ Provides APIs for domain server configuration and management.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'osAccount';
 ```
 
 ## addServerConfig

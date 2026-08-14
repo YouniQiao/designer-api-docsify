@@ -1,6 +1,6 @@
 # SignSpecItem
 
-Enumerates the signing and signature verification parameters, which can be set by using [setSignSpec](arkts-cryptoarchitecture-cryptoframework-sign-i.md#setSignSpec) and [setVerifySpec](arkts-cryptoarchitecture-cryptoframework-verify-i.md#setVerifySpec), and obtained by using [getSignSpec](arkts-cryptoarchitecture-cryptoframework-sign-i.md#getSignSpec) and [getVerifySpec](arkts-cryptoarchitecture-cryptoframework-verify-i.md#getVerifySpec). &lt;br&gt;Currently, only RSA and SM2 are supported. For details, see [Signing and Signature Verification Overview and Algorithm Specifications](../../../security/CryptoArchitectureKit/crypto-sign-sig-verify-overview.md) .
+Enumerates the signing and signature verification parameters, which can be set by using [setSignSpec](arkts-cryptoarchitecture-cryptoframework-sign-i.md#setSignSpec) and [setVerifySpec](arkts-cryptoarchitecture-cryptoframework-verify-i.md#setVerifySpec), and obtained by using [getSignSpec](arkts-cryptoarchitecture-cryptoframework-sign-i.md#getSignSpec) and [getVerifySpec](arkts-cryptoarchitecture-cryptoframework-verify-i.md#getVerifySpec). <br>Currently, only RSA and SM2 are supported. For details, see [Signing and Signature Verification Overview and Algorithm Specifications](../../../security/CryptoArchitectureKit/crypto-sign-sig-verify-overview.md) .
 
 **Since:** 23
 
@@ -86,7 +86,7 @@ Message digest algorithm for the MGF1 mask generation used with the PSS padding 
 PSS_SALT_LEN_NUM = 103
 ```
 
-Length of the salt in bytes used with the PSS padding mode in RSA. &lt;br&gt;According to the FIPS 186-4 standard, sLen should be greater than or equal to 0 and less than or equal to the hash length. &lt;br&gt;Default values: - For sign, automatically calculate the maximum salt length. - For verify, automatically calculate the salt length. &lt;br&gt;Special values: - For sign, you can also set the value to -1 to use the digest length as the salt length, and -2 or -3 to automatically calculate the maximum salt length. The recommended value is -1. - For verify, you can also set the value to -1 to use the digest length as the salt length, -2 to automatically calculate the salt length, or -3 to use the maximum salt length. The recommended value is -2.
+Length of the salt in bytes used with the PSS padding mode in RSA. <br>According to the FIPS 186-4 standard, sLen should be greater than or equal to 0 and less than or equal to the hash length. <br>Default values: - For sign, automatically calculate the maximum salt length. - For verify, automatically calculate the salt length. <br>Special values: - For sign, you can also set the value to -1 to use the digest length as the salt length, and -2 or -3 to automatically calculate the maximum salt length. The recommended value is -1. - For verify, you can also set the value to -1 to use the digest length as the salt length, -2 to automatically calculate the salt length, or -3 to use the maximum salt length. The recommended value is -2.
 
 **Since:** 23
 

@@ -1,6 +1,6 @@
 # event
 
-Provides event name constants, including system event name constants and application event name constants. &lt;br&gt;The application event name constants are optional custom event names reserved when you call Write for application event logging.
+Provides event name constants, including system event name constants and application event name constants. <br>The application event name constants are optional custom event names reserved when you call Write for application event logging.
 
 **Since:** 23
 
@@ -15,7 +15,7 @@ Provides event name constants, including system event name constants and applica
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from 'hiAppEvent';
 ```
 
 ## Summary

@@ -15,7 +15,7 @@ Indicates the options for VCard export.
 ## Modules to Import
 
 ```TypeScript
-import { vcard } from '@kit.TelephonyKit';
+import { vcard } from 'vcard';
 ```
 
 ## cardType

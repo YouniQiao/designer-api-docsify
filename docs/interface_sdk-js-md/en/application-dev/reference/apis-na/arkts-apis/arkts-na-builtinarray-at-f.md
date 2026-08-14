@@ -25,7 +25,7 @@ Takes an integer value and returns the item at that index, allowing for positive
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;boolean&gt; | Yes | The array to operate `at` on. |
-| index | int | Yes | Zero-based index of the array element to be returned. &lt;br&gt;The value should be an integer. |
+| index | int | Yes | Zero-based index of the array element to be returned. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -59,7 +59,7 @@ Takes an integer value and returns the item at that index, allowing for positive
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;byte&gt; | Yes | The array to operate `at` on. |
-| index | int | Yes | Zero-based index of the array element to be returned. &lt;br&gt;The value should be an integer. |
+| index | int | Yes | Zero-based index of the array element to be returned. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -93,7 +93,7 @@ Takes an integer value and returns the item at that index, allowing for positive
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;short&gt; | Yes | The array to operate `at` on. |
-| index | int | Yes | Zero-based index of the array element to be returned. &lt;br&gt;The value should be an integer. |
+| index | int | Yes | Zero-based index of the array element to be returned. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -127,7 +127,7 @@ Takes an integer value and returns the item at that index, allowing for positive
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;int&gt; | Yes | The array to operate `at` on. |
-| index | int | Yes | Zero-based index of the array element to be returned. &lt;br&gt;The value should be an integer. |
+| index | int | Yes | Zero-based index of the array element to be returned. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -161,7 +161,7 @@ Takes an integer value and returns the item at that index, allowing for positive
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;long&gt; | Yes | The array to operate `at` on. |
-| index | int | Yes | Zero-based index of the array element to be returned. &lt;br&gt;The value should be an integer. |
+| index | int | Yes | Zero-based index of the array element to be returned. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -195,7 +195,7 @@ Takes an integer value and returns the item at that index, allowing for positive
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;float&gt; | Yes | The array to operate `at` on. |
-| index | int | Yes | Zero-based index of the array element to be returned. &lt;br&gt;The value should be an integer. |
+| index | int | Yes | Zero-based index of the array element to be returned. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -229,7 +229,7 @@ Takes an integer value and returns the item at that index, allowing for positive
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;double&gt; | Yes | The array to operate `at` on. |
-| index | int | Yes | Zero-based index of the array element to be returned. &lt;br&gt;The value should be an integer. |
+| index | int | Yes | Zero-based index of the array element to be returned. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -263,7 +263,7 @@ Takes an integer value and returns the item at that index, allowing for positive
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | self | FixedArray&lt;char&gt; | Yes | The array to operate `at` on. |
-| index | int | Yes | Zero-based index of the array element to be returned. &lt;br&gt;The value should be an integer. |
+| index | int | Yes | Zero-based index of the array element to be returned. <br>The value should be an integer. |
 
 **Return value:**
 

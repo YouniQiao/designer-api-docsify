@@ -15,7 +15,7 @@ Provides the train configuration
 ## Modules to Import
 
 ```TypeScript
-import { mindSporeLite } from '@kit.MindSporeLiteKit';
+import { mindSporeLite } from 'mindSporeLite';
 ```
 
 ## lossName

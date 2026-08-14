@@ -15,7 +15,7 @@ Provides the unified video processor status.
 ## Modules to Import
 
 ```TypeScript
-import { videoProcessing } from '@kit.MediaKit';
+import { videoProcessing } from 'videoProcessing';
 ```
 
 ## aiHdr

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { kioskManager } from '@kit.AbilityKit';
+import { kioskManager } from 'kioskManager';
 ```
 
 ## getKioskStatus

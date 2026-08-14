@@ -15,7 +15,7 @@ In the following API examples, you must first use [getSetting](arkts-ime-inputme
 ## Modules to Import
 
 ```TypeScript
-import { inputMethod } from '@kit.IMEKit';
+import { inputMethod } from 'inputMethod';
 ```
 
 ## displayOptionalInputMethod

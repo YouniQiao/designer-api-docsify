@@ -15,7 +15,7 @@ Provides information about the **Navigation** component.
 ## Modules to Import
 
 ```TypeScript
-import { uiObserver } from '@kit.ArkUI';
+import { uiObserver } from 'uiObserver';
 ```
 
 ## navigationId

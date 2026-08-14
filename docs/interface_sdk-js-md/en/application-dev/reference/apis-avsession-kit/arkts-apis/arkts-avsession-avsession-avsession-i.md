@@ -15,7 +15,7 @@ AVSession object.
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'avSession';
 ```
 
 ## activate
@@ -428,8 +428,8 @@ Get the cast controller when the session is casted to remote device. If the avse
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist |
-| [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established. |
 
 ## getAVCastController
 
@@ -459,8 +459,8 @@ Get the cast controller when the session is casted to remote device. If the avse
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist |
-| [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established. |
 
 ## getAVCastController
 
@@ -492,8 +492,8 @@ Get the cast controller when the session is casted to remote device. If the avse
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist |
-| [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established. |
 
 ## getAVCastController
 
@@ -525,8 +525,8 @@ Get the cast controller when the session is casted to remote device. If the avse
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist |
-| [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
+| [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established. |
 
 ## getAllCastDisplays
 
@@ -851,8 +851,8 @@ Unregister listener for cast display information changed.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
 ## offCommonCommand
 
@@ -913,7 +913,7 @@ Unsubscribes from custom data changes.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
 ## offDesktopLyricStateChanged
@@ -1103,8 +1103,8 @@ Unregister session output device change callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
 ## offPause
 
@@ -1609,8 +1609,8 @@ Unregister listener for cast display information changed.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
 ## off_commonCommand
 
@@ -1678,7 +1678,7 @@ Unsubscribes from custom data changes.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
 ## off_fastForward
@@ -1818,8 +1818,8 @@ Unregister session output device change callback
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
 ## off_pause
 
@@ -2405,8 +2405,8 @@ Register listener for cast display information changed.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
 ## onCommonCommand
 
@@ -2467,7 +2467,7 @@ Register listener for custom data sent from remote device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
 ## onDesktopLyricStateChanged
@@ -2657,8 +2657,8 @@ Register session output device change callback
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
 ## onPause
 
@@ -3165,8 +3165,8 @@ Register listener for cast display information changed.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
 ## on_commonCommand
 
@@ -3234,7 +3234,7 @@ Register listener for custom data sent from remote device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
 ## on_fastForward
@@ -3374,8 +3374,8 @@ Register session output device change callback
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
-| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
+| [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
 ## on_pause
 
@@ -4792,7 +4792,7 @@ Set supported loop modes supplied by application.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
 ## setSupportedPlaySpeeds
@@ -4833,7 +4833,7 @@ Set supported speeds supplied by application.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception |
+| [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
 ## stopCasting
@@ -4864,7 +4864,7 @@ Stop current cast and disconnect device connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established |
+| [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established. |
 
 ## stopCasting
 
@@ -4896,7 +4896,7 @@ Stop current cast and disconnect device connection.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established |
+| [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established. |
 
 ## sessionId
 

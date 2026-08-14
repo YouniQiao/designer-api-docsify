@@ -17,7 +17,7 @@ Defines a **LogEntry** object.
 ## Modules to Import
 
 ```TypeScript
-import { logLibrary } from '@kit.PerformanceAnalysisKit';
+import { logLibrary } from 'logLibrary';
 ```
 
 ## mtime

@@ -42,7 +42,7 @@ result: FocusMoveResultCode
 target: Array<AccessibilityElement>
 ```
 
-查询返回的无障碍节点。
+查询返回的无障碍节点列表。
 
 **类型：** Array&lt;[AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md)&gt;
 

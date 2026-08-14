@@ -37,7 +37,7 @@ packBinaryImageToTiffData(bufferInfo: BinaryBufferInfo, options?: PackingOptions
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bufferInfo | [BinaryBufferInfo](arkts-image-image-binarybufferinfo-i.md) | 是 | 图像缓冲区信息。 |
-| options | [PackingOptionsForTiff](arkts-image-image-packingoptionsfortiff-i.md) | 否 | TIFF图像编码选项。 &lt;br&gt;未传入options时，默认的compression为4（CCITT G4）。 &lt;br&gt;未传入options时，默认的orientation为1（TOP_LEFT），表示图像未旋转。 |
+| options | [PackingOptionsForTiff](arkts-image-image-packingoptionsfortiff-i.md) | 否 | TIFF图像编码选项。 <br>未传入options时，默认的compression为4（CCITT G4）。 <br>未传入options时，默认的orientation为1（TOP_LEFT），表示图像未旋转。 |
 
 **返回值：**
 
@@ -78,7 +78,7 @@ packBinaryImageToTiffFile(bufferInfo: BinaryBufferInfo, fd: int, options?: Packi
 | --- | --- | --- | --- |
 | bufferInfo | [BinaryBufferInfo](arkts-image-image-binarybufferinfo-i.md) | 是 | 图像缓冲区信息。 |
 | fd | int | 是 | 文件描述符ID。该值必须为正整数。 |
-| options | [PackingOptionsForTiff](arkts-image-image-packingoptionsfortiff-i.md) | 否 | TIFF图像编码选项。 &lt;br&gt;未传入options时，默认的compression为4（CCITT G4）。 &lt;br&gt;未传入options时，默认的orientation为1（TOP_LEFT），表示图像未旋转。 |
+| options | [PackingOptionsForTiff](arkts-image-image-packingoptionsfortiff-i.md) | 否 | TIFF图像编码选项。 <br>未传入options时，默认的compression为4（CCITT G4）。 <br>未传入options时，默认的orientation为1（TOP_LEFT），表示图像未旋转。 |
 
 **返回值：**
 

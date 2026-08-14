@@ -3,7 +3,21 @@
 ## Modules to Import
 
 ```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
+import { ConflictFiles } from 'ConflictFiles';
+import { FileFilter } from 'FileFilter';
+import { Filter } from 'Filter';
+import { Options } from 'Options';
+import { ReaderIteratorResult } from 'ReaderIteratorResult';
+import { WatchEvent } from 'WatchEvent';
+import { WatchEventListener } from 'WatchEventListener';
+import { Watcher } from 'Watcher';
+import { ReadOptions } from 'ReadOptions';
+import { ReadTextOptions } from 'ReadTextOptions';
+import { WriteOptions } from 'WriteOptions';
+import { ListFileExtOptions } from 'ListFileExtOptions';
+import { ListFileOptions } from 'ListFileOptions';
+import { DfsListeners } from 'DfsListeners';
+import { TaskSignal } from 'TaskSignal';
 ```
 
 ## readTextSync
@@ -34,7 +48,7 @@ Reads the text content of a file. This API returns the result synchronously.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filePath | string | Yes | Application sandbox path of the file. |
-| options | [ReadTextOptions](../../apis-na/arkts-apis/arkts-na-file-fs-readtextoptions-i.md) | No | The options are as follows:&lt;br&gt;- **offset** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position.&lt;br&gt;- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the file length.&lt;br&gt;- **encoding** (string): format of the data to be encoded.&lt;br&gt;It is valid only when the data is of the string type. The default value is **'utf-8'**, which is the only value supported.<br>**Since:** 11 |
+| options | [ReadTextOptions](../../apis-na/arkts-apis/arkts-na-file-fs-readtextoptions-i.md) | No | The options are as follows:<br>- **offset** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position.<br>- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the file length.<br>- **encoding** (string): format of the data to be encoded.<br>It is valid only when the data is of the string type. The default value is **'utf-8'**, which is the only value supported.<br>**Since:** 11 |
 
 **Return value:**
 

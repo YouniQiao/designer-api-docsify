@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usageStatistics } from '@kit.BackgroundTasksKit';
+import { usageStatistics } from 'usageStatistics';
 ```
 
 ## queryBundleStatsInfos
@@ -32,8 +32,8 @@ Queries usage information about each bundle within a specified period. This meth
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| begin | long | Yes | Indicates the start time of the query period, in milliseconds. &lt;br&gt; Unit:ms |
-| end | long | Yes | Indicates the end time of the query period, in milliseconds. &lt;br&gt; Unit:ms |
+| begin | long | Yes | Indicates the start time of the query period, in milliseconds. <br> Unit:ms |
+| end | long | Yes | Indicates the end time of the query period, in milliseconds. <br> Unit:ms |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundleStatsMap](arkts-backgroundtasks-usagestatistics-bundlestatsmap-t-sys.md)&gt; | Yes | Callback used to return the result. If the query is successful, **err** is **undefined**, and data is the [BundleStatsMap](arkts-backgroundtasks-usagestatistics-bundlestatsmap-t-sys.md#BundleStatsMap-(System-API)) objects containing the usage information about each bundle. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -45,7 +45,7 @@ Queries usage information about each bundle within a specified period. This meth
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [10000001](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000001-memory-operation-failure) | Memory operation failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
-| [10000002](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000002-ipc-parcel-write-failure) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; &lt;br&gt; 2. Failed to apply for memory. |
+| [10000002](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000002-ipc-parcel-write-failure) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; <br> 2. Failed to apply for memory. |
 | [10000003](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000003-system-service-operation-failure) | Failed to get system ability manager. |
 | [10000004](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000004-ipc-failure) | Failed to access the device usage service. |
 | [10000006](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000006-failed-to-obtain-application-information) | Failed to get the application information. |
@@ -93,8 +93,8 @@ Queries usage information about each bundle within a specified period. This meth
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| begin | long | Yes | Indicates the start time of the query period, in milliseconds. &lt;br&gt; Unit:ms |
-| end | long | Yes | Indicates the end time of the query period, in milliseconds. &lt;br&gt; Unit:ms |
+| begin | long | Yes | Indicates the start time of the query period, in milliseconds. <br> Unit:ms |
+| end | long | Yes | Indicates the end time of the query period, in milliseconds. <br> Unit:ms |
 
 **Return value:**
 
@@ -111,7 +111,7 @@ Queries usage information about each bundle within a specified period. This meth
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [10000001](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000001-memory-operation-failure) | Memory operation failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
-| [10000002](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000002-ipc-parcel-write-failure) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; &lt;br&gt; 2. Failed to apply for memory. |
+| [10000002](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000002-ipc-parcel-write-failure) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters; <br> 2. Failed to apply for memory. |
 | [10000003](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000003-system-service-operation-failure) | Failed to get system ability manager. |
 | [10000004](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000004-ipc-failure) | Failed to access the device usage service. |
 | [10000006](../../apis-backgroundtasks-kit/errorcode-DeviceUsageStatistics.md#10000006-failed-to-obtain-application-information) | Failed to get the application information. |

@@ -15,7 +15,7 @@ The metadata of the current media.Used to set the properties of the current medi
 ## Modules to Import
 
 ```TypeScript
-import { avSession } from '@kit.AVSessionKit';
+import { avSession } from 'avSession';
 ```
 
 ## album

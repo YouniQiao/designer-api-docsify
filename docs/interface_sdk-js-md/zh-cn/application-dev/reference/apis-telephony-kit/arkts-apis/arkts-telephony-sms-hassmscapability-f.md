@@ -22,5 +22,14 @@ function hasSmsCapability(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | true：设备具备短信发送和接收能力。&lt;br/&gt;- false：设备不具备短信发送和接收能力。 |
+| boolean | true：设备具备短信发送和接收能力。<br/>- false：设备不具备短信发送和接收能力。 |
+
+## 示例
+
+```TypeScript
+import { sms } from '@kit.TelephonyKit';
+
+let result = sms.hasSmsCapability(); 
+console.info(`hasSmsCapability: ${JSON.stringify(result)}`);
+```
 

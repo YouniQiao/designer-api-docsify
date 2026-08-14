@@ -15,7 +15,7 @@ Defines the application crash event configuration policy.
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from 'hiAppEvent';
 ```
 
 ## collectMinidump
@@ -24,7 +24,7 @@ import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 collectMinidump?: boolean
 ```
 
-Policy for the APP_CRASH event the value true means to the minidump capture capability is enabled. the value false means to the minidump capture function is disabled. &lt;br&gt;Default value:false.
+Policy for the APP_CRASH event the value true means to the minidump capture capability is enabled. the value false means to the minidump capture function is disabled. <br>Default value:false.
 
 **Type:** boolean
 

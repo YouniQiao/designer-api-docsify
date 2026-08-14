@@ -15,7 +15,7 @@ Describes the list of files in [UploadConfig](arkts-basicservices-request-upload
 ## Modules to Import
 
 ```TypeScript
-import { request } from '@kit.BasicServicesKit';
+import { request } from 'request';
 ```
 
 ## filename

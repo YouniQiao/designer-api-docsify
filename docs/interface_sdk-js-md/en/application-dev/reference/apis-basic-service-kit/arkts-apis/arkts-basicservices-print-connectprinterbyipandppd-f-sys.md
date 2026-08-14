@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'print';
 ```
 
 ## connectPrinterByIpAndPpd
@@ -34,9 +34,9 @@ Connect a printer by the printer IP and ppd.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerIp | string | Yes | Indicates the printer IP. &lt;br&gt;IP of the printer to be connected. |
-| protocol | string | Yes | Indicates the protocol. &lt;br&gt;Protocol of the printer to be connected. |
-| ppdName | string | Yes | Indicates the ppd name. &lt;br&gt;Ppd name of the printer to be connected. |
+| printerIp | string | Yes | Indicates the printer IP. <br>IP of the printer to be connected. |
+| protocol | string | Yes | Indicates the protocol. <br>Protocol of the printer to be connected. |
+| ppdName | string | Yes | Indicates the ppd name. <br>Ppd name of the printer to be connected. |
 
 **Return value:**
 

@@ -50,7 +50,7 @@ let wantTemp: Want = {
 try {
     securityManager.cancelScreenWatermarkImage(wantTemp);
     console.info(`Succeeded in canceling screen watermark image.`);
-} catch(err) {
+} catch (err) {
     console.error(`Failed to cancel screen watermark image. Code: ${err.code}, message: ${err.message}`);
 }
 ```

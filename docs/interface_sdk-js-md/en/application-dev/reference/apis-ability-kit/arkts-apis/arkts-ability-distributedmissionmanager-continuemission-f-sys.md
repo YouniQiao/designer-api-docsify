@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { distributedMissionManager } from '@kit.AbilityKit';
+import { distributedMissionManager } from 'distributedMissionManager';
 ```
 
 ## continueMission
@@ -43,7 +43,7 @@ Continues a mission on a remote device, with the mission ID specified. This API 
 | Error Code ID | Error Message |
 | --- | --- |
 | [16300504](../errorcode-DistributedSchedule.md#16300504-the-application-is-not-installed-on-the-remote-end-and-installationfree-is-supported-try-again-with-the-freeinstall-flag) | The application is not installed on the remote end but installation-free is supported, try again with freeInstall flag. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16300505](../errorcode-DistributedSchedule.md#16300505-the-operation-device-must-be-the-device-where-the-application-to-be-continued-is-currently-located-or-the-target-device) | The operation device must be the device where the application to be continuedis located or the target device to be continued. |
 | [16300506](../errorcode-DistributedSchedule.md#16300506-the-local-continuation-task-is-already-in-progress) | The local continuation task is already in progress. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
@@ -127,7 +127,7 @@ Continues a mission on a remote device, with the mission ID specified. This API 
 | Error Code ID | Error Message |
 | --- | --- |
 | [16300504](../errorcode-DistributedSchedule.md#16300504-the-application-is-not-installed-on-the-remote-end-and-installationfree-is-supported-try-again-with-the-freeinstall-flag) | The application is not installed on the remote end but installation-free is supported, try again with freeInstall flag. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16300505](../errorcode-DistributedSchedule.md#16300505-the-operation-device-must-be-the-device-where-the-application-to-be-continued-is-currently-located-or-the-target-device) | The operation device must be the device where the application to be continuedis located or the target device to be continued. |
 | [16300506](../errorcode-DistributedSchedule.md#16300506-the-local-continuation-task-is-already-in-progress) | The local continuation task is already in progress. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
@@ -202,7 +202,7 @@ Continues a mission on a remote device, with the bundle name specified. This API
 | Error Code ID | Error Message |
 | --- | --- |
 | [16300504](../errorcode-DistributedSchedule.md#16300504-the-application-is-not-installed-on-the-remote-end-and-installationfree-is-supported-try-again-with-the-freeinstall-flag) | The application is not installed on the remote end but installation-free is supported, try again with freeInstall flag. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16300505](../errorcode-DistributedSchedule.md#16300505-the-operation-device-must-be-the-device-where-the-application-to-be-continued-is-currently-located-or-the-target-device) | The operation device must be the device where the application to be continuedis located or the target device to be continued. |
 | [16300506](../errorcode-DistributedSchedule.md#16300506-the-local-continuation-task-is-already-in-progress) | The local continuation task is already in progress. |
 | [16300507](../errorcode-DistributedSchedule.md#16300507-failed-to-get-the-missioninfo-of-the-specified-bundlename) | Failed to get the missionInfo of the specified bundle name. |
@@ -279,7 +279,7 @@ Continues a mission on a remote device, with the bundle name specified. This API
 | Error Code ID | Error Message |
 | --- | --- |
 | [16300504](../errorcode-DistributedSchedule.md#16300504-the-application-is-not-installed-on-the-remote-end-and-installationfree-is-supported-try-again-with-the-freeinstall-flag) | The application is not installed on the remote end but installation-free is supported, try again with freeInstall flag. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16300505](../errorcode-DistributedSchedule.md#16300505-the-operation-device-must-be-the-device-where-the-application-to-be-continued-is-currently-located-or-the-target-device) | The operation device must be the device where the application to be continuedis located or the target device to be continued. |
 | [16300506](../errorcode-DistributedSchedule.md#16300506-the-local-continuation-task-is-already-in-progress) | The local continuation task is already in progress. |
 | [16300507](../errorcode-DistributedSchedule.md#16300507-failed-to-get-the-missioninfo-of-the-specified-bundlename) | Failed to get the missionInfo of the specified bundle name. |

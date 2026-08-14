@@ -17,7 +17,7 @@ AudioRecorder is a class for audio recording management. It provides APIs to rec
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'media';
 ```
 
 ## on_error
@@ -44,7 +44,7 @@ Subscribes to audio recording error events. After an error event is reported, yo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type, which is **'error'** in this case.&lt;br&gt;This event is triggered when an error occurs during audio recording. |
+| type | 'error' | Yes | Event type, which is **'error'** in this case.<br>This event is triggered when an error occurs during audio recording. |
 | callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback invoked when the event is triggered. |
 
 ## on_pause
@@ -71,7 +71,7 @@ Subscribes to the audio recording events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | Yes | Event type. The following events are supported: 'prepare'\|'start'\| 'pause' \| 'resume' \|'stop'\|'release'\|'reset'&lt;br&gt;- ' prepare': triggered when the **prepare()** API is called and the audio recording parameters are set.&lt;br&gt;- ' start': triggered when the **start()** API is called and audio recording starts.&lt;br&gt;- 'pause': triggered when the **pause()** API is called and audio recording is paused.&lt;br&gt;- 'resume': triggered when the **resume()** API is called and audio recording is resumed.&lt;br&gt;- 'stop': triggered when the **stop()** API is called and audio recording stops.&lt;br&gt;- 'release': triggered when the **release()** API is called and the recording resources are released.&lt;br&gt;- 'reset': triggered when the **reset()** API is called and audio recording is reset. |
+| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | Yes | Event type. The following events are supported: 'prepare'\|'start'\| 'pause' \| 'resume' \|'stop'\|'release'\|'reset'<br>- ' prepare': triggered when the **prepare()** API is called and the audio recording parameters are set.<br>- ' start': triggered when the **start()** API is called and audio recording starts.<br>- 'pause': triggered when the **pause()** API is called and audio recording is paused.<br>- 'resume': triggered when the **resume()** API is called and audio recording is resumed.<br>- 'stop': triggered when the **stop()** API is called and audio recording stops.<br>- 'release': triggered when the **release()** API is called and the recording resources are released.<br>- 'reset': triggered when the **reset()** API is called and audio recording is reset. |
 | callback | () =&gt; void | Yes | Callback invoked when the event is triggered. |
 
 ## on_prepare
@@ -98,7 +98,7 @@ Subscribes to the audio recording events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | Yes | Event type. The following events are supported: 'prepare'\|'start'\| 'pause' \| 'resume' \|'stop'\|'release'\|'reset'&lt;br&gt;- ' prepare': triggered when the **prepare()** API is called and the audio recording parameters are set.&lt;br&gt;- ' start': triggered when the **start()** API is called and audio recording starts.&lt;br&gt;- 'pause': triggered when the **pause()** API is called and audio recording is paused.&lt;br&gt;- 'resume': triggered when the **resume()** API is called and audio recording is resumed.&lt;br&gt;- 'stop': triggered when the **stop()** API is called and audio recording stops.&lt;br&gt;- 'release': triggered when the **release()** API is called and the recording resources are released.&lt;br&gt;- 'reset': triggered when the **reset()** API is called and audio recording is reset. |
+| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | Yes | Event type. The following events are supported: 'prepare'\|'start'\| 'pause' \| 'resume' \|'stop'\|'release'\|'reset'<br>- ' prepare': triggered when the **prepare()** API is called and the audio recording parameters are set.<br>- ' start': triggered when the **start()** API is called and audio recording starts.<br>- 'pause': triggered when the **pause()** API is called and audio recording is paused.<br>- 'resume': triggered when the **resume()** API is called and audio recording is resumed.<br>- 'stop': triggered when the **stop()** API is called and audio recording stops.<br>- 'release': triggered when the **release()** API is called and the recording resources are released.<br>- 'reset': triggered when the **reset()** API is called and audio recording is reset. |
 | callback | () =&gt; void | Yes | Callback invoked when the event is triggered. |
 
 ## on_release
@@ -125,7 +125,7 @@ Subscribes to the audio recording events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | Yes | Event type. The following events are supported: 'prepare'\|'start'\| 'pause' \| 'resume' \|'stop'\|'release'\|'reset'&lt;br&gt;- ' prepare': triggered when the **prepare()** API is called and the audio recording parameters are set.&lt;br&gt;- ' start': triggered when the **start()** API is called and audio recording starts.&lt;br&gt;- 'pause': triggered when the **pause()** API is called and audio recording is paused.&lt;br&gt;- 'resume': triggered when the **resume()** API is called and audio recording is resumed.&lt;br&gt;- 'stop': triggered when the **stop()** API is called and audio recording stops.&lt;br&gt;- 'release': triggered when the **release()** API is called and the recording resources are released.&lt;br&gt;- 'reset': triggered when the **reset()** API is called and audio recording is reset. |
+| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | Yes | Event type. The following events are supported: 'prepare'\|'start'\| 'pause' \| 'resume' \|'stop'\|'release'\|'reset'<br>- ' prepare': triggered when the **prepare()** API is called and the audio recording parameters are set.<br>- ' start': triggered when the **start()** API is called and audio recording starts.<br>- 'pause': triggered when the **pause()** API is called and audio recording is paused.<br>- 'resume': triggered when the **resume()** API is called and audio recording is resumed.<br>- 'stop': triggered when the **stop()** API is called and audio recording stops.<br>- 'release': triggered when the **release()** API is called and the recording resources are released.<br>- 'reset': triggered when the **reset()** API is called and audio recording is reset. |
 | callback | () =&gt; void | Yes | Callback invoked when the event is triggered. |
 
 ## on_reset
@@ -152,7 +152,7 @@ Subscribes to the audio recording events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | Yes | Event type. The following events are supported: 'prepare'\|'start'\| 'pause' \| 'resume' \|'stop'\|'release'\|'reset'&lt;br&gt;- ' prepare': triggered when the **prepare()** API is called and the audio recording parameters are set.&lt;br&gt;- ' start': triggered when the **start()** API is called and audio recording starts.&lt;br&gt;- 'pause': triggered when the **pause()** API is called and audio recording is paused.&lt;br&gt;- 'resume': triggered when the **resume()** API is called and audio recording is resumed.&lt;br&gt;- 'stop': triggered when the **stop()** API is called and audio recording stops.&lt;br&gt;- 'release': triggered when the **release()** API is called and the recording resources are released.&lt;br&gt;- 'reset': triggered when the **reset()** API is called and audio recording is reset. |
+| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | Yes | Event type. The following events are supported: 'prepare'\|'start'\| 'pause' \| 'resume' \|'stop'\|'release'\|'reset'<br>- ' prepare': triggered when the **prepare()** API is called and the audio recording parameters are set.<br>- ' start': triggered when the **start()** API is called and audio recording starts.<br>- 'pause': triggered when the **pause()** API is called and audio recording is paused.<br>- 'resume': triggered when the **resume()** API is called and audio recording is resumed.<br>- 'stop': triggered when the **stop()** API is called and audio recording stops.<br>- 'release': triggered when the **release()** API is called and the recording resources are released.<br>- 'reset': triggered when the **reset()** API is called and audio recording is reset. |
 | callback | () =&gt; void | Yes | Callback invoked when the event is triggered. |
 
 ## on_resume
@@ -179,7 +179,7 @@ Subscribes to the audio recording events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | Yes | Event type. The following events are supported: 'prepare'\|'start'\| 'pause' \| 'resume' \|'stop'\|'release'\|'reset'&lt;br&gt;- ' prepare': triggered when the **prepare()** API is called and the audio recording parameters are set.&lt;br&gt;- ' start': triggered when the **start()** API is called and audio recording starts.&lt;br&gt;- 'pause': triggered when the **pause()** API is called and audio recording is paused.&lt;br&gt;- 'resume': triggered when the **resume()** API is called and audio recording is resumed.&lt;br&gt;- 'stop': triggered when the **stop()** API is called and audio recording stops.&lt;br&gt;- 'release': triggered when the **release()** API is called and the recording resources are released.&lt;br&gt;- 'reset': triggered when the **reset()** API is called and audio recording is reset. |
+| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | Yes | Event type. The following events are supported: 'prepare'\|'start'\| 'pause' \| 'resume' \|'stop'\|'release'\|'reset'<br>- ' prepare': triggered when the **prepare()** API is called and the audio recording parameters are set.<br>- ' start': triggered when the **start()** API is called and audio recording starts.<br>- 'pause': triggered when the **pause()** API is called and audio recording is paused.<br>- 'resume': triggered when the **resume()** API is called and audio recording is resumed.<br>- 'stop': triggered when the **stop()** API is called and audio recording stops.<br>- 'release': triggered when the **release()** API is called and the recording resources are released.<br>- 'reset': triggered when the **reset()** API is called and audio recording is reset. |
 | callback | () =&gt; void | Yes | Callback invoked when the event is triggered. |
 
 ## on_start
@@ -206,7 +206,7 @@ Subscribes to the audio recording events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | Yes | Event type. The following events are supported: 'prepare'\|'start'\| 'pause' \| 'resume' \|'stop'\|'release'\|'reset'&lt;br&gt;- ' prepare': triggered when the **prepare()** API is called and the audio recording parameters are set.&lt;br&gt;- ' start': triggered when the **start()** API is called and audio recording starts.&lt;br&gt;- 'pause': triggered when the **pause()** API is called and audio recording is paused.&lt;br&gt;- 'resume': triggered when the **resume()** API is called and audio recording is resumed.&lt;br&gt;- 'stop': triggered when the **stop()** API is called and audio recording stops.&lt;br&gt;- 'release': triggered when the **release()** API is called and the recording resources are released.&lt;br&gt;- 'reset': triggered when the **reset()** API is called and audio recording is reset. |
+| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | Yes | Event type. The following events are supported: 'prepare'\|'start'\| 'pause' \| 'resume' \|'stop'\|'release'\|'reset'<br>- ' prepare': triggered when the **prepare()** API is called and the audio recording parameters are set.<br>- ' start': triggered when the **start()** API is called and audio recording starts.<br>- 'pause': triggered when the **pause()** API is called and audio recording is paused.<br>- 'resume': triggered when the **resume()** API is called and audio recording is resumed.<br>- 'stop': triggered when the **stop()** API is called and audio recording stops.<br>- 'release': triggered when the **release()** API is called and the recording resources are released.<br>- 'reset': triggered when the **reset()** API is called and audio recording is reset. |
 | callback | () =&gt; void | Yes | Callback invoked when the event is triggered. |
 
 ## on_stop
@@ -233,7 +233,7 @@ Subscribes to the audio recording events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | Yes | Event type. The following events are supported: 'prepare'\|'start'\| 'pause' \| 'resume' \|'stop'\|'release'\|'reset'&lt;br&gt;- ' prepare': triggered when the **prepare()** API is called and the audio recording parameters are set.&lt;br&gt;- ' start': triggered when the **start()** API is called and audio recording starts.&lt;br&gt;- 'pause': triggered when the **pause()** API is called and audio recording is paused.&lt;br&gt;- 'resume': triggered when the **resume()** API is called and audio recording is resumed.&lt;br&gt;- 'stop': triggered when the **stop()** API is called and audio recording stops.&lt;br&gt;- 'release': triggered when the **release()** API is called and the recording resources are released.&lt;br&gt;- 'reset': triggered when the **reset()** API is called and audio recording is reset. |
+| type | 'prepare' \| 'start' \| 'pause' \| 'resume' \| 'stop' \| 'release' \| 'reset' | Yes | Event type. The following events are supported: 'prepare'\|'start'\| 'pause' \| 'resume' \|'stop'\|'release'\|'reset'<br>- ' prepare': triggered when the **prepare()** API is called and the audio recording parameters are set.<br>- ' start': triggered when the **start()** API is called and audio recording starts.<br>- 'pause': triggered when the **pause()** API is called and audio recording is paused.<br>- 'resume': triggered when the **resume()** API is called and audio recording is resumed.<br>- 'stop': triggered when the **stop()** API is called and audio recording stops.<br>- 'release': triggered when the **release()** API is called and the recording resources are released.<br>- 'reset': triggered when the **reset()** API is called and audio recording is reset. |
 | callback | () =&gt; void | Yes | Callback invoked when the event is triggered. |
 
 ## pause

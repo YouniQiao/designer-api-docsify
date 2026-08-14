@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ErrorCode } from '@kit.AbilityKit';
+import { ErrorCode } from 'ErrorCode';
 ```
 
 ## Summary

@@ -17,7 +17,7 @@ Describes the rotation vector sensor data. It extends from [Response](arkts-sens
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
+import { sensor } from 'sensor';
 ```
 
 ## w

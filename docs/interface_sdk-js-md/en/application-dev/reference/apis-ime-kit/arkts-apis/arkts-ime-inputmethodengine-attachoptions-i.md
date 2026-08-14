@@ -15,7 +15,7 @@ Defines additional options for binding an input method.
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from '@kit.IMEKit';
+import { inputMethodEngine } from 'inputMethodEngine';
 ```
 
 ## isSimpleKeyboardEnabled

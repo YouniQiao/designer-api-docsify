@@ -564,10 +564,10 @@ static cloudSync(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Empty conditions; &lt;br&gt;2. Missing GROUP BY clause. |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Empty conditions; <br>2. Missing GROUP BY clause. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, &lt;br&gt;usually the result returned by VerifyAccessToken. |
-| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, &lt;br&gt;application which is not a system application uses system API. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, <br>usually the result returned by VerifyAccessToken. |
+| [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, <br>application which is not a system application uses system API. |
 
 ## 示例
 
@@ -576,7 +576,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 import { relationalStore } from '@kit.ArkData';
 
 try{
-  cloudData.Config.cloudSync("bundleName", "storeId", relationalStore.SyncMode.SYNC_MODE_TIME_FIRST, (progress)=>{
+  cloudData.Config.cloudSync("bundleName", "storeId", relationalStore.SyncMode.SYNC_MODE_TIME_FIRST, (progress) => {
     console.info('Succeeded in getting progress details.');
   }).then(() => {
       console.info('Succeeded in syncing cloud data.');
@@ -637,7 +637,7 @@ static cloudSyncEx(
 | --- | --- |
 | [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. Empty conditions. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported because the device does not support the device-cloud capability. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, &lt;br&gt;usually the result returned by VerifyAccessToken. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, <br>usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application is not a system application. |
 
 ## 示例
@@ -1319,7 +1319,7 @@ static offSyncInfoChanged(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. bundlename is null; &lt;br&gt;2. the number of bundleInfos exceeds the upper limit or the number is 0. |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. bundlename is null; <br>2. the number of bundleInfos exceeds the upper limit or the number is 0. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported because the device does not support the device-cloud capability. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
@@ -1401,7 +1401,7 @@ static onSyncInfoChanged(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. bundlename is null; &lt;br&gt;2. the number of bundleInfos exceeds the upper limit or the number is 0. |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. bundlename is null; <br>2. the number of bundleInfos exceeds the upper limit or the number is 0. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported because the device does not support the device-cloud capability. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission verification failed, application which is not a system application uses system API. |
@@ -1656,9 +1656,9 @@ static stopCloudSync(bundleInfos: Array<BundleInfo>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. bundlename is null; &lt;br&gt;2. the number of bundleInfos exceeds the upper limit or the number is 0. |
+| [14800001](../errorcode-data-rdb.md#14800001-无效的参数) | Invalid arguments. Possible causes: 1. bundlename is null; <br>2. the number of bundleInfos exceeds the upper limit or the number is 0. |
 | [801](../../errorcode-universal.md#801-该设备不支持此api) | Capability not supported because the device does not support the device-cloud capability. |
-| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, &lt;br&gt;usually the result returned by VerifyAccessToken. |
+| [201](../../errorcode-universal.md#201-权限校验失败) | Permission verification failed, <br>usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | if permission verification failed, application which is not a system application uses system API. |
 
 ## 示例

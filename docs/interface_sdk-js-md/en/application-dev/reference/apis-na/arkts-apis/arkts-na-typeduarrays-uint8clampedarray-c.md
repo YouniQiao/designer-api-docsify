@@ -36,7 +36,7 @@ Returns the internal numeric value at the given index without boxing.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| i | int | Yes | index to look at &lt;br&gt;The value should be an integer. |
+| i | int | Yes | index to look at <br>The value should be an integer. |
 
 **Return value:**
 
@@ -94,7 +94,7 @@ Sets the value at the given index without boxing.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | index to change &lt;br&gt;The value should be an integer. |
+| index | int | Yes | index to change <br>The value should be an integer. |
 | val | double | Yes | value to set |
 
 ## at
@@ -121,7 +121,7 @@ Returns the element at the given index, supporting negative indices which count 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | index to look at &lt;br&gt;The value should be an integer. |
+| index | int | Yes | index to look at <br>The value should be an integer. |
 
 **Return value:**
 
@@ -173,7 +173,7 @@ Creates an Uint8ClampedArray with respect to length.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| length | int | Yes | Number of elements &lt;br&gt;The value should be an integer. |
+| length | int | Yes | Number of elements <br>The value should be an integer. |
 
 ## constructor
 
@@ -356,8 +356,8 @@ Creates an Uint8ClampedArray with respect to data, byteOffset and length.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | buf | ArrayBufferLike | Yes | data initializer |
-| byteOffset | int | Yes | byte offset from begin of the buf &lt;br&gt;The value should be an integer. |
-| length | int | Yes | size of elements of type int in newly created Uint8ClampedArray &lt;br&gt;The value should be an integer. |
+| byteOffset | int | Yes | byte offset from begin of the buf <br>The value should be an integer. |
+| length | int | Yes | size of elements of type int in newly created Uint8ClampedArray <br>The value should be an integer. |
 
 ## constructor
 
@@ -384,7 +384,7 @@ Creates an Uint8ClampedArray with respect to buf and byteOffset.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | buf | ArrayBuffer | Yes | data initializer |
-| byteOffset | int | Yes | byte offset from begin of the buf &lt;br&gt;The value should be an integer. |
+| byteOffset | int | Yes | byte offset from begin of the buf <br>The value should be an integer. |
 
 ## constructor
 
@@ -525,7 +525,7 @@ Makes a copy of internal elements to targetPos from begin to end of Uint8Clamped
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | int | Yes | insert index to place copied elements &lt;br&gt;The value should be an integer. |
+| target | int | Yes | insert index to place copied elements <br>The value should be an integer. |
 
 **Return value:**
 
@@ -615,9 +615,9 @@ Fills the Uint8ClampedArray with specified value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | new value. &lt;br&gt;The value should be an integer. |
-| start | int | No | start index to begin fill from, defaults to 0. &lt;br&gt;The value should be an integer. |
-| end | int | No | last index to end fill from, excluded, defaults to the array length. &lt;br&gt;The value should be an integer. |
+| value | int | Yes | new value. <br>The value should be an integer. |
+| start | int | No | start index to begin fill from, defaults to 0. <br>The value should be an integer. |
+| end | int | No | last index to end fill from, excluded, defaults to the array length. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -650,8 +650,8 @@ Fills the Uint8ClampedArray with specified value
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | double | Yes | new value. |
-| start | int | No | start index to begin fill from, defaults to 0. &lt;br&gt;The value should be an integer. |
-| end | int | No | last index to end fill from, excluded, defaults to the array length. &lt;br&gt;The value should be an integer. |
+| start | int | No | start index to begin fill from, defaults to 0. <br>The value should be an integer. |
+| end | int | No | last index to end fill from, excluded, defaults to the array length. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -1095,8 +1095,8 @@ Determines whether Uint8ClampedArray includes a certain element, returning true 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| searchElement | int | Yes | The element to search for &lt;br&gt;The value should be an integer. |
-| fromIndex | int | Yes | The position in this array at which to begin searching for searchElement &lt;br&gt;The value should be an integer. |
+| searchElement | int | Yes | The element to search for <br>The value should be an integer. |
+| fromIndex | int | Yes | The position in this array at which to begin searching for searchElement <br>The value should be an integer. |
 
 **Return value:**
 
@@ -1128,7 +1128,7 @@ Determines whether Uint8ClampedArray includes a certain element, returning true 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| searchElement | int | Yes | The element to search for. The search starts at index 0. &lt;br&gt;The value should be an integer. |
+| searchElement | int | Yes | The element to search for. The search starts at index 0. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -1161,7 +1161,7 @@ Determines whether Uint8ClampedArray includes a certain element, returning true 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | searchElement | double | Yes | The element to search for. |
-| fromIndex | int | No | The position in this array at which to begin searching.Defaults to 0. &lt;br&gt;The value should be an integer. |
+| fromIndex | int | No | The position in this array at which to begin searching.Defaults to 0. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -1259,7 +1259,7 @@ Returns the index of the first occurrence of a value in Uint8ClampedArray.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | searchElement | double | Yes | The value to locate in the array. |
-| fromIndex | int | No | The array index at which to begin the search. Defaults to 0. &lt;br&gt;The value should be an integer. |
+| fromIndex | int | No | The array index at which to begin the search. Defaults to 0. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -1795,8 +1795,8 @@ Assigns val as element on index.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| insertPos | int | Yes | index to change &lt;br&gt;The value should be an integer. |
-| val | int | Yes | value to set &lt;br&gt;The value should be an integer. |
+| insertPos | int | Yes | index to change <br>The value should be an integer. |
+| val | int | Yes | value to set <br>The value should be an integer. |
 
 ## set
 
@@ -1822,7 +1822,7 @@ Assigns val as element on index.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| insertPos | int | Yes | index to change &lt;br&gt;The value should be an integer. |
+| insertPos | int | Yes | index to change <br>The value should be an integer. |
 | val | double | Yes | value to set |
 
 ## set
@@ -1850,7 +1850,7 @@ Copies all elements of arr to the current Uint8ClampedArray starting from insert
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | arr | FixedArray&lt;int&gt; | Yes | array to copy data from |
-| insertPos | int | Yes | start index where data from arr will be inserted &lt;br&gt;The value should be an integer. |
+| insertPos | int | Yes | start index where data from arr will be inserted <br>The value should be an integer. |
 
 ## set
 
@@ -1877,7 +1877,7 @@ Copies all elements of arr to the current Uint8ClampedArray starting from insert
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | arr | FixedArray&lt;double&gt; | Yes | array to copy data from |
-| insertPos | int | Yes | start index where data from arr will be inserted &lt;br&gt;The value should be an integer. |
+| insertPos | int | Yes | start index where data from arr will be inserted <br>The value should be an integer. |
 
 ## set
 
@@ -1982,7 +1982,7 @@ Copies all elements of arr to the current Uint8ClampedArray.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | array | [Uint8ClampedArray](arkts-na-typeduarrays-uint8clampedarray-c.md) | Yes | array to copy data from |
-| offset | int | Yes | start index where data from arr will be inserted &lt;br&gt;The value should be an integer. |
+| offset | int | Yes | start index where data from arr will be inserted <br>The value should be an integer. |
 
 ## set
 
@@ -2009,7 +2009,7 @@ Copies elements from an ArrayLike object to the Uint8ClampedArray.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | array | ArrayLike&lt;double&gt; | Yes | An ArrayLike object containing the elements to copy. |
-| offset | int | Yes | Optional. The offset into the target array at which to begin writing values from the source array. The default value is 0. &lt;br&gt;The value should be an integer. |
+| offset | int | Yes | Optional. The offset into the target array at which to begin writing values from the source array. The default value is 0. <br>The value should be an integer. |
 
 ## slice
 
@@ -2068,7 +2068,7 @@ Creates a slice of current Uint8ClampedArray using range [begin, this.lengthInt]
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| begin | int | Yes | start index to be taken into slice. &lt;br&gt;The value should be an integer. |
+| begin | int | Yes | start index to be taken into slice. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -2418,8 +2418,8 @@ Returns a new Uint8ClampedArray with the element at the given index replaced by 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | index to change &lt;br&gt;The value should be an integer. |
-| value | int | Yes | value to set &lt;br&gt;The value should be an integer. |
+| index | int | Yes | index to change <br>The value should be an integer. |
+| value | int | Yes | value to set <br>The value should be an integer. |
 
 **Return value:**
 
@@ -2451,7 +2451,7 @@ Returns a new Uint8ClampedArray with the element at the given index replaced by 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | index to change &lt;br&gt;The value should be an integer. |
+| index | int | Yes | index to change <br>The value should be an integer. |
 | value | double | Yes | value to set |
 
 **Return value:**

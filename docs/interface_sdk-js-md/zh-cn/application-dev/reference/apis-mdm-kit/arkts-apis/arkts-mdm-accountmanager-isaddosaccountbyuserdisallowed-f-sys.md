@@ -37,7 +37,7 @@ function isAddOsAccountByUserDisallowed(admin: Want, userId: number): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 返回true表示该用户禁止添加账号。&lt;br/&gt;返回false表示该用户允许添加账号。 |
+| boolean | 返回true表示该用户禁止添加账号。<br/>返回false表示该用户允许添加账号。 |
 
 **错误码：**
 

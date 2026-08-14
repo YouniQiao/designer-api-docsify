@@ -18,7 +18,7 @@
 deflectionAngle: double
 ```
 
-磁偏角，即地磁北方向与正北方向在水平面上的角度。单位：degree（度）。
+磁偏角，即地磁北方向与正北方向在水平面上的角度。单位：°（度）。
 
 **类型：** double
 
@@ -38,7 +38,7 @@ deflectionAngle: double
 geomagneticDip: double
 ```
 
-磁倾角，即地球磁场线与水平面的夹角。单位：degree（度）。
+磁倾角，即地球磁场线与水平面的夹角。单位：°（度）。
 
 **类型：** double
 

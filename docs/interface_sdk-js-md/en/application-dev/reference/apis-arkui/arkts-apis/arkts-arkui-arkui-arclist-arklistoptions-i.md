@@ -15,7 +15,10 @@ Defines the arc list options.
 ## Modules to Import
 
 ```TypeScript
-import { ArcListItemAttribute, ArcList, ArcListItem, ArcListAttribute } from '@kit.ArkUI';
+import { ArcList } from 'ArcList';
+import { ArcListItem } from 'ArcListItem';
+import { ArcListAttribute } from 'ArcListAttribute';
+import { ArcListItemAttribute } from 'ArcListItemAttribute';
 ```
 
 ## header

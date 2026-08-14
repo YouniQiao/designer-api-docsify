@@ -15,7 +15,7 @@ Represents recipient information for the CMS message. > **NOTE：**> > At least 
 ## Modules to Import
 
 ```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
+import { cert } from 'cert';
 ```
 
 ## keyAgreeInfo

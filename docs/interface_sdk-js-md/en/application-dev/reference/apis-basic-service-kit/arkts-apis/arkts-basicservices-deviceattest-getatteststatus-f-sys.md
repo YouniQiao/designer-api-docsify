@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { deviceAttest } from '@kit.BasicServicesKit';
+import { deviceAttest } from 'deviceAttest';
 ```
 
 ## getAttestStatus

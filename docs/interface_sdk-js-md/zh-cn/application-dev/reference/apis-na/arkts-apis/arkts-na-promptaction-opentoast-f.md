@@ -37,5 +37,5 @@ export function openToast(options: ShowToastOptions): Promise<int>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [100001](../../apis-arkui/errorcode-internal.md#100001-接口调用异常错误码) | Internal error. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 

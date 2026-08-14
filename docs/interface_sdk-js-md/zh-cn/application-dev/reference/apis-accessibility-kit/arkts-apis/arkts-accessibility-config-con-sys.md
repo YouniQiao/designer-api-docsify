@@ -6,7 +6,7 @@
 const audioBalance: Config<double>
 ```
 
-表示左右声道音量平衡的配置。取值范围为-1.0~1.0。默认值为0.0。
+表示左右声道音量平衡的配置。-1.0表示仅左声道输出；0.0表示左右声道平衡输出；1.0表示仅右声道输出；中间值为左右声道音量的线性比例。取值范围为-1.0~1.0。默认值为0.0。
 
 **起始版本：** 23
 
@@ -26,7 +26,7 @@ const audioBalance: Config<double>
 const audioMono: Config<boolean>
 ```
 
-表示单声道音频的配置。true表示已启用单声道音频，false表示未启用单声道音频，默认值为false。
+表示单声道音频功能启用状态。true表示已启用单声道音频功能，false表示未启用单声道音频功能，默认值为false。
 
 **起始版本：** 23
 
@@ -66,7 +66,7 @@ const clickResponseTime: Config<ClickResponseTime>
 const daltonizationState: Config<boolean>
 ```
 
-表示颜色滤镜功能启动状态。配合daltonizationColorFilter使用。true表示已启用颜色滤镜功能，false表示未启用颜色滤镜功能，默认值为false。
+表示色彩校正功能启用状态。配合daltonizationColorFilter使用。true表示已启用色彩校正功能，false表示未启用色彩校正功能，默认值为false。
 
 **起始版本：** 23
 
@@ -106,7 +106,7 @@ const ignoreRepeatClick: Config<boolean>
 const repeatClickInterval: Config<RepeatClickInterval>
 ```
 
-表示忽略重复点击功能配置。
+表示忽略重复点击的时间间隔配置。配合ignoreRepeatClick使用，仅当ignoreRepeatClick设置为true时，此配置生效。默认值为Shortest，表示最短间隔。
 
 **起始版本：** 23
 
@@ -146,7 +146,7 @@ Indicates the configuration of screen magnification.
 const shortkeyMultiTargets: Config<Array<string>>
 ```
 
-表示辅助扩展快捷键的列表配置。取值为辅助应用的名称，格式为：['bundleName/abilityName']。
+表示辅助扩展快捷键的多目标列表配置。取值为辅助扩展应用的名称，格式为：['bundleName/abilityName']。格式不正确或名称无效时，设置不生效。
 
 **起始版本：** 23
 

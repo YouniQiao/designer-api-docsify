@@ -17,7 +17,7 @@ Information about a running form.
 ## Modules to Import
 
 ```TypeScript
-import { formInfo } from '@kit.FormKit';
+import { formInfo } from 'formInfo';
 ```
 
 ## abilityName

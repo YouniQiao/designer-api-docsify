@@ -56,7 +56,7 @@ export default class EntryAbility extends UIAbility {
   onForeground() {
     try {
         let context: common.UIAbilityContext = this.context; // 获取UIAbilityContext
-        let want:Want = {
+        let want: Want = {
           bundleName: 'com.example.app',
           abilityName: 'MyWebNativeMessageExtAbility',
           parameters: {

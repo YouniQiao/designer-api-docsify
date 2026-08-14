@@ -15,7 +15,9 @@ Defines a simple animation parameter object. Unlike **AnimatorOptions**, this ob
 ## Modules to Import
 
 ```TypeScript
-import { AnimatorOptions, SimpleAnimatorOptions, AnimatorResult } from '@kit.ArkUI';
+import { AnimatorOptions } from 'AnimatorOptions';
+import { AnimatorResult } from 'AnimatorResult';
+import { SimpleAnimatorOptions } from 'SimpleAnimatorOptions';
 ```
 
 ## constructor
@@ -96,7 +98,7 @@ Sets the playback delay for this animation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| delay | number | Yes | Playback delay, in milliseconds. The value **0** indicates no delay. If the value specified is a negative number, the animation starts playing ahead of its scheduled time. If the amount of time by which the playback is advanced exceeds the total duration of the animation, the animation immediately skips to its end state.&lt;br&gt;Default value: **0 |
+| delay | number | Yes | Playback delay, in milliseconds. The value **0** indicates no delay. If the value specified is a negative number, the animation starts playing ahead of its scheduled time. If the amount of time by which the playback is advanced exceeds the total duration of the animation, the animation immediately skips to its end state.<br>Default value: **0 |
 
 **Return value:**
 
@@ -153,7 +155,7 @@ Sets the playback direction for this animator animation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| direction | PlayMode | Yes | Playback direction.&lt;br&gt;Default value: **PlayMode.Normal |
+| direction | PlayMode | Yes | Playback direction.<br>Default value: **PlayMode.Normal |
 
 **Return value:**
 
@@ -187,7 +189,7 @@ Sets the animation duration.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| duration | number | Yes | Animation duration, in milliseconds.&lt;br&gt;Default value: **1000 |
+| duration | number | Yes | Animation duration, in milliseconds.<br>Default value: **1000 |
 
 **Return value:**
 
@@ -244,7 +246,7 @@ Sets the interpolation curve for this animation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| curve | string | Yes | Interpolation curve. For details, see [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md#AnimatorOptions).&lt;br&gt; Default value: **"ease" |
+| curve | string | Yes | Interpolation curve. For details, see [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md#AnimatorOptions).<br> Default value: **"ease" |
 
 **Return value:**
 
@@ -301,7 +303,7 @@ Sets the fill mode for this animation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fillMode | FillMode | Yes | Fill mode, which affects how the animation behaves during the delay period and after it ends.&lt;br&gt;Default value: **FillMode.Forwards |
+| fillMode | FillMode | Yes | Fill mode, which affects how the animation behaves during the delay period and after it ends.<br>Default value: **FillMode.Forwards |
 
 **Return value:**
 
@@ -335,7 +337,7 @@ Sets the number of times that this animation is played.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| iterations | number | Yes | Number of times that the animation is played. The value **0** means the animation is not played, and **-1** means the animation is played for an unlimited number of times.&lt;br&gt;Default value: **1 |
+| iterations | number | Yes | Number of times that the animation is played. The value **0** means the animation is not played, and **-1** means the animation is played for an unlimited number of times.<br>Default value: **1 |
 
 **Return value:**
 

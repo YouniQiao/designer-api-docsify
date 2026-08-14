@@ -40,7 +40,7 @@ Obtains the current selection range of the **RichEditor** component.
 
 | Type | Description |
 | --- | --- |
-| [RichEditorRange](arkts-arkui-richeditorrange-i.md) | Selection range. &lt;br&gt;If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
+| [RichEditorRange](arkts-arkui-richeditorrange-i.md) | Selection range. <br>If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
 
 ## getStyledString
 
@@ -68,7 +68,7 @@ Obtains the styled string displayed in the **RichEditor** component.
 
 | Type | Description |
 | --- | --- |
-| MutableStyledString | Styled string displayed in the rich text component. &lt;br&gt;If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
+| MutableStyledString | Styled string displayed in the rich text component. <br>If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
 
 ## onContentChanged
 
@@ -124,5 +124,5 @@ Sets the styled string displayed in the **RichEditor** component. > **NOTE：**>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| styledString | StyledString | Yes | Styled string.&lt;br&gt;**NOTE：**&lt;br&gt;The child class [MutableStyledString](../arkts-apis/arkts-arkui-mutablestyledstring-c.md#MutableStyledString) of **StyledString** can also serve as the argument. |
+| styledString | StyledString | Yes | Styled string.<br>**NOTE：**<br>The child class [MutableStyledString](../arkts-apis/arkts-arkui-mutablestyledstring-c.md#MutableStyledString) of **StyledString** can also serve as the argument. |
 

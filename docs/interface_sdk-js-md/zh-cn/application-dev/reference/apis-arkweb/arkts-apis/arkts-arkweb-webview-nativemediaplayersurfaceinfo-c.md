@@ -42,7 +42,7 @@ rect: RectEvent
 
 surface的位置信息。
 
-**类型：** [RectEvent](../../apis-na/arkts-apis/arkts-na-webview-rectevent-i.md)
+**类型：** [RectEvent](arkts-arkweb-webview-rectevent-i.md)
 
 **起始版本：** 12
 

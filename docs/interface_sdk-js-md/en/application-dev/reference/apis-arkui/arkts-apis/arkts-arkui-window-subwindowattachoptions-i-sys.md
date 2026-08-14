@@ -17,7 +17,7 @@ Describes the parameters used to maintain the relative position between the chil
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'window';
 ```
 
 ## currentLayoutMode

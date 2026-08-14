@@ -15,7 +15,7 @@ Defines the extra options for snapshot taking, if this is used, the start and en
 ## Modules to Import
 
 ```TypeScript
-import { componentSnapshot } from '@kit.ArkUI';
+import { componentSnapshot } from 'componentSnapshot';
 ```
 
 ## bottom

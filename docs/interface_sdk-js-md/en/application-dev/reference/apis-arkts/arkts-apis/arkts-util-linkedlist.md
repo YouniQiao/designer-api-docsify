@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { LinkedList } from '@kit.ArkTS';
+import { LinkedList } from 'LinkedList';
 ```
 
 ## Summary

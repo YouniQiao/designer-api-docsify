@@ -15,7 +15,7 @@ Defines the ad display parameters.
 ## Modules to Import
 
 ```TypeScript
-import { advertising } from '@kit.AdsKit';
+import { advertising } from 'advertising';
 ```
 
 ## audioFocusType

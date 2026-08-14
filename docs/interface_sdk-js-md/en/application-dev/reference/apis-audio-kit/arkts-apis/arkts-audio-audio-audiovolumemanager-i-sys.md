@@ -15,7 +15,7 @@ This interface implements audio volume management. Before calling any API in Aud
 ## Modules to Import
 
 ```TypeScript
-import { audio } from '@kit.AudioKit';
+import { audio } from 'audio';
 ```
 
 ## forceVolumeKeyControlType
@@ -1516,7 +1516,7 @@ Sets the mute state for the VoIP audio capture stream of a specified application
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uid | int | Yes | Uid of the application to be muted. &lt;br&gt;The value should be an integer. |
+| uid | int | Yes | Uid of the application to be muted. <br>The value should be an integer. |
 | streamId | long | Yes | Unique ID of the VoIP audio stream. |
 | muted | boolean | Yes | Mute state to set. The value **true** means to mute the VoIP capture stream, and **false** means to unmute the VoIP capture stream. |
 
@@ -1563,7 +1563,7 @@ Sets the mute state for the VoIP audio renderer stream of a specified applicatio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uid | int | Yes | Uid of the application to be muted. &lt;br&gt;The value should be an integer. |
+| uid | int | Yes | Uid of the application to be muted. <br>The value should be an integer. |
 | streamId | long | Yes | Unique ID of the VoIP audio stream. |
 | muted | boolean | Yes | Mute state to set. The value **true** means to mute the VoIP renderer stream, and **false** means to unmute the VoIP renderer stream. |
 

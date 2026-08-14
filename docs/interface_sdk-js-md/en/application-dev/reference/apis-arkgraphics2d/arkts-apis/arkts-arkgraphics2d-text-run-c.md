@@ -15,7 +15,7 @@ Represents a text typesetting unit, which is a continuous text segment with the 
 ## Modules to Import
 
 ```TypeScript
-import { text } from '@kit.ArkGraphics2D';
+import { text } from 'text';
 ```
 
 ## getAdvances
@@ -643,7 +643,7 @@ Obtains the text style of this typesetting unit.
 
 | Type | Description |
 | --- | --- |
-| TextStyle | Text style of this typesetting unit. &lt;br&gt;**Note:** &lt;br&gt;1. The `textStyle.color`, `textStyle.textShadows.color`, `textStyle.backgroundRect.color`, and `textStyle.decoration.color` attributes: return a 32-bit unsigned integer color value. Example: The return value `4278190080` corresponds to the solid black hexadecimal color value `0xFF000000`, which is equivalent to the [common2D.Color]{ |
+| TextStyle | Text style of this typesetting unit. <br>**Note:** <br>1. The `textStyle.color`, `textStyle.textShadows.color`, `textStyle.backgroundRect.color`, and `textStyle.decoration.color` attributes: return a 32-bit unsigned integer color value. Example: The return value `4278190080` corresponds to the solid black hexadecimal color value `0xFF000000`, which is equivalent to the [common2D.Color]{ |
 
 ## getTypographicBounds
 

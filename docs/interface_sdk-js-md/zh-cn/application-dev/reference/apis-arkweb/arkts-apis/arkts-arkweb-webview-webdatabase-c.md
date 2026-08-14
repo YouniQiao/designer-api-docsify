@@ -56,7 +56,7 @@ static existHttpAuthCredentials(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 是否存在任何已保存的HTTP身份验证凭据。 &lt;br&gt;存在返回true，不存在返回false。 |
+| boolean | 是否存在任何已保存的HTTP身份验证凭据。 <br>存在返回true，不存在返回false。 |
 
 ## getHttpAuthCredentials
 
@@ -95,7 +95,7 @@ static getHttpAuthCredentials(host: string, realm: string): Array<string>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 
 ## saveHttpAuthCredentials
 
@@ -130,5 +130,5 @@ static saveHttpAuthCredentials(host: string, realm: string, username: string, pa
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 

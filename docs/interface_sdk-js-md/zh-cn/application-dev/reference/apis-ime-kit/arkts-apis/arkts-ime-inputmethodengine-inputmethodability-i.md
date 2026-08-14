@@ -185,29 +185,26 @@ let panelInfo: inputMethodEngine.PanelInfo = {
   flag: inputMethodEngine.PanelFlag.FLG_FIXED
 }
 
+// 在InputMethodExtensionAbility类中使用
 let inputPanel: inputMethodEngine.Panel | undefined = undefined;
-// context为InputMethodExtensionAbility类提供的上下文对象，无需额外获取
-if (this.context) {
-  inputMethodEngine.getInputMethodAbility()
-    .createPanel(this.context, panelInfo, (err: BusinessError, panel: inputMethodEngine.Panel) => {
+inputMethodEngine.getInputMethodAbility().createPanel(this.context, panelInfo, (err: BusinessError, panel: inputMethodEngine.Panel) => {
+  if (err) {
+    console.error(`Failed to create panel. Code is ${err.code}, message is ${err.message}`);
+    return;
+  }
+  inputPanel = panel;
+  console.info('Succeed in creating panel.');
+  // 创建成功后再销毁
+  if (inputPanel) {
+    inputMethodEngine.getInputMethodAbility().destroyPanel(inputPanel, (err: BusinessError) => {
       if (err) {
-        console.error(`Failed to create panel. Code is ${err.code}, message is ${err.message}`);
+        console.error(`Failed to destroy panel. Code is ${err.code}, message is ${err.message}`);
         return;
       }
-      inputPanel = panel;
-      console.info('Succeed in creating panel.');
-    })
-}
-
-if (inputPanel) {
-  inputMethodEngine.getInputMethodAbility().destroyPanel(inputPanel, (err: BusinessError) => {
-    if (err) {
-      console.error(`Failed to destroy panel. Code is ${err.code}, message is ${err.message}`);
-      return;
-    }
-    console.info('Succeed in destroying panel.');
-  })
-}
+      console.info('Succeed in destroying panel.');
+    });
+  }
+});
 ```
 
 ## destroyPanel
@@ -737,7 +734,7 @@ off(type: 'discardTypingText', callback?: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'discardTypingText' | 是 | 设置监听类型，固定取值为'discardTypingText'。&lt;br/&gt; - 'discardTypingText'：表示取消订阅编辑框应用发送“清 空候选词”事件到输入法。 |
+| type | 'discardTypingText' | 是 | 设置监听类型，固定取值为'discardTypingText'。<br/> - 'discardTypingText'：表示取消订阅编辑框应用发送“清 空候选词”事件到输入法。 |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
 ## 示例
@@ -834,7 +831,7 @@ off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'keyboardShow' \| 'keyboardHide' | 是 | 设置监听类型。&lt;br/&gt;- 'keyboardShow'表示显示输入法软键盘。&lt;br/&gt;- 'keyboardHide'表示隐 藏输入法软键盘。 |
+| type | 'keyboardShow' \| 'keyboardHide' | 是 | 设置监听类型。<br/>- 'keyboardShow'表示显示输入法软键盘。<br/>- 'keyboardHide'表示隐 藏输入法软键盘。 |
 | callback | () =&gt; void | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
 ## 示例
@@ -870,7 +867,7 @@ off(type: 'keyboardShow' | 'keyboardHide', callback?: () => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'keyboardShow' \| 'keyboardHide' | 是 | 设置监听类型。&lt;br/&gt;- 'keyboardShow'表示显示输入法软键盘。&lt;br/&gt;- 'keyboardHide'表示隐 藏输入法软键盘。 |
+| type | 'keyboardShow' \| 'keyboardHide' | 是 | 设置监听类型。<br/>- 'keyboardShow'表示显示输入法软键盘。<br/>- 'keyboardHide'表示隐 藏输入法软键盘。 |
 | callback | () =&gt; void | 否 | 取消订阅的回调函数。参数不填写时，取消订阅type对应的所有回调事件。 |
 
 ## 示例
@@ -1466,7 +1463,7 @@ on(type: 'discardTypingText', callback: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'discardTypingText' | 是 | 设置监听类型，固定取值为'discardTypingText'。&lt;br/&gt; - 'discardTypingText'：表示订阅编辑框应用发送“清空候 选词”事件到输入法。 |
+| type | 'discardTypingText' | 是 | 设置监听类型，固定取值为'discardTypingText'。<br/> - 'discardTypingText'：表示订阅编辑框应用发送“清空候 选词”事件到输入法。 |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | 回调函数。 |
 
 ## 示例
@@ -1567,7 +1564,7 @@ on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'keyboardShow' \| 'keyboardHide' | 是 | 设置监听类型。&lt;br/&gt;- 'keyboardShow'表示显示输入法软键盘。&lt;br/&gt;- 'keyboardHide'表示隐 藏输入法软键盘。 |
+| type | 'keyboardShow' \| 'keyboardHide' | 是 | 设置监听类型。<br/>- 'keyboardShow'表示显示输入法软键盘。<br/>- 'keyboardHide'表示隐 藏输入法软键盘。 |
 | callback | () =&gt; void | 是 | 回调函数。 |
 
 ## 示例
@@ -1603,7 +1600,7 @@ on(type: 'keyboardShow' | 'keyboardHide', callback: () => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'keyboardShow' \| 'keyboardHide' | 是 | 设置监听类型。&lt;br/&gt;- 'keyboardShow'表示显示输入法软键盘。&lt;br/&gt;- 'keyboardHide'表示隐 藏输入法软键盘。 |
+| type | 'keyboardShow' \| 'keyboardHide' | 是 | 设置监听类型。<br/>- 'keyboardShow'表示显示输入法软键盘。<br/>- 'keyboardHide'表示隐 藏输入法软键盘。 |
 | callback | () =&gt; void | 是 | 回调函数。 |
 
 ## 示例

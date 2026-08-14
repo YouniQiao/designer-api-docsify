@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { power } from '@kit.BasicServicesKit';
+import { power } from 'power';
 ```
 
 ## suspend
@@ -33,7 +33,7 @@ Enables a device to enter the sleep state.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isImmediate | boolean | No | Whether the device enters the sleep state immediately. The value **true** indicates that the device enters the sleep state immediately after the screen is turned off; **false** indicates that the system controls when the device enters the sleep state. If this parameter is not set, the default value **false** is used. If you only want to turn off the screen, you are advised not to set this parameter.&lt;br&gt;**NOTE：**: This parameter is supported since API version 10.<br>**Since:** 10 |
+| isImmediate | boolean | No | Whether the device enters the sleep state immediately. The value **true** indicates that the device enters the sleep state immediately after the screen is turned off; **false** indicates that the system controls when the device enters the sleep state. If this parameter is not set, the default value **false** is used. If you only want to turn off the screen, you are advised not to set this parameter.<br>**NOTE：**: This parameter is supported since API version 10.<br>**Since:** 10 |
 
 **Error codes:**
 

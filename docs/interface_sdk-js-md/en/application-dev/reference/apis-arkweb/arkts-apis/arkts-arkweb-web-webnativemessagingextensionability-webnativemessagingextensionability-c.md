@@ -17,7 +17,7 @@ Provides the web native messaging capability and is inherited from ExtensionAbil
 ## Modules to Import
 
 ```TypeScript
-import { ConnectionInfo } from '@kit.ArkWeb';
+import { ConnectionInfo } from 'ConnectionInfo';
 ```
 
 ## onConnectNative

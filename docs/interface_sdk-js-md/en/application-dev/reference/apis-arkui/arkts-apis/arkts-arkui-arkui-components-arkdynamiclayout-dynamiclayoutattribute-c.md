@@ -23,6 +23,7 @@ The universal attributes are supported. > **NOTE：**> > - When the layout algor
 ## Modules to Import
 
 ```TypeScript
-import { DynamicLayoutAttribute, DynamicLayout } from '@kit.ArkUI';
+import { DynamicLayout } from 'DynamicLayout';
+import { DynamicLayoutAttribute } from 'DynamicLayoutAttribute';
 ```
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hfp } from '@kit.ConnectivityKit';
+import { hfp } from 'hfp';
 ```
 
 ## createHfpAgProfile

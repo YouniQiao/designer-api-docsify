@@ -25,8 +25,8 @@ Swaps two elements in the array.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | arr | FixedArray&lt;boolean&gt; | Yes | The array to swap elements in. |
-| i | int | Yes | The index of the first element to swap. &lt;br&gt;The value should be an integer. |
-| j | int | Yes | The index of the second element to swap. &lt;br&gt;The value should be an integer. |
+| i | int | Yes | The index of the first element to swap. <br>The value should be an integer. |
+| j | int | Yes | The index of the second element to swap. <br>The value should be an integer. |
 
 
 ## swap
@@ -54,8 +54,8 @@ Swaps two elements in the array.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | arr | FixedArray&lt;byte&gt; | Yes | The array to swap elements in. |
-| i | int | Yes | The index of the first element to swap. &lt;br&gt;The value should be an integer. |
-| j | int | Yes | The index of the second element to swap. &lt;br&gt;The value should be an integer. |
+| i | int | Yes | The index of the first element to swap. <br>The value should be an integer. |
+| j | int | Yes | The index of the second element to swap. <br>The value should be an integer. |
 
 
 ## swap
@@ -83,8 +83,8 @@ Swaps two elements in the array.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | arr | FixedArray&lt;short&gt; | Yes | The array to swap elements in. |
-| i | int | Yes | The index of the first element to swap. &lt;br&gt;The value should be an integer. |
-| j | int | Yes | The index of the second element to swap. &lt;br&gt;The value should be an integer. |
+| i | int | Yes | The index of the first element to swap. <br>The value should be an integer. |
+| j | int | Yes | The index of the second element to swap. <br>The value should be an integer. |
 
 
 ## swap
@@ -112,8 +112,8 @@ Swaps two elements in the array.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | arr | FixedArray&lt;int&gt; | Yes | The array to swap elements in. |
-| i | int | Yes | The index of the first element to swap. &lt;br&gt;The value should be an integer. |
-| j | int | Yes | The index of the second element to swap. &lt;br&gt;The value should be an integer. |
+| i | int | Yes | The index of the first element to swap. <br>The value should be an integer. |
+| j | int | Yes | The index of the second element to swap. <br>The value should be an integer. |
 
 
 ## swap
@@ -141,8 +141,8 @@ Swaps two elements in the array.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | arr | FixedArray&lt;long&gt; | Yes | The array to swap elements in. |
-| i | int | Yes | The index of the first element to swap. &lt;br&gt;The value should be an integer. |
-| j | int | Yes | The index of the second element to swap. &lt;br&gt;The value should be an integer. |
+| i | int | Yes | The index of the first element to swap. <br>The value should be an integer. |
+| j | int | Yes | The index of the second element to swap. <br>The value should be an integer. |
 
 
 ## swap
@@ -170,8 +170,8 @@ Swaps two elements in the array.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | arr | FixedArray&lt;float&gt; | Yes | The array to swap elements in. |
-| i | int | Yes | The index of the first element to swap. &lt;br&gt;The value should be an integer. |
-| j | int | Yes | The index of the second element to swap. &lt;br&gt;The value should be an integer. |
+| i | int | Yes | The index of the first element to swap. <br>The value should be an integer. |
+| j | int | Yes | The index of the second element to swap. <br>The value should be an integer. |
 
 
 ## swap
@@ -199,8 +199,8 @@ Swaps two elements in the array.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | arr | FixedArray&lt;double&gt; | Yes | The array to swap elements in. |
-| i | int | Yes | The index of the first element to swap. &lt;br&gt;The value should be an integer. |
-| j | int | Yes | The index of the second element to swap. &lt;br&gt;The value should be an integer. |
+| i | int | Yes | The index of the first element to swap. <br>The value should be an integer. |
+| j | int | Yes | The index of the second element to swap. <br>The value should be an integer. |
 
 
 ## swap
@@ -228,8 +228,8 @@ Swaps two elements in the array.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | arr | FixedArray&lt;char&gt; | Yes | The array to swap elements in. |
-| i | int | Yes | The index of the first element to swap. &lt;br&gt;The value should be an integer. |
-| j | int | Yes | The index of the second element to swap. &lt;br&gt;The value should be an integer. |
+| i | int | Yes | The index of the first element to swap. <br>The value should be an integer. |
+| j | int | Yes | The index of the second element to swap. <br>The value should be an integer. |
 
 
 ## swap
@@ -257,6 +257,6 @@ Swaps two elements in the array.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | arr | FixedArray&lt;T&gt; | Yes | The array to swap elements in. |
-| i | int | Yes | The index of the first element to swap. &lt;br&gt;The value should be an integer. |
-| j | int | Yes | The index of the second element to swap. &lt;br&gt;The value should be an integer. |
+| i | int | Yes | The index of the first element to swap. <br>The value should be an integer. |
+| j | int | Yes | The index of the second element to swap. <br>The value should be an integer. |
 

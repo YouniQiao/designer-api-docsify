@@ -29,7 +29,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { contextConstant } from '@kit.AbilityKit';
+import { contextConstant } from 'contextConstant';
 ```
 
 ## Summary

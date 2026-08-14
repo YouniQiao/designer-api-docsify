@@ -50,7 +50,7 @@ import serialManager from '@ohos.usbManager.serial';
 // 获取串口列表
 function hasSerialRightExample() {
   let portList: serialManager.SerialPort[] = serialManager.getPortList();
-  console.info('portList: ', JSON.stringify(portList));
+  console.info('portList: '+ JSON.stringify(portList));
   if (portList === undefined || portList.length === 0) {
     console.error('portList is empty');
     return;

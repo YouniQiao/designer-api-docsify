@@ -15,7 +15,7 @@ Implements a Display instance, with attributes and APIs defined. Before calling 
 ## Modules to Import
 
 ```TypeScript
-import { display } from '@kit.ArkUI';
+import { display } from 'display';
 ```
 
 ## hasImmersiveWindow

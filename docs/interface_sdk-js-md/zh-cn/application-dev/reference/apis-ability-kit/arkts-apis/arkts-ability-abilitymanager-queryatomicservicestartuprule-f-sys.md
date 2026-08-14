@@ -26,7 +26,7 @@ function queryAtomicServiceStartupRule(context: Context, appId: string): Promise
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [Context](arkts-ability-context-c.md) | 是 | 嵌入式拉起EmbeddableUIAbility的调用方Context。&lt;br&gt;**说明：**目前仅支持 [UIAbilityContext](arkts-ability-uiabilitycontext-c.md#UIAbilityContext)。 |
+| context | [Context](arkts-ability-context-c.md) | 是 | 嵌入式拉起EmbeddableUIAbility的调用方Context。<br>**说明：**目前仅支持 [UIAbilityContext](arkts-ability-uiabilitycontext-c.md#UIAbilityContext)。 |
 | appId | string | 是 | 应用的唯一标识，由云端统一分配。 |
 
 **返回值：**

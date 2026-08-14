@@ -17,7 +17,7 @@ VideoPlayer is a class for video playback management. It provides APIs to manage
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'media';
 ```
 
 ## getTrackDescription
@@ -124,7 +124,7 @@ Subscribes to the video buffering update event. This API works only under online
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'bufferingUpdate' | Yes | Event type, which is **'bufferingUpdate'** in this case. |
-| callback | (infoType: BufferingInfoType, value: number) =&gt; void | Yes | Callback invoked when the event is triggered.&lt;br&gt;The value of [BufferingInfoType](arkts-media-media-bufferinginfotype-e.md#BufferingInfoType) is fixed at **0**. |
+| callback | (infoType: BufferingInfoType, value: number) =&gt; void | Yes | Callback invoked when the event is triggered.<br>The value of [BufferingInfoType](arkts-media-media-bufferinginfotype-e.md#BufferingInfoType) is fixed at **0**. |
 
 ## on_error
 
@@ -150,7 +150,7 @@ Subscribes to video playback error events. After an error event is reported, you
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'error' | Yes | Event type, which is **'error'** in this case.&lt;br&gt;This event is triggered when an error occurs during video playback. |
+| type | 'error' | Yes | Event type, which is **'error'** in this case.<br>This event is triggered when an error occurs during video playback. |
 | callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | Yes | Callback invoked when the event is triggered. |
 
 ## on_playbackCompleted
@@ -232,7 +232,7 @@ Subscribes to the video width and height change event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'videoSizeChanged' | Yes | Event type, which is **'videoSizeChanged'** in this case. |
-| callback | (width: number, height: number) =&gt; void | Yes | Callback invoked when the event is triggered. **width** indicates the video width, and **height** indicates the video height, in px. |
+| callback | (width: number, height: number) =&gt; void | Yes | Callback invoked when the event is triggered. **width** indicates the video width, and **height** indicates the video height. |
 
 ## pause
 

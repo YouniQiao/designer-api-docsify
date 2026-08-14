@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from '@kit.ArkData';
+import { relationalStore } from 'relationalStore';
 ```
 
 ## getInsertSqlInfo
@@ -30,7 +30,7 @@ Obtains the SQL statement used to insert data. This API returns the result synch
 | --- | --- | --- | --- |
 | table | string | Yes | Name of the database table to which data is to be written. |
 | values | ValuesBucket | Yes | Field information and corresponding values of the data to be written to the database. |
-| conflict | ConflictResolution | No | Resolution used to resolve the conflict. &lt;br&gt;Default value: **relationalStore.ConflictResolution.ON_CONFLICT_NONE**. |
+| conflict | ConflictResolution | No | Resolution used to resolve the conflict. <br>Default value: **relationalStore.ConflictResolution.ON_CONFLICT_NONE**. |
 
 **Return value:**
 

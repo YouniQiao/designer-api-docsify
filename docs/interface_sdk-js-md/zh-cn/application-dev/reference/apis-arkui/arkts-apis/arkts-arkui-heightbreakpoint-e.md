@@ -18,7 +18,7 @@ Type of window height breakpoint.
 HEIGHT_SM = 0
 ```
 
-Window aspectRatio < 0.8 type.
+Window aspectRatio &lt; 0.8 type.
 
 **起始版本：** 22
 
@@ -40,7 +40,7 @@ Window aspectRatio < 0.8 type.
 HEIGHT_MD = 1
 ```
 
-Window aspectRatio >= 0.8 and < 1.2 type.
+Window aspectRatio >= 0.8 and &lt; 1.2 type.
 
 **起始版本：** 22
 

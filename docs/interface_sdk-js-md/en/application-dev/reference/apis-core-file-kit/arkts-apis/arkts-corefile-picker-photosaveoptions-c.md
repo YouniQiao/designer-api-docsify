@@ -17,7 +17,7 @@ Defines the options for saving images or videos.
 ## Modules to Import
 
 ```TypeScript
-import { picker } from '@kit.CoreFileKit';
+import { picker } from 'picker';
 ```
 
 ## newFileNames

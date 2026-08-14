@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { StartupListener } from '@kit.AbilityKit';
+import { StartupListener } from 'StartupListener';
 ```
 
 ## Summary

@@ -15,7 +15,7 @@ Describes the video Dimensions.
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'media';
 ```
 
 ## height
@@ -24,7 +24,7 @@ import { media } from '@kit.MediaKit';
 height?: int
 ```
 
-height of the video resolution. The value should be an integer.Value constraint:The value must be a positive integer. &lt;br&gt;Unit:Pixel.
+height of the video resolution. The value should be an integer.Value constraint:The value must be a positive integer. <br>Unit:Pixel.
 
 **Type:** int
 
@@ -46,7 +46,7 @@ height of the video resolution. The value should be an integer.Value constraint:
 width?: int
 ```
 
-width of the video resolution. The value should be an integer.Value constraint:The value must be a positive integer. &lt;br&gt;Unit:Pixel.
+width of the video resolution. The value should be an integer.Value constraint:The value must be a positive integer. <br>Unit:Pixel.
 
 **Type:** int
 

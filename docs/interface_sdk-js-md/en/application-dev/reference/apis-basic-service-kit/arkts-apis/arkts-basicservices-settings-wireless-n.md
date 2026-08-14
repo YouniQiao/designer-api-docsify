@@ -15,7 +15,7 @@ Provides methods for setting radio network information, including information ab
 ## Modules to Import
 
 ```TypeScript
-import { settings } from '@kit.BasicServicesKit';
+import { settings } from 'settings';
 ```
 
 ## Summary

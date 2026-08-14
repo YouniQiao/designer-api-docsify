@@ -27,7 +27,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { deviceInfo } from '@kit.BasicServicesKit';
+import { deviceInfo } from 'deviceInfo';
 ```
 
 ## Summary

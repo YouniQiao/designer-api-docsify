@@ -40,7 +40,7 @@ Image resource. If the value is a string, such as **"/common/hello.png"**, it re
 text?: string | Resource
 ```
 
-Text information. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;If the text length exceeds the column width, the text will be truncated. &lt;/p&gt;
+Text information. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>If the text length exceeds the column width, the text will be truncated. &lt;/p&gt;
 
 **Type:** string \| [Resource](../../apis-arkui/arkts-apis/arkts-arkui-resource-t.md)
 

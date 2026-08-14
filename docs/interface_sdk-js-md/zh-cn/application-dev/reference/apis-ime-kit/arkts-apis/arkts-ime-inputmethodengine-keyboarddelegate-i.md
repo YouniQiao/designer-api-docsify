@@ -353,7 +353,7 @@ off(type: 'keyDown' | 'keyUp', callback?: (event: KeyEvent) => boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'keyDown' \| 'keyUp' | 是 | 设置监听类型。&lt;br/&gt;- 'keyDown'表示键盘按下。&lt;br/&gt;- 'keyUp'表示键盘抬起。 |
+| type | 'keyDown' \| 'keyUp' | 是 | 设置监听类型。<br/>- 'keyDown'表示键盘按下。<br/>- 'keyUp'表示键盘抬起。 |
 | callback | (event: KeyEvent) =&gt; boolean | 否 | 取消订阅的回调函数，用于取消特定的键盘按键事件订阅。传入callback时取消指定回调的订阅，参数不填写时，取消订阅type对应的所有回调事件。 |
 
 ## 示例
@@ -428,7 +428,7 @@ off(type: 'keyDown' | 'keyUp', callback?: (event: KeyEvent) => boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'keyDown' \| 'keyUp' | 是 | 设置监听类型。&lt;br/&gt;- 'keyDown'表示键盘按下。&lt;br/&gt;- 'keyUp'表示键盘抬起。 |
+| type | 'keyDown' \| 'keyUp' | 是 | 设置监听类型。<br/>- 'keyDown'表示键盘按下。<br/>- 'keyUp'表示键盘抬起。 |
 | callback | (event: KeyEvent) =&gt; boolean | 否 | 取消订阅的回调函数，用于取消特定的键盘按键事件订阅。传入callback时取消指定回调的订阅，参数不填写时，取消订阅type对应的所有回调事件。 |
 
 ## 示例
@@ -809,7 +809,7 @@ on(type: 'cursorContextChange', callback: (x: number, y: number, height: number)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'cursorContextChange' | 是 | 光标变化事件，固定取值为'cursorContextChange'。 |
-| callback | (x: number, y: number, height: number) =&gt; void | 是 | 回调函数，返回光标信息。&lt;br/&gt;- x为光标上端的x坐标值，单位：px，y为光标上端的y坐标值，单位：px，height为光标的高度值，单位：px。 |
+| callback | (x: number, y: number, height: number) =&gt; void | 是 | 回调函数，返回光标信息。<br/>- x为光标上端的x坐标值，单位：px，y为光标上端的y坐标值，单位：px，height为光标的高度值，单位：px。 |
 
 ## 示例
 
@@ -877,7 +877,7 @@ on(type: 'keyDown' | 'keyUp', callback: (event: KeyEvent) => boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'keyDown' \| 'keyUp' | 是 | 设置监听类型。&lt;br/&gt;- 'keyDown'表示键盘按下。&lt;br/&gt;- 'keyUp'表示键盘抬起。 |
+| type | 'keyDown' \| 'keyUp' | 是 | 设置监听类型。<br/>- 'keyDown'表示键盘按下。<br/>- 'keyUp'表示键盘抬起。 |
 | callback | (event: KeyEvent) =&gt; boolean | 是 | 回调函数，返回按键信息。 若按键事件被事件订阅者消费，则callback应返回true，否则返回false。 |
 
 ## 示例
@@ -918,7 +918,7 @@ on(type: 'keyEvent', callback: (event: InputKeyEvent) => boolean): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'keyEvent' | 是 | 设置监听类型，固定取值为'keyEvent'。 |
-| callback | (event: InputKeyEvent) =&gt; boolean | 是 | 回调函数，入参为按键事件信息，返回值类型为布尔类型。&lt;br/&gt;- 入参按键事件信息的数据类型为 [InputKeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md#KeyEvent)。&lt;br/&gt;- 若按键事件被事件订阅者消费，则callback应返回true，否则返回 false。 |
+| callback | (event: InputKeyEvent) =&gt; boolean | 是 | 回调函数，入参为按键事件信息，返回值类型为布尔类型。<br/>- 入参按键事件信息的数据类型为 [InputKeyEvent](../../apis-input-kit/arkts-apis/arkts-input-multimodalinput-keyevent-keyevent-i.md#KeyEvent)。<br/>- 若按键事件被事件订阅者消费，则callback应返回true，否则返回 false。 |
 
 ## 示例
 
@@ -956,7 +956,7 @@ on(type: 'keyDown' | 'keyUp', callback: (event: KeyEvent) => boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'keyDown' \| 'keyUp' | 是 | 设置监听类型。&lt;br/&gt;- 'keyDown'表示键盘按下。&lt;br/&gt;- 'keyUp'表示键盘抬起。 |
+| type | 'keyDown' \| 'keyUp' | 是 | 设置监听类型。<br/>- 'keyDown'表示键盘按下。<br/>- 'keyUp'表示键盘抬起。 |
 | callback | (event: KeyEvent) =&gt; boolean | 是 | 回调函数，返回按键信息。 若按键事件被事件订阅者消费，则callback应返回true，否则返回false。 |
 
 ## 示例
@@ -1000,7 +1000,7 @@ on(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'selectionChange' | 是 | 文本选择变化事件，固定取值为'selectionChange'。 |
-| callback | (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) =&gt; void | 是 | 回调函数，返回文本选择信息。&lt;br/&gt;- oldBegin为变化前被选中文本的起始下标，oldEnd为变化前被选中文本的终止下标。&lt;br/&gt;- newBegin为变 化后被选中文本的起始下标，newEnd为变化后被选中文本的终止下标。 |
+| callback | (oldBegin: number, oldEnd: number, newBegin: number, newEnd: number) =&gt; void | 是 | 回调函数，返回文本选择信息。<br/>- oldBegin为变化前被选中文本的起始下标，oldEnd为变化前被选中文本的终止下标。<br/>- newBegin为变 化后被选中文本的起始下标，newEnd为变化后被选中文本的终止下标。 |
 
 ## 示例
 

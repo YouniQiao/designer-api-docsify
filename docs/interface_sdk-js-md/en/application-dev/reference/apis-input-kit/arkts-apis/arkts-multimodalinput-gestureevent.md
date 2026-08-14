@@ -3,7 +3,14 @@
 ## Modules to Import
 
 ```TypeScript
-import { SwipeInward, FourFingersSwipe, Pinch, ActionType, Rotate, ThreeFingersTap, ThreeFingersSwipe, TouchGestureEvent } from '@kit.InputKit';
+import { ActionType } from 'ActionType';
+import { FourFingersSwipe } from 'FourFingersSwipe';
+import { Pinch } from 'Pinch';
+import { Rotate } from 'Rotate';
+import { ThreeFingersSwipe } from 'ThreeFingersSwipe';
+import { ThreeFingersTap } from 'ThreeFingersTap';
+import { SwipeInward } from 'SwipeInward';
+import { TouchGestureEvent } from 'TouchGestureEvent';
 ```
 
 ## Summary

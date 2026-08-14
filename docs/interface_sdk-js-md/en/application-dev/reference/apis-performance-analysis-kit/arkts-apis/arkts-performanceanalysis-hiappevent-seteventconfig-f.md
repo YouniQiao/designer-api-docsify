@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from 'hiAppEvent';
 ```
 
 ## setEventConfig
@@ -31,7 +31,7 @@ Sets event configuration. This method uses a promise to return the result. In th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | name | string | Yes | Event name. |
-| config | Record&lt;string, [ParamType](arkts-performanceanalysis-hiappevent-paramtype-t.md)&gt; | Yes | Custom parameter object. The parameter name and value are defined as follows:&lt;br&gt;- The parameter name contains a maximum of 1024 characters, which is of the string type and cannot be empty.&lt;br&gt;- The parameter value is of the ParamType and contains a maximum of 1024 characters. |
+| config | Record&lt;string, [ParamType](arkts-performanceanalysis-hiappevent-paramtype-t.md)&gt; | Yes | Custom parameter object. The parameter name and value are defined as follows:<br>- The parameter name contains a maximum of 1024 characters, which is of the string type and cannot be empty.<br>- The parameter value is of the ParamType and contains a maximum of 1024 characters. |
 
 **Return value:**
 
@@ -43,7 +43,7 @@ Sets event configuration. This method uses a promise to return the result. In th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types; 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; 3.Parameter verification failed. |
 
 ## Examples
 

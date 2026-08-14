@@ -1535,7 +1535,7 @@ moveCursor(direction: int, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| direction | int | 是 | 光标移动方向。&lt;br/&gt;- 当值为1时，表示向上。&lt;br/&gt;- 当值为2时，表示向下。&lt;br/&gt;- 当值为3时，表示向左。&lt;br/&gt;- 当值为4时，表示向右。不能小于0。 |
+| direction | int | 是 | 光标移动方向。<br/>- 当值为1时，表示向上。<br/>- 当值为2时，表示向下。<br/>- 当值为3时，表示向左。<br/>- 当值为4时，表示向右。不能小于0。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当光标移动成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
@@ -1581,7 +1581,7 @@ moveCursor(direction: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| direction | int | 是 | 光标移动方向。&lt;br/&gt;- 当值为1时，表示向上。&lt;br/&gt;- 当值为2时，表示向下。&lt;br/&gt;- 当值为3时，表示向左。&lt;br/&gt;- 当值为4时，表示向右。不能小于0。 |
+| direction | int | 是 | 光标移动方向。<br/>- 当值为1时，表示向上。<br/>- 当值为2时，表示向下。<br/>- 当值为3时，表示向左。<br/>- 当值为4时，表示向右。不能小于0。 |
 
 **返回值：**
 
@@ -1630,7 +1630,7 @@ moveCursorSync(direction: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| direction | int | 是 | 光标移动方向。&lt;br/&gt;- 当值为1时，表示向上。&lt;br/&gt;- 当值为2时，表示向下。&lt;br/&gt;- 当值为3时，表示向左。&lt;br/&gt;- 当值为4时，表示向右。不能小于0。 |
+| direction | int | 是 | 光标移动方向。<br/>- 当值为1时，表示向上。<br/>- 当值为2时，表示向下。<br/>- 当值为3时，表示向左。<br/>- 当值为4时，表示向右。不能小于0。 |
 
 **错误码：**
 
@@ -1838,7 +1838,7 @@ recvMessage(msgHandler?: MessageHandler): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| msgHandler | MessageHandler | 否 | 该对象将通过 [onMessage](arkts-ime-inputmethodengine-messagehandler-i.md#onMessage)接收来自已绑定当前 输入法应用的编辑框应用所发送的自定义通信数据，并通过[onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onTerminated)接收终止此对象订阅的消息。 &lt;br&gt;若不填写此参数，则取消全局已注册的[MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md#MessageHandler)对象，同时触发其 [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onTerminated)回调函数。 |
+| msgHandler | MessageHandler | 否 | 该对象将通过 [onMessage](arkts-ime-inputmethodengine-messagehandler-i.md#onMessage)接收来自已绑定当前 输入法应用的编辑框应用所发送的自定义通信数据，并通过[onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onTerminated)接收终止此对象订阅的消息。 <br>若不填写此参数，则取消全局已注册的[MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md#MessageHandler)对象，同时触发其 [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onTerminated)回调函数。 |
 
 **错误码：**
 
@@ -2264,7 +2264,7 @@ sendKeyFunction(action: int, callback: AsyncCallback<boolean>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| action | int | 是 | 功能键键值。&lt;br/&gt;- 当值为0时，表示无效按键。&lt;br/&gt;- 当值为1时，表示确认键（即回车键）。 |
+| action | int | 是 | 功能键键值。<br/>- 当值为0时，表示无效按键。<br/>- 当值为1时，表示确认键（即回车键）。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。当功能键发送成功，err为undefined，data为true；当功能键发送失败，err为undefined，data为 false；否则为错误对象。 |
 
 **错误码：**
@@ -2338,7 +2338,7 @@ sendKeyFunction(action: int): Promise<boolean>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| action | int | 是 | 功能键键值。&lt;br/&gt;当值为0时，表示无效按键；&lt;br/&gt;当值为1时，表示确认键（即回车键）。 |
+| action | int | 是 | 功能键键值。<br/>当值为0时，表示无效按键；<br/>当值为1时，表示确认键（即回车键）。 |
 
 **返回值：**
 
@@ -2526,7 +2526,7 @@ setPreviewText(text: string, range: Range): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | text | string | 是 | 预上屏的文本。建议长度不超过1KB。 |
-| range | Range | 是 | 替换的文本范围。&lt;br/&gt;- 当值为{ start: -1, end: -1 }时，默认将参数text替换当前预上屏区域全部文本。&lt;br/&gt;- 当start等于end，默认将参 数text插入start对应的光标位置。&lt;br/&gt;- 当start不等于end，将参数text替换range对应区域的文本。&lt;br/&gt;- 当start与end为其他含有负数值的组合，按照参数错误返回。&lt;br/&gt;- 当输 入框已有预上屏文本，参数range不得超过预上屏文本范围，否则按照参数错误返回。&lt;br/&gt;- 当输入框无预上屏文本，参数range不得超过输入框文本范围，否则按照参数错误返回。 |
+| range | Range | 是 | 替换的文本范围。<br/>- 当值为{ start: -1, end: -1 }时，默认将参数text替换当前预上屏区域全部文本。<br/>- 当start等于end，默认将参 数text插入start对应的光标位置。<br/>- 当start不等于end，将参数text替换range对应区域的文本。<br/>- 当start与end为其他含有负数值的组合，按照参数错误返回。<br/>- 当输 入框已有预上屏文本，参数range不得超过预上屏文本范围，否则按照参数错误返回。<br/>- 当输入框无预上屏文本，参数range不得超过输入框文本范围，否则按照参数错误返回。 |
 
 **返回值：**
 
@@ -2580,7 +2580,7 @@ setPreviewTextSync(text: string, range: Range): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | text | string | 是 | 预上屏的文本。建议长度不超过1KB。 |
-| range | Range | 是 | 替换的文本范围。&lt;br/&gt;- 当值为{ start: -1, end: -1 }时，默认将参数text替换当前预上屏区域全部文本。&lt;br/&gt;- 当start等于end，默认将参 数text插入start对应的光标位置。&lt;br/&gt;- 当start不等于end，将参数text替换range对应区域的文本。&lt;br/&gt;- 当start与end为其他含有负数值的组合，按照参数错误返回。&lt;br/&gt;- 当输 入框已有预上屏文本，参数range不得超过预上屏文本范围，否则按照参数错误返回。&lt;br/&gt;- 当输入框无预上屏文本，参数range不得超过输入框文本范围，否则按照参数错误返回。 |
+| range | Range | 是 | 替换的文本范围。<br/>- 当值为{ start: -1, end: -1 }时，默认将参数text替换当前预上屏区域全部文本。<br/>- 当start等于end，默认将参 数text插入start对应的光标位置。<br/>- 当start不等于end，将参数text替换range对应区域的文本。<br/>- 当start与end为其他含有负数值的组合，按照参数错误返回。<br/>- 当输 入框已有预上屏文本，参数range不得超过预上屏文本范围，否则按照参数错误返回。<br/>- 当输入框无预上屏文本，参数range不得超过输入框文本范围，否则按照参数错误返回。 |
 
 **错误码：**
 

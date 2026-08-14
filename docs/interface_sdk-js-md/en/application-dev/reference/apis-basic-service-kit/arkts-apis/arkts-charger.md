@@ -29,7 +29,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { charger } from '@kit.BasicServicesKit';
+import { charger } from 'charger';
 ```
 
 ## Summary

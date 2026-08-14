@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { pbap } from '@kit.ConnectivityKit';
+import { pbap } from 'pbap';
 ```
 
 ## createPbapServerProfile

@@ -14,7 +14,7 @@ export function getDisplayLanguage(language: string, locale: string, sentenceCas
 
 **废弃版本：** 9
 
-**替代接口：** [getDisplayLanguage](arkts-localization-i18n-system-c.md#getDisplayLanguage)
+**替代接口：** [getDisplayLanguage](../../apis-na/arkts-apis/arkts-na-i18n-system-c.md#getDisplayLanguage)
 
 <!--Device-i18n-export function getDisplayLanguage(language: string, locale: string, sentenceCase?: boolean): string--><!--Device-i18n-export function getDisplayLanguage(language: string, locale: string, sentenceCase?: boolean): string-End-->
 
@@ -33,4 +33,13 @@ export function getDisplayLanguage(language: string, locale: string, sentenceCas
 | 类型 | 说明 |
 | --- | --- |
 | string | 指定语言的本地化显示文本。 |
+
+## 示例
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let languageName: string = i18n.getDisplayLanguage('zh', 'en-GB', true); // languageName = 'Chinese'
+languageName = i18n.getDisplayLanguage('zh', 'en-GB'); // languageName = 'Chinese'
+```
 

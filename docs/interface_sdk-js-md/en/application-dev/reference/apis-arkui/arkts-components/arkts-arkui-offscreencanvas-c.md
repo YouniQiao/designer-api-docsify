@@ -38,8 +38,8 @@ Constructs an OffscreenCanvas for creating an offscreen canvas object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | number | Yes | Width of the offscreen canvas.&lt;br&gt; **NaN** and **Infinity** are treated as invalid values.&lt;br&gt;Default unit: vp |
-| height | number | Yes | Height of the offscreen canvas.&lt;br&gt; **NaN** and **Infinity** are treated as invalid values.&lt;br&gt;Default unit: vp |
+| width | number | Yes | Width of the offscreen canvas.<br> **NaN** and **Infinity** are treated as invalid values.<br>Default unit: vp |
+| height | number | Yes | Height of the offscreen canvas.<br> **NaN** and **Infinity** are treated as invalid values.<br>Default unit: vp |
 
 ## constructor
 
@@ -69,9 +69,9 @@ Constructs an **OffscreenCanvas** object for creating an offscreen canvas object
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | number | Yes | Width of the offscreen canvas.&lt;br&gt; **NaN** and **Infinity** are treated as invalid values.&lt;br&gt;Default unit: vp |
-| height | number | Yes | Height of the offscreen canvas.&lt;br&gt; **NaN** and **Infinity** are treated as invalid values.&lt;br&gt;Default unit: vp |
-| unit | LengthMetricsUnit | Yes | Unit mode of the OffscreenCanvas object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md#CanvasRenderingContext2D).&lt;br&gt; Invalid values **NaN** and **Infinity** are treated as the default value.&lt;br&gt; Default value: **DEFAULT**. |
+| width | number | Yes | Width of the offscreen canvas.<br> **NaN** and **Infinity** are treated as invalid values.<br>Default unit: vp |
+| height | number | Yes | Height of the offscreen canvas.<br> **NaN** and **Infinity** are treated as invalid values.<br>Default unit: vp |
+| unit | LengthMetricsUnit | Yes | Unit mode of the OffscreenCanvas object. The value cannot be dynamically changed once set. The configuration method is the same as that of [CanvasRenderingContext2D](arkts-arkui-canvasrenderingcontext2d-c.md#CanvasRenderingContext2D).<br> Invalid values **NaN** and **Infinity** are treated as the default value.<br> Default value: **DEFAULT**. |
 
 ## getContext
 
@@ -99,8 +99,8 @@ Obtains the drawing context of the offscreen canvas.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| contextType | "2d" | Yes | Type of the drawing context of the offscreen canvas. The value can only be **"2d"**.&lt;br&gt; **"2d"**: creates an **OffscreenCanvasRenderingContext2D** object that represents a two-dimensional rendering context.&lt;br&gt; The values **undefined** and **null** are considered as invalid values, and **undefined** is returned. |
-| options | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No | Parameters of the **OffscreenCanvasRenderingContext2D** object. For details, see [RenderingContextSettings](#renderingcontextsettings).&lt;br&gt; **undefined** and **null** values are processed based on the default value of [RenderingContextSettings](#renderingcontextsettings).&lt;br&gt; Default value: **null**. |
+| contextType | "2d" | Yes | Type of the drawing context of the offscreen canvas. The value can only be **"2d"**.<br> **"2d"**: creates an **OffscreenCanvasRenderingContext2D** object that represents a two-dimensional rendering context.<br> The values **undefined** and **null** are considered as invalid values, and **undefined** is returned. |
+| options | [RenderingContextSettings](arkts-arkui-renderingcontextsettings-c.md) | No | Parameters of the **OffscreenCanvasRenderingContext2D** object. For details, see [RenderingContextSettings](#renderingcontextsettings).<br> **undefined** and **null** values are processed based on the default value of [RenderingContextSettings](#renderingcontextsettings).<br> Default value: **null**. |
 
 **Return value:**
 

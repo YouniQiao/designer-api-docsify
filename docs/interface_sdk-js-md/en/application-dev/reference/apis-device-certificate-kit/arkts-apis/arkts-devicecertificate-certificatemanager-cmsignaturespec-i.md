@@ -15,7 +15,7 @@ Represents a set of parameters used for signing or signature verification, inclu
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManager } from 'certificateManager';
 ```
 
 ## digest

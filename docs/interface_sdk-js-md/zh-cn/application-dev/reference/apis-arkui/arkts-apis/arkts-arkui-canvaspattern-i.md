@@ -38,5 +38,5 @@ setTransform(transform?: Matrix2D): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| transform | Matrix2D | 否 | 转换矩阵。 &lt;br&gt;异常值undefined和null按无效值不做矩阵变换处理。 &lt;br&gt;默认值：不做矩阵变换。 |
+| transform | Matrix2D | 否 | 转换矩阵。 <br>异常值undefined和null按无效值不做矩阵变换处理。 <br>默认值：不做矩阵变换。 |
 

@@ -15,7 +15,7 @@ Defines a **RunningLock** object.
 ## Modules to Import
 
 ```TypeScript
-import { runningLock } from '@kit.BasicServicesKit';
+import { runningLock } from 'runningLock';
 ```
 
 ## hold
@@ -42,7 +42,7 @@ Holds a running lock.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timeout | int | Yes | Duration for locking and holding the **RunningLock** object, in ms.&lt;br&gt;The value must be a number:&lt;br&gt;**-1**: The lock is permanently held and needs to be released automatically.&lt;br&gt;**0**: The lock is released 3 seconds after the timer expires by default.&lt;br&gt;> 0: The lock is released based on the input value after the timer expires. |
+| timeout | int | Yes | Duration for locking and holding the **RunningLock** object, in ms.<br>The value must be a number:<br>**-1**: The lock is permanently held and needs to be released automatically.<br>**0**: The lock is released 3 seconds after the timer expires by default.<br>> 0: The lock is released based on the input value after the timer expires. |
 
 **Error codes:**
 

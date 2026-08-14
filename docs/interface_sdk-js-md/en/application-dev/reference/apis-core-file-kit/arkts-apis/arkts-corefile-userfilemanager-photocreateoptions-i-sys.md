@@ -19,7 +19,7 @@ Defines the options for creating an image or video asset.
 ## Modules to Import
 
 ```TypeScript
-import { userFileManager } from '@kit.CoreFileKit';
+import { userFileManager } from 'userFileManager';
 ```
 
 ## cameraShotKey

@@ -17,7 +17,7 @@ Defines the carrier configuration.
 ## Modules to Import
 
 ```TypeScript
-import { sim } from '@kit.TelephonyKit';
+import { sim } from 'sim';
 ```
 
 ## field

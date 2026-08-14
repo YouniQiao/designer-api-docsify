@@ -437,7 +437,7 @@ setLimit(limit: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| limit | int | 是 | 要设置的可读写区域上界值，单位为Byte。 &lt;br&gt;取值需大于等于0，且小于等于当前[capacity](#capacity)。若所设值小于文件映射区的当前位置，则当前位置将自动调整至该值。 |
+| limit | int | 是 | 要设置的可读写区域上界值，单位为Byte。 <br>取值需大于等于0，且小于等于当前[capacity](#capacity)。若所设值小于文件映射区的当前位置，则当前位置将自动调整至该值。 |
 
 **错误码：**
 
@@ -471,7 +471,7 @@ setPosition(position: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| position | int | 是 | 期望设置的目标位置，单位为Byte。 &lt;br&gt;必须为非负数且不大于当前可读写上界的limit，可通过[getLimit()](#getLimit)获得可读写上界的limit。 |
+| position | int | 是 | 期望设置的目标位置，单位为Byte。 <br>必须为非负数且不大于当前可读写上界的limit，可通过[getLimit()](#getLimit)获得可读写上界的limit。 |
 
 **错误码：**
 

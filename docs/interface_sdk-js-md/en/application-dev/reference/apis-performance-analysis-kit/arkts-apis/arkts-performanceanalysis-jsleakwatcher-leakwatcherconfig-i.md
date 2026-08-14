@@ -15,7 +15,7 @@ Defines the **LeakWatcherConfig** object, which contains multiple configurable p
 ## Modules to Import
 
 ```TypeScript
-import { jsLeakWatcher } from '@kit.PerformanceAnalysisKit';
+import { jsLeakWatcher } from 'jsLeakWatcher';
 ```
 
 ## bgLeakCountThreshold

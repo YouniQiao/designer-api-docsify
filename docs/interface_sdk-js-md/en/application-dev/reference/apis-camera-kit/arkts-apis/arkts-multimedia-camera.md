@@ -15,7 +15,7 @@ The module provides a set of camera service APIs for you to easily develop a cam
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'camera';
 ```
 
 ## Summary

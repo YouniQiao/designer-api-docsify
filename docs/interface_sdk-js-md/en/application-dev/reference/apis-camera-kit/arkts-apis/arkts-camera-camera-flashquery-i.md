@@ -15,7 +15,7 @@ FlashQuery provides APIs to query the flash status and mode of a camera device. 
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'camera';
 ```
 
 ## hasFlash
@@ -42,7 +42,7 @@ Checks whether the camera device has flash.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the camera has flash. **true** if it has, **false** otherwise. &lt;br&gt;If **false** is returned, [isFlashModeSupported]{ |
+| boolean | Whether the camera has flash. **true** if it has, **false** otherwise. <br>If **false** is returned, [isFlashModeSupported]{ |
 
 **Error codes:**
 

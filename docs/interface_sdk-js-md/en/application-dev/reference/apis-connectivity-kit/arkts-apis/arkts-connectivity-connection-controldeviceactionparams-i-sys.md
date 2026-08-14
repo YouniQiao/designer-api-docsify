@@ -17,7 +17,7 @@ Describes information about controlling the Bluetooth peripheral.
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.ConnectivityKit';
+import { connection } from 'connection';
 ```
 
 ## controlObject

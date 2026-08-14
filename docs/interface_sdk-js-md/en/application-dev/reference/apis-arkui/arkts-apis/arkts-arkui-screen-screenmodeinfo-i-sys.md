@@ -17,7 +17,7 @@ Defines the screen mode information.
 ## Modules to Import
 
 ```TypeScript
-import { screen } from '@kit.ArkUI';
+import { screen } from 'screen';
 ```
 
 ## height

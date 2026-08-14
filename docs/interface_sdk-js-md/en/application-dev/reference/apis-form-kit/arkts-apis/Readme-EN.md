@@ -15,7 +15,8 @@
 - [@ohos.app.form.LiveFormExtensionAbility](arkts-app-form-liveformextensionability.md)
   - [LiveFormExtensionAbility](arkts-form-app-form-liveformextensionability-liveformextensionability-c.md)
   - [LiveFormInfo](arkts-form-app-form-liveformextensionability-liveforminfo-i.md)
-- [@ohos.app.form.formAgent](arkts-app-form-formagent.md)
+<!--Del-->
+- [@ohos.app.form.formAgent](arkts-app-form-formagent.md)<!--DelEnd-->
   <!--Del-->
   - [requestPublishForm(system api)](arkts-form-formagent-requestpublishform-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -24,7 +25,8 @@
   - [createFormBindingData](arkts-form-formbindingdata-createformbindingdata-f.md)
   - [FormBindingData](arkts-form-formbindingdata-formbindingdata-i.md)
   - [ProxyData](arkts-form-formbindingdata-proxydata-i.md)
-- [@ohos.app.form.formHost](arkts-app-form-formhost.md)
+<!--Del-->
+- [@ohos.app.form.formHost](arkts-app-form-formhost.md)<!--DelEnd-->
   <!--Del-->
   - [acquireFormData(system api)](arkts-form-formhost-acquireformdata-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -211,7 +213,8 @@
   <!--Del-->
   - [SceneAnimationTriggerType(system api)](arkts-form-forminfo-sceneanimationtriggertype-e-sys.md)<!--DelEnd-->
   - [VisibilityType](arkts-form-forminfo-visibilitytype-e.md)
-- [@ohos.app.form.formObserver](arkts-app-form-formobserver.md)
+<!--Del-->
+- [@ohos.app.form.formObserver](arkts-app-form-formobserver.md)<!--DelEnd-->
   <!--Del-->
   - [getRunningFormInfoById(system api)](arkts-form-formobserver-getrunningforminfobyid-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -313,7 +316,8 @@
   - [FormError](arkts-form-formerror-formerror-e.md)
   <!--Del-->
   - [FormError(system api)](arkts-form-formerror-formerror-e-sys.md)<!--DelEnd-->
-- [@ohos.application.formHost](arkts-application-formhost.md)
+<!--Del-->
+- [@ohos.application.formHost](arkts-application-formhost.md)<!--DelEnd-->
   <!--Del-->
   - [acquireFormState(system api)](arkts-form-formhost-acquireformstate-depr-f-sys.md)<!--DelEnd-->
   <!--Del-->

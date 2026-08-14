@@ -15,7 +15,29 @@ The **IReusePool** API provides the features related to the global reuse pool of
 ## Modules to Import
 
 ```TypeScript
-import { Binding, ComponentReuse, CustomComponentLifecycleState, ComponentInactive, PersistenceV2, ComponentDisappear, MutableBinding, CustomComponentLifecycleObserver, AppStorageV2, Type, ConnectOptionsCollections, CollectionType, CustomComponentContext, IReusePool, ConnectOptions, UIUtils, ComponentActive, CustomComponentLifecycle, ComponentInit, ComponentAppear, ComponentBuilt, ComponentRecycle, IReusableInfo } from '@kit.ArkUI';
+import { AppStorageV2 } from 'AppStorageV2';
+import { PersistenceV2 } from 'PersistenceV2';
+import { Type } from 'Type';
+import { UIUtils } from 'UIUtils';
+import { ConnectOptions } from 'ConnectOptions';
+import { Binding } from 'Binding';
+import { MutableBinding } from 'MutableBinding';
+import { CustomComponentLifecycle } from 'CustomComponentLifecycle';
+import { CustomComponentLifecycleObserver } from 'CustomComponentLifecycleObserver';
+import { CustomComponentLifecycleState } from 'CustomComponentLifecycleState';
+import { ComponentInit } from 'ComponentInit';
+import { ComponentAppear } from 'ComponentAppear';
+import { ComponentBuilt } from 'ComponentBuilt';
+import { ComponentReuse } from 'ComponentReuse';
+import { ComponentActive } from 'ComponentActive';
+import { ComponentInactive } from 'ComponentInactive';
+import { ComponentRecycle } from 'ComponentRecycle';
+import { ComponentDisappear } from 'ComponentDisappear';
+import { CollectionType } from 'CollectionType';
+import { ConnectOptionsCollections } from 'ConnectOptionsCollections';
+import { CustomComponentContext } from 'CustomComponentContext';
+import { IReusePool } from 'IReusePool';
+import { IReusableInfo } from 'IReusableInfo';
 ```
 
 ## getReusableInfo
@@ -52,7 +74,7 @@ Obtains the information about the recycling instance of a given reusable compone
 
 | Type | Description |
 | --- | --- |
-| [IReusableInfo](arkts-arkui-arkui-statemanagement-ireusableinfo-i.md)[] | If the reuse pool is not configured to accept the given component type, **undefined** is returned. &lt;br&gt;If **reuseId** is specified, a single **IReusableInfo** is returned (even if **count** is set to **0** and **maxCount** is set to the default value). &lt;br&gt;If **reuseId** is not specified and the reusable component does not use **reuseId**, a single **IReusableInfo** is returned. &lt;br&gt;If **reuseId** is not specified but the reusable component uses **reuseId**, an **Array&lt;IReusableInfo&gt;** is returned, providing a separate entry for each **reuseId** that has a positive value of **count** or a non- default value of **maxCount** as well as an entry of **reuseId: undefined**. |
+| [IReusableInfo](arkts-arkui-arkui-statemanagement-ireusableinfo-i.md)[] | If the reuse pool is not configured to accept the given component type, **undefined** is returned. <br>If **reuseId** is specified, a single **IReusableInfo** is returned (even if **count** is set to **0** and **maxCount** is set to the default value). <br>If **reuseId** is not specified and the reusable component does not use **reuseId**, a single **IReusableInfo** is returned. <br>If **reuseId** is not specified but the reusable component uses **reuseId**, an **Array&lt;IReusableInfo&gt;** is returned, providing a separate entry for each **reuseId** that has a positive value of **count** or a non- default value of **maxCount** as well as an entry of **reuseId: undefined**. |
 
 ## preRender
 

@@ -17,7 +17,7 @@ Manages the distributed info of the table.
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from '@kit.ArkData';
+import { relationalStore } from 'relationalStore';
 ```
 
 ## flag

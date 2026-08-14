@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { serial } from '@kit.BasicServicesKit';
+import { serial } from 'serial';
 ```
 
 ## addPortAuthorization
@@ -33,7 +33,7 @@ Adds the permission for applications to access the serial port. This API is open
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | tokenId | string | Yes | Token ID of the authorized application. |
-| deviceId | string | Yes | Serial port device ID. &lt;br&gt;For an onboard serial port, the value is portName. For a USB virtual serial port, the value is the combination of VID+PID+SN. |
+| deviceId | string | Yes | Serial port device ID. <br>For an onboard serial port, the value is portName. For a USB virtual serial port, the value is the combination of VID+PID+SN. |
 
 **Return value:**
 

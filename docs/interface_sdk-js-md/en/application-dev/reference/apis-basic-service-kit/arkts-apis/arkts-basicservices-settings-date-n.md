@@ -15,7 +15,7 @@ Provides methods for setting time and date formats.
 ## Modules to Import
 
 ```TypeScript
-import { settings } from '@kit.BasicServicesKit';
+import { settings } from 'settings';
 ```
 
 ## Summary

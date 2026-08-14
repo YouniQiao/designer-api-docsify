@@ -15,7 +15,7 @@ Defines the options used to construct the **MessageOption** object.
 ## Modules to Import
 
 ```TypeScript
-import { rpc } from '@kit.IPCKit';
+import { rpc } from 'rpc';
 ```
 
 ## constructor

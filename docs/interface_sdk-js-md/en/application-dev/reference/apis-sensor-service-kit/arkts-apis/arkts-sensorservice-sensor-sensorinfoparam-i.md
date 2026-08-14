@@ -15,7 +15,7 @@ Defines sensor parameters, including **deviceId** and **sensorIndex**.
 ## Modules to Import
 
 ```TypeScript
-import { sensor } from '@kit.SensorServiceKit';
+import { sensor } from 'sensor';
 ```
 
 ## deviceId

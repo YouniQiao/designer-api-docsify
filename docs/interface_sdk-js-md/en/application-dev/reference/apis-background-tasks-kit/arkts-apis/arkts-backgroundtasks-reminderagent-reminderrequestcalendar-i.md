@@ -19,7 +19,7 @@ Defines a reminder for a calendar event.
 ## Modules to Import
 
 ```TypeScript
-import { reminderAgent } from '@kit.BackgroundTasksKit';
+import { reminderAgent } from 'reminderAgent';
 ```
 
 ## dateTime

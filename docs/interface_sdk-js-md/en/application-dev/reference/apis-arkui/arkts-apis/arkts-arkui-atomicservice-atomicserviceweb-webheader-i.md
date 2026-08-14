@@ -15,7 +15,17 @@ Describes the request/response header returned by the **AtomicServiceWeb** compo
 ## Modules to Import
 
 ```TypeScript
-import { AtomicServiceWeb, OnMessageEvent, OnPageEndEvent, OnHttpErrorReceiveEvent, OnLoadInterceptEvent, WebHeader, OnProgressChangeEvent, OnErrorReceiveEvent, OnPageBeginEvent, OnLoadInterceptCallback, AtomicServiceWebController } from '@kit.ArkUI';
+import { AtomicServiceWeb } from 'AtomicServiceWeb';
+import { OnMessageEvent } from 'OnMessageEvent';
+import { OnErrorReceiveEvent } from 'OnErrorReceiveEvent';
+import { OnHttpErrorReceiveEvent } from 'OnHttpErrorReceiveEvent';
+import { OnPageBeginEvent } from 'OnPageBeginEvent';
+import { OnPageEndEvent } from 'OnPageEndEvent';
+import { AtomicServiceWebController } from 'AtomicServiceWebController';
+import { OnLoadInterceptEvent } from 'OnLoadInterceptEvent';
+import { OnProgressChangeEvent } from 'OnProgressChangeEvent';
+import { OnLoadInterceptCallback } from 'OnLoadInterceptCallback';
+import { WebHeader } from 'WebHeader';
 ```
 
 ## headerKey

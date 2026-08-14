@@ -17,7 +17,27 @@ Defines a **LightResponse** object.
 ## Modules to Import
 
 ```TypeScript
-import { OnBodyStateResponse, subscribeAccelerometerOptions, ProximityResponse, SubscribeGyroscopeOptions, SubscribeStepCounterOptions, SubscribeDeviceOrientationOptions, HeartRateResponse, LightResponse, AccelerometerResponse, SubscribeLightOptions, DeviceOrientationResponse, SubscribeHeartRateOptions, StepCounterResponse, SubscribeCompassOptions, GetOnBodyStateOptions, SubscribeBarometerOptions, BarometerResponse, SubscribeProximityOptions, CompassResponse, GyroscopeResponse, SubscribeOnBodyStateOptions } from '@kit.SensorServiceKit';
+import { AccelerometerResponse } from 'AccelerometerResponse';
+import { BarometerResponse } from 'BarometerResponse';
+import { CompassResponse } from 'CompassResponse';
+import { DeviceOrientationResponse } from 'DeviceOrientationResponse';
+import { GetOnBodyStateOptions } from 'GetOnBodyStateOptions';
+import { GyroscopeResponse } from 'GyroscopeResponse';
+import { HeartRateResponse } from 'HeartRateResponse';
+import { LightResponse } from 'LightResponse';
+import { OnBodyStateResponse } from 'OnBodyStateResponse';
+import { ProximityResponse } from 'ProximityResponse';
+import { StepCounterResponse } from 'StepCounterResponse';
+import { SubscribeBarometerOptions } from 'SubscribeBarometerOptions';
+import { SubscribeCompassOptions } from 'SubscribeCompassOptions';
+import { SubscribeDeviceOrientationOptions } from 'SubscribeDeviceOrientationOptions';
+import { SubscribeGyroscopeOptions } from 'SubscribeGyroscopeOptions';
+import { SubscribeHeartRateOptions } from 'SubscribeHeartRateOptions';
+import { SubscribeLightOptions } from 'SubscribeLightOptions';
+import { SubscribeOnBodyStateOptions } from 'SubscribeOnBodyStateOptions';
+import { SubscribeProximityOptions } from 'SubscribeProximityOptions';
+import { SubscribeStepCounterOptions } from 'SubscribeStepCounterOptions';
+import { subscribeAccelerometerOptions } from 'subscribeAccelerometerOptions';
 ```
 
 ## intensity

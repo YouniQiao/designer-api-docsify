@@ -15,7 +15,7 @@ Defines a media data loader, which needs to be implemented by applications.
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'media';
 ```
 
 ## close

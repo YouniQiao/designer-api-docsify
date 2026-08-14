@@ -38,7 +38,7 @@ Creates a RegExpExecArray instance containing match results.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | the starting index of the match result. &lt;br&gt;The value should be an integer. |
+| index | int | Yes | the starting index of the match result. <br>The value should be an integer. |
 | input | string | Yes | the original string used for matching. |
 | result | Array&lt;string \| undefined&gt; | Yes | the array of matched strings. |
 | indices | Array&lt;Array&lt;int&gt;&gt; | Yes | the start and end index arrays of each matching substring. |
@@ -67,7 +67,7 @@ Creates a RegExpExecArray instance containing match results (without indices).
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | the starting index of the match result. &lt;br&gt;The value should be an integer. |
+| index | int | Yes | the starting index of the match result. <br>The value should be an integer. |
 | input | string | Yes | the original string used for matching. |
 | result | Array&lt;string \| undefined&gt; | Yes | the array of matched strings. |
 

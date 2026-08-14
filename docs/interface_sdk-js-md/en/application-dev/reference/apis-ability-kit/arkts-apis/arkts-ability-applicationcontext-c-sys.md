@@ -181,7 +181,7 @@ export default class EntryAbility extends UIAbility {
 registerAbilityLifecycleCallback(abilityLifecycleCallback: AbilityLifecycleCallback): number
 ```
 
-Registers a listener to monitor the ability lifecycle of the application. This API uses an asynchronous callback to return the result. &lt;p&gt;**NOTE：**: &lt;br&gt;It can be called only by the main thread. &lt;/p&gt;
+Registers a listener to monitor the ability lifecycle of the application. This API uses an asynchronous callback to return the result. &lt;p&gt;**NOTE：**: <br>It can be called only by the main thread. &lt;/p&gt;
 
 **Since:** 9
 
@@ -209,7 +209,7 @@ Registers a listener to monitor the ability lifecycle of the application. This A
 
 | Type | Description |
 | --- | --- |
-| number | Returns the number code of the callbackId. |
+| number | ID of the callback registered. This ID is used to unregister the corresponding callback in [ApplicationContext.unregisterAbilityLifecycleCallback]{ |
 
 ## registerEnvironmentCallback
 
@@ -245,7 +245,7 @@ Register environment callback.
 
 | Type | Description |
 | --- | --- |
-| number | Returns the number code of the callbackId. |
+| number | ID of the callback registered. This ID is used to unregister the corresponding callback in [ApplicationContext.unregisterEnvironmentCallback]{ |
 
 ## unregisterAbilityLifecycleCallback
 
@@ -253,7 +253,7 @@ Register environment callback.
 unregisterAbilityLifecycleCallback(callbackId: number, callback: AsyncCallback<void>): void
 ```
 
-Unregisters the listener that monitors the ability lifecycle of the application. This API uses an asynchronous callback to return the result. &lt;p&gt;**NOTE：**: &lt;br&gt;It can be called only by the main thread. &lt;/p&gt;
+Unregisters the listener that monitors the ability lifecycle of the application. This API uses an asynchronous callback to return the result. &lt;p&gt;**NOTE：**: <br>It can be called only by the main thread. &lt;/p&gt;
 
 **Since:** 9
 
@@ -275,7 +275,7 @@ Unregisters the listener that monitors the ability lifecycle of the application.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackId | number | Yes | Event type. |
+| callbackId | number | Yes | ID returned when the [ApplicationContext.registerAbilityLifecycleCallback](#registerAbilityLifecycleCallback) |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the ID of the registered listener. |
 
 ## unregisterAbilityLifecycleCallback
@@ -284,7 +284,7 @@ Unregisters the listener that monitors the ability lifecycle of the application.
 unregisterAbilityLifecycleCallback(callbackId: number): Promise<void>
 ```
 
-Unregisters a listener for the lifecycle of a UIAbility within the application. This API uses a promise to return the result. It can be called only on the main thread. &lt;p&gt;**NOTE：**: &lt;br&gt;It can be called only by the main thread. &lt;/p&gt;
+Unregisters a listener for the lifecycle of a UIAbility within the application. This API uses a promise to return the result. It can be called only on the main thread. &lt;p&gt;**NOTE：**: <br>It can be called only by the main thread. &lt;/p&gt;
 
 **Since:** 9
 
@@ -306,7 +306,7 @@ Unregisters a listener for the lifecycle of a UIAbility within the application. 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackId | number | Yes | Event type. |
+| callbackId | number | Yes | ID returned when the [ApplicationContext.registerAbilityLifecycleCallback](#registerAbilityLifecycleCallback) |
 
 **Return value:**
 
@@ -348,7 +348,7 @@ Unregisters the listener for system environment changes. This API uses an asynch
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackId | number | Yes | Event type. |
+| callbackId | number | Yes | ID returned when the [ApplicationContext.registerEnvironmentCallback](#registerEnvironmentCallback) |
 | envcallback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the ID of the registered listener. |
 
 ## unregisterEnvironmentCallback
@@ -379,7 +379,7 @@ Unregisters the listener for system environment changes. This API uses a promise
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callbackId | number | Yes | Event type. |
+| callbackId | number | Yes | ID returned when the [ApplicationContext.registerEnvironmentCallback](#registerEnvironmentCallback) |
 
 **Return value:**
 

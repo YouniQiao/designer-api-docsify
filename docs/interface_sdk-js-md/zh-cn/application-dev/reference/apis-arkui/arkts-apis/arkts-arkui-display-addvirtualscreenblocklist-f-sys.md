@@ -46,6 +46,7 @@ function addVirtualScreenBlocklist(windowIds: Array<int>): Promise<void>
 ArkTS-Dyn示例：
 
 ```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { display, window } from '@kit.ArkUI';
 

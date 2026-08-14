@@ -15,7 +15,7 @@ Represents the information returned by the callback of revokeSave.
 ## Modules to Import
 
 ```TypeScript
-import { distributedDataObject } from '@kit.ArkData';
+import { distributedDataObject } from 'distributedDataObject';
 ```
 
 ## sessionId

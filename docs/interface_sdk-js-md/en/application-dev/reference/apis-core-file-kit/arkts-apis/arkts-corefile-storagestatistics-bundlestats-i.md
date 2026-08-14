@@ -15,7 +15,7 @@ Get the bundle statistics.
 ## Modules to Import
 
 ```TypeScript
-import { storageStatistics } from '@kit.CoreFileKit';
+import { storageStatistics } from 'storageStatistics';
 ```
 
 ## appSize
@@ -24,7 +24,7 @@ import { storageStatistics } from '@kit.CoreFileKit';
 appSize: long
 ```
 
-The size of application installation data. &lt;br&gt;Unit: Byte.
+The size of application installation data. <br>Unit: Byte.
 
 **Type:** long
 
@@ -44,7 +44,7 @@ The size of application installation data. &lt;br&gt;Unit: Byte.
 cacheSize: long
 ```
 
-The size of application cache data. &lt;br&gt;Unit: Byte.
+The size of application cache data. <br>Unit: Byte.
 
 **Type:** long
 
@@ -64,7 +64,7 @@ The size of application cache data. &lt;br&gt;Unit: Byte.
 dataSize: long
 ```
 
-The size of application local data, distributed data and database data. &lt;br&gt;Unit: Byte.
+The size of application local data, distributed data and database data. <br>Unit: Byte.
 
 **Type:** long
 

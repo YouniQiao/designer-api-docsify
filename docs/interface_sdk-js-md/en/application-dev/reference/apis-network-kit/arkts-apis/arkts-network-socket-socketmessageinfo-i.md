@@ -15,7 +15,7 @@ Defines the socket connection information.
 ## Modules to Import
 
 ```TypeScript
-import { socket } from '@kit.NetworkKit';
+import { socket } from 'socket';
 ```
 
 ## message

@@ -17,7 +17,7 @@ Statistics Related to AI Image Generation Tasks.
 ## Modules to Import
 
 ```TypeScript
-import { imageGeneration } from '@kit.ArkUI';
+import { imageGeneration } from 'imageGeneration';
 ```
 
 ## generationTime

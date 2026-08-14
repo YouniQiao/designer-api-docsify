@@ -100,7 +100,7 @@ Absolute value
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | int | Yes | Some number value &lt;br&gt;The value should be an integer. |
+| x | int | Yes | Some number value <br>The value should be an integer. |
 
 **Return value:**
 
@@ -774,7 +774,7 @@ Returns the argument value rounded up to the closest integral power of 2.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| n | int | Yes | 32-bit integer. &lt;br&gt;The value should be an integer. |
+| n | int | Yes | 32-bit integer. <br>The value should be an integer. |
 
 **Return value:**
 

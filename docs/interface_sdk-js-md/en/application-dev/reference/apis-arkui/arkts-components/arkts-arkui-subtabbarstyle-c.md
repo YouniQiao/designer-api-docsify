@@ -98,7 +98,7 @@ Constructor used to create a **SubTabBarStyle** instance. You can set custom con
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | ResourceStr \| ComponentContent | Yes | Content on the tab.&lt;br&gt;**NOTE：**&lt;br&gt;1. Custom content does not support the **labelStyle** attribute.&lt;br&gt;2. If the custom content exceeds the content box of the tab page, the excess part is not displayed.&lt;br&gt;3. If the custom content is within the content box of the tab page, it is aligned in the center.&lt;br&gt;4. If the custom content is abnormal or no display component is available, a blank area is displayed. |
+| content | ResourceStr \| ComponentContent | Yes | Content on the tab.<br>**NOTE：**<br>1. Custom content does not support the **labelStyle** attribute.<br>2. If the custom content exceeds the content box of the tab page, the excess part is not displayed.<br>3. If the custom content is within the content box of the tab page, it is aligned in the center.<br>4. If the custom content is abnormal or no display component is available, a blank area is displayed. |
 
 ## id
 
@@ -296,7 +296,7 @@ Static constructor used to create a **SubTabBarStyle** instance. You can set cus
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | ResourceStr \| ComponentContent | Yes | Content on the tab. You can set custom content with **ComponentContent**.&lt;br&gt;**NOTE：**&lt;br&gt;1. Custom content does not support the **labelStyle** attribute.&lt;br&gt;2. If the custom content exceeds the content box of the tab page, the excess part is not displayed.&lt;br&gt;3. If the custom content is within the content box of the tab page, it is aligned in the center.&lt;br&gt;4. If the custom content is abnormal or no display component is available, a blank area is displayed. |
+| content | ResourceStr \| ComponentContent | Yes | Content on the tab. You can set custom content with **ComponentContent**.<br>**NOTE：**<br>1. Custom content does not support the **labelStyle** attribute.<br>2. If the custom content exceeds the content box of the tab page, the excess part is not displayed.<br>3. If the custom content is within the content box of the tab page, it is aligned in the center.<br>4. If the custom content is abnormal or no display component is available, a blank area is displayed. |
 
 **Return value:**
 
@@ -330,7 +330,7 @@ Sets the padding of the subtab. It cannot be set in percentage. When the paramet
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Padding \| Dimension | Yes | Padding of the subtab.&lt;br&gt;Value range: [0, +∞]&lt;br&gt;Default value: **{left:8.0vp,right:8.0vp,top:17.0vp,bottom:18.0vp} |
+| value | Padding \| Dimension | Yes | Padding of the subtab.<br>Value range: [0, +∞]<br>Default value: **{left:8.0vp,right:8.0vp,top:17.0vp,bottom:18.0vp} |
 
 **Return value:**
 
@@ -364,7 +364,7 @@ Sets the padding of the subtab. This API supports mirroring but does not support
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| padding | LocalizedPadding | Yes | Padding of the subtab.&lt;br&gt;Value range: [0, +∞]&lt;br&gt;Default value: **{start:LengthMetrics.vp(8),end:LengthMetrics.vp(8)**&lt;br&gt; **top:LengthMetrics.vp(17),bottom:LengthMetrics.vp(18)} |
+| padding | LocalizedPadding | Yes | Padding of the subtab.<br>Value range: [0, +∞]<br>Default value: **{start:LengthMetrics.vp(8),end:LengthMetrics.vp(8)**<br> **top:LengthMetrics.vp(17),bottom:LengthMetrics.vp(18)} |
 
 **Return value:**
 
@@ -398,7 +398,7 @@ Sets the display mode of the selected subtab. It takes effect only in the horizo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [SelectedMode](arkts-arkui-selectedmode-e.md) | Yes | Display mode of the selected subtab.&lt;br&gt;Default value: **SelectedMode.INDICATOR |
+| value | [SelectedMode](arkts-arkui-selectedmode-e.md) | Yes | Display mode of the selected subtab.<br>Default value: **SelectedMode.INDICATOR |
 
 **Return value:**
 

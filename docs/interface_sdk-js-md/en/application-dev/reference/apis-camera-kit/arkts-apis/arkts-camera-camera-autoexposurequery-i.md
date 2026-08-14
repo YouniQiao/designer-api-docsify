@@ -15,7 +15,7 @@ AutoExposureQuery provides APIs to query the automatic exposure feature of a cam
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'camera';
 ```
 
 ## getExposureBiasRange

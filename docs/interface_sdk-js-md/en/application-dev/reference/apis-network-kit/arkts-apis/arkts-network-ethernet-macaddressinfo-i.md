@@ -15,7 +15,7 @@ Defines the mac address info of the Ethernet.
 ## Modules to Import
 
 ```TypeScript
-import { ethernet } from '@kit.NetworkKit';
+import { ethernet } from 'ethernet';
 ```
 
 ## iface

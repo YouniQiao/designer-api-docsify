@@ -17,7 +17,7 @@ Defines the page margins for printing.
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'print';
 ```
 
 ## bottom

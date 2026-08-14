@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { quickFixManager } from '@kit.AbilityKit';
+import { quickFixManager } from 'quickFixManager';
 ```
 
 ## applyQuickFix

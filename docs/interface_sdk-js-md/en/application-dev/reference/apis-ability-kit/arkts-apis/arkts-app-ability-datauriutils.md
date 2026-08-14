@@ -27,7 +27,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dataUriUtils } from '@kit.AbilityKit';
+import { dataUriUtils } from 'dataUriUtils';
 ```
 
 ## Summary

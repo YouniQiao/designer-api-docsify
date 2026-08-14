@@ -18,7 +18,7 @@ Icon and text for TabBar.
 icon?: string | Resource
 ```
 
-TabBar icon. Anonymous Object Rectification &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;If the icon uses an SVG image, the width and height attributes of the SVG image must be deleted. Otherwise, the icon size will be determined by the width and height attributes of the SVG image. &lt;/p&gt;
+TabBar icon. Anonymous Object Rectification &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>If the icon uses an SVG image, the width and height attributes of the SVG image must be deleted. Otherwise, the icon size will be determined by the width and height attributes of the SVG image. &lt;/p&gt;
 
 **Type:** string \| [Resource](../../apis-arkui/arkts-apis/arkts-arkui-resource-t.md)
 

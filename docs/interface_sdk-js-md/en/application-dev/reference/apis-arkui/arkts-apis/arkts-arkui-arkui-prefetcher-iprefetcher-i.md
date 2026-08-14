@@ -15,7 +15,9 @@ Provides the prefetching capability. It works with **LazyForEach** to prefetch d
 ## Modules to Import
 
 ```TypeScript
-import { IDataSourcePrefetching, BasicPrefetcher, IPrefetcher } from '@kit.ArkUI';
+import { IDataSourcePrefetching } from 'IDataSourcePrefetching';
+import { IPrefetcher } from 'IPrefetcher';
+import { BasicPrefetcher } from 'BasicPrefetcher';
 ```
 
 ## setDataSource

@@ -38,7 +38,7 @@ Adds a specified ComponentContent node to the OverlayManager.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | ComponentContent | 是 | Content to add to the target node on the **OverlayManager**.&lt;br&gt; **NOTE：**&lt;br&gt; By default, the new node is centered on the page and stacked according to its stacking level. |
+| content | ComponentContent | 是 | Content to add to the target node on the **OverlayManager**.<br> **NOTE：**<br> By default, the new node is centered on the page and stacked according to its stacking level. |
 | index | number | 否 |  |
 
 ## addComponentContentWithOrder
@@ -67,7 +67,7 @@ Creates a floating layer node with the specified display order. This API allows 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | ComponentContent | 是 | Content to add to the target node on the **OverlayManager**. &lt;br&gt;**NOTE：**&lt;br&gt; By default, the new node is centered on the page and stacked according to its stacking level. |
+| content | ComponentContent | 是 | Content to add to the target node on the **OverlayManager**. <br>**NOTE：**<br> By default, the new node is centered on the page and stacked according to its stacking level. |
 | levelOrder | [LevelOrder](../../apis-na/arkts-apis/arkts-na-promptaction-levelorder-c.md) | 否 |  |
 
 ## hideAllComponentContents
@@ -146,8 +146,8 @@ openOrderOverlay(content: ComponentContent, options?: OrderOverlayOptions): Prom
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | ComponentContent | 是 | OverlayManager新增节点需要添加的内容。 &lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：。 &lt;br&gt;默认情况下，新节点在页面中居中，并根据其堆叠级别进行堆叠。 &lt;/p&gt; |
-| options | [OrderOverlayOptions](arkts-arkui-arkui-uicontext-orderoverlayoptions-i.md) | 否 |  |
+| content | ComponentContent | 是 | OverlayManager新增节点需要添加的内容。 &lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：。 <br>默认情况下，新节点在页面中居中，并根据其堆叠级别进行堆叠。 &lt;/p&gt; |
+| options | [OrderOverlayOptions](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-orderoverlayoptions-i.md) | 否 |  |
 
 **返回值：**
 

@@ -15,7 +15,7 @@ This class is used to set back forward cache options.
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'webview';
 ```
 
 ## constructor

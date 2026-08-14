@@ -17,7 +17,12 @@ DatePickerComponent component is used to select date (year, month, day) and time
 ## Modules to Import
 
 ```TypeScript
-import { DisplayMode, TimeFormat, DatePickerComponent, DateMode, DatePickerComponentOptions, DatePickerComponentResult } from '@kit.ArkUI';
+import { DatePickerComponent } from 'DatePickerComponent';
+import { DatePickerComponentOptions } from 'DatePickerComponentOptions';
+import { DisplayMode } from 'DisplayMode';
+import { DateMode } from 'DateMode';
+import { TimeFormat } from 'TimeFormat';
+import { DatePickerComponentResult } from 'DatePickerComponentResult';
 ```
 
 ## options

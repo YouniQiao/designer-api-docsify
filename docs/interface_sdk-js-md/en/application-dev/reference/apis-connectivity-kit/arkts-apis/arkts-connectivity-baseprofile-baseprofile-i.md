@@ -15,7 +15,7 @@ Base interface of profile.
 ## Modules to Import
 
 ```TypeScript
-import { baseProfile } from '@kit.ConnectivityKit';
+import { baseProfile } from 'baseProfile';
 ```
 
 ## getConnectedDevices

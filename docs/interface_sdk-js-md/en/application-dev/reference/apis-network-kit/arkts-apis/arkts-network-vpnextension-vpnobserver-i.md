@@ -15,7 +15,7 @@ Defines a VPN observer.
 ## Modules to Import
 
 ```TypeScript
-import { vpnExtension } from '@kit.NetworkKit';
+import { vpnExtension } from 'vpnExtension';
 ```
 
 ## offAuthorizationResult

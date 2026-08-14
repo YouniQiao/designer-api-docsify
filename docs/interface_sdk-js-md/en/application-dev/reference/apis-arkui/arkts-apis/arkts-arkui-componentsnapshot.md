@@ -17,7 +17,7 @@ This module allows developers to export snapshot image from a component or a cus
 ## Modules to Import
 
 ```TypeScript
-import { componentSnapshot } from '@kit.ArkUI';
+import { componentSnapshot } from 'componentSnapshot';
 ```
 
 ## Summary

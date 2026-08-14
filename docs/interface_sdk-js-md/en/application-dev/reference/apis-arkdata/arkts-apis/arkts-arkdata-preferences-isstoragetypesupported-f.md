@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { preferences } from '@kit.ArkData';
+import { preferences } from 'preferences';
 ```
 
 ## isStorageTypeSupported

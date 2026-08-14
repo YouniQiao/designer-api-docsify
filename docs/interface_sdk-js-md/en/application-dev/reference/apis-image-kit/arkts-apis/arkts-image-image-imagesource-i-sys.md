@@ -15,7 +15,7 @@ The **ImageSource** class provides APIs to obtain image information. Before call
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'image';
 ```
 
 ## createWideGamutSdrPixelMap

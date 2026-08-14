@@ -21,6 +21,6 @@ The class of media control extension ability.
 ## Modules to Import
 
 ```TypeScript
-import { MediaControlExtensionAbility } from '@kit.AVSessionKit';
+import { MediaControlExtensionAbility } from 'MediaControlExtensionAbility';
 ```
 

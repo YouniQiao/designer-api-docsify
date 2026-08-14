@@ -17,7 +17,7 @@ Describes the translation parameters.
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'window';
 ```
 
 ## x

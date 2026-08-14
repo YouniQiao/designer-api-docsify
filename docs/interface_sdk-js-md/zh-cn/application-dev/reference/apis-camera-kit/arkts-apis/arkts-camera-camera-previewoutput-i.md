@@ -132,7 +132,7 @@ getPreviewRotation(displayRotation?: int): ImageRotation
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| displayRotation | int | 否 | 显示设备的屏幕旋转角度，通过 [display.getDefaultDisplaySync](../../apis-arkui/arkts-apis/arkts-arkui-display-getdefaultdisplaysync-f.md#getDefaultDisplaySync)获得。 &lt;br&gt; 从API version 23开始，入参displayRotation为可选参数，当不传入参数时，由系统获取displayRotation进行预览旋转角度计算。 &lt;br&gt; 单位为度数（degree），取值范围为[0, 360]。<br>**起始版本：** 23 |
+| displayRotation | int | 否 | 显示设备的屏幕旋转角度，通过 [display.getDefaultDisplaySync](../../apis-arkui/arkts-apis/arkts-arkui-display-getdefaultdisplaysync-f.md#getDefaultDisplaySync)获得。 <br> 从API version 23开始，入参displayRotation为可选参数，当不传入参数时，由系统获取displayRotation进行预览旋转角度计算。 <br> 单位为度数（degree），取值范围为[0, 360]。<br>**起始版本：** 23 |
 
 **返回值：**
 

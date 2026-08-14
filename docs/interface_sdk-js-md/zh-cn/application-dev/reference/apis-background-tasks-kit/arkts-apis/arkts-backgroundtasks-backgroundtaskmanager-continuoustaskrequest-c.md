@@ -38,7 +38,7 @@ checkSpecialScenarioAuth(context: Context): Promise<UserAuthResult>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 应用运行的上下文 &lt;br&gt; &lt;br&gt;FA模型的应用Context定义见[Context]{@link./app/context}。&lt;br&gt;Stage模型的应用Context定 义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#Context)。 &lt;br&gt; **说明：** Stage模型中，仅支持UIAbility申请；FA模型中，仅支持 ServiceAbility申请。 |
+| context | Context | 是 | 应用运行的上下文 <br> <br>FA模型的应用Context定义见[Context]{@link./app/context}。<br>Stage模型的应用Context定 义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#Context)。 <br> **说明：** Stage模型中，仅支持UIAbility申请；FA模型中，仅支持 ServiceAbility申请。 |
 
 **返回值：**
 
@@ -307,7 +307,7 @@ requestAuthFromUser(context: Context, callback: Callback<UserAuthResult>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | Context | 是 | 应用运行的上下文。 &lt;br&gt; &lt;br&gt;FA模型的应用Context定义见[Context]{@link./app/context}。&lt;br&gt;Stage模型的应用Context定义 见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#Context)。 &lt;br&gt; **说明：** Stage模型中，仅支持UIAbility申请；FA模型中，仅支持ServiceAbility 申请。 |
+| context | Context | 是 | 应用运行的上下文。 <br> <br>FA模型的应用Context定义见[Context]{@link./app/context}。<br>Stage模型的应用Context定义 见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md#Context)。 <br> **说明：** Stage模型中，仅支持UIAbility申请；FA模型中，仅支持ServiceAbility 申请。 |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;UserAuthResult&gt; | 是 | 用户操作后，返回授权结果。 |
 
 **错误码：**

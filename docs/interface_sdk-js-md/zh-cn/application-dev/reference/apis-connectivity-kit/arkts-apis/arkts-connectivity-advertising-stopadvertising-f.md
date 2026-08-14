@@ -26,7 +26,7 @@ function stopAdvertising(advertisingId: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| advertisingId | int | 是 | 表示广播ID &lt;br&gt;取值应为≥0的整数，取值为当前广播的广播ID。 |
+| advertisingId | int | 是 | 表示广播ID <br>取值应为≥0的整数，取值为当前广播的广播ID。 |
 
 **返回值：**
 

@@ -220,5 +220,5 @@ getType(): JsMessageType
 
 | 类型 | 说明 |
 | --- | --- |
-| [JsMessageType](../../apis-na/arkts-apis/arkts-na-webview-jsmessagetype-e.md) | runJavaScriptExt接口脚本执行后返回的结果的类型。 |
+| [JsMessageType](arkts-arkweb-webview-jsmessagetype-e.md) | runJavaScriptExt接口脚本执行后返回的结果的类型。 |
 

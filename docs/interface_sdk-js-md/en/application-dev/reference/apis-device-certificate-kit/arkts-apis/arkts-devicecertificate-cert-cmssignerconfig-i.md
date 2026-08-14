@@ -15,7 +15,7 @@ Represents the configuration of the CMS signer.
 ## Modules to Import
 
 ```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
+import { cert } from 'cert';
 ```
 
 ## addAttr
@@ -118,7 +118,7 @@ Message digest algorithm, for example, **SHA384**. Currently, **SHA1**, **SHA256
 rsaSignaturePadding?: CmsRsaSignaturePadding
 ```
 
-Padding mode for an RSA signature. The default value is **PKCS1_PADDING**. &lt;br&gt;When **PKCS1_PSS_PADDING** is set, **mdName** must be set to **SHA256**, **SHA384**, or **SHA512**. > **NOTE：**> > This parameter is valid only when the private key type of the signature is RSA.
+Padding mode for an RSA signature. The default value is **PKCS1_PADDING**. <br>When **PKCS1_PSS_PADDING** is set, **mdName** must be set to **SHA256**, **SHA384**, or **SHA512**. > **NOTE：**> > This parameter is valid only when the private key type of the signature is RSA.
 
 **Type:** [CmsRsaSignaturePadding](arkts-devicecertificate-cert-cmsrsasignaturepadding-e.md)
 

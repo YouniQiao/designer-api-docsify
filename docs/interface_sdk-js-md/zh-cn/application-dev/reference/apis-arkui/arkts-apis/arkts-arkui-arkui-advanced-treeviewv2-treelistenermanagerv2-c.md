@@ -38,7 +38,7 @@ static getInstance(): TreeListenerManagerV2
 
 | 类型 | 说明 |
 | --- | --- |
-| [TreeListenerManagerV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-treeviewv2-treelistenermanagerv2-c.md) | 返回获取到的树视图组件的监听管理器单例对象。 |
+| [TreeListenerManagerV2](arkts-arkui-arkui-advanced-treeviewv2-treelistenermanagerv2-c.md) | 返回获取到的树视图组件的监听管理器单例对象。 |
 
 ## getTreeListener
 
@@ -66,5 +66,5 @@ getTreeListener(): TreeListenerV2
 
 | 类型 | 说明 |
 | --- | --- |
-| [TreeListenerV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-treeviewv2-treelistenerv2-c.md) | 返回获取到的树视图监听器实例。 |
+| [TreeListenerV2](arkts-arkui-arkui-advanced-treeviewv2-treelistenerv2-c.md) | 返回获取到的树视图监听器实例。 |
 

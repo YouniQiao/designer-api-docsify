@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { PluginComponentTemplate } from '@kit.ArkUI';
+import { PluginComponentTemplate } from 'PluginComponentTemplate';
 ```
 
 ## push

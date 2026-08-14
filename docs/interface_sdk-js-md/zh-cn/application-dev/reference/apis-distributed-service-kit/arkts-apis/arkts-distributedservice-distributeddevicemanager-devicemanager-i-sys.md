@@ -482,7 +482,7 @@ getOsTypeByNetworkId(networkId: string): int
 | [11600102](../../apis-distributedservice-kit/errorcode-device-manager.md#11600102-获取服务失败) | Failed to obtain service. |
 | [201](../../errorcode-universal.md#201-权限校验失败) | User permission verify failed. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | The caller is not a system application. |
-| 11600110 | Invalid network ID. |
+| [11600110](../../apis-distributedservice-kit/errorcode-device-manager.md#11600110-无效的网络id) | Invalid network ID. |
 
 ## offReplyResult
 

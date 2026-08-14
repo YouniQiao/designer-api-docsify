@@ -42,7 +42,7 @@ WantAgent仅能使用一次。
 NO_BUILD_FLAG
 ```
 
-如果描述WantAgent对象不存在，则不创建它，直接返回null。
+如果指定WantAgent对象不存在，则不创建它，直接返回null。
 
 **起始版本：** 7
 

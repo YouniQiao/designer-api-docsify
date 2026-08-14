@@ -3,7 +3,21 @@
 ## Modules to Import
 
 ```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
+import { ConflictFiles } from 'ConflictFiles';
+import { FileFilter } from 'FileFilter';
+import { Filter } from 'Filter';
+import { Options } from 'Options';
+import { ReaderIteratorResult } from 'ReaderIteratorResult';
+import { WatchEvent } from 'WatchEvent';
+import { WatchEventListener } from 'WatchEventListener';
+import { Watcher } from 'Watcher';
+import { ReadOptions } from 'ReadOptions';
+import { ReadTextOptions } from 'ReadTextOptions';
+import { WriteOptions } from 'WriteOptions';
+import { ListFileExtOptions } from 'ListFileExtOptions';
+import { ListFileOptions } from 'ListFileOptions';
+import { DfsListeners } from 'DfsListeners';
+import { TaskSignal } from 'TaskSignal';
 ```
 
 ## openSync
@@ -31,7 +45,7 @@ Opens a file or directory. This API returns the result synchronously. This API s
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path or URI of a file or directory to open. |
-| mode | number | No | Mode for opening the file or directory. You must specify one of the following options. By default, the file is opened in read-only mode.&lt;br&gt;- **OpenMode.READ_ONLY(0o0)**: Open the file in read-only mode.&lt;br&gt;- **OpenMode.WRITE_ONLY(0o1)**: Open the file in write-only mode.&lt;br&gt;- **OpenMode.READ_WRITE(0o2)**: Open the file in read/write mode.&lt;br&gt;You can also specify the following options, separated by a bitwise OR operator (\|). By default, no additional options are given.&lt;br&gt;- **OpenMode.CREATE(0o100)**: If the file does not exist, create it.&lt;br&gt;- **OpenMode.TRUNC(0o1000)**: If the file exists and is opened in write mode, truncate the file length to 0.&lt;br&gt;- **OpenMode.APPEND(0o2000)**: Open the file in append mode. New data will be added to the end of the file.&lt;br&gt;- **OpenMode.NONBLOCK(0o4000)**: If **path** points to a named pipe (also known as a FIFO), block special file, or character special file, perform non-blocking operations on the opened file and in subsequent I/Os.&lt;br&gt;- **OpenMode.DIR(0o200000)**: If **path** does not point to a directory, throw an exception. The write permission is not allowed.&lt;br&gt;- **OpenMode.NOFOLLOW(0o400000)**: If **path** points to a symbolic link, throw an exception.&lt;br&gt;- **OpenMode.SYNC(0o4010000)**: Open the file in synchronous I/O mode.&lt;br&gt;- **OpenMode.UNCACHE(0o10000000000)**: Open the file in uncache I/O mode, This option is supported starting from API version 26.0.0. |
+| mode | number | No | Mode for opening the file or directory. You must specify one of the following options. By default, the file is opened in read-only mode.<br>- **OpenMode.READ_ONLY(0o0)**: Open the file in read-only mode.<br>- **OpenMode.WRITE_ONLY(0o1)**: Open the file in write-only mode.<br>- **OpenMode.READ_WRITE(0o2)**: Open the file in read/write mode.<br>You can also specify the following options, separated by a bitwise OR operator (\|). By default, no additional options are given.<br>- **OpenMode.CREATE(0o100)**: If the file does not exist, create it.<br>- **OpenMode.TRUNC(0o1000)**: If the file exists and is opened in write mode, truncate the file length to 0.<br>- **OpenMode.APPEND(0o2000)**: Open the file in append mode. New data will be added to the end of the file.<br>- **OpenMode.NONBLOCK(0o4000)**: If **path** points to a named pipe (also known as a FIFO), block special file, or character special file, perform non-blocking operations on the opened file and in subsequent I/Os.<br>- **OpenMode.DIR(0o200000)**: If **path** does not point to a directory, throw an exception. The write permission is not allowed.<br>- **OpenMode.NOFOLLOW(0o400000)**: If **path** points to a symbolic link, throw an exception.<br>- **OpenMode.SYNC(0o4010000)**: Open the file in synchronous I/O mode.<br>- **OpenMode.UNCACHE(0o10000000000)**: Open the file in uncache I/O mode, This option is supported starting from API version 26.0.0. |
 
 **Return value:**
 

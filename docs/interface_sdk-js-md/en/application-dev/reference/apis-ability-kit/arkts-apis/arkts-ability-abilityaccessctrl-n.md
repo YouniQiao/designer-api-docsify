@@ -13,7 +13,9 @@
 ## Modules to Import
 
 ```TypeScript
-import { Context, Permissions, PermissionRequestResult } from '@kit.AbilityKit';
+import { Context } from 'Context';
+import { PermissionRequestResult } from 'PermissionRequestResult';
+import { Permissions } from 'Permissions';
 ```
 
 ## Summary
@@ -38,14 +40,6 @@ import { Context, Permissions, PermissionRequestResult } from '@kit.AbilityKit';
 | --- | --- |
 | [AtManager](arkts-ability-abilityaccessctrl-atmanager-i-sys.md) | Program access control management class, providing capabilities such as permission verification, runtime permission dialog box request, settings page authorization guidance, global switch request, and permission status monitoring. Obtain an instance through [createAtManager](arkts-ability-abilityaccessctrl-createatmanager-f.md#createAtManager). |
 | [PermissionStatusInfo](arkts-ability-abilityaccessctrl-permissionstatusinfo-i-sys.md) | Indicates the permission status. |
-| [CliInfo](arkts-ability-abilityaccessctrl-cliinfo-i-sys.md) | Represents CLI (Command Line Interface) information. |
-| [PermissionDialogDetail](arkts-ability-abilityaccessctrl-permissiondialogdetail-i-sys.md) | Represents the permission dialog information of a single command. |
-| [PermissionDialogResult](arkts-ability-abilityaccessctrl-permissiondialogresult-i-sys.md) | Represents the permission dialog query result. |
-| [CliPermissionDetail](arkts-ability-abilityaccessctrl-clipermissiondetail-i-sys.md) | Represents the status information of a single CLI permission declared by a CLI command. |
-| [CliCommandPermissionResult](arkts-ability-abilityaccessctrl-clicommandpermissionresult-i-sys.md) | Represents the permission information of a single CLI command. |
-| [CliPermissionsResult](arkts-ability-abilityaccessctrl-clipermissionsresult-i-sys.md) | Represents the CLI permission query result. |
-| [CliAuthInfo](arkts-ability-abilityaccessctrl-cliauthinfo-i-sys.md) | Represents CLI authorization information. |
-| [ToolAuthResult](arkts-ability-abilityaccessctrl-toolauthresult-i-sys.md) | Represents the tool authorization result. |
 <!--DelEnd-->
 
 ### Enums
@@ -64,6 +58,5 @@ import { Context, Permissions, PermissionRequestResult } from '@kit.AbilityKit';
 | Name | Description |
 | --- | --- |
 | [PermissionRequestToggleStatus](arkts-ability-abilityaccessctrl-permissionrequesttogglestatus-e-sys.md) | Enumerates the permission toggle states. |
-| [PermissionDecisionStatus](arkts-ability-abilityaccessctrl-permissiondecisionstatus-e-sys.md) | Enumerates the permission decision statuses. |
 <!--DelEnd-->
 

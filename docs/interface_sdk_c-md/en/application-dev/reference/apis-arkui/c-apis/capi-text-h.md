@@ -23,6 +23,7 @@ Defines a set of Text enum and interface.
 | [OH_ArkUI_TextController](capi-arkui-nativemodule-oh-arkui-textcontroller.md) | OH_ArkUI_TextController | Defines controller for text. |
 | [OH_ArkUI_FontWeightConfigs](capi-arkui-nativemodule-oh-arkui-fontweightconfigs.md) | OH_ArkUI_FontWeightConfigs | Defines the font weight configuration of text. |
 | [OH_ArkUI_FontConfigs](capi-arkui-nativemodule-oh-arkui-fontconfigs.md) | OH_ArkUI_FontConfigs | Defines the font configuration of text. |
+| [OH_ArkUI_NativeModule_LineSpacingOptions](capi-arkui-nativemodule-oh-arkui-nativemodule-linespacingoptions.md) | OH_ArkUI_NativeModule_LineSpacingOptions | Defines the line spacing options for text. |
 
 ### Enum
 
@@ -73,6 +74,10 @@ Defines a set of Text enum and interface.
 | [void OH_ArkUI_FontConfigs_Destroy(OH_ArkUI_FontConfigs* option)](#oh_arkui_fontconfigs_destroy) | Destroy an option object for font configuration of text. |
 | [void OH_ArkUI_FontConfigs_SetFontWeightConfigs(OH_ArkUI_FontConfigs* option, OH_ArkUI_FontWeightConfigs* fontWeightConfigs)](#oh_arkui_fontconfigs_setfontweightconfigs) | Sets the font weight configs of an option object for font configuration of text. |
 | [OH_ArkUI_FontWeightConfigs* OH_ArkUI_FontConfigs_GetFontWeightConfigs(OH_ArkUI_FontConfigs* option)](#oh_arkui_fontconfigs_getfontweightconfigs) | Gets the font weight configs of an option object for font configuration of text. |
+| [OH_ArkUI_NativeModule_LineSpacingOptions *OH_ArkUI_NativeModule_LineSpacingOptions_Create()](#oh_arkui_nativemodule_linespacingoptions_create) | Creates a line spacing options object for text. When the object is no longer used,call [OH_ArkUI_NativeModule_LineSpacingOptions_Destroy](capi-text-h.md#oh_arkui_nativemodule_linespacingoptions_destroy) to destroy it. |
+| [void OH_ArkUI_NativeModule_LineSpacingOptions_Destroy(OH_ArkUI_NativeModule_LineSpacingOptions *options)](#oh_arkui_nativemodule_linespacingoptions_destroy) | Destroys the line spacing options object. |
+| [ArkUI_ErrorCode OH_ArkUI_NativeModule_LineSpacingOptions_SetOnlyBetweenLines(OH_ArkUI_NativeModule_LineSpacingOptions *options, bool onlyBetweenLines)](#oh_arkui_nativemodule_linespacingoptions_setonlybetweenlines) | Sets the onlyBetweenLines parameter for the line spacing options.When set to true, line spacing is only applied between lines, not for the first and last lines.When set to false, line spacing is applied uniformly to all lines. |
+| [ArkUI_ErrorCode OH_ArkUI_NativeModule_LineSpacingOptions_GetOnlyBetweenLines(const OH_ArkUI_NativeModule_LineSpacingOptions *options, bool *onlyBetweenLines)](#oh_arkui_nativemodule_linespacingoptions_getonlybetweenlines) | Gets the onlyBetweenLines parameter from the line spacing options. |
 
 ## Enum type description
 
@@ -892,5 +897,91 @@ Gets the font weight configs of an option object for font configuration of text.
 | Type | Description |
 | -- | -- |
 | [OH_ArkUI_FontWeightConfigs*](capi-arkui-nativemodule-oh-arkui-fontweightconfigs.md) | Returns the font weight configs. |
+
+### OH_ArkUI_NativeModule_LineSpacingOptions_Create()
+
+```c
+OH_ArkUI_NativeModule_LineSpacingOptions *OH_ArkUI_NativeModule_LineSpacingOptions_Create()
+```
+
+**Description**
+
+Creates a line spacing options object for text. When the object is no longer used,call [OH_ArkUI_NativeModule_LineSpacingOptions_Destroy](capi-text-h.md#oh_arkui_nativemodule_linespacingoptions_destroy) to destroy it.
+
+**Since**: 26.0.0
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [OH_ArkUI_NativeModule_LineSpacingOptions *](capi-arkui-nativemodule-oh-arkui-nativemodule-linespacingoptions.md) | Pointer to the [OH_ArkUI_NativeModule_LineSpacingOptions](capi-arkui-nativemodule-oh-arkui-nativemodule-linespacingoptions.md) object. |
+
+### OH_ArkUI_NativeModule_LineSpacingOptions_Destroy()
+
+```c
+void OH_ArkUI_NativeModule_LineSpacingOptions_Destroy(OH_ArkUI_NativeModule_LineSpacingOptions *options)
+```
+
+**Description**
+
+Destroys the line spacing options object.
+
+**Since**: 26.0.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_ArkUI_NativeModule_LineSpacingOptions](capi-arkui-nativemodule-oh-arkui-nativemodule-linespacingoptions.md) *options | [in] Pointer to the [OH_ArkUI_NativeModule_LineSpacingOptions](capi-arkui-nativemodule-oh-arkui-nativemodule-linespacingoptions.md) object. |
+
+### OH_ArkUI_NativeModule_LineSpacingOptions_SetOnlyBetweenLines()
+
+```c
+ArkUI_ErrorCode OH_ArkUI_NativeModule_LineSpacingOptions_SetOnlyBetweenLines(OH_ArkUI_NativeModule_LineSpacingOptions *options, bool onlyBetweenLines)
+```
+
+**Description**
+
+Sets the onlyBetweenLines parameter for the line spacing options.When set to true, line spacing is only applied between lines, not for the first and last lines.When set to false, line spacing is applied uniformly to all lines.
+
+**Since**: 26.0.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_ArkUI_NativeModule_LineSpacingOptions](capi-arkui-nativemodule-oh-arkui-nativemodule-linespacingoptions.md) *options | [in] Pointer to the [OH_ArkUI_NativeModule_LineSpacingOptions](capi-arkui-nativemodule-oh-arkui-nativemodule-linespacingoptions.md) object. |
+| bool onlyBetweenLines | [in] Whether line spacing is only applied between lines.True means only between lines, false means uniformly to all lines.The default value is false. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.<br>     <ul><br>     <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>     <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if the options parameter is null.</li><br>     </ul> |
+
+### OH_ArkUI_NativeModule_LineSpacingOptions_GetOnlyBetweenLines()
+
+```c
+ArkUI_ErrorCode OH_ArkUI_NativeModule_LineSpacingOptions_GetOnlyBetweenLines(const OH_ArkUI_NativeModule_LineSpacingOptions *options, bool *onlyBetweenLines)
+```
+
+**Description**
+
+Gets the onlyBetweenLines parameter from the line spacing options.
+
+**Since**: 26.0.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [const OH_ArkUI_NativeModule_LineSpacingOptions](capi-arkui-nativemodule-oh-arkui-nativemodule-linespacingoptions.md) *options | [in] Pointer to the [OH_ArkUI_NativeModule_LineSpacingOptions](capi-arkui-nativemodule-oh-arkui-nativemodule-linespacingoptions.md) object. |
+| bool *onlyBetweenLines | [out] Output parameter. Pointer to a bool variable to receive the value.True means only between lines, false means uniformly to all lines.The default value is false. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Result code.<br>     <ul><br>     <li>[ARKUI_ERROR_CODE_NO_ERROR](capi-error-code-h.md#arkui_errorcode) if the operation is successful.</li><br>     <li>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-error-code-h.md#arkui_errorcode) if any parameter is null.</li><br>     </ul> |
 
 

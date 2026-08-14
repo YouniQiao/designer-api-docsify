@@ -15,7 +15,7 @@ Represents the message authentication code (MAC) parameters. You need to constru
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from 'cryptoFramework';
 ```
 
 ## algName

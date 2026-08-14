@@ -27,7 +27,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { ConfigurationConstant } from '@kit.AbilityKit';
+import { ConfigurationConstant } from 'ConfigurationConstant';
 ```
 
 ## Summary

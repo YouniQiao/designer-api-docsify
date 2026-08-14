@@ -15,7 +15,7 @@ Defines the frame info when fetch picture form a video.
 ## Modules to Import
 
 ```TypeScript
-import { media } from '@kit.MediaKit';
+import { media } from 'media';
 ```
 
 ## actualTimeUs

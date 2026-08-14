@@ -27,7 +27,7 @@ export declare function Polyline(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [PolylineOptions](arkts-arkui-polyline-polylineoptions-i.md) | 否 | Polyline绘制区域。&lt;br/&gt;异常值undefined和null按照无效值处理，本次设置不生效。 |
+| options | [PolylineOptions](arkts-arkui-polyline-polylineoptions-i.md) | 否 | Polyline绘制区域。<br/>异常值undefined和null按照无效值处理，本次设置不生效。 |
 
 **返回值：**
 

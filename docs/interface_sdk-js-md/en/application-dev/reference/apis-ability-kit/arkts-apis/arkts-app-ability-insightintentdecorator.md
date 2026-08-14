@@ -3,7 +3,14 @@
 ## Modules to Import
 
 ```TypeScript
-import { InsightIntentFunction, InsightIntentForm, InsightIntentLink, InsightIntentEntity, LinkParamCategory, InsightIntentPage, InsightIntentEntry, InsightIntentFunctionMethod } from '@kit.AbilityKit';
+import { InsightIntentLink } from 'InsightIntentLink';
+import { InsightIntentPage } from 'InsightIntentPage';
+import { InsightIntentFunctionMethod } from 'InsightIntentFunctionMethod';
+import { InsightIntentFunction } from 'InsightIntentFunction';
+import { InsightIntentEntry } from 'InsightIntentEntry';
+import { LinkParamCategory } from 'LinkParamCategory';
+import { InsightIntentForm } from 'InsightIntentForm';
+import { InsightIntentEntity } from 'InsightIntentEntity';
 ```
 
 ## Summary

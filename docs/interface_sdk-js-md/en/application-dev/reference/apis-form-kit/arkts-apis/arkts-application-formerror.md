@@ -27,7 +27,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formError } from '@kit.FormKit';
+import { formError } from 'formError';
 ```
 
 ## Summary

@@ -17,7 +17,7 @@ Returns the list of onscreen awareness information.
 ## Modules to Import
 
 ```TypeScript
-import { onScreen } from '@kit.MultimodalAwarenessKit';
+import { onScreen } from 'onScreen';
 ```
 
 ## appIndex
@@ -98,7 +98,7 @@ Application bundle name.
 collectStrategy?: int
 ```
 
-Page collection policy, which is the bitwise OR operation combination of &lt;br&gt; CollectStrategy.
+Page collection policy, which is the bitwise OR operation combination of <br> CollectStrategy.
 
 **Type:** int
 

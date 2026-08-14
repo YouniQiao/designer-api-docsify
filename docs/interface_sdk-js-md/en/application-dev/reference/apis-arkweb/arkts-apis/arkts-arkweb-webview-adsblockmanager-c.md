@@ -15,7 +15,7 @@ This class is used to set adblock config.
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'webview';
 ```
 
 ## addAdsBlockAllowedList
@@ -48,7 +48,7 @@ Add items to Ads Block Allow list. By default, ads block is allowed for all page
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 18 and later |
 
 ## addAdsBlockDisallowedList
@@ -57,7 +57,7 @@ Add items to Ads Block Allow list. By default, ads block is allowed for all page
 static addAdsBlockDisallowedList(domainSuffixes: Array<string>): void
 ```
 
-Add items to Ads Block Disallow list. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; The domain name set by this API is not persistent; they need to be set again after the application is restarted. The ad blocking feature matches website URLs based on the suffix. For example, if the disallowed list contains **'example.com'** or **'www.example.com'**, then ad blocking will be disabled for sites **https://www.example.com** and **https://m.example.com**. &lt;/p&gt;
+Add items to Ads Block Disallow list. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<br> The domain name set by this API is not persistent; they need to be set again after the application is restarted. The ad blocking feature matches website URLs based on the suffix. For example, if the disallowed list contains **'example.com'** or **'www.example.com'**, then ad blocking will be disabled for sites **https://www.example.com** and **https://m.example.com**. &lt;/p&gt;
 
 **Since:** 12
 
@@ -81,7 +81,7 @@ Add items to Ads Block Disallow list. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 18 and later |
 
 ## clearAdsBlockAllowedList
@@ -166,7 +166,7 @@ remove items from Ads Block Allowed list.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 18 and later |
 
 ## removeAdsBlockDisallowedList
@@ -199,7 +199,7 @@ remove items from Ads Block Disallowed list.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 18 and later |
 
 ## setAdsBlockRules
@@ -208,7 +208,7 @@ remove items from Ads Block Disallowed list.
 static setAdsBlockRules(rulesFile: string, replace: boolean): void
 ```
 
-set Ads Block ruleset file, containing easylist rules. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:&lt;br&gt; The ad blocking rules set by this API will be persistently stored after successful internal parsing; you do not need to set them again after the application is restarted. &lt;/p&gt;
+set Ads Block ruleset file, containing easylist rules. &lt;p&gt;&lt;strong&gt;API Note&lt;/strong&gt;:<br> The ad blocking rules set by this API will be persistently stored after successful internal parsing; you do not need to set them again after the application is restarted. &lt;/p&gt;
 
 **Since:** 12
 
@@ -233,6 +233,6 @@ set Ads Block ruleset file, containing easylist rules. &lt;p&gt;&lt;strong&gt;AP
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 18 and later |
 

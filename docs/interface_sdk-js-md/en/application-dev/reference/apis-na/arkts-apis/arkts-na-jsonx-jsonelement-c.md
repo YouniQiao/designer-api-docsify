@@ -36,7 +36,7 @@ Gets a JSON element from an array by index.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | The index to look up. &lt;br&gt;The value should be an integer. |
+| index | int | Yes | The index to look up. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -534,7 +534,7 @@ Creates a new JSON element containing an integer value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | The integer value to store. &lt;br&gt;The value should be an integer. |
+| value | int | Yes | The integer value to store. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -1165,7 +1165,7 @@ Sets the current JsonElement to an integer value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | The integer value to set. &lt;br&gt;The value should be an integer. |
+| value | int | Yes | The integer value to set. <br>The value should be an integer. |
 
 ## setLong
 
@@ -1655,7 +1655,7 @@ Attempts to get an integer value from an object by key. Returns the fallback val
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | key | string | Yes | The key to look up. |
-| fallback | int | Yes | The fallback value to return if the key is not found. &lt;br&gt;The value should be an integer. |
+| fallback | int | Yes | The fallback value to return if the key is not found. <br>The value should be an integer. |
 
 **Return value:**
 

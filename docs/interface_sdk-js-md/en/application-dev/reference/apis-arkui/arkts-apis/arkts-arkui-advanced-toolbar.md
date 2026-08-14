@@ -3,7 +3,11 @@
 ## Modules to Import
 
 ```TypeScript
-import { ToolBarOption, ItemState, ToolBar, ToolBarOptions, ToolBarModifier } from '@kit.ArkUI';
+import { ItemState } from 'ItemState';
+import { ToolBar } from 'ToolBar';
+import { ToolBarOption } from 'ToolBarOption';
+import { ToolBarOptions } from 'ToolBarOptions';
+import { ToolBarModifier } from 'ToolBarModifier';
 ```
 
 ## Summary

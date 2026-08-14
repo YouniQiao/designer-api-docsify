@@ -31,7 +31,7 @@ export function getSimpleNumberFormatBySkeleton(skeleton: string, locale?: Intl.
 
 | 类型 | 说明 |
 | --- | --- |
-| [SimpleNumberFormat](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-simplenumberformat-c.md) | SimpleNumberFormat对象。 |
+| [SimpleNumberFormat](arkts-na-i18n-simplenumberformat-c.md) | SimpleNumberFormat对象。 |
 
 **错误码：**
 

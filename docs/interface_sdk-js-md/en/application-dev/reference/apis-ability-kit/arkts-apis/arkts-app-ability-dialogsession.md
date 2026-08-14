@@ -19,7 +19,7 @@ The dialogSession module provides APIs related to the dialog box.
 ## Modules to Import
 
 ```TypeScript
-import { dialogSession } from '@kit.AbilityKit';
+import { dialogSession } from 'dialogSession';
 ```
 
 ## Summary

@@ -145,7 +145,7 @@ Adds a text span. If the caret in the component is blinking, the caret position 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| content | ResourceStr | Yes | Text content.&lt;br&gt;The Resource type is supported since API version 20.<br>**Since:** 20 |
+| content | ResourceStr | Yes | Text content.<br>The Resource type is supported since API version 20.<br>**Since:** 20 |
 | options | [RichEditorTextSpanOptions](arkts-arkui-richeditortextspanoptions-i.md) | No | Text options. |
 
 **Return value:**
@@ -254,7 +254,7 @@ Obtains the paragraph information within a specified range.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[RichEditorParagraphResult](arkts-arkui-richeditorparagraphresult-i.md)&gt; | Information about the selected paragraphs. &lt;br&gt;If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
+| Array&lt;[RichEditorParagraphResult](arkts-arkui-richeditorparagraphresult-i.md)&gt; | Information about the selected paragraphs. <br>If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
 
 ## getSelection
 
@@ -282,7 +282,7 @@ Obtains the range and span information of the selected content. If no text is se
 
 | Type | Description |
 | --- | --- |
-| [RichEditorSelection](arkts-arkui-richeditorselection-i.md) | Provides information about the selected content. &lt;br&gt;If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
+| [RichEditorSelection](arkts-arkui-richeditorselection-i.md) | Provides information about the selected content. <br>If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
 
 ## getSpans
 
@@ -316,7 +316,7 @@ Obtains span information.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[RichEditorImageSpanResult](arkts-arkui-richeditorimagespanresult-i.md) \| [RichEditorTextSpanResult](arkts-arkui-richeditortextspanresult-i.md)&gt; | Text and image span information. &lt;br&gt;If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
+| Array&lt;[RichEditorImageSpanResult](arkts-arkui-richeditorimagespanresult-i.md) \| [RichEditorTextSpanResult](arkts-arkui-richeditortextspanresult-i.md)&gt; | Text and image span information. <br>If no component is bound to the controller or the component bound to the controller is released, **undefined** is returned. |
 
 ## toStyledString
 

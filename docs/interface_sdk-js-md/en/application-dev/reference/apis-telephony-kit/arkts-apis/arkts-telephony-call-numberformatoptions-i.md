@@ -15,7 +15,7 @@ Provides an option for number formatting.
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'call';
 ```
 
 ## countryCode

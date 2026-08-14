@@ -15,7 +15,18 @@ Declare ContentItemV2
 ## Modules to Import
 
 ```TypeScript
-import { OperateCheckV2Options, ComposeListItemV2, IconTypeV2, OperateIconV2, OperateCheckV2, OperateItemV2, OperateItemV2Options, OperateIconV2Options, OperateButtonV2, OperateButtonV2Options, ContentItemV2, ContentItemV2Options } from '@kit.ArkUI';
+import { ComposeListItemV2 } from 'ComposeListItemV2';
+import { ContentItemV2 } from 'ContentItemV2';
+import { ContentItemV2Options } from 'ContentItemV2Options';
+import { IconTypeV2 } from 'IconTypeV2';
+import { OperateButtonV2 } from 'OperateButtonV2';
+import { OperateButtonV2Options } from 'OperateButtonV2Options';
+import { OperateCheckV2 } from 'OperateCheckV2';
+import { OperateCheckV2Options } from 'OperateCheckV2Options';
+import { OperateIconV2 } from 'OperateIconV2';
+import { OperateIconV2Options } from 'OperateIconV2Options';
+import { OperateItemV2 } from 'OperateItemV2';
+import { OperateItemV2Options } from 'OperateItemV2Options';
 ```
 
 ## constructor

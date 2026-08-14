@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { TestRunner } from '@kit.TestKit';
+import { TestRunner } from 'TestRunner';
 ```
 
 ## Summary

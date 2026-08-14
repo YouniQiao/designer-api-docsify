@@ -20,7 +20,7 @@
 backgroundBlurStyle?: BlurStyle
 ```
 
-弹窗背板模糊材质。 &lt;br/&gt;默认值：从API版本26.0.0开始，为BlurStyle.NONE，API版本26.0.0之前，为BlurStyle.COMPONENT_ULTRA_THICK。 &lt;br/&gt;**说明：** &lt;br/&gt;设置为BlurStyle.NONE即可关闭背景虚化。当设置了backgroundBlurStyle为非NONE值时，则不要设置backgroundColor，否则颜色显示将不符合预期效果。
+弹窗背板模糊材质。 <br/>默认值：从API版本26.0.0开始，为BlurStyle.NONE，API版本26.0.0之前，为BlurStyle.COMPONENT_ULTRA_THICK。 <br/>**说明：** <br/>设置为BlurStyle.NONE即可关闭背景虚化。当设置了backgroundBlurStyle为非NONE值时，则不要设置backgroundColor，否则颜色显示将不符合预期效果。
 
 **类型：** BlurStyle
 
@@ -46,7 +46,7 @@ backgroundBlurStyle?: BlurStyle
 backgroundColor?: ResourceColor
 ```
 
-设置弹窗背板颜色。 &lt;br/&gt;默认值：Color.Transparent &lt;br/&gt;**说明：** &lt;br/&gt;backgroundColor会与模糊属性backgroundBlurStyle叠加产生效果，如果不符合预期，可将backgroundBlurStyle设置为BlurStyle.NONE，即可取消模糊。
+设置弹窗背板颜色。 <br/>默认值：Color.Transparent <br/>**说明：** <br/>backgroundColor会与模糊属性backgroundBlurStyle叠加产生效果，如果不符合预期，可将backgroundBlurStyle设置为BlurStyle.NONE，即可取消模糊。
 
 **类型：** ResourceColor
 
@@ -70,7 +70,7 @@ backgroundColor?: ResourceColor
 borderColor?: DialogOptionsBorderColor
 ```
 
-设置弹窗背板的边框颜色。 &lt;br/&gt;默认值：Color.Black &lt;br/&gt; 如果使用borderColor属性，需要和borderWidth属性一起使用。
+设置弹窗背板的边框颜色。 <br/>默认值：Color.Black <br/> 如果使用borderColor属性，需要和borderWidth属性一起使用。
 
 **类型：** [DialogOptionsBorderColor](../../apis-na/arkts-apis/arkts-na-promptaction-dialogoptionsbordercolor-t.md)
 
@@ -94,7 +94,7 @@ borderColor?: DialogOptionsBorderColor
 borderStyle?: DialogOptionsBorderStyle
 ```
 
-设置弹窗背板的边框样式。 &lt;br/&gt;默认值：BorderStyle.Solid。 &lt;br/&gt; 如果使用borderStyle属性，需要和borderWidth属性一起使用。
+设置弹窗背板的边框样式。 <br/>默认值：BorderStyle.Solid。 <br/> 如果使用borderStyle属性，需要和borderWidth属性一起使用。
 
 **类型：** [DialogOptionsBorderStyle](../../apis-na/arkts-apis/arkts-na-promptaction-dialogoptionsborderstyle-t.md)
 
@@ -214,7 +214,7 @@ shadow?: DialogOptionsShadow
 width?: Dimension
 ```
 
-设置弹窗背板的宽度。 &lt;br /&gt;**说明：** &lt;br&gt;- 默认最大值：400vp &lt;br /&gt;- 百分比参数方式：弹窗参考宽度基于所在窗口宽度调整。
+设置弹窗背板的宽度。 &lt;br /&gt;**说明：** <br>- 默认最大值：400vp &lt;br /&gt;- 百分比参数方式：弹窗参考宽度基于所在窗口宽度调整。
 
 **类型：** Dimension
 

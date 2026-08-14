@@ -15,7 +15,21 @@ Represents a **File** object opened by **open()**.
 ## Modules to Import
 
 ```TypeScript
-import { Options, ReaderIteratorResult, Watcher, ReadTextOptions, WatchEventListener, TaskSignal, WriteOptions, ListFileExtOptions, DfsListeners, Filter, ReadOptions, ListFileOptions, WatchEvent, FileFilter, ConflictFiles } from '@kit.CoreFileKit';
+import { ConflictFiles } from 'ConflictFiles';
+import { FileFilter } from 'FileFilter';
+import { Filter } from 'Filter';
+import { Options } from 'Options';
+import { ReaderIteratorResult } from 'ReaderIteratorResult';
+import { WatchEvent } from 'WatchEvent';
+import { WatchEventListener } from 'WatchEventListener';
+import { Watcher } from 'Watcher';
+import { ReadOptions } from 'ReadOptions';
+import { ReadTextOptions } from 'ReadTextOptions';
+import { WriteOptions } from 'WriteOptions';
+import { ListFileExtOptions } from 'ListFileExtOptions';
+import { ListFileOptions } from 'ListFileOptions';
+import { DfsListeners } from 'DfsListeners';
+import { TaskSignal } from 'TaskSignal';
 ```
 
 ## getParent
@@ -82,7 +96,7 @@ Applies an exclusive lock or a shared lock on this file in blocking mode. This A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| exclusive | boolean | No | Lock to apply.&lt;br&gt; The value **true** means an exclusive lock, and the value **false** (default) means a shared lock. |
+| exclusive | boolean | No | Lock to apply.<br> The value **true** means an exclusive lock, and the value **false** (default) means a shared lock. |
 
 **Return value:**
 
@@ -173,7 +187,7 @@ Applies an exclusive lock or a shared lock on this file in blocking mode. This A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| exclusive | boolean | Yes | Lock to apply.&lt;br&gt; The value **true** means an exclusive lock, and the value **false** (default) means a shared lock. |
+| exclusive | boolean | Yes | Lock to apply.<br> The value **true** means an exclusive lock, and the value **false** (default) means a shared lock. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -209,7 +223,7 @@ Applies an exclusive lock or a shared lock on this file in non-blocking mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| exclusive | boolean | No | Lock to apply.&lt;br&gt; The value **true** means an exclusive lock, and the value **false** (default) means a shared lock. |
+| exclusive | boolean | No | Lock to apply.<br> The value **true** means an exclusive lock, and the value **false** (default) means a shared lock. |
 
 **Error codes:**
 

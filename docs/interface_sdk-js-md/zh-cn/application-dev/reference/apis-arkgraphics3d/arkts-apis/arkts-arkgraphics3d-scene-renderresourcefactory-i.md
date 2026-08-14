@@ -167,12 +167,12 @@ function createMeshResource(): Promise<MeshResource> {
     { x: 0, y: 1, z: 1 }
   ];
   geometry.indices = [
-    0, 1, 2, 2, 3, 0,     // front
-    4, 5, 6, 6, 7, 4,     // back
-    0, 4, 5, 5, 1, 0,     // bottom
-    1, 5, 6, 6, 2, 1,     // right
-    3, 2, 6, 6, 7, 3,     // top
-    3, 7, 4, 4, 0, 3      // left
+    0, 1, 2, 2, 3, 0, // front
+    4, 5, 6, 6, 7, 4, // back
+    0, 4, 5, 5, 1, 0, // bottom
+    1, 5, 6, 6, 2, 1, // right
+    3, 2, 6, 6, 7, 3, // top
+    3, 7, 4, 4, 0, 3  // left
   ];
   geometry.topology = PrimitiveTopology.TRIANGLE_LIST;
   geometry.normals = [

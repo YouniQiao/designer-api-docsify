@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { appControl } from '@kit.AbilityKit';
+import { appControl } from 'appControl';
 ```
 
 ## setDisposedStatusSync
@@ -32,7 +32,7 @@ Sets the disposed status for an application. This API returns the result synchro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appId | string | Yes | ID of the target application.&lt;br&gt; **appId** is the unique identifier of an application and is determined by the bundle name and signature information of the application. For details about how to obtain **appId**, see How do I obtain appId from application information . |
+| appId | string | Yes | ID of the target application.<br> **appId** is the unique identifier of an application and is determined by the bundle name and signature information of the application. For details about how to obtain **appId**, see How do I obtain appId from application information . |
 | disposedWant | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Disposal intent of the application. |
 
 **Error codes:**

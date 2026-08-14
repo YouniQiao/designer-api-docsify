@@ -42,7 +42,7 @@ buttonType?: ButtonType
 icon?: SaveIconStyle
 ```
 
-设置保存控件的图标风格。 &lt;br&gt;不传入该参数表示不显示图标；若同时也不传text，整体配置将显示为默认样式。
+设置保存控件的图标风格。 <br>不传入该参数表示不显示图标；若同时也不传text，整体配置将显示为默认样式。
 
 **类型：** [SaveIconStyle](arkts-arkui-saveiconstyle-e.md)
 
@@ -66,7 +66,7 @@ icon?: SaveIconStyle
 text?: SaveDescription
 ```
 
-设置保存控件的文本描述。 &lt;br&gt;不传入该参数表示不显示文本描述；若同时也不传icon，整体配置将显示为默认样式。
+设置保存控件的文本描述。 <br>不传入该参数表示不显示文本描述；若同时也不传icon，整体配置将显示为默认样式。
 
 **类型：** [SaveDescription](arkts-arkui-savedescription-e.md)
 

@@ -21,7 +21,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { AtomicServiceMenuBar } from '@kit.ArkUI';
+import { AtomicServiceMenuBar } from 'AtomicServiceMenuBar';
 ```
 
 ## Summary

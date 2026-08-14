@@ -15,7 +15,7 @@ Represents the parameters for checking the certificate revocation status for a c
 ## Modules to Import
 
 ```TypeScript
-import { cert } from '@kit.DeviceCertificateKit';
+import { cert } from 'cert';
 ```
 
 ## crlDownloadURI

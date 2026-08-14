@@ -17,7 +17,7 @@ VideoOutput implements output information used in a video session. It inherits f
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'camera';
 ```
 
 ## getActiveFrameRate
@@ -130,7 +130,7 @@ Obtains the video rotation angle. - Device' natural orientation: the default ori
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceDegree | int | No | Device rotation angle, measured in degrees, within the range of [0, 360]. &lt;br&gt; Since API version 23, the input parameter **deviceDegree** is optional. If no parameter is passed, the system obtains the **deviceDegree** value to calculate the video rotation angle.<br>**Since:** 23 |
+| deviceDegree | int | No | Device rotation angle, measured in degrees, within the range of [0, 360]. <br> Since API version 23, the input parameter **deviceDegree** is optional. If no parameter is passed, the system obtains the **deviceDegree** value to calculate the video rotation angle.<br>**Since:** 23 |
 
 **Return value:**
 

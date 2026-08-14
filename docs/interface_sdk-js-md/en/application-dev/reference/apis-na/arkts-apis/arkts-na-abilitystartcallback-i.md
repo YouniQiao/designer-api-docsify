@@ -38,7 +38,7 @@ Called when the UIExtensionAbility fails to start.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | int | Yes | Result code returned when the UIExtensionAbility fails to start &lt;br&gt;The value range is all integers. |
+| code | int | Yes | Result code returned when the UIExtensionAbility fails to start <br>The value range is all integers. |
 | name | string | Yes | Name returned when the UIExtensionAbility fails to start. |
 | message | string | Yes | Error information returned when the UIExtensionAbility fails to start. |
 

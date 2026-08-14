@@ -15,7 +15,7 @@ Represents the configuration of a **Preferences** instance.
 ## Modules to Import
 
 ```TypeScript
-import { preferences } from '@kit.ArkData';
+import { preferences } from 'preferences';
 ```
 
 ## dataGroupId

@@ -15,7 +15,7 @@ Defines the return result of intent execution. The [generic type](../../../quick
 ## Modules to Import
 
 ```TypeScript
-import { insightIntent } from '@kit.AbilityKit';
+import { insightIntent } from 'insightIntent';
 ```
 
 ## interactionInfo

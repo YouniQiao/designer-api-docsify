@@ -58,9 +58,9 @@ function CloneNode() {
       let name = "cloneNode_";
       let clone = result.cloneNode(node, parent, name);
       if (clone) {
-        console.info("cloneNode success");
+        console.info("Succeeded in cloning node");
       } else {
-        console.error("cloneNode failed");
+        console.error("Failed to clone node");
       }
     });
 }
@@ -107,14 +107,14 @@ function createComponentTest(): Promise<SceneComponent> {
   return Scene.load($rawfile("gltf/DamagedHelmet/glTF/DamagedHelmet.glb"))
     .then(scene => {
       if (!scene) {
-        return Promise.reject(new Error("Scene load failed"));
+        return Promise.reject(new Error("Failed to load scene"));
       }
       // RenderConfigurationComponent为引擎内置组件，创建时无需依赖插件
       return scene.createComponent(scene.root, "RenderConfigurationComponent");
     })
     .then(component => {
       if (!component) {
-        return Promise.reject(new Error("createComponent failed"));
+        return Promise.reject(new Error("Failed to create component"));
       }
       return component;
     });
@@ -197,15 +197,15 @@ function getComponentTest() {
   Scene.load($rawfile("gltf/DamagedHelmet/glTF/DamagedHelmet.glb"))
     .then(async (result: Scene | undefined) => {
       if (!result) {
-        console.error("Scene load failed");
+        console.error("Failed to load scene");
         return;
       }
       console.info("TEST getComponentTest");
       let component = result.getComponent(result.root, "myComponent");
       if (component) {
-        console.info("getComponent success");
+        console.info("Succeeded in getting component");
       } else {
-        console.warn("Component not found");
+        console.error("Failed to get component");
       }
     });
 }
@@ -244,9 +244,9 @@ function getDefaultRenderContextTest() {
   console.info("TEST getDefaultRenderContextTest");
   const renderContext: RenderContext | null = Scene.getDefaultRenderContext();
   if (renderContext) {
-    console.info("getDefaultRenderContext success");
+    console.info("Succeeded in getting default render context");
   } else {
-    console.error("RenderContext is null");
+    console.error("Failed to get default render context");
   }
 }
 ```
@@ -518,8 +518,8 @@ async function loadModelFromAbsolutePath(context: common.UIAbilityContext): Prom
   // 使用绝对路径加载模型
   Scene.load(load_uri).then((scene: Scene) => {
     // 加载成功后的逻辑处理
-  }).catch((error: string) => {
-    console.error('Scene load failed: ' + error);
+  }).catch((err: Error) => {
+    console.error(`Failed to load scene. Message: ${err.message}`);
   });
 }
 ```

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'print';
 ```
 
 ## deletePrinterFromCups
@@ -34,7 +34,7 @@ Delete a printer from cups.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| printerName | string | Yes | Indicates the printer name. &lt;br&gt;Printer name to be deleted. |
+| printerName | string | Yes | Indicates the printer name. <br>Printer name to be deleted. |
 
 **Return value:**
 

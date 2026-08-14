@@ -18,7 +18,7 @@ Defines the Localized align rule options of relative container.
 bias?: Bias
 ```
 
-Offset of the component under the anchor constraints. &lt;br&gt;The value is the ratio of the distance to the left/upper anchor to the total distance between anchors.
+Offset of the component under the anchor constraints. <br>The value is the ratio of the distance to the left/upper anchor to the total distance between anchors.
 
 **类型：** [Bias](../../apis-arkui/arkts-apis/arkts-arkui-bias-i.md)
 

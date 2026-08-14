@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from 'hiAppEvent';
 ```
 
 ## setEventParam
@@ -30,9 +30,9 @@ Sets custom event parameters. This API uses a promise to return the result. Duri
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | Record&lt;string, [ParamType](arkts-performanceanalysis-hiappevent-paramtype-t.md)&gt; | Yes | Custom parameter object. The parameter name and value are defined as follows:&lt;br&gt;- A parameter name is a string that contains a maximum of 32 characters, including digits (0 to 9), letters (a to z)(A to Z), underscore (_), and dollar sign (\\$). It must start with a letter or dollar sign (\\$) and end with a digit or letter. &lt;br&gt;- The parameter value is of the [ParamType](arkts-performanceanalysis-hiappevent-paramtype-t.md#ParamType) and contains a maximum of 1024 characters.&lt;br&gt;- The number of parameters must be less than 64. |
+| params | Record&lt;string, [ParamType](arkts-performanceanalysis-hiappevent-paramtype-t.md)&gt; | Yes | Custom parameter object. The parameter name and value are defined as follows:<br>- A parameter name is a string that contains a maximum of 32 characters, including digits (0 to 9), letters (a to z)(A to Z), underscore (_), and dollar sign (\\$). It must start with a letter or dollar sign (\\$) and end with a digit or letter. <br>- The parameter value is of the [ParamType](arkts-performanceanalysis-hiappevent-paramtype-t.md#ParamType) and contains a maximum of 1024 characters.<br>- The number of parameters must be less than 64. |
 | domain | string | Yes | Event domain. The event domain can be associated with application events and system events (hiAppEvent.domain.OS). |
-| name | string | No | Event name. The default value is an empty string, which indicates all event names in the associated event domain. Event names can be used to associate application events and system events. System events can only be associated with the following events:&lt;br&gt;- [Crash event](../../../dfx/hiappevent-watcher-crash-events.md) (**hiAppEvent.event.APP_CRASH**)&lt;br&gt;- [Application freeze event](../../../dfx/hiappevent-watcher-freeze-events.md) (**hiAppEvent.event.APP_FREEZE**) &lt;br&gt;- [Resource leak event](../../../dfx/hiappevent-watcher-resourceleak-events.md) ( **hiAppEvent.event.RESOURCE_OVERLIMIT**).&lt;br&gt;**Note：**: Since API version 20, the [resource leak event](../../../dfx/hiappevent-watcher-resourceleak-events.md) is supported. |
+| name | string | No | Event name. The default value is an empty string, which indicates all event names in the associated event domain. Event names can be used to associate application events and system events. System events can only be associated with the following events:<br>- [Crash event](../../../dfx/hiappevent-watcher-crash-events.md) (**hiAppEvent.event.APP_CRASH**)<br>- [Application freeze event](../../../dfx/hiappevent-watcher-freeze-events.md) (**hiAppEvent.event.APP_FREEZE**) <br>- [Resource leak event](../../../dfx/hiappevent-watcher-resourceleak-events.md) ( **hiAppEvent.event.RESOURCE_OVERLIMIT**).<br>**Note：**: Since API version 20, the [resource leak event](../../../dfx/hiappevent-watcher-resourceleak-events.md) is supported. |
 
 **Return value:**
 
@@ -44,10 +44,10 @@ Sets custom event parameters. This API uses a promise to return the result. Duri
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [11101001](../errorcode-hiappevent.md#11101001-invalid-event-domain-name) | Invalid event domain. Possible causes: 1. Contain invalid characters; &lt;br&gt;2. Length is invalid. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; &lt;br&gt;2. Incorrect parameter types. |
-| [11101002](../errorcode-hiappevent.md#11101002-invalid-event-name) | Invalid event name. Possible causes: 1. Contain invalid characters; &lt;br&gt;2. Length is invalid. |
-| [11101005](../errorcode-hiappevent.md#11101005-invalid-event-parameter-name) | Invalid event parameter name. Possible causes: 1. Contain invalid characters; &lt;br&gt;2. Length is invalid. |
+| [11101001](../errorcode-hiappevent.md#11101001-invalid-event-domain-name) | Invalid event domain. Possible causes: 1. Contain invalid characters; <br>2. Length is invalid. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types. |
+| [11101002](../errorcode-hiappevent.md#11101002-invalid-event-name) | Invalid event name. Possible causes: 1. Contain invalid characters; <br>2. Length is invalid. |
+| [11101005](../errorcode-hiappevent.md#11101005-invalid-event-parameter-name) | Invalid event parameter name. Possible causes: 1. Contain invalid characters; <br>2. Length is invalid. |
 | [11101004](../errorcode-hiappevent.md#11101004-invalid-event-parameter-string-length) | Invalid string length of the event parameter. |
 | [11101007](../errorcode-hiappevent.md#11101007-invalid-number-of-custom-event-parameters) | The number of parameter keys exceeds the limit. |
 | [11100001](../errorcode-hiappevent.md#11100001-application-event-logging-disabled) | Function disabled. Possibly caused by the param disable in ConfigOption is true. |

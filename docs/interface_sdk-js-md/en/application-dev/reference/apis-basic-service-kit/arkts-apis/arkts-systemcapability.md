@@ -17,7 +17,7 @@ Provides interfaces to get system capability.
 ## Modules to Import
 
 ```TypeScript
-import { systemCapability } from '@kit.BasicServicesKit';
+import { systemCapability } from 'systemCapability';
 ```
 
 ## Summary

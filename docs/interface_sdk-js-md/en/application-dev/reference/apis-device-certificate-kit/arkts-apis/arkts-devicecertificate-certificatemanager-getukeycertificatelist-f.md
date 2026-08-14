@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { certificateManager } from '@kit.DeviceCertificateKit';
+import { certificateManager } from 'certificateManager';
 ```
 
 ## getUkeyCertificateList
@@ -45,11 +45,11 @@ Obtains the list of USB Key credential . This API uses a promise to return the r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [17500011](../errorcode-certManager.md#17500011-failed-to-validate-the-input-parameter) | Parameter verification failed. &lt;br&gt; Possible causes: the ukeyInfo parameter is invalid. For example, the parameter format is incorrect or the value range is invalid. |
+| [17500011](../errorcode-certManager.md#17500011-failed-to-validate-the-input-parameter) | Parameter verification failed. <br> Possible causes: the ukeyInfo parameter is invalid. For example, the parameter format is incorrect or the value range is invalid. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [17500010](../errorcode-certManager.md#17500010-failed-to-access-the-usb-credential) | Indicates that access USB Key service failed. |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. &lt;br&gt;The application does not have the permission required to call the API. |
-| [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; &lt;br&gt;2. Memory operation error; 3. File operation error. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. <br>The application does not have the permission required to call the API. |
+| [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed; <br>2. Memory operation error; 3. File operation error. |
 
 ## Examples
 

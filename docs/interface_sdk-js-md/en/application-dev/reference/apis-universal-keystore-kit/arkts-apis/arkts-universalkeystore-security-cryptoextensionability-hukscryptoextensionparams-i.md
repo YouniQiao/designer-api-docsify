@@ -15,7 +15,11 @@ Defines options used in the APIs.
 ## Modules to Import
 
 ```TypeScript
-import { HuksCryptoExtensionCertInfo, HuksCryptoExtensionResultCode, HuksCryptoExtensionParams, HuksCryptoExtensionParam, HuksCryptoExtensionResult } from '@kit.UniversalKeystoreKit';
+import { HuksCryptoExtensionCertInfo } from 'HuksCryptoExtensionCertInfo';
+import { HuksCryptoExtensionResult } from 'HuksCryptoExtensionResult';
+import { HuksCryptoExtensionResultCode } from 'HuksCryptoExtensionResultCode';
+import { HuksCryptoExtensionParam } from 'HuksCryptoExtensionParam';
+import { HuksCryptoExtensionParams } from 'HuksCryptoExtensionParams';
 ```
 
 ## inData

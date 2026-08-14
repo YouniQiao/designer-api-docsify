@@ -17,7 +17,7 @@ Details the space usage of system applications or system services.
 ## Modules to Import
 
 ```TypeScript
-import { storageStatistics } from '@kit.CoreFileKit';
+import { storageStatistics } from 'storageStatistics';
 ```
 
 ## businessName
@@ -74,7 +74,7 @@ Whether the space occupied by system applications or system services needs to be
 size: long
 ```
 
-The business size. &lt;br&gt;Unit: Byte.
+The business size. <br>Unit: Byte.
 
 **Type:** long
 

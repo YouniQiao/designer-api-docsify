@@ -19,7 +19,7 @@ Manager a2dp source profile.
 ## Modules to Import
 
 ```TypeScript
-import { bluetoothManager } from '@kit.ConnectivityKit';
+import { bluetoothManager } from 'bluetoothManager';
 ```
 
 ## connect
@@ -64,6 +64,18 @@ Connect to device with a2dp. On API 10 and above, the permission required by thi
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
+## Examples
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+try {
+    let a2dpSrc: bluetoothManager.A2dpSourceProfile = bluetoothManager.getProfileInstance(bluetoothManager.ProfileId.PROFILE_A2DP_SOURCE) as bluetoothManager.A2dpSourceProfile;
+    a2dpSrc.connect('XX:XX:XX:XX:XX:XX');
+} catch (err) {
+    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
+}
+```
+
 ## disconnect
 
 ```TypeScript
@@ -105,6 +117,18 @@ Disconnect to device with a2dp. On API 10 and above, the permission required by 
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+try {
+    let a2dpSrc: bluetoothManager.A2dpSourceProfile = bluetoothManager.getProfileInstance(bluetoothManager.ProfileId.PROFILE_A2DP_SOURCE) as bluetoothManager.A2dpSourceProfile;
+    a2dpSrc.disconnect('XX:XX:XX:XX:XX:XX');
+} catch (err) {
+    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
+}
+```
 
 ## getPlayingState
 
@@ -151,6 +175,18 @@ Obtains the playing state of device. On API 10 and above, the permission require
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
+
+## Examples
+
+```TypeScript
+import { BusinessError } from '@ohos.base';
+try {
+    let a2dpSrc: bluetoothManager.A2dpSourceProfile = bluetoothManager.getProfileInstance(bluetoothManager.ProfileId.PROFILE_A2DP_SOURCE) as bluetoothManager.A2dpSourceProfile;
+    let state: bluetoothManager.PlayingState  = a2dpSrc.getPlayingState('XX:XX:XX:XX:XX:XX');
+} catch (err) {
+    console.error("errCode:" + (err as BusinessError).code + ",errMessage:" + (err as BusinessError).message);
+}
+```
 
 ## off_connectionStateChange
 

@@ -349,7 +349,7 @@ getConfigurationString(configName: string): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| configName | string | 是 | 配置属性名，不能为空，长度不能超过4096字节。&lt;br&gt;如果参数长度超过4096字节，会抛出错误码401。&lt;br&gt;属性名参考 [PreDefinedConfigName](arkts-drm-drm-predefinedconfigname-e.md#PreDefinedConfigName)，具体支持的属性名由设备上DRM解决方案决定。 |
+| configName | string | 是 | 配置属性名，不能为空，长度不能超过4096字节。<br>如果参数长度超过4096字节，会抛出错误码401。<br>属性名参考 [PreDefinedConfigName](arkts-drm-drm-predefinedconfigname-e.md#PreDefinedConfigName)，具体支持的属性名由设备上DRM解决方案决定。 |
 
 **返回值：**
 

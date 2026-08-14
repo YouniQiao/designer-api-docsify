@@ -20,7 +20,7 @@ Defines style options for progress component.
 scaleCount?: int
 ```
 
-Defines the scaleCount property. The value should be an integer. Default value: 120. &lt;br&gt;If the value exceeds the value range, the progress bar is displayed as a ring without scale.
+Defines the scaleCount property. The value should be an integer. Default value: 120. <br>If the value exceeds the value range, the progress bar is displayed as a ring without scale.
 
 **Type:** int
 

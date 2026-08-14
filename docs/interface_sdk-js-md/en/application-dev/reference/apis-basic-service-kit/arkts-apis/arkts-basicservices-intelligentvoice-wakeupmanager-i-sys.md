@@ -17,7 +17,7 @@ Implements wakeup management.
 ## Modules to Import
 
 ```TypeScript
-import { intelligentVoice } from '@kit.BasicServicesKit';
+import { intelligentVoice } from 'intelligentVoice';
 ```
 
 ## clearUserData

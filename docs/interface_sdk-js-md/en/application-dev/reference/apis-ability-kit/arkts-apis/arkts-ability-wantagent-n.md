@@ -15,7 +15,7 @@ The WantAgent module encapsulates a [Want](arkts-ability-app-ability-want-want-c
 ## Modules to Import
 
 ```TypeScript
-import { WantAgent } from '@kit.AbilityKit';
+import { WantAgent } from 'WantAgent';
 ```
 
 ## Summary
@@ -33,8 +33,8 @@ import { WantAgent } from '@kit.AbilityKit';
 | [trigger](arkts-ability-wantagent-trigger-f.md#trigger) | Proactively triggers a WantAgent object. This API uses an asynchronous callback to return the result. |
 | [equal](arkts-ability-wantagent-equal-f.md#equal) | Checks whether two WantAgent objects are equal, so as to determine whether the same operation is from the same application. This API uses an asynchronous callback to return the result. |
 | [equal](arkts-ability-wantagent-equal-f.md#equal) | Checks whether two WantAgent objects are equal, so as to determine whether the same operation is from the same application. This API uses a promise to return the result. |
-| [getWantAgent](arkts-ability-wantagent-getwantagent-f.md#getWantAgent) | Obtains a WantAgent object. This API uses an asynchronous callback to return the result. If the creation fails, a null WantAgent object is returned. &lt;p&gt;**NOTE：**: &lt;br&gt;Third-party applications can set only their own abilities. &lt;/p&gt; |
-| [getWantAgent](arkts-ability-wantagent-getwantagent-f.md#getWantAgent) | Obtains a WantAgent object. This API uses a promise to return the result. If the creation fails, a null WantAgent object is returned. &lt;p&gt;**NOTE：**: &lt;br&gt;Third-party applications can set only their own abilities. &lt;/p&gt; |
+| [getWantAgent](arkts-ability-wantagent-getwantagent-f.md#getWantAgent) | Obtains a WantAgent object. This API uses an asynchronous callback to return the result. If the creation fails, a null WantAgent object is returned. &lt;p&gt;**NOTE：**: <br>Third-party applications can set only their own abilities. &lt;/p&gt; |
+| [getWantAgent](arkts-ability-wantagent-getwantagent-f.md#getWantAgent) | Obtains a WantAgent object. This API uses a promise to return the result. If the creation fails, a null WantAgent object is returned. &lt;p&gt;**NOTE：**: <br>Third-party applications can set only their own abilities. &lt;/p&gt; |
 | [getOperationType](arkts-ability-wantagent-getoperationtype-f.md#getOperationType) | Obtains the operation type of a WantAgent object. This API uses an asynchronous callback to return the result. |
 | [getOperationType](arkts-ability-wantagent-getoperationtype-f.md#getOperationType) | Obtains the operation type of a WantAgent object. This API uses a promise to return the result. |
 

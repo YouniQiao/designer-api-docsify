@@ -78,15 +78,15 @@ export default class EntryAbility extends UIExtensionAbility {
     // 创建子窗口
     extensionHostWindow.createSubWindowWithOptions('subWindowForHost', subWindowOpts)
       .then((subWindow: window.Window) => {
-        subWindow.setUIContent('pages/Index', (err, data) =>{
+        subWindow.setUIContent('pages/Index', (err, data) => {
           if (err && err.code) {
             return;
           }
-          subWindow?.resize(300, 300, (err, data) =>{
+          subWindow?.resize(300, 300, (err, data) => {
             if (err && err.code) {
               return;
             }
-            subWindow?.moveWindowTo(100, 100, (err, data) =>{
+            subWindow?.moveWindowTo(100, 100, (err, data) => {
               if (err && err.code) {
                 return;
               }
@@ -219,15 +219,15 @@ export default class EntryAbility extends UIExtensionAbility {
     // 创建子窗口
     extensionHostWindow.createSubWindowWithOptions('subWindowForHost', subWindowConfig, true)
       .then((subWindow: window.Window) => {
-        subWindow.setUIContent('pages/Index', (err, data) =>{
+        subWindow.setUIContent('pages/Index', (err, data) => {
           if (err && err.code) {
             return;
           }
-          subWindow?.resize(300, 300, (err, data) =>{
+          subWindow?.resize(300, 300, (err, data) => {
             if (err && err.code) {
               return;
             }
-            subWindow?.moveWindowTo(100, 100, (err, data) =>{
+            subWindow?.moveWindowTo(100, 100, (err, data) => {
               if (err && err.code) {
                 return;
               }
@@ -413,7 +413,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 export default class EntryAbility extends UIExtensionAbility {
   onSessionCreate(want: Want, session: UIExtensionContentSession) {
     const extensionHostWindow = session.getUIExtensionHostWindowProxy();
-    // 隐藏非安全窗口
+    // 隐藏不安全窗口
     extensionHostWindow.hideNonSecureWindows(true).then(() => {
       console.info(`Succeeded in hiding the non-secure windows.`);
     }).catch((err: BusinessError) => {
@@ -422,7 +422,7 @@ export default class EntryAbility extends UIExtensionAbility {
   }
   onSessionDestroy(session: UIExtensionContentSession) {
     const extensionHostWindow = session.getUIExtensionHostWindowProxy();
-    // 取消隐藏非安全窗口
+    // 取消隐藏不安全窗口
     extensionHostWindow.hideNonSecureWindows(false).then(() => {
       console.info(`Succeeded in showing the non-secure windows.`);
     }).catch((err: BusinessError) => {

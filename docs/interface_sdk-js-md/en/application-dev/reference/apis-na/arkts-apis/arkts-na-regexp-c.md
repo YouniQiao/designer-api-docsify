@@ -137,7 +137,7 @@ Advances the string index according to the Unicode flag.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | s | string | Yes | original string. |
-| index | int | Yes | current index. &lt;br&gt;The value should be an integer. |
+| index | int | Yes | current index. <br>The value should be an integer. |
 | unicode | boolean | Yes | whether to enable Unicode mode. |
 
 **Return value:**
@@ -252,7 +252,7 @@ Executes a match search on the string starting from the specified index.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | str | string | Yes | the string to match. |
-| index | int | Yes | the index to start matching from. &lt;br&gt;The value should be an integer. |
+| index | int | Yes | the index to start matching from. <br>The value should be an integer. |
 
 **Return value:**
 

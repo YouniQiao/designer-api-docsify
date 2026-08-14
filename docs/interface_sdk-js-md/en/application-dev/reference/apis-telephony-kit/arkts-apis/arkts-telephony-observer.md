@@ -15,7 +15,7 @@ The **observer** module provides event subscription management functions. You ca
 ## Modules to Import
 
 ```TypeScript
-import { observer } from '@kit.TelephonyKit';
+import { observer } from 'observer';
 ```
 
 ## Summary

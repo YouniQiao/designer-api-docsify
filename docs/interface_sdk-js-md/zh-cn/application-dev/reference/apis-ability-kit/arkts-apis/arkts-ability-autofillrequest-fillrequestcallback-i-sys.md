@@ -46,7 +46,7 @@ onCancel(fillContent?: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: &lt;br&gt;1.The input parameter is not valid parameter; &lt;br&gt;2. Mandatory parameters are left unspecified.<br>**适用版本：** 12+ |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br>1.The input parameter is not valid parameter; <br>2. Mandatory parameters are left unspecified.<br>**适用版本：** 12+ |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 | [202](../../errorcode-universal.md#202-系统api权限校验失败) | Permission denied, non-system app called system api. |
 

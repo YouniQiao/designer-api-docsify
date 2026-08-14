@@ -62,13 +62,13 @@ static deserialize(serializedData: Uint8Array): WebDownloadItem
 
 | 类型 | 说明 |
 | --- | --- |
-| [WebDownloadItem](../../apis-na/arkts-apis/arkts-na-webview-webdownloaditem-c.md) | 从字节数组反序列化为一个WebDownloadItem对象。 |
+| [WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md) | 从字节数组反序列化为一个WebDownloadItem对象。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types. &lt;br&gt;2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types. <br>2. Parameter verification failed. |
 
 ## getCurrentSpeed
 
@@ -172,7 +172,7 @@ getLastErrorCode(): WebDownloadErrorCode
 
 | 类型 | 说明 |
 | --- | --- |
-| [WebDownloadErrorCode](../../apis-na/arkts-apis/arkts-na-webview-webdownloaderrorcode-e.md) | 下载发生错误的时候的错误码。 |
+| [WebDownloadErrorCode](arkts-arkweb-webview-webdownloaderrorcode-e.md) | 下载发生错误的时候的错误码。 |
 
 ## getMethod
 
@@ -354,7 +354,7 @@ getState(): WebDownloadState
 
 | 类型 | 说明 |
 | --- | --- |
-| [WebDownloadState](../../apis-na/arkts-apis/arkts-na-webview-webdownloadstate-e.md) | 下载的状态。 |
+| [WebDownloadState](arkts-arkweb-webview-webdownloadstate-e.md) | 下载的状态。 |
 
 ## getSuggestedFileName
 
@@ -542,5 +542,5 @@ start(downloadPath: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types. &lt;br&gt;2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Incorrect parameter types. <br>2. Parameter verification failed. |
 

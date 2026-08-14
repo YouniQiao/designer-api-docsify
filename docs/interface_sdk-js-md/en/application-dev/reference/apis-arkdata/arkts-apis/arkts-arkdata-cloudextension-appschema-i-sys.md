@@ -17,7 +17,7 @@ Represents the application database schema.
 ## Modules to Import
 
 ```TypeScript
-import { cloudExtension } from '@kit.ArkData';
+import { cloudExtension } from 'cloudExtension';
 ```
 
 ## bundleName

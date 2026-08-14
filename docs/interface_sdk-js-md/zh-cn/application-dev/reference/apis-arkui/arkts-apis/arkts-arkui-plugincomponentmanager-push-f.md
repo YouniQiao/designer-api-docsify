@@ -24,7 +24,7 @@ function push(param: PushParameters, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| param | [PushParameters](../../apis-na/arkts-apis/arkts-na-plugincomponentmanager-pushparameters-i.md) | 是 | 推送组件的详细参数。 |
+| param | [PushParameters](arkts-arkui-plugincomponentmanager-pushparameters-i.md) | 是 | 推送组件的详细参数。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 此次接口调用的异步回调。 |
 
 ## 示例

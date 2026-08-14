@@ -17,7 +17,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { Retention, RetentionPolicy } from '@kit.ArkTS';
+import { Retention } from 'Retention';
+import { RetentionPolicy } from 'RetentionPolicy';
 ```
 
 ## Summary

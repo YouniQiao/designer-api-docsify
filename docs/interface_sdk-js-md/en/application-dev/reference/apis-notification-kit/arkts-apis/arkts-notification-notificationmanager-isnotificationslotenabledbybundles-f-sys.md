@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'notificationManager';
 ```
 
 ## isNotificationSlotEnabledByBundles
@@ -32,7 +32,7 @@ Checks whether a notification slot type is enabled for the specified application
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundles | Array&lt;BundleOption&gt; | Yes | Array of bundle information of the applications. &lt;br&gt;The maximum length is 1000 and cannot be empty. |
+| bundles | Array&lt;BundleOption&gt; | Yes | Array of bundle information of the applications. <br>The maximum length is 1000 and cannot be empty. |
 | type | SlotType | Yes | Notification slot type. All bundles share the same slot type. |
 
 **Return value:**

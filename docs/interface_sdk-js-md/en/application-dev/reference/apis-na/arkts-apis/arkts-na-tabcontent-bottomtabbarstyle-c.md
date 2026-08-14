@@ -206,7 +206,7 @@ Static constructor used to create a BottomTabBarStyle instance.
 padding(value: Padding | Dimension | LocalizedPadding): BottomTabBarStyle
 ```
 
-Set the padding of the bottom tab bar &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;It cannot be set in percentage. &lt;br&gt;When the parameter is of the Dimension type, the value applies to all sides. &lt;/p&gt;
+Set the padding of the bottom tab bar &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>It cannot be set in percentage. <br>When the parameter is of the Dimension type, the value applies to all sides. &lt;/p&gt;
 
 **Since:** 23
 
@@ -238,7 +238,7 @@ Set the padding of the bottom tab bar &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;
 symmetricExtensible(value: boolean): BottomTabBarStyle
 ```
 
-Sets whether the images and text on the bottom tab can be symmetrically extended by the minimum value of the available space on the left and right bottom tabs. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;This parameter is valid only between bottom tabs in fixed horizontal mode. &lt;/p&gt;
+Sets whether the images and text on the bottom tab can be symmetrically extended by the minimum value of the available space on the left and right bottom tabs. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>This parameter is valid only between bottom tabs in fixed horizontal mode. &lt;/p&gt;
 
 **Since:** 23
 

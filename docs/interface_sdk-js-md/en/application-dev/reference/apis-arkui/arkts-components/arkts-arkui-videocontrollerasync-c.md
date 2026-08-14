@@ -166,7 +166,7 @@ Sets the current playback time with specified seek mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | double | Yes | The target time in seconds. &lt;br&gt;Unit: Seconds. The value must be greater than or equal to 0. Value constraint: The maximum value is the total duration of the video. If the duration exceeds the maximum value, the system jumps to the end of the video. |
+| value | double | Yes | The target time in seconds. <br>Unit: Seconds. The value must be greater than or equal to 0. Value constraint: The maximum value is the total duration of the video. If the duration exceeds the maximum value, the system jumps to the end of the video. |
 | seekMode | [SeekMode](arkts-arkui-seekmode-e.md) | No | The seek mode to use for time adjustment. |
 
 ## start

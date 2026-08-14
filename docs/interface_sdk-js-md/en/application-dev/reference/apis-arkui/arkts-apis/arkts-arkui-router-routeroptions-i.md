@@ -15,7 +15,7 @@ Describes the page routing options.
 ## Modules to Import
 
 ```TypeScript
-import { router } from '@kit.ArkUI';
+import { router } from 'router';
 ```
 
 ## params

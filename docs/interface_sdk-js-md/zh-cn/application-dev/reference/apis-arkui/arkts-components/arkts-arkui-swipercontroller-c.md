@@ -40,8 +40,8 @@ changeIndex(index: number, useAnimation?: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | number | 是 | 指定页面在Swiper中的索引值。&lt;br/&gt;**说明：** &lt;br/&gt;设置的值小于0或大于最大页面索引时，取0。 |
-| useAnimation | boolean | 否 | 设置翻至指定页面时是否有动效，true表示有动效，false表示没有动效。&lt;br/&gt;默认值：false。 |
+| index | number | 是 | 指定页面在Swiper中的索引值。<br/>**说明：** <br/>设置的值小于0或大于最大页面索引时，取0。 |
+| useAnimation | boolean | 否 | 设置翻至指定页面时是否有动效，true表示有动效，false表示没有动效。<br/>默认值：false。 |
 
 ## changeIndex
 
@@ -71,8 +71,8 @@ changeIndex(index: number, animationMode?: SwiperAnimationMode | boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | number | 是 | 指定页面在Swiper中的索引值。&lt;br/&gt;**说明：** &lt;br/&gt;设置的值小于0或大于最大页面索引时，取0。 |
-| animationMode | [SwiperAnimationMode](arkts-arkui-swiperanimationmode-e.md) \| boolean | 否 | 设置翻页到指定页面的动效模式。&lt;br/&gt;默认值： SwiperAnimationMode.NO_ANIMATION&lt;br/&gt; **说明：** &lt;br/&gt;当传入true时有动效，等同于SwiperAnimationMode.DEFAULT_ANIMATION；当传入 false时无动效，等同于SwiperAnimationMode.NO_ANIMATION。 |
+| index | number | 是 | 指定页面在Swiper中的索引值。<br/>**说明：** <br/>设置的值小于0或大于最大页面索引时，取0。 |
+| animationMode | [SwiperAnimationMode](arkts-arkui-swiperanimationmode-e.md) \| boolean | 否 | 设置翻页到指定页面的动效模式。<br/>默认值： SwiperAnimationMode.NO_ANIMATION<br/> **说明：** <br/>当传入true时有动效，等同于SwiperAnimationMode.DEFAULT_ANIMATION；当传入 false时无动效，等同于SwiperAnimationMode.NO_ANIMATION。 |
 
 ## constructor
 
@@ -124,13 +124,13 @@ fakeDragBy(offset: number): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offset | number | 是 | 需要模拟拖拽的拖拽距离。&lt;br/&gt;正数表示向布局起点拖拽；负数表示向布局终点方向拖拽。 &lt;br&gt;单位为：vp。 |
+| offset | number | 是 | 需要模拟拖拽的拖拽距离。<br/>正数表示向布局起点拖拽；负数表示向布局终点方向拖拽。 <br>单位为：vp。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 是否消费传入的拖拽距离。&lt;br/&gt;true表示消费任意传入的拖拽距离；false表示当前没有在模拟拖拽中，或者已经拖拽到边界，没有消费传入的拖拽距离。&lt;br/&gt;设置0为不可消费的拖拽距离。 |
+| boolean | 是否消费传入的拖拽距离。<br/>true表示消费任意传入的拖拽距离；false表示当前没有在模拟拖拽中，或者已经拖拽到边界，没有消费传入的拖拽距离。<br/>设置0为不可消费的拖拽距离。 |
 
 ## finishAnimation
 
@@ -188,7 +188,7 @@ isFakeDragging(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 是否处在模拟拖拽状态。&lt;br/&gt;true表示当前处在模拟拖拽状态；false表示当前不处在模拟拖拽状态。 |
+| boolean | 是否处在模拟拖拽状态。<br/>true表示当前处在模拟拖拽状态；false表示当前不处在模拟拖拽状态。 |
 
 ## preloadItems
 
@@ -230,7 +230,7 @@ preloadItems(indices: Optional<Array<number>>): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter invalid. Possible causes: &lt;br&gt; 1. The parameter type is not Array&lt;number&gt;. &lt;br&gt; 2. The parameter is an empty array. &lt;br&gt; 3. The parameter contains an invalid index. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter invalid. Possible causes: <br> 1. The parameter type is not Array&lt;number&gt;. <br> 2. The parameter is an empty array. <br> 3. The parameter contains an invalid index. |
 | [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Controller not bound to component. |
 
 ## showNext
@@ -305,7 +305,7 @@ startFakeDrag(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 是否开启模拟拖拽功能。&lt;br/&gt;true表示开启模拟拖拽功能成功；false表示开启模拟拖拽功能失败。 |
+| boolean | 是否开启模拟拖拽功能。<br/>true表示开启模拟拖拽功能成功；false表示开启模拟拖拽功能失败。 |
 
 ## stopFakeDrag
 
@@ -335,5 +335,5 @@ stopFakeDrag(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 是否关闭模拟拖拽功能。&lt;br/&gt;true表示关闭模拟拖拽功能成功；false表示关闭模拟拖拽功能失败。 |
+| boolean | 是否关闭模拟拖拽功能。<br/>true表示关闭模拟拖拽功能成功；false表示关闭模拟拖拽功能失败。 |
 

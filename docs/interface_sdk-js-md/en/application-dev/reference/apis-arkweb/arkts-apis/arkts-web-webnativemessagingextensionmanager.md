@@ -17,7 +17,7 @@ The webNativeMessagingExtensionManager module is a Web native message extension 
 ## Modules to Import
 
 ```TypeScript
-import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
+import { webNativeMessagingExtensionManager } from 'webNativeMessagingExtensionManager';
 ```
 
 ## Summary

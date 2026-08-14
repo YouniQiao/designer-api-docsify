@@ -18,7 +18,7 @@ Defines Gauge constructor options.
 max?: double
 ```
 
-Set current segment maximum value. Anonymous Object Rectification. Default value: 100. &lt;br&gt;**Note: * * If max is less than min, the default values 0 and 100 are used.
+Set current segment maximum value. Anonymous Object Rectification. Default value: 100. <br>**Note: * * If max is less than min, the default values 0 and 100 are used.
 
 **Type:** double
 

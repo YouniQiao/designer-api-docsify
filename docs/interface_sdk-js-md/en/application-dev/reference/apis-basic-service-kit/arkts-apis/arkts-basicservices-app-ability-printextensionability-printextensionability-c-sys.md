@@ -17,7 +17,7 @@ class of print extension ability.
 ## Modules to Import
 
 ```TypeScript
-import { PrintExtensionAbility } from '@kit.BasicServicesKit';
+import { PrintExtensionAbility } from 'PrintExtensionAbility';
 ```
 
 ## onCancelPrintJob

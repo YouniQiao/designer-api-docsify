@@ -118,7 +118,7 @@ LOCK_SCREEN = 4
 LOCK_DEVICE = 5
 ```
 
-设备锁定。该能力使用后设备屏幕无法使用，按键无响应，仅支持锁屏文案定制，不支持在锁屏界面定制交互功能。在开发过程中，下发设备锁定策略前一定要预留逃生通道，并且确保逃生通道正常。 建议开发时保留hdc能力与远程通信能力，通过hdc命令或者远程push能力能触发设备解锁定功能。&lt;br&gt;如果需要实现在屏幕锁定的情况下支持自定义行为的能力， 建议使用[applicationManager.setAllowedKioskApps](arkts-mdm-applicationmanager-setallowedkioskapps-f.md#setAllowedKioskApps) 接口配置支持Kiosk模式， 使用[applicationManager.enterKioskMode](../../apis-ability-kit/arkts-apis/arkts-ability-kioskmanager-enterkioskmode-f.md#enterKioskMode)接口进入Kiosk模式。
+设备锁定。该能力使用后设备屏幕无法使用，按键无响应，仅支持锁屏文案定制，不支持在锁屏界面定制交互功能。在开发过程中，下发设备锁定策略前一定要预留逃生通道，并且确保逃生通道正常。 建议开发时保留hdc能力与远程通信能力，通过hdc命令或者远程push能力能触发设备解锁定功能。<br>如果需要实现在屏幕锁定的情况下支持自定义行为的能力， 建议使用[applicationManager.setAllowedKioskApps](arkts-mdm-applicationmanager-setallowedkioskapps-f.md#setAllowedKioskApps) 接口配置支持Kiosk模式， 使用[applicationManager.enterKioskMode](../../apis-ability-kit/arkts-apis/arkts-ability-kioskmanager-enterkioskmode-f.md#enterKioskMode)接口进入Kiosk模式。
 
 **起始版本：** 26.1.0
 

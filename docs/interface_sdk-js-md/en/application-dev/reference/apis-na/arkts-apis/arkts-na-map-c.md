@@ -84,7 +84,7 @@ Creates an empty Map with the specified initial capacity
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| initialCapacity | int | Yes | Map's initial capacity &lt;br&gt;The value should be an integer. |
+| initialCapacity | int | Yes | Map's initial capacity <br>The value should be an integer. |
 
 ## constructor
 

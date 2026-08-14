@@ -13,7 +13,7 @@ type GestureType = 'left' | 'leftThenRight' | 'leftThenUp' | 'leftThenDown' |
   'fourFingerSwipeUp' | 'fourFingerSwipeDown' | 'fourFingerSwipeLeft' | 'fourFingerSwipeRight' | 'oneFingerDoubleTap'
 ```
 
-Enumerates gesture types.
+Enumerates the gesture event types. A gesture event is triggered by the accessibility service when the user performs a specific gesture operation. The accessibility extension can receive and process the corresponding gesture event through the **onAccessibilityEvent** callback.
 
 **Since:** 9
 
@@ -68,5 +68,5 @@ Enumerates gesture types.
 | 'fourFingerSwipeDown' | Four-finger swipe-down gesture. [since 11] |
 | 'fourFingerSwipeLeft' | Four-finger swipe-left gesture. [since 11] |
 | 'fourFingerSwipeRight' | Four-finger swipe-right gesture. [since 11] |
-| 'oneFingerDoubleTap' | [since 26.0.0] |
+| 'oneFingerDoubleTap' | Single-finger double-tap gesture. [since 26.0.0] |
 

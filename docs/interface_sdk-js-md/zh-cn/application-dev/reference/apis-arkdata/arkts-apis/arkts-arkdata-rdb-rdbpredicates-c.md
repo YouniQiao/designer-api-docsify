@@ -416,7 +416,7 @@ glob(field: string, value: string): RdbPredicates
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | field | string | 是 | 数据库表中的列名，不能为空字符串。 |
-| value | string | 是 | 指示要与谓词匹配的值，长度不超过1024字节 &lt;br&gt;支持通配符，*表示0个、1个或多个数字或字符，?表示1个数字或字符。 |
+| value | string | 是 | 指示要与谓词匹配的值，长度不超过1024字节 <br>支持通配符，*表示0个、1个或多个数字或字符，?表示1个数字或字符。 |
 
 **返回值：**
 
@@ -809,7 +809,7 @@ predicates.isNull("NAME")
 lessThan(field: string, value: ValueType): RdbPredicates
 ```
 
-配置谓词以匹配数据字段为valueType且value小于指定值的字段。该方法等同于SQL语句中的"<"。
+配置谓词以匹配数据字段为valueType且value小于指定值的字段。该方法等同于SQL语句中的"&lt;"。
 
 **起始版本：** 7
 
@@ -849,7 +849,7 @@ predicates.lessThan("AGE", 20)
 lessThanOrEqualTo(field: string, value: ValueType): RdbPredicates
 ```
 
-配置谓词以匹配数据字段为ValueType且value小于或等于指定值的字段。该方法等同于SQL语句中的"<="。
+配置谓词以匹配数据字段为ValueType且value小于或等于指定值的字段。该方法等同于SQL语句中的"&lt;="。
 
 **起始版本：** 7
 

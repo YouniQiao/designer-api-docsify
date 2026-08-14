@@ -17,7 +17,7 @@ Describes the callback for the current system bar.
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'window';
 ```
 
 ## displayId

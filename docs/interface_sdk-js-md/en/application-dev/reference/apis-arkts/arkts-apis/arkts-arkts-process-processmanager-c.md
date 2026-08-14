@@ -15,7 +15,7 @@ Provides APIs for throwing exceptions during the addition of a process. Construc
 ## Modules to Import
 
 ```TypeScript
-import { process } from '@kit.ArkTS';
+import { process } from 'process';
 ```
 
 ## exit
@@ -275,7 +275,7 @@ Sends a signal to the specified process to terminate it. Only the current proces
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| signal | number | Yes | Signal to send. Value range: 1 <= signal <= 64. |
+| signal | number | Yes | Signal to send. Value range: 1 &lt;= signal &lt;= 64. |
 | pid | number | Yes | PID of the process, to which the signal will be sent. |
 
 **Return value:**

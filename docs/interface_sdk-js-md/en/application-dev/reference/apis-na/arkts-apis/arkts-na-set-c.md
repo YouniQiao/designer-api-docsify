@@ -116,7 +116,7 @@ Creates a new Set instance with the specified number of buckets.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bucketsCount | int | Yes | The number of buckets for the internal map. &lt;br&gt;The value should be an integer. |
+| bucketsCount | int | Yes | The number of buckets for the internal map. <br>The value should be an integer. |
 
 ## constructor
 

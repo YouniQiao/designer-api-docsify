@@ -437,7 +437,7 @@ Sets the upper bound of the readable and writable area of the file mapping area.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| limit | int | Yes | Upper bound of the readable and writable area to set, in bytes. &lt;br&gt;The value is greater than or equal to 0 and less than or equal to the value of [capacity](#capacity). If the value of **limit** is smaller than that of **position** in the file mapping area, the value of **position** is automatically adjusted to that of **limit**. |
+| limit | int | Yes | Upper bound of the readable and writable area to set, in bytes. <br>The value is greater than or equal to 0 and less than or equal to the value of [capacity](#capacity). If the value of **limit** is smaller than that of **position** in the file mapping area, the value of **position** is automatically adjusted to that of **limit**. |
 
 **Error codes:**
 
@@ -471,7 +471,7 @@ Sets the current location of the file mapping area.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| position | int | Yes | Target position to set, in bytes. &lt;br&gt;The value must be a non-negative number and cannot be greater than the upper bound (**limit**) of the readable and writable area. You can obtain the value of **limit** by calling [getLimit()](#getLimit). |
+| position | int | Yes | Target position to set, in bytes. <br>The value must be a non-negative number and cannot be greater than the upper bound (**limit**) of the readable and writable area. You can obtain the value of **limit** by calling [getLimit()](#getLimit). |
 
 **Error codes:**
 

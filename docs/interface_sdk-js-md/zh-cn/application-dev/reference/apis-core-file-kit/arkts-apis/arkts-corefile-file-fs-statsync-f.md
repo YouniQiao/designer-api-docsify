@@ -24,7 +24,7 @@ declare function statSync(file: string | number): Stat
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| file | string \| number | 是 | 文件或目录的应用沙箱路径path、URI或已打开的文件描述符fd。&lt;br&gt;**说明：**从API version 22开始，支持传入URI。 |
+| file | string \| number | 是 | 文件或目录的应用沙箱路径path、URI或已打开的文件描述符fd。<br>**说明：**从API version 22开始，支持传入URI。 |
 
 **返回值：**
 

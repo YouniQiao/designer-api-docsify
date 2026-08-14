@@ -42,7 +42,7 @@ End date of the picker.
 mode?: DatePickerMode
 ```
 
-Date columns to be displayed. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;In DatePickerDialog, with showTime=true, this parameter has no effect and the default three columns for year, &lt;br&gt;month, and day are displayed. &lt;/p&gt;
+Date columns to be displayed. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>In DatePickerDialog, with showTime=true, this parameter has no effect and the default three columns for year, <br>month, and day are displayed. &lt;/p&gt;
 
 **Type:** [DatePickerMode](arkts-na-datepicker-datepickermode-e.md)
 

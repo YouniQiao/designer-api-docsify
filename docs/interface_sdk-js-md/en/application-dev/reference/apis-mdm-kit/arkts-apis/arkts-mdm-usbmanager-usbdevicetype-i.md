@@ -15,7 +15,7 @@ Represents the USB device type information. You can obtain the list of USB devic
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from '@kit.MDMKit';
+import { usbManager } from 'usbManager';
 ```
 
 ## baseClass

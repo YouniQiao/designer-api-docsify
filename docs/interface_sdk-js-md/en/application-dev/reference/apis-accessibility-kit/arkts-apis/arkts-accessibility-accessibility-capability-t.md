@@ -23,7 +23,7 @@ Enumerates the capabilities of an accessibility application.
 | Type | Description |
 | --- | --- |
 | 'retrieve' | Capability to retrieve the window content. |
-| 'touchGuide' | Capability of touch guide mode. |
+| 'touchGuide' | Capability of the touch guide mode. |
 | 'keyEventObserver' | Capability to filter key events. |
 | 'zoom' | Capability to control the display zoom level. Not supported currently. |
 | 'gesture' | Capability to perform gesture actions. |

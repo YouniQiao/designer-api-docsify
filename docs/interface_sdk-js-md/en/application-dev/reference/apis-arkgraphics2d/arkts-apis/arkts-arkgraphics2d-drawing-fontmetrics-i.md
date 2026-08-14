@@ -15,7 +15,7 @@ Describes the attributes that describe the font size and layout. A typeface has 
 ## Modules to Import
 
 ```TypeScript
-import { drawing } from '@kit.ArkGraphics2D';
+import { drawing } from 'drawing';
 ```
 
 ## ascent

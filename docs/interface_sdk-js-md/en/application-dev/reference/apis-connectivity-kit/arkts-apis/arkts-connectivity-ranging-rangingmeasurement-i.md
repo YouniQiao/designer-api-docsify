@@ -15,7 +15,7 @@ Describes the measurement result.
 ## Modules to Import
 
 ```TypeScript
-import { ranging } from '@kit.ConnectivityKit';
+import { ranging } from 'ranging';
 ```
 
 ## confidence

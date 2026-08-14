@@ -24,10 +24,10 @@ type CaptionsFontFamily = 'default' | 'monospacedSerif' | 'serif' |
 | 类型 | 说明 |
 | --- | --- |
 | 'default' | 表示默认字体。 |
-| 'monospacedSerif' | 表示等宽 Serif 字体。 |
-| 'serif' | 表示Serif 字体。 |
-| 'monospacedSansSerif' | 表示等宽 Sans Serif 字体。 |
-| 'sansSerif' | 表示Sans Serif 字体。 |
+| 'monospacedSerif' | 表示等宽Serif字体。 |
+| 'serif' | 表示Serif字体。 |
+| 'monospacedSansSerif' | 表示等宽Sans Serif字体。 |
+| 'sansSerif' | 表示Sans Serif字体。 |
 | 'casual' | 表示非正式字体。 |
 | 'cursive' | 表示手写字体。 |
 | 'smallCapitals' | 表示小型大写字母字体。 |

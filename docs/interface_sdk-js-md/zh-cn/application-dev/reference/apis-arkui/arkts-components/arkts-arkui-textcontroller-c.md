@@ -90,7 +90,7 @@ setStyledString(value: StyledString): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | StyledString | 是 | 属性字符串。 &lt;br&gt;**说明：** &lt;br&gt;StyledString的子类MutableStyledString也可以作为入参值。 |
+| value | StyledString | 是 | 属性字符串。 <br>**说明：** <br>StyledString的子类MutableStyledString也可以作为入参值。 |
 
 ## setTextSelection
 
@@ -119,7 +119,7 @@ setTextSelection(selectionStart: number | undefined, selectionEnd: number | unde
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| selectionStart | number \| undefined | 是 | 文本选择区域起始位置。 &lt;br&gt;取值范围：[0, +∞），值为负数或undefined时按0处理。 |
-| selectionEnd | number \| undefined | 是 | 文本选择区域结束位置。 &lt;br&gt;取值范围：[0, +∞），值为负数或undefined时按0处理。 |
-| options | SelectionOptions | 否 | 选中文字时的配置。 &lt;br&gt;默认值：SelectionOptions中MenuPolicy.DEFAULT |
+| selectionStart | number \| undefined | 是 | 文本选择区域起始位置。 <br>取值范围：[0, +∞），值为负数或undefined时按0处理。 |
+| selectionEnd | number \| undefined | 是 | 文本选择区域结束位置。 <br>取值范围：[0, +∞），值为负数或undefined时按0处理。 |
+| options | SelectionOptions | 否 | 选中文字时的配置。 <br>默认值：SelectionOptions中MenuPolicy.DEFAULT |
 

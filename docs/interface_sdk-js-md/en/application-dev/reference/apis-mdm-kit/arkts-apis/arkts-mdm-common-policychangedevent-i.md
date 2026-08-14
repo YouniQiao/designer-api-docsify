@@ -15,7 +15,7 @@ Defines the policy change event. This API is used as a callback input parameter 
 ## Modules to Import
 
 ```TypeScript
-import { common } from '@kit.MDMKit';
+import { common } from 'common';
 ```
 
 ## bundleName

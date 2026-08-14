@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { dataTransfer } from '@kit.ConnectivityKit';
+import { dataTransfer } from 'dataTransfer';
 ```
 
 ## destroyPort
@@ -32,7 +32,7 @@ Destroys a listen port and releases related resources by UUID.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uuid | string | Yes | Indicates application service UUID. &lt;br&gt;The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-), for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier. &lt;br&gt;NearLink standard UUIDs not allowed. |
+| uuid | string | Yes | Indicates application service UUID. <br>The length must be 36, The value consists of 36 hexadecimal digits and hyphens (-), for example, FFFFFFFF-1234-5678-ABCD-000000001234, indicating a 128-bit identifier. <br>NearLink standard UUIDs not allowed. |
 
 **Error codes:**
 

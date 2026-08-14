@@ -15,7 +15,7 @@ Enumerates tasks, which can be executed for multiple times, placed in a task gro
 ## Modules to Import
 
 ```TypeScript
-import { taskpool } from '@kit.ArkTS';
+import { taskpool } from 'taskpool';
 ```
 
 ## addDependency
@@ -773,7 +773,7 @@ Sets the task clone list. Before using this method, you need to construct a **Ta
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| cloneList | Object[] \| ArrayBuffer[] | Yes | The type of the passed-in array must be [sendable data types](../../../arkts-utils/arkts-sendable.md#sendable-data-types) or ArrayBuffer.&lt;br&gt;- All [Sendable class](../../../arkts-utils/arkts-sendable.md#sendable-class) instances or ArrayBuffer objects passed in to **cloneList** are transferred in copy mode between threads. This means that any modification to the destination objects does not affect the original objects. |
+| cloneList | Object[] \| ArrayBuffer[] | Yes | The type of the passed-in array must be [sendable data types](../../../arkts-utils/arkts-sendable.md#sendable-data-types) or ArrayBuffer.<br>- All [Sendable class](../../../arkts-utils/arkts-sendable.md#sendable-class) instances or ArrayBuffer objects passed in to **cloneList** are transferred in copy mode between threads. This means that any modification to the destination objects does not affect the original objects. |
 
 **Error codes:**
 
@@ -983,7 +983,7 @@ console.info("testTransfer view3 byteLength: " + view1.byteLength);
 arguments?: Object[]
 ```
 
-Arguments of the function. For details about the supported parameter types, see Sequenceable Data Types.&lt;br&gt; This API can be used in atomic services since API version 11.
+Arguments of the function. For details about the supported parameter types, see Sequenceable Data Types.<br> This API can be used in atomic services since API version 11.
 
 **Type:** Object[]
 
@@ -1005,7 +1005,7 @@ Arguments of the function. For details about the supported parameter types, see 
 cpuDuration: number
 ```
 
-CPU time of the task. in ms. You are advised not to change the value.&lt;br&gt; This API can be used in atomic services since API version 11.
+CPU time of the task. in ms. You are advised not to change the value.<br> This API can be used in atomic services since API version 11.
 
 **Type:** number
 
@@ -1029,7 +1029,7 @@ CPU time of the task. in ms. You are advised not to change the value.&lt;br&gt; 
 function: Function
 ```
 
-Function to be passed in during task creation. For details about the supported return value types of the function , see Sequenceable Data Types.&lt;br&gt; This API can be used in atomic services since API version 11.
+Function to be passed in during task creation. For details about the supported return value types of the function , see Sequenceable Data Types.<br> This API can be used in atomic services since API version 11.
 
 **Type:** Function
 
@@ -1051,7 +1051,7 @@ Function to be passed in during task creation. For details about the supported r
 ioDuration: number
 ```
 
-Asynchronous I/O time of the task. in ms. You are advised not to change the value.&lt;br&gt; This API can be used in atomic services since API version 11.
+Asynchronous I/O time of the task. in ms. You are advised not to change the value.<br> This API can be used in atomic services since API version 11.
 
 **Type:** number
 
@@ -1075,7 +1075,7 @@ Asynchronous I/O time of the task. in ms. You are advised not to change the valu
 name: string
 ```
 
-Name of the task specified when the task is created. You are advised not to change the value.&lt;br&gt; This API can be used in atomic services since API version 11.
+Name of the task specified when the task is created. You are advised not to change the value.<br> This API can be used in atomic services since API version 11.
 
 **Type:** string
 
@@ -1097,7 +1097,7 @@ Name of the task specified when the task is created. You are advised not to chan
 taskId: number
 ```
 
-Task ID, which is globally unique by default. You are advised not to change the value.&lt;br&gt; This API can be used in atomic services since API version 18.
+Task ID, which is globally unique by default. You are advised not to change the value.<br> This API can be used in atomic services since API version 18.
 
 **Type:** number
 
@@ -1121,7 +1121,7 @@ Task ID, which is globally unique by default. You are advised not to change the 
 totalDuration: number
 ```
 
-Total execution time of the task. in ms. You are advised not to change the value.&lt;br&gt; This API can be used in atomic services since API version 11.
+Total execution time of the task. in ms. You are advised not to change the value.<br> This API can be used in atomic services since API version 11.
 
 **Type:** number
 

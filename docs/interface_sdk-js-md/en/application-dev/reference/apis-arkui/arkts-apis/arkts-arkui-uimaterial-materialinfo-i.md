@@ -15,7 +15,7 @@ Provides material configuration information, including the material enabling sta
 ## Modules to Import
 
 ```TypeScript
-import { uiMaterial } from '@kit.ArkUI';
+import { uiMaterial } from 'uiMaterial';
 ```
 
 ## state

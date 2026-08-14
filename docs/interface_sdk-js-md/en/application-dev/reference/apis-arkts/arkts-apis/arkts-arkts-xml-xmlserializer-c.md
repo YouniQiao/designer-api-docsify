@@ -15,7 +15,7 @@ The XmlSerializer interface is used to generate an xml file.
 ## Modules to Import
 
 ```TypeScript
-import { xml } from '@kit.ArkTS';
+import { xml } from 'xml';
 ```
 
 ## addEmptyElement
@@ -175,7 +175,7 @@ console.info(result); // <note importance="high"/>
 setCDATA(text: string): void
 ```
 
-Adds data to the CDATA tag. The structure of the generated CDATA tag is "<! &lt;![CDATA["+ Data added + "]]&gt;".
+Adds data to the CDATA tag. The structure of the generated CDATA tag is "&lt;! &lt;![CDATA["+ Data added + "]]&gt;".
 
 **Since:** 23
 

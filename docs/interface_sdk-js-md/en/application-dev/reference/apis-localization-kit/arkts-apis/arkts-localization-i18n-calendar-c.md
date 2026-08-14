@@ -15,7 +15,7 @@ Provides calendar management capabilities, such as calendar name retrieval and d
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'i18n';
 ```
 
 ## add

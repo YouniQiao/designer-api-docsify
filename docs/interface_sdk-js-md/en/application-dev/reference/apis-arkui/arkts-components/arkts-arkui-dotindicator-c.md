@@ -42,7 +42,7 @@ Sets the color of the dot-style navigation indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ResourceColor | Yes | Color of the dot-style navigation indicator.&lt;br&gt;Default value: **'#1A182431'** ( light gray) |
+| value | ResourceColor | Yes | Color of the dot-style navigation indicator.<br>Default value: **'#1A182431'** ( light gray) |
 
 **Return value:**
 
@@ -138,7 +138,7 @@ Sets the height of a dot-style navigation indicator of the **Swiper** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Length | Yes | Height of the dot-style indicator. This parameter cannot be set in percentage.&lt;br&gt;Default value: **6**&lt;br&gt;Unit: vp&lt;br&gt;Value range: (0, +∞) |
+| value | Length | Yes | Height of the dot-style indicator. This parameter cannot be set in percentage.<br>Default value: **6**<br>Unit: vp<br>Value range: (0, +∞) |
 
 **Return value:**
 
@@ -174,7 +174,7 @@ Sets the width of a dot-style navigation indicator of the **Swiper** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Length | Yes | Width of the dot-style indicator. This parameter cannot be set in percentage.&lt;br&gt;Default value: **6**&lt;br&gt;Unit: vp&lt;br&gt;Value range: (0, +∞) |
+| value | Length | Yes | Width of the dot-style indicator. This parameter cannot be set in percentage.<br>Default value: **6**<br>Unit: vp<br>Value range: (0, +∞) |
 
 **Return value:**
 
@@ -210,7 +210,7 @@ Sets whether to enable the mask for the dot-style navigation indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to enable the mask for the dot-style navigation indicator. The value **true** means to enable the mask for the dot-style navigation indicator, and **false** means the opposite.&lt;br&gt;Default value: **false**. |
+| value | boolean | Yes | Whether to enable the mask for the dot-style navigation indicator. The value **true** means to enable the mask for the dot-style navigation indicator, and **false** means the opposite.<br>Default value: **false**. |
 
 **Return value:**
 
@@ -244,7 +244,7 @@ Sets the maximum number of navigation dots in the dot-style navigation indicator
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| maxDisplayCount | number | Yes | Maximum number of navigation dots in the dot-style navigation point indicator. If the actual number of navigation dots exceeds this limit, the overflow effect is activated, as shown in [Example 5](../../../reference/apis-arkui/arkui-ts/ts-container-swiper.md#example-5-configuring-overflow-for-the-dot-style-indicator). &lt;br&gt;This parameter has no default value. If an invalid value is set, no overflow effect is applied.&lt;br&gt;Value range: [6, 9].&lt;br&gt;**NOTE：**&lt;br&gt;In scenarios involving overflow display:&lt;br&gt;1. Interactive features, such as gestures and mouse operations, are not supported.&lt;br&gt;2. The position of the selected navigation dot corresponding to the middle page is not strictly fixed; it depends on the sequence of previous page-turning operations.&lt;br&gt;3. Currently, only scenarios with **displayCount** set to **1** are supported. |
+| maxDisplayCount | number | Yes | Maximum number of navigation dots in the dot-style navigation point indicator. If the actual number of navigation dots exceeds this limit, the overflow effect is activated, as shown in [Example 5](../../../reference/apis-arkui/arkui-ts/ts-container-swiper.md#example-5-configuring-overflow-for-the-dot-style-indicator). <br>This parameter has no default value. If an invalid value is set, no overflow effect is applied.<br>Value range: [6, 9].<br>**NOTE：**<br>In scenarios involving overflow display:<br>1. Interactive features, such as gestures and mouse operations, are not supported.<br>2. The position of the selected navigation dot corresponding to the middle page is not strictly fixed; it depends on the sequence of previous page-turning operations.<br>3. Currently, only scenarios with **displayCount** set to **1** are supported. |
 
 **Return value:**
 
@@ -280,7 +280,7 @@ Sets the color of the selected dot-style navigation indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ResourceColor | Yes | Color of the selected dot-style navigation indicator.&lt;br&gt;Default value: **'#007DFF'** (blue) |
+| value | ResourceColor | Yes | Color of the selected dot-style navigation indicator.<br>Default value: **'#007DFF'** (blue) |
 
 **Return value:**
 
@@ -316,7 +316,7 @@ Sets the height of the selected dot-style navigation indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Length | Yes | Height of the selected dot-style indicator. This parameter cannot be set in percentage.&lt; br&gt;Default value: **6**&lt;br&gt;Unit: vp&lt;br&gt;Value range: (0, +∞) |
+| value | Length | Yes | Height of the selected dot-style indicator. This parameter cannot be set in percentage.&lt; br&gt;Default value: **6**<br>Unit: vp<br>Value range: (0, +∞) |
 
 **Return value:**
 
@@ -352,7 +352,7 @@ Sets the width of the selected dot-style navigation indicator.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Length | Yes | Width of the selected dot-style navigation indicator. This parameter cannot be set in percentage.&lt;br&gt;Default value: **6**&lt;br&gt;Unit: vp&lt;br&gt;Value range: (0, +∞) |
+| value | Length | Yes | Width of the selected dot-style navigation indicator. This parameter cannot be set in percentage.<br>Default value: **6**<br>Unit: vp<br>Value range: (0, +∞) |
 
 **Return value:**
 
@@ -388,7 +388,7 @@ Sets the spacing between dot-style navigation indicators of the **Swiper** compo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| space | LengthMetrics | Yes | Spacing between the dots in the dot-style navigation indicator. Percentage values are not supported.&lt;br&gt;Default value: **10** for PCs and 2-in-1 devices and **8** for other devices&lt;br&gt;Unit: vp&lt; br&gt;Value range: [0, +∞) |
+| space | LengthMetrics | Yes | Spacing between the dots in the dot-style navigation indicator. Percentage values are not supported.<br>Default value: **10** for PCs and 2-in-1 devices and **8** for other devices<br>Unit: vp&lt; br&gt;Value range: [0, +∞) |
 
 **Return value:**
 

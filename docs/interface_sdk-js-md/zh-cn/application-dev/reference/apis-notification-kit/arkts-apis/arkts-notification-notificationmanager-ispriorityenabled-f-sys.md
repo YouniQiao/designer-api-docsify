@@ -3,7 +3,7 @@
 ## 导入模块
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'notificationManager';
 ```
 
 ## isPriorityEnabled
@@ -32,7 +32,7 @@ function isPriorityEnabled(): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise对象，返回包含通知优先级总开关使能状态的Promise对象。 &lt;br&gt; - true：允许设置为优先通知。 &lt;br&gt; - false：禁止设置为优先通知。 |
+| Promise&lt;boolean&gt; | Promise对象，返回包含通知优先级总开关使能状态的Promise对象。 <br> - true：允许设置为优先通知。 <br> - false：禁止设置为优先通知。 |
 
 **错误码：**
 

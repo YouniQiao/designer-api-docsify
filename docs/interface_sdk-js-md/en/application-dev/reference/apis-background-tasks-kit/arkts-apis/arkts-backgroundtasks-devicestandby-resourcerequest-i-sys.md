@@ -17,7 +17,7 @@ The request of standby resources.
 ## Modules to Import
 
 ```TypeScript
-import { deviceStandby } from '@kit.BackgroundTasksKit';
+import { deviceStandby } from 'deviceStandby';
 ```
 
 ## duration
@@ -26,7 +26,7 @@ import { deviceStandby } from '@kit.BackgroundTasksKit';
 duration: int
 ```
 
-The exemption duration. &lt;br&gt;Unit:s
+The exemption duration. <br>Unit:s
 
 **Type:** int
 

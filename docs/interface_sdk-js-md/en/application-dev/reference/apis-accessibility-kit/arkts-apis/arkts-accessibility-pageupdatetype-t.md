@@ -4,7 +4,7 @@
 type PageUpdateType = 'pageContentUpdate' | 'pageStateUpdate'
 ```
 
-Enumerates the page update types.
+Enumerates the page update types. A page update event is triggered by the accessibility service when the page content or state changes. The accessibility extension can receive and process the corresponding page update event through the **onAccessibilityEvent** callback.
 
 **Since:** 9
 
@@ -18,6 +18,6 @@ Enumerates the page update types.
 
 | Type | Description |
 | --- | --- |
-| 'pageContentUpdate' | Update of the page content. |
-| 'pageStateUpdate' | Update of the page status. |
+| 'pageContentUpdate' | Page content updated. |
+| 'pageStateUpdate' | Page state updated. |
 

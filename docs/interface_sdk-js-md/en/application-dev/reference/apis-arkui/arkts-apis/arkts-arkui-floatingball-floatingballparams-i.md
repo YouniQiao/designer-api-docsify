@@ -15,7 +15,7 @@ Describes the parameters for starting and updating the floating ball.
 ## Modules to Import
 
 ```TypeScript
-import { floatingBall } from '@kit.ArkUI';
+import { floatingBall } from 'floatingBall';
 ```
 
 ## backgroundColor

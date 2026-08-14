@@ -15,7 +15,7 @@ Enumerates the callbacks used for the request for loading multiple ads.
 ## Modules to Import
 
 ```TypeScript
-import { advertising } from '@kit.AdsKit';
+import { advertising } from 'advertising';
 ```
 
 ## onAdLoadFailure

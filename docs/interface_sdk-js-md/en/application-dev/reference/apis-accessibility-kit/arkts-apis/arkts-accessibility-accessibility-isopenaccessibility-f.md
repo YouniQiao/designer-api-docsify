@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
+import { accessibility } from 'accessibility';
 ```
 
 ## isOpenAccessibility
@@ -30,7 +30,7 @@ Checks whether an accessibility application is enabled. This API uses an asynchr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. Returns **true** if the accessibility application is enabled; returns **false** otherwise. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** indicates the accessibility app is enabled, and **false** indicates the accessibility app is not enabled. |
 
 ## Examples
 
@@ -72,7 +72,7 @@ Checks whether an accessibility application is enabled. This API uses a promise 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. Returns **true** if the accessibility application is enabled; returns **false** otherwise. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates the accessibility app is enabled, and **false** indicates the accessibility app is disabled. |
 
 ## Examples
 

@@ -1110,7 +1110,7 @@ Synchronizes data across devices. This API uses an asynchronous callback to retu
 | --- | --- | --- | --- |
 | mode | SyncMode | Yes | Data sync mode. The value can be **push** or **pull**. |
 | predicates | RdbPredicates | Yes | RdbPredicates** object that specifies the data and devices to synchronize. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | Yes | Callback invoked to send the sync result to the caller. &lt;br&gt;**string** indicates the device ID. &lt;br&gt;**number** indicates the sync status of that device. The value **0** indicates a successful sync. Other values indicate a sync failure. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[string, number]&gt;&gt; | Yes | Callback invoked to send the sync result to the caller. <br>**string** indicates the device ID. <br>**number** indicates the sync status of that device. The value **0** indicates a successful sync. Other values indicate a sync failure. |
 
 ## Examples
 
@@ -1178,7 +1178,7 @@ Synchronizes data across devices. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[string, number]&gt;&gt; | Promise used to send the sync result. &lt;br&gt;**string** indicates the device ID. &lt;br&gt;**number** indicates the sync status of that device. The value **0** indicates a successful sync. Other values indicate a sync failure. |
+| Promise&lt;Array&lt;[string, number]&gt;&gt; | Promise used to send the sync result. <br>**string** indicates the device ID. <br>**number** indicates the sync status of that device. The value **0** indicates a successful sync. Other values indicate a sync failure. |
 
 ## Examples
 

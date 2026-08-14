@@ -1,6 +1,6 @@
 # Poly1305ParamsSpec
 
-Encapsulates the parameters for encryption or decryption using the ChaCha20-Poly1305 AEAD mode, which requires a nonce, AAD, and an authentication tag. It is a child class of [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md#ParamsSpec) and used as a parameter in [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init) for symmetric encryption or decryption. &lt;br&gt;Applicable to ChaCha20-Poly1305. > **NOTE：**> > Before passing a value to > [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init), specify > **algName** for its parent class [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md#ParamsSpec). > > When the Poly1305 mode is used for encryption, you need to extract the last 16 bytes from the > [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md#DataBlob) returned by > [doFinal()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#doFinal) or > [doFinalSync()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#doFinalSync) and use them as **authTag** in > [Poly1305ParamsSpec](#Poly1305ParamsSpec) for > [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init) or > [initSync()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#initSync) during decryption.
+Encapsulates the parameters for encryption or decryption using the ChaCha20-Poly1305 AEAD mode, which requires a nonce, AAD, and an authentication tag. It is a child class of [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md#ParamsSpec) and used as a parameter in [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init) for symmetric encryption or decryption. <br>Applicable to ChaCha20-Poly1305. > **NOTE：**> > Before passing a value to > [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init), specify > **algName** for its parent class [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md#ParamsSpec). > > When the Poly1305 mode is used for encryption, you need to extract the last 16 bytes from the > [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md#DataBlob) returned by > [doFinal()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#doFinal) or > [doFinalSync()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#doFinalSync) and use them as **authTag** in > [Poly1305ParamsSpec](#Poly1305ParamsSpec) for > [init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init) or > [initSync()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#initSync) during decryption.
 
 **Inheritance/Implementation:** Poly1305ParamsSpec extends [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md#ParamsSpec)
 
@@ -17,7 +17,7 @@ Encapsulates the parameters for encryption or decryption using the ChaCha20-Poly
 ## Modules to Import
 
 ```TypeScript
-import { cryptoFramework } from '@kit.CryptoArchitectureKit';
+import { cryptoFramework } from 'cryptoFramework';
 ```
 
 ## aad

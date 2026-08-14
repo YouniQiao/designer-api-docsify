@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { DistributedExtensionAbility } from '@kit.DistributedServiceKit';
+import { DistributedExtensionAbility } from 'DistributedExtensionAbility';
 ```
 
 ## Summary

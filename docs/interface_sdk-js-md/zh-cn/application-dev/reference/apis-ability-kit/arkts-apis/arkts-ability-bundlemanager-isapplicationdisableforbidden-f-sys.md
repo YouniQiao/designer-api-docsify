@@ -36,7 +36,7 @@ function isApplicationDisableForbidden(bundleName: string, userId: int, appIndex
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 指定应用是否被设置禁止停用。&lt;br/&gt;返回true表示指定应用已被设置禁止停用，返回false表示指定应用没有被设置禁止停用。 |
+| boolean | 指定应用是否被设置禁止停用。<br/>返回true表示指定应用已被设置禁止停用，返回false表示指定应用没有被设置禁止停用。 |
 
 **错误码：**
 

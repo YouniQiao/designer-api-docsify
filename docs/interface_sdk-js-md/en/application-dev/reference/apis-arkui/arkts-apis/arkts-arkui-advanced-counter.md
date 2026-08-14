@@ -3,7 +3,10 @@
 ## Modules to Import
 
 ```TypeScript
-import { CounterType, DateData, CounterComponent, CounterOptions } from '@kit.ArkUI';
+import { CounterComponent } from 'CounterComponent';
+import { CounterOptions } from 'CounterOptions';
+import { CounterType } from 'CounterType';
+import { DateData } from 'DateData';
 ```
 
 ## Summary

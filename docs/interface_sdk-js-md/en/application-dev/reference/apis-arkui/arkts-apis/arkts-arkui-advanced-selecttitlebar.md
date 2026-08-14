@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { SelectTitleBarMenuItem, SelectTitleBar } from '@kit.ArkUI';
+import { SelectTitleBar } from 'SelectTitleBar';
+import { SelectTitleBarMenuItem } from 'SelectTitleBarMenuItem';
 ```
 
 ## Summary

@@ -60,7 +60,7 @@ SEARCH_SUCCESS = 0
 SEARCH_SUCCESS_NEXT_BYPASS_DESCENDANTS = 1
 ```
 
-节点查询成功，建议下一次查询使用参数bypassSelfDescendants可更快获取结果。
+节点查询成功，建议下一次查询使用参数bypassSelfDescendants以提升查询效率。
 
 **起始版本：** 23
 

@@ -88,7 +88,7 @@ action?: OnActionCallback
 
 操作图标时的回调函数。
 
-**类型：** [OnActionCallback](arkts-na-onactioncallback-t.md)
+**类型：** [OnActionCallback](../../apis-arkui/arkts-apis/arkts-arkui-onactioncallback-t.md)
 
 **起始版本：** 26.0.0
 

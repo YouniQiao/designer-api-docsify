@@ -15,7 +15,7 @@ Provides tag information. &lt;p&gt;This class provides the technology a tag supp
 ## Modules to Import
 
 ```TypeScript
-import { tag } from '@kit.ConnectivityKit';
+import { tag } from 'tag';
 ```
 
 ## extrasData

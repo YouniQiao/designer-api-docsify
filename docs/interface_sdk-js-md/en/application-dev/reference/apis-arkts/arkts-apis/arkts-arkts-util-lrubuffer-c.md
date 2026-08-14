@@ -17,7 +17,7 @@ The LruBuffer algorithm replaces the least used data with new data when the buff
 ## Modules to Import
 
 ```TypeScript
-import { util } from '@kit.ArkTS';
+import { util } from 'util';
 ```
 
 ## [Symbol.iterator]

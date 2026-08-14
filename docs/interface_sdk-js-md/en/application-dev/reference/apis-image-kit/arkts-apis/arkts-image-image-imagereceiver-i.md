@@ -15,7 +15,7 @@ The **ImageReceiver** class provides APIs to obtain the surface ID of a componen
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'image';
 ```
 
 ## getReceivingSurfaceId

@@ -15,7 +15,7 @@ The definition of SearchPlayInfo.
 ## Modules to Import
 
 ```TypeScript
-import { avMusicTemplate } from '@kit.AVSessionKit';
+import { avMusicTemplate } from 'avMusicTemplate';
 ```
 
 ## musicInfo

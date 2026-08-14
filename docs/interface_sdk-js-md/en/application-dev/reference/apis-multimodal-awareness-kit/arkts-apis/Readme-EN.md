@@ -111,7 +111,8 @@
   - [EventType(system api)](arkts-multimodalawareness-onscreen-eventtype-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [Scenario(system api)](arkts-multimodalawareness-onscreen-scenario-e-sys.md)<!--DelEnd-->
-- [@ohos.multimodalAwareness.spatialAwareness](arkts-multimodalawareness-spatialawareness.md)
+<!--Del-->
+- [@ohos.multimodalAwareness.spatialAwareness](arkts-multimodalawareness-spatialawareness.md)<!--DelEnd-->
   <!--Del-->
   - [offDistanceMeasure(system api)](arkts-multimodalawareness-spatialawareness-offdistancemeasure-f-sys.md)<!--DelEnd-->
   <!--Del-->

@@ -15,7 +15,7 @@ Defines APIs to access the result set obtained by querying the RDB store. This r
 ## Modules to Import
 
 ```TypeScript
-import { relationalStore } from '@kit.ArkData';
+import { relationalStore } from 'relationalStore';
 ```
 
 ## close
@@ -496,7 +496,7 @@ Obtains the value from the specified column in the current row, and returns a va
 
 | Type | Description |
 | --- | --- |
-| long | Value obtained. &lt;br&gt;The value range supported by this API is **Number.MIN_SAFE_INTEGER** to **Number.MAX_SAFE_INTEGER**. If the value is out of this range, use [getDouble]{ |
+| long | Value obtained. <br>The value range supported by this API is **Number.MIN_SAFE_INTEGER** to **Number.MAX_SAFE_INTEGER**. If the value is out of this range, use [getDouble]{ |
 
 **Error codes:**
 

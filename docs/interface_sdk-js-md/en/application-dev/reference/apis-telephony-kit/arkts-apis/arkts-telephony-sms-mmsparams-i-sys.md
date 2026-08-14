@@ -17,7 +17,7 @@ Defines the parameters for sending SMS messages.
 ## Modules to Import
 
 ```TypeScript
-import { sms } from '@kit.TelephonyKit';
+import { sms } from 'sms';
 ```
 
 ## data

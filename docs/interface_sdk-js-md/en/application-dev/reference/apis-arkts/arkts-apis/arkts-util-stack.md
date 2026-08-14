@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { Stack } from '@kit.ArkTS';
+import { Stack } from 'Stack';
 ```
 
 ## Summary

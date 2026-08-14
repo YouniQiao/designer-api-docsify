@@ -66,7 +66,7 @@ Applies an exclusive lock or a shared lock on a file in blocking mode. This API 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| exclusive | boolean | No | Lock to apply. &lt;br&gt; The value **true** means an exclusive lock, and the value **false** (default) means a shared lock. |
+| exclusive | boolean | No | Lock to apply. <br> The value **true** means an exclusive lock, and the value **false** (default) means a shared lock. |
 
 **Return value:**
 
@@ -178,7 +178,7 @@ Applies an exclusive lock or a shared lock on this file in non-blocking mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| exclusive | boolean | No | Lock to apply. &lt;br&gt; The value **true** means an exclusive lock, and the value **false** (default) means a shared lock. |
+| exclusive | boolean | No | Lock to apply. <br> The value **true** means an exclusive lock, and the value **false** (default) means a shared lock. |
 
 **Error codes:**
 

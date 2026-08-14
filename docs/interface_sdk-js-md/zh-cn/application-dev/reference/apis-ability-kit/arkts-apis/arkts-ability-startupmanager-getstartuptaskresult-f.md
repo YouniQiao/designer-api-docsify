@@ -56,14 +56,14 @@ export default class EntryAbility extends UIAbility {
         hilog.error(0x0000, 'testTag', `StartupTask_001 promise catch failed, error code: ${error.code}, error msg: ${error.message}`);
       });
     } catch (error) {
-      hilog.error(0x0000, 'testTag', `StartupTask_001.run failed, error code: ${error.code}, error msg: ${error.message}`);
+      hilog.error(0x0000, 'testTag', `startupManager.run failed, error code: ${error.code}, error msg: ${error.message}`);
     }
   }
 
   onWindowStageCreate(windowStage: window.WindowStage) {
     hilog.info(0x0000, 'testTag', '%{public}s', 'Ability onWindowStageCreate');
     let result = startupManager.getStartupTaskResult('StartupTask_001'); // 手动获取启动任务结果
-    hilog.info(0x0000, 'testTag', 'getStartupTaskResult result = %{public}s', result);
+    hilog.info(0x0000, 'testTag', 'getStartupTaskResult result = %{public}s', JSON.stringify(result));
     windowStage.loadContent('pages/Index', (err, data) => {
       if (err) {
         let error = err as BusinessError;

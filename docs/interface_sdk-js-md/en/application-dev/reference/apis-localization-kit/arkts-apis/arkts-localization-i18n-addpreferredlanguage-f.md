@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'i18n';
 ```
 
 ## addPreferredLanguage
@@ -38,4 +38,15 @@ Adds a preferred language to the specified position on the preferred language li
 | Type | Description |
 | --- | --- |
 | boolean | true** if the operation is successful, and **false** otherwise. |
+
+## Examples
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+// Add zh-CN to the preferred language list.
+let language: string = 'zh-CN';
+let index: number = 0;
+let success: boolean = i18n.addPreferredLanguage(language, index);
+```
 

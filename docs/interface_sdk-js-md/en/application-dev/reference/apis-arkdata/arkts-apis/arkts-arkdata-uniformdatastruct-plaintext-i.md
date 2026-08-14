@@ -15,7 +15,7 @@ Represents data of the plain text type.
 ## Modules to Import
 
 ```TypeScript
-import { uniformDataStruct } from '@kit.ArkData';
+import { uniformDataStruct } from 'uniformDataStruct';
 ```
 
 ## abstract

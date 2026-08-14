@@ -15,7 +15,7 @@ Defines the struct of an intent entity. It represents key information objects in
 ## Modules to Import
 
 ```TypeScript
-import { insightIntent } from '@kit.AbilityKit';
+import { insightIntent } from 'insightIntent';
 ```
 
 ## entityId

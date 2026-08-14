@@ -216,7 +216,8 @@
   - [ManagedPolicy](arkts-mdm-common-managedpolicy-e.md)
   - [Result](arkts-mdm-common-result-e.md)
   - [StartupScene](arkts-mdm-common-startupscene-e.md)
-- [@ohos.enterprise.dateTimeManager](arkts-enterprise-datetimemanager.md)
+<!--Del-->
+- [@ohos.enterprise.dateTimeManager](arkts-enterprise-datetimemanager.md)<!--DelEnd-->
   <!--Del-->
   - [disallowModifyDateTime(system api)](arkts-mdm-datetimemanager-disallowmodifydatetime-f-sys.md)<!--DelEnd-->
   <!--Del-->

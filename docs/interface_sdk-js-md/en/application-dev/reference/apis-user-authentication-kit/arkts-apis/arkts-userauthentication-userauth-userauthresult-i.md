@@ -15,7 +15,7 @@ Represents the user authentication result. If the authentication is successful, 
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
+import { userAuth } from 'userAuth';
 ```
 
 ## authType

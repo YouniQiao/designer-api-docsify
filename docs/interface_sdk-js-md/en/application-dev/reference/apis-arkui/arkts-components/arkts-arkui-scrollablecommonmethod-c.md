@@ -40,7 +40,7 @@ Set the scroll bar auto adjust the margin to avoid the padding, safeAreaPadding,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean \| undefined | Yes | Whether to enable automatic adjustment of scroll bar margin. &lt;br&gt;Default value: false. |
+| enable | boolean \| undefined | Yes | Whether to enable automatic adjustment of scroll bar margin. <br>Default value: false. |
 
 **Return value:**
 
@@ -74,7 +74,7 @@ Sets whether to enable the back-to-top feature for a scrollable component when t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| backToTop | boolean | Yes | Whether to enable the back-to-top feature for a scrollable component when the status bar is touched. &lt;br&gt;Default value: &lt;em&gt;false&lt;/em&gt; |
+| backToTop | boolean | Yes | Whether to enable the back-to-top feature for a scrollable component when the status bar is touched. <br>Default value: &lt;em&gt;false&lt;/em&gt; |
 
 **Return value:**
 
@@ -142,7 +142,7 @@ Sets the offset from the end of the content to the boundary of the scrollable di
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number \| Resource | Yes | Offset from the end of the content to the boundary of the scrollable display area. &lt;br&gt;Default value: &lt;em&gt;0&lt;/em&gt; &lt;br&gt;Unit: vp |
+| offset | number \| Resource | Yes | Offset from the end of the content to the boundary of the scrollable display area. <br>Default value: &lt;em&gt;0&lt;/em&gt; <br>Unit: vp |
 
 **Return value:**
 
@@ -176,7 +176,7 @@ Sets the offset from the start of the content to the boundary of the scrollable 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number \| Resource | Yes | Offset from the start of the content to the boundary of the scrollable display area. &lt;br&gt;Default value: &lt;em&gt;0&lt;/em&gt; &lt;br&gt;Unit: vp |
+| offset | number \| Resource | Yes | Offset from the start of the content to the boundary of the scrollable display area. <br>Default value: &lt;em&gt;0&lt;/em&gt; <br>Unit: vp |
 
 **Return value:**
 
@@ -244,8 +244,8 @@ Sets the effect used when the scroll boundary is reached.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| edgeEffect | EdgeEffect | Yes | Effect used when the scroll boundary is reached. The spring and shadow effects are supported. &lt;br&gt;Default value: &lt;em&gt;EdgeEffect.None&lt;/em&gt; for the &lt;em&gt;Grid&lt;/em&gt;, &lt;em&gt;Scroll&lt;/em&gt;, and &lt;em&gt;WaterFlow&lt;/em&gt; components and &lt;em&gt;EdgeEffect.Spring&lt;/em&gt; for the &lt;em&gt;List&lt;/em&gt; component |
-| options | [EdgeEffectOptions](arkts-arkui-edgeeffectoptions-i.md) | No | Whether to enable the scroll effect when the component content is smaller than the component itself. The value &lt;em&gt;{ alwaysEnabled: true }&lt;/em&gt; means to enable the scroll effect, and &lt;em&gt;{ alwaysEnabled: false }&lt; /em&gt; means the opposite. &lt;br&gt;Default value:&lt;br&gt;&lt;em&gt;{ alwaysEnabled: false }&lt;/em&gt; for the &lt;em&gt;List&lt;/em&gt;, &lt;em&gt;Grid&lt;/em&gt;, and &lt;em&gt;WaterFlow &lt;/em&gt; components, and &lt;em&gt;{ alwaysEnabled: true }&lt;/em&gt; for the &lt;em&gt;Scroll&lt;/em&gt; component |
+| edgeEffect | EdgeEffect | Yes | Effect used when the scroll boundary is reached. The spring and shadow effects are supported. <br>Default value: &lt;em&gt;EdgeEffect.None&lt;/em&gt; for the &lt;em&gt;Grid&lt;/em&gt;, &lt;em&gt;Scroll&lt;/em&gt;, and &lt;em&gt;WaterFlow&lt;/em&gt; components and &lt;em&gt;EdgeEffect.Spring&lt;/em&gt; for the &lt;em&gt;List&lt;/em&gt; component |
+| options | [EdgeEffectOptions](arkts-arkui-edgeeffectoptions-i.md) | No | Whether to enable the scroll effect when the component content is smaller than the component itself. The value &lt;em&gt;{ alwaysEnabled: true }&lt;/em&gt; means to enable the scroll effect, and &lt;em&gt;{ alwaysEnabled: false }&lt; /em&gt; means the opposite. <br>Default value:<br>&lt;em&gt;{ alwaysEnabled: false }&lt;/em&gt; for the &lt;em&gt;List&lt;/em&gt;, &lt;em&gt;Grid&lt;/em&gt;, and &lt;em&gt;WaterFlow &lt;/em&gt; components, and &lt;em&gt;{ alwaysEnabled: true }&lt;/em&gt; for the &lt;em&gt;Scroll&lt;/em&gt; component |
 
 **Return value:**
 
@@ -279,7 +279,7 @@ Sets whether to support scroll gestures.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to support scroll gestures.&lt;br&gt;Default value: &lt;em&gt;true&lt;/em&gt; |
+| value | boolean | Yes | Whether to support scroll gestures.<br>Default value: &lt;em&gt;true&lt;/em&gt; |
 
 **Return value:**
 
@@ -313,7 +313,7 @@ Enable left mouse button press-and-drag scrolling.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean \| undefined | Yes | Enable left mouse button press-and-drag scrolling. &lt;br&gt;Default value: false. |
+| enabled | boolean \| undefined | Yes | Enable left mouse button press-and-drag scrolling. <br>Default value: false. |
 
 **Return value:**
 
@@ -382,7 +382,7 @@ Sets the maximum initial velocity at the start of the fling animation that occur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| speedLimit | number | Yes | Maximum initial velocity at the start of the fling animation. &lt;br&gt;Default value: &lt;em&gt;9000&lt;/em&gt; &lt;br&gt;Unit: vp/s &lt;br&gt;Value range: (0, +∞). If this parameter is set to a value less than or equal to 0, the default value is used. |
+| speedLimit | number | Yes | Maximum initial velocity at the start of the fling animation. <br>Default value: &lt;em&gt;9000&lt;/em&gt; <br>Unit: vp/s <br>Value range: (0, +∞). If this parameter is set to a value less than or equal to 0, the default value is used. |
 
 **Return value:**
 
@@ -906,7 +906,7 @@ Sets the scrollbar state.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| barState | BarState | Yes | Scrollbar state.&lt;br&gt;Default value: &lt;em&gt;BarState.Auto&lt;/em&gt; for the &lt;em&gt;List&lt;/em&gt;, &lt;em &gt;Grid&lt;/em&gt;, and &lt;em&gt;Scroll&lt;/em&gt; components and &lt;em&gt;BarState.Off&lt;/em&gt; for the &lt;em&gt;WaterFlow&lt;/em&gt; component |
+| barState | BarState | Yes | Scrollbar state.<br>Default value: &lt;em&gt;BarState.Auto&lt;/em&gt; for the &lt;em&gt;List&lt;/em&gt;, &lt;em &gt;Grid&lt;/em&gt;, and &lt;em&gt;Scroll&lt;/em&gt; components and &lt;em&gt;BarState.Off&lt;/em&gt; for the &lt;em&gt;WaterFlow&lt;/em&gt; component |
 
 **Return value:**
 
@@ -940,7 +940,7 @@ Sets the scrollbar color.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | Color \| number \| string | Yes | Scrollbar color.&lt;br&gt;Default value: &lt;em&gt;'\#182431'&lt;/em&gt; (40% opacity) &lt;br&gt;A number value indicates a HEX color in RGB or ARGB format, for example, &lt;em&gt;0xffffff&lt;/em&gt;. A string value indicates a color in RGB or ARGB format, for example, &lt;em&gt;'# ffffff'&lt;/em&gt;. |
+| color | Color \| number \| string | Yes | Scrollbar color.<br>Default value: &lt;em&gt;'\#182431'&lt;/em&gt; (40% opacity) <br>A number value indicates a HEX color in RGB or ARGB format, for example, &lt;em&gt;0xffffff&lt;/em&gt;. A string value indicates a color in RGB or ARGB format, for example, &lt;em&gt;'# ffffff'&lt;/em&gt;. |
 
 **Return value:**
 
@@ -974,7 +974,7 @@ Sets the scrollbar color.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | Color \| number \| string \| Resource | Yes | Scrollbar color.&lt;br&gt;Default value: &lt;em&gt;'\#182431'&lt;/em&gt; (40% opacity) &lt;br&gt;A number value indicates a HEX color in RGB or ARGB format, for example, &lt;em&gt;0xffffff&lt;/em&gt;. A string value indicates a color in RGB or ARGB format, for example, &lt;em&gt;'#ffffff'&lt;/em&gt;. |
+| color | Color \| number \| string \| Resource | Yes | Scrollbar color.<br>Default value: &lt;em&gt;'\#182431'&lt;/em&gt; (40% opacity) <br>A number value indicates a HEX color in RGB or ARGB format, for example, &lt;em&gt;0xffffff&lt;/em&gt;. A string value indicates a color in RGB or ARGB format, for example, &lt;em&gt;'#ffffff'&lt;/em&gt;. |
 
 **Return value:**
 
@@ -1008,7 +1008,7 @@ Sets the scrollbar track height.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| height | LengthMetrics \| undefined | Yes | Scrollbar track height. &lt;br&gt;The value must be greater than or equal to 0, If set to undefined or a value less than 0, the default value is used. If set to 0, the scrollbar is not displayed. &lt;br&gt; Default value: adaptive to the height of the scrollable component. |
+| height | LengthMetrics \| undefined | Yes | Scrollbar track height. <br>The value must be greater than or equal to 0, If set to undefined or a value less than 0, the default value is used. If set to 0, the scrollbar is not displayed. <br> Default value: adaptive to the height of the scrollable component. |
 
 **Return value:**
 
@@ -1076,7 +1076,7 @@ Sets the scrollbar width.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string | Yes | Scrollbar width.&lt;br&gt;Default value: &lt;em&gt;4&lt;/em&gt; &lt;br&gt;Unit: vp &lt;br&gt;If this parameter is set to a value less than or equal to 0, the default value is used. The value &lt;em&gt;0&lt;/em&gt; means not to show the scrollbar. |
+| value | number \| string | Yes | Scrollbar width.<br>Default value: &lt;em&gt;4&lt;/em&gt; <br>Unit: vp <br>If this parameter is set to a value less than or equal to 0, the default value is used. The value &lt;em&gt;0&lt;/em&gt; means not to show the scrollbar. |
 
 **Return value:**
 
@@ -1110,7 +1110,7 @@ Sets the scrollbar width.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number \| string \| Resource | Yes | Scrollbar width. &lt;br&gt;Unit: vp &lt;br&gt;Default value: &lt;em&gt;4&lt;/em&gt; &lt;br&gt;If this parameter is set to a value less than 0, the default value is used. The value &lt;em&gt;0&lt;/em&gt; means not to show the scrollbar. |
+| value | number \| string \| Resource | Yes | Scrollbar width. <br>Unit: vp <br>Default value: &lt;em&gt;4&lt;/em&gt; <br>If this parameter is set to a value less than 0, the default value is used. The value &lt;em&gt;0&lt;/em&gt; means not to show the scrollbar. |
 
 **Return value:**
 

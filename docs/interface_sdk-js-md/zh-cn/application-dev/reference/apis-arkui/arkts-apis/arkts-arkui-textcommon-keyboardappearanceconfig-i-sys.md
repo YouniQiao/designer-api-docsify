@@ -20,7 +20,7 @@
 fluidLightMode?: KeyboardFluidLightMode
 ```
 
-键盘的流光效果。&lt;br/&gt;默认值：KeyboardFluidLightMode.NONE
+键盘的流光效果。<br/>默认值：KeyboardFluidLightMode.NONE
 
 **类型：** [KeyboardFluidLightMode](arkts-arkui-textcommon-keyboardfluidlightmode-e-sys.md)
 
@@ -44,7 +44,7 @@ fluidLightMode?: KeyboardFluidLightMode
 gradientMode?: KeyboardGradientMode
 ```
 
-键盘的渐变模糊效果。&lt;br/&gt;默认值：KeyboardGradientMode.NONE
+键盘的渐变模糊效果。<br/>默认值：KeyboardGradientMode.NONE
 
 **类型：** [KeyboardGradientMode](arkts-arkui-textcommon-keyboardgradientmode-e-sys.md)
 

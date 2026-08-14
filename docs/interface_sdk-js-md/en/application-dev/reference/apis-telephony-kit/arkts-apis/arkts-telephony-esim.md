@@ -15,7 +15,7 @@ This indicates that the eSIM card performs the profile management operation sync
 ## Modules to Import
 
 ```TypeScript
-import { eSIM } from '@kit.TelephonyKit';
+import { eSIM } from 'eSIM';
 ```
 
 ## Summary

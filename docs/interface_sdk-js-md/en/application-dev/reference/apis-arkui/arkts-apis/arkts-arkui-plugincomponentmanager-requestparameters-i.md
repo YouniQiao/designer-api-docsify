@@ -15,7 +15,7 @@ Defines the parameters required when using the **PluginManager.Request** API.
 ## Modules to Import
 
 ```TypeScript
-import { PluginComponentTemplate } from '@kit.ArkUI';
+import { PluginComponentTemplate } from 'PluginComponentTemplate';
 ```
 
 ## data

@@ -29,7 +29,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { videoProcessing } from '@kit.MediaKit';
+import { videoProcessing } from 'videoProcessing';
 ```
 
 ## Summary

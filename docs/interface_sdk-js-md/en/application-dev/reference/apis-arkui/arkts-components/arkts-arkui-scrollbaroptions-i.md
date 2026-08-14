@@ -18,7 +18,7 @@ Parameters of the **ScrollBar** component. > **NOTE：**> > - The **ScrollBar** 
 direction?: ScrollBarDirection
 ```
 
-Scrollbar direction in which scrollable components scroll.&lt;br&gt;Default value: **ScrollBarDirection.Vertical**
+Scrollbar direction in which scrollable components scroll.<br>Default value: **ScrollBarDirection.Vertical**
 
 **Type:** [ScrollBarDirection](arkts-arkui-scrollbardirection-e.md)
 
@@ -62,7 +62,7 @@ Scroller, which can be bound to scrollable components for scrolling control.
 state?: BarState
 ```
 
-Scrollbar state.&lt;br&gt;Default value: **BarState.Auto**
+Scrollbar state.<br>Default value: **BarState.Auto**
 
 **Type:** BarState
 

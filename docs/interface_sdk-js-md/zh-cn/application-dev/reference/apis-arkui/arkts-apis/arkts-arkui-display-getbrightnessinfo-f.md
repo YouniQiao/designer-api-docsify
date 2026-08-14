@@ -49,7 +49,7 @@ try {
   let brightnessInfo = display.getBrightnessInfo(0);
   console.info(`brightness info: ${JSON.stringify(brightnessInfo)}`);
 } catch (error) {
-  console.error(`Failed to getDisplayBrightness. Code: ${error.code}, message: ${error.message}`);
+  console.error(`Failed to get display brightnessInfo. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 

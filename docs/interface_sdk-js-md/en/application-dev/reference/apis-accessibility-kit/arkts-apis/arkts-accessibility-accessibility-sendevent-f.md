@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
+import { accessibility } from 'accessibility';
 ```
 
 ## sendEvent
@@ -12,7 +12,7 @@ import { accessibility } from '@kit.AccessibilityKit';
 function sendEvent(event: EventInfo, callback: AsyncCallback<void>): void
 ```
 
-Sends an accessibility event. This API uses an asynchronous callback to return the result.
+Sends an accessibility event. The event will be distributed to registered accessibility extension applications that match the event type for response. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -30,8 +30,8 @@ Sends an accessibility event. This API uses an asynchronous callback to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | EventInfo | Yes | Accessibility event. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation fails, **err** that contains data is returned. |
+| event | EventInfo | Yes | Accessibility event object. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the accessibility event is sent successfully, err is undefined; otherwise, err is an error object. |
 
 ## Examples
 
@@ -61,7 +61,7 @@ accessibility.sendEvent(eventInfo, (err: BusinessError) => {
 function sendEvent(event: EventInfo): Promise<void>
 ```
 
-Sends an accessibility event. This API uses a promise to return the result.
+Sends an accessibility event. The event will be distributed to registered accessibility extension applications that match the event type for response. This API uses a promise to return the result.
 
 **Since:** 7
 

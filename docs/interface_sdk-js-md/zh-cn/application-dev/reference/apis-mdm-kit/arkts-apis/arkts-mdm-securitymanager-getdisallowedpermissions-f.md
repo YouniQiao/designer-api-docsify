@@ -60,7 +60,7 @@ let accountId: number = 100;
 try {
   let result: Array<string> = securityManager.getDisallowedPermissions(wantTemp, accountId);
   console.info(`Succeeded in getting disallowed permissions, result : ${JSON.stringify(result)}`);
-} catch(err) {
+} catch (err) {
   console.error(`Failed to get disallowed permissions. Code: ${err.code}, message: ${err.message}`);
 }
 ```

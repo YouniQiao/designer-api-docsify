@@ -15,7 +15,7 @@ Describes the pre-downloaded performance information.
 ## Modules to Import
 
 ```TypeScript
-import { cacheDownload } from '@kit.BasicServicesKit';
+import { cacheDownload } from 'cacheDownload';
 ```
 
 ## connectTime

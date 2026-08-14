@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { distributedDataObject } from '@kit.ArkData';
+import { distributedDataObject } from 'distributedDataObject';
 ```
 
 ## create

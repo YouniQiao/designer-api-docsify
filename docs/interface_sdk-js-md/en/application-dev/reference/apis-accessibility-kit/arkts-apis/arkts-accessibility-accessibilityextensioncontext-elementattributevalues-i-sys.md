@@ -18,7 +18,7 @@ Provides attribute names and value types of a node element.
 accessibilityStateDescription?: string
 ```
 
-Custom accessibility state broadcast text of an element.
+Custom accessibility status announcement text information of the element.
 
 **Type:** string
 
@@ -42,7 +42,7 @@ Custom accessibility state broadcast text of an element.
 accessibilityVisible?: boolean
 ```
 
-Whether the element is accessibility visible. **true** means the element is accessibility visible and **false** means the element is accessibility invisible. The default value is **true**.
+Whether the element is accessibility visible. The value **true** means the element is accessibility visible, and **false** means the opposite. The default value is **true**.
 
 **Type:** boolean
 
@@ -66,7 +66,7 @@ Whether the element is accessibility visible. **true** means the element is acce
 belongTreeId?: int
 ```
 
-Component tree ID that the element belongs to. The default value is **-1**.
+ID of the component tree to which the element belongs. The default value is **-1**.
 
 **Type:** int
 
@@ -90,7 +90,7 @@ Component tree ID that the element belongs to. The default value is **-1**.
 childrenIds?: Array<long>
 ```
 
-ID of the child component of the element.
+List of child component IDs of the element.
 
 **Type:** Array&lt;long&gt;
 
@@ -114,7 +114,7 @@ ID of the child component of the element.
 childrenTreeId?: int
 ```
 
-Child component tree ID of the element. The default value is **-1**.
+ID of the child component tree of the element. The default value is **-1**.
 
 **Type:** int
 
@@ -138,7 +138,7 @@ Child component tree ID of the element. The default value is **-1**.
 currentItem?: AccessibilityGrid
 ```
 
-Position of the current element in the grid.
+Current item in the component grid.
 
 **Type:** [AccessibilityGrid](arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md)
 
@@ -162,7 +162,7 @@ Position of the current element in the grid.
 customActions?: Array<string>
 ```
 
-Indicates the custom actions supported by the component.
+List of custom actions supported by the element.
 
 **Type:** Array&lt;string&gt;
 
@@ -186,7 +186,7 @@ Indicates the custom actions supported by the component.
 isEssential?: boolean
 ```
 
-Whether the element is mandatory for the user. The value **true** indicates that the element is mandatory, and the value **false** indicates that the element is not mandatory. The default value is **false**.
+Whether the element is essential to the user. The value **true** means the element is essential, and **false** means the opposite. The default value is **false**.
 
 **Type:** boolean
 
@@ -234,7 +234,7 @@ ID of the main window of the element. The default value is **-1**.
 navDestinationId?: long
 ```
 
-ID of the navigation target associated with the element. The default value is **-1**.
+ID of the navigation destination associated with the element. The default value is **-1**.
 
 **Type:** long
 
@@ -306,7 +306,7 @@ Indicates the source of this element.
 span?: AccessibilitySpan[]
 ```
 
-Array of the row and column ranges spanned by the element in the grid layout.
+Array of hyperlink text information of the element.
 
 **Type:** [AccessibilitySpan](arkts-accessibility-accessibilityextensioncontext-accessibilityspan-i-sys.md)[]
 

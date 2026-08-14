@@ -22,7 +22,7 @@ Obtains information about a symbolic link that is used to refer to a file or dir
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Application sandbox path or URI of the file. &lt;br&gt;**Note：**: URIs can be passed since API version 22. |
+| path | string | Yes | Application sandbox path or URI of the file. <br>**Note：**: URIs can be passed since API version 22. |
 
 **Return value:**
 
@@ -68,7 +68,7 @@ Obtains information about a symbolic link that is used to refer to a file or dir
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Application sandbox path or URI of the file. &lt;br&gt;**Note：**: URIs can be passed since API version 22. |
+| path | string | Yes | Application sandbox path or URI of the file. <br>**Note：**: URIs can be passed since API version 22. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Stat](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-stat-i.md)&gt; | Yes | Callback used to return the **Stat** object. |
 
 **Error codes:**

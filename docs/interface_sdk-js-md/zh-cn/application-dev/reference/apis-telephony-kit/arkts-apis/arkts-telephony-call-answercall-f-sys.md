@@ -82,7 +82,7 @@ function answerCall(callId?: int): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callId | int | 否 | 呼叫Id。可以通过订阅callDetailsChange事件获得。从API version 9开始为可选参数。&lt;br/&gt;不填该参数则接通最近一通正在响铃的来电。 |
+| callId | int | 否 | 呼叫Id。可以通过订阅callDetailsChange事件获得。从API version 9开始为可选参数。<br/>不填该参数则接通最近一通正在响铃的来电。 |
 
 **返回值：**
 
@@ -162,7 +162,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 call.answerCall((err: BusinessError) => {
     if (err) {
-        console.error(`answerCall fail, err->${JSON.stringify(err)}`);
+        console.error(`answerCall fail, 本次操作异常，err->Code${err.code}, message:${err.message}请稍后重试。`);
     } else {
         console.info(`answerCall success.`);
     }

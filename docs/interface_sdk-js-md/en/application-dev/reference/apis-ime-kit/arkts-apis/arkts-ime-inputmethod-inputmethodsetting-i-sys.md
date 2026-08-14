@@ -15,7 +15,7 @@ In the following API examples, you must first use [getSetting](arkts-ime-inputme
 ## Modules to Import
 
 ```TypeScript
-import { inputMethod } from '@kit.IMEKit';
+import { inputMethod } from 'inputMethod';
 ```
 
 ## enableInputMethod
@@ -389,7 +389,7 @@ Checks whether the input method panel of a specified type is shown.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the input method panel is shown. &lt;br&gt;- The value **true** means that the input method panel is shown. &lt;br&gt;- The value **false** means that the input method panel is hidden. |
+| boolean | Whether the input method panel is shown. <br>- The value **true** means that the input method panel is shown. <br>- The value **false** means that the input method panel is hidden. |
 
 **Error codes:**
 
@@ -446,7 +446,7 @@ Checks whether the input method panel of a specified type is shown on a specifie
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the input method panel is shown. &lt;br&gt;- The value **true** means that the input method panel is shown. &lt;br&gt;- The value **false** means that the input method panel is hidden. |
+| boolean | Whether the input method panel is shown. <br>- The value **true** means that the input method panel is shown. <br>- The value **false** means that the input method panel is hidden. |
 
 **Error codes:**
 
@@ -583,7 +583,7 @@ Unsubscribes from the soft keyboard hide event of the [input method panel](arkts
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'imeHide' | Yes | Event type, which is **'imeHide'**. |
-| callback | (info: Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;) =&gt; void | No | Callback to unregister.&lt;br&gt;If this parameter is not specified, this API unregisters all callbacks for the specified event type. |
+| callback | (info: Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;) =&gt; void | No | Callback to unregister.<br>If this parameter is not specified, this API unregisters all callbacks for the specified event type. |
 
 ## Examples
 
@@ -616,7 +616,7 @@ Unsubscribes from the soft keyboard show event of the [input method panel](arkts
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'imeShow' | Yes | Event type, which is **'imeShow'**. |
-| callback | (info: Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;) =&gt; void | No | Callback to unregister.&lt;br&gt;If this parameter is not specified, this API unregisters all callbacks for the specified event type. |
+| callback | (info: Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;) =&gt; void | No | Callback to unregister.<br>If this parameter is not specified, this API unregisters all callbacks for the specified event type. |
 
 ## Examples
 

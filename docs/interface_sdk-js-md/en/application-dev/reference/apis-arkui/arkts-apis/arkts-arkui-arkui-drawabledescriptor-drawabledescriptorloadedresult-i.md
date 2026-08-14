@@ -15,7 +15,16 @@ Represents the result of loading an image resource or URI.
 ## Modules to Import
 
 ```TypeScript
-import { DrawableDescriptor, AnimatedDrawableDescriptor, AnimationStopMode, AnimationOptions, AnimationController, DrawableDescriptorLoadedResult, LayeredDrawableDescriptor, PictureDrawableDescriptor, PixelMapDrawableDescriptor, HdrCompositionConfig } from '@kit.ArkUI';
+import { DrawableDescriptor } from 'DrawableDescriptor';
+import { LayeredDrawableDescriptor } from 'LayeredDrawableDescriptor';
+import { PixelMapDrawableDescriptor } from 'PixelMapDrawableDescriptor';
+import { AnimationOptions } from 'AnimationOptions';
+import { AnimatedDrawableDescriptor } from 'AnimatedDrawableDescriptor';
+import { AnimationController } from 'AnimationController';
+import { DrawableDescriptorLoadedResult } from 'DrawableDescriptorLoadedResult';
+import { AnimationStopMode } from 'AnimationStopMode';
+import { PictureDrawableDescriptor } from 'PictureDrawableDescriptor';
+import { HdrCompositionConfig } from 'HdrCompositionConfig';
 ```
 
 ## imageHeight

@@ -319,7 +319,7 @@ getPhotoRotation(deviceDegree?: int): ImageRotation
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceDegree | int | 否 | 设备旋转角度，单位度，取值范围：[0, 360]。 &lt;br&gt;若入参超过该范围，则取入参除以360的余数。 &lt;br&gt;从API version 23开始，入参deviceDegree为可选参数，当不传入参数时，由系统获取deviceDegree进行拍照旋转角度计算。<br>**起始版本：** 23 |
+| deviceDegree | int | 否 | 设备旋转角度，单位度，取值范围：[0, 360]。 <br>若入参超过该范围，则取入参除以360的余数。 <br>从API version 23开始，入参deviceDegree为可选参数，当不传入参数时，由系统获取deviceDegree进行拍照旋转角度计算。<br>**起始版本：** 23 |
 
 **返回值：**
 
@@ -1542,7 +1542,7 @@ setMovingPhotoVideoCodecType(codecType: VideoCodecType): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| codecType | [VideoCodecType](arkts-camera-camera-videocodectype-e.md) | 是 | 动态照片短视频编码类型。 &lt;br&gt;如果设置不在枚举范围内，则该参数不会生效。 |
+| codecType | [VideoCodecType](arkts-camera-camera-videocodectype-e.md) | 是 | 动态照片短视频编码类型。 <br>如果设置不在枚举范围内，则该参数不会生效。 |
 
 **错误码：**
 

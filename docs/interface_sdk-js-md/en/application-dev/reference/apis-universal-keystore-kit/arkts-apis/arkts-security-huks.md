@@ -15,7 +15,7 @@ The **HUKS** module provides KeyStore (KS) capabilities, including key managemen
 ## Modules to Import
 
 ```TypeScript
-import { huks } from '@kit.UniversalKeystoreKit';
+import { huks } from 'huks';
 ```
 
 ## Summary

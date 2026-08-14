@@ -17,7 +17,7 @@ The APIs of this module are deprecated. You are advised to use [@ohos.distribute
 ## Modules to Import
 
 ```TypeScript
-import { deviceManager } from '@kit.DistributedServiceKit';
+import { deviceManager } from 'deviceManager';
 ```
 
 ## Summary

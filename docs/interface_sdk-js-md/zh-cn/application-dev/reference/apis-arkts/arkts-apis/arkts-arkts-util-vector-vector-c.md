@@ -323,7 +323,7 @@ get(index: number): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| index | number | 是 | 查找的下标值，取值范围：0 ≤ index < length。 |
+| index | number | 是 | 查找的下标值，取值范围：0 ≤ index &lt; length。 |
 
 **返回值：**
 
@@ -1066,7 +1066,7 @@ subVector(fromIndex: number, toIndex: number): Vector<T>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| fromIndex | number | 是 | 起始下标，取值范围：0 ≤ fromIndex < length。 |
+| fromIndex | number | 是 | 起始下标，取值范围：0 ≤ fromIndex &lt; length。 |
 | toIndex | number | 是 | 终止下标，取值范围：0 ≤ toIndex ≤ length，且toIndex应大于fromIndex。 |
 
 **返回值：**

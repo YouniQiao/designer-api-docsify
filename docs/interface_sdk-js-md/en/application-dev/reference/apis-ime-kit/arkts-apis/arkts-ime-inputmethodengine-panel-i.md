@@ -15,7 +15,7 @@ In the following API examples, you must first use [createPanel](arkts-ime-inputm
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from '@kit.IMEKit';
+import { inputMethodEngine } from 'inputMethodEngine';
 ```
 
 ## adjustPanelRect
@@ -1128,7 +1128,7 @@ Sets the input method panel to privacy mode. In privacy mode, screenshot and scr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isPrivacyMode | boolean | Yes | Whether to set the input method panel to privacy mode. &lt;br&gt;- **true**: privacy mode. &lt;br&gt;- **false**: non-privacy mode. |
+| isPrivacyMode | boolean | Yes | Whether to set the input method panel to privacy mode. <br>- **true**: privacy mode. <br>- **false**: non-privacy mode. |
 
 **Error codes:**
 
@@ -1661,7 +1661,7 @@ Updates the hot zone on the input method panel in the current state. > **NOTE：
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inputRegion | Array&lt;window.Rect&gt; | Yes | Region for receiving input events. &lt;br&gt;- The array size is limited to [1, 4]. &lt;br&gt;- The input hot zone is relative to the left vertex of the input method panel window. |
+| inputRegion | Array&lt;window.Rect&gt; | Yes | Region for receiving input events. <br>- The array size is limited to [1, 4]. <br>- The input hot zone is relative to the left vertex of the input method panel window. |
 
 **Error codes:**
 

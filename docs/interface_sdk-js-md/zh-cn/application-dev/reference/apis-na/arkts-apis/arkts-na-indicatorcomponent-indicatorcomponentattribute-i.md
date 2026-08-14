@@ -192,7 +192,7 @@ style(indicatorStyle: DotIndicator | DigitIndicator | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| indicatorStyle | [DotIndicator](../../apis-arkui/arkts-components/arkts-arkui-dotindicator-c.md) \| [DigitIndicator](../../apis-arkui/arkts-components/arkts-arkui-digitindicator-c.md) \| undefined | 是 | 可选导航点指示器样式。&lt;br/&gt; - DotIndicator：圆点指示器样式。&lt;br/&gt; - DigitIndicator：数字指示器样式。&lt;br/&gt;  默认类型：DotIndicator。 |
+| indicatorStyle | [DotIndicator](../../apis-arkui/arkts-components/arkts-arkui-dotindicator-c.md) \| [DigitIndicator](../../apis-arkui/arkts-components/arkts-arkui-digitindicator-c.md) \| undefined | 是 | 可选导航点指示器样式。<br/> - DotIndicator：圆点指示器样式。<br/> - DigitIndicator：数字指示器样式。<br/>  默认类型：DotIndicator。 |
 
 **返回值：**
 

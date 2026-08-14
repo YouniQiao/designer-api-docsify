@@ -58,7 +58,7 @@ Receive message from other port.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100006](../../apis-arkweb/errorcode-webview.md#17100006-无法注册message-port回调) | Failed to register a message event for the port. |
 
 ## onMessageEventExt
@@ -89,7 +89,7 @@ Receive message from other port.
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100006](../../apis-arkweb/errorcode-webview.md#17100006-无法注册message-port回调) | Failed to register a message event for the port. |
 
 ## postMessageEvent
@@ -114,13 +114,13 @@ Post a message to other port.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| message | [WebMessage](arkts-na-webview-webmessage-t.md) | 是 | Message to send. |
+| message | [WebMessage](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webmessage-t.md) | 是 | Message to send. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100010](../../apis-arkweb/errorcode-webview.md#17100010-无法使用该端口发送消息) | Failed to post messages through the port. |
 
 ## postMessageEventExt
@@ -145,13 +145,13 @@ Post a message to other port.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| message | [WebMessageExt](arkts-na-webview-webmessageext-c.md) | 是 | Message to send. |
+| message | [WebMessageExt](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webmessageext-c.md) | 是 | Message to send. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3.Parameter verification failed. |
 | [17100010](../../apis-arkweb/errorcode-webview.md#17100010-无法使用该端口发送消息) | Failed to post messages through the port. |
 
 ## isExtentionType

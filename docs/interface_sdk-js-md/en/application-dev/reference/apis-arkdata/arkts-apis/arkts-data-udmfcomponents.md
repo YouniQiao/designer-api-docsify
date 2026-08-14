@@ -3,7 +3,8 @@
 ## Modules to Import
 
 ```TypeScript
-import { ContentFormCard, FormType } from '@kit.ArkData';
+import { ContentFormCard } from 'ContentFormCard';
+import { FormType } from 'FormType';
 ```
 
 ## Summary

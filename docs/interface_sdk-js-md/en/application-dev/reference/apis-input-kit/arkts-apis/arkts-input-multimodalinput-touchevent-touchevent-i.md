@@ -17,7 +17,12 @@ Defines a touch event.
 ## Modules to Import
 
 ```TypeScript
-import { SourceType, ToolType, TouchEvent, FixedMode, KeyAction, Touch } from '@kit.InputKit';
+import { KeyAction } from 'Action';
+import { SourceType } from 'SourceType';
+import { ToolType } from 'ToolType';
+import { Touch } from 'Touch';
+import { TouchEvent } from 'TouchEvent';
+import { FixedMode } from 'FixedMode';
 ```
 
 ## action

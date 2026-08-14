@@ -17,7 +17,7 @@ Result of downloadable Profile list.
 ## Modules to Import
 
 ```TypeScript
-import { eSIM } from '@kit.TelephonyKit';
+import { eSIM } from 'eSIM';
 ```
 
 ## downloadableProfiles

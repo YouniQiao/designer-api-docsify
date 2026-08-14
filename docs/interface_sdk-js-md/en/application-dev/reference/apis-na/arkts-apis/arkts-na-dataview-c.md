@@ -37,8 +37,8 @@ Creates a new DataView object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer | Yes | The underlying ArrayBuffer for this DataView. |
-| byteOffset | int | No | The byte offset within the ArrayBuffer. &lt;br&gt;The value should be an integer. |
-| byteLength | int | No | The byte length of the DataView. &lt;br&gt;The value should be an integer. |
+| byteOffset | int | No | The byte offset within the ArrayBuffer. <br>The value should be an integer. |
+| byteLength | int | No | The byte length of the DataView. <br>The value should be an integer. |
 
 ## getBigInt64
 
@@ -64,7 +64,7 @@ Read bytes as they represent given type
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to read &lt;br&gt;The value should be an integer. |
+| byteOffset | int | Yes | zero index to read <br>The value should be an integer. |
 | littleEndian | boolean | No | read as little or big endian |
 
 **Return value:**
@@ -97,7 +97,7 @@ Read bytes as bigint64 value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to read. &lt;br&gt;The value should be an integer. |
+| byteOffset | int | Yes | zero index to read. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -129,7 +129,7 @@ Read bytes as they represent given type
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to read &lt;br&gt;The value should be an integer. |
+| byteOffset | int | Yes | zero index to read <br>The value should be an integer. |
 | littleEndian | boolean | No | read as little or big endian |
 
 **Return value:**
@@ -162,7 +162,7 @@ Read bytes as biguint64 value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to read. &lt;br&gt;The value should be an integer. |
+| byteOffset | int | Yes | zero index to read. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -324,7 +324,7 @@ Read bytes as they represent given type
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to read &lt;br&gt;The value should be an integer. |
+| byteOffset | int | Yes | zero index to read <br>The value should be an integer. |
 
 **Return value:**
 
@@ -356,7 +356,7 @@ Read bytes as they represent given type
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to read &lt;br&gt;The value should be an integer. |
+| byteOffset | int | Yes | zero index to read <br>The value should be an integer. |
 | littleEndian | boolean | No | read as little or big endian |
 
 **Return value:**
@@ -389,7 +389,7 @@ Read bytes as they represent given type
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to read &lt;br&gt;The value should be an integer. |
+| byteOffset | int | Yes | zero index to read <br>The value should be an integer. |
 
 **Return value:**
 
@@ -421,7 +421,7 @@ Read bytes as they represent given type
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to read &lt;br&gt;The value should be an integer. |
+| byteOffset | int | Yes | zero index to read <br>The value should be an integer. |
 | littleEndian | boolean | No | read as little or big endian |
 
 **Return value:**
@@ -454,7 +454,7 @@ Read bytes as they represent given type
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to read &lt;br&gt;The value should be an integer. |
+| byteOffset | int | Yes | zero index to read <br>The value should be an integer. |
 
 **Return value:**
 
@@ -486,7 +486,7 @@ Read bytes as they represent given type
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to read &lt;br&gt;The value should be an integer. |
+| byteOffset | int | Yes | zero index to read <br>The value should be an integer. |
 
 **Return value:**
 
@@ -518,7 +518,7 @@ Read bytes as they represent given type
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to read. &lt;br&gt;The value should be an integer. |
+| byteOffset | int | Yes | zero index to read. <br>The value should be an integer. |
 | littleEndian | boolean | No | read as little or big endian |
 
 **Return value:**
@@ -616,7 +616,7 @@ Read bytes as they represent given type
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to read &lt;br&gt;The value should be an integer. |
+| byteOffset | int | Yes | zero index to read <br>The value should be an integer. |
 
 **Return value:**
 
@@ -648,7 +648,7 @@ Sets bytes as they represent given type
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to write &lt;br&gt;The value should be an integer. |
+| byteOffset | int | Yes | zero index to write <br>The value should be an integer. |
 | value | bigint | Yes | the bigint value to write. |
 | littleEndian | boolean | No | read as little or big endian |
 
@@ -676,7 +676,7 @@ Sets bytes as bigint64 value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to write. &lt;br&gt;The value should be an integer. |
+| byteOffset | int | Yes | zero index to write. <br>The value should be an integer. |
 | value | long | Yes | the long value to write. |
 
 ## setBigInt64
@@ -703,7 +703,7 @@ Sets bytes as bigint64 value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to write. &lt;br&gt;The value should be an integer. |
+| byteOffset | int | Yes | zero index to write. <br>The value should be an integer. |
 | value | long | Yes | the long value to write. |
 | littleEndian | boolean | Yes | true for little endian, false for big endian. |
 
@@ -731,7 +731,7 @@ Sets bytes as they represent given type
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to write &lt;br&gt;The value should be an integer. |
+| byteOffset | int | Yes | zero index to write <br>The value should be an integer. |
 | value | long | Yes | the long value to write. |
 
 ## setBigUint64
@@ -758,7 +758,7 @@ Sets bytes as they represent given type
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to write &lt;br&gt;The value should be an integer. |
+| byteOffset | int | Yes | zero index to write <br>The value should be an integer. |
 | value | long | Yes | the long value to write. |
 | littleEndian | boolean | Yes | read as little or big endian |
 
@@ -786,7 +786,7 @@ Sets bytes as they represent given type
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to write &lt;br&gt;The value should be an integer. |
+| byteOffset | int | Yes | zero index to write <br>The value should be an integer. |
 | value | bigint | Yes |  |
 | littleEndian | boolean | No | read as little or big endian |
 
@@ -814,7 +814,7 @@ Sets bytes as they represent given type
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to write &lt;br&gt;The value should be an integer. |
+| byteOffset | int | Yes | zero index to write <br>The value should be an integer. |
 | value | float | Yes | the float value to write. |
 
 ## setFloat32
@@ -841,7 +841,7 @@ Sets bytes as they represent given type
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to write &lt;br&gt;The value should be an integer. |
+| byteOffset | int | Yes | zero index to write <br>The value should be an integer. |
 | value | float | Yes | the float value to write. |
 | littleEndian | boolean | Yes | read as little or big endian |
 
@@ -952,8 +952,8 @@ Sets bytes as they represent given type
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to write &lt;br&gt;The value should be an integer. |
-| value | int | Yes | &lt;br&gt;The value should be an integer. |
+| byteOffset | int | Yes | zero index to write <br>The value should be an integer. |
+| value | int | Yes | <br>The value should be an integer. |
 
 ## setInt16
 
@@ -979,8 +979,8 @@ Sets bytes as they represent given type
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to write &lt;br&gt;The value should be an integer. |
-| value | int | Yes | &lt;br&gt;The value should be an integer. |
+| byteOffset | int | Yes | zero index to write <br>The value should be an integer. |
+| value | int | Yes | <br>The value should be an integer. |
 | littleEndian | boolean | Yes | read as little or big endian |
 
 ## setInt16
@@ -1035,8 +1035,8 @@ Sets bytes as they represent given type
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to write &lt;br&gt;The value should be an integer. |
-| value | int | Yes | &lt;br&gt;The value should be an integer. |
+| byteOffset | int | Yes | zero index to write <br>The value should be an integer. |
+| value | int | Yes | <br>The value should be an integer. |
 
 ## setInt32
 
@@ -1062,8 +1062,8 @@ Sets bytes as they represent given type
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to write &lt;br&gt;The value should be an integer. |
-| value | int | Yes | &lt;br&gt;The value should be an integer. |
+| byteOffset | int | Yes | zero index to write <br>The value should be an integer. |
+| value | int | Yes | <br>The value should be an integer. |
 | littleEndian | boolean | Yes | read as little or big endian |
 
 ## setInt32
@@ -1118,8 +1118,8 @@ Sets bytes as they represent given type
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to write &lt;br&gt;The value should be an integer. |
-| value | int | Yes | &lt;br&gt;The value should be an integer. |
+| byteOffset | int | Yes | zero index to write <br>The value should be an integer. |
+| value | int | Yes | <br>The value should be an integer. |
 
 ## setInt8
 
@@ -1172,8 +1172,8 @@ Sets bytes as they represent given type
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to write &lt;br&gt;The value should be an integer. |
-| value | int | Yes | &lt;br&gt;The value should be an integer. |
+| byteOffset | int | Yes | zero index to write <br>The value should be an integer. |
+| value | int | Yes | <br>The value should be an integer. |
 
 ## setUint16
 
@@ -1199,8 +1199,8 @@ Sets bytes as they represent given type
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to write &lt;br&gt;The value should be an integer. |
-| value | int | Yes | &lt;br&gt;The value should be an integer. |
+| byteOffset | int | Yes | zero index to write <br>The value should be an integer. |
+| value | int | Yes | <br>The value should be an integer. |
 | littleEndian | boolean | Yes | read as little or big endian |
 
 ## setUint16
@@ -1255,7 +1255,7 @@ Sets bytes as they represent given type
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to write. &lt;br&gt;The value should be an integer. |
+| byteOffset | int | Yes | zero index to write. <br>The value should be an integer. |
 | value | long | Yes | the long value to write. |
 
 ## setUint32
@@ -1282,7 +1282,7 @@ Sets bytes as they represent given type
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to write &lt;br&gt;The value should be an integer. |
+| byteOffset | int | Yes | zero index to write <br>The value should be an integer. |
 | value | long | Yes | the long value to write. |
 | littleEndian | boolean | Yes | read as little or big endian |
 
@@ -1338,8 +1338,8 @@ Sets bytes as they represent given type
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| byteOffset | int | Yes | zero index to write &lt;br&gt;The value should be an integer. |
-| value | int | Yes | &lt;br&gt;The value should be an integer. |
+| byteOffset | int | Yes | zero index to write <br>The value should be an integer. |
+| value | int | Yes | <br>The value should be an integer. |
 
 ## setUint8
 

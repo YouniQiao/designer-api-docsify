@@ -15,7 +15,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usageStatistics } from '@kit.BackgroundTasksKit';
+import { usageStatistics } from 'usageStatistics';
 ```
 
 ## count
@@ -90,7 +90,7 @@ The form id.
 formLastUsedTime: long
 ```
 
-The last time when the form was accessed, in milliseconds. &lt;br&gt; Unit:ms
+The last time when the form was accessed, in milliseconds. <br> Unit:ms
 
 **Type:** long
 

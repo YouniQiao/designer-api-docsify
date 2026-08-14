@@ -17,7 +17,7 @@ Describes the custom ringtone information.
 ## Modules to Import
 
 ```TypeScript
-import { notificationManager } from '@kit.NotificationKit';
+import { notificationManager } from 'notificationManager';
 ```
 
 ## ringtoneFileName

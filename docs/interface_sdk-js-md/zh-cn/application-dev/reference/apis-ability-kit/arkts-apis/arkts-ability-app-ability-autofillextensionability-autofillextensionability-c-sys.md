@@ -57,7 +57,7 @@ class MyAutoFillExtensionAbility extends AutoFillExtensionAbility {
 onCreate(): void
 ```
 
-AutoFillExtensionAbility创建时触发回调函数。
+AutoFillExtensionAbility创建时触发回调函数。在此方法中可进行初始化操作，如注册监听器、加载必要资源等。
 
 **起始版本：** 23
 
@@ -416,7 +416,7 @@ class MyAutoFillExtensionAbility extends AutoFillExtensionAbility {
 onSessionDestroy(session: UIExtensionContentSession): void
 ```
 
-当AutoFillExtensionAbility界面内容对象销毁后调用。
+当AutoFillExtensionAbility的session销毁时触发此回调。session通常在用户取消填充操作或填充任务完成后销毁。
 
 **起始版本：** 23
 
@@ -457,7 +457,7 @@ class MyAutoFillExtensionAbility extends AutoFillExtensionAbility {
 onUpdateRequest(request: UpdateRequest): void
 ```
 
-当收到更新请求时触发此回调函数。
+当应用界面数据发生变化、需要更新已填充的内容时，系统触发此回调函数。request参数包含更新后的viewData等信息。
 
 **起始版本：** 23
 

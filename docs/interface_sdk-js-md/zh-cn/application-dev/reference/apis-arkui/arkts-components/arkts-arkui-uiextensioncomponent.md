@@ -13,7 +13,7 @@ UIExtensionComponent(
   )
 ```
 
-构造UIExtensionComponent。&lt;br/&gt; 在使用UIExtensionComponent时调用。
+构造UIExtensionComponent。<br/> 在使用UIExtensionComponent时调用。
 
 **起始版本：** 10
 

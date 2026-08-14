@@ -17,7 +17,7 @@ This module provides skill query capabilities for applications.
 ## Modules to Import
 
 ```TypeScript
-import { skillManager } from '@kit.AbilityKit';
+import { skillManager } from 'skillManager';
 ```
 
 ## Summary

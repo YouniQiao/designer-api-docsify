@@ -15,7 +15,7 @@ Used to intercept url requests. Response headers and body can be sent through We
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'webview';
 ```
 
 ## didFail

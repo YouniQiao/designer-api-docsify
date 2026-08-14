@@ -5,7 +5,7 @@ export type FocusRule = 'bypassSelf' | 'bypassSelfDescendants' |
 'checkSelf' | 'checkSelfBypassDescendants'
 ```
 
-Defines a focus rule for determining the start node and its descendants when searching for a focusable node.
+Describes how to determine the focus capability of the starting node and its child nodes when searching for focusable nodes.
 
 **Since:** 23
 
@@ -21,8 +21,8 @@ Defines a focus rule for determining the start node and its descendants when sea
 
 | Type | Description |
 | --- | --- |
-| 'bypassSelf' | Checks only the descendants of the start node. The value is fixed at **'bypassSelf'**. |
-| 'bypassSelfDescendants' | Skips the check on the start node and all its descendants. The value is fixed at **'bypassSelfDescendants'**. |
-| 'checkSelf' | Checks whether the start node is focusable. If yes, use this node; otherwise, checks its descendants. The value is fixed at **'checkSelf'**. |
-| 'checkSelfBypassDescendants' | Checks whether the start node is focusable. If yes, use this node; otherwise, skips the check on all its descendants. The value is fixed at **'checkSelfBypassDescendants'**. |
+| 'bypassSelf' | Skips the check on the starting node and only checks its child nodes. The value is fixed to the 'bypassSelf' string. |
+| 'bypassSelfDescendants' | Skips the check on the starting node and all its child nodes. The value is fixed to the 'bypassSelfDescendants' string. |
+| 'checkSelf' | Checks whether the starting node can gain focus first. If yes, uses it directly; if not, continues to check its child nodes. The value is fixed to the 'checkSelf' string. |
+| 'checkSelfBypassDescendants' | Checks whether the starting node can gain focus first. If yes, uses it; if not, skips the check on all child nodes. The value is fixed to the 'checkSelfBypassDescendants' string. |
 

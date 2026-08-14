@@ -15,7 +15,7 @@ The **PixelMap** class provides APIs to read or write image data and obtain imag
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'image';
 ```
 
 ## applyColorSpace
@@ -3058,7 +3058,7 @@ Reads the pixels in the [PositionArea](arkts-image-image-positionarea-i.md#Posit
 readonly isEditable: boolean
 ```
 
-Whether the image pixels are editable. **true** if editable, **false** otherwise. The value **false** provides better image rendering and transmission performance.&lt;br&gt; This API can be used in atomic services since API version 11.&lt;br&gt; This API can be used in ArkTS widgets since API version 12.
+Whether the image pixels are editable. **true** if editable, **false** otherwise. The value **false** provides better image rendering and transmission performance.<br> This API can be used in atomic services since API version 11.<br> This API can be used in ArkTS widgets since API version 12.
 
 **Type:** boolean
 

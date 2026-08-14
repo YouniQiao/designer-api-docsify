@@ -98,7 +98,7 @@ localeMatcher?: string
 numeric?: boolean
 ```
 
-数字排序，取值包括： true：使用数字排序，比如：'1' < '2' < '10' < '11'。 false：不使用数字排序，比如：'1' < '10' < '11' < '2'。 默认值：false。
+数字排序，取值包括： true：使用数字排序，比如：'1' &lt; '2' &lt; '10' &lt; '11'。 false：不使用数字排序，比如：'1' &lt; '10' &lt; '11' &lt; '2'。 默认值：false。
 
 **类型：** boolean
 

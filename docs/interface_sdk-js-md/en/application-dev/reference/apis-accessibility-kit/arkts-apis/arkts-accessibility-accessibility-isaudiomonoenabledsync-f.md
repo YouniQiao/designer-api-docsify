@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
+import { accessibility } from 'accessibility';
 ```
 
 ## isAudioMonoEnabledSync
@@ -12,7 +12,7 @@ import { accessibility } from '@kit.AccessibilityKit';
 function isAudioMonoEnabledSync(): boolean
 ```
 
-Checks whether mono audio mode is enabled with a synchronous mode.
+Checks whether mono audio mode is enabled. This API is the synchronous version of [accessibility.isAudioMonoEnabled](arkts-accessibility-accessibility-isaudiomonoenabled-f.md#isAudioMonoEnabled) ( asynchronous version). They have the same functionality. Use this API if you need to obtain the result immediately. Use the asynchronous version if you need to query in non-blocking scenarios.
 
 **Since:** 23
 

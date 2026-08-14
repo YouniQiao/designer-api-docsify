@@ -162,7 +162,7 @@ Header style of ListItemGroup. If this parameter is set to ListItemGroupHeaderFo
 space?: number | string
 ```
 
-Spacing between list items. This parameter only affects the spacing between list items, but not spacing between the header and list items or between the footer and list items. &lt;br&gt;Default value: **0**&lt;br&gt;Unit: vp
+Spacing between list items. This parameter only affects the spacing between list items, but not spacing between the header and list items or between the footer and list items. <br>Default value: **0**<br>Unit: vp
 
 **Type:** number \| string
 
@@ -186,7 +186,7 @@ Spacing between list items. This parameter only affects the spacing between list
 spaceWidth?: Dimension
 ```
 
-Spacing between list items. This parameter only affects the spacing between list items, but not spacing between the header and list items or between the footer and list items. &lt;br&gt;Default value: **0**&lt;br&gt;Unit: vp &lt;br&gt;**NOTE：**&lt;br&gt;If this parameter is set to a negative number or a value greater than or equal to the length of the list content area, the default value is used. If both **spaceWidth** and **space** are set, **spaceWidth** takes precedence. When **spaceWidth** is **undefined** or **null**, **space** takes effect.
+Spacing between list items. This parameter only affects the spacing between list items, but not spacing between the header and list items or between the footer and list items. <br>Default value: **0**<br>Unit: vp <br>**NOTE：**<br>If this parameter is set to a negative number or a value greater than or equal to the length of the list content area, the default value is used. If both **spaceWidth** and **space** are set, **spaceWidth** takes precedence. When **spaceWidth** is **undefined** or **null**, **space** takes effect.
 
 **Type:** Dimension
 

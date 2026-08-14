@@ -15,7 +15,7 @@ Defines a device certificate provisioning request.
 ## Modules to Import
 
 ```TypeScript
-import { drm } from '@kit.DrmKit';
+import { drm } from 'drm';
 ```
 
 ## data

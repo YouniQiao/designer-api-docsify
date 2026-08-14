@@ -125,7 +125,7 @@ Delete text in TextRange.
 getCaretOffset() : CaretOffset
 ```
 
-Get the index and relative position of the CaretOffset. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;If this API is called when the caret position is updated in the current frame, it will not take effect. &lt;br&gt;For the Search component, the returned position information is the offset of the first character relative to the search icon in the component. &lt;br&gt;If no text is entered in the Search component, the return value contains the position information relative to the component. &lt;br&gt;The location information in the return value is the location of the caret relative to the editable component. &lt;/p&gt;
+Get the index and relative position of the CaretOffset. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>If this API is called when the caret position is updated in the current frame, it will not take effect. <br>For the Search component, the returned position information is the offset of the first character relative to the search icon in the component. <br>If no text is entered in the Search component, the return value contains the position information relative to the component. <br>The location information in the return value is the location of the caret relative to the editable component. &lt;/p&gt;
 
 **起始版本：** 12
 
@@ -209,7 +209,7 @@ Get the lines number of the text content. The getTextContentLineCount type is us
 getTextContentRect() : RectResult
 ```
 
-Get the start and end positions of the text content. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;If no text is entered, the return value contains the position information, but the size is 0. &lt;br&gt;The position information is the offset of the first character relative to the editable area. &lt;br&gt;For the Search component, the returned position information is the offset of the first character relative to the search icon in the component. &lt;br&gt;If there is input, the width in the return value is the fixed width of the editable area. &lt;/p&gt;
+Get the start and end positions of the text content. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>If no text is entered, the return value contains the position information, but the size is 0. <br>The position information is the offset of the first character relative to the editable area. <br>For the Search component, the returned position information is the offset of the first character relative to the search icon in the component. <br>If there is input, the width in the return value is the fixed width of the editable area. &lt;/p&gt;
 
 **起始版本：** 11
 

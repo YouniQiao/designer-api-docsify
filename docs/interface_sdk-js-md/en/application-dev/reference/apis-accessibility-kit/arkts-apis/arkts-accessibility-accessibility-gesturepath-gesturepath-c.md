@@ -1,6 +1,6 @@
 # GesturePath
 
-The **GesturePath** module provides APIs for creating gesture path information required for an accessibility application to inject gestures.
+GesturePath represents gesture path information. This module is used to create gesture path information for accessibility gesture injection.
 
 **Since:** 9
 
@@ -15,7 +15,7 @@ The **GesturePath** module provides APIs for creating gesture path information r
 ## Modules to Import
 
 ```TypeScript
-import { GesturePath } from '@kit.AccessibilityKit';
+import { GesturePath } from 'GesturePath';
 ```
 
 ## constructor
@@ -24,7 +24,7 @@ import { GesturePath } from '@kit.AccessibilityKit';
 constructor(durationTime: long)
 ```
 
-Defines a constructor used to create a **GesturePath** instance.
+Creates a gesture path object by passing in the total gesture duration. After creating a GesturePath instance, you must also set the required property points.
 
 **Since:** 9
 
@@ -40,7 +40,7 @@ Defines a constructor used to create a **GesturePath** instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| durationTime | long | Yes | Total gesture duration, in milliseconds. |
+| durationTime | long | Yes | Total gesture duration, in ms. The value must be greater than 0. |
 
 ## Examples
 
@@ -56,7 +56,7 @@ let gesturePath = new GesturePath(20);
 durationTime: long
 ```
 
-Total gesture duration, in milliseconds.
+Total gesture duration, in ms. The value must be greater than 0.
 
 **Type:** long
 
@@ -76,7 +76,7 @@ Total gesture duration, in milliseconds.
 points: Array<GesturePoint>
 ```
 
-Gesture touch point.
+Sequence of touch points on the gesture path, used to form the movement trajectory of the gesture. Each touch point represents a coordinate position on the path. The array length must be greater than 0.
 
 **Type:** Array&lt;[GesturePoint](arkts-accessibility-accessibility-gesturepoint-gesturepoint-c.md)&gt;
 

@@ -15,7 +15,11 @@ Represents the information of certificate.
 ## Modules to Import
 
 ```TypeScript
-import { HuksCryptoExtensionCertInfo, HuksCryptoExtensionResultCode, HuksCryptoExtensionParams, HuksCryptoExtensionParam, HuksCryptoExtensionResult } from '@kit.UniversalKeystoreKit';
+import { HuksCryptoExtensionCertInfo } from 'HuksCryptoExtensionCertInfo';
+import { HuksCryptoExtensionResult } from 'HuksCryptoExtensionResult';
+import { HuksCryptoExtensionResultCode } from 'HuksCryptoExtensionResultCode';
+import { HuksCryptoExtensionParam } from 'HuksCryptoExtensionParam';
+import { HuksCryptoExtensionParams } from 'HuksCryptoExtensionParams';
 ```
 
 ## cert

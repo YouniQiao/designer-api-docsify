@@ -67,7 +67,7 @@ ElseIf(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| condition | boolean | 是 | 分支判断条件。&lt;br&gt;true: 执行该分支的UI描述。&lt;br&gt;false: 不执行该分支的UI描述。 |
+| condition | boolean | 是 | 分支判断条件。<br>true: 执行该分支的UI描述。<br>false: 不执行该分支的UI描述。 |
 | content_ | CustomBuilder | 是 | ElseIf分支代码 |
 
 **返回值：**

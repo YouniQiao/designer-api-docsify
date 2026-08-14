@@ -15,7 +15,7 @@ Describes the application bundle information.
 ## Modules to Import
 
 ```TypeScript
-import { bundleManager } from '@kit.MDMKit';
+import { bundleManager } from 'bundleManager';
 ```
 
 ## appIndex

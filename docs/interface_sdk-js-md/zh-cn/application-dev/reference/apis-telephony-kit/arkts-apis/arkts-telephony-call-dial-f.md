@@ -37,7 +37,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let dialOptions: call.DialOptions = {
     extras: false
-}
+};
 call.dial("138xxxxxxxx", dialOptions, (err: BusinessError, data: boolean) => {
     console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
 });
@@ -86,11 +86,11 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let dialOptions: call.DialOptions = {
     extras: false
-}
+};
 call.dial("138xxxxxxxx", dialOptions).then((data: boolean) => {
     console.info(`dial success, promise: data->${JSON.stringify(data)}`);
 }).catch((err: BusinessError) => {
-    console.error(`dial fail, promise: err->${JSON.stringify(err)}`);
+    console.error(`dial fail, promise: 本次操作异常，err->Code${err.code}, message:${err.message}请稍后重试。`);
 });
 ```
 

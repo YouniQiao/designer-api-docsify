@@ -38,7 +38,7 @@ Swiper组件圆点导航指示器的颜色。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../../apis-arkui/arkts-apis/arkts-arkui-resourcecolor-t.md) \| undefined | 是 | 设置Swiper组件圆点导航指示器的颜色。&lt;br/&gt;默认值：'#1A182431'，浅灰色。&lt;br/&gt;取值为undefined时，按默认值处 理。 |
+| value | [ResourceColor](../../apis-arkui/arkts-apis/arkts-arkui-resourcecolor-t.md) \| undefined | 是 | 设置Swiper组件圆点导航指示器的颜色。<br/>默认值：'#1A182431'，浅灰色。<br/>取值为undefined时，按默认值处 理。 |
 
 **返回值：**
 
@@ -90,7 +90,7 @@ Swiper组件圆点导航指示器的高。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](../../apis-arkui/arkts-apis/arkts-arkui-length-t.md) \| undefined | 是 | 设置Swiper组件圆点导航指示器的高，不支持设置百分比。&lt;br/&gt;默认值：6&lt;br/&gt;单位：vp&lt;br/&gt;取值范围：(0, +∞)&lt;br/&gt;取值为 undefined时，按默认值处理。 |
+| value | [Length](../../apis-arkui/arkts-apis/arkts-arkui-length-t.md) \| undefined | 是 | 设置Swiper组件圆点导航指示器的高，不支持设置百分比。<br/>默认值：6<br/>单位：vp<br/>取值范围：(0, +∞)<br/>取值为 undefined时，按默认值处理。 |
 
 **返回值：**
 
@@ -122,7 +122,7 @@ Swiper组件圆点导航指示器的宽。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](../../apis-arkui/arkts-apis/arkts-arkui-length-t.md) \| undefined | 是 | 设置Swiper组件圆点导航指示器的宽，不支持设置百分比。&lt;br/&gt;默认值：6&lt;br/&gt;单位：vp&lt;br/&gt;取值范围：(0, +∞)&lt;br/&gt;取值为 undefined时，按默认值处理。 |
+| value | [Length](../../apis-arkui/arkts-apis/arkts-arkui-length-t.md) \| undefined | 是 | 设置Swiper组件圆点导航指示器的宽，不支持设置百分比。<br/>默认值：6<br/>单位：vp<br/>取值范围：(0, +∞)<br/>取值为 undefined时，按默认值处理。 |
 
 **返回值：**
 
@@ -154,7 +154,7 @@ mask(value: boolean | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean \| undefined | 是 | 设置是否显示Swiper组件圆点导航指示器的蒙版样式。&lt;br/&gt;true表示显示Swiper组件圆点导航指示器的蒙版样式；false表示不显示。&lt;br/ &gt;默认值：false&lt;br/&gt;取值为undefined时，按默认值处理。 |
+| value | boolean \| undefined | 是 | 设置是否显示Swiper组件圆点导航指示器的蒙版样式。<br/>true表示显示Swiper组件圆点导航指示器的蒙版样式；false表示不显示。&lt;br/ &gt;默认值：false<br/>取值为undefined时，按默认值处理。 |
 
 **返回值：**
 
@@ -186,7 +186,7 @@ maxDisplayCount(maxDisplayCount: int | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| maxDisplayCount | int \| undefined | 是 | 设置圆点导航点指示器样式下，导航点显示个数最大值，当实际导航点个数大于最大导航点个数时，会生效超长效果样式，样式如 示例5所示。&lt;br/&gt;取值范围：[6, 9]&lt;br /&gt;**说明：** &lt;br/&gt;1、超长显示场景，目前暂时不支持交互功能（包括：手指点击拖拽、鼠标操作等）。&lt;br/&gt;2、在超长显示场景下，中间页面对应的选中导航点的位置，并不是完全固定的，取决于之前的翻页操作序列。&lt;br/ &gt;3、当前仅支持displayCount为1的场景。&lt;br/&gt;取值为undefined时，等同于没有超长显示效果。 |
+| maxDisplayCount | int \| undefined | 是 | 设置圆点导航点指示器样式下，导航点显示个数最大值，当实际导航点个数大于最大导航点个数时，会生效超长效果样式，样式如 示例5所示。<br/>取值范围：[6, 9]&lt;br /&gt;**说明：** <br/>1、超长显示场景，目前暂时不支持交互功能（包括：手指点击拖拽、鼠标操作等）。<br/>2、在超长显示场景下，中间页面对应的选中导航点的位置，并不是完全固定的，取决于之前的翻页操作序列。&lt;br/ &gt;3、当前仅支持displayCount为1的场景。<br/>取值为undefined时，等同于没有超长显示效果。 |
 
 **返回值：**
 
@@ -218,7 +218,7 @@ selectedColor(value: ResourceColor | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../../apis-arkui/arkts-apis/arkts-arkui-resourcecolor-t.md) \| undefined | 是 | 设置选中Swiper组件圆点导航指示器的颜色。&lt;br/&gt;默认值：'#007DFF'，蓝色。&lt;br/&gt;取值为undefined时，按默认值处理 。 |
+| value | [ResourceColor](../../apis-arkui/arkts-apis/arkts-arkui-resourcecolor-t.md) \| undefined | 是 | 设置选中Swiper组件圆点导航指示器的颜色。<br/>默认值：'#007DFF'，蓝色。<br/>取值为undefined时，按默认值处理 。 |
 
 **返回值：**
 
@@ -250,7 +250,7 @@ selectedItemHeight(value: Length | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](../../apis-arkui/arkts-apis/arkts-arkui-length-t.md) \| undefined | 是 | 设置选中Swiper组件圆点导航指示器的高，不支持设置百分比。&lt;br/&gt;默认值：6&lt;br/&gt;单位：vp&lt;br/&gt;取值范围：(0, +∞)&lt;br/&gt;取值为 undefined时，按默认值处理。 |
+| value | [Length](../../apis-arkui/arkts-apis/arkts-arkui-length-t.md) \| undefined | 是 | 设置选中Swiper组件圆点导航指示器的高，不支持设置百分比。<br/>默认值：6<br/>单位：vp<br/>取值范围：(0, +∞)<br/>取值为 undefined时，按默认值处理。 |
 
 **返回值：**
 
@@ -282,7 +282,7 @@ selectedItemWidth(value: Length | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](../../apis-arkui/arkts-apis/arkts-arkui-length-t.md) \| undefined | 是 | 设置选中Swiper组件圆点导航指示器的宽，不支持设置百分比。&lt;br/&gt;默认值：6&lt;br/&gt;单位：vp&lt;br/&gt;取值范围：(0, +∞)&lt;br/&gt;取值为 undefined时，按默认值处理。 |
+| value | [Length](../../apis-arkui/arkts-apis/arkts-arkui-length-t.md) \| undefined | 是 | 设置选中Swiper组件圆点导航指示器的宽，不支持设置百分比。<br/>默认值：6<br/>单位：vp<br/>取值范围：(0, +∞)<br/>取值为 undefined时，按默认值处理。 |
 
 **返回值：**
 
@@ -314,7 +314,7 @@ space(space: LengthMetrics | undefined): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| space | [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-lengthmetrics-t.md) \| undefined | 是 | 设置圆点导航点间距，不支持设置百分比。&lt;br/&gt;默认值：PC/2in1设备上为10，其他设备为8。&lt;br/&gt;单位：vp&lt;br/&gt;取值范围： [0, +∞)&lt;br/&gt;取值为undefined时，按默认值处理。 |
+| space | [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-lengthmetrics-t.md) \| undefined | 是 | 设置圆点导航点间距，不支持设置百分比。<br/>默认值：PC/2in1设备上为10，其他设备为8。<br/>单位：vp<br/>取值范围： [0, +∞)<br/>取值为undefined时，按默认值处理。 |
 
 **返回值：**
 

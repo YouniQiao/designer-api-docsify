@@ -17,7 +17,7 @@ Details the space usage of the **\/data** directory on the user device.
 ## Modules to Import
 
 ```TypeScript
-import { storageStatistics } from '@kit.CoreFileKit';
+import { storageStatistics } from 'storageStatistics';
 ```
 
 ## path
@@ -74,7 +74,7 @@ The size of inode count.
 totalSize: long
 ```
 
-The size of user data dirs. &lt;br&gt;Unit: Byte.
+The size of user data dirs. <br>Unit: Byte.
 
 **Type:** long
 

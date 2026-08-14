@@ -17,7 +17,7 @@ The **usbManager** module provides APIs for USB management. > **NOTE：**> > The
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from '@kit.MDMKit';
+import { usbManager } from 'usbManager';
 ```
 
 ## Summary

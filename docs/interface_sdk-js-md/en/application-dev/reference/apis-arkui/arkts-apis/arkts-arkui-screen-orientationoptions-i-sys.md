@@ -17,7 +17,7 @@ The parameter of setting orientation
 ## Modules to Import
 
 ```TypeScript
-import { screen } from '@kit.ArkUI';
+import { screen } from 'screen';
 ```
 
 ## ignoreRotationLock

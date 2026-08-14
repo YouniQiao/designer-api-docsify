@@ -15,7 +15,12 @@ Button configuration for fixed-style dialog.
 ## Modules to Import
 
 ```TypeScript
-import { DialogButtonOrientation, DialogState, DialogResult, DialogBaseController, DialogBaseAlignment, DialogDismissal } from '@kit.ArkUI';
+import { DialogBaseAlignment } from 'DialogBaseAlignment';
+import { DialogButtonOrientation } from 'DialogButtonOrientation';
+import { DialogState } from 'DialogState';
+import { DialogResult } from 'DialogResult';
+import { DialogDismissal } from 'DialogDismissal';
+import { DialogBaseController } from 'DialogBaseController';
 ```
 
 ## action
@@ -63,32 +68,6 @@ Background color of the button.
 **Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-DialogButton-backgroundColor?: ResourceColor--><!--Device-DialogButton-backgroundColor?: ResourceColor-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## defaultFocus
-
-```TypeScript
-defaultFocus?: boolean
-```
-
-Whether the button is the default focus.
-
-**Type:** boolean
-
-**Default:** false
-
-**Since:** 26.1.0
-
-**ArkTS mode:** ArkTS-Dyn only, since version 26.1.0.
-
-**Deprecated since:** -1
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
-
-<!--Device-DialogButton-defaultFocus?: boolean--><!--Device-DialogButton-defaultFocus?: boolean-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

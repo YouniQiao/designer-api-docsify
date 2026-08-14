@@ -38,7 +38,7 @@ autoRefresh?(value: boolean): LengthMetrics
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 使用[resource](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md#resource)方法构造的LengthMetrics对象是否在系统配置变化时自动刷新值。 &lt;br&gt;true表示主动监听系统配置变化，在变化时值刷新为对应配置下的资源值。 &lt;br&gt;false表示不主动监听系统配置变化。 |
+| value | boolean | 是 | 使用[resource](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md#resource)方法构造的LengthMetrics对象是否在系统配置变化时自动刷新值。 <br>true表示主动监听系统配置变化，在变化时值刷新为对应配置下的资源值。 <br>false表示不主动监听系统配置变化。 |
 
 **返回值：**
 
@@ -72,7 +72,7 @@ LengthMetrics的构造函数。若参数unit不传入值或传入undefined，返
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 长度属性的值。 &lt;br&gt;取值范围：(-∞, +∞) |
+| value | number | 是 | 长度属性的值。 <br>取值范围：(-∞, +∞) |
 | unit | [LengthUnit](../../apis-na/arkts-apis/arkts-na-graphics-lengthunit-e.md) | 否 | 长度属性的单位，默认为VP。 |
 
 ## fp
@@ -101,7 +101,7 @@ static fp(value: number): LengthMetrics
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 长度属性的值。 &lt;br&gt;取值范围：(-∞, +∞) |
+| value | number | 是 | 长度属性的值。 <br>取值范围：(-∞, +∞) |
 
 **返回值：**
 
@@ -135,7 +135,7 @@ static lpx(value: number): LengthMetrics
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 长度属性的值。 &lt;br&gt;取值范围：(-∞, +∞) |
+| value | number | 是 | 长度属性的值。 <br>取值范围：(-∞, +∞) |
 
 **返回值：**
 
@@ -169,7 +169,7 @@ static percent(value: number): LengthMetrics
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 长度属性的值。 &lt;br&gt;取值范围：[0, 1] &lt;br&gt;超出范围时按边界值处理。 |
+| value | number | 是 | 长度属性的值。 <br>取值范围：[0, 1] <br>超出范围时按边界值处理。 |
 
 **返回值：**
 
@@ -203,7 +203,7 @@ static px(value: number): LengthMetrics
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 长度属性的值。 &lt;br&gt;取值范围：(-∞, +∞) |
+| value | number | 是 | 长度属性的值。 <br>取值范围：(-∞, +∞) |
 
 **返回值：**
 
@@ -317,7 +317,7 @@ static vp(value: number): LengthMetrics
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | 长度属性的值。 &lt;br&gt;取值范围：(-∞, +∞) |
+| value | number | 是 | 长度属性的值。 <br>取值范围：(-∞, +∞) |
 
 **返回值：**
 

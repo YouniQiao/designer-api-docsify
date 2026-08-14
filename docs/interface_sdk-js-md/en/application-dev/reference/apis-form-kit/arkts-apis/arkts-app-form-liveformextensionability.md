@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { LiveFormInfo } from '@kit.FormKit';
+import { LiveFormInfo } from 'LiveFormInfo';
 ```
 
 ## Summary

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { print } from '@kit.BasicServicesKit';
+import { print } from 'print';
 ```
 
 ## offPrinterInfoQuery
@@ -34,7 +34,7 @@ Unregister event callback for the printer info queried.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [PrinterInfoQueryCallback](arkts-basicservices-print-printerinfoquerycallback-t-sys.md) | No | The callback function for the printer info queried. &lt;br&gt;The callback function for the printer info queried. |
+| callback | [PrinterInfoQueryCallback](arkts-basicservices-print-printerinfoquerycallback-t-sys.md) | No | The callback function for the printer info queried. <br>The callback function for the printer info queried. |
 
 **Error codes:**
 

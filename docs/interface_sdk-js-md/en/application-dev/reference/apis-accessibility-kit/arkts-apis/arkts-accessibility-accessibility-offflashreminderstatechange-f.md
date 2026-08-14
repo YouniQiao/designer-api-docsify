@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
+import { accessibility } from 'accessibility';
 ```
 
 ## offFlashReminderStateChange
@@ -30,7 +30,7 @@ Unsubscribes from the state changes in flash alerts mode. This API uses an async
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | Callback function. Cancels the event response of a specified callback object. The value must be the same as the value of callback in [accessibility.onFlashReminderStateChange](arkts-accessibility-accessibility-onflashreminderstatechange-f.md#onFlashReminderStateChange) . If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;boolean&gt; | No | Callback function. Cancels the event response of a specified callback object. The value must be the same as the value of callback in [accessibility.onFlashReminderStateChange](arkts-accessibility-accessibility-onflashreminderstatechange-f.md#onFlashReminderStateChange). If this parameter is not specified, listening will be disabled for all callbacks corresponding to the specified type. |
 
 ## Examples
 

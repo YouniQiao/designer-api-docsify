@@ -15,7 +15,7 @@ Defines a struct for shared configurations.
 ## Modules to Import
 
 ```TypeScript
-import { dataShare } from '@kit.ArkData';
+import { dataShare } from 'dataShare';
 ```
 
 ## allowList

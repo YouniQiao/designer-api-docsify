@@ -299,7 +299,7 @@ Removes a callback function that was previously registered with 'onNavDestinatio
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| navigationUniqueId | int | Yes | The uniqueId of the Navigation to which NavDestination belongs. &lt;br&gt;The value should be an integer. |
+| navigationUniqueId | int | Yes | The uniqueId of the Navigation to which NavDestination belongs. <br>The value should be an integer. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.NavDestinationInfo&gt; | No | The callback function to remove. If not provided, all callbacks for the given event type will be removed. |
 
 ## offNavDestinationSwitch
@@ -1147,7 +1147,7 @@ Registers a callback function to be called when the size of the visible NavDesti
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| navigationUniqueId | int | Yes | The uniqueId of the Navigation to which NavDestination belongs. &lt;br&gt;The value should be an integer. |
+| navigationUniqueId | int | Yes | The uniqueId of the Navigation to which NavDestination belongs. <br>The value should be an integer. |
 | callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;observer.NavDestinationInfo&gt; | Yes | The callback function to be called when the visible NavDestination's size is changed. |
 
 ## onNavDestinationSwitch

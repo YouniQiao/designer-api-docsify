@@ -15,7 +15,12 @@ Declare Component DownloadFileButton
 ## Modules to Import
 
 ```TypeScript
-import { DownloadStyleOptions, DownloadFileButton, DownloadIconStyle, DownloadLayoutDirection, DownloadContentOptions, DownloadDescription } from '@kit.ArkUI';
+import { DownloadFileButton } from 'DownloadFileButton';
+import { DownloadLayoutDirection } from 'DownloadLayoutDirection';
+import { DownloadIconStyle } from 'DownloadIconStyle';
+import { DownloadDescription } from 'DownloadDescription';
+import { DownloadContentOptions } from 'DownloadContentOptions';
+import { DownloadStyleOptions } from 'DownloadStyleOptions';
 ```
 
 ## contentOptions

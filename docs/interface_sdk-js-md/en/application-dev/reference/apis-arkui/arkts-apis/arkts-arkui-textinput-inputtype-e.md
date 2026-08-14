@@ -78,7 +78,7 @@ Phone number entry mode.
 Email = 5
 ```
 
-E-mail address input mode. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;This mode accepts only digits, letters, underscores (_), dots (.), and the following special characters: ! # \$ % & ' " * + - / = ? ^ ` { | } ~ @ (which can only appear once) &lt;/p&gt;
+E-mail address input mode. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>This mode accepts only digits, letters, underscores (_), dots (.), and the following special characters: ! # \$ % & ' " * + - / = ? ^ ` { | } ~ @ (which can only appear once) &lt;/p&gt;
 
 **Since:** 23
 
@@ -98,7 +98,7 @@ E-mail address input mode. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt
 Password = 7
 ```
 
-Password entry mode. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;An eye icon is used to show or hide the password. &lt;br&gt;By default, the entered characters are temporarily shown before being obscured by dots; they are directly obscured by dots since API version 12 on certain devices. &lt;br&gt;The password input mode does not support underlines. &lt;br&gt;If Password Vault is enabled, autofill is available for the username and password. &lt;/p&gt;
+Password entry mode. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>An eye icon is used to show or hide the password. <br>By default, the entered characters are temporarily shown before being obscured by dots; they are directly obscured by dots since API version 12 on certain devices. <br>The password input mode does not support underlines. <br>If Password Vault is enabled, autofill is available for the username and password. &lt;/p&gt;
 
 **Since:** 23
 
@@ -118,7 +118,7 @@ Password entry mode. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;An ey
 NUMBER_PASSWORD = 8
 ```
 
-Number Password entry mode. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;An eye icon is used to show or hide the password. &lt;br&gt;By default, the entered characters are temporarily shown before being obscured by dots; they are directly obscured by dots since API version 12 on certain devices. &lt;br&gt;The password input mode does not support underlines. &lt;/p&gt;
+Number Password entry mode. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>An eye icon is used to show or hide the password. <br>By default, the entered characters are temporarily shown before being obscured by dots; they are directly obscured by dots since API version 12 on certain devices. <br>The password input mode does not support underlines. &lt;/p&gt;
 
 **Since:** 23
 
@@ -138,7 +138,7 @@ Number Password entry mode. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&g
 USER_NAME = 10
 ```
 
-UserName entry mode. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;If Password Vault is enabled, autofill is available for the username and password. &lt;/p&gt;
+UserName entry mode. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>If Password Vault is enabled, autofill is available for the username and password. &lt;/p&gt;
 
 **Since:** 23
 
@@ -158,7 +158,7 @@ UserName entry mode. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;If Pa
 NEW_PASSWORD = 11
 ```
 
-NewPassword entry mode. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;An eye icon is used to show or hide the password. &lt;br&gt;By default, the entered characters are temporarily shown before being obscured by dots; they are directly obscured by dots since API version 12 on certain devices. &lt;br&gt;If Password Vault is enabled, a new password can be automatically generated. &lt;/p&gt;
+NewPassword entry mode. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>An eye icon is used to show or hide the password. <br>By default, the entered characters are temporarily shown before being obscured by dots; they are directly obscured by dots since API version 12 on certain devices. <br>If Password Vault is enabled, a new password can be automatically generated. &lt;/p&gt;
 
 **Since:** 23
 
@@ -178,7 +178,7 @@ NewPassword entry mode. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;An
 NUMBER_DECIMAL = 12
 ```
 
-Number decimal entry mode. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;The value can contain digits and one decimal point. &lt;/p&gt;
+Number decimal entry mode. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>The value can contain digits and one decimal point. &lt;/p&gt;
 
 **Since:** 23
 

@@ -66,7 +66,7 @@ Sets whether to enable autoplay. This attribute can be dynamically set using att
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to enable autoplay.&lt;br&gt;**true**: Enable autoplay.&lt;br&gt;**false**: Disable autoplay.&lt;br&gt;Default value: **false**. |
+| value | boolean | Yes | Whether to enable autoplay.<br>**true**: Enable autoplay.<br>**false**: Disable autoplay.<br>Default value: **false**. |
 
 ## controls
 
@@ -92,7 +92,7 @@ Sets whether to display the video playback control bar. This attribute can be dy
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to display the video playback control bar.&lt;br&gt;**true**: Display the video playback control bar.&lt;br&gt;**false**: Do not display the video playback control bar.&lt;br&gt;Default value: **true |
+| value | boolean | Yes | Whether to display the video playback control bar.<br>**true**: Display the video playback control bar.<br>**false**: Do not display the video playback control bar.<br>Default value: **true |
 
 ## enableAnalyzer
 
@@ -120,7 +120,7 @@ Sets whether to enable the AI image analyzer, which supports subject recognition
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to enable the AI image analyzer.&lt;br&gt;**true**: Enable the AI image analyzer. **false**: Disable the AI image analyzer.&lt;br&gt;Default value: **false |
+| enable | boolean | Yes | Whether to enable the AI image analyzer.<br>**true**: Enable the AI image analyzer. **false**: Disable the AI image analyzer.<br>Default value: **false |
 
 ## enableShortcutKey
 
@@ -148,7 +148,7 @@ Sets whether the component responds to keyboard shortcuts when it has focus. Thi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether the component responds to keyboard shortcuts when it has focus.&lt;br&gt;**true**: The component responds to keyboard shortcuts when it has focus.&lt;br&gt;**false**: The component does not respond to keyboard shortcuts when it has focus.&lt;br&gt;Default value: **false**. |
+| enabled | boolean | Yes | Whether the component responds to keyboard shortcuts when it has focus.<br>**true**: The component responds to keyboard shortcuts when it has focus.<br>**false**: The component does not respond to keyboard shortcuts when it has focus.<br>Default value: **false**. |
 
 ## loop
 
@@ -174,7 +174,7 @@ Sets whether to repeat the video. This attribute can be dynamically set using at
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to repeat the video.&lt;br&gt;**true**: Repeat the video.&lt;br&gt;**false**: Do not repeat the video.&lt;br&gt;Default value: **false**. |
+| value | boolean | Yes | Whether to repeat the video.<br>**true**: Repeat the video.<br>**false**: Do not repeat the video.<br>Default value: **false**. |
 
 ## muted
 
@@ -200,7 +200,7 @@ Sets whether to mute the video. This attribute can be dynamically set using attr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to mute the video.&lt;br&gt;**true**: Mute the video.&lt;br&gt;**false**: Unmute the video.&lt;br&gt;Default value: **false**. |
+| value | boolean | Yes | Whether to mute the video.<br>**true**: Mute the video.<br>**false**: Unmute the video.<br>Default value: **false**. |
 
 ## objectFit
 
@@ -226,7 +226,7 @@ Sets the fill mode for the video content. This attribute can be dynamically set 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | ImageFit | Yes | Fill mode of the video content.&lt;br&gt;Default value: **Cover**&lt;br&gt;Constraints: The enumerated value **Matrix** in **ImageFit** is not supported and will behave as **Cover**.&lt;br&gt;Invalid values, including **undefined**, **null**, and values outside the [ImageFit](../arkts-apis/arkts-arkui-imagefit-e.md#ImageFit) enumeration range, will result in an effect the same as **Cover**. |
+| value | ImageFit | Yes | Fill mode of the video content.<br>Default value: **Cover**<br>Constraints: The enumerated value **Matrix** in **ImageFit** is not supported and will behave as **Cover**.<br>Invalid values, including **undefined**, **null**, and values outside the [ImageFit](../arkts-apis/arkts-arkui-imagefit-e.md#ImageFit) enumeration range, will result in an effect the same as **Cover**. |
 
 ## onError
 

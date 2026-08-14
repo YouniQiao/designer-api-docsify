@@ -17,7 +17,7 @@ The **inputMonitor** module implements listening for events of input devices, in
 ## Modules to Import
 
 ```TypeScript
-import { inputMonitor } from '@kit.InputKit';
+import { inputMonitor } from 'inputMonitor';
 ```
 
 ## Summary

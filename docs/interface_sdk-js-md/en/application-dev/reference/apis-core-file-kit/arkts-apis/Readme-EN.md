@@ -11,7 +11,8 @@
   - [show](arkts-corefile-document-show-f.md)
 - [@ohos.file.BackupExtensionContext](arkts-file-backupextensioncontext.md)
   - [BackupExtensionContext](arkts-corefile-file-backupextensioncontext-backupextensioncontext-c.md)
-- [@ohos.file.backup](arkts-file-backup.md)
+<!--Del-->
+- [@ohos.file.backup](arkts-file-backup.md)<!--DelEnd-->
   <!--Del-->
   - [fileSystemServiceRequest(system api)](arkts-corefile-backup-filesystemservicerequest-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -60,7 +61,8 @@
   - [OnProcess(system api)](arkts-corefile-backup-onprocess-t-sys.md)<!--DelEnd-->
   <!--Del-->
   - [OnResultReport(system api)](arkts-corefile-backup-onresultreport-t-sys.md)<!--DelEnd-->
-- [@ohos.file.cloudDiskManager](arkts-file-clouddiskmanager.md)
+<!--Del-->
+- [@ohos.file.cloudDiskManager](arkts-file-clouddiskmanager.md)<!--DelEnd-->
   <!--Del-->
   - [SyncFolderAccessor(system api)](arkts-corefile-clouddiskmanager-syncfolderaccessor-c-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -196,7 +198,8 @@
   - [OPENFLAGS(system api)](arkts-corefile-fileaccess-openflags-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [Constants(system api)](arkts-corefile-fileaccess-con-sys.md)<!--DelEnd-->
-- [@ohos.file.fileExtensionInfo](arkts-file-fileextensioninfo.md)
+<!--Del-->
+- [@ohos.file.fileExtensionInfo](arkts-file-fileextensioninfo.md)<!--DelEnd-->
   - [fileExtensionInfo](arkts-corefile-fileextensioninfo-n.md)
     - [DeviceFlag](arkts-corefile-fileextensioninfo-deviceflag-n.md)
       <!--Del-->
@@ -347,7 +350,8 @@
   - [DocumentSelectMode](arkts-corefile-picker-documentselectmode-e.md)
   - [MergeTypeMode](arkts-corefile-picker-mergetypemode-e.md)
   - [PhotoViewMIMETypes](arkts-corefile-picker-photoviewmimetypes-e.md)
-- [@ohos.file.recent](arkts-file-recent.md)
+<!--Del-->
+- [@ohos.file.recent](arkts-file-recent.md)<!--DelEnd-->
   <!--Del-->
   - [add(system api)](arkts-corefile-recent-add-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -409,7 +413,8 @@
   - [StorageStats(system api)](arkts-corefile-storagestatistics-storagestats-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [UserdataDirInfo(system api)](arkts-corefile-storagestatistics-userdatadirinfo-i-sys.md)<!--DelEnd-->
-- [@ohos.file.trash](arkts-file-trash.md)
+<!--Del-->
+- [@ohos.file.trash](arkts-file-trash.md)<!--DelEnd-->
   <!--Del-->
   - [completelyDelete(system api)](arkts-corefile-trash-completelydelete-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -418,7 +423,8 @@
   - [recover(system api)](arkts-corefile-trash-recover-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [FileInfo(system api)](arkts-corefile-trash-fileinfo-i-sys.md)<!--DelEnd-->
-- [@ohos.file.volumeManager](arkts-file-volumemanager.md)
+<!--Del-->
+- [@ohos.file.volumeManager](arkts-file-volumemanager.md)<!--DelEnd-->
   <!--Del-->
   - [burn(system api)](arkts-corefile-volumemanager-burn-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -539,7 +545,8 @@
   - [Stat](arkts-corefile-fileio-stat-depr-i.md)
   - [Stream](arkts-corefile-fileio-stream-depr-i.md)
   - [Watcher](arkts-corefile-fileio-watcher-depr-i.md)
-- [@ohos.filemanagement.userFileManager](arkts-filemanagement-userfilemanager.md)
+<!--Del-->
+- [@ohos.filemanagement.userFileManager](arkts-filemanagement-userfilemanager.md)<!--DelEnd-->
   <!--Del-->
   - [getUserFileMgr(system api)](arkts-corefile-userfilemanager-getuserfilemgr-f-sys.md)<!--DelEnd-->
   <!--Del-->

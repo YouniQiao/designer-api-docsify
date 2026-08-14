@@ -15,7 +15,7 @@ The module provides APIs for querying the [OverlayModuleInfo](arkts-ability-over
 ## Modules to Import
 
 ```TypeScript
-import { overlay } from '@kit.AbilityKit';
+import { overlay } from 'overlay';
 ```
 
 ## Summary

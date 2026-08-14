@@ -15,7 +15,7 @@ Represents Wi-Fi access information containing Service Set Identifier (SSID) and
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.MDMKit';
+import { wifiManager } from 'wifiManager';
 ```
 
 ## bssid

@@ -15,7 +15,7 @@ Describes the properties of the status bar&lt;!--Del--&gt; and three-button navi
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'window';
 ```
 
 ## enableNavigationBarAnimation

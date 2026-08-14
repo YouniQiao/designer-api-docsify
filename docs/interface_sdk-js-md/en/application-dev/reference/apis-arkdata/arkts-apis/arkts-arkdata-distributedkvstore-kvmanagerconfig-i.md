@@ -15,7 +15,7 @@ Provides the **KVManager** instance configuration, including the bundle name of 
 ## Modules to Import
 
 ```TypeScript
-import { distributedKVStore } from '@kit.ArkData';
+import { distributedKVStore } from 'distributedKVStore';
 ```
 
 ## bundleName

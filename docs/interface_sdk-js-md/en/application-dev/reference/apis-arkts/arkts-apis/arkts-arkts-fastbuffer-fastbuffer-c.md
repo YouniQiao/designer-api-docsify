@@ -15,7 +15,7 @@ The FastBuffer object is a method of handling buffers dedicated to binary data.
 ## Modules to Import
 
 ```TypeScript
-import { fastbuffer } from '@kit.ArkTS';
+import { fastbuffer } from 'fastbuffer';
 ```
 
 ## compare
@@ -500,7 +500,7 @@ Reads a signed, big-endian 64-bit integer from buf at the specified offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - 8 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 &lt;= offset &lt;= buf.length - 8 |
 
 **Return value:**
 
@@ -512,7 +512,7 @@ Reads a signed, big-endian 64-bit integer from buf at the specified offset
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 8. Received value is: [offset] |
 
 ## Examples
 
@@ -549,7 +549,7 @@ Reads a signed, little-endian 64-bit integer from buf at the specified offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - 8 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 &lt;= offset &lt;= buf.length - 8 |
 
 **Return value:**
 
@@ -561,7 +561,7 @@ Reads a signed, little-endian 64-bit integer from buf at the specified offset
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 8. Received value is: [offset] |
 
 ## Examples
 
@@ -598,7 +598,7 @@ Reads a unsigned, big-endian 64-bit integer from buf at the specified offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - 8 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 &lt;= offset &lt;= buf.length - 8 |
 
 **Return value:**
 
@@ -610,7 +610,7 @@ Reads a unsigned, big-endian 64-bit integer from buf at the specified offset
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 8. Received value is: [offset] |
 
 ## Examples
 
@@ -647,7 +647,7 @@ Reads a unsigned, little-endian 64-bit integer from buf at the specified offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - 8 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 &lt;= offset &lt;= buf.length - 8 |
 
 **Return value:**
 
@@ -659,7 +659,7 @@ Reads a unsigned, little-endian 64-bit integer from buf at the specified offset
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 8. Received value is: [offset] |
 
 ## Examples
 
@@ -696,7 +696,7 @@ Reads a 64-bit, big-endian double from buf at the specified offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - 8 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 &lt;= offset &lt;= buf.length - 8 |
 
 **Return value:**
 
@@ -708,7 +708,7 @@ Reads a 64-bit, big-endian double from buf at the specified offset
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 8. Received value is: [offset] |
 
 ## Examples
 
@@ -744,7 +744,7 @@ Reads a 64-bit, little-endian double from buf at the specified offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - 8 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 &lt;= offset &lt;= buf.length - 8 |
 
 **Return value:**
 
@@ -756,7 +756,7 @@ Reads a 64-bit, little-endian double from buf at the specified offset
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 8. Received value is: [offset] |
 
 ## Examples
 
@@ -792,7 +792,7 @@ Reads a 32-bit, big-endian float from buf at the specified offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - 4 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 &lt;= offset &lt;= buf.length - 4 |
 
 **Return value:**
 
@@ -804,7 +804,7 @@ Reads a 32-bit, big-endian float from buf at the specified offset
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 4. Received value is: [offset] |
 
 ## Examples
 
@@ -840,7 +840,7 @@ Reads a 32-bit, little-endian float from buf at the specified offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - 4 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 &lt;= offset &lt;= buf.length - 4 |
 
 **Return value:**
 
@@ -852,7 +852,7 @@ Reads a 32-bit, little-endian float from buf at the specified offset
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 4. Received value is: [offset] |
 
 ## Examples
 
@@ -888,7 +888,7 @@ Reads a signed, big-endian 16-bit integer from buf at the specified offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - 2 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 &lt;= offset &lt;= buf.length - 2 |
 
 **Return value:**
 
@@ -900,7 +900,7 @@ Reads a signed, big-endian 16-bit integer from buf at the specified offset
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 2. Received value is: [offset] |
 
 ## Examples
 
@@ -936,7 +936,7 @@ Reads a signed, little-endian 16-bit integer from buf at the specified offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - 2 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 &lt;= offset &lt;= buf.length - 2 |
 
 **Return value:**
 
@@ -948,7 +948,7 @@ Reads a signed, little-endian 16-bit integer from buf at the specified offset
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 2. Received value is: [offset] |
 
 ## Examples
 
@@ -984,7 +984,7 @@ Reads a signed, big-endian 32-bit integer from buf at the specified offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - 4 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 &lt;= offset &lt;= buf.length - 4 |
 
 **Return value:**
 
@@ -996,7 +996,7 @@ Reads a signed, big-endian 32-bit integer from buf at the specified offset
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 4. Received value is: [offset] |
 
 ## Examples
 
@@ -1032,7 +1032,7 @@ Reads a signed, little-endian 32-bit integer from buf at the specified offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - 4 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 &lt;= offset &lt;= buf.length - 4 |
 
 **Return value:**
 
@@ -1044,7 +1044,7 @@ Reads a signed, little-endian 32-bit integer from buf at the specified offset
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 4. Received value is: [offset] |
 
 ## Examples
 
@@ -1080,7 +1080,7 @@ Reads a signed 8-bit integer from buf at the specified offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - 1 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy: 0 &lt;= offset &lt;= buf.length - 1 |
 
 **Return value:**
 
@@ -1092,7 +1092,7 @@ Reads a signed 8-bit integer from buf at the specified offset
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 1. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 1. Received value is: [offset] |
 
 ## Examples
 
@@ -1130,8 +1130,8 @@ Reads byteLength number of bytes from buf at the specified offset and interprets
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | Yes | Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - byteLength |
-| byteLength | number | Yes | Number of bytes to read. Must satisfy 0 < byteLength <= 6 |
+| offset | number | Yes | Number of bytes to skip before starting to read. Must satisfy: 0 &lt;= offset &lt;= buf.length - byteLength |
+| byteLength | number | Yes | Number of bytes to read. Must satisfy 0 &lt; byteLength &lt;= 6 |
 
 **Return value:**
 
@@ -1143,7 +1143,7 @@ Reads byteLength number of bytes from buf at the specified offset and interprets
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -1180,8 +1180,8 @@ Reads byteLength number of bytes from buf at the specified offset and interprets
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | Yes | Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - byteLength |
-| byteLength | number | Yes | Number of bytes to read. Must satisfy 0 < byteLength <= 6 |
+| offset | number | Yes | Number of bytes to skip before starting to read. Must satisfy: 0 &lt;= offset &lt;= buf.length - byteLength |
+| byteLength | number | Yes | Number of bytes to read. Must satisfy 0 &lt; byteLength &lt;= 6 |
 
 **Return value:**
 
@@ -1193,7 +1193,7 @@ Reads byteLength number of bytes from buf at the specified offset and interprets
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -1229,7 +1229,7 @@ Reads an unsigned, big-endian 16-bit integer from buf at the specified offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy 0 <= offset <= buf.length - 2 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy 0 &lt;= offset &lt;= buf.length - 2 |
 
 **Return value:**
 
@@ -1241,7 +1241,7 @@ Reads an unsigned, big-endian 16-bit integer from buf at the specified offset
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 2. Received value is: [offset] |
 
 ## Examples
 
@@ -1279,7 +1279,7 @@ Reads an unsigned, little-endian 16-bit integer from buf at the specified offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy 0 <= offset <= buf.length - 2 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy 0 &lt;= offset &lt;= buf.length - 2 |
 
 **Return value:**
 
@@ -1291,7 +1291,7 @@ Reads an unsigned, little-endian 16-bit integer from buf at the specified offset
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 2. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 2. Received value is: [offset] |
 
 ## Examples
 
@@ -1329,7 +1329,7 @@ Reads an unsigned, big-endian 32-bit integer from buf at the specified offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy 0 <= offset <= buf.length - 4 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy 0 &lt;= offset &lt;= buf.length - 4 |
 
 **Return value:**
 
@@ -1341,7 +1341,7 @@ Reads an unsigned, big-endian 32-bit integer from buf at the specified offset
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 4. Received value is: [offset] |
 
 ## Examples
 
@@ -1377,7 +1377,7 @@ Reads an unsigned, little-endian 32-bit integer from buf at the specified offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy 0 <= offset <= buf.length - 4 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy 0 &lt;= offset &lt;= buf.length - 4 |
 
 **Return value:**
 
@@ -1389,7 +1389,7 @@ Reads an unsigned, little-endian 32-bit integer from buf at the specified offset
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 4. Received value is: [offset] |
 
 ## Examples
 
@@ -1425,7 +1425,7 @@ Reads an unsigned 8-bit integer from buf at the specified offset
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy 0 <= offset <= buf.length - 1 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to read. Must satisfy 0 &lt;= offset &lt;= buf.length - 1 |
 
 **Return value:**
 
@@ -1437,7 +1437,7 @@ Reads an unsigned 8-bit integer from buf at the specified offset
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 1. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 1. Received value is: [offset] |
 
 ## Examples
 
@@ -1475,8 +1475,8 @@ Reads byteLength number of bytes from buf at the specified offset and interprets
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | Yes | Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - byteLength |
-| byteLength | number | Yes | Number of bytes to read. Must satisfy 0 < byteLength <= 6 |
+| offset | number | Yes | Number of bytes to skip before starting to read. Must satisfy: 0 &lt;= offset &lt;= buf.length - byteLength |
+| byteLength | number | Yes | Number of bytes to read. Must satisfy 0 &lt; byteLength &lt;= 6 |
 
 **Return value:**
 
@@ -1488,7 +1488,7 @@ Reads byteLength number of bytes from buf at the specified offset and interprets
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -1524,8 +1524,8 @@ Reads byteLength number of bytes from buf at the specified offset and interprets
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | Yes | Number of bytes to skip before starting to read. Must satisfy: 0 <= offset <= buf.length - byteLength |
-| byteLength | number | Yes | Number of bytes to read. Must satisfy 0 < byteLength <= 6 |
+| offset | number | Yes | Number of bytes to skip before starting to read. Must satisfy: 0 &lt;= offset &lt;= buf.length - byteLength |
+| byteLength | number | Yes | Number of bytes to read. Must satisfy 0 &lt; byteLength &lt;= 6 |
 
 **Return value:**
 
@@ -1537,7 +1537,7 @@ Reads byteLength number of bytes from buf at the specified offset and interprets
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -1953,7 +1953,7 @@ Writes value to buf at the specified offset as big-endian.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | bigint | Yes | The 64-bit big-endian integer value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - 8 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 &lt;= offset &lt;= buf.length - 8 |
 
 **Return value:**
 
@@ -1965,7 +1965,7 @@ Writes value to buf at the specified offset as big-endian.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2003,7 +2003,7 @@ Writes value to buf at the specified offset as little-endian.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | bigint | Yes | The 64-bit little-endian integer value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - 8 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 &lt;= offset &lt;= buf.length - 8 |
 
 **Return value:**
 
@@ -2015,7 +2015,7 @@ Writes value to buf at the specified offset as little-endian.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2053,7 +2053,7 @@ Writes value to buf at the specified offset as big-endian.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | bigint | Yes | The unsigned 64-bit big-endian integer value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - 8 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 &lt;= offset &lt;= buf.length - 8 |
 
 **Return value:**
 
@@ -2065,7 +2065,7 @@ Writes value to buf at the specified offset as big-endian.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2103,7 +2103,7 @@ Writes value to buf at the specified offset as little-endian.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | bigint | Yes | The unsigned 64-bit little-endian integer value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - 8 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 &lt;= offset &lt;= buf.length - 8 |
 
 **Return value:**
 
@@ -2115,7 +2115,7 @@ Writes value to buf at the specified offset as little-endian.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2153,7 +2153,7 @@ Writes value to buf at the specified offset as big-endian.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | number | Yes | The 64-bit big-endian double value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - 8 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 &lt;= offset &lt;= buf.length - 8 |
 
 **Return value:**
 
@@ -2165,7 +2165,7 @@ Writes value to buf at the specified offset as big-endian.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 8. Received value is: [offset] |
 
 ## Examples
 
@@ -2203,7 +2203,7 @@ Writes value to buf at the specified offset as little-endian.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | number | Yes | The 64-bit little-endian double value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - 8 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 &lt;= offset &lt;= buf.length - 8 |
 
 **Return value:**
 
@@ -2215,7 +2215,7 @@ Writes value to buf at the specified offset as little-endian.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 8. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 8. Received value is: [offset] |
 
 ## Examples
 
@@ -2253,7 +2253,7 @@ Writes value to buf at the specified offset as big-endian.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | number | Yes | The 32-bit big-endian float value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - 4 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 &lt;= offset &lt;= buf.length - 4 |
 
 **Return value:**
 
@@ -2265,7 +2265,7 @@ Writes value to buf at the specified offset as big-endian.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 4. Received value is: [offset] |
 
 ## Examples
 
@@ -2303,7 +2303,7 @@ Writes value to buf at the specified offset as little-endian.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | number | Yes | The 32-bit little-endian float value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - 4 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 &lt;= offset &lt;= buf.length - 4 |
 
 **Return value:**
 
@@ -2315,7 +2315,7 @@ Writes value to buf at the specified offset as little-endian.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and <= buf.length - 4. Received value is: [offset] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "offset" is out of range. It must be >= 0 and &lt;= buf.length - 4. Received value is: [offset] |
 
 ## Examples
 
@@ -2353,7 +2353,7 @@ Writes value to buf at the specified offset as big-endian. The value must be a v
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | number | Yes | The signed 16-bit big-endian integer value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - 2 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 &lt;= offset &lt;= buf.length - 2 |
 
 **Return value:**
 
@@ -2365,7 +2365,7 @@ Writes value to buf at the specified offset as big-endian. The value must be a v
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2403,7 +2403,7 @@ Writes value to buf at the specified offset as little-endian. The value must be 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | number | Yes | The signed 16-bit little-endian integer value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - 2 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 &lt;= offset &lt;= buf.length - 2 |
 
 **Return value:**
 
@@ -2415,7 +2415,7 @@ Writes value to buf at the specified offset as little-endian. The value must be 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2453,7 +2453,7 @@ Writes value to buf at the specified offset as big-endian. The value must be a v
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | number | Yes | The signed 32-bit big-endian integer value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - 4 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 &lt;= offset &lt;= buf.length - 4 |
 
 **Return value:**
 
@@ -2465,7 +2465,7 @@ Writes value to buf at the specified offset as big-endian. The value must be a v
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2503,7 +2503,7 @@ Writes value to buf at the specified offset as little-endian. The value must be 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | number | Yes | The signed 32-bit little-endian integer value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - 4 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 &lt;= offset &lt;= buf.length - 4 |
 
 **Return value:**
 
@@ -2515,7 +2515,7 @@ Writes value to buf at the specified offset as little-endian. The value must be 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2553,7 +2553,7 @@ Writes value to buf at the specified offset. value must be a valid signed 8-bit 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | number | Yes | The signed 8-bit integer value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - 1 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy: 0 &lt;= offset &lt;= buf.length - 1 |
 
 **Return value:**
 
@@ -2565,7 +2565,7 @@ Writes value to buf at the specified offset. value must be a valid signed 8-bit 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2606,8 +2606,8 @@ Writes byteLength bytes of value to buf at the specified offset as big-endian
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | number | Yes | The big-endian integer value to write |
-| offset | number | Yes | Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - byteLength |
-| byteLength | number | Yes | Number of bytes to write. Must satisfy 0 < byteLength <= 6 |
+| offset | number | Yes | Number of bytes to skip before starting to write. Must satisfy: 0 &lt;= offset &lt;= buf.length - byteLength |
+| byteLength | number | Yes | Number of bytes to write. Must satisfy 0 &lt; byteLength &lt;= 6 |
 
 **Return value:**
 
@@ -2619,7 +2619,7 @@ Writes byteLength bytes of value to buf at the specified offset as big-endian
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2657,8 +2657,8 @@ Writes byteLength bytes of value to buf at the specified offset as little-endian
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | number | Yes | The little-endian integer value to write |
-| offset | number | Yes | Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - byteLength |
-| byteLength | number | Yes | Number of bytes to write. Must satisfy 0 < byteLength <= 6 |
+| offset | number | Yes | Number of bytes to skip before starting to write. Must satisfy: 0 &lt;= offset &lt;= buf.length - byteLength |
+| byteLength | number | Yes | Number of bytes to write. Must satisfy 0 &lt; byteLength &lt;= 6 |
 
 **Return value:**
 
@@ -2670,7 +2670,7 @@ Writes byteLength bytes of value to buf at the specified offset as little-endian
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2708,7 +2708,7 @@ Writes value to buf at the specified offset as big-endian. The value must be a v
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | number | Yes | The unsigned 16-bit big-endian integer value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy 0 <= offset <= buf.length - 2 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy 0 &lt;= offset &lt;= buf.length - 2 |
 
 **Return value:**
 
@@ -2720,7 +2720,7 @@ Writes value to buf at the specified offset as big-endian. The value must be a v
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2761,7 +2761,7 @@ Writes value to buf at the specified offset as little-endian. The value must be 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | number | Yes | The unsigned 16-bit little-endian integer value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy 0 <= offset <= buf.length - 2 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy 0 &lt;= offset &lt;= buf.length - 2 |
 
 **Return value:**
 
@@ -2773,7 +2773,7 @@ Writes value to buf at the specified offset as little-endian. The value must be 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2814,7 +2814,7 @@ Writes value to buf at the specified offset as big-endian. The value must be a v
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | number | Yes | The unsigned 32-bit big-endian integer value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy 0 <= offset <= buf.length - 4 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy 0 &lt;= offset &lt;= buf.length - 4 |
 
 **Return value:**
 
@@ -2826,7 +2826,7 @@ Writes value to buf at the specified offset as big-endian. The value must be a v
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2864,7 +2864,7 @@ Writes value to buf at the specified offset as little-endian. The value must be 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | number | Yes | The unsigned 32-bit little-endian integer value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy 0 <= offset <= buf.length - 4 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy 0 &lt;= offset &lt;= buf.length - 4 |
 
 **Return value:**
 
@@ -2876,7 +2876,7 @@ Writes value to buf at the specified offset as little-endian. The value must be 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2914,7 +2914,7 @@ Writes value to buf at the specified offset. value must be a valid unsigned 8-bi
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | number | Yes | The unsigned 8-bit integer value to write |
-| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy 0 <= offset <= buf.length - 1 |
+| offset | number | No | offset [offset = 0] Number of bytes to skip before starting to write. Must satisfy 0 &lt;= offset &lt;= buf.length - 1 |
 
 **Return value:**
 
@@ -2926,7 +2926,7 @@ Writes value to buf at the specified offset. value must be a valid unsigned 8-bi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -2973,8 +2973,8 @@ Writes byteLength bytes of value to buf at the specified offset as big-endian
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | number | Yes | The unsigned big-endian integer value to write |
-| offset | number | Yes | Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - byteLength |
-| byteLength | number | Yes | Number of bytes to write. Must satisfy 0 < byteLength <= 6 |
+| offset | number | Yes | Number of bytes to skip before starting to write. Must satisfy: 0 &lt;= offset &lt;= buf.length - byteLength |
+| byteLength | number | Yes | Number of bytes to write. Must satisfy 0 &lt; byteLength &lt;= 6 |
 
 **Return value:**
 
@@ -2986,7 +2986,7 @@ Writes byteLength bytes of value to buf at the specified offset as big-endian
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
 ## Examples
 
@@ -3024,8 +3024,8 @@ Writes byteLength bytes of value to buf at the specified offset as little-endian
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | number | Yes | The unsigned little-endian integer value to write |
-| offset | number | Yes | Number of bytes to skip before starting to write. Must satisfy: 0 <= offset <= buf.length - byteLength |
-| byteLength | number | Yes | Number of bytes to write. Must satisfy 0 < byteLength <= 6 |
+| offset | number | Yes | Number of bytes to skip before starting to write. Must satisfy: 0 &lt;= offset &lt;= buf.length - byteLength |
+| byteLength | number | Yes | Number of bytes to write. Must satisfy 0 &lt; byteLength &lt;= 6 |
 
 **Return value:**
 
@@ -3037,7 +3037,7 @@ Writes byteLength bytes of value to buf at the specified offset as little-endian
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and <= [right range]. Received value is: [param] |
+| [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of "[param]" is out of range. It must be >= [left range] and &lt;= [right range]. Received value is: [param] |
 
 ## Examples
 

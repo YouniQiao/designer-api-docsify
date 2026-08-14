@@ -15,7 +15,7 @@ Describes XMP enumerate option parameters.
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'image';
 ```
 
 ## isRecursive
@@ -46,7 +46,7 @@ The option that controls recursive enabling.
 onlyQualifier?: boolean
 ```
 
-Whether to return only qualifier data. &lt;br&gt;Default value:false.
+Whether to return only qualifier data. <br>Default value:false.
 
 **Type:** boolean
 

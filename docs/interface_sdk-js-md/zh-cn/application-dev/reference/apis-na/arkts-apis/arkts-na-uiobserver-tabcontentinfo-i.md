@@ -86,7 +86,7 @@ state: TabContentState
 
 TabContent组件的状态。
 
-**类型：** [TabContentState](../../apis-arkui/arkts-apis/arkts-arkui-uiobserver-tabcontentstate-e.md)
+**类型：** [TabContentState](arkts-na-uiobserver-tabcontentstate-e.md)
 
 **起始版本：** 23
 

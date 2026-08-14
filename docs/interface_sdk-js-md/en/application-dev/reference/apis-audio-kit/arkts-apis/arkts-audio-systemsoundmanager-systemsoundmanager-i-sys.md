@@ -17,7 +17,7 @@ System sound manager object.
 ## Modules to Import
 
 ```TypeScript
-import { systemSoundManager } from '@kit.AudioKit';
+import { systemSoundManager } from 'systemSoundManager';
 ```
 
 ## addCustomizedTone

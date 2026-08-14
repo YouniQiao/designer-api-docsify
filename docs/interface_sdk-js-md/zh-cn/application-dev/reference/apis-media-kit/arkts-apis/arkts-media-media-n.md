@@ -20,9 +20,9 @@
 | 名称 | 说明 |
 | --- | --- |
 | [createAVPlayer](arkts-media-media-createavplayer-f.md#createAVPlayer) | 创建音视频播放实例。使用callback异步回调。 |
-| [createAVPlayer](arkts-media-media-createavplayer-f.md#createAVPlayer) | Creates an **AVPlayer** instance. This API uses an asynchronous callback to return the result. &lt;br&gt; |
+| [createAVPlayer](arkts-media-media-createavplayer-f.md#createAVPlayer) | Creates an **AVPlayer** instance. This API uses an asynchronous callback to return the result. <br> |
 | [createAVPlayer](arkts-media-media-createavplayer-f.md#createAVPlayer) | 异步方式创建音视频播放实例。使用Promise异步回调。 |
-| [createAVPlayer](arkts-media-media-createavplayer-f.md#createAVPlayer) | Creates an **AVPlayer** instance. This API uses a promise to return the result. &lt;br&gt; |
+| [createAVPlayer](arkts-media-media-createavplayer-f.md#createAVPlayer) | Creates an **AVPlayer** instance. This API uses a promise to return the result. <br> |
 | [createAVRecorder](arkts-media-media-createavrecorder-f.md#createAVRecorder) | 创建音视频录制实例。使用callback异步回调。 |
 | [createAVRecorder](arkts-media-media-createavrecorder-f.md#createAVRecorder) | 创建音视频录制实例。使用callback异步回调。 |
 | [createAVRecorder](arkts-media-media-createavrecorder-f.md#createAVRecorder) | 创建音视频录制实例。使用Promise异步回调。 |

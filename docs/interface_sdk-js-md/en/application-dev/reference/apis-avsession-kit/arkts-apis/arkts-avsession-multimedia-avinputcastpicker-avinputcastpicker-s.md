@@ -15,7 +15,7 @@ Picker used to show available input devices.
 ## Modules to Import
 
 ```TypeScript
-import { AVInputCastPicker } from '@kit.AVSessionKit';
+import { AVInputCastPicker } from 'AVInputCastPicker';
 ```
 
 ## customPicker

@@ -17,7 +17,7 @@ VideoSession inherits from [Session](arkts-camera-camera-session-i.md#Session), 
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'camera';
 ```
 
 ## canPreconfig
@@ -51,7 +51,7 @@ Checks whether this session supports a preconfigured resolution.
 
 | Type | Description |
 | --- | --- |
-| boolean | true**: The preconfigured resolution is supported. &lt;br&gt;**false**: The preconfigured resolution is not supported. |
+| boolean | true**: The preconfigured resolution is supported. <br>**false**: The preconfigured resolution is not supported. |
 
 **Error codes:**
 
@@ -209,7 +209,7 @@ Unsubscribes from ISO state change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IsoInfo](arkts-camera-camera-isoinfo-i-sys.md)&gt; | No | Callback used for unsubscription. &lt;br&gt;If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) &lt;br&gt;Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[IsoInfo](arkts-camera-camera-isoinfo-i-sys.md)&gt; | No | Callback used for unsubscription. <br>If this parameter is specified, the subscription to the specified event with the specified callback is canceled. (The callback object cannot be an anonymous function.) <br>Otherwise, the subscriptions to the specified event with all the callbacks are canceled. |
 
 ## offMacroStatusChanged
 

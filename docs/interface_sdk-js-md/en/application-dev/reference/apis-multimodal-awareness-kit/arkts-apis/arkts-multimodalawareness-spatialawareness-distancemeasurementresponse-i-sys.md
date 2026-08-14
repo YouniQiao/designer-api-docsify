@@ -17,7 +17,7 @@ Interface for distance measurement result
 ## Modules to Import
 
 ```TypeScript
-import { spatialAwareness } from '@kit.MultimodalAwarenessKit';
+import { spatialAwareness } from 'spatialAwareness';
 ```
 
 ## confidence

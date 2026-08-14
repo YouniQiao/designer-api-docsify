@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from 'hiAppEvent';
 ```
 
 ## configEventPolicy
@@ -36,7 +36,7 @@ Sets a system event configuration policy. This API uses a promise to return the 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. &lt;br&gt;For details about the event configuration policy, see [EventPolicy]{ |
+| Promise&lt;void&gt; | Promise that returns no value. <br>For details about the event configuration policy, see [EventPolicy]{ |
 
 ## Examples
 

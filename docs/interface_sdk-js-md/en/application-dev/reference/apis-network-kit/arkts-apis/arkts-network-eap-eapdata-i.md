@@ -15,7 +15,7 @@ Describes the EAP information.
 ## Modules to Import
 
 ```TypeScript
-import { eap } from '@kit.NetworkKit';
+import { eap } from 'eap';
 ```
 
 ## bufferLen

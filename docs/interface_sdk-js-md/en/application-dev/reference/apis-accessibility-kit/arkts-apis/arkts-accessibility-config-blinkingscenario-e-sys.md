@@ -1,6 +1,6 @@
 # BlinkingScenario (System API)
 
-Blinking Scenario Enumeration
+Enumerates the blinking scenarios.
 
 **Since:** 26.0.0
 
@@ -20,7 +20,7 @@ Blinking Scenario Enumeration
 ALARM = 1
 ```
 
-Indicates that the alarm clock triggers blinking.
+Blinking triggered by an alarm.
 
 **Since:** 26.0.0
 
@@ -42,7 +42,7 @@ Indicates that the alarm clock triggers blinking.
 NOTIFICATION = 2
 ```
 
-Indicates that the notification triggers blinking.
+Blinking triggered by a notification.
 
 **Since:** 26.0.0
 
@@ -64,7 +64,7 @@ Indicates that the notification triggers blinking.
 CALL = 3
 ```
 
-Indicates that the phone call triggers blinking.
+Blinking triggered by an incoming call.
 
 **Since:** 26.0.0
 
@@ -86,7 +86,7 @@ Indicates that the phone call triggers blinking.
 TESTING = 4
 ```
 
-Indicates that triggers blinking for testing.
+Blinking triggered by a test scenario.
 
 **Since:** 26.0.0
 

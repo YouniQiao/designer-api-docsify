@@ -15,7 +15,7 @@ Describes the parameters for scan.
 ## Modules to Import
 
 ```TypeScript
-import { scan } from '@kit.ConnectivityKit';
+import { scan } from 'scan';
 ```
 
 ## duration

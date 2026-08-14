@@ -15,7 +15,7 @@ Security feature option configuration.
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'webview';
 ```
 
 ## disableJITCompilation

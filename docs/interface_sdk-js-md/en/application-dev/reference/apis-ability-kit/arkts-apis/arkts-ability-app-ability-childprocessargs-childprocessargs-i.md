@@ -15,7 +15,7 @@ The module describes the parameters transferred to the child process. When start
 ## Modules to Import
 
 ```TypeScript
-import { ChildProcessArgs } from '@kit.AbilityKit';
+import { ChildProcessArgs } from 'ChildProcessArgs';
 ```
 
 ## entryParams

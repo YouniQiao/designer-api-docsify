@@ -15,7 +15,7 @@ Defines the offset area between the input method soft keyboard and the system pa
 ## Modules to Import
 
 ```TypeScript
-import { inputMethodEngine } from '@kit.IMEKit';
+import { inputMethodEngine } from 'inputMethodEngine';
 ```
 
 ## bottom

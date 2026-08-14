@@ -15,7 +15,13 @@ Listener of the tree view component. You can bind it to the **TreeView** compone
 ## Modules to Import
 
 ```TypeScript
-import { TreeListener, NodeParam, CallbackParam, TreeListenType, TreeView, TreeController, TreeListenerManager } from '@kit.ArkUI';
+import { CallbackParam } from 'CallbackParam';
+import { NodeParam } from 'NodeParam';
+import { TreeController } from 'TreeController';
+import { TreeListenType } from 'TreeListenType';
+import { TreeListener } from 'TreeListener';
+import { TreeListenerManager } from 'TreeListenerManager';
+import { TreeView } from 'TreeView';
 ```
 
 ## off_TreeListenType

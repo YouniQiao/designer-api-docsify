@@ -15,7 +15,7 @@ This module provides application logging and event subscription capabilities, in
 ## Modules to Import
 
 ```TypeScript
-import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
+import { hiAppEvent } from 'hiAppEvent';
 ```
 
 ## Summary
@@ -25,7 +25,7 @@ import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 | Name | Description |
 | --- | --- |
 | [domain](arkts-performanceanalysis-hiappevent-domain-n.md) | Provides domain name constants. \| Name\| Type \| Read Only \| Description \| \| --- \| ------ \| ------ \| ---------- \| \| OS \| string \| Yes\| System domain.\| |
-| [event](arkts-performanceanalysis-hiappevent-event-n.md) | Provides event name constants, including system event name constants and application event name constants. &lt;br&gt;The application event name constants are optional custom event names reserved when you call Write for application event logging. |
+| [event](arkts-performanceanalysis-hiappevent-event-n.md) | Provides event name constants, including system event name constants and application event name constants. <br>The application event name constants are optional custom event names reserved when you call Write for application event logging. |
 | [param](arkts-performanceanalysis-hiappevent-param-n.md) | Provides parameter name constants. \| Name \| Type \| Read Only \| Description \| \| ------------------------------- \| ------ \| ------ \| ------------------ \| \| USER_ID \| string \| Yes\| Custom user ID. \| \| DISTRIBUTED_SERVICE_NAME \| string \| Yes\| Distributed service name. \| \| DISTRIBUTED_SERVICE_INSTANCE_ID \| string \| Yes\| Distributed service instance ID.\| |
 
 ### Functions

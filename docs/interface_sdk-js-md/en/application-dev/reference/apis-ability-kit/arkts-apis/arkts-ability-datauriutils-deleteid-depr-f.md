@@ -6,7 +6,7 @@
 function deleteId(uri: string): string
 ```
 
-Deletes the ID from the end of the path component of the given uri.
+Deletes the ID from the end of a given URI.
 
 **Since:** 7
 
@@ -24,13 +24,13 @@ Deletes the ID from the end of the path component of the given uri.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | Indicates the uri object from which the ID is to be deleted. |
+| uri | string | Yes | URI object from which the ID is to be deleted. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Returns the uri object with the ID deleted. |
+| string | URI object with the ID deleted. |
 
 ## Examples
 

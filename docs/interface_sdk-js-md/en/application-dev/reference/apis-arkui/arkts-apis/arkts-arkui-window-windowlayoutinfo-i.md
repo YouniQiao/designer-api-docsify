@@ -15,7 +15,7 @@ Describes the information about the window layout.
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'window';
 ```
 
 ## windowAlpha

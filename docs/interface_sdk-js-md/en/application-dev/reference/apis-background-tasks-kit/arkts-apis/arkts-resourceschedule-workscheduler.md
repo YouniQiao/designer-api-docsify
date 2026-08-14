@@ -17,7 +17,7 @@ The **workScheduler** module provides the APIs for registering, canceling, and q
 ## Modules to Import
 
 ```TypeScript
-import { workScheduler } from '@kit.BackgroundTasksKit';
+import { workScheduler } from 'workScheduler';
 ```
 
 ## Summary

@@ -15,7 +15,11 @@
 ## Modules to Import
 
 ```TypeScript
-import { TabBarPosition, TabBarOptions, AtomicServiceTabs, TabContentBuilder, OnContentWillChangeCallback } from '@kit.ArkUI';
+import { AtomicServiceTabs } from 'AtomicServiceTabs';
+import { TabBarOptions } from 'TabBarOptions';
+import { TabBarPosition } from 'TabBarPosition';
+import { TabContentBuilder } from 'TabContentBuilder';
+import { OnContentWillChangeCallback } from 'OnContentWillChangeCallback';
 ```
 
 ## barBackgroundColor

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { scriptManager } from '@kit.AbilityKit';
+import { scriptManager } from 'scriptManager';
 ```
 
 ## completeArkTSScriptInApp

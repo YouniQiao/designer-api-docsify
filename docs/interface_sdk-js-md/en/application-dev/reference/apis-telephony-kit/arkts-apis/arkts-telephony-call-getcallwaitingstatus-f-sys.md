@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'call';
 ```
 
 ## getCallWaitingStatus
@@ -32,8 +32,8 @@ Obtains the call waiting status. This API uses an asynchronous callback to retur
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Card slot ID. &lt;br&gt;- **0**: card slot 1. &lt;br&gt;- **1**: card slot 2. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CallWaitingStatus](arkts-telephony-call-callwaitingstatus-e-sys.md)&gt; | Yes | Callback used to return the result. &lt;br&gt;The value can be: &lt;br&gt;- **0**: Call waiting is disabled. &lt;br&gt;- **1**: Call waiting is enabled. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CallWaitingStatus](arkts-telephony-call-callwaitingstatus-e-sys.md)&gt; | Yes | Callback used to return the result. <br>The value can be: <br>- **0**: Call waiting is disabled. <br>- **1**: Call waiting is enabled. |
 
 **Error codes:**
 
@@ -88,13 +88,13 @@ Obtains the call waiting status. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| slotId | int | Yes | Card slot ID. &lt;br&gt;- **0**: card slot 1. &lt;br&gt;- **1**: card slot 2. |
+| slotId | int | Yes | Card slot ID. <br>- **0**: card slot 1. <br>- **1**: card slot 2. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[CallWaitingStatus](arkts-telephony-call-callwaitingstatus-e-sys.md)&gt; | Promise used to return the result. &lt;br&gt;- **0**: Call waiting is disabled. &lt;br&gt;- **1**: Call waiting is enabled. |
+| Promise&lt;[CallWaitingStatus](arkts-telephony-call-callwaitingstatus-e-sys.md)&gt; | Promise used to return the result. <br>- **0**: Call waiting is disabled. <br>- **1**: Call waiting is enabled. |
 
 **Error codes:**
 

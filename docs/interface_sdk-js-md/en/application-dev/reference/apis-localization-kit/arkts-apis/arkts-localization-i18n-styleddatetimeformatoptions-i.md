@@ -15,7 +15,7 @@ Optional configuration items for creating the time and date formatting object fo
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'i18n';
 ```
 
 ## day

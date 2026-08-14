@@ -57,9 +57,9 @@ let slotId: number = 0;
 try {
   // 停用指定卡槽的SIM卡
   telephonyManager.deactiveSim(wantTemp, slotId);
-  console.info(`success to deactive SIM`);
+  console.info(`success in deactivating SIM card on slot ${slotId}`);
 } catch (err) {
-  console.error(`Failed to deactive SIM. Code: ${err.code}, message: ${err.message}`);
+  console.error(`Failed to deactivate SIM on slot ${slotId}. Code: ${err.code}, message: ${err.message}`);
 }
 ```
 

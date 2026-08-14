@@ -116,7 +116,7 @@ ArcSliderOptions的构造函数。
 
 弧形Slider放大或缩小时触发回调。 默认值：不传入的情况，无回调。
 
-**类型：** [ArcSliderEnlargeHandler](arkts-arkui-arcsliderenlargehandler-t.md)
+**类型：** [ArcSliderEnlargeHandler](../../apis-na/arkts-apis/arkts-na-arcsliderenlargehandler-t.md)
 
 **起始版本：** 18
 

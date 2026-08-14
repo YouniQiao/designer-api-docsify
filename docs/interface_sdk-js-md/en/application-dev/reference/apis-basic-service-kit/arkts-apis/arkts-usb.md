@@ -29,7 +29,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usb } from '@kit.BasicServicesKit';
+import { usb } from 'usb';
 ```
 
 ## Summary

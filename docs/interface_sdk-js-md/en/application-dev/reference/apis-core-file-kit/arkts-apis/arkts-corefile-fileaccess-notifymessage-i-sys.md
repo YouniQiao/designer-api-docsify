@@ -19,7 +19,7 @@ Represents the notification message.
 ## Modules to Import
 
 ```TypeScript
-import { fileAccess } from '@kit.CoreFileKit';
+import { fileAccess } from 'fileAccess';
 ```
 
 ## type

@@ -15,7 +15,7 @@ Describes the area to avoid for window content. When adapting window content for
 ## Modules to Import
 
 ```TypeScript
-import { window } from '@kit.ArkUI';
+import { window } from 'window';
 ```
 
 ## bottomRect

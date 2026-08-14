@@ -32,3 +32,12 @@ export function isRTL(locale: string): boolean
 | --- | --- |
 | boolean | true表示该语言是镜像语言，false表示该语言不是镜像语言。 |
 
+## 示例
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let isZhRTL: boolean = i18n.isRTL('zh-CN'); // 中文不是镜像语言，返回false
+let isArRTL: boolean = i18n.isRTL('ar-EG'); // 阿语是镜像语言，返回true
+```
+

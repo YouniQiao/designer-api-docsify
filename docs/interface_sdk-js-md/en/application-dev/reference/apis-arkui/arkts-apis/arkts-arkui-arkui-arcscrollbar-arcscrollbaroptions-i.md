@@ -15,7 +15,8 @@ Represents the parameters used to construct an **ArcScrollBar** component. > **N
 ## Modules to Import
 
 ```TypeScript
-import { ArcScrollBarAttribute, ArcScrollBar } from '@kit.ArkUI';
+import { ArcScrollBar } from 'ArcScrollBar';
+import { ArcScrollBarAttribute } from 'ArcScrollBarAttribute';
 ```
 
 ## scroller
@@ -46,7 +47,7 @@ Scroller, which can be bound to scrollable components for scrolling control.
 state?: BarState
 ```
 
-State of the scrollbar.&lt;br/&gt;Default value: **BarState.Auto**
+State of the scrollbar.<br/>Default value: **BarState.Auto**
 
 **Type:** BarState
 

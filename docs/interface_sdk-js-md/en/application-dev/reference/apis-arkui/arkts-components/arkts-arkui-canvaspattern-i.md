@@ -38,5 +38,5 @@ Uses a **Matrix2D** object as a parameter to perform matrix transformation on th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| transform | Matrix2D | No | Transformation matrix.&lt;br&gt;The **undefined** and **null** values are treated as invalid.&lt;br&gt;Default value: **null**. |
+| transform | Matrix2D | No | Transformation matrix.<br>The **undefined** and **null** values are treated as invalid.<br>Default value: **null**. |
 

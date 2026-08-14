@@ -17,7 +17,7 @@ The **inputDeviceCooperate** module implements screen hopping for two or more ne
 ## Modules to Import
 
 ```TypeScript
-import { inputDeviceCooperate } from '@kit.InputKit';
+import { inputDeviceCooperate } from 'inputDeviceCooperate';
 ```
 
 ## Summary

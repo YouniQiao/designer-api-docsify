@@ -22,7 +22,7 @@ export declare function edgeWidths(all: double): NodeEdges<double>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| all | double | 是 | 边框宽度，单位为vp。&lt;br/&gt;取值范围：[0, +∞) |
+| all | double | 是 | 边框宽度，单位为vp。<br/>取值范围：[0, +∞) |
 
 **返回值：**
 

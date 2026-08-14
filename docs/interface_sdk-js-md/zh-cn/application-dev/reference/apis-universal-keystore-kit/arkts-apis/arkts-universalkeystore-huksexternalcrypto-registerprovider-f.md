@@ -24,8 +24,8 @@ function registerProvider(providerName: string, params: Array<HuksExternalCrypto
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| providerName | string | 是 | provider名称，最大长度为128。建议包含厂商信息，全局唯一，不要包含个人联系方式等敏感数据。&lt;br&gt;最多支持注册10个provider。 |
-| params | Array&lt;[HuksExternalCryptoParam](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptoparam-i.md)&gt; | 是 | 操作时需传入的参数，必选TAG： [HUKS_EXT_CRYPTO_TAG_ABILITY_NAME](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptotagtype-e.md#HuksExternalCryptoTagType)，表示ability的名字，根据业务自己内部定义按 照实际填写。&lt;br&gt;从API版本26.0.0开始，可选TAG： [HUKS_EXT_CRYPTO_TAG_ABILITY_INFO](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptotagtype-e.md#HuksExternalCryptoTagType)，以JSON列表的形式传入PIN码认证自定义弹窗 UIExtensionAbility的名字以及包名。 |
+| providerName | string | 是 | provider名称，最大长度为128。建议包含厂商信息，全局唯一，不要包含个人联系方式等敏感数据。<br>最多支持注册10个provider。 |
+| params | Array&lt;[HuksExternalCryptoParam](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptoparam-i.md)&gt; | 是 | 操作时需传入的参数，必选TAG： [HUKS_EXT_CRYPTO_TAG_ABILITY_NAME](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptotagtype-e.md#HuksExternalCryptoTagType)，表示ability的名字，根据业务自己内部定义按 照实际填写。<br>从API版本26.0.0开始，可选TAG： [HUKS_EXT_CRYPTO_TAG_ABILITY_INFO](arkts-universalkeystore-huksexternalcrypto-huksexternalcryptotagtype-e.md#HuksExternalCryptoTagType)，以JSON列表的形式传入PIN码认证自定义弹窗 UIExtensionAbility的名字以及包名。 |
 
 **返回值：**
 

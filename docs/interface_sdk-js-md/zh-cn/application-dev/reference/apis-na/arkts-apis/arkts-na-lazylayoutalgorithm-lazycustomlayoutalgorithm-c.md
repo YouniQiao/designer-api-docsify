@@ -2,7 +2,7 @@
 
 定义懒式自定义布局算法。
 
-**继承/实现关系：** LazyCustomLayoutAlgorithm implements [LazyLayoutAlgorithm](arkts-na-lazylayoutalgorithm-i.md#LazyLayoutAlgorithm)
+**继承/实现关系：** LazyCustomLayoutAlgorithm implements [LazyLayoutAlgorithm](../../apis-arkui/arkts-apis/arkts-arkui-lazylayoutalgorithm-i.md#LazyLayoutAlgorithm)
 
 **起始版本：** 26.0.0
 
@@ -38,7 +38,7 @@ constructor(option?: LazyCustomLayoutAlgorithmOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| option | [LazyCustomLayoutAlgorithmOptions](arkts-na-lazylayoutalgorithm-lazycustomlayoutalgorithmoptions-i.md) | 否 | 设置懒加载自定义布局算法的属性。 |
+| option | [LazyCustomLayoutAlgorithmOptions](../../apis-arkui/arkts-apis/arkts-arkui-lazylayoutalgorithm-lazycustomlayoutalgorithmoptions-i.md) | 否 | 设置懒加载自定义布局算法的属性。 |
 
 ## onLayout
 
@@ -93,5 +93,5 @@ onMeasure(self: FrameNode, constraint: LayoutConstraint, helper?: LazyLayoutHelp
 | --- | --- | --- | --- |
 | self | [FrameNode](arkts-na-framenode-c.md) | 是 | DynamicLayout组件的FrameNode。 |
 | constraint | [LayoutConstraint](arkts-na-framenode-layoutconstraint-i.md) | 是 | 节点的布局约束，将在测量过程中使用。 |
-| helper | [LazyLayoutHelper](arkts-na-lazylayoutalgorithm-lazylayouthelper-c.md) | 否 | 懒布局算法的助手对象，提供布局方向和视图位置信息。 如果未定义，则表示当前组件未在可滚动组件下使用，不支持懒布局。 |
+| helper | [LazyLayoutHelper](../../apis-arkui/arkts-apis/arkts-arkui-lazylayoutalgorithm-lazylayouthelper-c.md) | 否 | 懒布局算法的助手对象，提供布局方向和视图位置信息。 如果未定义，则表示当前组件未在可滚动组件下使用，不支持懒布局。 |
 

@@ -38,7 +38,7 @@ executeDropAnimation(customDropAnimation: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| customDropAnimation | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; | 是 | 在此回调函数中实现自定义落位动效。&lt;br/&gt; **说明：** &lt;br/&gt;1. 该接口仅在onDrop回调中使用有效。&lt;br/&gt; 2. 使用前需设置useCustomDropAnimation为true，否则该接口不生效。&lt;br/&gt; 3. 不要在动画callback中实现与动效无关的逻辑，避免影响执行效率。 |
+| customDropAnimation | [Callback](arkts-arkui-callback-i.md)&lt;void&gt; | 是 | 在此回调函数中实现自定义落位动效。<br/> **说明：** <br/>1. 该接口仅在onDrop回调中使用有效。<br/> 2. 使用前需设置useCustomDropAnimation为true，否则该接口不生效。<br/> 3. 不要在动画callback中实现与动效无关的逻辑，避免影响执行效率。 |
 
 ## getData
 
@@ -213,7 +213,7 @@ getGlobalDisplayX(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 返回当前拖拽点相对于全局屏幕的左上角的X坐标。&lt;br/&gt;单位：vp，取值范围：[0, +∞) |
+| number | 返回当前拖拽点相对于全局屏幕的左上角的X坐标。<br/>单位：vp，取值范围：[0, +∞) |
 
 ## getGlobalDisplayY
 
@@ -241,7 +241,7 @@ getGlobalDisplayY(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 返回当前拖拽点相对于全局屏幕的左上角的Y坐标。&lt;br/&gt;单位：vp，取值范围：[0, +∞) |
+| number | 返回当前拖拽点相对于全局屏幕的左上角的Y坐标。<br/>单位：vp，取值范围：[0, +∞) |
 
 ## getModifierKeyState
 
@@ -269,7 +269,7 @@ getModifierKeyState?(keys: Array<string>): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| keys | Array&lt;string&gt; | 是 | 获取功能键按压状态。报错信息请参考以下错误码。支持功能键 'Ctrl' \| 'Alt' \| 'Shift'。&lt;br/&gt;**说明：**&lt;br/&gt;此接口不支持在手写笔场景 下使用。 |
+| keys | Array&lt;string&gt; | 是 | 获取功能键按压状态。报错信息请参考以下错误码。支持功能键 'Ctrl' \| 'Alt' \| 'Shift'。<br/>**说明：**<br/>此接口不支持在手写笔场景 下使用。 |
 
 **返回值：**
 
@@ -531,7 +531,7 @@ getX(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 返回当前拖拽点相对于窗口左上角的x轴坐标。&lt;br/&gt;单位：vp |
+| number | 返回当前拖拽点相对于窗口左上角的x轴坐标。<br/>单位：vp |
 
 ## getY
 
@@ -557,7 +557,7 @@ getY(): number
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 返回当前拖拽点相对于窗口左上角的y轴坐标。&lt;br/&gt;单位：vp |
+| number | 返回当前拖拽点相对于窗口左上角的y轴坐标。<br/>单位：vp |
 
 ## isRemote
 
@@ -697,7 +697,7 @@ startDataLoading(options: DataSyncOptions): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [DataSyncOptions](arkts-arkui-datasyncoptions-t.md) | 是 | 获取拖拽数据时的参数，包含目标路径、文件冲突选项、进度条类型等。数据传输过程中可使用 [cancelDataLoading](../arkts-apis/arkts-arkui-arkui-uicontext-dragcontroller-c.md#cancelDataLoading)接口取消数据加载。 |
+| options | [DataSyncOptions](arkts-arkui-datasyncoptions-t.md) | 是 | 获取拖拽数据时的参数，包含目标路径、文件冲突选项、进度条类型等。数据传输过程中可使用 [cancelDataLoading](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-dragcontroller-c.md#cancelDataLoading)接口取消数据加载。 |
 
 **返回值：**
 
@@ -718,7 +718,7 @@ startDataLoading(options: DataSyncOptions): string
 autoHideComponentUniqueIds?: int | int[]
 ```
 
-设置拖拽过程中需要自动隐藏的组件uniqueId，支持传入单个uniqueId或数组。 仅在[onDragStart](arkts-arkui-commonmethod-c.md#onDragStart)回调中设置生效。拖拽成功发起后，系统会在显示拖拽预览窗口前隐藏目标组件。 若拖拽源本身也需要隐藏，需要同时传入拖拽源组件的uniqueId。 组件的uniqueId可通过[UIContext.getFrameNodeById()](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#getFrameNodeById) 配合[FrameNode.getUniqueId()](../../apis-na/arkts-apis/arkts-na-framenode-c.md#getUniqueId)获取。 开发者应在[onDragEnd](arkts-arkui-commonmethod-c.md#onDragEnd)或 onDrop中恢复组件显示状态。
+设置拖拽过程中需要自动隐藏的组件uniqueId，支持传入单个uniqueId或数组。 仅在[onDragStart](arkts-arkui-commonmethod-c.md#onDragStart)回调中设置生效。拖拽成功发起后，系统会在显示拖拽预览窗口前隐藏目标组件。 若拖拽源本身也需要隐藏，需要同时传入拖拽源组件的uniqueId。 组件的uniqueId可通过[UIContext.getFrameNodeById()](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getFrameNodeById) 配合[FrameNode.getUniqueId()](../../apis-na/arkts-apis/arkts-na-framenode-c.md#getUniqueId)获取。 开发者应在[onDragEnd](arkts-arkui-commonmethod-c.md#onDragEnd)或 onDrop中恢复组件显示状态。
 
 **类型：** int \| int[]
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { continueManager } from '@kit.AbilityKit';
+import { continueManager } from 'continueManager';
 ```
 
 ## onPrepareContinue

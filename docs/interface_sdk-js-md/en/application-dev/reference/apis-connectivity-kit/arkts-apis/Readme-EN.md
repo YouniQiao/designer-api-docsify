@@ -166,7 +166,8 @@
   - [BluetoothState](arkts-connectivity-access-bluetoothstate-e.md)
   <!--Del-->
   - [DialogType(system api)](arkts-connectivity-access-dialogtype-e-sys.md)<!--DelEnd-->
-- [@ohos.bluetooth.bas](arkts-bluetooth-bas.md)
+<!--Del-->
+- [@ohos.bluetooth.bas](arkts-bluetooth-bas.md)<!--DelEnd-->
   <!--Del-->
   - [getRemoteDeviceBatteryInfo(system api)](arkts-connectivity-bas-getremotedevicebatteryinfo-f-sys.md)<!--DelEnd-->
   <!--Del-->

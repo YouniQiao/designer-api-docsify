@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { videoProcessingEngine } from '@kit.ImageKit';
+import { videoProcessingEngine } from 'videoProcessingEngine';
 ```
 
 ## initializeEnvironment
@@ -36,10 +36,10 @@ Initialize global environment for image processing.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function initializeEnvironment can not work correctly &lt;br&gt;due to limited device capabilities. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function initializeEnvironment can not work correctly <br>due to limited device capabilities. |
 | [29200007](../errorcode-videoprocessingengine.md#29200007-insufficient-memory) | Out of memory. |
 | [29200006](../errorcode-videoprocessingengine.md#29200006-operation-not-allowed) | The operation is not permitted. This may be caused by incorrect status. |
-| [29200002](../errorcode-videoprocessingengine.md#29200002-initialization-failure) | The global environment initialization for image processing failed, &lt;br&gt;such as failure to initialize the GPU environment. |
+| [29200002](../errorcode-videoprocessingengine.md#29200002-initialization-failure) | The global environment initialization for image processing failed, <br>such as failure to initialize the GPU environment. |
 
 ## Examples
 

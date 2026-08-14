@@ -27,8 +27,8 @@ Reorders elements of this array using comparator function.
 | --- | --- | --- | --- |
 | self | FixedArray&lt;boolean&gt; | Yes | The array to operate `sort` on. |
 | comparator | (a: boolean, b: boolean) =&gt; int | Yes | A function that defines the sort order. |
-| start | int | No | The start index to sort from. &lt;br&gt;The value should be an integer. |
-| end | int | No | The end index to sort to. &lt;br&gt;The value should be an integer. |
+| start | int | No | The start index to sort from. <br>The value should be an integer. |
+| end | int | No | The end index to sort to. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -97,8 +97,8 @@ Reorders elements of this array using comparator function.
 | --- | --- | --- | --- |
 | self | FixedArray&lt;byte&gt; | Yes | The array to operate `sort` on. |
 | comparator | (a: byte, b: byte) =&gt; int | Yes | A function that defines the sort order. |
-| start | int | No | The start index to sort from. &lt;br&gt;The value should be an integer. |
-| end | int | No | The end index to sort to. &lt;br&gt;The value should be an integer. |
+| start | int | No | The start index to sort from. <br>The value should be an integer. |
+| end | int | No | The end index to sort to. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -237,8 +237,8 @@ Reorders elements of this array using comparator function.
 | --- | --- | --- | --- |
 | self | FixedArray&lt;int&gt; | Yes | The array to operate `sort` on. |
 | comparator | (a: int, b: int) =&gt; int | Yes | A function that defines the sort order. |
-| start | int | No | The start index to sort from. &lt;br&gt;The value should be an integer. |
-| end | int | No | The end index to sort to. &lt;br&gt;The value should be an integer. |
+| start | int | No | The start index to sort from. <br>The value should be an integer. |
+| end | int | No | The end index to sort to. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -307,8 +307,8 @@ Reorders elements of this array using comparator function.
 | --- | --- | --- | --- |
 | self | FixedArray&lt;long&gt; | Yes | The array to operate `sort` on. |
 | comparator | (a: long, b: long) =&gt; int | Yes | A function that defines the sort order. |
-| start | int | No | The start index to sort from. &lt;br&gt;The value should be an integer. |
-| end | int | No | The end index to sort to. &lt;br&gt;The value should be an integer. |
+| start | int | No | The start index to sort from. <br>The value should be an integer. |
+| end | int | No | The end index to sort to. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -377,8 +377,8 @@ Reorders elements of this array using comparator function.
 | --- | --- | --- | --- |
 | self | FixedArray&lt;float&gt; | Yes | The array to operate `sort` on. |
 | comparator | (a: float, b: float) =&gt; int | Yes | A function that defines the sort order. |
-| start | int | No | The start index to sort from. &lt;br&gt;The value should be an integer. |
-| end | int | No | The end index to sort to. &lt;br&gt;The value should be an integer. |
+| start | int | No | The start index to sort from. <br>The value should be an integer. |
+| end | int | No | The end index to sort to. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -447,8 +447,8 @@ Reorders elements of this array using comparator function.
 | --- | --- | --- | --- |
 | self | FixedArray&lt;double&gt; | Yes | The array to operate `sort` on. |
 | comparator | (a: double, b: double) =&gt; int | Yes | A function that defines the sort order. |
-| start | int | No | The start index to sort from. &lt;br&gt;The value should be an integer. |
-| end | int | No | The end index to sort to. &lt;br&gt;The value should be an integer. |
+| start | int | No | The start index to sort from. <br>The value should be an integer. |
+| end | int | No | The end index to sort to. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -517,8 +517,8 @@ Reorders elements of this array using comparator function.
 | --- | --- | --- | --- |
 | self | FixedArray&lt;char&gt; | Yes | The array to operate `sort` on. |
 | comparator | (a: char, b: char) =&gt; int | Yes | A function that defines the sort order. |
-| start | int | No | The start index to sort from. &lt;br&gt;The value should be an integer. |
-| end | int | No | The end index to sort to. &lt;br&gt;The value should be an integer. |
+| start | int | No | The start index to sort from. <br>The value should be an integer. |
+| end | int | No | The end index to sort to. <br>The value should be an integer. |
 
 **Return value:**
 

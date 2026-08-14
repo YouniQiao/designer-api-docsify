@@ -6,22 +6,22 @@
 
 | Name | Description |
 | --- | --- |
-| [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-c.md) | The accessibility extension context. Used to configure, query information, and inject gestures. |
+| [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-c.md) | The **AccessibilityExtensionContext** module, inherited from **ExtensionContext**, provides context for **AccessibilityExtensionAbility**. The Accessibility Extension Context module provides capabilities related to the accessibility extension, including configuring concerned information types, querying node information, and gesture injection. |
 
 <!--Del-->
 ### Classes（系统接口）
 
 | Name | Description |
 | --- | --- |
-| [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-c-sys.md) | The accessibility extension context. Used to configure, query information, and inject gestures. |
-| [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md) | Sets the parameter for a specific operation when the accessibility node element executes this operation. For details, see [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#AccessibilityAction-(System-API)) (executable actions for accessibility node elements). |
+| [AccessibilityExtensionContext](arkts-accessibility-accessibilityextensioncontext-c-sys.md) | The **AccessibilityExtensionContext** module, inherited from **ExtensionContext**, provides context for **AccessibilityExtensionAbility**. The Accessibility Extension Context module provides capabilities related to the accessibility extension, including configuring concerned information types, querying node information, and gesture injection. |
+| [Parameter](arkts-accessibility-accessibilityextensioncontext-parameter-c-sys.md) | Provides parameter values for specific settings when an accessibility node element performs a specific action. Different action types require different parameter fields. For details about the mapping between action types and parameter fields, see [AccessibilityAction](arkts-accessibility-accessibility-accessibilityaction-e-sys.md#AccessibilityAction-(System-API)) (actions that can be performed by an accessibility node element). |
 <!--DelEnd-->
 
 ### Interfaces
 
 | Name | Description |
 | --- | --- |
-| [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md) | Defines the **AccessibilityElement**. Before calling APIs of **AccessibilityElement**, you must call [AccessibilityExtensionContext.getFocusElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getFocusElement) or [AccessibilityExtensionContext.getWindowRootElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getWindowRootElement) to obtain an **AccessibilityElement** instance. |
+| [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md) | An accessibility node element that provides capabilities such as querying parent/child elements, finding elements by content or focus direction, and performing accessibility actions. It is applicable to scenarios where an accessibility app needs to interact with and operate on UI nodes. Before calling methods of AccessibilityElement, obtain an AccessibilityElement instance through [AccessibilityExtensionContext.getFocusElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getFocusElement) or [AccessibilityExtensionContext.getWindowRootElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getWindowRootElement). |
 | [ElementAttributeValues](arkts-accessibility-accessibilityextensioncontext-elementattributevalues-i.md) | Provides attribute names and value types of a node element. |
 | [Rect](arkts-accessibility-accessibilityextensioncontext-rect-i.md) | Defines a rectangle. |
 
@@ -30,13 +30,13 @@
 
 | Name | Description |
 | --- | --- |
-| [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i-sys.md) | Defines the **AccessibilityElement**. Before calling APIs of **AccessibilityElement**, you must call [AccessibilityExtensionContext.getFocusElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getFocusElement) or [AccessibilityExtensionContext.getWindowRootElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getWindowRootElement) to obtain an **AccessibilityElement** instance. |
-| [AccessibilityGrid](arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | Defines accessibility grid information. For details, see the currentItem attribute in [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md#AccessibilityElement). |
-| [AccessibilitySpan](arkts-accessibility-accessibilityextensioncontext-accessibilityspan-i-sys.md) | Defines the information about the hyperlink wrapped by the span tag. For details, see the spans attribute in [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md#AccessibilityElement). |
-| [AccessibilityVirtualNode](arkts-accessibility-accessibilityextensioncontext-accessibilityvirtualnode-i-sys.md) | Defines the **AccessibilityVirtualNode**. |
+| [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i-sys.md) | An accessibility node element that provides capabilities such as querying parent/child elements, finding elements by content or focus direction, and performing accessibility actions. It is applicable to scenarios where an accessibility app needs to interact with and operate on UI nodes. Before calling methods of AccessibilityElement, obtain an AccessibilityElement instance through [AccessibilityExtensionContext.getFocusElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getFocusElement) or [AccessibilityExtensionContext.getWindowRootElement()](arkts-accessibility-accessibilityextensioncontext-c.md#getWindowRootElement). |
+| [AccessibilityGrid](arkts-accessibility-accessibilityextensioncontext-accessibilitygrid-i-sys.md) | Accessibility grid information. For details, see the property currentItem in [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md#AccessibilityElement). |
+| [AccessibilitySpan](arkts-accessibility-accessibilityextensioncontext-accessibilityspan-i-sys.md) | Hyperlink text information for accessibility. For details, see the attribute spans in [AccessibilityElement](arkts-accessibility-accessibilityextensioncontext-accessibilityelement-i.md#AccessibilityElement). |
+| [AccessibilityVirtualNode](arkts-accessibility-accessibilityextensioncontext-accessibilityvirtualnode-i-sys.md) | Defines an accessibility virtual node. |
 | [ElementAttributeValues](arkts-accessibility-accessibilityextensioncontext-elementattributevalues-i-sys.md) | Provides attribute names and value types of a node element. |
-| [FocusMoveResult](arkts-accessibility-accessibilityextensioncontext-focusmoveresult-i-sys.md) | Queries the return value type of the target accessibility nodes. |
-| [TouchPosition](arkts-accessibility-accessibilityextensioncontext-touchposition-i-sys.md) | Indicates touch position of accessibility virtual node. |
+| [FocusMoveResult](arkts-accessibility-accessibilityextensioncontext-focusmoveresult-i-sys.md) | Return value type of the accessibility node query. |
+| [TouchPosition](arkts-accessibility-accessibilityextensioncontext-touchposition-i-sys.md) | Touch tap position. |
 <!--DelEnd-->
 
 ### Types
@@ -52,7 +52,7 @@
 
 | Name | Description |
 | --- | --- |
-| [FocusCondition](arkts-accessibility-focuscondition-t-sys.md) | Defines a condition for querying the focusable node. |
-| [FocusRule](arkts-accessibility-focusrule-t-sys.md) | Defines a focus rule for determining the start node and its descendants when searching for a focusable node. |
+| [FocusCondition](arkts-accessibility-focuscondition-t-sys.md) | Describes the method for querying focusable nodes. |
+| [FocusRule](arkts-accessibility-focusrule-t-sys.md) | Describes how to determine the focus capability of the starting node and its child nodes when searching for focusable nodes. |
 <!--DelEnd-->
 

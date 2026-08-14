@@ -17,7 +17,7 @@ Wi-Fi Proxy config.
 ## Modules to Import
 
 ```TypeScript
-import { wifiManager } from '@kit.ConnectivityKit';
+import { wifiManager } from 'wifiManager';
 ```
 
 ## exclusionObjects

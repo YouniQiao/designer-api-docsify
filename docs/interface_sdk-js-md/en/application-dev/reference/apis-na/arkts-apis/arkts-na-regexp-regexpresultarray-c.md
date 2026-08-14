@@ -70,7 +70,7 @@ Returns result string by index.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | Integer index. &lt;br&gt;The value should be an integer. |
+| index | int | Yes | Integer index. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -102,7 +102,7 @@ Set the matching result at the specified index.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | the index to be set. &lt;br&gt;The value should be an integer. |
+| index | int | Yes | the index to be set. <br>The value should be an integer. |
 | val | string \| undefined | Yes | the value to be set. |
 
 ## constructor
@@ -129,7 +129,7 @@ Creates a RegExpResultArray instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | the starting index of the match result. &lt;br&gt;The value should be an integer. |
+| index | int | Yes | the starting index of the match result. <br>The value should be an integer. |
 | input | string | Yes | the original string used for matching. |
 | result | Array&lt;string \| undefined&gt; | Yes | the string array that matches. |
 | indices | Array&lt;Array&lt;int&gt;&gt; | Yes | the start and end index arrays of each matching substring. |
@@ -160,7 +160,7 @@ Post execution processing.
 | --- | --- | --- | --- |
 | res | [RegExpResultArray](arkts-na-regexp-regexpresultarray-c.md) | Yes | the result array. |
 | input | string | Yes | the input string. |
-| index | int | Yes | the index. &lt;br&gt;The value should be an integer. |
+| index | int | Yes | the index. <br>The value should be an integer. |
 | hasIndices | boolean | Yes | whether has indices. |
 
 ## toString

@@ -36,7 +36,7 @@ Returns an instance of number at passed index.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | index to look at &lt;br&gt;The value should be an integer. |
+| index | int | Yes | index to look at <br>The value should be an integer. |
 
 **Return value:**
 
@@ -94,7 +94,7 @@ Assigns val as element on index.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | index to change &lt;br&gt;The value should be an integer. |
+| index | int | Yes | index to change <br>The value should be an integer. |
 | val | double | Yes | value to set |
 
 ## at
@@ -173,7 +173,7 @@ Creates a Float64Array with respect to length.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| length | int | Yes | Number of elements &lt;br&gt;The value should be an integer. |
+| length | int | Yes | Number of elements <br>The value should be an integer. |
 
 ## constructor
 
@@ -330,7 +330,7 @@ Creates a Float64Array with respect to buf and byteOffset.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | buf | ArrayBuffer | Yes | data initializer |
-| byteOffset | int | Yes | byte offset from begin of the buf &lt;br&gt;The value should be an integer. |
+| byteOffset | int | Yes | byte offset from begin of the buf <br>The value should be an integer. |
 
 ## constructor
 
@@ -384,8 +384,8 @@ Creates a Float64Array with respect to data, byteOffset and length.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | buf | ArrayBuffer | Yes | data initializer |
-| byteOffset | int | Yes | byte offset from begin of the buf &lt;br&gt;The value should be an integer. |
-| length | int | Yes | size of elements of type double in newly created Float64Array &lt;br&gt;The value should be an integer. |
+| byteOffset | int | Yes | byte offset from begin of the buf <br>The value should be an integer. |
+| length | int | Yes | size of elements of type double in newly created Float64Array <br>The value should be an integer. |
 
 ## constructor
 
@@ -499,7 +499,7 @@ Makes a copy of internal elements to targetPos from begin to end of Float64Array
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| target | int | Yes | insert index to place copied elements &lt;br&gt;The value should be an integer. |
+| target | int | Yes | insert index to place copied elements <br>The value should be an integer. |
 
 **Return value:**
 
@@ -1068,7 +1068,7 @@ Determines whether Float64Array includes a certain element, returning true or fa
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | searchElement | double | Yes | The element to search for |
-| fromIndex | int | No | The position in this array at which to begin searching for searchElement. Defaults to 0. &lt;br&gt;The value should be an integer. |
+| fromIndex | int | No | The position in this array at which to begin searching for searchElement. Defaults to 0. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -1166,7 +1166,7 @@ Returns the index of the first occurrence of a value in Float64Array.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | searchElement | double | Yes | The value to locate in the array. |
-| fromIndex | int | No | The array index at which to begin the search. If fromIndex is undefined, the search starts at index 0. &lt;br&gt;The value should be an integer. |
+| fromIndex | int | No | The array index at which to begin the search. If fromIndex is undefined, the search starts at index 0. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -1670,7 +1670,7 @@ Assigns val as element on insertPos.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| insertPos | int | Yes | index to change &lt;br&gt;The value should be an integer. |
+| insertPos | int | Yes | index to change <br>The value should be an integer. |
 | val | double | Yes | value to set |
 
 ## set
@@ -1724,7 +1724,7 @@ Copies all elements of arr to the current Float64Array starting from insertPos.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | arr | FixedArray&lt;double&gt; | Yes | array to copy data from |
-| insertPos | int | Yes | start index where data from arr will be inserted &lt;br&gt;The value should be an integer. |
+| insertPos | int | Yes | start index where data from arr will be inserted <br>The value should be an integer. |
 
 ## set
 
@@ -1777,7 +1777,7 @@ Copies all elements of arr to the current Float64Array starting from offset.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | array | Float64Array | Yes | array to copy data from |
-| offset | int | Yes | start index where data from arr will be inserted &lt;br&gt;The value should be an integer. |
+| offset | int | Yes | start index where data from arr will be inserted <br>The value should be an integer. |
 
 ## set
 
@@ -1804,7 +1804,7 @@ Copies elements from an ArrayLike object to the Float64Array.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | array | ArrayLike&lt;double&gt; | Yes | An ArrayLike object containing the elements to copy. |
-| offset | int | Yes | Optional. The offset into the target array at which to begin writing values from the source array. The default value is 0. &lt;br&gt;The value should be an integer. |
+| offset | int | Yes | Optional. The offset into the target array at which to begin writing values from the source array. The default value is 0. <br>The value should be an integer. |
 
 ## slice
 
@@ -1830,7 +1830,7 @@ Creates a slice of current Float64Array using range [begin, this.length).
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| begin | int | Yes | start index to be taken into slice &lt;br&gt;The value should be an integer. |
+| begin | int | Yes | start index to be taken into slice <br>The value should be an integer. |
 
 **Return value:**
 
@@ -2181,7 +2181,7 @@ Returns a new Float64Array with the element at the given index replaced by the g
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | index to change &lt;br&gt;The value should be an integer. |
+| index | int | Yes | index to change <br>The value should be an integer. |
 | value | double | Yes | value to set |
 
 **Return value:**

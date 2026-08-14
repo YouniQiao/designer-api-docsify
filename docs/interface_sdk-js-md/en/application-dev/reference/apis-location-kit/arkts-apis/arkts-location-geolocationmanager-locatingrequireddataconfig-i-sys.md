@@ -17,7 +17,7 @@ Describes the request parameters for obtaining the data required for locating.
 ## Modules to Import
 
 ```TypeScript
-import { geoLocationManager } from '@kit.LocationKit';
+import { geoLocationManager } from 'geoLocationManager';
 ```
 
 ## arfcn

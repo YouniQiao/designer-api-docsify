@@ -1,6 +1,6 @@
 # DragController
 
-提供发起主动拖拽的能力，当应用接收到触摸或长按等事件时可以主动发起拖拽的动作，并在其中携带拖拽信息。 > **说明：** > > 以下API需先使用UIContext中的[getDragController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getDragController)方法获取DragController实例，再通过此实例调用对应方法。
+提供发起主动拖拽的能力，当应用接收到触摸或长按等事件时可以主动发起拖拽的动作，并在其中携带拖拽信息。 > **说明：** > > 以下API需先使用UIContext中的[getDragController()](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getDragController)方法获取DragController实例，再通过此实例调用对应方法。
 
 **起始版本：** 11
 
@@ -87,7 +87,7 @@ createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, dragInfo: dra
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal handling failed. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 
 ## enableDropDisallowedBadge
 
@@ -144,16 +144,16 @@ executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: dragController.DragI
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| custom | CustomBuilder \| [DragItemInfo](../../apis-na/arkts-apis/arkts-na-common-dragiteminfo-i.md) | 是 | 拖拽发起后跟手效果所拖拽的对象。 &lt;br/&gt; **说明：** &lt;br/&gt;不支持全局builder。如果builder中使用了 Image组件，应尽量开启同步加载，即配置Image的syncLoad为true。该builder只用于生成当次拖拽中显示的图 片。builder的根组件宽高为0时，无法生成拖拽显示的图片导致拖拽失败。builder的修改不会同步到当前正在拖拽的图片，对builder的修改需要在下一次拖拽时生效。 |
+| custom | CustomBuilder \| [DragItemInfo](../../apis-na/arkts-apis/arkts-na-common-dragiteminfo-i.md) | 是 | 拖拽发起后跟手效果所拖拽的对象。 <br/> **说明：** <br/>不支持全局builder。如果builder中使用了 Image组件，应尽量开启同步加载，即配置Image的syncLoad为true。该builder只用于生成当次拖拽中显示的图 片。builder的根组件宽高为0时，无法生成拖拽显示的图片导致拖拽失败。builder的修改不会同步到当前正在拖拽的图片，对builder的修改需要在下一次拖拽时生效。 |
 | dragInfo | dragController.DragInfo | 是 | 拖拽信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;dragController.DragEventParam&gt; | 是 | 拖拽结束返回结果的回调&lt;br/&gt;- event：拖拽事件信息，仅包括拖拽结果。&lt;br/&gt;- extraParams：拖拽事件额外信息。<br>**起始版本：** 12 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;dragController.DragEventParam&gt; | 是 | 拖拽结束返回结果的回调<br/>- event：拖拽事件信息，仅包括拖拽结果。<br/>- extraParams：拖拽事件额外信息。<br>**起始版本：** 12 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal handling failed. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 
 ## executeDrag
 
@@ -189,7 +189,7 @@ executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: dragController.DragI
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;{ event: DragEvent, extraParams: string | > } Callback used to return the result. &lt;br&gt;- **event**: drag event information that includes only the drag result. &lt;br&gt;- **extraParams**: extra information about the drag event.<br>**适用版本：** 11+ |
+| Promise&lt;{ event: DragEvent, extraParams: string | > } Callback used to return the result. <br>- **event**: drag event information that includes only the drag result. <br>- **extraParams**: extra information about the drag event.<br>**适用版本：** 11+ |
 | Promise&lt;dragController.DragEventParam&gt; | A Promise with the drag event information.<br>**适用版本：** 12+ |
 
 **错误码：**
@@ -197,7 +197,7 @@ executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: dragController.DragI
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [100001](../errorcode-internal.md#100001-接口调用异常错误码) | Internal handling failed. |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 
 ## getDragPreview
 

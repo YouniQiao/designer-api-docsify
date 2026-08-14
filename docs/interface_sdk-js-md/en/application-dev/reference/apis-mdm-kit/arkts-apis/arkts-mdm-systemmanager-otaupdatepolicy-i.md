@@ -15,7 +15,7 @@ Represents an OTA update policy.
 ## Modules to Import
 
 ```TypeScript
-import { systemManager } from '@kit.MDMKit';
+import { systemManager } from 'systemManager';
 ```
 
 ## delayUpdateTime

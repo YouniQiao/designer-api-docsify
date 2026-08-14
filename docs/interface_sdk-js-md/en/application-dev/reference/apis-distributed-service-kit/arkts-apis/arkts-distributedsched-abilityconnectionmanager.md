@@ -17,7 +17,7 @@ The **abilityConnectionManager** module provides APIs for cross-device connectio
 ## Modules to Import
 
 ```TypeScript
-import { abilityConnectionManager } from '@kit.DistributedServiceKit';
+import { abilityConnectionManager } from 'abilityConnectionManager';
 ```
 
 ## Summary

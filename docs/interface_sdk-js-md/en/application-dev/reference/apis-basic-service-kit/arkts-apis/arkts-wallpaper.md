@@ -15,7 +15,7 @@ System wallpaper
 ## Modules to Import
 
 ```TypeScript
-import { wallpaper } from '@kit.BasicServicesKit';
+import { wallpaper } from 'wallpaper';
 ```
 
 ## Summary

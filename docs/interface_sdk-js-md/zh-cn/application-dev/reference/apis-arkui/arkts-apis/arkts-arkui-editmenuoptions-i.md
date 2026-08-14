@@ -38,7 +38,7 @@ onCreateMenu(menuItems: Array<TextMenuItem>): Array<TextMenuItem>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| menuItems | Array&lt;[TextMenuItem](arkts-arkui-textmenuitem-i.md)&gt; | 是 | 将要显示的菜单项。 &lt;br&gt;**说明：** &lt;br&gt;对默认菜单项的名称、图标、快捷键提示修改不生效。 |
+| menuItems | Array&lt;[TextMenuItem](arkts-arkui-textmenuitem-i.md)&gt; | 是 | 将要显示的菜单项。 <br>**说明：** <br>对默认菜单项的名称、图标、快捷键提示修改不生效。 |
 
 **返回值：**
 
@@ -72,14 +72,14 @@ onMenuItemClick(menuItem: TextMenuItem, range: TextRange): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| menuItem | [TextMenuItem](arkts-arkui-textmenuitem-i.md) | 是 | 菜单项。 &lt;br&gt;**说明：** &lt;br&gt;从API version 23开始，对于具备可展开二级菜单能力的一级菜单项，例如自动填充，仅执行系统默认逻辑，不会执行用户自定义逻辑。 |
+| menuItem | [TextMenuItem](arkts-arkui-textmenuitem-i.md) | 是 | 菜单项。 <br>**说明：** <br>从API version 23开始，对于具备可展开二级菜单能力的一级菜单项，例如自动填充，仅执行系统默认逻辑，不会执行用户自定义逻辑。 |
 | range | [TextRange](arkts-arkui-textrange-i.md) | 是 | 选中的文本信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 菜单项的执行逻辑。 &lt;br&gt;返回为true，拦截系统默认逻辑，仅执行自定义逻辑。 &lt;br&gt;返回为false，先执行自定义逻辑，再执行系统逻辑。 |
+| boolean | 菜单项的执行逻辑。 <br>返回为true，拦截系统默认逻辑，仅执行自定义逻辑。 <br>返回为false，先执行自定义逻辑，再执行系统逻辑。 |
 
 ## onPrepareMenu
 

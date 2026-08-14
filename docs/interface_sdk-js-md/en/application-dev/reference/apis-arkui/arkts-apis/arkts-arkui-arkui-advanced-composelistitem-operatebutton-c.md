@@ -15,7 +15,13 @@ Defines the type of the button element on the right of the **ComposeListItem** c
 ## Modules to Import
 
 ```TypeScript
-import { OperateCheck, OperateIcon, ComposeListItem, OperateItem, IconType, ContentItem, OperateButton } from '@kit.ArkUI';
+import { ComposeListItem } from 'ComposeListItem';
+import { ContentItem } from 'ContentItem';
+import { IconType } from 'IconType';
+import { OperateButton } from 'OperateButton';
+import { OperateCheck } from 'OperateCheck';
+import { OperateIcon } from 'OperateIcon';
+import { OperateItem } from 'OperateItem';
 ```
 
 ## accessibilityDescription

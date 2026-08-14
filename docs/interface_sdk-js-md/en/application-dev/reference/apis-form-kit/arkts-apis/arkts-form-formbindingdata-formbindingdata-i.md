@@ -15,7 +15,7 @@ Defines the createFormBindingData result interface.
 ## Modules to Import
 
 ```TypeScript
-import { formBindingData } from '@kit.FormKit';
+import { formBindingData } from 'formBindingData';
 ```
 
 ## data

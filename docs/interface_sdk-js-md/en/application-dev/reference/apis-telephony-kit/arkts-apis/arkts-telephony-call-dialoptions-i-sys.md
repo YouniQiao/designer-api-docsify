@@ -15,7 +15,7 @@ Provides an option for determining whether a call is a video call.
 ## Modules to Import
 
 ```TypeScript
-import { call } from '@kit.TelephonyKit';
+import { call } from 'call';
 ```
 
 ## accountId
@@ -24,7 +24,7 @@ import { call } from '@kit.TelephonyKit';
 accountId?: int
 ```
 
-Account ID. - **0**: card slot 1. - **1**: card slot 2.<br
+Account ID. - **0**: card slot 1. - **1**: card slot 2.&lt;br
 
 **Type:** int
 

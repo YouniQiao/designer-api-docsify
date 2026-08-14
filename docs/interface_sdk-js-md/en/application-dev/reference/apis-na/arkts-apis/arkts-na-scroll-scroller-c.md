@@ -1,6 +1,6 @@
 # Scroller
 
-Defines a controller for scrollable container components. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt; &lt;br&gt;1. The binding of a &lt;em&gt;Scroller&lt;/em&gt; instance to a scrollable container component occurs during the component creation phase. &lt;br&gt;2. &lt;em&gt;Scroller&lt;/em&gt; APIs can only be effectively called after the &lt;em&gt;Scroller&lt;/em&gt; instance is bound to a scrollable container component. Otherwise, depending on the API called, it may have no effect or throw an exception. &lt;br&gt;3. For example, with aboutToAppear, this callback is executed after a new instance of a custom component is created and before its &lt;em&gt;build()&lt;/em&gt; method is called. Therefore, if a scrollable component is defined within the &lt;em&gt;build&lt;/em&gt; method of a custom component, the internal scrollable component has not yet been created during the &lt;em&gt;aboutToAppear&lt;/em&gt; callback of that custom component, and therefore the &lt;em&gt;Scroller&lt;/em&gt; APIs cannot be called effectively. &lt;/p&gt;
+Defines a controller for scrollable container components. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt; <br>1. The binding of a &lt;em&gt;Scroller&lt;/em&gt; instance to a scrollable container component occurs during the component creation phase. <br>2. &lt;em&gt;Scroller&lt;/em&gt; APIs can only be effectively called after the &lt;em&gt;Scroller&lt;/em&gt; instance is bound to a scrollable container component. Otherwise, depending on the API called, it may have no effect or throw an exception. <br>3. For example, with aboutToAppear, this callback is executed after a new instance of a custom component is created and before its &lt;em&gt;build()&lt;/em&gt; method is called. Therefore, if a scrollable component is defined within the &lt;em&gt;build&lt;/em&gt; method of a custom component, the internal scrollable component has not yet been created during the &lt;em&gt;aboutToAppear&lt;/em&gt; callback of that custom component, and therefore the &lt;em&gt;Scroller&lt;/em&gt; APIs cannot be called effectively. &lt;/p&gt;
 
 **Since:** 23
 
@@ -114,13 +114,13 @@ Performs inertial scrolling based on the initial velocity passed in.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| velocity | double | Yes | Initial velocity of inertial scrolling. &lt;br&gt;Unit: vp/s. &lt;br&gt;&lt;em&gt;NOTE&lt;/em&gt; &lt;br&gt;If the value specified is 0, it is considered as invalid, and the scrolling for this instance will not take effect. A positive value indicates scrolling towards the top, while a negative value indicates scrolling towards the bottom. |
+| velocity | double | Yes | Initial velocity of inertial scrolling. <br>Unit: vp/s. <br>&lt;em&gt;NOTE&lt;/em&gt; <br>If the value specified is 0, it is considered as invalid, and the scrolling for this instance will not take effect. A positive value indicates scrolling towards the top, while a negative value indicates scrolling towards the bottom. |
 
 **Error codes:**
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100004](../../apis-arkui/errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
 
 ## getFrameNode
@@ -155,7 +155,7 @@ Obtains the FrameNode corresponding to this scroller.
 getItemIndex(x: double, y: double): int
 ```
 
-Obtains the index of a child component based on coordinates. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt; &lt;br&gt;The returned index is &lt;em&gt;-1&lt;/em&gt; for invalid coordinates. &lt;/p&gt;
+Obtains the index of a child component based on coordinates. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt; <br>The returned index is &lt;em&gt;-1&lt;/em&gt; for invalid coordinates. &lt;/p&gt;
 
 **Since:** 23
 
@@ -186,7 +186,7 @@ Obtains the index of a child component based on coordinates. &lt;p&gt;&lt;strong
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100004](../../apis-arkui/errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
 
 ## getItemRect
@@ -195,7 +195,7 @@ Obtains the index of a child component based on coordinates. &lt;p&gt;&lt;strong
 getItemRect(index: int): RectResult
 ```
 
-Obtains the size and position of a child component relative to its container. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt; &lt;br&gt;- The value of &lt;em&gt;index&lt;/em&gt; must be the index of a child component visible in the display area. Otherwise, the value is considered invalid. &lt;br&gt;- The value of &lt;em&gt;index&lt;/em&gt; must be the index of a child component visible in the display area. Otherwise, the value is considered invalid. &lt;/p&gt;
+Obtains the size and position of a child component relative to its container. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt; <br>- The value of &lt;em&gt;index&lt;/em&gt; must be the index of a child component visible in the display area. Otherwise, the value is considered invalid. <br>- The value of &lt;em&gt;index&lt;/em&gt; must be the index of a child component visible in the display area. Otherwise, the value is considered invalid. &lt;/p&gt;
 
 **Since:** 23
 
@@ -213,7 +213,7 @@ Obtains the size and position of a child component relative to its container. &l
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| index | int | Yes | Index of the target child component. &lt;br&gt;The value should be an integer. |
+| index | int | Yes | Index of the target child component. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -225,7 +225,7 @@ Obtains the size and position of a child component relative to its container. &l
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: &lt;br&gt; 1. Mandatory parameters are left unspecified. &lt;br&gt; 2. Incorrect parameters types. &lt;br&gt; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100004](../../apis-arkui/errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
 
 ## isAtEnd
@@ -234,7 +234,7 @@ Obtains the size and position of a child component relative to its container. &l
 isAtEnd(): boolean
 ```
 
-Checks whether the component has scrolled to the bottom. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt; &lt;br&gt;This API is available for the &lt;em&gt;ArcList&lt;/em&gt;, &lt;em&gt;Scroll&lt;/em&gt;, &lt;em&gt;List&lt;/em&gt;, &lt;em&gt;Grid&lt;/em&gt;, and &lt;em&gt;WaterFlow&lt;/em&gt; components. &lt;/p&gt;
+Checks whether the component has scrolled to the bottom. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt; <br>This API is available for the &lt;em&gt;ArcList&lt;/em&gt;, &lt;em&gt;Scroll&lt;/em&gt;, &lt;em&gt;List&lt;/em&gt;, &lt;em&gt;Grid&lt;/em&gt;, and &lt;em&gt;WaterFlow&lt;/em&gt; components. &lt;/p&gt;
 
 **Since:** 23
 
@@ -410,8 +410,8 @@ Scroll to the specified index.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | int | Yes | Index to jump to. &lt;br&gt;The value should be an integer. |
+| value | int | Yes | Index to jump to. <br>The value should be an integer. |
 | smooth | boolean | No | If true, scroll to index item with animation. If false, scroll to index item without animation. |
 | align | [ScrollAlign](arkts-na-scroll-scrollalign-e.md) | No | Sets the alignment mode of a specified index. |
-| options | [ScrollToIndexOptions](arkts-na-scroll-scrolltoindexoptions-i.md) | No | Sets the options of a specified index, such as extra offset. &lt;br&gt;Unit: vp. Default value: 0 (unit:vp). |
+| options | [ScrollToIndexOptions](arkts-na-scroll-scrolltoindexoptions-i.md) | No | Sets the options of a specified index, such as extra offset. <br>Unit: vp. Default value: 0 (unit:vp). |
 

@@ -15,7 +15,7 @@ Defines the handle of the data network.
 ## Modules to Import
 
 ```TypeScript
-import { connection } from '@kit.NetworkKit';
+import { connection } from 'connection';
 ```
 
 ## bindSocket

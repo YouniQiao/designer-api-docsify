@@ -38,7 +38,7 @@ getLazyLayoutDirection(): LazyLayoutDirection
 
 | 类型 | 说明 |
 | --- | --- |
-| [LazyLayoutDirection](../../apis-na/arkts-apis/arkts-na-lazylayoutalgorithm-lazylayoutdirection-e.md) | 懒加载布局方向。 |
+| [LazyLayoutDirection](arkts-arkui-lazylayoutalgorithm-lazylayoutdirection-e.md) | 懒加载布局方向。 |
 
 ## getViewEnd
 
@@ -66,7 +66,7 @@ getViewEnd(): int
 
 | 类型 | 说明 |
 | --- | --- |
-| int | 可视区域的结束位置。 &lt;br&gt;单位：px。 |
+| int | 可视区域的结束位置。 <br>单位：px。 |
 
 ## getViewStart
 
@@ -94,7 +94,7 @@ getViewStart(): int
 
 | 类型 | 说明 |
 | --- | --- |
-| int | 可视区域的起始位置。 &lt;br&gt;单位：px。 |
+| int | 可视区域的起始位置。 <br>单位：px。 |
 
 ## setAdjustedOffset
 

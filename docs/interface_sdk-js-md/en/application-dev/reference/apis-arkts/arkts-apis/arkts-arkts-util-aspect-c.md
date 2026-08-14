@@ -15,7 +15,7 @@ Provides APIs that support Aspect Oriented Programming (AOP). These APIs can be 
 ## Modules to Import
 
 ```TypeScript
-import { util } from '@kit.ArkTS';
+import { util } from 'util';
 ```
 
 ## addAfter

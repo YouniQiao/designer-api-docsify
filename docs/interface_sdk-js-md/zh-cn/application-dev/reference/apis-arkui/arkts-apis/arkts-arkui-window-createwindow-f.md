@@ -57,7 +57,7 @@ export default class EntryAbility extends UIAbility {
   onWindowStageCreate(windowStage: window.WindowStage): void {
     let windowClass: window.Window | undefined = undefined;
     let config: window.Configuration = {
-      name: "test",
+      name: 'test',
       windowType: window.WindowType.TYPE_DIALOG,
       ctx: this.context
     };
@@ -90,7 +90,7 @@ export default class EntryAbility extends UIAbility {
   onWindowStageCreate(windowStage: window.WindowStage): void {
     let windowClass: window.Window | undefined = undefined;
     let config: window.Configuration = {
-      name: "test",
+      name: 'test',
       windowType: window.WindowType.TYPE_DIALOG,
       ctx: this.context
     };
@@ -183,7 +183,7 @@ export default class EntryAbility extends UIAbility {
         console.info('Succeeded in creating the window. Data: ' + JSON.stringify(value));
         windowClass = value;
         windowClass.resize(500, 1000);
-      }).catch((err:BusinessError)=> {
+      }).catch((err:BusinessError) => {
         console.error(`Failed to create the window. Cause code: ${err.code}, message: ${err.message}`);
       });
     } catch (exception) {

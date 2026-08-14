@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { matrix4 } from '@kit.ArkUI';
+import { matrix4 } from 'matrix4';
 ```
 
 ## init
@@ -49,11 +49,38 @@ Matrix constructor, which is used to create a 4 x 4 matrix with the input parame
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number     ] | Yes | A number array whose length is 16 (4 x 4). For details, see **4 x 4 matrix description**.&lt;br&gt;Value range of each number: (-∞, +∞)&lt;br&gt;Default value:&lt;br&gt;[1, 0, 0, 0,&lt;br&gt;0, 1, 0, 0,&lt;br&gt;0, 0, 1, 0,&lt;br&gt;0, 0, 0, 1] |
+| options | [       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number,       number     ] | Yes | A number array whose length is 16 (4 x 4). For details, see **4 x 4 matrix description**.<br>Value range of each number: (-∞, +∞)<br>Default value:<br>[1, 0, 0, 0,<br>0, 1, 0, 0,<br>0, 0, 1, 0,<br>0, 0, 0, 1] |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
 | Matrix4Transit | 4 x 4 matrix object created based on the input parameters. |
+
+## Examples
+
+```TypeScript
+import { matrix4 } from '@kit.ArkUI';
+
+// Create a 4 x 4 matrix.
+let matrix = matrix4.init(
+  [1.0, 0.0, 0.0, 0.0,
+    0.0, 1.0, 0.0, 0.0,
+    0.0, 0.0, 1.0, 0.0,
+    0.0, 0.0, 0.0, 1.0]);
+
+@Entry
+@Component
+struct Tests {
+  build() {
+    Column() {
+      // Replace $r("app.media.zh") with the image resource file you use.
+      Image($r("app.media.zh"))
+        .width("40%")
+        .height(100)
+        .transform(matrix)
+    }
+  }
+}
+```
 

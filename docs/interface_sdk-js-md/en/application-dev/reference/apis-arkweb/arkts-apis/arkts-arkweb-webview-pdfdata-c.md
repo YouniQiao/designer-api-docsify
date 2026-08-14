@@ -15,7 +15,7 @@ Implements the output data stream class of **createPdf()**. > **NOTE：**> > - T
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'webview';
 ```
 
 ## pdfArrayBuffer

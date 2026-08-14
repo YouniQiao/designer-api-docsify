@@ -15,7 +15,7 @@ Provides information about a form.
 ## Modules to Import
 
 ```TypeScript
-import { formInfo } from '@kit.FormKit';
+import { formInfo } from 'formInfo';
 ```
 
 ## enableBlurBackground
@@ -90,7 +90,7 @@ Obtains the group id of the form.
 isFontScaleFollowSystem?: boolean
 ```
 
-Obtains whether the font scaling factor follows system settings. &lt;br&gt;Default value:The default value is true.
+Obtains whether the font scaling factor follows system settings. <br>Default value:The default value is true.
 
 **Type:** boolean
 

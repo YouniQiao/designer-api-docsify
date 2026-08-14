@@ -46,7 +46,7 @@ Set SecurityUIExtensionComponent Content Dpi Follow Strategy.
 isTransferringCaller?: boolean
 ```
 
-Set whether the current capability is used as a Caller.&lt;br/&gt; If set to true, as a Caller, the current token of SecurityUIExtensionComponent is set to rootToken.
+Set whether the current capability is used as a Caller.<br/> If set to true, as a Caller, the current token of SecurityUIExtensionComponent is set to rootToken.
 
 **Type:** boolean
 

@@ -30,7 +30,7 @@ function preQuerySync(query: AssetMap): Uint8Array
 
 | 类型 | 说明 |
 | --- | --- |
-| Uint8Array | 挑战值。 &lt;br&gt;**说明：** 挑战值用于后续用户认证。 |
+| Uint8Array | 挑战值。 <br>**说明：** 挑战值用于后续用户认证。 |
 
 **错误码：**
 

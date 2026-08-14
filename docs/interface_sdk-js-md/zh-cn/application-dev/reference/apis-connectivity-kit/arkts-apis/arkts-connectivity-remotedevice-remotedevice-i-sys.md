@@ -349,7 +349,7 @@ setDeviceAlias(alias: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| alias | string | 是 | 远端设备的别名 &lt;br&gt;最大长度为64且不能为空。 |
+| alias | string | 是 | 远端设备的别名 <br>最大长度为64且不能为空。 |
 
 **错误码：**
 
@@ -428,7 +428,7 @@ setPairingPasscode(passcode: string): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| passcode | string | 是 | 用户输入的通行码。必须是6位数字 &lt;br&gt;长度必须为6，6个10以内数字。 |
+| passcode | string | 是 | 用户输入的通行码。必须是6位数字 <br>长度必须为6，6个10以内数字。 |
 
 **返回值：**
 

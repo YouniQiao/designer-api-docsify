@@ -40,7 +40,7 @@ autoAdjustScrollBarMargin(enable: boolean | undefined): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean \| undefined | 是 | 是否自动调整边距。 &lt;br&gt;true：自动调整边距。 &lt;br&gt;false：不自动调整边距。 &lt;br&gt;undefined：不自动调整边距。 |
+| enable | boolean \| undefined | 是 | 是否自动调整边距。 <br>true：自动调整边距。 <br>false：不自动调整边距。 <br>undefined：不自动调整边距。 |
 
 **返回值：**
 
@@ -74,7 +74,7 @@ backToTop(backToTop: boolean): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| backToTop | boolean | 是 | 设置滚动组件是否支持点击状态栏回到顶部。设置为true支持点击状态栏通过动画回到顶部，设置为false不支持点击状态栏回到顶部。&lt;br/&gt;默认值：&lt;br/&gt;API version 18之前：false。 &lt;br/&gt;API version 18及以后：滚动方向是水平方向时为false，是垂直方向时为true。 |
+| backToTop | boolean | 是 | 设置滚动组件是否支持点击状态栏回到顶部。设置为true支持点击状态栏通过动画回到顶部，设置为false不支持点击状态栏回到顶部。<br/>默认值：<br/>API version 18之前：false。 <br/>API version 18及以后：滚动方向是水平方向时为false，是垂直方向时为true。 |
 
 **返回值：**
 
@@ -108,7 +108,7 @@ clipContent(clip: ContentClipMode | RectShape): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| clip | [ContentClipMode](arkts-arkui-contentclipmode-e.md) \| [RectShape](arkts-arkui-rectshape-t.md) | 是 | 裁剪只针对滚动容器的内容，即其子节点，背景不受影响。通过RectShape传入自定义矩形区域时仅支持设置宽高和相对于组件左上角的 [offset](../arkts-apis/arkts-arkui-arkui-shape-commonshapemethod-c.md#offset)，不支持圆角。 &lt;br&gt;默认值：Grid、Scroll的默认值为ContentClipMode.BOUNDARY，List、WaterFlow的默认值为ContentClipMode.CONTENT_ONLY。 |
+| clip | [ContentClipMode](arkts-arkui-contentclipmode-e.md) \| [RectShape](arkts-arkui-rectshape-t.md) | 是 | 裁剪只针对滚动容器的内容，即其子节点，背景不受影响。通过RectShape传入自定义矩形区域时仅支持设置宽高和相对于组件左上角的 [offset](../arkts-apis/arkts-arkui-arkui-shape-commonshapemethod-c.md#offset)，不支持圆角。 <br>默认值：Grid、Scroll的默认值为ContentClipMode.BOUNDARY，List、WaterFlow的默认值为ContentClipMode.CONTENT_ONLY。 |
 
 **返回值：**
 
@@ -142,7 +142,7 @@ contentEndOffset(offset: number | Resource): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offset | number \| Resource | 是 | 内容区末尾偏移量。&lt;br/&gt;默认值：0&lt;br/&gt;单位：vp &lt;br/&gt;取值范围： 0, +∞)&lt;br/&gt;设置异常值如负数、非数字Resource时，按默认值处理。 |
+| offset | number \| Resource | 是 | 内容区末尾偏移量。<br/>默认值：0<br/>单位：vp <br/>取值范围： 0, +∞)<br/>设置异常值如负数、非数字Resource时，按默认值处理。 |
 
 **返回值：**
 
@@ -176,7 +176,7 @@ contentStartOffset(offset: number | Resource): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| offset | number \| Resource | 是 | 内容区域起始偏移量。&lt;br/&gt;默认值：0&lt;br/&gt;单位：vp &lt;br/&gt;取值范围： [0, +∞)&lt;br/&gt;设置异常值如负数、非数字Resource时，按默认值处理。 |
+| offset | number \| Resource | 是 | 内容区域起始偏移量。<br/>默认值：0<br/>单位：vp <br/>取值范围： [0, +∞)<br/>设置异常值如负数、非数字Resource时，按默认值处理。 |
 
 **返回值：**
 
@@ -210,7 +210,7 @@ digitalCrownSensitivity(sensitivity: Optional<CrownSensitivity>): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sensitivity | [Optional](arkts-arkui-optional-t.md)&lt;CrownSensitivity&gt; | 是 | 表冠响应灵敏度。CrownSensitivity.LOW表示低灵敏度，滚动响应较慢； CrownSensitivity.MEDIUM表示中灵敏度，滚动响应适中；CrownSensitivity.HIGH表示高灵敏度，滚动响应较快。&lt;br/&gt;默认值：CrownSensitivity.MEDIUM，响应速度适 中。 |
+| sensitivity | [Optional](arkts-arkui-optional-t.md)&lt;CrownSensitivity&gt; | 是 | 表冠响应灵敏度。CrownSensitivity.LOW表示低灵敏度，滚动响应较慢； CrownSensitivity.MEDIUM表示中灵敏度，滚动响应适中；CrownSensitivity.HIGH表示高灵敏度，滚动响应较快。<br/>默认值：CrownSensitivity.MEDIUM，响应速度适 中。 |
 
 **返回值：**
 
@@ -244,8 +244,8 @@ edgeEffect(edgeEffect: EdgeEffect, options?: EdgeEffectOptions): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| edgeEffect | EdgeEffect | 是 | 滚动组件的边缘滑动效果，支持弹簧效果和阴影效果。&lt;br/&gt;默认值：Grid、Scroll、WaterFlow组件默认EdgeEffect.None，List组件 默认EdgeEffect.Spring。 |
-| options | [EdgeEffectOptions](arkts-arkui-edgeeffectoptions-i.md) | 否 | 组件内容大小小于组件自身时是否开启滑动效果。从API version 18开始，支持设置边缘效果生效的边缘。设置为{ alwaysEnabled: true }会开启滑动效果，{ alwaysEnabled: false }不开启。&lt;br/&gt;默认值：&lt;br/&gt;List、Grid、WaterFlow组件默认{ alwaysEnabled: false }，Scroll组 件默认{ alwaysEnabled: true }。从API version 18开始，默认增加effectEdge字段，取值为EffectEdge.START \| EffectEdge.END。 |
+| edgeEffect | EdgeEffect | 是 | 滚动组件的边缘滑动效果，支持弹簧效果和阴影效果。<br/>默认值：Grid、Scroll、WaterFlow组件默认EdgeEffect.None，List组件 默认EdgeEffect.Spring。 |
+| options | [EdgeEffectOptions](arkts-arkui-edgeeffectoptions-i.md) | 否 | 组件内容大小小于组件自身时是否开启滑动效果。从API version 18开始，支持设置边缘效果生效的边缘。设置为{ alwaysEnabled: true }会开启滑动效果，{ alwaysEnabled: false }不开启。<br/>默认值：<br/>List、Grid、WaterFlow组件默认{ alwaysEnabled: false }，Scroll组 件默认{ alwaysEnabled: true }。从API version 18开始，默认增加effectEdge字段，取值为EffectEdge.START \| EffectEdge.END。 |
 
 **返回值：**
 
@@ -279,7 +279,7 @@ enableScrollInteraction(value: boolean): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 是否支持手指或鼠标滚动手势。设置为true时支持，设置为false时不支持，但不影响控制器Scroller的滚动接口和 [backToTop](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#backtotop15)属性。&lt;br/&gt;默认值： true |
+| value | boolean | 是 | 是否支持手指或鼠标滚动手势。设置为true时支持，设置为false时不支持，但不影响控制器Scroller的滚动接口和 [backToTop](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#backtotop15)属性。<br/>默认值： true |
 
 **返回值：**
 
@@ -313,7 +313,7 @@ enableScrollWithMouse(enabled: boolean | undefined): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enabled | boolean \| undefined | 是 | 是否支持鼠标左键按下拖动滚动。&lt;br/&gt;true：支持鼠标左键按下拖动滚动。&lt;br/&gt;false：不支持鼠标左键按下拖动滚动。&lt;br/&gt; undefined：不支持鼠标左键按下拖动滚动。 |
+| enabled | boolean \| undefined | 是 | 是否支持鼠标左键按下拖动滚动。<br/>true：支持鼠标左键按下拖动滚动。<br/>false：不支持鼠标左键按下拖动滚动。<br/> undefined：不支持鼠标左键按下拖动滚动。 |
 
 **返回值：**
 
@@ -347,8 +347,8 @@ fadingEdge(enabled: Optional<boolean>, options?: FadingEdgeOptions): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 是否开启边缘渐隐效果。设置为true时开启边缘渐隐效果，设置为false时不开启边缘渐隐效果。&lt;br/&gt;默认值：false |
-| options | [FadingEdgeOptions](arkts-arkui-fadingedgeoptions-i.md) | 否 | 边缘渐隐参数对象。可以通过该对象定义边缘渐隐效果属性，比如设置渐隐长度。&lt;br/&gt;如果设置小于0的值或undefined或者不设置则取默认值，默认长 度为32vp。&lt;br/&gt;如果设置的长度超过容器高度的一半时，渐隐长度取容器高度的一半。 |
+| enabled | [Optional](arkts-arkui-optional-t.md)&lt;boolean&gt; | 是 | 是否开启边缘渐隐效果。设置为true时开启边缘渐隐效果，设置为false时不开启边缘渐隐效果。<br/>默认值：false |
+| options | [FadingEdgeOptions](arkts-arkui-fadingedgeoptions-i.md) | 否 | 边缘渐隐参数对象。可以通过该对象定义边缘渐隐效果属性，比如设置渐隐长度。<br/>如果设置小于0的值或undefined或者不设置则取默认值，默认长 度为32vp。<br/>如果设置的长度超过容器高度的一半时，渐隐长度取容器高度的一半。 |
 
 **返回值：**
 
@@ -382,7 +382,7 @@ flingSpeedLimit(speedLimit: number): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| speedLimit | number | 是 | 惯性动效开始时的最大初始速度。&lt;br/&gt;默认值：9000&lt;br/&gt;单位：vp/s &lt;br/&gt;取值范围：(0, +∞)，设置为小于等于0的值时，按默认值处理。 |
+| speedLimit | number | 是 | 惯性动效开始时的最大初始速度。<br/>默认值：9000<br/>单位：vp/s <br/>取值范围：(0, +∞)，设置为小于等于0的值时，按默认值处理。 |
 
 **返回值：**
 
@@ -416,7 +416,7 @@ friction(value: number | Resource): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number \| Resource | 是 | 摩擦系数。&lt;br/&gt;默认值：非wearable设备为0.6，wearable设备为0.9。&lt;br/&gt;从API version 11开始，非wearable设 备默认值为0.7。&lt;br/&gt;从API version 12开始，非wearable设备默认值为0.75。 &lt;br/&gt;取值范围：(0, +∞)，设置为小于等于0的值时，按默认值处理。 |
+| value | number \| Resource | 是 | 摩擦系数。<br/>默认值：非wearable设备为0.6，wearable设备为0.9。<br/>从API version 11开始，非wearable设 备默认值为0.7。<br/>从API version 12开始，非wearable设备默认值为0.75。 <br/>取值范围：(0, +∞)，设置为小于等于0的值时，按默认值处理。 |
 
 **返回值：**
 
@@ -450,7 +450,7 @@ nestedScroll(value: NestedScrollOptions): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [NestedScrollOptions](arkts-arkui-nestedscrolloptions-i.md) | 是 | 嵌套滚动选项。&lt;br/&gt;默认值：{ scrollForward: NestedScrollMode.SELF_ONLY, scrollBackward: NestedScrollMode.SELF_ONLY } |
+| value | [NestedScrollOptions](arkts-arkui-nestedscrolloptions-i.md) | 是 | 嵌套滚动选项。<br/>默认值：{ scrollForward: NestedScrollMode.SELF_ONLY, scrollBackward: NestedScrollMode.SELF_ONLY } |
 
 **返回值：**
 
@@ -662,7 +662,7 @@ onScroll(event: (scrollOffset: number, scrollState: ScrollState) => void): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | (scrollOffset: number, scrollState: ScrollState) =&gt; void | 是 | 滚动组件滑动时的回调。&lt;br/&gt;scrollOffset：相对于上一帧的偏移量，滚动组件的内容向上滚动时偏移量为正，向下滚动时偏移量为负。单位vp。&lt;br/&gt; scrollState：当前滑动状态。 |
+| event | (scrollOffset: number, scrollState: ScrollState) =&gt; void | 是 | 滚动组件滑动时的回调。<br/>scrollOffset：相对于上一帧的偏移量，滚动组件的内容向上滚动时偏移量为正，向下滚动时偏移量为负。单位vp。<br/> scrollState：当前滑动状态。 |
 
 **返回值：**
 
@@ -1008,7 +1008,7 @@ scrollBarHeight(height: LengthMetrics | undefined): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| height | LengthMetrics \| undefined | 是 | 滚动条滑轨高度。&lt;br/&gt;值必须大于等于0。设置为undefined或小于0时，自适应滚动组件高度，儿童智能表则恢复至默认值37vp。设置 为0时，不显示滚动条。 |
+| height | LengthMetrics \| undefined | 是 | 滚动条滑轨高度。<br/>值必须大于等于0。设置为undefined或小于0时，自适应滚动组件高度，儿童智能表则恢复至默认值37vp。设置 为0时，不显示滚动条。 |
 
 **返回值：**
 

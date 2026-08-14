@@ -17,7 +17,7 @@ Provides the scene detection and query capabilities.
 ## Modules to Import
 
 ```TypeScript
-import { camera } from '@kit.CameraKit';
+import { camera } from 'camera';
 ```
 
 ## isSceneFeatureSupported

@@ -1058,7 +1058,7 @@ getParagraphStyle(): ParagraphStyle
 
 | 类型 | 说明 |
 | --- | --- |
-| ParagraphStyle | 段落的样式配置。 &lt;br&gt;其中`textStyle.color`、`textStyle.textShadows.color`、`textStyle.backgroundRect.color`、 `textStyle.decoration.color`属性：返回32位无符号整型颜色数值。示例：返回值`4278190080`，对应纯黑色十六进制颜色值`0xFF000000`，等价于 [common2D.Color]{ |
+| ParagraphStyle | 段落的样式配置。 <br>其中`textStyle.color`、`textStyle.textShadows.color`、`textStyle.backgroundRect.color`、 `textStyle.decoration.color`属性：返回32位无符号整型颜色数值。示例：返回值`4278190080`，对应纯黑色十六进制颜色值`0xFF000000`，等价于 [common2D.Color]{ |
 
 ## 示例
 

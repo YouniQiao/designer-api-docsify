@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'i18n';
 ```
 
 ## getSystemRegion
@@ -31,4 +31,12 @@ Obtains the system region.
 | Type | Description |
 | --- | --- |
 | string | System region ID. |
+
+## Examples
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let region: string = i18n.getSystemRegion();
+```
 

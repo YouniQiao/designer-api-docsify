@@ -15,7 +15,7 @@ Enumerates the lockout status of an identity authentication type. This API is us
 ## Modules to Import
 
 ```TypeScript
-import { userAuth } from '@kit.UserAuthenticationKit';
+import { userAuth } from 'userAuth';
 ```
 
 ## isLocked

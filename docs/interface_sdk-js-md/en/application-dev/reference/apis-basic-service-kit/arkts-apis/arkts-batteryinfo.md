@@ -27,7 +27,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { batteryInfo } from '@kit.BasicServicesKit';
+import { batteryInfo } from 'batteryInfo';
 ```
 
 ## Summary

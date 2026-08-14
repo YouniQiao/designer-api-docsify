@@ -17,7 +17,7 @@ The **brightness** module provides an API for setting the screen brightness. > *
 ## Modules to Import
 
 ```TypeScript
-import { brightness } from '@kit.BasicServicesKit';
+import { brightness } from 'brightness';
 ```
 
 ## Summary

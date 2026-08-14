@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from '@kit.BasicServicesKit';
+import { usbManager } from 'usbManager';
 ```
 
 ## usbCancelTransfer
@@ -36,7 +36,7 @@ Cancels an asynchronous USB data transfer request. > **NOTE：**> > This API is 
 | --- | --- |
 | [14400011](../../apis-basic-services-kit/errorcode-usb.md#14400011-no-ongoing-transfer-found) | The transfer is not in progress, or is already complete or cancelled. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [14400010](../../apis-basic-services-kit/errorcode-usb.md#14400010-unrecognized-error) | Other USB error. Possible causes:  &lt;br&gt;1.Unrecognized discard error code. |
+| [14400010](../../apis-basic-services-kit/errorcode-usb.md#14400010-unrecognized-error) | Other USB error. Possible causes:  <br>1.Unrecognized discard error code. |
 | [14400008](../../apis-basic-services-kit/errorcode-usb.md#14400008-no-device-disconnected) | No such device (it may have been disconnected). |
 | [14400001](../../apis-basic-services-kit/errorcode-usb.md#14400001-usb-device-connection-denied) | Access right denied. Call requestRight to get the USBDevicePipe access right first. |
 

@@ -17,7 +17,7 @@ Describes the size of the screen region to capture.
 ## Modules to Import
 
 ```TypeScript
-import { screenshot } from '@kit.ArkUI';
+import { screenshot } from 'screenshot';
 ```
 
 ## height

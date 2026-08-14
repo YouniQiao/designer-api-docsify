@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { accessibility } from '@kit.AccessibilityKit';
+import { accessibility } from 'accessibility';
 ```
 
 ## getSeniorModeStateForSelf
@@ -12,7 +12,7 @@ import { accessibility } from '@kit.AccessibilityKit';
 function getSeniorModeStateForSelf(): Promise<boolean>
 ```
 
-Check if this application's senior mode is enabled.
+Checks whether the app has "senior mode" enabled. This API uses a promise to return the result. Unlike [accessibility.isSeniorModeEnabled](arkts-accessibility-accessibility-isseniormodeenabled-f.md#isSeniorModeEnabled), which checks whether the system-level senior mode is enabled, this API only queries the state of the app itself.
 
 **Since:** 26.0.0
 
@@ -30,7 +30,7 @@ Check if this application's senior mode is enabled.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns { |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the "senior mode " of the app itself is enabled, and **false** indicates that the "senior mode" of the app itself is disabled. |
 
 **Error codes:**
 

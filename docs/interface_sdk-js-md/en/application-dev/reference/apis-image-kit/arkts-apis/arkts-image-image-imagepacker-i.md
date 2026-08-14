@@ -15,7 +15,7 @@ The **ImagePacker** class provides APIs to compress and encode images. Before ca
 ## Modules to Import
 
 ```TypeScript
-import { image } from '@kit.ImageKit';
+import { image } from 'image';
 ```
 
 ## packBinaryImageToTiffData
@@ -83,7 +83,7 @@ Compresses or packs an image into a file and uses a promise to return the result
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bufferInfo | [BinaryBufferInfo](arkts-image-image-binarybufferinfo-i.md) | Yes | image buffer info. |
-| fd | int | Yes | ID of a file descriptor &lt;br&gt;The value must be a positive integer. |
+| fd | int | Yes | ID of a file descriptor <br>The value must be a positive integer. |
 | options | [PackingOptionsForTiff](arkts-image-image-packingoptionsfortiff-i.md) | No | Options for tiff image packing. |
 
 **Return value:**

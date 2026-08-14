@@ -6,7 +6,7 @@
 export function getSystemLocale(): string
 ```
 
-> [System.getSystemLocale](arkts-localization-i18n-system-c.md#getSystemLocaleInstance)代替。 > 获取系统区域ID。
+> [System.getSystemLocale](../../apis-na/arkts-apis/arkts-na-i18n-system-c.md#getSystemLocaleInstance)代替。 > 获取系统区域ID。
 
 **起始版本：** 7
 
@@ -25,4 +25,12 @@ export function getSystemLocale(): string
 | 类型 | 说明 |
 | --- | --- |
 | string | 系统区域ID。 |
+
+## 示例
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let locale: string = i18n.getSystemLocale();
+```
 

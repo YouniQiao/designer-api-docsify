@@ -15,7 +15,9 @@ Declaration of the menu item on the right side.
 ## Modules to Import
 
 ```TypeScript
-import { ComposeTitleBarV2MenuItemParams, ComposeTitleBarV2, ComposeTitleBarV2MenuItem } from '@kit.ArkUI';
+import { ComposeTitleBarV2 } from 'ComposeTitleBarV2';
+import { ComposeTitleBarV2MenuItem } from 'ComposeTitleBarV2MenuItem';
+import { ComposeTitleBarV2MenuItemParams } from 'ComposeTitleBarV2MenuItemParams';
 ```
 
 ## constructor

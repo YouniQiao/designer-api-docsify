@@ -17,7 +17,7 @@ Corresponding to a file's metadata. FileMeta is useful when doing IPC with the b
 ## Modules to Import
 
 ```TypeScript
-import { backup } from '@kit.CoreFileKit';
+import { backup } from 'backup';
 ```
 
 ## bundleName

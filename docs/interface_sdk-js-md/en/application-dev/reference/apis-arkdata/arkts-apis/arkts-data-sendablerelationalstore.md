@@ -15,7 +15,7 @@ The **sendableRelationalStore** module provides APIs for obtaining **ValuesBucke
 ## Modules to Import
 
 ```TypeScript
-import { sendableRelationalStore } from '@kit.ArkData';
+import { sendableRelationalStore } from 'sendableRelationalStore';
 ```
 
 ## Summary

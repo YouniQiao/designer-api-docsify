@@ -6,7 +6,7 @@
 function updateId(uri: string, id: number): string
 ```
 
-Updates the ID in the specified uri
+Updates the ID in a given URI.
 
 **Since:** 7
 
@@ -24,14 +24,14 @@ Updates the ID in the specified uri
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| uri | string | Yes | Indicates the uri object to be updated. |
-| id | number | Yes | Indicates the new ID. |
+| uri | string | Yes | Target URI object. |
+| id | number | Yes | New ID. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Returns the updated uri object. |
+| string | URI object with the new ID. |
 
 ## Examples
 

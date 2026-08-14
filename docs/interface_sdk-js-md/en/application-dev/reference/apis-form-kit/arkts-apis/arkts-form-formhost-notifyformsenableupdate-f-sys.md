@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { formHost } from '@kit.FormKit';
+import { formHost } from 'formHost';
 ```
 
 ## notifyFormsEnableUpdate
@@ -37,7 +37,7 @@ Instructs the widgets to enable or disable updates. This API uses an asynchronou
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formIds | Array&lt;string&gt; | Yes | List of widget IDs. |
-| isEnableUpdate | boolean | Yes | Whether the widget can be updated. &lt;br&gt;**true**: The widget can be updated. &lt;br&gt;**false**: The widget cannot be updated. |
+| isEnableUpdate | boolean | Yes | Whether the widget can be updated. <br>**true**: The widget can be updated. <br>**false**: The widget cannot be updated. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the notification is sent, **error** is undefined; otherwise, **error** is an error object. |
 
 **Error codes:**
@@ -80,7 +80,7 @@ Instructs the widgets to enable or disable updates. This API uses a promise to r
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | formIds | Array&lt;string&gt; | Yes | List of widget IDs. |
-| isEnableUpdate | boolean | Yes | Whether the widget can be updated. &lt;br&gt;**true**: The widget can be updated. &lt;br&gt;**false**: The widget cannot be updated. |
+| isEnableUpdate | boolean | Yes | Whether the widget can be updated. <br>**true**: The widget can be updated. <br>**false**: The widget cannot be updated. |
 
 **Return value:**
 

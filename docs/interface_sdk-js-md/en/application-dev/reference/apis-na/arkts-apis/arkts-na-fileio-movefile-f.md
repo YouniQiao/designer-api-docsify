@@ -24,7 +24,7 @@ Moves a file to the target path. You can set the conflict handling mode. This AP
 | --- | --- | --- | --- |
 | src | string | Yes | Application sandbox path of the file to move. |
 | dest | string | Yes | Application sandbox path of the destination file. |
-| mode | int | No | Move mode. &lt;br&gt; The value **0** means to overwrite the file with the same name in the destination directory; the value **1** means to throw an exception. The default value is **0**. |
+| mode | int | No | Move mode. <br> The value **0** means to overwrite the file with the same name in the destination directory; the value **1** means to throw an exception. The default value is **0**. |
 
 **Return value:**
 
@@ -132,7 +132,7 @@ Moves a file to the target path. You can set the conflict handling mode. This AP
 | --- | --- | --- | --- |
 | src | string | Yes | Application sandbox path of the file to move. |
 | dest | string | Yes | Application sandbox path of the destination file. |
-| mode | int | Yes | Move mode. &lt;br&gt; The value **0** means to overwrite the file with the same name in the destination directory; the value **1** means to throw an exception. The default value is **0**. |
+| mode | int | Yes | Move mode. <br> The value **0** means to overwrite the file with the same name in the destination directory; the value **1** means to throw an exception. The default value is **0**. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the file is moved successfully, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**

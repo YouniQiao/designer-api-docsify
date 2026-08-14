@@ -17,7 +17,7 @@ This module provides application management capabilities, including managing the
 ## Modules to Import
 
 ```TypeScript
-import { applicationManager } from '@kit.MDMKit';
+import { applicationManager } from 'applicationManager';
 ```
 
 ## Summary

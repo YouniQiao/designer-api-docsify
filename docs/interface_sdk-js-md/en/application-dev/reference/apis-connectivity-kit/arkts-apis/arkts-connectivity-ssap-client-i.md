@@ -15,7 +15,7 @@ Manages SSAP client. Before calling a SSAP client method, you must use [createCl
 ## Modules to Import
 
 ```TypeScript
-import { ssap } from '@kit.ConnectivityKit';
+import { ssap } from 'ssap';
 ```
 
 ## close
@@ -382,7 +382,7 @@ Negotiate the MTU size with server. The negotiation result needs to be obtained 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| mtu | int | Yes | The maximum transmission unit. &lt;br&gt;Unit: byte. Recommended value range: [22, 1024]. |
+| mtu | int | Yes | The maximum transmission unit. <br>Unit: byte. Recommended value range: [22, 1024]. |
 
 **Return value:**
 

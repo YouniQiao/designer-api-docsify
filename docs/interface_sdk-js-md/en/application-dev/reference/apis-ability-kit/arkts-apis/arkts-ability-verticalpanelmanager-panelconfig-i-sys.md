@@ -17,7 +17,7 @@ Indicates the panel config
 ## Modules to Import
 
 ```TypeScript
-import { verticalPanelManager } from '@kit.AbilityKit';
+import { verticalPanelManager } from 'verticalPanelManager';
 ```
 
 ## sourceAppInfo
@@ -26,7 +26,7 @@ import { verticalPanelManager } from '@kit.AbilityKit';
 sourceAppInfo: Record<string, string>
 ```
 
-Indicates the info about source app &lt;p&gt;**NOTE：**&lt;br&gt;1. The values of the following keys are assigned by the system. Manual settings do not take effect, since the system automatically changes the values to the actual values during data transfer. -SOURCE_APP_BUNDLE_NAME: bundle name of the caller. The value is a string. -SOURCE_APP_MODULE_NAME: module name of the caller. The value is a string. -SOURCE_APP_ABILITY_NAME: ability name of the caller. The value is a string. -SOURCE_APP_WINDOW_ID: the window ID of the caller. The value is a string. -SOURCE_APP_SCREEN_MODE: the screen mode of the split screen. The value is a string. The value is "1".
+Indicates the info about source app &lt;p&gt;**NOTE：**<br>1. The values of the following keys are assigned by the system. Manual settings do not take effect, since the system automatically changes the values to the actual values during data transfer. -SOURCE_APP_BUNDLE_NAME: bundle name of the caller. The value is a string. -SOURCE_APP_MODULE_NAME: module name of the caller. The value is a string. -SOURCE_APP_ABILITY_NAME: ability name of the caller. The value is a string. -SOURCE_APP_WINDOW_ID: the window ID of the caller. The value is a string. -SOURCE_APP_SCREEN_MODE: the screen mode of the split screen. The value is a string. The value is "1".
 
 **Type:** Record&lt;string, string&gt;
 

@@ -17,7 +17,22 @@ Describes the accessibility event information.
 ## Modules to Import
 
 ```TypeScript
-import { Rect, TouchPosition, AccessibilityVirtualNode, ElementAttributeKeys, FocusCondition, AccessibilityExtensionContext, ElementAttributeValues, AccessibilityEventInfo, AccessibilityEvent, AccessibilityElement, FocusRule, FocusMoveResult, FocusType, Parameter, FocusDirection, WindowType } from '@kit.AccessibilityKit';
+import { AccessibilityElement } from 'AccessibilityElement';
+import { AccessibilityExtensionContext } from 'AccessibilityExtensionContext';
+import { ElementAttributeKeys } from 'ElementAttributeKeys';
+import { ElementAttributeValues } from 'ElementAttributeValues';
+import { FocusDirection } from 'FocusDirection';
+import { FocusType } from 'FocusType';
+import { Rect } from 'Rect';
+import { WindowType } from 'WindowType';
+import { AccessibilityEvent } from 'AccessibilityEvent';
+import { AccessibilityEventInfo } from 'AccessibilityEventInfo';
+import { Parameter } from 'Parameter';
+import { FocusRule } from 'FocusRule';
+import { FocusCondition } from 'FocusCondition';
+import { FocusMoveResult } from 'FocusMoveResult';
+import { AccessibilityVirtualNode } from 'AccessibilityVirtualNode';
+import { TouchPosition } from 'TouchPosition';
 ```
 
 ## eventType
@@ -26,7 +41,7 @@ import { Rect, TouchPosition, AccessibilityVirtualNode, ElementAttributeKeys, Fo
 eventType: AccessibilityEventType
 ```
 
-Event type.
+Accessibility event type.
 
 **Type:** [AccessibilityEventType](arkts-accessibility-accessibility-accessibilityeventtype-e-sys.md)
 
@@ -48,7 +63,7 @@ Event type.
 extraInfo?: string
 ```
 
-Added or deleted text content carried by the **TextArea**, **TextInput**, **SearchField**, or **RichEdit** component.
+For TextArea, TextInput, SearchField, and RichEdit components, when text content is added or deleted, this property indicates the specific text content added or deleted. The default value is an empty string.
 
 **Type:** string
 
@@ -70,7 +85,7 @@ Added or deleted text content carried by the **TextArea**, **TextInput**, **Sear
 target?: AccessibilityElement
 ```
 
-Target component where the event occurs.
+Target component where the event occurs. When the accessibility event involves a specific component, this property contains the component information.
 
 **Type:** [AccessibilityElement](arkts-accessibility-accessibilityelement-t.md)
 
@@ -92,7 +107,7 @@ Target component where the event occurs.
 timestamp?: long
 ```
 
-Timestamp of the event, in milliseconds. The default value is **0**.
+Event timestamp, in milliseconds. The default value is **0**.
 
 **Type:** long
 

@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { i18n } from '@kit.LocalizationKit';
+import { i18n } from 'i18n';
 ```
 
 ## getLineInstance
@@ -37,4 +37,12 @@ Obtains a **BreakIterator** object. The **BreakIterator** object maintains an in
 | Type | Description |
 | --- | --- |
 | [BreakIterator](../../apis-na/arkts-apis/arkts-na-i18n-breakiterator-c.md) | BreakIterator** object. |
+
+## Examples
+
+```TypeScript
+import { i18n } from '@kit.LocalizationKit';
+
+let iterator: i18n.BreakIterator = i18n.getLineInstance('en');
+```
 

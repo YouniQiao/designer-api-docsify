@@ -17,7 +17,7 @@ Defines the mouse pointer position for screen hopping.
 ## Modules to Import
 
 ```TypeScript
-import { cooperate } from '@kit.DistributedServiceKit';
+import { cooperate } from 'cooperate';
 ```
 
 ## displayHeight

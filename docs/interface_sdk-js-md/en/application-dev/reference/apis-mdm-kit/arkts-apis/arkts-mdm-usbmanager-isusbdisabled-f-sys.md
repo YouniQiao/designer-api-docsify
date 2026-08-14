@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { usbManager } from '@kit.MDMKit';
+import { usbManager } from 'usbManager';
 ```
 
 ## isUsbDisabled
@@ -42,7 +42,7 @@ Queries whether the USB is disabled.
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns **true** if USB is disabled; &lt;br&gt;returns **false** otherwise. |
+| boolean | Returns **true** if USB is disabled; <br>returns **false** otherwise. |
 
 **Error codes:**
 

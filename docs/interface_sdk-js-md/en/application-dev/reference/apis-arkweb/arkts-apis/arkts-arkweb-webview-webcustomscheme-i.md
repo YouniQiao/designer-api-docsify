@@ -15,7 +15,7 @@ Defines the configuration of web custom scheme, related to [customizeSchemes](ar
 ## Modules to Import
 
 ```TypeScript
-import { webview } from '@kit.ArkWeb';
+import { webview } from 'webview';
 ```
 
 ## isCodeCacheSupported

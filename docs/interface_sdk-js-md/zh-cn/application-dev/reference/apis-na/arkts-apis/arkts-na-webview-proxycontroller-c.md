@@ -34,14 +34,14 @@ Sets ProxyConfig which will be used by all Webs in the app. URLs that match patt
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| proxyConfig | [ProxyConfig](arkts-na-webview-proxyconfig-c.md) | 是 | The proxy config. |
-| callback | [OnProxyConfigChangeCallback](arkts-na-webview-onproxyconfigchangecallback-t.md) | 是 | Called when the proxy has been changed. |
+| proxyConfig | [ProxyConfig](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-proxyconfig-c.md) | 是 | The proxy config. |
+| callback | [OnProxyConfigChangeCallback](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-onproxyconfigchangecallback-t.md) | 是 | Called when the proxy has been changed. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
 
 ## removeProxyOverride
 
@@ -65,11 +65,11 @@ Remove the proxy config. Requests are not guaranteed to not use the proxy; Wait 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnProxyConfigChangeCallback](arkts-na-webview-onproxyconfigchangecallback-t.md) | 是 | Called when the proxy has been changed. |
+| callback | [OnProxyConfigChangeCallback](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-onproxyconfigchangecallback-t.md) | 是 | Called when the proxy has been changed. |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. &lt;br&gt;2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-参数检查失败) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. |
 

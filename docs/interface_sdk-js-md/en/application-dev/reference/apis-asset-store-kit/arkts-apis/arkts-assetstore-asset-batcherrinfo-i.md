@@ -15,7 +15,7 @@ Result object containing error information with a specific index, error code, an
 ## Modules to Import
 
 ```TypeScript
-import { asset } from '@kit.AssetStoreKit';
+import { asset } from 'asset';
 ```
 
 ## errCode

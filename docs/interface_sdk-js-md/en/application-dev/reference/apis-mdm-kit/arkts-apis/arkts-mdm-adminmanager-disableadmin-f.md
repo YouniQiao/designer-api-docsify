@@ -3,7 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
-import { adminManager } from '@kit.MDMKit';
+import { adminManager } from 'adminManager';
 ```
 
 ## disableAdmin
@@ -36,7 +36,7 @@ Disables a device administrator application for the specified user. This API use
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | admin | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | EnterpriseAdminExtensionAbility. **Want** must contain the ability name of the EnterpriseAdminExtensionAbility and the bundle name of the application. When deactivating the BYOD device administrator application, you can pass only the **EnterpriseAdminExtensionAbility** component of the current application. |
-| userId | number | No | User ID, which must be greater than or equal to 0. &lt;br&gt; - If **userId** is passed in, this API applies to the specified user. &lt;br&gt; - If **userId** is not passed in, this API applies to the current user. |
+| userId | number | No | User ID, which must be greater than or equal to 0. <br> - If **userId** is passed in, this API applies to the specified user. <br> - If **userId** is not passed in, this API applies to the current user. |
 
 **Return value:**
 

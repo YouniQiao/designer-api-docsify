@@ -15,7 +15,7 @@ Provides http related APIs.
 ## Modules to Import
 
 ```TypeScript
-import { http } from '@kit.NetworkKit';
+import { http } from 'http';
 ```
 
 ## Summary

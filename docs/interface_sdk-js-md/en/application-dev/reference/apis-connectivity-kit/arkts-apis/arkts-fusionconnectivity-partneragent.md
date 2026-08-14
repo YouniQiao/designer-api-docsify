@@ -17,7 +17,7 @@ Provides APIs for managing partner agents.
 ## Modules to Import
 
 ```TypeScript
-import { partnerAgent } from '@kit.ConnectivityKit';
+import { partnerAgent } from 'partnerAgent';
 ```
 
 ## Summary

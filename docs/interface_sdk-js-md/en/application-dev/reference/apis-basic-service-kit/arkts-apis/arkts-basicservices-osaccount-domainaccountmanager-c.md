@@ -15,7 +15,7 @@ Provides APIs for domain account management.
 ## Modules to Import
 
 ```TypeScript
-import { osAccount } from '@kit.BasicServicesKit';
+import { osAccount } from 'osAccount';
 ```
 
 ## updateAccountInfo

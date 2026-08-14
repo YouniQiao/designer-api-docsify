@@ -78,7 +78,7 @@ Touching the Close button.
 SLIDE_DOWN = 3
 ```
 
-Slide down &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: &lt;br&gt;This API is effective only in sheet transition. &lt;/p&gt;
+Slide down &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>This API is effective only in sheet transition. &lt;/p&gt;
 
 **Since:** 23
 

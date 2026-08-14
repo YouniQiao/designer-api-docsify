@@ -58,7 +58,7 @@ Buffering ends. When this event is triggered, the player resumes the playback.
 BUFFERING_PERCENT = 3
 ```
 
-Buffering percentage. You can use this event to monitor the buffering status, in %.
+Buffering percentage. You can use this event to monitor the buffering status.
 
 **Since:** 23
 

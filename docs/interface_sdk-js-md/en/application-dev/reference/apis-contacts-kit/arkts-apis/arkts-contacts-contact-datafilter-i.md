@@ -15,7 +15,7 @@ Defines the contact data filter item.
 ## Modules to Import
 
 ```TypeScript
-import { contact } from '@kit.ContactsKit';
+import { contact } from 'contact';
 ```
 
 ## field

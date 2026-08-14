@@ -19,6 +19,6 @@ Corresponds to a file, including its metadata and data and the file's manifest d
 ## Modules to Import
 
 ```TypeScript
-import { backup } from '@kit.CoreFileKit';
+import { backup } from 'backup';
 ```
 

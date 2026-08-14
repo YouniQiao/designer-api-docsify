@@ -21,6 +21,6 @@ The class of user authentication extension ability.
 ## Modules to Import
 
 ```TypeScript
-import { UserAuthExtensionAbility } from '@kit.UserAuthenticationKit';
+import { UserAuthExtensionAbility } from 'UserAuthExtensionAbility';
 ```
 

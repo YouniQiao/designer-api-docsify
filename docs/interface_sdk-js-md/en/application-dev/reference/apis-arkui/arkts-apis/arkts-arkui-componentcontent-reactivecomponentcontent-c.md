@@ -43,7 +43,7 @@ Constructor of ReactiveComponentContent.
 | uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context required for creating a node. |
 | builder | WrappedBuilder&lt;T&gt; | Yes | Encapsulates the WrappedBuilder object of the @Builder function with parameters. |
 | config | [BuildOptions](../../apis-na/arkts-apis/arkts-na-buildernode-buildoptions-i.md) | Yes | Configures the build behavior of the builder. All attributes in BuildOptions are optional. The default value is the corresponding default value in BuildOptions. |
-| args | T | Yes | Parameters of the builder function encapsulated in the **WrappedBuilder** object. Transfers external data to the WrappedBuilder<T&gt and build functions specified in the constructor. Multiple input parameters are supported. The default value is **undefined**. |
+| args | T | Yes | Parameters of the builder function encapsulated in the **WrappedBuilder** object. Transfers external data to the WrappedBuilder&lt;T&gt and build functions specified in the constructor. Multiple input parameters are supported. The default value is **undefined**. |
 
 ## Examples
 
@@ -393,7 +393,7 @@ Sets whether the current **ReactiveComponentContent** object inherits the freeze
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enabled | boolean | Yes | Whether the **ReactiveComponentContent** object inherits the freeze policy from its parent component's custom components. &lt;br&gt;The value **true** means to inherit the freeze policy from the parent component's custom components, and **false** means the opposite. |
+| enabled | boolean | Yes | Whether the **ReactiveComponentContent** object inherits the freeze policy from its parent component's custom components. <br>The value **true** means to inherit the freeze policy from the parent component's custom components, and **false** means the opposite. |
 
 ## Examples
 
@@ -605,7 +605,7 @@ Checks whether this **ReactiveComponentContent** object has released its referen
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the reference to the backend node is released. &lt;br&gt;The value **true** means that the reference to backend node is released, and **false** means the opposite. |
+| boolean | Whether the reference to the backend node is released. <br>The value **true** means that the reference to backend node is released, and **false** means the opposite. |
 
 ## Examples
 

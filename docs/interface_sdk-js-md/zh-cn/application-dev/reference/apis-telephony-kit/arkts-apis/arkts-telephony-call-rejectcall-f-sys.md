@@ -86,7 +86,7 @@ function rejectCall(callId?: int, options?: RejectMessageOptions): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callId | int | 否 | 呼叫Id。可以通过订阅callDetailsChange事件获得。从API version 9开始为可选参数。&lt;br/&gt;不填该参数则拒接最近一通正在响铃的来电。 |
+| callId | int | 否 | 呼叫Id。可以通过订阅callDetailsChange事件获得。从API version 9开始为可选参数。<br/>不填该参数则拒接最近一通正在响铃的来电。 |
 | options | [RejectMessageOptions](arkts-telephony-call-rejectmessageoptions-i-sys.md) | 否 | 拒绝消息选项。不填该参数则不会发送拒接短信。 |
 
 **返回值：**
@@ -226,7 +226,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 call.rejectCall((err: BusinessError) => {
     if (err) {
-        console.error(`rejectCall fail, err->${JSON.stringify(err)}`);
+        console.error(`rejectCall fail, 本次操作异常，err->Code${err.code}, message:${err.message}请稍后重试。`);
     } else {
         console.info(`rejectCall success.`);
     }

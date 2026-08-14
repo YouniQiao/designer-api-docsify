@@ -90,7 +90,7 @@ Binds to or updates the specified styled string.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | StyledString | Yes | Styled string.&lt;br&gt;**NOTE：**&lt;br&gt;The child class MutableStyledString of **StyledString** can also serve as the argument. |
+| value | StyledString | Yes | Styled string.<br>**NOTE：**<br>The child class MutableStyledString of **StyledString** can also serve as the argument. |
 
 ## setTextSelection
 
@@ -119,7 +119,7 @@ Sets the text selection area, which will be highlighted. > **NOTE：**> > If [co
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| selectionStart | number \| undefined | Yes | Start position of the text selection range.&lt;br&gt;Value range: [0, +∞). Negative values and **undefined** are treated as **0**. |
-| selectionEnd | number \| undefined | Yes | End position of the text selection range.&lt;br&gt;Value range: [0, +∞). Negative values and **undefined** are treated as **0**. |
-| options | SelectionOptions | No | Configuration options for text selection.&lt;br&gt;Default value: **MenuPolicy.DEFAULT** in **SelectionOptions |
+| selectionStart | number \| undefined | Yes | Start position of the text selection range.<br>Value range: [0, +∞). Negative values and **undefined** are treated as **0**. |
+| selectionEnd | number \| undefined | Yes | End position of the text selection range.<br>Value range: [0, +∞). Negative values and **undefined** are treated as **0**. |
+| options | SelectionOptions | No | Configuration options for text selection.<br>Default value: **MenuPolicy.DEFAULT** in **SelectionOptions |
 
