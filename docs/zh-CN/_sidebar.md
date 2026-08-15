@@ -38,6 +38,7 @@
 - [Mdm Kit (430)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-mdm-kit/arkts-apis/arkts-enterprise-accountmanager.md)
 - [Mechanic Kit (71)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-mechanic-kit/arkts-apis/arkts-distributedhardware-mechanicmanager.md)
 - [Media Kit (223)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-media-kit/arkts-apis/arkts-multimedia-media.md)
+- [Media Library Kit (16)](interface_sdk_c-md/zh-cn/application-dev/reference/apis-media-library-kit/c-apis/capi-moving-photo-capi-h.md)
 - [Multimodal Awareness Kit (111)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-multimodal-awareness-kit/arkts-apis/arkts-multimodalawareness-devicestatus.md)
 - [Na (2293)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-na/arkts-apis/arkts-app-ability-applicationstatechangecallback.md)
 - [Network Kit (52)](interface_sdk_c-md/zh-cn/application-dev/reference/apis-network-kit/c-apis/capi-net-http-type-h.md)

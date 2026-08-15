@@ -287,7 +287,7 @@ OH_AudioCommon_Result OH_AudioManager_GetAudioSessionManager(OH_AudioSessionMana
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AudioCommon_Result | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_SYSTEM：系统错误。 |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_SYSTEM：系统错误。 |
 
 ### OH_AudioSessionManager_ActivateAudioSession()
 
@@ -312,7 +312,7 @@ OH_AudioCommon_Result OH_AudioSessionManager_ActivateAudioSession(OH_AudioSessio
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AudioCommon_Result | 函数返回值：<br>     <br>AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：<br>     <br>1. 参数audioSessionManager为nullptr；<br>     <br>2. 参数strategy无效。<br>     <br>AUDIOCOMMON_RESULT_ERROR_ILLEGAL_STATE：非法状态。 |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | 函数返回值：<br>     <br>AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：<br>     <br>1. 参数audioSessionManager为nullptr；<br>     <br>2. 参数strategy无效。<br>     <br>AUDIOCOMMON_RESULT_ERROR_ILLEGAL_STATE：非法状态。 |
 
 ### OH_AudioSessionManager_DeactivateAudioSession()
 
@@ -336,7 +336,7 @@ OH_AudioCommon_Result OH_AudioSessionManager_DeactivateAudioSession(OH_AudioSess
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AudioCommon_Result | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：参数audioSessionManager为nullptr。<br>     <br>AUDIOCOMMON_RESULT_ERROR_ILLEGAL_STATE：非法状态。 |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：参数audioSessionManager为nullptr。<br>     <br>AUDIOCOMMON_RESULT_ERROR_ILLEGAL_STATE：非法状态。 |
 
 ### OH_AudioSessionManager_IsAudioSessionActivated()
 
@@ -385,7 +385,7 @@ OH_AudioCommon_Result OH_AudioSessionManager_RegisterSessionDeactivatedCallback(
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AudioCommon_Result | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：<br>     <br>1. 参数audioSessionManager为nullptr；<br>     <br>2. 参数callback为nullptr。 |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：<br>     <br>1. 参数audioSessionManager为nullptr；<br>     <br>2. 参数callback为nullptr。 |
 
 ### OH_AudioSessionManager_UnregisterSessionDeactivatedCallback()
 
@@ -410,7 +410,7 @@ OH_AudioCommon_Result OH_AudioSessionManager_UnregisterSessionDeactivatedCallbac
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AudioCommon_Result | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：<br>     <br>1. 参数audioSessionManager为nullptr；<br>     <br>2. 参数callback为nullptr。 |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：<br>     <br>1. 参数audioSessionManager为nullptr；<br>     <br>2. 参数callback为nullptr。 |
 
 ### OH_AudioSessionManager_SetScene()
 
@@ -435,7 +435,7 @@ OH_AudioCommon_Result OH_AudioSessionManager_SetScene(OH_AudioSessionManager *au
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AudioCommon_Result | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：<br>     <br>1. 参数audioSessionManager为nullptr；<br>     <br>2. 参数scene为枚举范围外的值。<br>     <br>AUDIOCOMMON_RESULT_ERROR_ILLEGAL_STATE：系统当前状态下不允许设置，例如audio session未处于ready态。<br>     <br>AUDIOCOMMON_RESULT_ERROR_SYSTEM：系统异常，例如系统服务异常退出等。 |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：<br>     <br>1. 参数audioSessionManager为nullptr；<br>     <br>2. 参数scene为枚举范围外的值。<br>     <br>AUDIOCOMMON_RESULT_ERROR_ILLEGAL_STATE：系统当前状态下不允许设置，例如audio session未处于ready态。<br>     <br>AUDIOCOMMON_RESULT_ERROR_SYSTEM：系统异常，例如系统服务异常退出等。 |
 
 ### OH_AudioSessionManager_RegisterStateChangeCallback()
 
@@ -460,7 +460,7 @@ OH_AudioCommon_Result OH_AudioSessionManager_RegisterStateChangeCallback(OH_Audi
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AudioCommon_Result | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：<br>     <br>1. 参数audioSessionManager为nullptr；<br>     <br>2. 参数callback为nullptr。<br>     <br>AUDIOCOMMON_RESULT_ERROR_NO_MEMORY：系统内存申请异常。<br>     <br>AUDIOCOMMON_RESULT_ERROR_SYSTEM：系统异常，例如系统服务异常退出等。 |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：<br>     <br>1. 参数audioSessionManager为nullptr；<br>     <br>2. 参数callback为nullptr。<br>     <br>AUDIOCOMMON_RESULT_ERROR_NO_MEMORY：系统内存申请异常。<br>     <br>AUDIOCOMMON_RESULT_ERROR_SYSTEM：系统异常，例如系统服务异常退出等。 |
 
 ### OH_AudioSessionManager_UnregisterStateChangeCallback()
 
@@ -485,7 +485,7 @@ OH_AudioCommon_Result OH_AudioSessionManager_UnregisterStateChangeCallback(OH_Au
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AudioCommon_Result | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：<br>     <br>1. 参数audioSessionManager为nullptr；<br>     <br>2. 参数callback为nullptr。<br>     <br>AUDIOCOMMON_RESULT_ERROR_SYSTEM：系统异常，例如系统服务异常退出等。 |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：<br>     <br>1. 参数audioSessionManager为nullptr；<br>     <br>2. 参数callback为nullptr。<br>     <br>AUDIOCOMMON_RESULT_ERROR_SYSTEM：系统异常，例如系统服务异常退出等。 |
 
 ### OH_AudioSessionManager_SetDefaultOutputDevice()
 
@@ -510,7 +510,7 @@ OH_AudioCommon_Result OH_AudioSessionManager_SetDefaultOutputDevice(OH_AudioSess
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AudioCommon_Result | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：<br>     <br>1. 参数audioSessionManager为nullptr；<br>     <br>2. 参数deviceType超出枚举OH_AudioDevice_Type范围。<br>     <br>AUDIOCOMMON_RESULT_ERROR_SYSTEM：系统异常，例如系统服务异常退出等。 |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：<br>     <br>1. 参数audioSessionManager为nullptr；<br>     <br>2. 参数deviceType超出枚举OH_AudioDevice_Type范围。<br>     <br>AUDIOCOMMON_RESULT_ERROR_SYSTEM：系统异常，例如系统服务异常退出等。 |
 
 ### OH_AudioSessionManager_GetDefaultOutputDevice()
 
@@ -535,7 +535,7 @@ OH_AudioCommon_Result OH_AudioSessionManager_GetDefaultOutputDevice(OH_AudioSess
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AudioCommon_Result | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：<br>     <br>1. 参数audioSessionManager为nullptr；<br>     <br>2. 参数deviceType为nullptr。<br>     <br>AUDIOCOMMON_RESULT_ERROR_ILLEGAL_STATE：系统当前状态下不允许获取默认设备类型，例如audio session未处于ready态。 |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：<br>     <br>1. 参数audioSessionManager为nullptr；<br>     <br>2. 参数deviceType为nullptr。<br>     <br>AUDIOCOMMON_RESULT_ERROR_ILLEGAL_STATE：系统当前状态下不允许获取默认设备类型，例如audio session未处于ready态。 |
 
 ### OH_AudioSessionManager_ReleaseDevices()
 
@@ -560,7 +560,7 @@ OH_AudioCommon_Result OH_AudioSessionManager_ReleaseDevices(OH_AudioSessionManag
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AudioCommon_Result | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：<br>     <br>1. 参数audioSessionManager为nullptr；<br>     <br>2. 参数audioDeviceDescriptorArray为nullptr。 |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：<br>     <br>1. 参数audioSessionManager为nullptr；<br>     <br>2. 参数audioDeviceDescriptorArray为nullptr。 |
 
 ### OH_AudioSessionManager_RegisterCurrentOutputDeviceChangeCallback()
 
@@ -585,7 +585,7 @@ OH_AudioCommon_Result OH_AudioSessionManager_RegisterCurrentOutputDeviceChangeCa
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AudioCommon_Result | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：<br>     <br>1. 参数audioSessionManager为nullptr；<br>     <br>2. 参数callback为nullptr。<br>     <br>AUDIOCOMMON_RESULT_ERROR_NO_MEMORY：系统内存申请异常。<br>     <br>AUDIOCOMMON_RESULT_ERROR_SYSTEM：系统异常，例如系统服务异常退出等。 |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：<br>     <br>1. 参数audioSessionManager为nullptr；<br>     <br>2. 参数callback为nullptr。<br>     <br>AUDIOCOMMON_RESULT_ERROR_NO_MEMORY：系统内存申请异常。<br>     <br>AUDIOCOMMON_RESULT_ERROR_SYSTEM：系统异常，例如系统服务异常退出等。 |
 
 ### OH_AudioSessionManager_UnregisterCurrentOutputDeviceChangeCallback()
 
@@ -610,7 +610,7 @@ OH_AudioCommon_Result OH_AudioSessionManager_UnregisterCurrentOutputDeviceChange
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AudioCommon_Result | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：<br>     <br>1. 参数audioSessionManager为nullptr；<br>     <br>2. 参数callback为nullptr。<br>     <br>AUDIOCOMMON_RESULT_ERROR_SYSTEM：系统异常，例如系统服务异常退出等。 |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：<br>     <br>1. 参数audioSessionManager为nullptr；<br>     <br>2. 参数callback为nullptr。<br>     <br>AUDIOCOMMON_RESULT_ERROR_SYSTEM：系统异常，例如系统服务异常退出等。 |
 
 ### OH_AudioSessionManager_GetAvailableDevices()
 
@@ -636,7 +636,7 @@ OH_AudioCommon_Result OH_AudioSessionManager_GetAvailableDevices(OH_AudioSession
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AudioCommon_Result | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：<br>     <br>1.参数audioSessionManager为nullptr；<br>     <br>2.参数deviceUsage无效;<br>     <br>3.参数audioDeviceDescriptorArray为nullptr。<br>     <br>AUDIOCOMMON_RESULT_ERROR_SYSTEM：系统异常，例如系统服务异常退出等。 |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：<br>     <br>1.参数audioSessionManager为nullptr；<br>     <br>2.参数deviceUsage无效;<br>     <br>3.参数audioDeviceDescriptorArray为nullptr。<br>     <br>AUDIOCOMMON_RESULT_ERROR_SYSTEM：系统异常，例如系统服务异常退出等。 |
 
 ### OH_AudioSessionManager_RegisterAvailableDevicesChangeCallback()
 
@@ -662,7 +662,7 @@ OH_AudioCommon_Result OH_AudioSessionManager_RegisterAvailableDevicesChangeCallb
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AudioCommon_Result | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：<br>     <br>1. 参数audioSessionManager为nullptr；<br>     <br>2. 参数deviceUsage无效；<br>     <br>3. 参数callback为nullptr。<br>     <br>AUDIOCOMMON_RESULT_ERROR_SYSTEM：系统异常，例如系统服务异常退出等。 |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：<br>     <br>1. 参数audioSessionManager为nullptr；<br>     <br>2. 参数deviceUsage无效；<br>     <br>3. 参数callback为nullptr。<br>     <br>AUDIOCOMMON_RESULT_ERROR_SYSTEM：系统异常，例如系统服务异常退出等。 |
 
 ### OH_AudioSessionManager_UnregisterAvailableDevicesChangeCallback()
 
@@ -687,7 +687,7 @@ OH_AudioCommon_Result OH_AudioSessionManager_UnregisterAvailableDevicesChangeCal
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AudioCommon_Result | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：<br>     <br>1. 参数audioSessionManager为nullptr；<br>     <br>2. 参数callback为nullptr。<br>     <br>AUDIOCOMMON_RESULT_ERROR_SYSTEM：系统异常，例如系统服务异常退出等。 |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：<br>     <br>1. 参数audioSessionManager为nullptr；<br>     <br>2. 参数callback为nullptr。<br>     <br>AUDIOCOMMON_RESULT_ERROR_SYSTEM：系统异常，例如系统服务异常退出等。 |
 
 ### OH_AudioSessionManager_SelectMediaInputDevice()
 
@@ -712,7 +712,7 @@ OH_AudioCommon_Result OH_AudioSessionManager_SelectMediaInputDevice(OH_AudioSess
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AudioCommon_Result | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：参数audioSessionManager为nullptr。<br>     <br>AUDIOCOMMON_RESULT_ERROR_SYSTEM：系统异常，例如系统服务异常退出等。 |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：参数audioSessionManager为nullptr。<br>     <br>AUDIOCOMMON_RESULT_ERROR_SYSTEM：系统异常，例如系统服务异常退出等。 |
 
 ### OH_AudioSessionManager_GetSelectedMediaInputDevice()
 
@@ -737,7 +737,7 @@ OH_AudioCommon_Result OH_AudioSessionManager_GetSelectedMediaInputDevice(OH_Audi
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AudioCommon_Result | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：<br>     <br>1. 参数audioSessionManager为nullptr；<br>     <br>2. 参数audioDeviceDescriptor为nullptr。<br>     <br>AUDIOCOMMON_RESULT_ERROR_SYSTEM：系统异常，例如系统服务异常退出等。 |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：<br>     <br>1. 参数audioSessionManager为nullptr；<br>     <br>2. 参数audioDeviceDescriptor为nullptr。<br>     <br>AUDIOCOMMON_RESULT_ERROR_SYSTEM：系统异常，例如系统服务异常退出等。 |
 
 ### OH_AudioSessionManager_SetBluetoothAndNearlinkPreferredRecordCategory()
 
@@ -762,7 +762,7 @@ OH_AudioCommon_Result OH_AudioSessionManager_SetBluetoothAndNearlinkPreferredRec
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AudioCommon_Result | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：<br>     <br>1. 参数audioSessionManager为nullptr；<br>     <br>2. 参数category错误。<br>     <br>AUDIOCOMMON_RESULT_ERROR_SYSTEM：系统异常，例如系统服务异常退出等。 |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：<br>     <br>1. 参数audioSessionManager为nullptr；<br>     <br>2. 参数category错误。<br>     <br>AUDIOCOMMON_RESULT_ERROR_SYSTEM：系统异常，例如系统服务异常退出等。 |
 
 ### OH_AudioSessionManager_GetBluetoothAndNearlinkPreferredRecordCategory()
 
@@ -787,7 +787,7 @@ OH_AudioCommon_Result OH_AudioSessionManager_GetBluetoothAndNearlinkPreferredRec
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AudioCommon_Result | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：<br>     <br>1. 参数audioSessionManager为nullptr；<br>     <br>2. 参数category为nullptr。<br>     <br>AUDIOCOMMON_RESULT_ERROR_SYSTEM：系统异常，例如系统服务异常退出等。 |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：<br>     <br>1. 参数audioSessionManager为nullptr；<br>     <br>2. 参数category为nullptr。<br>     <br>AUDIOCOMMON_RESULT_ERROR_SYSTEM：系统异常，例如系统服务异常退出等。 |
 
 ### OH_AudioSessionManager_RegisterCurrentInputDeviceChangeCallback()
 
@@ -812,7 +812,7 @@ OH_AudioCommon_Result OH_AudioSessionManager_RegisterCurrentInputDeviceChangeCal
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AudioCommon_Result | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：<br>     <br>1. 参数audioSessionManager为nullptr；<br>     <br>2. 参数callback为nullptr。<br>     <br>AUDIOCOMMON_RESULT_ERROR_NO_MEMORY：内存不足。<br>     <br>AUDIOCOMMON_RESULT_ERROR_SYSTEM：系统异常，例如系统服务异常退出等。 |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：<br>     <br>1. 参数audioSessionManager为nullptr；<br>     <br>2. 参数callback为nullptr。<br>     <br>AUDIOCOMMON_RESULT_ERROR_NO_MEMORY：内存不足。<br>     <br>AUDIOCOMMON_RESULT_ERROR_SYSTEM：系统异常，例如系统服务异常退出等。 |
 
 ### OH_AudioSessionManager_UnregisterCurrentInputDeviceChangeCallback()
 
@@ -837,7 +837,7 @@ OH_AudioCommon_Result OH_AudioSessionManager_UnregisterCurrentInputDeviceChangeC
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AudioCommon_Result | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：<br>     <br>1. 参数audioSessionManager为nullptr；<br>     <br>2. 参数callback为nullptr。<br>     <br>AUDIOCOMMON_RESULT_ERROR_SYSTEM：系统异常，例如系统服务异常退出等。 |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：<br>     <br>1. 参数audioSessionManager为nullptr；<br>     <br>2. 参数callback为nullptr。<br>     <br>AUDIOCOMMON_RESULT_ERROR_SYSTEM：系统异常，例如系统服务异常退出等。 |
 
 ### OH_AudioSessionManager_ReleaseDevice()
 
@@ -862,7 +862,7 @@ OH_AudioCommon_Result OH_AudioSessionManager_ReleaseDevice(OH_AudioSessionManage
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AudioCommon_Result | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：<br>     <br>1. 参数audioSessionManager为nullptr；<br>     <br>2. 参数audioDeviceDescriptor为nullptr。 |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：<br>     <br>1. 参数audioSessionManager为nullptr；<br>     <br>2. 参数audioDeviceDescriptor为nullptr。 |
 
 ### OH_AudioSessionManager_IsOtherMediaPlaying()
 
@@ -911,7 +911,7 @@ OH_AudioCommon_Result OH_AudioSessionManager_EnableMuteSuggestionWhenMixWithOthe
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AudioCommon_Result | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：参数audioSessionManager为nullptr。<br>     <br>AUDIOCOMMON_RESULT_ERROR_ILLEGAL_STATE：<br>     <br>1. 未设置音频会话场景。<br>     <br>2. 音频会话激活后调用此函数。<br>     <br>AUDIOCOMMON_RESULT_ERROR_SYSTEM：系统异常，例如系统服务异常退出等。 |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：参数audioSessionManager为nullptr。<br>     <br>AUDIOCOMMON_RESULT_ERROR_ILLEGAL_STATE：<br>     <br>1. 未设置音频会话场景。<br>     <br>2. 音频会话激活后调用此函数。<br>     <br>AUDIOCOMMON_RESULT_ERROR_SYSTEM：系统异常，例如系统服务异常退出等。 |
 
 ### OH_AudioSessionManager_SetBehavior()
 
@@ -936,7 +936,7 @@ OH_AudioCommon_Result OH_AudioSessionManager_SetBehavior(OH_AudioSessionManager 
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AudioCommon_Result | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：参数为空指针或超出范围。<br>     <br>AUDIOCOMMON_RESULT_ERROR_ILLEGAL_STATE：非法状态。 |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：参数为空指针或超出范围。<br>     <br>AUDIOCOMMON_RESULT_ERROR_ILLEGAL_STATE：非法状态。 |
 
 ### OH_AudioSessionManager_SetCaptureMuteHint()
 
@@ -961,6 +961,6 @@ OH_AudioCommon_Result OH_AudioSessionManager_SetCaptureMuteHint(OH_AudioSessionM
 
 | 类型 | 说明 |
 | -- | -- |
-| OH_AudioCommon_Result | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：参数audioSessionManager为nullptr。<br>     <br>AUDIOCOMMON_RESULT_ERROR_ILLEGAL_STATE：操作状态异常，当前进程不存在运行中的录音流。<br>     <br>AUDIOCOMMON_RESULT_ERROR_SYSTEM：系统异常，例如系统服务异常退出等。 |
+| [OH_AudioCommon_Result](capi-native-audio-common-h.md#oh_audiocommon_result) | AUDIOCOMMON_RESULT_SUCCESS：函数执行成功。<br>     <br>AUDIOCOMMON_RESULT_ERROR_INVALID_PARAM：参数audioSessionManager为nullptr。<br>     <br>AUDIOCOMMON_RESULT_ERROR_ILLEGAL_STATE：操作状态异常，当前进程不存在运行中的录音流。<br>     <br>AUDIOCOMMON_RESULT_ERROR_SYSTEM：系统异常，例如系统服务异常退出等。 |
 
 

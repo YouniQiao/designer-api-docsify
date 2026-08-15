@@ -91,7 +91,7 @@ Configures an OH_LowPowerVideoSink instance. This function must be called before
 | Parameter | Description |
 | -- | -- |
 | OH_LowPowerVideoSink* sink | Pointer to an OH_LowPowerVideoSink instance |
-| const OH_AVFormat* format | A pointer to an OH_AVFormat to give the description of the video track to be decoded,key of format refer to lowpower_avsink_base.h |
+| [const OH_AVFormat](../AVCodecKit/capi-core-oh-avformat.md)* format | A pointer to an OH_AVFormat to give the description of the video track to be decoded,key of format refer to lowpower_avsink_base.h |
 
 **Returns**:
 
@@ -116,7 +116,7 @@ Sets parameters for an OH_LowPowerVideoSink instance. The parameters can be dyna
 | Parameter | Description |
 | -- | -- |
 | OH_LowPowerVideoSink* sink | Pointer to an OH_LowPowerVideoSink instance |
-| const OH_AVFormat* format | pointer to an OH_AVFormat instance, key of format refer to lowpower_avsink_base.h |
+| [const OH_AVFormat](../AVCodecKit/capi-core-oh-avformat.md)* format | pointer to an OH_AVFormat instance, key of format refer to lowpower_avsink_base.h |
 
 **Returns**:
 
@@ -141,7 +141,7 @@ Obtains the parameters of an OH_LowPowerVideoSink instance.
 | Parameter | Description |
 | -- | -- |
 | OH_LowPowerVideoSink* sink | Pointer to an OH_LowPowerVideoSink instance |
-| OH_AVFormat* format | pointer to an OH_AVFormat instance, key of format refer to lowpower_avsink_base.h |
+| [OH_AVFormat](../AVCodecKit/capi-core-oh-avformat.md)* format | pointer to an OH_AVFormat instance, key of format refer to lowpower_avsink_base.h |
 
 **Returns**:
 
@@ -166,7 +166,7 @@ Sets the rendering window for an OH_LowPowerVideoSink instance. This function mu
 | Parameter | Description |
 | -- | -- |
 | OH_LowPowerVideoSink* sink | Pointer to an OH_LowPowerVideoSink instance |
-| const OHNativeWindow* surface | A pointer to a OHNativeWindow instance, see [OHNativeWindow](../ArkGraphics2D/capi-nativewindow-nativewindow.md) |
+| [const OHNativeWindow](../ArkGraphics2D/capi-nativewindow-nativewindow.md)* surface | A pointer to a OHNativeWindow instance, see [OHNativeWindow](../ArkGraphics2D/capi-nativewindow-nativewindow.md) |
 
 **Returns**:
 
@@ -431,7 +431,7 @@ Sets an OH_LowPowerAudioSink instance for audio-video synchronization in an OH_L
 | Parameter | Description |
 | -- | -- |
 | OH_LowPowerVideoSink* videoSink | Pointer to an OH_LowPowerVideoSink instance |
-| [OH_LowPowerAudioSink](capi-lowpoweraudiosink-oh-lowpoweraudiosink.md)* audioSink | Pointer to an OH_LowPowerAudioSink instance |
+| OH_LowPowerAudioSink* audioSink | Pointer to an OH_LowPowerAudioSink instance |
 
 **Returns**:
 
@@ -509,7 +509,7 @@ Provides a buffer to an OH_LowPowerVideoSink instance for procesing.
 | Parameter | Description |
 | -- | -- |
 | OH_LowPowerVideoSink* sink | Pointer to an OH_LowPowerVideoSink instance |
-| [OH_AVSamplesBuffer](capi-avsinkbase-oh-avsamplesbuffer.md)* samples | Pointer to an OH_AVSamplesBuffer instance |
+| OH_AVSamplesBuffer* samples | Pointer to an OH_AVSamplesBuffer instance |
 
 **Returns**:
 

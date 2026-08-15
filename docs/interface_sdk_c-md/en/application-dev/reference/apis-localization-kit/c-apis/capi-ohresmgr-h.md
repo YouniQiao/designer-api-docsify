@@ -87,7 +87,7 @@ Obtains the Base64-encoded string of the media resource by the specified resourc
 
 | Type | Description |
 | -- | -- |
-| ResourceManager_ErrorCode | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_ID_NOT_FOUND: Invalid resource ID.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_ID: No matching resource is found based on the resource ID.<br>     <br>ERROR_CODE_OUT_OF_MEMORY: Memory overflow occurs. |
+| [ResourceManager_ErrorCode](capi-resmgr-common-h.md#resourcemanager_errorcode) | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_ID_NOT_FOUND: Invalid resource ID.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_ID: No matching resource is found based on the resource ID.<br>     <br>ERROR_CODE_OUT_OF_MEMORY: Memory overflow occurs. |
 
 ### OH_ResourceManager_GetMediaBase64Data()
 
@@ -115,7 +115,7 @@ Obtains the Base64-encoded string of the media resource by the specified resourc
 
 | Type | Description |
 | -- | -- |
-| ResourceManager_ErrorCode | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_ID_NOT_FOUND: Invalid resource ID.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_ID: No matching resource is found based on the resource ID.<br>     <br>ERROR_CODE_OUT_OF_MEMORY: Memory overflow occurs. |
+| [ResourceManager_ErrorCode](capi-resmgr-common-h.md#resourcemanager_errorcode) | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_ID_NOT_FOUND: Invalid resource ID.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_ID: No matching resource is found based on the resource ID.<br>     <br>ERROR_CODE_OUT_OF_MEMORY: Memory overflow occurs. |
 
 ### OH_ResourceManager_GetMediaBase64ByName()
 
@@ -143,7 +143,7 @@ Obtains the Base64-encoded string of the media resource by the specified resourc
 
 | Type | Description |
 | -- | -- |
-| ResourceManager_ErrorCode | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_NAME_NOT_FOUND: Invalid resource name.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_NAME: No matching resource is found based on the resource name.<br>     <br>ERROR_CODE_OUT_OF_MEMORY: Memory overflow occurs. |
+| [ResourceManager_ErrorCode](capi-resmgr-common-h.md#resourcemanager_errorcode) | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_NAME_NOT_FOUND: Invalid resource name.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_NAME: No matching resource is found based on the resource name.<br>     <br>ERROR_CODE_OUT_OF_MEMORY: Memory overflow occurs. |
 
 ### OH_ResourceManager_GetMediaBase64DataByName()
 
@@ -171,7 +171,7 @@ Obtains the Base64-encoded string of the media resource by the specified resourc
 
 | Type | Description |
 | -- | -- |
-| ResourceManager_ErrorCode | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_NAME_NOT_FOUND: Invalid resource name.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_NAME: No matching resource is found based on the resource name.<br>     <br>ERROR_CODE_OUT_OF_MEMORY: Memory overflow occurs. |
+| [ResourceManager_ErrorCode](capi-resmgr-common-h.md#resourcemanager_errorcode) | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_NAME_NOT_FOUND: Invalid resource name.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_NAME: No matching resource is found based on the resource name.<br>     <br>ERROR_CODE_OUT_OF_MEMORY: Memory overflow occurs. |
 
 ### OH_ResourceManager_GetMedia()
 
@@ -199,7 +199,7 @@ Obtains the binary data of the media resource by the specified resource ID and s
 
 | Type | Description |
 | -- | -- |
-| ResourceManager_ErrorCode | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_ID_NOT_FOUND: Invalid resource ID.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_ID: No matching resource is found based on the resource ID.<br>     <br>ERROR_CODE_OUT_OF_MEMORY: Memory overflow occurs. |
+| [ResourceManager_ErrorCode](capi-resmgr-common-h.md#resourcemanager_errorcode) | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_ID_NOT_FOUND: Invalid resource ID.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_ID: No matching resource is found based on the resource ID.<br>     <br>ERROR_CODE_OUT_OF_MEMORY: Memory overflow occurs. |
 
 ### OH_ResourceManager_GetMediaData()
 
@@ -227,7 +227,7 @@ Obtains the binary data of the media resource by the specified resource ID and s
 
 | Type | Description |
 | -- | -- |
-| ResourceManager_ErrorCode | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_ID_NOT_FOUND: Invalid resource ID.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_ID: No matching resource is found based on the resource ID.<br>     <br>ERROR_CODE_OUT_OF_MEMORY: Memory overflow occurs. |
+| [ResourceManager_ErrorCode](capi-resmgr-common-h.md#resourcemanager_errorcode) | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_ID_NOT_FOUND: Invalid resource ID.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_ID: No matching resource is found based on the resource ID.<br>     <br>ERROR_CODE_OUT_OF_MEMORY: Memory overflow occurs. |
 
 ### OH_ResourceManager_GetMediaByName()
 
@@ -255,7 +255,7 @@ Obtains the binary data of the media resource by the specified resource name and
 
 | Type | Description |
 | -- | -- |
-| ResourceManager_ErrorCode | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_NAME_NOT_FOUND: Invalid resource name.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_NAME: No matching resource is found based on the resource name.<br>     <br>ERROR_CODE_OUT_OF_MEMORY: Memory overflow occurs. |
+| [ResourceManager_ErrorCode](capi-resmgr-common-h.md#resourcemanager_errorcode) | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_NAME_NOT_FOUND: Invalid resource name.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_NAME: No matching resource is found based on the resource name.<br>     <br>ERROR_CODE_OUT_OF_MEMORY: Memory overflow occurs. |
 
 ### OH_ResourceManager_GetMediaDataByName()
 
@@ -283,7 +283,7 @@ Obtains the binary data of the media resource by the specified resource name and
 
 | Type | Description |
 | -- | -- |
-| ResourceManager_ErrorCode | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_NAME_NOT_FOUND: Invalid resource name.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_NAME: No matching resource is found based on the resource name.<br>     <br>ERROR_CODE_OUT_OF_MEMORY: Memory overflow occurs. |
+| [ResourceManager_ErrorCode](capi-resmgr-common-h.md#resourcemanager_errorcode) | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_NAME_NOT_FOUND: Invalid resource name.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_NAME: No matching resource is found based on the resource name.<br>     <br>ERROR_CODE_OUT_OF_MEMORY: Memory overflow occurs. |
 
 ### OH_ResourceManager_GetDrawableDescriptor()
 
@@ -311,7 +311,7 @@ Obtains the DrawableDescriptor object of the icon resource by the specified reso
 
 | Type | Description |
 | -- | -- |
-| ResourceManager_ErrorCode | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_ID_NOT_FOUND: Invalid resource ID.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_ID: No matching resource is found based on the resource ID. |
+| [ResourceManager_ErrorCode](capi-resmgr-common-h.md#resourcemanager_errorcode) | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_ID_NOT_FOUND: Invalid resource ID.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_ID: No matching resource is found based on the resource ID. |
 
 ### OH_ResourceManager_GetDrawableDescriptorData()
 
@@ -339,7 +339,7 @@ Obtains the DrawableDescriptor object of the icon resource by the specified reso
 
 | Type | Description |
 | -- | -- |
-| ResourceManager_ErrorCode | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_ID_NOT_FOUND: Invalid resource ID.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_ID: No matching resource is found based on the resource ID. |
+| [ResourceManager_ErrorCode](capi-resmgr-common-h.md#resourcemanager_errorcode) | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_ID_NOT_FOUND: Invalid resource ID.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_ID: No matching resource is found based on the resource ID. |
 
 ### OH_ResourceManager_GetDrawableDescriptorByName()
 
@@ -367,7 +367,7 @@ Obtains the DrawableDescriptor object of the icon resource by the specified reso
 
 | Type | Description |
 | -- | -- |
-| ResourceManager_ErrorCode | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_NAME_NOT_FOUND: Invalid resource name.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_NAME: No matching resource is found based on the resource name. |
+| [ResourceManager_ErrorCode](capi-resmgr-common-h.md#resourcemanager_errorcode) | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_NAME_NOT_FOUND: Invalid resource name.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_NAME: No matching resource is found based on the resource name. |
 
 ### OH_ResourceManager_GetDrawableDescriptorDataByName()
 
@@ -395,7 +395,7 @@ Obtains the DrawableDescriptor object of the icon resource by the specified reso
 
 | Type | Description |
 | -- | -- |
-| ResourceManager_ErrorCode | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_NAME_NOT_FOUND: Invalid resource name.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_NAME: No matching resource is found based on the resource name. |
+| [ResourceManager_ErrorCode](capi-resmgr-common-h.md#resourcemanager_errorcode) | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_NAME_NOT_FOUND: Invalid resource name.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_NAME: No matching resource is found based on the resource name. |
 
 ### OH_ResourceManager_GetSymbol()
 
@@ -421,7 +421,7 @@ Obtains the Unicode encoding of the symbol icon corresponding to the specified r
 
 | Type | Description |
 | -- | -- |
-| ResourceManager_ErrorCode | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_ID_NOT_FOUND: Invalid resource ID.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_ID: No matching resource is found based on the resource ID.<br>     <br>ERROR_CODE_RES_REF_TOO_MUCH: The resource has a circular reference. |
+| [ResourceManager_ErrorCode](capi-resmgr-common-h.md#resourcemanager_errorcode) | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_ID_NOT_FOUND: Invalid resource ID.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_ID: No matching resource is found based on the resource ID.<br>     <br>ERROR_CODE_RES_REF_TOO_MUCH: The resource has a circular reference. |
 
 ### OH_ResourceManager_GetSymbolByName()
 
@@ -447,7 +447,7 @@ Obtains the Unicode encoding of the symbol icon corresponding to the specified r
 
 | Type | Description |
 | -- | -- |
-| ResourceManager_ErrorCode | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_NAME_NOT_FOUND: Invalid resource name.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_NAME: No matching resource is found based on the resource name.<br>     <br>ERROR_CODE_RES_REF_TOO_MUCH: The resource has a circular reference. |
+| [ResourceManager_ErrorCode](capi-resmgr-common-h.md#resourcemanager_errorcode) | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_NAME_NOT_FOUND: Invalid resource name.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_NAME: No matching resource is found based on the resource name.<br>     <br>ERROR_CODE_RES_REF_TOO_MUCH: The resource has a circular reference. |
 
 ### OH_ResourceManager_GetLocales()
 
@@ -474,7 +474,7 @@ Obtains the list of languages supported by an application.
 
 | Type | Description |
 | -- | -- |
-| ResourceManager_ErrorCode | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_OUT_OF_MEMORY: Memory overflow occurs. |
+| [ResourceManager_ErrorCode](capi-resmgr-common-h.md#resourcemanager_errorcode) | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_OUT_OF_MEMORY: Memory overflow occurs. |
 
 ### OH_ResourceManager_GetLocalesData()
 
@@ -501,7 +501,7 @@ Obtains the list of languages supported by an application.
 
 | Type | Description |
 | -- | -- |
-| ResourceManager_ErrorCode | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_OUT_OF_MEMORY: Memory overflow occurs. |
+| [ResourceManager_ErrorCode](capi-resmgr-common-h.md#resourcemanager_errorcode) | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_OUT_OF_MEMORY: Memory overflow occurs. |
 
 ### OH_ResourceManager_GetConfiguration()
 
@@ -524,13 +524,13 @@ Obtains the configuration information of a device, such as the screen orientatio
 | Parameter | Description |
 | -- | -- |
 | [const NativeResourceManager](capi-rawfile-nativeresourcemanager.md) *mgr | Input parameter. Pointer to the NativeResourceManager object. The pointer is obtained through[OH_ResourceManager_InitNativeResourceManager](capi-raw-file-manager-h.md#oh_resourcemanager_initnativeresourcemanager). |
-| ResourceManager_Configuration *configuration | Output parameter. Device configuration information, where **screenDensity** is the devicescreen density (in dpi) divided by 160 and rounded to an integer.<br>The memory for the locale string in **configuration** is allocated by this function, and must be releasedthrough [OH_ResourceManager_ReleaseConfiguration](capi-ohresmgr-h.md#oh_resourcemanager_releaseconfiguration) after use. If the memory for **configuration** isallocated by **malloc()**, it must be released via **free()**. |
+| [ResourceManager_Configuration](capi-resourcemanager-resourcemanager-configuration.md) *configuration | Output parameter. Device configuration information, where **screenDensity** is the devicescreen density (in dpi) divided by 160 and rounded to an integer.<br>The memory for the locale string in **configuration** is allocated by this function, and must be releasedthrough [OH_ResourceManager_ReleaseConfiguration](capi-ohresmgr-h.md#oh_resourcemanager_releaseconfiguration) after use. If the memory for **configuration** isallocated by **malloc()**, it must be released via **free()**. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ResourceManager_ErrorCode | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_SYSTEM_RES_MANAGER_GET_FAILED: Failed to access the system resource.<br>     <br>ERROR_CODE_OUT_OF_MEMORY: Memory overflow occurs. |
+| [ResourceManager_ErrorCode](capi-resmgr-common-h.md#resourcemanager_errorcode) | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_SYSTEM_RES_MANAGER_GET_FAILED: Failed to access the system resource.<br>     <br>ERROR_CODE_OUT_OF_MEMORY: Memory overflow occurs. |
 
 ### OH_ResourceManager_GetResourceConfiguration()
 
@@ -555,7 +555,7 @@ Obtains the configuration information of a device, such as the screen orientatio
 
 | Type | Description |
 | -- | -- |
-| ResourceManager_ErrorCode | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_SYSTEM_RES_MANAGER_GET_FAILED: Failed to access the system resource.<br>     <br>ERROR_CODE_OUT_OF_MEMORY: Memory overflow occurs. |
+| [ResourceManager_ErrorCode](capi-resmgr-common-h.md#resourcemanager_errorcode) | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_SYSTEM_RES_MANAGER_GET_FAILED: Failed to access the system resource.<br>     <br>ERROR_CODE_OUT_OF_MEMORY: Memory overflow occurs. |
 
 ### OH_ResourceManager_ReleaseConfiguration()
 
@@ -573,13 +573,13 @@ Releases the memory requested through the [OH_ResourceManager_GetConfiguration](
 
 | Parameter | Description |
 | -- | -- |
-| ResourceManager_Configuration *configuration | Input parameter. Pointer to the [ResourceManager_Configuration](capi-resourcemanager-resourcemanager-configuration.md) object whose memory needsto be deallocated. |
+| [ResourceManager_Configuration](capi-resourcemanager-resourcemanager-configuration.md) *configuration | Input parameter. Pointer to the [ResourceManager_Configuration](capi-resourcemanager-resourcemanager-configuration.md) object whose memory needsto be deallocated. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ResourceManager_ErrorCode | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed. |
+| [ResourceManager_ErrorCode](capi-resmgr-common-h.md#resourcemanager_errorcode) | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed. |
 
 ### OH_ResourceManager_GetString()
 
@@ -606,7 +606,7 @@ Obtains a plain or formatted string based on the specified resource ID.
 
 | Type | Description |
 | -- | -- |
-| ResourceManager_ErrorCode | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_ID_NOT_FOUND: Invalid resource ID.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_ID: No matching resource is found based on the resource ID.<br>     <br>ERROR_CODE_RES_REF_TOO_MUCH: The resource has a circular reference.<br>     <br>ERROR_CODE_OUT_OF_MEMORY: Memory overflow occurs. |
+| [ResourceManager_ErrorCode](capi-resmgr-common-h.md#resourcemanager_errorcode) | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_ID_NOT_FOUND: Invalid resource ID.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_ID: No matching resource is found based on the resource ID.<br>     <br>ERROR_CODE_RES_REF_TOO_MUCH: The resource has a circular reference.<br>     <br>ERROR_CODE_OUT_OF_MEMORY: Memory overflow occurs. |
 
 ### OH_ResourceManager_GetStringByName()
 
@@ -633,7 +633,7 @@ Obtains a plain or formatted string based on the specified resource name.
 
 | Type | Description |
 | -- | -- |
-| ResourceManager_ErrorCode | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_NAME_NOT_FOUND: Invalid resource name.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_NAME: No matching resource is found based on the resource name.<br>     <br>ERROR_CODE_RES_REF_TOO_MUCH: The resource has a circular reference.<br>     <br>ERROR_CODE_OUT_OF_MEMORY: Memory overflow occurs. |
+| [ResourceManager_ErrorCode](capi-resmgr-common-h.md#resourcemanager_errorcode) | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_NAME_NOT_FOUND: Invalid resource name.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_NAME: No matching resource is found based on the resource name.<br>     <br>ERROR_CODE_RES_REF_TOO_MUCH: The resource has a circular reference.<br>     <br>ERROR_CODE_OUT_OF_MEMORY: Memory overflow occurs. |
 
 ### OH_ResourceManager_GetStringArray()
 
@@ -660,7 +660,7 @@ Obtains the string array based on the specified resource ID.
 
 | Type | Description |
 | -- | -- |
-| ResourceManager_ErrorCode | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_ID_NOT_FOUND: Invalid resource ID.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_ID: No matching resource is found based on the resource ID.<br>     <br>ERROR_CODE_RES_REF_TOO_MUCH: The resource has a circular reference.<br>     <br>ERROR_CODE_OUT_OF_MEMORY: Memory overflow occurs. |
+| [ResourceManager_ErrorCode](capi-resmgr-common-h.md#resourcemanager_errorcode) | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_ID_NOT_FOUND: Invalid resource ID.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_ID: No matching resource is found based on the resource ID.<br>     <br>ERROR_CODE_RES_REF_TOO_MUCH: The resource has a circular reference.<br>     <br>ERROR_CODE_OUT_OF_MEMORY: Memory overflow occurs. |
 
 ### OH_ResourceManager_GetStringArrayByName()
 
@@ -687,7 +687,7 @@ Obtains the string array based on the specified resource name.
 
 | Type | Description |
 | -- | -- |
-| ResourceManager_ErrorCode | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_NAME_NOT_FOUND: Invalid resource name.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_NAME: No matching resource is found based on the resource name.<br>     <br>ERROR_CODE_RES_REF_TOO_MUCH: The resource has a circular reference.<br>     <br>ERROR_CODE_OUT_OF_MEMORY: Memory overflow occurs. |
+| [ResourceManager_ErrorCode](capi-resmgr-common-h.md#resourcemanager_errorcode) | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_NAME_NOT_FOUND: Invalid resource name.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_NAME: No matching resource is found based on the resource name.<br>     <br>ERROR_CODE_RES_REF_TOO_MUCH: The resource has a circular reference.<br>     <br>ERROR_CODE_OUT_OF_MEMORY: Memory overflow occurs. |
 
 ### OH_ResourceManager_ReleaseStringArray()
 
@@ -712,7 +712,7 @@ Releases the memory of the string array.
 
 | Type | Description |
 | -- | -- |
-| ResourceManager_ErrorCode | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed. |
+| [ResourceManager_ErrorCode](capi-resmgr-common-h.md#resourcemanager_errorcode) | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed. |
 
 ### OH_ResourceManager_GetPluralString()
 
@@ -743,7 +743,7 @@ Obtains the plural string based on the specified resource ID.<br>The Chinese lan
 
 | Type | Description |
 | -- | -- |
-| ResourceManager_ErrorCode | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_ID_NOT_FOUND: Invalid resource ID.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_ID: No matching resource is found based on the resource ID.<br>     <br>ERROR_CODE_RES_REF_TOO_MUCH: The resource has a circular reference.<br>     <br>ERROR_CODE_OUT_OF_MEMORY: Memory overflow occurs. |
+| [ResourceManager_ErrorCode](capi-resmgr-common-h.md#resourcemanager_errorcode) | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_ID_NOT_FOUND: Invalid resource ID.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_ID: No matching resource is found based on the resource ID.<br>     <br>ERROR_CODE_RES_REF_TOO_MUCH: The resource has a circular reference.<br>     <br>ERROR_CODE_OUT_OF_MEMORY: Memory overflow occurs. |
 
 ### OH_ResourceManager_GetPluralStringByName()
 
@@ -774,7 +774,7 @@ Obtains the plural string based on the specified resource name.<br>The Chinese l
 
 | Type | Description |
 | -- | -- |
-| ResourceManager_ErrorCode | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_NAME_NOT_FOUND: Invalid resource name.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_NAME: No matching resource is found based on the resource name.<br>     <br>ERROR_CODE_RES_REF_TOO_MUCH: The resource has a circular reference.<br>     <br>ERROR_CODE_OUT_OF_MEMORY: Memory overflow occurs. |
+| [ResourceManager_ErrorCode](capi-resmgr-common-h.md#resourcemanager_errorcode) | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_NAME_NOT_FOUND: Invalid resource name.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_NAME: No matching resource is found based on the resource name.<br>     <br>ERROR_CODE_RES_REF_TOO_MUCH: The resource has a circular reference.<br>     <br>ERROR_CODE_OUT_OF_MEMORY: Memory overflow occurs. |
 
 ### OH_ResourceManager_GetIntPluralString()
 
@@ -802,7 +802,7 @@ Obtains the corresponding plural string and formats it based on the specified re
 
 | Type | Description |
 | -- | -- |
-| ResourceManager_ErrorCode | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_ID_NOT_FOUND: Invalid resource ID.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_ID: No matching resource is found based on the resource ID.<br>     <br>ERROR_CODE_RES_REF_TOO_MUCH: The resource has a circular reference.<br>     <br>ERROR_CODE_OUT_OF_MEMORY: Memory overflow occurs. |
+| [ResourceManager_ErrorCode](capi-resmgr-common-h.md#resourcemanager_errorcode) | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_ID_NOT_FOUND: Invalid resource ID.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_ID: No matching resource is found based on the resource ID.<br>     <br>ERROR_CODE_RES_REF_TOO_MUCH: The resource has a circular reference.<br>     <br>ERROR_CODE_OUT_OF_MEMORY: Memory overflow occurs. |
 
 ### OH_ResourceManager_GetIntPluralStringByName()
 
@@ -830,7 +830,7 @@ Obtains the corresponding plural string and formats it based on the specified re
 
 | Type | Description |
 | -- | -- |
-| ResourceManager_ErrorCode | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_NAME_NOT_FOUND: Invalid resource name.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_NAME: No matching resource is found based on the resource name.<br>     <br>ERROR_CODE_RES_REF_TOO_MUCH: The resource has a circular reference.<br>     <br>ERROR_CODE_OUT_OF_MEMORY: Memory overflow occurs. |
+| [ResourceManager_ErrorCode](capi-resmgr-common-h.md#resourcemanager_errorcode) | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_NAME_NOT_FOUND: Invalid resource name.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_NAME: No matching resource is found based on the resource name.<br>     <br>ERROR_CODE_RES_REF_TOO_MUCH: The resource has a circular reference.<br>     <br>ERROR_CODE_OUT_OF_MEMORY: Memory overflow occurs. |
 
 ### OH_ResourceManager_GetDoublePluralString()
 
@@ -858,7 +858,7 @@ Obtains the corresponding plural string and formats it based on the specified re
 
 | Type | Description |
 | -- | -- |
-| ResourceManager_ErrorCode | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_ID_NOT_FOUND: Invalid resource ID.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_ID: No matching resource is found based on the resource ID.<br>     <br>ERROR_CODE_RES_REF_TOO_MUCH: The resource has a circular reference.<br>     <br>ERROR_CODE_OUT_OF_MEMORY: Memory overflow occurs. |
+| [ResourceManager_ErrorCode](capi-resmgr-common-h.md#resourcemanager_errorcode) | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_ID_NOT_FOUND: Invalid resource ID.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_ID: No matching resource is found based on the resource ID.<br>     <br>ERROR_CODE_RES_REF_TOO_MUCH: The resource has a circular reference.<br>     <br>ERROR_CODE_OUT_OF_MEMORY: Memory overflow occurs. |
 
 ### OH_ResourceManager_GetDoublePluralStringByName()
 
@@ -886,7 +886,7 @@ Obtains the corresponding plural string and formats it based on the specified re
 
 | Type | Description |
 | -- | -- |
-| ResourceManager_ErrorCode | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_NAME_NOT_FOUND: Invalid resource name.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_NAME: No matching resource is found based on the resource name.<br>     <br>ERROR_CODE_RES_REF_TOO_MUCH: The resource has a circular reference.<br>     <br>ERROR_CODE_OUT_OF_MEMORY: Memory overflow occurs. |
+| [ResourceManager_ErrorCode](capi-resmgr-common-h.md#resourcemanager_errorcode) | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_NAME_NOT_FOUND: Invalid resource name.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_NAME: No matching resource is found based on the resource name.<br>     <br>ERROR_CODE_RES_REF_TOO_MUCH: The resource has a circular reference.<br>     <br>ERROR_CODE_OUT_OF_MEMORY: Memory overflow occurs. |
 
 ### OH_ResourceManager_GetColor()
 
@@ -912,7 +912,7 @@ Obtains the color resource value based on the specified resource ID.
 
 | Type | Description |
 | -- | -- |
-| ResourceManager_ErrorCode | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_ID_NOT_FOUND: Invalid resource ID.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_ID: No matching resource is found based on the resource ID.<br>     <br>ERROR_CODE_RES_REF_TOO_MUCH: The resource has a circular reference. |
+| [ResourceManager_ErrorCode](capi-resmgr-common-h.md#resourcemanager_errorcode) | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_ID_NOT_FOUND: Invalid resource ID.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_ID: No matching resource is found based on the resource ID.<br>     <br>ERROR_CODE_RES_REF_TOO_MUCH: The resource has a circular reference. |
 
 ### OH_ResourceManager_GetColorByName()
 
@@ -938,7 +938,7 @@ Obtains the color resource value based on the specified resource name.
 
 | Type | Description |
 | -- | -- |
-| ResourceManager_ErrorCode | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_NAME_NOT_FOUND: Invalid resource name.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_NAME: No matching resource is found based on the resource name.<br>     <br>ERROR_CODE_RES_REF_TOO_MUCH: The resource has a circular reference. |
+| [ResourceManager_ErrorCode](capi-resmgr-common-h.md#resourcemanager_errorcode) | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_NAME_NOT_FOUND: Invalid resource name.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_NAME: No matching resource is found based on the resource name.<br>     <br>ERROR_CODE_RES_REF_TOO_MUCH: The resource has a circular reference. |
 
 ### OH_ResourceManager_GetInt()
 
@@ -964,7 +964,7 @@ Obtains the integer resource value based on the specified resource ID.
 
 | Type | Description |
 | -- | -- |
-| ResourceManager_ErrorCode | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_ID_NOT_FOUND: Invalid resource ID.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_ID: No matching resource is found based on the resource ID.<br>     <br>ERROR_CODE_RES_REF_TOO_MUCH: The resource has a circular reference. |
+| [ResourceManager_ErrorCode](capi-resmgr-common-h.md#resourcemanager_errorcode) | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_ID_NOT_FOUND: Invalid resource ID.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_ID: No matching resource is found based on the resource ID.<br>     <br>ERROR_CODE_RES_REF_TOO_MUCH: The resource has a circular reference. |
 
 ### OH_ResourceManager_GetIntByName()
 
@@ -990,7 +990,7 @@ Obtains the integer resource value based on the specified resource name.
 
 | Type | Description |
 | -- | -- |
-| ResourceManager_ErrorCode | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_NAME_NOT_FOUND: Invalid resource name.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_NAME: No matching resource is found based on the resource name.<br>     <br>ERROR_CODE_RES_REF_TOO_MUCH: The resource has a circular reference. |
+| [ResourceManager_ErrorCode](capi-resmgr-common-h.md#resourcemanager_errorcode) | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_NAME_NOT_FOUND: Invalid resource name.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_NAME: No matching resource is found based on the resource name.<br>     <br>ERROR_CODE_RES_REF_TOO_MUCH: The resource has a circular reference. |
 
 ### OH_ResourceManager_GetFloat()
 
@@ -1016,7 +1016,7 @@ Obtains the floating-point resource value based on the specified resource ID.
 
 | Type | Description |
 | -- | -- |
-| ResourceManager_ErrorCode | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_ID_NOT_FOUND: Invalid resource ID.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_ID: No matching resource is found based on the resource ID.<br>     <br>ERROR_CODE_RES_REF_TOO_MUCH: The resource has a circular reference. |
+| [ResourceManager_ErrorCode](capi-resmgr-common-h.md#resourcemanager_errorcode) | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_ID_NOT_FOUND: Invalid resource ID.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_ID: No matching resource is found based on the resource ID.<br>     <br>ERROR_CODE_RES_REF_TOO_MUCH: The resource has a circular reference. |
 
 ### OH_ResourceManager_GetFloatByName()
 
@@ -1042,7 +1042,7 @@ Obtains the floating-point resource value based on the specified resource name.
 
 | Type | Description |
 | -- | -- |
-| ResourceManager_ErrorCode | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_NAME_NOT_FOUND: Invalid resource name.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_NAME: No matching resource is found based on the resource name.<br>     <br>ERROR_CODE_RES_REF_TOO_MUCH: The resource has a circular reference. |
+| [ResourceManager_ErrorCode](capi-resmgr-common-h.md#resourcemanager_errorcode) | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_NAME_NOT_FOUND: Invalid resource name.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_NAME: No matching resource is found based on the resource name.<br>     <br>ERROR_CODE_RES_REF_TOO_MUCH: The resource has a circular reference. |
 
 ### OH_ResourceManager_GetBool()
 
@@ -1068,7 +1068,7 @@ Obtains the Boolean resource value based on the specified resource ID.
 
 | Type | Description |
 | -- | -- |
-| ResourceManager_ErrorCode | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_ID_NOT_FOUND: Invalid resource ID.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_ID: No matching resource is found based on the resource ID.<br>     <br>ERROR_CODE_RES_REF_TOO_MUCH: The resource has a circular reference. |
+| [ResourceManager_ErrorCode](capi-resmgr-common-h.md#resourcemanager_errorcode) | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_ID_NOT_FOUND: Invalid resource ID.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_ID: No matching resource is found based on the resource ID.<br>     <br>ERROR_CODE_RES_REF_TOO_MUCH: The resource has a circular reference. |
 
 ### OH_ResourceManager_GetBoolByName()
 
@@ -1094,7 +1094,7 @@ Obtains the Boolean resource value based on the specified resource name.
 
 | Type | Description |
 | -- | -- |
-| ResourceManager_ErrorCode | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_NAME_NOT_FOUND: Invalid resource name.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_NAME: No matching resource is found based on the resource name.<br>     <br>ERROR_CODE_RES_REF_TOO_MUCH: The resource has a circular reference. |
+| [ResourceManager_ErrorCode](capi-resmgr-common-h.md#resourcemanager_errorcode) | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_RES_NAME_NOT_FOUND: Invalid resource name.<br>     <br>ERROR_CODE_RES_NOT_FOUND_BY_NAME: No matching resource is found based on the resource name.<br>     <br>ERROR_CODE_RES_REF_TOO_MUCH: The resource has a circular reference. |
 
 ### OH_ResourceManager_AddResource()
 
@@ -1119,7 +1119,7 @@ Dynamically loads overlay resources during application runtime to implement them
 
 | Type | Description |
 | -- | -- |
-| ResourceManager_ErrorCode | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_OVERLAY_RES_PATH_INVALID: Invalid overlay path. |
+| [ResourceManager_ErrorCode](capi-resmgr-common-h.md#resourcemanager_errorcode) | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_OVERLAY_RES_PATH_INVALID: Invalid overlay path. |
 
 ### OH_ResourceManager_RemoveResource()
 
@@ -1144,6 +1144,6 @@ Removes the specified overlay resource during application runtime and restores t
 
 | Type | Description |
 | -- | -- |
-| ResourceManager_ErrorCode | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_OVERLAY_RES_PATH_INVALID: Invalid overlay path. |
+| [ResourceManager_ErrorCode](capi-resmgr-common-h.md#resourcemanager_errorcode) | Result code.<br>     <br>SUCCESS: Success.<br>     <br>ERROR_CODE_INVALID_INPUT_PARAMETER: Invalid input parameter. Possible causes: 1. The parameter type is<br>     incorrect. 2. Parameter verification failed.<br>     <br>ERROR_CODE_OVERLAY_RES_PATH_INVALID: Invalid overlay path. |
 
 

@@ -91,7 +91,7 @@ OH_AVErrCode OH_LowPowerVideoSink_Configure(OH_LowPowerVideoSink* sink, const OH
 | 参数项 | 描述 |
 | -- | -- |
 | OH_LowPowerVideoSink* sink | Pointer to an OH_LowPowerVideoSink instance |
-| const OH_AVFormat* format | A pointer to an OH_AVFormat to give the description of the video track to be decoded,key of format refer to lowpower_avsink_base.h |
+| [const OH_AVFormat](../AVCodecKit/capi-core-oh-avformat.md)* format | A pointer to an OH_AVFormat to give the description of the video track to be decoded,key of format refer to lowpower_avsink_base.h |
 
 **返回：**
 
@@ -116,7 +116,7 @@ OH_AVErrCode OH_LowPowerVideoSink_SetParameter(OH_LowPowerVideoSink* sink, const
 | 参数项 | 描述 |
 | -- | -- |
 | OH_LowPowerVideoSink* sink | Pointer to an OH_LowPowerVideoSink instance |
-| const OH_AVFormat* format | pointer to an OH_AVFormat instance, key of format refer to lowpower_avsink_base.h |
+| [const OH_AVFormat](../AVCodecKit/capi-core-oh-avformat.md)* format | pointer to an OH_AVFormat instance, key of format refer to lowpower_avsink_base.h |
 
 **返回：**
 
@@ -141,7 +141,7 @@ OH_AVErrCode OH_LowPowerVideoSink_GetParameter(OH_LowPowerVideoSink* sink, OH_AV
 | 参数项 | 描述 |
 | -- | -- |
 | OH_LowPowerVideoSink* sink | Pointer to an OH_LowPowerVideoSink instance |
-| OH_AVFormat* format | pointer to an OH_AVFormat instance, key of format refer to lowpower_avsink_base.h |
+| [OH_AVFormat](../AVCodecKit/capi-core-oh-avformat.md)* format | pointer to an OH_AVFormat instance, key of format refer to lowpower_avsink_base.h |
 
 **返回：**
 
@@ -166,7 +166,7 @@ OH_AVErrCode OH_LowPowerVideoSink_SetVideoSurface(OH_LowPowerVideoSink* sink, co
 | 参数项 | 描述 |
 | -- | -- |
 | OH_LowPowerVideoSink* sink | Pointer to an OH_LowPowerVideoSink instance |
-| const OHNativeWindow* surface | A pointer to a OHNativeWindow instance, see [OHNativeWindow](../ArkGraphics2D/capi-nativewindow-nativewindow.md) |
+| [const OHNativeWindow](../ArkGraphics2D/capi-nativewindow-nativewindow.md)* surface | A pointer to a OHNativeWindow instance, see [OHNativeWindow](../ArkGraphics2D/capi-nativewindow-nativewindow.md) |
 
 **返回：**
 
@@ -431,7 +431,7 @@ LowPowerVideoSink设置用于音画同步的OH_LowPowerAudioSink。
 | 参数项 | 描述 |
 | -- | -- |
 | OH_LowPowerVideoSink* videoSink | Pointer to an OH_LowPowerVideoSink instance |
-| [OH_LowPowerAudioSink](capi-lowpoweraudiosink-oh-lowpoweraudiosink.md)* audioSink | Pointer to an OH_LowPowerAudioSink instance |
+| OH_LowPowerAudioSink* audioSink | Pointer to an OH_LowPowerAudioSink instance |
 
 **返回：**
 
@@ -509,7 +509,7 @@ OH_AVErrCode OH_LowPowerVideoSink_ReturnSamples(OH_LowPowerVideoSink* sink, OH_A
 | 参数项 | 描述 |
 | -- | -- |
 | OH_LowPowerVideoSink* sink | Pointer to an OH_LowPowerVideoSink instance |
-| [OH_AVSamplesBuffer](capi-avsinkbase-oh-avsamplesbuffer.md)* samples | Pointer to an OH_AVSamplesBuffer instance |
+| OH_AVSamplesBuffer* samples | Pointer to an OH_AVSamplesBuffer instance |
 
 **返回：**
 

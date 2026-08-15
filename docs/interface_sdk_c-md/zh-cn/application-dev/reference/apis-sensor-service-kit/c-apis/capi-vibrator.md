@@ -2,7 +2,7 @@
 
 ## 概述
 
-Provides the enums, structs, and error codes used in the vibrator APIs.
+提供振动API中使用的枚举、结构体和错误码。
 
 **起始版本：** 11
 ## 文件汇总
