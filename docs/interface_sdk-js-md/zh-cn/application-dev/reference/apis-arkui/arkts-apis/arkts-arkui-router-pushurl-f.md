@@ -182,7 +182,7 @@ function pushUrl(options: RouterOptions, mode: RouterMode, callback: AsyncCallba
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | RouterOptions | 是 | 跳转页面描述信息。 |
-| mode | [RouterMode](../../apis-na/arkts-apis/arkts-na-router-routermode-e.md) | 是 | 跳转页面使用的模式。 |
+| mode | [RouterMode](arkts-arkui-router-routermode-e.md) | 是 | 跳转页面使用的模式。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 页面跳转结果回调函数。<br/>当页面跳转成功时，error为undefined。当页面跳转失败时，error为系统返回的错误对象。 |
 
 **错误码：**
@@ -257,7 +257,7 @@ function pushUrl(options: RouterOptions, mode: RouterMode): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | RouterOptions | 是 | 跳转页面描述信息。 |
-| mode | [RouterMode](../../apis-na/arkts-apis/arkts-na-router-routermode-e.md) | 是 | 跳转页面使用的模式。 |
+| mode | [RouterMode](arkts-arkui-router-routermode-e.md) | 是 | 跳转页面使用的模式。 |
 
 **返回值：**
 

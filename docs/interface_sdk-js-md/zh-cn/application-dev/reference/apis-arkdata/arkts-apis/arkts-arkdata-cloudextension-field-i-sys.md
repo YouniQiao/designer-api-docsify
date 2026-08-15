@@ -110,7 +110,7 @@ type: FieldType
 
 字段类型。
 
-**类型：** [FieldType](arkts-arkdata-cloudextension-fieldtype-e-sys.md)
+**类型：** FieldType
 
 **起始版本：** 23
 

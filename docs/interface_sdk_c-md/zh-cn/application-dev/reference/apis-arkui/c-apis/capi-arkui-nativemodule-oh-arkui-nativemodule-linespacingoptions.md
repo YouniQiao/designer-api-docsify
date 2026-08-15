@@ -8,7 +8,7 @@ typedef struct OH_ArkUI_NativeModule_LineSpacingOptions OH_ArkUI_NativeModule_Li
 
 定义文本行间距选项。
 
-**起始版本：** 26.0.0
+**起始版本：** 26.1.0
 
 **相关模块：** [ArkUI_NativeModule](capi-arkui-nativemodule.md)
 

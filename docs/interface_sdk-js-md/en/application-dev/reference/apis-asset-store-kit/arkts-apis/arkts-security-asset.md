@@ -71,7 +71,7 @@ import { asset } from 'asset';
 | Name | Description |
 | --- | --- |
 | [BatchErrInfo](arkts-assetstore-asset-batcherrinfo-i.md) | Result object containing error information with a specific index, error code, and message for a single asset. |
-| [BatchResult](arkts-assetstore-asset-batchresult-i.md) | Result object containing batch operation,including [batchAdd](arkts-assetstore-asset-batchadd-f.md#batchAdd),[batchUpdate](arkts-assetstore-asset-batchupdate-f.md#batchUpdate),[batchRemove](arkts-assetstore-asset-batchremove-f.md#batchRemove). |
+| [BatchResult](arkts-assetstore-asset-batchresult-i.md) | Result object containing batch operation,including [batchAdd](arkts-assetstore-asset-batchadd-f.md#batchAdd) and [batchUpdate](arkts-assetstore-asset-batchupdate-f.md#batchUpdate). |
 | [SyncResult](arkts-assetstore-asset-syncresult-i.md) | Represents the sync result of an asset. |
 
 ### Enums

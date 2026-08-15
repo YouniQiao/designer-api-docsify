@@ -3342,7 +3342,7 @@ on(type: 'hangUp', callback: Callback<void>): void
 on(type: 'outputDeviceChange', callback: (state: ConnectionState, device: OutputDeviceInfo) => void): void
 ```
 
-设置播放设备变化的监听事件。应用接入[multimedia.avCastPicker (投播组件)](../../apis-na/arkts-apis/arkts-na-multimedia-avcastpicker-avcastpicker-s.md#AVCastPicker)，当用户通过组件切换设备 时，会收到设备切换的回调。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
+设置播放设备变化的监听事件。应用接入[multimedia.avCastPicker (投播组件)](arkts-avsession-multimedia-avcastpicker-avcastpicker-s.md#AVCastPicker)，当用户通过组件切换设备 时，会收到设备切换的回调。 每个指令支持注册多个回调，如果需要只执行最新监听，需要先注销旧的监听，否则新旧监听都会触发回调。
 
 **起始版本：** 10
 

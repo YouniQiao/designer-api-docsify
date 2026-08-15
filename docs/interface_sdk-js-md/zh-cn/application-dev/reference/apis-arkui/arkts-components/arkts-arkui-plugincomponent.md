@@ -1,6 +1,6 @@
 # PluginComponent
 
-提供外部应用组件嵌入式显示功能，即外部应用提供的UI可在本应用内显示。适用于需要跨应用复用UI组件的场景，如嵌入其他应用的页面或卡片，实现应用间的界面协同与数据交互。如需通过跨进程通信实现更新，请参考[@ohos.pluginComponent](../arkts-apis/arkts-arkui-plugincomponentmanager-n.md#pluginComponentManager)。
+提供外部应用组件嵌入式显示功能，即外部应用提供的UI可在本应用内显示。适用于需要跨应用复用UI组件的场景，如嵌入其他应用的页面或卡片，实现应用间的界面协同与数据交互。如需通过跨进程通信实现更新，请参考[@ohos.pluginComponent](../../apis-na/arkts-apis/arkts-na-plugincomponentmanager-n.md#pluginComponentManager)。
 
 ## 子组件 不支持
 

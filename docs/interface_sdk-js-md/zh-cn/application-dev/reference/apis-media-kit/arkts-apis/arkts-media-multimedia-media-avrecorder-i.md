@@ -972,7 +972,7 @@ on(type: 'error', callback: ErrorCallback): void
 on(type: 'photoAssetAvailable', callback: Callback<photoAccessHelper.PhotoAsset>): void
 ```
 
-订阅媒体资源回调事件，当FileGenerationMode枚举设置为系统创建媒体文件时，会在 stop操作结束后把 PhotoAsset对象回调给应用。使用callback异步回调。 当用户重复订阅时，以最后一次订阅的回调接口为准。
+订阅媒体资源回调事件，当FileGenerationMode枚举设置为系统创建媒体文件时，会在 stop操作结束后把 [PhotoAsset](../../apis-media-library-kit/arkts-apis/arkts-file-photoaccesshelper.md#@ohos.file.photoAccessHelper)对象回调给应用。使用callback异步回调。 当用户重复订阅时，以最后一次订阅的回调接口为准。
 
 **起始版本：** 12
 

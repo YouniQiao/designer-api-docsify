@@ -36,7 +36,7 @@ didFail(code: WebNetErrorList): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| code | [WebNetErrorList](../../apis-na/arkts-apis/arkts-na-web-neterrorlist-webneterrorlist-e.md) | 是 | 网络错误码。 |
+| code | [WebNetErrorList](arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) | 是 | 网络错误码。 |
 
 **错误码：**
 
@@ -67,7 +67,7 @@ Notify that this request should be failed.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| code | [WebNetErrorList](../../apis-na/arkts-apis/arkts-na-web-neterrorlist-webneterrorlist-e.md) | 是 | Set response error code to intercept. |
+| code | [WebNetErrorList](arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) | 是 | Set response error code to intercept. |
 | completeIfNoResponse | boolean | 是 | If completeIfNoResponse is true, when DidFailWithError is called, if DidReceiveResponse has not been called, a response is automatically constructed and the current request is terminated. |
 
 **错误码：**
@@ -99,7 +99,7 @@ Notify that this request should be failed.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| code | [WebNetErrorList](../../apis-na/arkts-apis/arkts-na-web-neterrorlist-webneterrorlist-e.md) | 是 | Set response error code to intercept. |
+| code | [WebNetErrorList](arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) | 是 | Set response error code to intercept. |
 | completeIfNoResponse | boolean | 是 | If completeIfNoResponse is true, when DidFailWithError is called, if DidReceiveResponse has not been called, a response is automatically constructed and the current request is terminated. |
 | customErrorCode | number | 是 | The custom error code for this response, Web engine will pass the custom error code directly to the application through onErrorReceive. |
 

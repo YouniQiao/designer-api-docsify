@@ -129,7 +129,7 @@ function getCurrentTime(isNano?: boolean): Promise<number>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isNano | boolean | 否 | 返回结果是否为纳秒数，默认值为false。<br/>默认值为false。<br/>- true：表示返回结果为纳秒数（ns）。 <br/>- false：表示返回结果为毫秒数 （ms）。 |
+| isNano | boolean | 否 | 返回结果是否为纳秒数，默认值为false。<br/>- true：表示返回结果为纳秒数（ns）。 <br/>- false：表示返回结果为毫秒数 （ms）。 |
 
 **返回值：**
 

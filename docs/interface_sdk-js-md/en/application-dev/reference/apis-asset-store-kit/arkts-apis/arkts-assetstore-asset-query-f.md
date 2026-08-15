@@ -54,7 +54,7 @@ Queries one or more assets. If user authentication is required for the access to
 | [24000005](../errorcode-asset.md#24000005-incorrect-screen-lock-status) | The screen lock status does not match. |
 | [24000002](../errorcode-asset.md#24000002-asset-not-found) | The asset is not found. |
 | [24000001](../errorcode-asset.md#24000001-asset-store-service-unavailable) | The ASSET service is unavailable. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types. 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
 | [24000017](../errorcode-asset.md#24000017-function-not-supported) | The capability is not supported. |
 
 ## Examples

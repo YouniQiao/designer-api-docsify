@@ -2,7 +2,7 @@
 
 自定义布局算法类。 > **说明：** > > CustomLayoutAlgorithm类对象可以赋值给LayoutAlgorithm类型变量，作为[DynamicLayout](../../apis-na/arkts-apis/arkts-na-arkui-components-arkdynamiclayout-dynamiclayout-f.md#DynamicLayout)组件 > 的入参指定布局算法。
 
-**继承/实现关系：** CustomLayoutAlgorithm implements [LayoutAlgorithm](../../apis-na/arkts-apis/arkts-na-layoutalgorithm-i.md#LayoutAlgorithm)
+**继承/实现关系：** CustomLayoutAlgorithm implements [LayoutAlgorithm](arkts-arkui-layoutalgorithm-i.md#LayoutAlgorithm)
 
 **起始版本：** 24
 

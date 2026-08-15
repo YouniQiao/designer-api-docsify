@@ -908,7 +908,7 @@ OH_ArkUI_NativeModule_LineSpacingOptions *OH_ArkUI_NativeModule_LineSpacingOptio
 
 Creates a line spacing options object for text. When the object is no longer used,call [OH_ArkUI_NativeModule_LineSpacingOptions_Destroy](capi-text-h.md#oh_arkui_nativemodule_linespacingoptions_destroy) to destroy it.
 
-**Since**: 26.0.0
+**Since**: 26.1.0
 
 **Returns**:
 
@@ -926,7 +926,7 @@ void OH_ArkUI_NativeModule_LineSpacingOptions_Destroy(OH_ArkUI_NativeModule_Line
 
 Destroys the line spacing options object.
 
-**Since**: 26.0.0
+**Since**: 26.1.0
 
 **Parameters**:
 
@@ -944,7 +944,7 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_LineSpacingOptions_SetOnlyBetweenLines(OH_
 
 Sets the onlyBetweenLines parameter for the line spacing options.When set to true, line spacing is only applied between lines, not for the first and last lines.When set to false, line spacing is applied uniformly to all lines.
 
-**Since**: 26.0.0
+**Since**: 26.1.0
 
 **Parameters**:
 
@@ -969,7 +969,7 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_LineSpacingOptions_GetOnlyBetweenLines(con
 
 Gets the onlyBetweenLines parameter from the line spacing options.
 
-**Since**: 26.0.0
+**Since**: 26.1.0
 
 **Parameters**:
 

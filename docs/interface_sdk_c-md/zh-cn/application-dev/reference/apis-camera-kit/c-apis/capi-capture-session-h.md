@@ -402,7 +402,7 @@ Camera_ErrorCode OH_CaptureSession_AddSecureOutput(Camera_CaptureSession* sessio
 | 参数项 | 描述 |
 | -- | -- |
 | [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)* session | Camera_CaptureSession实例。 |
-| [Camera_PreviewOutput](capi-oh-camera-camera-previewoutput.md)* previewOutput | 要标记为安全输出的Camera_PreviewOutput。 |
+| Camera_PreviewOutput* previewOutput | 要标记为安全输出的Camera_PreviewOutput。 |
 
 **返回：**
 
@@ -525,7 +525,7 @@ Camera_ErrorCode OH_CaptureSession_AddPreviewOutput(Camera_CaptureSession* sessi
 | 参数项 | 描述 |
 | -- | -- |
 | [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)* session | Camera_CaptureSession实例。 |
-| [Camera_PreviewOutput](capi-oh-camera-camera-previewoutput.md)* previewOutput | 要添加的预览输出实例。 |
+| Camera_PreviewOutput* previewOutput | 要添加的预览输出实例。 |
 
 **返回：**
 
@@ -550,7 +550,7 @@ Camera_ErrorCode OH_CaptureSession_RemovePreviewOutput(Camera_CaptureSession* se
 | 参数项 | 描述 |
 | -- | -- |
 | [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)* session | Camera_CaptureSession实例。 |
-| [Camera_PreviewOutput](capi-oh-camera-camera-previewoutput.md)* previewOutput | 要删除的预览输出实例。 |
+| Camera_PreviewOutput* previewOutput | 要删除的预览输出实例。 |
 
 **返回：**
 
@@ -675,7 +675,7 @@ Camera_ErrorCode OH_CaptureSession_AddMetadataOutput(Camera_CaptureSession* sess
 | 参数项 | 描述 |
 | -- | -- |
 | [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)* session | Camera_CaptureSession实例。 |
-| Camera_MetadataOutput* metadataOutput | 要添加的元数据输出实例。 |
+| [Camera_MetadataOutput](capi-oh-camera-camera-metadataoutput.md)* metadataOutput | 要添加的元数据输出实例。 |
 
 **返回：**
 
@@ -700,7 +700,7 @@ Camera_ErrorCode OH_CaptureSession_RemoveMetadataOutput(Camera_CaptureSession* s
 | 参数项 | 描述 |
 | -- | -- |
 | [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)* session | Camera_CaptureSession实例。 |
-| Camera_MetadataOutput* metadataOutput | 要删除的元数据输出实例。 |
+| [Camera_MetadataOutput](capi-oh-camera-camera-metadataoutput.md)* metadataOutput | 要删除的元数据输出实例。 |
 
 **返回：**
 
@@ -2241,7 +2241,7 @@ Camera_ErrorCode OH_CaptureSession_CanAddPreviewOutput(Camera_CaptureSession* se
 | 参数项 | 描述 |
 | -- | -- |
 | [Camera_CaptureSession](capi-oh-camera-camera-capturesession.md)* session | Camera_CaptureSession实例。 |
-| [Camera_PreviewOutput](capi-oh-camera-camera-previewoutput.md)* cameraOutput | 要设置的预览输出实例。 |
+| Camera_PreviewOutput* cameraOutput | 要设置的预览输出实例。 |
 | bool* isSuccessful | 是否可以将相机预览输出添加到会话中的结果。返回true表示可以将相机预览输出添加到会话中，返回false表示不可以。 |
 
 **返回：**

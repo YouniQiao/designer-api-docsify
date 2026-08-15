@@ -86,7 +86,7 @@ result: FetchResult
 
 The fetch result code - succeed, failed or cancelled.
 
-**类型：** [FetchResult](arkts-media-media-fetchresult-e.md)
+**类型：** FetchResult
 
 **起始版本：** 23
 

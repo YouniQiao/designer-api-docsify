@@ -18,7 +18,7 @@
 
 | 名称 | 描述 |
 | -- | -- |
-| [const char *OH_GetDeviceType(void)](#oh_getdevicetype) | 获取设备类型。 |
+| [const char *OH_GetDeviceType(void)](#oh_getdevicetype) | 获取设备类型。返回预定义的设备类型字符串。 |
 | [const char *OH_GetManufacture(void)](#oh_getmanufacture) | 获取设备制造商。 |
 | [const char *OH_GetBrand(void)](#oh_getbrand) | 获取设备品牌。 |
 | [const char *OH_GetMarketName(void)](#oh_getmarketname) | 获取外部产品系列，即外部产品名称。 |
@@ -56,7 +56,7 @@ const char *OH_GetDeviceType(void)
 
 **描述**
 
-获取设备类型。
+获取设备类型。返回预定义的设备类型字符串。
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
@@ -66,7 +66,7 @@ const char *OH_GetDeviceType(void)
 
 | 类型 | 说明 |
 | -- | -- |
-| const char * | 可能的值包括：<br>    <br>• "phone"<br>    <br>• "default"（设备类型无法识别时的默认返回值）<br>    <br>• "wearable"<br>    <br>• "liteWearable"<br>    <br>• "tablet"<br>    <br>• "tv"<br>    <br>• "car"<br>    <br>• "smartVision" |
+| const char * | 返回设备类型字符串。可能的值包括：<br>    <br>• "phone"<br>    <br>• "default"（设备类型无法识别时的默认返回值）<br>    <br>• "wearable"<br>    <br>• "liteWearable"<br>    <br>• "tablet"<br>    <br>• "tv"<br>    <br>• "car"<br>    <br>• "smartVision" |
 
 ### OH_GetManufacture()
 

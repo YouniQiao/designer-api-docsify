@@ -66,7 +66,7 @@ fontColor?: ResourceColor
 fontFamily?: ResourceStr
 ```
 
-设置字体列表，当前支持'HarmonyOS Sans'字体和[注册自定义字体](../arkts-apis/arkts-font.md#@ohos.font(Custom-Font-Registration))。默认字体:'HarmonyOS Sans'。
+设置字体列表，当前支持'HarmonyOS Sans'字体和注册自定义字体。默认字体:'HarmonyOS Sans'。
 
 **类型：** ResourceStr
 

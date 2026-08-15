@@ -28,7 +28,7 @@ code: number
 
 **废弃版本：** 9
 
-**替代接口：** [statusCode](arkts-basicservices-agent-httpresponse-i.md#statusCode)
+**替代接口：** statusCode
 
 <!--Device-UploadResponse-code: number--><!--Device-UploadResponse-code: number-End-->
 

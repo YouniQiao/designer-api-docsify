@@ -8,7 +8,7 @@
 
 **废弃版本：** 8
 
-**替代接口：** [router](../../apis-na/arkts-apis/arkts-router.md#@ohos.router)
+**替代接口：** [router](arkts-router.md#@ohos.router)
 
 <!--Device-unnamed-export default class Router--><!--Device-unnamed-export default class Router-End-->
 

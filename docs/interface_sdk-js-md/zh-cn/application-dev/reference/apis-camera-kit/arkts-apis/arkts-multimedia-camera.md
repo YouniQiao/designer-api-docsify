@@ -111,9 +111,9 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [Aperture](arkts-camera-camera-aperture-i-sys.md) | Provides the APIs for aperture settings. It inherits from [ApertureQuery](arkts-camera-camera-aperturequery-i-sys.md#ApertureQuery（系统接口）). |
+| [Aperture](arkts-camera-camera-aperture-i-sys.md) | 物理光圈对象。 Aperture继承自ApertureQuery。 |
 | [ApertureInfo](arkts-camera-camera-apertureinfo-i-sys.md) | Describes the aperture information. |
-| [ApertureQuery](arkts-camera-camera-aperturequery-i-sys.md) | Provides the aperture query capability. |
+| [ApertureQuery](arkts-camera-camera-aperturequery-i-sys.md) | 物理光圈查询对象。 |
 | [ApertureVideoSession](arkts-camera-camera-aperturevideosession-i-sys.md) | Aperture video session object. |
 | [AutoExposure](arkts-camera-camera-autoexposure-i-sys.md) | AutoExposure继承自[AutoExposureQuery](arkts-camera-camera-autoexposurequery-i.md#AutoExposureQuery)。 自动曝光类，对设备自动曝光（AE）操作。 |
 | [AutoExposureQuery](arkts-camera-camera-autoexposurequery-i-sys.md) | 针对设备的自动曝光特性提供了一系列查询功能。 > > - 本模块接口在API version 12发生兼容变更，保留了内层元素的起始版本信息，会出现外层元素@since版本号大于内层元素的情况，不影响接口使用。 |

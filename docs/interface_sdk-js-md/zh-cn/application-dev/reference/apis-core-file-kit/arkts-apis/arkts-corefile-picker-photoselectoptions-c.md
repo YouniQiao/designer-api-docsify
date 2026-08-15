@@ -8,7 +8,7 @@
 
 **废弃版本：** 12
 
-**替代接口：** PhotoSelectOptions
+**替代接口：** [PhotoSelectOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoselectoptions-c.md#PhotoSelectOptions)
 
 <!--Device-picker-class PhotoSelectOptions--><!--Device-picker-class PhotoSelectOptions-End-->
 
@@ -22,7 +22,7 @@ MIMEType?: PhotoViewMIMETypes
 
 可选择的媒体文件类型。若无此参数，则默认为图片和视频类型。
 
-**类型：** [PhotoViewMIMETypes](arkts-corefile-picker-photoviewmimetypes-e.md)
+**类型：** PhotoViewMIMETypes
 
 **起始版本：** 9
 

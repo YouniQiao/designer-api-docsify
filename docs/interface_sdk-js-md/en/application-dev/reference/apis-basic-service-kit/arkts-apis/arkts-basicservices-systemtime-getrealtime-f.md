@@ -135,7 +135,7 @@ Obtains the time elapsed since system startup, including the deep sleep time. Th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isNano | boolean | No | Whether the time to return is in nanoseconds. The default value is **false**.<br>The default value is false.<br>- **true**: The result is in nanoseconds.<br>- **false**: The result is in milliseconds. |
+| isNano | boolean | No | Whether the time to return is in nanoseconds. The default value is **false**.<br>- **true**: The result is in nanoseconds. <br>- **false**: The result is in milliseconds. |
 
 **Return value:**
 

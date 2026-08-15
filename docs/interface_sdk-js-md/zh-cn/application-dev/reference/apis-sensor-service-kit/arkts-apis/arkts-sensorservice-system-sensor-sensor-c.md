@@ -132,7 +132,7 @@ static subscribeCompass(options: SubscribeCompassOptions): void
 static subscribeDeviceOrientation(options: SubscribeDeviceOrientationOptions): void
 ```
 
-订阅设备方向传感器数据变化。通过回调函数获取设备方向数据，数据格式为DeviceOrientationResponse对象，包含alpha、beta、gamma三个旋转角度字段，单位：°（度）。 <br>当开发者需要获取设备方向信息以实现屏幕旋转、游戏方向控制、AR/VR场景等功能时，使用此接口。 <br>针对同一个应用，多次调用时，会覆盖前面的调用效果，即仅最后一次调用生效；针对同一个方法内，不支持多次调用。 > **说明：** > > 除Lite Wearable外，从API version 8开始，建议使用 > [ORIENTATION](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_SensorId.COLOR) > 替代。
+订阅设备方向传感器数据变化。通过回调函数获取设备方向数据，数据格式为DeviceOrientationResponse对象，包含alpha、beta、gamma三个旋转角度字段，单位：°（度）。 <br>当开发者需要获取设备方向信息以实现屏幕旋转、游戏方向控制、AR/VR场景等功能时，使用此接口。 <br>针对同一个应用，多次调用时，会覆盖前面的调用效果，即仅最后一次调用生效；针对同一个方法内，不支持多次调用。 > **说明：** > > 除Lite Wearable外，从API version 8开始，建议使用 > [ORIENTATION](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_SensorId.COLOR) > 替代。 **设备行为差异**：该接口在Wearable、Lite Wearable中可正常调用，在其他设备类型中无效果。
 
 **起始版本：** 6
 
@@ -220,7 +220,7 @@ static subscribeHeartRate(options: SubscribeHeartRateOptions): void
 static subscribeLight(options: SubscribeLightOptions): void
 ```
 
-订阅环境光传感器数据变化。通过回调函数获取环境光线强度数据，数据格式为LightResponse对象，包含intensity字段，单位：lux（勒克斯）。 <br>当开发者需要获取环境光强度以实现屏幕亮度自动调节、环境光检测等功能时，使用此接口。 <br>再次调用时，会覆盖前一次调用效果，即仅最后一次调用生效。 > **说明：** > > 除Lite Wearable外，从API version 8开始，建议使用 > [AMBIENT_LIGHT](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_SensorId.COLOR) > 替代。
+订阅环境光传感器数据变化。通过回调函数获取环境光线强度数据，数据格式为LightResponse对象，包含intensity字段，单位：lux（勒克斯）。 <br>当开发者需要获取环境光强度以实现屏幕亮度自动调节、环境光检测等功能时，使用此接口。 <br>再次调用时，会覆盖前一次调用效果，即仅最后一次调用生效。 > **说明：** > > 除Lite Wearable外，从API version 8开始，建议使用 > [AMBIENT_LIGHT](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_SensorId.COLOR) > 替代。 **设备行为差异**：该接口在Wearable、Lite Wearable中可正常调用，在其他设备类型中无效果。
 
 **起始版本：** 3
 
@@ -276,7 +276,7 @@ static subscribeOnBodyState(options: SubscribeOnBodyStateOptions): void
 static subscribeProximity(options: SubscribeProximityOptions): void
 ```
 
-订阅距离传感器数据变化。通过回调函数获取可见物体相对于设备显示屏的接近或远离状态数据，数据格式为ProximityResponse对象，包含distance字段。 <br>当开发者需要检测物体与设备屏幕的距离以实现通话时自动息屏、防误触等功能时，使用此接口。 <br>调用此接口后，系统会在距离传感器数据变化时上报数据；针对同一个应用，多次调用时，会覆盖前面的调用效果，即仅最后一次调用生效。 > **说明：** > > 从 API version 3开始支持，从API version 8开始废弃。除Lite Wearable外，建议使用 > [PROXIMITY](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_SensorId.COLOR) > 替代。
+订阅距离传感器数据变化。通过回调函数获取可见物体相对于设备显示屏的接近或远离状态数据，数据格式为ProximityResponse对象，包含distance字段。 <br>当开发者需要检测物体与设备屏幕的距离以实现通话时自动息屏、防误触等功能时，使用此接口。 <br>调用此接口后，系统会在距离传感器数据变化时上报数据；针对同一个应用，多次调用时，会覆盖前面的调用效果，即仅最后一次调用生效。 > **说明：** > > 从 API version 3开始支持，从API version 8开始废弃。除Lite Wearable外，建议使用 > [PROXIMITY](arkts-sensorservice-sensor-onsensoridcolor-f-sys.md#on_SensorId.COLOR) > 替代。 **设备行为差异**：该接口在Wearable、Lite Wearable中可正常调用，在其他设备类型中无效果。
 
 **起始版本：** 3
 
@@ -402,7 +402,7 @@ static unsubscribeCompass(): void
 static unsubscribeDeviceOrientation(): void
 ```
 
-取消订阅设备方向传感器数据。调用后，设备方向传感器的回调函数将不再触发。 <br>当开发者不再需要设备方向数据时，使用此接口取消订阅。 <br>调用此接口后，之前通过subscribeDeviceOrientation注册的回调函数将不再被触发。需先调用subscribeDeviceOrientation订阅后，再调用此接口取消订阅，否则无效果。 > **说明：** > > 除Lite Wearable外，从API version 8开始，建议使用 > [ORIENTATION](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_SensorId.COLOR) > 替代。
+取消订阅设备方向传感器数据。调用后，设备方向传感器的回调函数将不再触发。 <br>当开发者不再需要设备方向数据时，使用此接口取消订阅。 <br>调用此接口后，之前通过subscribeDeviceOrientation注册的回调函数将不再被触发。需先调用subscribeDeviceOrientation订阅后，再调用此接口取消订阅，否则无效果。 > **说明：** > > 除Lite Wearable外，从API version 8开始，建议使用 > [ORIENTATION](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_SensorId.COLOR) > 替代。 **设备行为差异**：该接口在Wearable、Lite Wearable中可正常调用，在其他设备类型中无效果。
 
 **起始版本：** 6
 
@@ -472,7 +472,7 @@ static unsubscribeHeartRate(): void
 static unsubscribeLight(): void
 ```
 
-取消订阅环境光传感器数据。调用后，环境光传感器的回调函数将不再触发。 <br>当开发者不再需要环境光线数据时，使用此接口取消订阅。 <br>调用此接口后，之前通过subscribeLight注册的回调函数将不再被触发。需先调用subscribeLight订阅后，再调用此接口取消订阅，否则无效果。 > **说明：** > > 除Lite Wearable外，从API version 8开始，建议使用 > [AMBIENT_LIGHT](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_SensorId.COLOR) > 替代。
+取消订阅环境光传感器数据。调用后，环境光传感器的回调函数将不再触发。 <br>当开发者不再需要环境光线数据时，使用此接口取消订阅。 <br>调用此接口后，之前通过subscribeLight注册的回调函数将不再被触发。需先调用subscribeLight订阅后，再调用此接口取消订阅，否则无效果。 > **说明：** > > 除Lite Wearable外，从API version 8开始，建议使用 > [AMBIENT_LIGHT](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_SensorId.COLOR) > 替代。 **设备行为差异**：该接口在Wearable、Lite Wearable中可正常调用，在其他设备类型中无效果。
 
 **起始版本：** 3
 
@@ -516,7 +516,7 @@ static unsubscribeOnBodyState(): void
 static unsubscribeProximity(): void
 ```
 
-取消订阅距离传感器数据。调用后，距离传感器的回调函数将不再触发。 <br>当开发者不再需要距离感应数据时，使用此接口取消订阅。 <br>调用此接口后，之前通过subscribeProximity注册的回调函数将不再被触发。需先调用subscribeProximity订阅后，再调用此接口取消订阅，否则无效果。 > **说明：** > > 除Lite Wearable外，从API version 8开始，建议使用 > [PROXIMITY](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_SensorId.COLOR) > 替代。
+取消订阅距离传感器数据。调用后，距离传感器的回调函数将不再触发。 <br>当开发者不再需要距离感应数据时，使用此接口取消订阅。 <br>调用此接口后，之前通过subscribeProximity注册的回调函数将不再被触发。需先调用subscribeProximity订阅后，再调用此接口取消订阅，否则无效果。 > **说明：** > > 除Lite Wearable外，从API version 8开始，建议使用 > [PROXIMITY](arkts-sensorservice-sensor-offsensoridcolor-f-sys.md#off_SensorId.COLOR) > 替代。 **设备行为差异**：该接口在Wearable、Lite Wearable中可正常调用，在其他设备类型中无效果。
 
 **起始版本：** 3
 

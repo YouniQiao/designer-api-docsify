@@ -1,6 +1,6 @@
 # BatchResult
 
-Result object containing batch operation,including [batchAdd](arkts-assetstore-asset-batchadd-f.md#batchAdd),[batchUpdate](arkts-assetstore-asset-batchupdate-f.md#batchUpdate),[batchRemove](arkts-assetstore-asset-batchremove-f.md#batchRemove).
+Result object containing batch operation,including [batchAdd](arkts-assetstore-asset-batchadd-f.md#batchAdd) and [batchUpdate](arkts-assetstore-asset-batchupdate-f.md#batchUpdate).
 
 **Since:** 26.0.0
 

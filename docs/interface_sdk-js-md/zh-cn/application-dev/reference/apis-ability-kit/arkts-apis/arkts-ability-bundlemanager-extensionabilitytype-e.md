@@ -564,7 +564,7 @@ SELECTION = 31
 WEB_NATIVE_MESSAGING = 32
 ```
 
-[WebNativeMessagingExtensionAbility](../../apis-na/arkts-apis/arkts-na-web-webnativemessagingextensionability-webnativemessagingextensionability-c.md#WebNativeMessagingExtensionAbility)：为开发者提供Web原生消息通信能力的 ExtensionAbility。
+[WebNativeMessagingExtensionAbility](../../apis-arkweb/arkts-apis/arkts-arkweb-web-webnativemessagingextensionability-webnativemessagingextensionability-c.md#WebNativeMessagingExtensionAbility)：为开发者提供Web原生消息通信能力的 ExtensionAbility。
 
 **起始版本：** 23
 

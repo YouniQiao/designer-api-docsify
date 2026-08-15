@@ -18,7 +18,7 @@
 release(): Promise<void>
 ```
 
-Releases output resources. This API uses a promise to return the result. Model constraint: This API can be used only in the stage model.
+释放输出资源。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -38,7 +38,7 @@ Releases output resources. This API uses a promise to return the result. Model c
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 ## main
 
@@ -46,7 +46,7 @@ Releases output resources. This API uses a promise to return the result. Model c
 main: ImageType
 ```
 
-Object of the full-quality image and the uncompressed image.
+全质量图和未压缩图的对象。
 
 **类型：** [ImageType](arkts-camera-camera-imagetype-t.md)
 

@@ -160,7 +160,7 @@ function replaceUrl(options: RouterOptions, mode: RouterMode, callback: AsyncCal
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | RouterOptions | 是 | 替换页面描述信息。 |
-| mode | [RouterMode](../../apis-na/arkts-apis/arkts-na-router-routermode-e.md) | 是 | 替换页面使用的模式。 |
+| mode | [RouterMode](arkts-arkui-router-routermode-e.md) | 是 | 替换页面使用的模式。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 异常响应回调。 |
 
 **错误码：**
@@ -224,7 +224,7 @@ function replaceUrl(options: RouterOptions, mode: RouterMode): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | RouterOptions | 是 | 替换页面描述信息。 |
-| mode | [RouterMode](../../apis-na/arkts-apis/arkts-na-router-routermode-e.md) | 是 | 跳转页面使用的模式。 |
+| mode | [RouterMode](arkts-arkui-router-routermode-e.md) | 是 | 跳转页面使用的模式。 |
 
 **返回值：**
 

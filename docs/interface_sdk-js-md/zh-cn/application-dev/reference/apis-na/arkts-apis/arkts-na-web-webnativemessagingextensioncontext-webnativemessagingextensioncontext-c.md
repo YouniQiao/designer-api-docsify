@@ -1,6 +1,6 @@
 # WebNativeMessagingExtensionContext
 
-WebNativeMessagingExtensionContext是Web原生消息扩展（ [WebNativeMessagingExtensionAbility](arkts-na-web-webnativemessagingextensionability-webnativemessagingextensionability-c.md#WebNativeMessagingExtensionAbility)）的运行上下文，继承自ExtensionContext，为 扩展Ability提供生命周期管理、Ability启动以及原生消息连接控制能力。开发者可在继承WebNativeMessagingExtensionAbility的扩展中通过`this.context`获取该上下文，进而调用 [startAbility](../../apis-arkweb/arkts-apis/arkts-arkweb-web-webnativemessagingextensioncontext-webnativemessagingextensioncontext-c.md#startAbility)启动其他Ability、调用 [startAbilityForResult](../../apis-arkweb/arkts-apis/arkts-arkweb-web-webnativemessagingextensioncontext-webnativemessagingextensioncontext-c.md#startAbilityForResult)启动UIAbility并接收返回结果、调用 [terminateSelf](../../apis-arkweb/arkts-apis/arkts-arkweb-web-webnativemessagingextensioncontext-webnativemessagingextensioncontext-c.md#terminateSelf)结束当前扩展，或调用 [stopNativeConnection](../../apis-arkweb/arkts-apis/arkts-arkweb-web-webnativemessagingextensioncontext-webnativemessagingextensioncontext-c.md#stopNativeConnection)停止指定的Web原生消息连接。 > **说明:** > > 本模块接口仅可在Stage模型下使用。
+WebNativeMessagingExtensionContext是Web原生消息扩展（ [WebNativeMessagingExtensionAbility](../../apis-arkweb/arkts-apis/arkts-arkweb-web-webnativemessagingextensionability-webnativemessagingextensionability-c.md#WebNativeMessagingExtensionAbility)）的运行上下文，继承自ExtensionContext，为 扩展Ability提供生命周期管理、Ability启动以及原生消息连接控制能力。开发者可在继承WebNativeMessagingExtensionAbility的扩展中通过`this.context`获取该上下文，进而调用 [startAbility](#startAbility)启动其他Ability、调用 [startAbilityForResult](#startAbilityForResult)启动UIAbility并接收返回结果、调用 [terminateSelf](#terminateSelf)结束当前扩展，或调用 [stopNativeConnection](#stopNativeConnection)停止指定的Web原生消息连接。 > **说明:** > > 本模块接口仅可在Stage模型下使用。
 
 **继承/实现关系：** WebNativeMessagingExtensionContext extends ExtensionContext
 
@@ -20,7 +20,7 @@ WebNativeMessagingExtensionContext是Web原生消息扩展（ [WebNativeMessagin
 startAbility(want: Want, options?: StartOptions): Promise<void>
 ```
 
-使用Promise异步回调启动Ability。如需获取启动的UIAbility退出时的返回结果，可以使用 [startAbilityForResult](../../apis-arkweb/arkts-apis/arkts-arkweb-web-webnativemessagingextensioncontext-webnativemessagingextensioncontext-c.md#startAbilityForResult)。
+使用Promise异步回调启动Ability。如需获取启动的UIAbility退出时的返回结果，可以使用 [startAbilityForResult](#startAbilityForResult)。
 
 **起始版本：** 23
 

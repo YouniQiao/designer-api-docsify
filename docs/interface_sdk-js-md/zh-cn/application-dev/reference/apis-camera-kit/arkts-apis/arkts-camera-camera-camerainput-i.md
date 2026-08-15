@@ -134,7 +134,7 @@ isPhysicalCameraOrientationVariable(): boolean
 offCameraOcclusionDetection(callback?: AsyncCallback<CameraOcclusionDetectionResult>): void
 ```
 
-Unsubscribes from camera occlusion detection results.
+注销监听CameraInput的镜头遮挡或脏污事件。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -150,7 +150,7 @@ Unsubscribes from camera occlusion detection results.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CameraOcclusionDetectionResult](arkts-camera-camera-cameraocclusiondetectionresult-i-sys.md)&gt; | 否 | Callback used to get detection results. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CameraOcclusionDetectionResult](arkts-camera-camera-cameraocclusiondetectionresult-i-sys.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
 
 ## offError
 
@@ -158,7 +158,7 @@ Unsubscribes from camera occlusion detection results.
 offError(camera: CameraDevice, callback?: ErrorCallback): void
 ```
 
-Unsubscribes from error events.
+注销监听CameraInput的错误事件。
 
 **起始版本：** 23
 
@@ -174,8 +174,8 @@ Unsubscribes from error events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| camera | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | 是 | Camera device. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 否 | Callback used to get the camera input errors. |
+| camera | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | 是 | CameraDevice对象。 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不能是匿名函数），否则取消所有callback。 |
 
 ## off_error
 
@@ -211,7 +211,7 @@ off(type: 'error', camera: CameraDevice, callback?: ErrorCallback): void
 onCameraOcclusionDetection(callback: AsyncCallback<CameraOcclusionDetectionResult>): void
 ```
 
-Subscribes to camera occlusion detection results.
+监听CameraInput的镜头遮挡或脏污事件，通过注册回调函数获取结果。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -227,7 +227,7 @@ Subscribes to camera occlusion detection results.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CameraOcclusionDetectionResult](arkts-camera-camera-cameraocclusiondetectionresult-i-sys.md)&gt; | 是 | Callback used to get detection results. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[CameraOcclusionDetectionResult](arkts-camera-camera-cameraocclusiondetectionresult-i-sys.md)&gt; | 是 | 回调函数，用于获取结果。返回遮挡状态。 |
 
 ## onError
 
@@ -235,7 +235,7 @@ Subscribes to camera occlusion detection results.
 onError(camera: CameraDevice, callback: ErrorCallback): void
 ```
 
-Subscribes to error events.
+监听CameraInput的错误事件，通过注册回调函数获取结果。使用callback异步回调。
 
 **起始版本：** 23
 
@@ -251,8 +251,8 @@ Subscribes to error events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| camera | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | 是 | Camera device. |
-| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 是 | Callback used to get the camera input errors. |
+| camera | [CameraDevice](arkts-camera-camera-cameradevice-i.md) | 是 | CameraDevice对象。 |
+| callback | [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md) | 是 | 回调函数，用于获取结果。返回错误码，错误码类型CameraErrorCode。 |
 
 ## on_error
 
