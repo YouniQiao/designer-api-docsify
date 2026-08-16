@@ -25,5 +25,5 @@ Build function of popup. This component is implemented based on state management
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PopupOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-popup-popupoptions-i.md) | Yes | popup option. |
+| options | [PopupOptions](arkts-na-arkui-advanced-popup-popupoptions-i.md) | Yes | popup option. |
 

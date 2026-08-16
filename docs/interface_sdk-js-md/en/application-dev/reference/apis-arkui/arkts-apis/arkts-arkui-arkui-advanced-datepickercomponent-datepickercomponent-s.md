@@ -34,7 +34,7 @@ import { DatePickerComponentResult } from 'DatePickerComponentResult';
 
 Defines options for the date time picker component.
 
-**Type:** [DatePickerComponentOptions](../../apis-na/arkts-apis/arkts-na-arkui-advanced-datepickercomponent-datepickercomponentoptions-c.md)
+**Type:** [DatePickerComponentOptions](arkts-arkui-arkui-advanced-datepickercomponent-datepickercomponentoptions-c.md)
 
 **Since:** 26.0.0
 

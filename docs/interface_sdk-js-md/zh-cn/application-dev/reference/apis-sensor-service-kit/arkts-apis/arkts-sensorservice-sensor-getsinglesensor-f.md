@@ -23,7 +23,7 @@ function getSingleSensor(type: SensorId, callback: AsyncCallback<Sensor>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | [SensorId](arkts-sensorservice-sensor-sensorid-e.md) | 是 | 指定传感器类型。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Sensor&gt; | 是 | 回调函数，异步返回指定传感器的属性信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Sensor&gt; | 是 | 回调函数，异步返回指定传感器的属性信息。 |
 
 **错误码：**
 

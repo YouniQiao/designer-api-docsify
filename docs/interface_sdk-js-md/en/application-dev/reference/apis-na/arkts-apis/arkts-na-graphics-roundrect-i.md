@@ -20,7 +20,7 @@ corners: CornerRadius
 
 Corners property.
 
-**Type:** [CornerRadius](../../apis-arkui/arkts-apis/arkts-arkui-cornerradius-t.md)
+**Type:** [CornerRadius](arkts-na-cornerradius-t.md)
 
 **Since:** 23
 
@@ -42,7 +42,7 @@ rect: Rect
 
 Rect property.
 
-**Type:** [Rect](../../apis-arkui/arkts-apis/arkts-arkui-rect-t.md)
+**Type:** [Rect](arkts-na-rect-t.md)
 
 **Since:** 23
 

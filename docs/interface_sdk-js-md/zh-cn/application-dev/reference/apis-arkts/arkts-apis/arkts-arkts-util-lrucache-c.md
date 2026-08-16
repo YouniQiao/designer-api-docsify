@@ -59,7 +59,7 @@ for (let value of pro) {
 afterRemoval(isEvict: boolean, key: K, value: V, newValue: V): void
 ```
 
-在移除值后执行后续操作。后续操作必须由开发者实现。该 API 在删除操作期间会被调用，例如 [get&lt;sup&gt;9+&lt;/sup&gt;](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#get)、[put&lt;sup&gt;9+&lt;/sup&gt;](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#put)、 [remove&lt;sup&gt;9+&lt;/sup&gt;](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#remove)、[clear&lt;sup&gt;9+&lt;/sup&gt;](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#clear) 和 [updateCapacity&lt;sup&gt;9+&lt;/sup&gt;](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#updateCapacity)。 > **NOTE：**> > 如果在调用 [clear&lt;sup&gt;9+&lt;/sup&gt;](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#clear) 和 > [updateCapacity&lt;sup&gt;9+&lt;/sup&gt;](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#updateCapacity) 后执行回调方法，并且输入的 **key** 和 > **value** 参数为 MapIterator 类型，请参考示例 2 执行后续操作。
+在移除值后执行后续操作。后续操作必须由开发者实现。该 API 在删除操作期间会被调用，例如 [get&lt;sup&gt;9+&lt;/sup&gt;](#get)、[put&lt;sup&gt;9+&lt;/sup&gt;](#put)、 [remove&lt;sup&gt;9+&lt;/sup&gt;](#remove)、[clear&lt;sup&gt;9+&lt;/sup&gt;](#clear) 和 [updateCapacity&lt;sup&gt;9+&lt;/sup&gt;](#updateCapacity)。 > **NOTE：**> > 如果在调用 [clear&lt;sup&gt;9+&lt;/sup&gt;](#clear) 和 > [updateCapacity&lt;sup&gt;9+&lt;/sup&gt;](#updateCapacity) 后执行回调方法，并且输入的 **key** 和 > **value** 参数为 MapIterator 类型，请参考示例 2 执行后续操作。
 
 **起始版本：** 9
 
@@ -332,7 +332,7 @@ for (let value of arrayValue) {
 get(key: K): V | undefined
 ```
 
-获取 key 对应的值。如果该 key 不在缓存中，则调用 [createDefault&lt;sup&gt;9+&lt;/sup&gt;](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#createDefault) 创建该 key。如果 **createDefault** 中指定的值 不为 **undefined**，则调用 [afterRemoval&lt;sup&gt;9+&lt;/sup&gt;](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#afterRemoval) 返回 **createDefault** 中指定的值。
+获取 key 对应的值。如果该 key 不在缓存中，则调用 [createDefault&lt;sup&gt;9+&lt;/sup&gt;](#createDefault) 创建该 key。如果 **createDefault** 中指定的值 不为 **undefined**，则调用 [afterRemoval&lt;sup&gt;9+&lt;/sup&gt;](#afterRemoval) 返回 **createDefault** 中指定的值。
 
 **起始版本：** 9
 

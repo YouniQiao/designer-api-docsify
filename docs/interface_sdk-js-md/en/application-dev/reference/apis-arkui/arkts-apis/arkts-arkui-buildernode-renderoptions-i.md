@@ -20,7 +20,7 @@ selfIdealSize?: Size
 
 Ideal size of the node. Default value: **{ width: 0, height: 0 }**.
 
-**Type:** [Size](arkts-arkui-graphics-size-i.md)
+**Type:** [Size](../../apis-na/arkts-apis/arkts-na-graphics-size-i.md)
 
 **Since:** 11
 
@@ -68,7 +68,7 @@ type?: NodeRenderType
 
 Rendering type of the node. Default value: **NodeRenderType.RENDER_TYPE_DISPLAY**.
 
-**Type:** [NodeRenderType](arkts-arkui-buildernode-noderendertype-e.md)
+**Type:** [NodeRenderType](../../apis-na/arkts-apis/arkts-na-buildernode-noderendertype-e.md)
 
 **Since:** 11
 

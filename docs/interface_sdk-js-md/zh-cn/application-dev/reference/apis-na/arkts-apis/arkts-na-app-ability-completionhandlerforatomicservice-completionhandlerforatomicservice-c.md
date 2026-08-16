@@ -1,6 +1,6 @@
 # CompletionHandlerForAtomicService
 
-CompletionHandlerForAtomicService提供了 [onAtomicServiceRequestSuccess](#onAtomicServiceRequestSuccess) 和 [onAtomicServiceRequestFailure](#onAtomicServiceRequestFailure) 两个回调函数，分别在打开原子化服务成功和失败时回调。
+CompletionHandlerForAtomicService提供了 [onAtomicServiceRequestSuccess](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md#onAtomicServiceRequestSuccess) 和 [onAtomicServiceRequestFailure](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md#onAtomicServiceRequestFailure) 两个回调函数，分别在打开原子化服务成功和失败时回调。
 
 **起始版本：** 23
 

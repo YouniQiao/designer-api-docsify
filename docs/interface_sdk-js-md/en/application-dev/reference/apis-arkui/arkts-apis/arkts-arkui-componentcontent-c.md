@@ -1,6 +1,6 @@
 # ComponentContent
 
-You can create an entity encapsulation component in either of the following ways: You can select either of the following methods during development: **ComponentContent** represents an entity encapsulation of component content, which can be created and transmitted outside of UI components. It allows you to encapsulate and decouple dialog box components. Its underlying implementation uses BuilderNode. For details, see BuilderNode. **ReactiveComponentContent** represents an entity encapsulation of component content, which can be created and transmitted outside of UI components. It allows you to encapsulate and decouple dialog box components. Its underlying implementation uses **ReactiveBuilderNode**. For details, see [ReactiveBuilderNode](arkts-arkui-buildernode-reactivebuildernode-c.md#ReactiveBuilderNode). > **NOTE：**> > - **ComponentContent** and **ReactiveComponentContent** are not available in DevEco Studio Previewer. > > - ComponentContent objects do not support JSON serialization.
+You can create an entity encapsulation component in either of the following ways: You can select either of the following methods during development: **ComponentContent** represents an entity encapsulation of component content, which can be created and transmitted outside of UI components. It allows you to encapsulate and decouple dialog box components. Its underlying implementation uses BuilderNode. For details, see BuilderNode. **ReactiveComponentContent** represents an entity encapsulation of component content, which can be created and transmitted outside of UI components. It allows you to encapsulate and decouple dialog box components. Its underlying implementation uses **ReactiveBuilderNode**. For details, see [ReactiveBuilderNode](../../apis-na/arkts-apis/arkts-na-buildernode-reactivebuildernode-c.md#ReactiveBuilderNode). > **NOTE：**> > - **ComponentContent** and **ReactiveComponentContent** are not available in DevEco Studio Previewer. > > - ComponentContent objects do not support JSON serialization.
 
 **Inheritance/Implementation:** ComponentContent extends Content
 
@@ -102,7 +102,7 @@ A constructor used to create a **ComponentContent** object.
 | uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | Yes | UI context required for creating a node. |
 | builder | WrappedBuilder&lt;[T]&gt; | Yes | WrappedBuilder** object that encapsulates a builder function that has parameters. |
 | args | T | Yes | Parameters of the builder function encapsulated in the **WrappedBuilder** object. |
-| options | [BuildOptions](arkts-arkui-buildernode-buildoptions-i.md) | Yes | Build options, which determine whether to support the behavior of nesting **@Builder** within **@Builder**. |
+| options | [BuildOptions](../../apis-na/arkts-apis/arkts-na-buildernode-buildoptions-i.md) | Yes | Build options, which determine whether to support the behavior of nesting **@Builder** within **@Builder**. |
 
 ## Examples
 

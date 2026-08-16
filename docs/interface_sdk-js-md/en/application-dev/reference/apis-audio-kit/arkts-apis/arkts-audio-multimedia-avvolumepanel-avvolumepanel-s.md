@@ -51,7 +51,7 @@ Sets the device volume through the volume panel. The value should be between min
 
 Sets the custom parameters of volume panel.
 
-**Type:** [AVVolumePanelParameter](../../apis-na/arkts-apis/arkts-na-multimedia-avvolumepanel-avvolumepanelparameter-c.md)
+**Type:** [AVVolumePanelParameter](arkts-audio-multimedia-avvolumepanel-avvolumepanelparameter-c.md)
 
 **Since:** 12
 

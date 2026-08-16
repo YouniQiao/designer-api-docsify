@@ -28,7 +28,7 @@ Lists all files in a directory. This API supports recursive listing of files and
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the directory. |
-| options | [ListFileExtOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-listfileextoptions-i.md) | No | Options for listing files. The default value is empty, indicating no recursive listing of files or file filtering and no limit on the number of files to be listed. |
+| options | [ListFileExtOptions](arkts-na-file-fs-listfileextoptions-i.md) | No | Options for listing files. The default value is empty, indicating no recursive listing of files or file filtering and no limit on the number of files to be listed. |
 
 **Return value:**
 

@@ -60,7 +60,7 @@ Sets a circle for shape clipping.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| circle | [Circle](arkts-arkui-graphics-circle-i.md) | Yes | Round shape. |
+| circle | [Circle](../../apis-na/arkts-apis/arkts-na-graphics-circle-i.md) | Yes | Round shape. |
 
 ## Examples
 
@@ -140,7 +140,7 @@ Sets the command for drawing a path.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | [CommandPath](arkts-arkui-graphics-commandpath-i.md) | Yes | Command for drawing a path. |
+| path | [CommandPath](../../apis-na/arkts-apis/arkts-na-graphics-commandpath-i.md) | Yes | Command for drawing a path. |
 
 ## Examples
 
@@ -219,7 +219,7 @@ Sets an oval shape for shape clipping.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| oval | [Rect](arkts-arkui-rect-t.md) | Yes | Oval shape. |
+| oval | [Rect](../../apis-na/arkts-apis/arkts-na-rect-t.md) | Yes | Oval shape. |
 
 ## Examples
 
@@ -303,7 +303,7 @@ Sets a rectangle for shape clipping.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | [Rect](arkts-arkui-rect-t.md) | Yes | Shape of the rectangle. |
+| rect | [Rect](../../apis-na/arkts-apis/arkts-na-rect-t.md) | Yes | Shape of the rectangle. |
 
 ## Examples
 
@@ -390,7 +390,7 @@ Sets a rounded rectangle for shape clipping.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| roundRect | [RoundRect](arkts-arkui-graphics-roundrect-i.md) | Yes | Shape of the rectangle with rounded corners. |
+| roundRect | [RoundRect](../../apis-na/arkts-apis/arkts-na-graphics-roundrect-i.md) | Yes | Shape of the rectangle with rounded corners. |
 
 ## Examples
 

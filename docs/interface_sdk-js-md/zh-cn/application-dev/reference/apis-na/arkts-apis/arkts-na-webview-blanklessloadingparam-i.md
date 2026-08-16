@@ -20,7 +20,7 @@ callback?: Callback<BlanklessFrameInterpolationInfo>
 
 Callback for the blankless frame interpolation, which is used to return the blankless frame interpolation information. Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[BlanklessFrameInterpolationInfo](arkts-na-webview-blanklessframeinterpolationinfo-i.md)&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BlanklessFrameInterpolationInfo](arkts-na-webview-blanklessframeinterpolationinfo-i.md)&gt;
 
 **起始版本：** 23
 

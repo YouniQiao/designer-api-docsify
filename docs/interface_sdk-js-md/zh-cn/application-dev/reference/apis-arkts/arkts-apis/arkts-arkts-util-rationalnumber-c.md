@@ -36,7 +36,7 @@ compare(another: RationalNumber): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| another | [RationalNumber](../../apis-na/arkts-apis/arkts-na-util-rationalnumber-c.md) | 是 | 表示其他有理数的对象。 |
+| another | [RationalNumber](arkts-arkts-util-rationalnumber-c.md) | 是 | 表示其他有理数的对象。 |
 
 **返回值：**
 
@@ -68,7 +68,7 @@ compareTo(another: RationalNumber): number
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| another | [RationalNumber](../../apis-na/arkts-apis/arkts-na-util-rationalnumber-c.md) | 是 | 表示其他有理数的对象。 |
+| another | [RationalNumber](arkts-arkts-util-rationalnumber-c.md) | 是 | 表示其他有理数的对象。 |
 
 **返回值：**
 
@@ -90,7 +90,7 @@ constructor(numerator: number, denominator: number)
 
 **废弃版本：** 9
 
-**替代接口：** [parseRationalNumber](../../apis-na/arkts-apis/arkts-na-util-rationalnumber-c.md#parseRationalNumber)
+**替代接口：** [parseRationalNumber](#parseRationalNumber)
 
 <!--Device-RationalNumber-constructor(numerator: number, denominator: number)--><!--Device-RationalNumber-constructor(numerator: number, denominator: number)-End-->
 
@@ -165,7 +165,7 @@ static createRationalFromString(rationalString: string): RationalNumber
 
 | 类型 | 说明 |
 | --- | --- |
-| [RationalNumber](../../apis-na/arkts-apis/arkts-na-util-rationalnumber-c.md) | 返回根据给定字符串生成的 RationalNumber 对象。 |
+| [RationalNumber](arkts-arkts-util-rationalnumber-c.md) | 返回根据给定字符串生成的 RationalNumber 对象。 |
 
 ## equals
 
@@ -233,7 +233,7 @@ static getCommonDivisor(number1: number, number2: number): number
 
 **废弃版本：** 9
 
-**替代接口：** [getCommonFactor](../../apis-na/arkts-apis/arkts-na-util-rationalnumber-c.md#getCommonFactor)
+**替代接口：** [getCommonFactor](#getCommonFactor)
 
 <!--Device-RationalNumber-static getCommonDivisor(number1: number, number2: number): number--><!--Device-RationalNumber-static getCommonDivisor(number1: number, number2: number): number-End-->
 
@@ -544,7 +544,7 @@ static parseRationalNumber(numerator: number, denominator: number): RationalNumb
 
 | 类型 | 说明 |
 | --- | --- |
-| [RationalNumber](../../apis-na/arkts-apis/arkts-na-util-rationalnumber-c.md) | 获取到的 **RationalNumber** 对象。 |
+| [RationalNumber](arkts-arkts-util-rationalnumber-c.md) | 获取到的 **RationalNumber** 对象。 |
 
 ## 示例
 

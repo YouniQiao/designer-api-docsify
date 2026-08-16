@@ -193,7 +193,7 @@ appendBundles(bundlesToBackup: string[], callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundlesToBackup | string[] | 是 | 需要备份的应用名称数组。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 添加备份应用完成后的异步回调。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 添加备份应用完成后的异步回调。 |
 
 **错误码：**
 

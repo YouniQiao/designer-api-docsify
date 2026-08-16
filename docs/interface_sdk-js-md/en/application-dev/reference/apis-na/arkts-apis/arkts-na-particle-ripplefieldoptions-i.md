@@ -68,7 +68,7 @@ center?: PositionT<double>
 
 The central point where the ripple field generates force. The top-left corner of the component is the origin of coordinates. The coordinate unit is vp.
 
-**Type:** [PositionT](../../apis-arkui/arkts-apis/arkts-arkui-positiont-t.md)&lt;double&gt;
+**Type:** [PositionT](arkts-na-positiont-t.md)&lt;double&gt;
 
 **Default:** {x:0,y:0}
 

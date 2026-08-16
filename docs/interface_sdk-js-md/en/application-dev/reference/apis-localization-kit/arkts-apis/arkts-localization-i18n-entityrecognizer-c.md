@@ -95,7 +95,7 @@ Obtains entity information in the **text** object.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[EntityInfoItem](arkts-localization-i18n-entityinfoitem-i.md)&gt; | List of entities in the text. |
+| Array&lt;[EntityInfoItem](../../apis-na/arkts-apis/arkts-na-i18n-entityinfoitem-i.md)&gt; | List of entities in the text. |
 
 **Error codes:**
 

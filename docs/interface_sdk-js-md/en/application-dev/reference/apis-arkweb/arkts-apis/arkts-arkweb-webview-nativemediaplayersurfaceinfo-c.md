@@ -48,7 +48,7 @@ rect: RectEvent
 
 Position of the surface.
 
-**Type:** [RectEvent](../../apis-na/arkts-apis/arkts-na-webview-rectevent-i.md)
+**Type:** [RectEvent](arkts-arkweb-webview-rectevent-i.md)
 
 **Since:** 12
 

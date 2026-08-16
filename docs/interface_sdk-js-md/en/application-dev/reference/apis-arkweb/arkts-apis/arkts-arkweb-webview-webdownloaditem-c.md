@@ -68,7 +68,7 @@ Deserialize web download from typed array.
 
 | Type | Description |
 | --- | --- |
-| [WebDownloadItem](../../apis-na/arkts-apis/arkts-na-webview-webdownloaditem-c.md) | Deserialize the serialized data into a WebDownloadItem. |
+| [WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md) | Deserialize the serialized data into a WebDownloadItem. |
 
 **Error codes:**
 
@@ -178,7 +178,7 @@ Get last error code of the web download.
 
 | Type | Description |
 | --- | --- |
-| [WebDownloadErrorCode](../../apis-na/arkts-apis/arkts-na-webview-webdownloaderrorcode-e.md) | Returns the last error code. |
+| [WebDownloadErrorCode](arkts-arkweb-webview-webdownloaderrorcode-e.md) | Returns the last error code. |
 
 ## getMethod
 
@@ -360,7 +360,7 @@ Get state of the web download.
 
 | Type | Description |
 | --- | --- |
-| [WebDownloadState](../../apis-na/arkts-apis/arkts-na-webview-webdownloadstate-e.md) | Returns the current download state. |
+| [WebDownloadState](arkts-arkweb-webview-webdownloadstate-e.md) | Returns the current download state. |
 
 ## getSuggestedFileName
 

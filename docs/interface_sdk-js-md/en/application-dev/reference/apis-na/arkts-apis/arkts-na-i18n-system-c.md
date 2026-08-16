@@ -144,7 +144,7 @@ Obtains the first day of a week in the system settings.
 
 | Type | Description |
 | --- | --- |
-| [WeekDay](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-weekday-e.md) | Start day of a week. |
+| [WeekDay](arkts-na-i18n-weekday-e.md) | Start day of a week. |
 
 ## getFirstPreferredLanguage
 
@@ -406,7 +406,7 @@ Obtains the name of a temperature unit.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [TemperatureType](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-temperaturetype-e.md) | Yes | Temperature unit. |
+| type | [TemperatureType](arkts-na-i18n-temperaturetype-e.md) | Yes | Temperature unit. |
 
 **Return value:**
 
@@ -444,7 +444,7 @@ Obtains the temperature unit of the system.
 
 | Type | Description |
 | --- | --- |
-| [TemperatureType](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-temperaturetype-e.md) | Temperature unit. |
+| [TemperatureType](arkts-na-i18n-temperaturetype-e.md) | Temperature unit. |
 
 ## getUsingLocalDigit
 

@@ -22,7 +22,7 @@ function getSensorList(callback: AsyncCallback<Array<Sensor>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;Sensor&gt;&gt; | 是 | 回调函数，异步返回传感器属性列表。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Sensor&gt;&gt; | 是 | 回调函数，异步返回传感器属性列表。 |
 
 **错误码：**
 

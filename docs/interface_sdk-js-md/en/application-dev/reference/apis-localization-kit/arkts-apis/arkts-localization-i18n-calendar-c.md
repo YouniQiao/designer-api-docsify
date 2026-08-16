@@ -42,7 +42,7 @@ Performs addition or subtraction on the calendar attributes of this **Calendar**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| field | string | Yes | Calendar attribute. The value can be any of the following: **year**, **month**, **week_of_year**, **week_of_month**, **date**, **day_of_year**, **day_of_week**, **day_of_week_in_month**, **hour**, **hour_of_day**, **minute**, **second**, **millisecond**. For details about the values, see [get](#get). |
+| field | string | Yes | Calendar attribute. The value can be any of the following: **year**, **month**, **week_of_year**, **week_of_month**, **date**, **day_of_year**, **day_of_week**, **day_of_week_in_month**, **hour**, **hour_of_day**, **minute**, **second**, **millisecond**. For details about the values, see [get](../../apis-na/arkts-apis/arkts-na-i18n-calendar-c.md#get). |
 | amount | int | Yes | Addition or subtraction amount. |
 
 **Error codes:**

@@ -8,7 +8,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [ShowDialogOptions](arkts-arkui-promptaction-showdialogoptions-i.md#ShowDialogOptions)
+**替代接口：** [ShowDialogOptions](../../apis-na/arkts-apis/arkts-na-promptaction-showdialogoptions-i.md#ShowDialogOptions)
 
 <!--Device-prompt-interface ShowDialogOptions--><!--Device-prompt-interface ShowDialogOptions-End-->
 
@@ -30,7 +30,7 @@ buttons?: [Button, Button?, Button?]
 
 **废弃版本：** 9
 
-**替代接口：** [buttons](arkts-arkui-promptaction-showdialogoptions-i.md#buttons)
+**替代接口：** [buttons](../../apis-na/arkts-apis/arkts-na-promptaction-showdialogoptions-i.md#buttons)
 
 <!--Device-ShowDialogOptions-buttons?: [Button, Button?, Button?]--><!--Device-ShowDialogOptions-buttons?: [Button, Button?, Button?]-End-->
 
@@ -52,7 +52,7 @@ message?: string
 
 **废弃版本：** 9
 
-**替代接口：** [message](arkts-arkui-promptaction-showdialogoptions-i.md#message)
+**替代接口：** [message](../../apis-na/arkts-apis/arkts-na-promptaction-showdialogoptions-i.md#message)
 
 <!--Device-ShowDialogOptions-message?: string--><!--Device-ShowDialogOptions-message?: string-End-->
 
@@ -74,7 +74,7 @@ title?: string
 
 **废弃版本：** 9
 
-**替代接口：** [title](arkts-arkui-promptaction-showdialogoptions-i.md#title)
+**替代接口：** [title](../../apis-na/arkts-apis/arkts-na-promptaction-showdialogoptions-i.md#title)
 
 <!--Device-ShowDialogOptions-title?: string--><!--Device-ShowDialogOptions-title?: string-End-->
 

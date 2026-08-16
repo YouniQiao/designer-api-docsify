@@ -1,6 +1,6 @@
 # OfflineResourceMap
 
-Implements an **OfflineResourceMap** object, which is used to set information related to local offline resources that will be injected into memory cache through the [injectOfflineResources](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#injectOfflineResources) API. The ArkWeb engine will generate resource caches based on this information and control the validity period of the cache accordingly.
+Implements an **OfflineResourceMap** object, which is used to set information related to local offline resources that will be injected into memory cache through the [injectOfflineResources](arkts-arkweb-webview-webviewcontroller-c.md#injectOfflineResources) API. The ArkWeb engine will generate resource caches based on this information and control the validity period of the cache accordingly.
 
 **Since:** 12
 
@@ -66,7 +66,7 @@ type: OfflineResourceType
 
 Resource type. Currently, only the JavaScript, image, and CSS types are supported.
 
-**Type:** [OfflineResourceType](../../apis-na/arkts-apis/arkts-na-webview-offlineresourcetype-e.md)
+**Type:** [OfflineResourceType](arkts-arkweb-webview-offlineresourcetype-e.md)
 
 **Since:** 12
 

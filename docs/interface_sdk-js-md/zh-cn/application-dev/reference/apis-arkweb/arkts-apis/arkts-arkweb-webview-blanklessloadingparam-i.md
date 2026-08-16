@@ -20,7 +20,7 @@ callback?: Callback<BlanklessFrameInterpolationInfo>
 
 白屏插帧回调函数，用于返回白屏插帧信息 设备行为差异:仅支持手机平台，其他平台返回801
 
-**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[BlanklessFrameInterpolationInfo](../../apis-na/arkts-apis/arkts-na-webview-blanklessframeinterpolationinfo-i.md)&gt;
+**类型：** [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BlanklessFrameInterpolationInfo](../../apis-na/arkts-apis/arkts-na-webview-blanklessframeinterpolationinfo-i.md)&gt;
 
 **起始版本：** 23
 

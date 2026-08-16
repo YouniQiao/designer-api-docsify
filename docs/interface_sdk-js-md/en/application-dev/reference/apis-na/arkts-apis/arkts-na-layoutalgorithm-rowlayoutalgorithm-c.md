@@ -114,7 +114,7 @@ Alignment mode of the child components along the horizontal axis.
 
 Horizontal layout element spacing.
 
-**Type:** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](arkts-na-graphics-lengthmetrics-c.md)
 
 **Since:** 24
 

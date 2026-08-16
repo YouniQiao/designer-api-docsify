@@ -127,7 +127,7 @@ Get the web storage quota with the origin.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | origin | string | 是 | The origin which to be inquired. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;double&gt; | 是 | the callback of getOriginQuota. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;double&gt; | 是 | the callback of getOriginQuota. |
 
 **错误码：**
 
@@ -196,7 +196,7 @@ Get the web amount of storage with the origin.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | origin | string | 是 | The origin which to be inquired. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;double&gt; | 是 | the callback of getOriginUsage. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;double&gt; | 是 | the callback of getOriginUsage. |
 
 **错误码：**
 
@@ -258,7 +258,7 @@ Obtains information about all origins that are currently using the Web SQL Datab
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[WebStorageOrigin](arkts-na-webview-webstorageorigin-i.md)&gt;&gt; | 是 | Callback used to return the information about the origins. For details, see [WebStorageOrigin](arkts-na-webview-webstorageorigin-i.md#WebStorageOrigin). |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[WebStorageOrigin](arkts-na-webview-webstorageorigin-i.md)&gt;&gt; | 是 | Callback used to return the information about the origins. For details, see [WebStorageOrigin](arkts-na-webview-webstorageorigin-i.md#WebStorageOrigin). |
 
 **错误码：**
 

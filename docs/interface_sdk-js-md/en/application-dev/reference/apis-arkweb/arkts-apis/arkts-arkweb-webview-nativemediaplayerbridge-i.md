@@ -262,7 +262,7 @@ Suspends the player and save its status information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [SuspendType](../../apis-na/arkts-apis/arkts-na-webview-suspendtype-e.md) | Yes | Suspension type of the player. |
+| type | [SuspendType](arkts-arkweb-webview-suspendtype-e.md) | Yes | Suspension type of the player. |
 
 ## updateRect
 

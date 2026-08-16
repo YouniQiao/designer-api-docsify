@@ -27,7 +27,7 @@ function inputDialerSpecialCode(inputCode: string, callback: AsyncCallback<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | inputCode | string | 是 | 暗码。支持暗码字段, 如：*#*#2846579#*#*(工程菜单)。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 以回调函数的方式返回暗码广播的结果。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 以回调函数的方式返回暗码广播的结果。 |
 
 **错误码：**
 

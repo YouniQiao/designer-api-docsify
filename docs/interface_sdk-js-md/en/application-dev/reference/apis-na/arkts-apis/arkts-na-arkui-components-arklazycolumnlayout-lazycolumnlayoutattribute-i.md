@@ -182,7 +182,7 @@ space(space: LengthMetrics | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| space | [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | Yes |  |
+| space | [LengthMetrics](arkts-na-graphics-lengthmetrics-c.md) \| undefined | Yes |  |
 
 **Return value:**
 

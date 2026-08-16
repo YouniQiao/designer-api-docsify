@@ -26,7 +26,7 @@ Obtains the value of dsds mode.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[DsdsMode](arkts-telephony-sim-dsdsmode-e-sys.md)&gt; | 是 | Indicates the callback for getting one of the following dsds mode states: &lt;ul&gt; &lt;li&gt;{@code DsdsMode#DSDS_MODE_V2} &lt;li&gt;{@code DsdsMode#DSDS_MODE_V3} &lt;li&gt;{@code DsdsMode#DSDS_MODE_V5_TDM} &lt;li&gt;{@code DsdsMode#DSDS_MODE_V5_DSDA} &lt;/ul&gt; |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[DsdsMode](arkts-telephony-sim-dsdsmode-e-sys.md)&gt; | 是 | Indicates the callback for getting one of the following dsds mode states: &lt;ul&gt; &lt;li&gt;{@code DsdsMode#DSDS_MODE_V2} &lt;li&gt;{@code DsdsMode#DSDS_MODE_V3} &lt;li&gt;{@code DsdsMode#DSDS_MODE_V5_TDM} &lt;li&gt;{@code DsdsMode#DSDS_MODE_V5_DSDA} &lt;/ul&gt; |
 
 **错误码：**
 

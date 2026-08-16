@@ -21,7 +21,7 @@
 
 定义列表项左侧以及中间元素。 默认不设置或设置为undefined时，不显示左侧和中间元素。
 
-**类型：** [ContentItemV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-composelistitemv2-contentitemv2-c.md)
+**类型：** [ContentItemV2](arkts-arkui-arkui-advanced-composelistitemv2-contentitemv2-c.md)
 
 **起始版本：** 26.0.0
 
@@ -46,7 +46,7 @@
 
 定义列表项右侧元素。 默认不设置或设置为undefined时，不显示右侧元素。
 
-**类型：** [OperateItemV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-composelistitemv2-operateitemv2-c.md)
+**类型：** [OperateItemV2](arkts-arkui-arkui-advanced-composelistitemv2-operateitemv2-c.md)
 
 **起始版本：** 26.0.0
 

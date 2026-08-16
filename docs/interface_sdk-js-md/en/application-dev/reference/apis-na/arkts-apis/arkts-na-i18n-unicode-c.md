@@ -44,7 +44,7 @@ Detects the encoding information of the input byte stream.
 
 | Type | Description |
 | --- | --- |
-| [EncodingInfo](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-encodinginfo-i.md) | An object containing the detected encoding name and detection confidence level. |
+| [EncodingInfo](arkts-na-i18n-encodinginfo-i.md) | An object containing the detected encoding name and detection confidence level. |
 
 ## getType
 

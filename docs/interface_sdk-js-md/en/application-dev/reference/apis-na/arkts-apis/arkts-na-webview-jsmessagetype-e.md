@@ -1,6 +1,6 @@
 # JsMessageType
 
-Enum type supplied to [runJavaScriptExt](arkts-na-webview-webviewcontroller-c.md#runJavaScriptExt) for indicating the result of JavaScript code execution.
+Enum type supplied to [runJavaScriptExt](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#runJavaScriptExt) for indicating the result of JavaScript code execution.
 
 **Since:** 23
 

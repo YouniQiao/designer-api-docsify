@@ -27,7 +27,7 @@ function onChannelStateChange(channelId: int, callback: Callback<ChannelStateInf
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | channelId | int | 是 | 打开代理通道时获取的channelId。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ChannelStateInfo](arkts-distributedservice-proxychannelmanager-channelstateinfo-i.md)&gt; | 是 | 回调函数，返回接收到的通道状态。多次注册callback， 最后一次注册的callback生效 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ChannelStateInfo](arkts-distributedservice-proxychannelmanager-channelstateinfo-i.md)&gt; | 是 | 回调函数，返回接收到的通道状态。多次注册callback， 最后一次注册的callback生效 |
 
 **错误码：**
 

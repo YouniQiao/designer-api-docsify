@@ -42,13 +42,13 @@ Limits a value to this **Scope**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | Yes | Value specified. |
+| value | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Value specified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | Returns **lowerObj** if the specified value is less than the lower limit; returns **upperObj** if the specified value is greater than the upper limit; returns the specified value if it is within this **Scope**. |
+| [ScopeType](arkts-arkts-util-scopetype-t.md) | Returns **lowerObj** if the specified value is less than the lower limit; returns **upperObj** if the specified value is greater than the upper limit; returns the specified value if it is within this **Scope**. |
 
 ## Examples
 
@@ -106,8 +106,8 @@ A constructor used to create a **ScopeHelper** object with the specified upper a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lowerObj | [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | Yes | Lower limit of the **Scope** object. |
-| upperObj | [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | Yes | Upper limit of the **Scope** object. |
+| lowerObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Lower limit of the **Scope** object. |
+| upperObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Upper limit of the **Scope** object. |
 
 ## Examples
 
@@ -162,7 +162,7 @@ Checks whether a range is within this **Scope**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | Yes | Value specified. |
+| value | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Value specified. |
 
 **Return value:**
 
@@ -226,7 +226,7 @@ Checks whether a range is within this **Scope**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | [ScopeHelper](../../apis-na/arkts-apis/arkts-na-util-scopehelper-c.md) | Yes | Scope** specified. |
+| range | [ScopeHelper](arkts-arkts-util-scopehelper-c.md) | Yes | Scope** specified. |
 
 **Return value:**
 
@@ -292,14 +292,14 @@ Obtains the union set of this **Scope** and the given lower and upper limits.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lowerObj | [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | Yes | Lower limit. |
-| upperObj | [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | Yes | Upper limit. |
+| lowerObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Lower limit. |
+| upperObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Upper limit. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ScopeHelper](../../apis-na/arkts-apis/arkts-na-util-scopehelper-c.md) | Union set of this **Scope** and the given lower and upper limits. |
+| [ScopeHelper](arkts-arkts-util-scopehelper-c.md) | Union set of this **Scope** and the given lower and upper limits. |
 
 ## Examples
 
@@ -358,13 +358,13 @@ Obtains the union set of this **Scope** and the given **Scope**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | [ScopeHelper](../../apis-na/arkts-apis/arkts-na-util-scopehelper-c.md) | Yes | Scope** specified. |
+| range | [ScopeHelper](arkts-arkts-util-scopehelper-c.md) | Yes | Scope** specified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ScopeHelper](../../apis-na/arkts-apis/arkts-na-util-scopehelper-c.md) | Union set of this **Scope** and the given **Scope**. |
+| [ScopeHelper](arkts-arkts-util-scopehelper-c.md) | Union set of this **Scope** and the given **Scope**. |
 
 ## Examples
 
@@ -424,13 +424,13 @@ Obtains the union set of this **Scope** and the given value.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | Yes | Value specified. |
+| value | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Value specified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ScopeHelper](../../apis-na/arkts-apis/arkts-na-util-scopehelper-c.md) | Union set of this **Scope** and the given value. |
+| [ScopeHelper](arkts-arkts-util-scopehelper-c.md) | Union set of this **Scope** and the given value. |
 
 ## Examples
 
@@ -488,7 +488,7 @@ Obtains the lower limit of this **Scope**.
 
 | Type | Description |
 | --- | --- |
-| [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | Lower limit of this **Scope**. |
+| [ScopeType](arkts-arkts-util-scopetype-t.md) | Lower limit of this **Scope**. |
 
 ## Examples
 
@@ -545,7 +545,7 @@ Obtains the upper limit of this **Scope**.
 
 | Type | Description |
 | --- | --- |
-| [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | Upper limit of this **Scope**. |
+| [ScopeType](arkts-arkts-util-scopetype-t.md) | Upper limit of this **Scope**. |
 
 ## Examples
 
@@ -602,13 +602,13 @@ Obtains the intersection of this **Scope** and the given **Scope**. If the inter
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| range | [ScopeHelper](../../apis-na/arkts-apis/arkts-na-util-scopehelper-c.md) | Yes | Scope** specified. |
+| range | [ScopeHelper](arkts-arkts-util-scopehelper-c.md) | Yes | Scope** specified. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ScopeHelper](../../apis-na/arkts-apis/arkts-na-util-scopehelper-c.md) | Intersection of this **Scope** and the given **Scope**. |
+| [ScopeHelper](arkts-arkts-util-scopehelper-c.md) | Intersection of this **Scope** and the given **Scope**. |
 
 ## Examples
 
@@ -668,14 +668,14 @@ Obtains the intersection of this **Scope** and the given lower and upper limits.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| lowerObj | [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | Yes | Lower limit. |
-| upperObj | [ScopeType](../../apis-na/arkts-apis/arkts-na-util-scopetype-t.md) | Yes | Upper limit. |
+| lowerObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Lower limit. |
+| upperObj | [ScopeType](arkts-arkts-util-scopetype-t.md) | Yes | Upper limit. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ScopeHelper](../../apis-na/arkts-apis/arkts-na-util-scopehelper-c.md) | Intersection of this **Scope** and the given lower and upper limits. |
+| [ScopeHelper](arkts-arkts-util-scopehelper-c.md) | Intersection of this **Scope** and the given lower and upper limits. |
 
 ## Examples
 

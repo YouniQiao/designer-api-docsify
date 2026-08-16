@@ -14,7 +14,7 @@ function getErrorString(errno: number): string
 
 **废弃版本：** 9
 
-**替代接口：** [errnoToString](../../apis-na/arkts-apis/arkts-na-util-errnotostring-f.md#errnoToString)
+**替代接口：** [errnoToString](arkts-arkts-util-errnotostring-f.md#errnoToString)
 
 <!--Device-util-function getErrorString(errno: number): string--><!--Device-util-function getErrorString(errno: number): string-End-->
 

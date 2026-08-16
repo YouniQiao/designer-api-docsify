@@ -33,5 +33,5 @@ WithEnv组件用于为子组件树设置局部环境变量作用域。开发者�
 
 | 类型 | 说明 |
 | --- | --- |
-| [WithEnvAttribute](arkts-na-arkui-withenv-withenvattribute-i.md) |  |
+| [WithEnvAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-withenv-withenvattribute-c.md) |  |
 

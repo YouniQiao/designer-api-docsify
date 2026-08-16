@@ -2,7 +2,7 @@
 
 Use the PictureDrawableDescriptor class to get the resource of picture or resource descriptor information.
 
-**Inheritance/Implementation:** PictureDrawableDescriptor extends [DrawableDescriptor](arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md#DrawableDescriptor)
+**Inheritance/Implementation:** PictureDrawableDescriptor extends [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#DrawableDescriptor)
 
 **Since:** 26.0.0
 
@@ -64,5 +64,5 @@ Set HDR composition config.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| config | [HdrCompositionConfig](arkts-na-arkui-drawabledescriptor-hdrcompositionconfig-i.md) | Yes | Indicates the HDR composition config. |
+| config | [HdrCompositionConfig](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-hdrcompositionconfig-i.md) | Yes | Indicates the HDR composition config. |
 

@@ -87,7 +87,7 @@ offConnectionAccepted(callback?: Callback<Connection>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | 否 | 注册的回调函数。[Connection](arkts-distributedservice-linkenhance-connection-i.md#Connection)返回的连接对象。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | 否 | 注册的回调函数。[Connection](arkts-distributedservice-linkenhance-connection-i.md#Connection)返回的连接对象。 |
 
 **错误码：**
 
@@ -149,7 +149,7 @@ offServerStopped(callback?: Callback<int>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | 否 | 注册的回调函数，int为返回的错误码。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 否 | 注册的回调函数，int为返回的错误码。 |
 
 **错误码：**
 
@@ -212,7 +212,7 @@ off(type: 'connectionAccepted', callback?: Callback<Connection>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'connectionAccepted' | 是 | 事件回调类型，支持的事件为'connectionAccepted'，收到对端连接，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | 否 | 注册的回调函数。[Connection](arkts-distributedservice-linkenhance-connection-i.md#Connection)返回的连接对象。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | 否 | 注册的回调函数。[Connection](arkts-distributedservice-linkenhance-connection-i.md#Connection)返回的连接对象。 |
 
 **错误码：**
 
@@ -275,7 +275,7 @@ off(type: 'serverStopped', callback?: Callback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'serverStopped' | 是 | 事件回调类型，支持的事件为'serverStopped'，底层服务异常时触发。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | 否 | 注册的回调函数，number为返回的错误码。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 否 | 注册的回调函数，number为返回的错误码。 |
 
 **错误码：**
 
@@ -337,7 +337,7 @@ onConnectionAccepted(callback: Callback<Connection>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | 是 | 注册的回调函数。[Connection](arkts-distributedservice-linkenhance-connection-i.md#Connection)返回的连接对象。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | 是 | 注册的回调函数。[Connection](arkts-distributedservice-linkenhance-connection-i.md#Connection)返回的连接对象。 |
 
 **错误码：**
 
@@ -399,7 +399,7 @@ onServerStopped(callback: Callback<int>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;int&gt; | 是 | 注册的回调函数，int为返回的错误码。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;int&gt; | 是 | 注册的回调函数，int为返回的错误码。 |
 
 **错误码：**
 
@@ -462,7 +462,7 @@ on(type: 'connectionAccepted', callback: Callback<Connection>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'connectionAccepted' | 是 | 事件回调类型，支持的事件为'connectionAccepted'，收到对端连接，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | 是 | 注册的回调函数。[Connection](arkts-distributedservice-linkenhance-connection-i.md#Connection)返回的连接对象。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Connection](arkts-distributedservice-linkenhance-connection-i.md)&gt; | 是 | 注册的回调函数。[Connection](arkts-distributedservice-linkenhance-connection-i.md#Connection)返回的连接对象。 |
 
 **错误码：**
 
@@ -525,7 +525,7 @@ on(type: 'serverStopped', callback: Callback<number>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'serverStopped' | 是 | 事件回调类型，支持的事件为'serverStopped'，底层服务异常时，触发该事件。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;number&gt; | 是 | 注册的回调函数，number为返回的错误码。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | 是 | 注册的回调函数，number为返回的错误码。 |
 
 **错误码：**
 

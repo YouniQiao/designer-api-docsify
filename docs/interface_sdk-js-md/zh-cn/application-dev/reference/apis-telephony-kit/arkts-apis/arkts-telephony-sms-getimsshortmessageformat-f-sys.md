@@ -24,7 +24,7 @@ function getImsShortMessageFormat(callback: AsyncCallback<string>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | 指示用于获取格式、3gpp、3gpp2或未知的回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 指示用于获取格式、3gpp、3gpp2或未知的回调函数。 |
 
 **错误码：**
 

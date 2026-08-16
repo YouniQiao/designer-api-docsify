@@ -2,7 +2,7 @@
 
 Interface for RectShape constructor parameters.
 
-**Inheritance/Implementation:** RectShapeOptions extends [ShapeSize](../../apis-arkui/arkts-apis/arkts-arkui-arkui-shape-shapesize-i.md#ShapeSize)
+**Inheritance/Implementation:** RectShapeOptions extends [ShapeSize](arkts-na-arkui-shape-shapesize-i.md#ShapeSize)
 
 **Since:** 23
 

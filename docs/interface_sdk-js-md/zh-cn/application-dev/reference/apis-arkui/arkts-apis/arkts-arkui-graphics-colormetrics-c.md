@@ -38,13 +38,13 @@ autoRefresh?(value: boolean): ColorMetrics
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 使用[resourceColor](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md#resourceColor)方法构造的ColorMetrics对象是否在系统配置变化时自动刷新颜色值。 <br>true表示主动监听系统配置变化，变化时值刷新为对应配置下的资源值。 <br>false表示不主动监听系统配置变化。 |
+| value | boolean | 是 | 使用[resourceColor](#resourceColor)方法构造的ColorMetrics对象是否在系统配置变化时自动刷新颜色值。 <br>true表示主动监听系统配置变化，变化时值刷新为对应配置下的资源值。 <br>false表示不主动监听系统配置变化。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md) | 返回设置自动刷新属性后的ColorMetrics对象。 |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | 返回设置自动刷新属性后的ColorMetrics对象。 |
 
 ## blendColor
 
@@ -72,13 +72,13 @@ blendColor(overlayColor: ColorMetrics): ColorMetrics
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| overlayColor | [ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md) | 是 | 要叠加在上方的颜色对象。alpha属性决定叠加强度。1.0表示完全覆盖，0.0表示完全透明，混合结果为原色。 |
+| overlayColor | [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | 是 | 要叠加在上方的颜色对象。alpha属性决定叠加强度。1.0表示完全覆盖，0.0表示完全透明，混合结果为原色。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md) | 新的颜色对象，其red、green、blue和alpha通道均为当前颜色与叠加颜色混合后的结果值。 |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | 新的颜色对象，其red、green、blue和alpha通道均为当前颜色与叠加颜色混合后的结果值。 |
 
 **错误码：**
 
@@ -122,7 +122,7 @@ static colorWithSpace(colorSpace: ColorSpace, red: number, green: number, blue: 
 
 | 类型 | 说明 |
 | --- | --- |
-| [ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md) | 指定色彩空间下rgba格式颜色对应的颜色对象。 |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | 指定色彩空间下rgba格式颜色对应的颜色对象。 |
 
 ## numeric
 
@@ -156,7 +156,7 @@ static numeric(value: number): ColorMetrics
 
 | 类型 | 说明 |
 | --- | --- |
-| [ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md) | HEX格式颜色对应的颜色对象。 |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | HEX格式颜色对应的颜色对象。 |
 
 ## resourceColor
 
@@ -190,7 +190,7 @@ static resourceColor(color: ResourceColor): ColorMetrics
 
 | 类型 | 说明 |
 | --- | --- |
-| [ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md) | 资源格式颜色对应的颜色对象。 |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | 资源格式颜色对应的颜色对象。 |
 
 **错误码：**
 
@@ -234,5 +234,5 @@ static rgba(red: number, green: number, blue: number, alpha?: number): ColorMetr
 
 | 类型 | 说明 |
 | --- | --- |
-| [ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md) | rgb或rgba格式颜色对应的颜色对象。 |
+| [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | rgb或rgba格式颜色对应的颜色对象。 |
 

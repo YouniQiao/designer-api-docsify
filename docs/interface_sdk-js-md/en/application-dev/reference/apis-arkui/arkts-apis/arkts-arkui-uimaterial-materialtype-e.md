@@ -20,7 +20,7 @@ Enumerates system material types.
 IMMERSIVE = 2
 ```
 
-Immersive material type. It is used only by the **type** attribute of the [MaterialInfo](../../apis-na/arkts-apis/arkts-na-uimaterial-materialinfo-i.md#MaterialInfo) API to identify the current material type and does not map to underlying features. The actual material effect is implemented by the [ImmersiveMaterial](../../apis-na/arkts-apis/arkts-na-uimaterial-immersivematerial-c.md#ImmersiveMaterial) class.
+Immersive material type. It is used only by the **type** attribute of the [MaterialInfo](arkts-arkui-uimaterial-materialinfo-i.md#MaterialInfo) API to identify the current material type and does not map to underlying features. The actual material effect is implemented by the [ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md#ImmersiveMaterial) class.
 
 **Since:** 26.0.0
 

@@ -1,6 +1,6 @@
 # BackForwardList
 
-Provides back and forward history list information method. related to [HistoryItem](../../apis-na/arkts-apis/arkts-na-webview-historyitem-i.md#HistoryItem).
+Provides back and forward history list information method. related to [HistoryItem](arkts-arkweb-webview-historyitem-i.md#HistoryItem).
 
 **Since:** 9
 
@@ -48,7 +48,7 @@ Get history entry at given index.
 
 | Type | Description |
 | --- | --- |
-| [HistoryItem](../../apis-na/arkts-apis/arkts-na-webview-historyitem-i.md) | HistoryItem at given index in back forward list. |
+| [HistoryItem](arkts-arkweb-webview-historyitem-i.md) | HistoryItem at given index in back forward list. |
 
 **Error codes:**
 

@@ -38,13 +38,13 @@ autoRefresh?(value: boolean): LengthMetrics
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | boolean | 是 | 使用[resource](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md#resource)方法构造的LengthMetrics对象是否在系统配置变化时自动刷新值。 <br>true表示主动监听系统配置变化，在变化时值刷新为对应配置下的资源值。 <br>false表示不主动监听系统配置变化。 |
+| value | boolean | 是 | 使用[resource](#resource)方法构造的LengthMetrics对象是否在系统配置变化时自动刷新值。 <br>true表示主动监听系统配置变化，在变化时值刷新为对应配置下的资源值。 <br>false表示不主动监听系统配置变化。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md) | 返回设置自动刷新属性后的LengthMetrics对象。 |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | 返回设置自动刷新属性后的LengthMetrics对象。 |
 
 ## constructor
 
@@ -73,7 +73,7 @@ LengthMetrics的构造函数。若参数unit不传入值或传入undefined，返
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | number | 是 | 长度属性的值。 <br>取值范围：(-∞, +∞) |
-| unit | [LengthUnit](../../apis-na/arkts-apis/arkts-na-graphics-lengthunit-e.md) | 否 | 长度属性的单位，默认为VP。 |
+| unit | [LengthUnit](arkts-arkui-graphics-lengthunit-e.md) | 否 | 长度属性的单位，默认为VP。 |
 
 ## fp
 
@@ -107,7 +107,7 @@ static fp(value: number): LengthMetrics
 
 | 类型 | 说明 |
 | --- | --- |
-| [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md) | 单位为FP的长度属性对象。 |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | 单位为FP的长度属性对象。 |
 
 ## lpx
 
@@ -141,7 +141,7 @@ static lpx(value: number): LengthMetrics
 
 | 类型 | 说明 |
 | --- | --- |
-| [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md) | 单位为LPX的长度属性对象。 |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | 单位为LPX的长度属性对象。 |
 
 ## percent
 
@@ -175,7 +175,7 @@ static percent(value: number): LengthMetrics
 
 | 类型 | 说明 |
 | --- | --- |
-| [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md) | 单位为PERCENT的长度属性对象，值为1表示100%。 |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | 单位为PERCENT的长度属性对象，值为1表示100%。 |
 
 ## px
 
@@ -209,7 +209,7 @@ static px(value: number): LengthMetrics
 
 | 类型 | 说明 |
 | --- | --- |
-| [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md) | 单位为PX的长度属性对象。 |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | 单位为PX的长度属性对象。 |
 
 ## resource
 
@@ -243,7 +243,7 @@ static resource(value: Resource): LengthMetrics
 
 | 类型 | 说明 |
 | --- | --- |
-| [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md) | Resource类型资源的长度属性对象。 |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Resource类型资源的长度属性对象。 |
 
 ## 示例
 
@@ -323,7 +323,7 @@ static vp(value: number): LengthMetrics
 
 | 类型 | 说明 |
 | --- | --- |
-| [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md) | 单位为VP的长度属性对象。 |
+| [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | 单位为VP的长度属性对象。 |
 
 ## unit
 
@@ -333,7 +333,7 @@ public unit: LengthUnit
 
 长度属性的单位，默认为VP。
 
-**类型：** [LengthUnit](../../apis-na/arkts-apis/arkts-na-graphics-lengthunit-e.md)
+**类型：** [LengthUnit](arkts-arkui-graphics-lengthunit-e.md)
 
 **默认值：** VP
 

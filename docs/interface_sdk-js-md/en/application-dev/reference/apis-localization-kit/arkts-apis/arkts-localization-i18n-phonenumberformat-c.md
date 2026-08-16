@@ -43,7 +43,7 @@ Creates a **PhoneNumberFormat** object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | country | string | Yes | Country/region to which the phone number to be formatted belongs. |
-| options | [PhoneNumberFormatOptions](arkts-localization-i18n-phonenumberformatoptions-i.md) | No | Options for **PhoneNumberFormat** object initialization. The default value is **NATIONAL**. |
+| options | [PhoneNumberFormatOptions](../../apis-na/arkts-apis/arkts-na-i18n-phonenumberformatoptions-i.md) | No | Options for **PhoneNumberFormat** object initialization. The default value is **NATIONAL**. |
 
 ## Examples
 

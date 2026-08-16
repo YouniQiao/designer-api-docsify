@@ -18,7 +18,7 @@
 build(builder: WrappedBuilder<Args>, arg?: Object): void
 ```
 
-依照传入的对象创建组件树，并持有组件树的根节点。无状态的UI方法[@Builder](../../../ui/state-management/arkts-builder.md)最多拥有一个根节点。 支持自定义组件。 > **说明：** > > - @Builder嵌套使用的时候需要保证内外的@Builder方法的入参对象一致。 > > - 最外层的@Builder只支持一个入参。 > > - build的参数是值传递，需要使用[update](../../apis-na/arkts-apis/arkts-na-buildernode-c.md#update)接口进行更新。 > > - 需要操作BuilderNode中的对象时，需要保证其引用不被回收。当BuilderNode对象被虚拟机回收之后，它的FrameNode、 > [RenderNode](arkts-arkui-rendernode-c.md#RenderNode)对象也会与后端节点解引用。即从BuilderNode中获取的FrameNode对象不对应任何一个节点。 > > - BuilderNode对象会持有实体节点的引用。如果不需要使用BuilderNode前端对象管理后端节点，可以调用[dispose](../../apis-na/arkts-apis/arkts-na-buildernode-c.md#dispose)接口，实现前后端对象的解绑。
+依照传入的对象创建组件树，并持有组件树的根节点。无状态的UI方法[@Builder](../../../ui/state-management/arkts-builder.md)最多拥有一个根节点。 支持自定义组件。 > **说明：** > > - @Builder嵌套使用的时候需要保证内外的@Builder方法的入参对象一致。 > > - 最外层的@Builder只支持一个入参。 > > - build的参数是值传递，需要使用[update](../../apis-na/arkts-apis/arkts-na-buildernode-c.md#update)接口进行更新。 > > - 需要操作BuilderNode中的对象时，需要保证其引用不被回收。当BuilderNode对象被虚拟机回收之后，它的FrameNode、 > [RenderNode](../../apis-na/arkts-apis/arkts-na-rendernode-c.md#RenderNode)对象也会与后端节点解引用。即从BuilderNode中获取的FrameNode对象不对应任何一个节点。 > > - BuilderNode对象会持有实体节点的引用。如果不需要使用BuilderNode前端对象管理后端节点，可以调用[dispose](../../apis-na/arkts-apis/arkts-na-buildernode-c.md#dispose)接口，实现前后端对象的解绑。
 
 **起始版本：** 11
 
@@ -47,7 +47,7 @@ build(builder: WrappedBuilder<Args>, arg?: Object): void
 build(builder: WrappedBuilder<Args>, arg: Object, options: BuildOptions): void
 ```
 
-依照传入的对象创建组件树，并持有组件树的根节点。无状态的UI方法[@Builder](../../../ui/state-management/arkts-builder.md)最多拥有一个根节点。 支持自定义组件。相比 [build(builder: WrappedBuilder\&lt;Args&gt;, arg?: Object)](../../apis-na/arkts-apis/arkts-na-buildernode-c.md#build) 接口，本接口支持builder的配置参数，用于配置Builder的构建行为，具体属性见[BuildOptions](../../apis-na/arkts-apis/arkts-na-buildernode-buildoptions-i.md#BuildOptions)。 > **说明：** > > - @Builder进行创建和更新的规格参考[@Builder](../../../ui/state-management/arkts-builder.md)。 > > - @Builder嵌套使用的时候需要保证内外的@Builder方法的入参对象一致。 > > - 最外层的@Builder只支持一个入参。 > > - build的参数是值传递，需要使用[update](../../apis-na/arkts-apis/arkts-na-buildernode-c.md#update)接口进行更新。 > > - 需要操作BuilderNode中的对象时，需要保证其引用不被回收。当BuilderNode对象被虚拟机回收之后，它的FrameNode、 > [RenderNode](arkts-arkui-rendernode-c.md#RenderNode)对象也会与后端节点解引用。即从BuilderNode中获取的FrameNode对象不对应任何一个节点。 > > - BuilderNode对象会持有实体节点的引用。如果不需要使用BuilderNode前端对象管理后端节点，可以调用[dispose](../../apis-na/arkts-apis/arkts-na-buildernode-c.md#dispose)接口，实现前后端对象的解绑。
+依照传入的对象创建组件树，并持有组件树的根节点。无状态的UI方法[@Builder](../../../ui/state-management/arkts-builder.md)最多拥有一个根节点。 支持自定义组件。相比 [build(builder: WrappedBuilder\&lt;Args&gt;, arg?: Object)](../../apis-na/arkts-apis/arkts-na-buildernode-c.md#build) 接口，本接口支持builder的配置参数，用于配置Builder的构建行为，具体属性见[BuildOptions](../../apis-na/arkts-apis/arkts-na-buildernode-buildoptions-i.md#BuildOptions)。 > **说明：** > > - @Builder进行创建和更新的规格参考[@Builder](../../../ui/state-management/arkts-builder.md)。 > > - @Builder嵌套使用的时候需要保证内外的@Builder方法的入参对象一致。 > > - 最外层的@Builder只支持一个入参。 > > - build的参数是值传递，需要使用[update](../../apis-na/arkts-apis/arkts-na-buildernode-c.md#update)接口进行更新。 > > - 需要操作BuilderNode中的对象时，需要保证其引用不被回收。当BuilderNode对象被虚拟机回收之后，它的FrameNode、 > [RenderNode](../../apis-na/arkts-apis/arkts-na-rendernode-c.md#RenderNode)对象也会与后端节点解引用。即从BuilderNode中获取的FrameNode对象不对应任何一个节点。 > > - BuilderNode对象会持有实体节点的引用。如果不需要使用BuilderNode前端对象管理后端节点，可以调用[dispose](../../apis-na/arkts-apis/arkts-na-buildernode-c.md#dispose)接口，实现前后端对象的解绑。
 
 **起始版本：** 12
 
@@ -160,7 +160,7 @@ constructor(uiContext: UIContext, options?: RenderOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | UI上下文，获取方式可参考 UIContext获取方法。uiContext需要为一个有效的值，即UI上下文正 确，如果传入非法值或者未设置，会导致创建失败。 |
+| uiContext | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | UI上下文，获取方式可参考 UIContext获取方法。uiContext需要为一个有效的值，即UI上下文正 确，如果传入非法值或者未设置，会导致创建失败。 |
 | options | [RenderOptions](../../apis-na/arkts-apis/arkts-na-buildernode-renderoptions-i.md) | 否 | BuilderNode的构造可选参数，参数用于构造节点的理想大小和节点的渲染类型。 <br>默认值：undefined |
 
 ## dispose
@@ -211,7 +211,7 @@ getFrameNode(): FrameNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [FrameNode](arkts-arkui-framenode-c.md) | BuilderNode持有的FrameNode对象，用于将该BuilderNode作为子节点挂载到其他FrameNode上。若该BuilderNode不包含 FrameNode，则返回空对象null。 |
+| [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | BuilderNode持有的FrameNode对象，用于将该BuilderNode作为子节点挂载到其他FrameNode上。若该BuilderNode不包含 FrameNode，则返回空对象null。 |
 
 ## inheritFreezeOptions
 
@@ -669,7 +669,7 @@ postInputEventWithStrategy(event: InputEventType, competitionStrategy?: Competit
 postTouchEvent(event: TouchEvent): boolean
 ```
 
-将原始事件派发到某个BuilderNode创建出的FrameNode上。适用于在自定义NodeContainer中将父组件接收的触摸事件转发给BuilderNode内部组件，使内部组件能够响应触摸交互的场景。 postTouchEvent是从组件树的中间节点往下分发，需要变换到父组件坐标系才能分发成功，参考下图。 offsetA为builderNode相对于父组件的偏移量，可以通过FrameNode中的[getPositionToParent](arkts-arkui-framenode-c.md#getPositionToParent) 获取。offsetB为触点相对于builderNode的偏移量，可以通过 [TouchEvent](../../../reference/apis-arkui/arkui-ts/ts-universal-events-touch.md#touchevent对象说明)获取。offsetC为offsetA 与offsetB的和，是传给postTouchEvent的最终结果。  > **说明：** > > - 传入的坐标值需要转换为px，如果builderNode有仿射变换，则需要再叠加仿射变换。 > > - 在[webview](../../apis-na/arkts-apis/arkts-web-webview.md#@ohos.web.webview)中，内部已经处理过坐标系变换，可以将TouchEvent事件直接下发。 > > - 同一时间戳，postTouchEvent只能调用一次。
+将原始事件派发到某个BuilderNode创建出的FrameNode上。适用于在自定义NodeContainer中将父组件接收的触摸事件转发给BuilderNode内部组件，使内部组件能够响应触摸交互的场景。 postTouchEvent是从组件树的中间节点往下分发，需要变换到父组件坐标系才能分发成功，参考下图。 offsetA为builderNode相对于父组件的偏移量，可以通过FrameNode中的[getPositionToParent](../../apis-na/arkts-apis/arkts-na-framenode-c.md#getPositionToParent) 获取。offsetB为触点相对于builderNode的偏移量，可以通过 [TouchEvent](../../../reference/apis-arkui/arkui-ts/ts-universal-events-touch.md#touchevent对象说明)获取。offsetC为offsetA 与offsetB的和，是传给postTouchEvent的最终结果。  > **说明：** > > - 传入的坐标值需要转换为px，如果builderNode有仿射变换，则需要再叠加仿射变换。 > > - 在[webview](../../apis-na/arkts-apis/arkts-web-webview.md#@ohos.web.webview)中，内部已经处理过坐标系变换，可以将TouchEvent事件直接下发。 > > - 同一时间戳，postTouchEvent只能调用一次。
 
 **起始版本：** 11
 

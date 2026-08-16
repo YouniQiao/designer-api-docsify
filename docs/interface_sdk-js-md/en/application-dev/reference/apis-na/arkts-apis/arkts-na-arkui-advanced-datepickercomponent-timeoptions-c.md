@@ -1,8 +1,8 @@
 # TimeOptions
 
-TimeOptions defines options for the time picker. Inherits from [CommonOptions](arkts-na-arkui-advanced-datepickercomponent-commonoptions-c.md#CommonOptions).
+TimeOptions defines options for the time picker. Inherits from [CommonOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md#CommonOptions).
 
-**Inheritance/Implementation:** TimeOptions extends [CommonOptions](arkts-na-arkui-advanced-datepickercomponent-commonoptions-c.md#CommonOptions)
+**Inheritance/Implementation:** TimeOptions extends [CommonOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md#CommonOptions)
 
 **Since:** 26.0.0
 
@@ -22,7 +22,7 @@ format?: TimeFormat
 
 Defines the format of the time picker. Default value: TimeFormat.HOUR_MINUTE
 
-**Type:** [TimeFormat](arkts-na-arkui-advanced-datepickercomponent-timeformat-e.md)
+**Type:** [TimeFormat](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-datepickercomponent-timeformat-e.md)
 
 **Default:** TimeFormat.HOUR_MINUTE
 

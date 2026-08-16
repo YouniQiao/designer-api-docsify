@@ -306,7 +306,7 @@ strokeJoinStyle?: StrokeJoinStyle
 strokeWidth?: LengthMetrics | number
 ```
 
-文本描边宽度。如果LengthMetrics的unit值是[PERCENT](../../apis-na/arkts-apis/arkts-na-graphics-lengthunit-e.md#LengthUnit)，当前设置不生效，作为0处理。 值小于0时为实体字，大于0时为轮廓字，等于0时无描边效果。 默认值：0。 单位：LengthMetrics类型时跟随LengthMetrics，number类型时是vp。 取值范围：(-∞, +∞) 与[shaderStyle](arkts-arkui-richeditorparagraphstyle-i.md#RichEditorParagraphStyle)同时设置时，shaderStyle不生效。
+文本描边宽度。如果LengthMetrics的unit值是[PERCENT](../arkts-apis/arkts-arkui-graphics-lengthunit-e.md#LengthUnit)，当前设置不生效，作为0处理。 值小于0时为实体字，大于0时为轮廓字，等于0时无描边效果。 默认值：0。 单位：LengthMetrics类型时跟随LengthMetrics，number类型时是vp。 取值范围：(-∞, +∞) 与[shaderStyle](arkts-arkui-richeditorparagraphstyle-i.md#RichEditorParagraphStyle)同时设置时，shaderStyle不生效。
 
 **类型：** LengthMetrics \| number
 

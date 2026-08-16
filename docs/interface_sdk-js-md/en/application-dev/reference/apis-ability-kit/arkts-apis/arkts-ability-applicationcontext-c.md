@@ -1293,7 +1293,7 @@ Register environment callback.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [EnvironmentCallback](arkts-ability-app-ability-environmentcallback-environmentcallback-c.md) | Yes | The environment callback. |
+| callback | [EnvironmentCallback](../../apis-na/arkts-apis/arkts-na-app-ability-environmentcallback-environmentcallback-i.md) | Yes | The environment callback. |
 
 **Return value:**
 
@@ -1546,7 +1546,7 @@ Registers a listener for system environment changes. This API uses an asynchrono
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'environment' | Yes | System environment change, for example, system dark/light color mode change. The value is fixed at **'environment'**. |
-| callback | [EnvironmentCallback](arkts-ability-app-ability-environmentcallback-environmentcallback-c.md) | Yes | Callback triggered when the system environment changes. |
+| callback | [EnvironmentCallback](../../apis-na/arkts-apis/arkts-na-app-ability-environmentcallback-environmentcallback-i.md) | Yes | Callback triggered when the system environment changes. |
 
 **Return value:**
 
@@ -1871,7 +1871,7 @@ Sets the language for the application. This API can be called only on the main t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| language | string | Yes | Target language. The list of supported languages can be obtained by calling [getSystemLanguages()](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-system-c.md#getSystemLanguages). |
+| language | string | Yes | Target language. The list of supported languages can be obtained by calling [getSystemLanguages()](../../apis-na/arkts-apis/arkts-na-i18n-system-c.md#getSystemLanguages). |
 
 **Error codes:**
 

@@ -156,7 +156,7 @@ Get net error code.
 
 | Type | Description |
 | --- | --- |
-| [WebNetErrorList](arkts-na-web-neterrorlist-webneterrorlist-e.md) | Return response error code. |
+| [WebNetErrorList](../../apis-arkweb/arkts-apis/arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) | Return response error code. |
 
 ## getStatus
 
@@ -370,7 +370,7 @@ Set net error code.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| code | [WebNetErrorList](arkts-na-web-neterrorlist-webneterrorlist-e.md) | Yes | Set net error code. |
+| code | [WebNetErrorList](../../apis-arkweb/arkts-apis/arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) | Yes | Set net error code. |
 
 **Error codes:**
 

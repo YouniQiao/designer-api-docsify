@@ -36,7 +36,7 @@ compareTo(other: ScopeComparable): boolean
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| other | [ScopeComparable](../../apis-na/arkts-apis/arkts-na-util-scopecomparable-i.md) | 是 | 与当前值进行比较的另一个值。 |
+| other | [ScopeComparable](arkts-arkts-util-scopecomparable-i.md) | 是 | 与当前值进行比较的另一个值。 |
 
 **返回值：**
 

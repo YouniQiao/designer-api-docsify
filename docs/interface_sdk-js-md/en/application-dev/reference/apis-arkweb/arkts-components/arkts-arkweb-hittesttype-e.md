@@ -8,7 +8,7 @@ Enumerates the test result types of the click event.
 
 **Deprecated since:** 21
 
-**Substitutes:** [WebHitTestType](../../apis-na/arkts-apis/arkts-na-webview-webhittesttype-e.md#WebHitTestType)
+**Substitutes:** [WebHitTestType](../arkts-apis/arkts-arkweb-webview-webhittesttype-e.md#WebHitTestType)
 
 <!--Device-unnamed-declare enum HitTestType--><!--Device-unnamed-declare enum HitTestType-End-->
 

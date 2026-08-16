@@ -28,7 +28,7 @@ function rejectCall(callId: int, options: RejectMessageOptions, callback: AsyncC
 | --- | --- | --- | --- |
 | callId | int | 是 | 呼叫Id。可以通过订阅callDetailsChange事件获得。 |
 | options | [RejectMessageOptions](arkts-telephony-call-rejectmessageoptions-i-sys.md) | 是 | 拒绝消息选项。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 以回调函数的方式返回拒接电话的结果。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 以回调函数的方式返回拒接电话的结果。 |
 
 **错误码：**
 
@@ -150,7 +150,7 @@ function rejectCall(callId: int, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callId | int | 是 | 呼叫Id。可以通过订阅callDetailsChange事件获得。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 以回调函数的方式返回拒接电话的结果。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 以回调函数的方式返回拒接电话的结果。 |
 
 **错误码：**
 
@@ -205,7 +205,7 @@ function rejectCall(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当拒接来电成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当拒接来电成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -261,7 +261,7 @@ function rejectCall(options: RejectMessageOptions, callback: AsyncCallback<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [RejectMessageOptions](arkts-telephony-call-rejectmessageoptions-i-sys.md) | 是 | 拒绝消息选项。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 以回调函数的方式返回拒接电话的结果。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 以回调函数的方式返回拒接电话的结果。 |
 
 **错误码：**
 

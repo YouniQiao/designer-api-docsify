@@ -116,7 +116,7 @@ position?: PositionT<double>
 
 Disturbance filed position width value x, y.
 
-**Type:** [PositionT](../../apis-arkui/arkts-apis/arkts-arkui-positiont-t.md)&lt;double&gt;
+**Type:** [PositionT](arkts-na-positiont-t.md)&lt;double&gt;
 
 **Default:** {x:0,y:0}
 
@@ -164,7 +164,7 @@ size?: SizeT<double>
 
 Disturbance filed size width value width, height.
 
-**Type:** [SizeT](../../apis-arkui/arkts-apis/arkts-arkui-graphics-sizet-i.md)&lt;double&gt;
+**Type:** [SizeT](arkts-na-graphics-sizet-i.md)&lt;double&gt;
 
 **Default:** {width:0,height:0}
 

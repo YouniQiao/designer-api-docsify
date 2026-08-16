@@ -29,7 +29,7 @@ Sets the voice mail information.
 | slotId | int | 是 | Indicates the card slot index number, ranging from {@code 0} to the maximum card slot index number supported by the device. |
 | mailName | string | 是 | Indicates the name of voice mail. |
 | mailNumber | string | 是 | Indicates the number of voice mail. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | The callback of setVoiceMailInfo. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | The callback of setVoiceMailInfo. |
 
 **错误码：**
 

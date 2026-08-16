@@ -42,8 +42,8 @@ Sets ProxyConfig which will be used by all Webs in the app. URLs that match patt
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| proxyConfig | [ProxyConfig](../../apis-na/arkts-apis/arkts-na-webview-proxyconfig-c.md) | Yes | The proxy config. |
-| callback | [OnProxyConfigChangeCallback](../../apis-na/arkts-apis/arkts-na-webview-onproxyconfigchangecallback-t.md) | Yes | Called when the proxy has been changed. |
+| proxyConfig | [ProxyConfig](arkts-arkweb-webview-proxyconfig-c.md) | Yes | The proxy config. |
+| callback | [OnProxyConfigChangeCallback](arkts-arkweb-webview-onproxyconfigchangecallback-t.md) | Yes | Called when the proxy has been changed. |
 
 **Error codes:**
 
@@ -75,7 +75,7 @@ Remove the proxy config. Requests are not guaranteed to not use the proxy; Wait 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnProxyConfigChangeCallback](../../apis-na/arkts-apis/arkts-na-webview-onproxyconfigchangecallback-t.md) | Yes | Called when the proxy has been changed. |
+| callback | [OnProxyConfigChangeCallback](arkts-arkweb-webview-onproxyconfigchangecallback-t.md) | Yes | Called when the proxy has been changed. |
 
 **Error codes:**
 

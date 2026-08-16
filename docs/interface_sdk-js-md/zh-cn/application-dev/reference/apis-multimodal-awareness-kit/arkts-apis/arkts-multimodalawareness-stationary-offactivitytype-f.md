@@ -24,7 +24,7 @@ function off(activity: ActivityType, event: ActivityEvent, callback?: Callback<A
 | --- | --- | --- | --- |
 | activity | [ActivityType](arkts-multimodalawareness-stationary-activitytype-t.md) | 是 | 设备状态类型。 |
 | event | [ActivityEvent](arkts-multimodalawareness-stationary-activityevent-e.md) | 是 | 事件类型。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[ActivityResponse](arkts-multimodalawareness-stationary-activityresponse-i.md)&gt; | 否 | 要移除的回调函数。未传递callback参数或传递undefined时，移除该进程下订阅该类型的所有callback。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ActivityResponse](arkts-multimodalawareness-stationary-activityresponse-i.md)&gt; | 否 | 要移除的回调函数。未传递callback参数或传递undefined时，移除该进程下订阅该类型的所有callback。 |
 
 ## 示例
 

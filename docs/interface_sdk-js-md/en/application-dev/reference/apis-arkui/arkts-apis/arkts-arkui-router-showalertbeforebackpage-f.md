@@ -32,7 +32,7 @@ Enables the display of a confirm dialog box before returning to the previous pag
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [EnableAlertOptions](arkts-arkui-router-enablealertoptions-i.md) | Yes | Description of the dialog box. |
+| options | [EnableAlertOptions](../../apis-na/arkts-apis/arkts-na-router-enablealertoptions-i.md) | Yes | Description of the dialog box. |
 
 **Error codes:**
 

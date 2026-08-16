@@ -68,7 +68,7 @@ Creates a Transliterator object based on the specified ID.
 
 | Type | Description |
 | --- | --- |
-| [Transliterator](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-transliterator-c.md) | Transliterator object. |
+| [Transliterator](arkts-na-i18n-transliterator-c.md) | Transliterator object. |
 
 ## transform
 

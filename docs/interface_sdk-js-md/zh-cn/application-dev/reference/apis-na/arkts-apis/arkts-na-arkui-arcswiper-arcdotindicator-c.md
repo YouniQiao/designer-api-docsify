@@ -34,7 +34,7 @@ arcDirection(direction: ArcDirection | undefined): ArcDotIndicator
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| direction | [ArcDirection](../../apis-arkui/arkts-apis/arkts-arkui-arkui-arcswiper-arcdirection-e.md) \| undefined | 是 | 设置弧形指示器的方向。<br/>取值为undefined时，弧形指示器的方向为6点钟方向。 |
+| direction | [ArcDirection](arkts-na-arkui-arcswiper-arcdirection-e.md) \| undefined | 是 | 设置弧形指示器的方向。<br/>取值为undefined时，弧形指示器的方向为6点钟方向。 |
 
 **返回值：**
 

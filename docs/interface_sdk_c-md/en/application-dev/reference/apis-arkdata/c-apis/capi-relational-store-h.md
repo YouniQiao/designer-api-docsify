@@ -824,7 +824,7 @@ Creates an [OH_VBucket](capi-rdb-oh-vbucket.md) object.
 
 | Type | Description |
 | -- | -- |
-| OH_VBucket * | If the creation is successful, a pointer to the instance of the @link OH_VBucket} structure is returned,<br> otherwise NULL is returned. |
+| [OH_VBucket *](capi-rdb-oh-vbucket.md) | If the creation is successful, a pointer to the instance of the @link OH_VBucket} structure is returned,<br> otherwise NULL is returned. |
 
 **Reference**:
 
@@ -1025,7 +1025,7 @@ Inserts a row of data into the target table.
 | -- | -- |
 | [OH_Rdb_Store](capi-rdb-oh-rdb-store.md) *store | Represents a pointer to an [OH_Rdb_Store](capi-rdb-oh-rdb-store.md) instance. |
 | const char *table | Indicates the target table. |
-| OH_VBucket *valuesBucket | Indicates the row of data [OH_VBucket](capi-rdb-oh-vbucket.md) to be inserted into the table. |
+| [OH_VBucket](capi-rdb-oh-vbucket.md) *valuesBucket | Indicates the row of data [OH_VBucket](capi-rdb-oh-vbucket.md) to be inserted into the table. |
 
 **Returns**:
 
@@ -1056,7 +1056,7 @@ Inserts a row of data into the target table and support conflict resolution.
 | -- | -- |
 | [OH_Rdb_Store](capi-rdb-oh-rdb-store.md) *store | Represents a pointer to an OH_Rdb_Store instance. |
 | const char *table | Represents the target table. |
-| OH_VBucket *row | Represents the row data to be inserted into the table. |
+| [OH_VBucket](capi-rdb-oh-vbucket.md) *row | Represents the row data to be inserted into the table. |
 | Rdb_ConflictResolution resolution | Represents the resolution when conflict occurs. |
 | int64_t *rowId | Represents the number of successful insertion. |
 
@@ -1111,7 +1111,7 @@ Updates data in the database based on specified conditions.
 | Parameter | Description |
 | -- | -- |
 | [OH_Rdb_Store](capi-rdb-oh-rdb-store.md) *store | Represents a pointer to an [OH_Rdb_Store](capi-rdb-oh-rdb-store.md) instance. |
-| OH_VBucket *valuesBucket | Indicates the row of data [OH_VBucket](capi-rdb-oh-vbucket.md) to be updated in the database |
+| [OH_VBucket](capi-rdb-oh-vbucket.md) *valuesBucket | Indicates the row of data [OH_VBucket](capi-rdb-oh-vbucket.md) to be updated in the database |
 | OH_Predicates *predicates | Represents a pointer to an [OH_Predicates](capi-rdb-oh-predicates.md) instance.Indicates the specified update condition. |
 
 **Returns**:
@@ -1142,7 +1142,7 @@ Updates data in the database based on specified conditions and support conflict 
 | Parameter | Description |
 | -- | -- |
 | [OH_Rdb_Store](capi-rdb-oh-rdb-store.md) *store | Represents a pointer to an OH_Rdb_Store instance. |
-| OH_VBucket *row | Represents the row data to be inserted into the table. |
+| [OH_VBucket](capi-rdb-oh-vbucket.md) *row | Represents the row data to be inserted into the table. |
 | OH_Predicates *predicates | Represents  a pointer to an link OH_Predicates instance. |
 | Rdb_ConflictResolution resolution | Represents the resolution when conflict occurs. |
 | int64_t *changes | Represents the number of successful update. |
@@ -1208,7 +1208,7 @@ Queries data in the database based on specified conditions.
 
 | Type | Description |
 | -- | -- |
-| [OH_Cursor *](capi-rdb-oh-cursor.md) | If the query is successful, a pointer to the instance of the @link OH_Cursor} structure is returned.<br>         If Get store failed or resultSet is nullptr, nullptr is returned. |
+| OH_Cursor * | If the query is successful, a pointer to the instance of the @link OH_Cursor} structure is returned.<br>         If Get store failed or resultSet is nullptr, nullptr is returned. |
 
 **Reference**:
 
@@ -1240,7 +1240,7 @@ Queries data in the database based on specified conditions without row count.
 
 | Type | Description |
 | -- | -- |
-| [OH_Cursor *](capi-rdb-oh-cursor.md) | If the query is successful, a pointer to the instance of the [OH_Cursor](capi-rdb-oh-cursor.md) structure is returned.<br>         If Get store failed or resultSet is nullptr, nullptr is returned. |
+| OH_Cursor * | If the query is successful, a pointer to the instance of the [OH_Cursor](capi-rdb-oh-cursor.md) structure is returned.<br>         If Get store failed or resultSet is nullptr, nullptr is returned. |
 
 **Reference**:
 
@@ -1271,7 +1271,7 @@ Queries data in the database based on an SQL statement without row count.
 
 | Type | Description |
 | -- | -- |
-| [OH_Cursor *](capi-rdb-oh-cursor.md) | If the query is successful, a pointer to the instance of the [OH_Cursor](capi-rdb-oh-cursor.md) structure is returned.<br>         If sql statement is invalid or the memory allocate failed, nullptr is returned. |
+| OH_Cursor * | If the query is successful, a pointer to the instance of the [OH_Cursor](capi-rdb-oh-cursor.md) structure is returned.<br>         If sql statement is invalid or the memory allocate failed, nullptr is returned. |
 
 **Reference**:
 
@@ -1327,7 +1327,7 @@ Executes an SQL statement.
 | [OH_Rdb_Store](capi-rdb-oh-rdb-store.md) *store | Represents a pointer to an [OH_Rdb_Store](capi-rdb-oh-rdb-store.md) instance. |
 | const char *sql | Indicates the SQL statement to execute. |
 | const OH_Data_Values *args | Represents the values of the parameters in the SQL statement. |
-| [OH_Data_Value](capi-rdb-oh-data-value.md) **result | Represents a pointer to OH_Data_Value instance when the execution is successful.The memory must be released through the OH_Value_Destroy interface after the use is complete. |
+| OH_Data_Value **result | Represents a pointer to OH_Data_Value instance when the execution is successful.The memory must be released through the OH_Value_Destroy interface after the use is complete. |
 
 **Returns**:
 
@@ -1394,7 +1394,7 @@ Queries data in the database based on an SQL statement.
 
 | Type | Description |
 | -- | -- |
-| [OH_Cursor *](capi-rdb-oh-cursor.md) | If the query is successful, a pointer to the instance of the @link OH_Cursor} structure is returned.<br>         If Get store failed,sql is nullptr or resultSet is nullptr, nullptr is returned. |
+| OH_Cursor * | If the query is successful, a pointer to the instance of the @link OH_Cursor} structure is returned.<br>         If Get store failed,sql is nullptr or resultSet is nullptr, nullptr is returned. |
 
 **Reference**:
 
@@ -1425,7 +1425,7 @@ Queries data in the database based on an SQL statement.
 
 | Type | Description |
 | -- | -- |
-| [OH_Cursor *](capi-rdb-oh-cursor.md) | If the query is successful, a pointer to the instance of the @link OH_Cursor} structure is returned.<br>         If sql statement is invalid or the memory allocate failed, nullptr is returned. |
+| OH_Cursor * | If the query is successful, a pointer to the instance of the @link OH_Cursor} structure is returned.<br>         If sql statement is invalid or the memory allocate failed, nullptr is returned. |
 
 **Reference**:
 
@@ -1788,7 +1788,7 @@ Set table to be distributed table.
 
 | Type | Description |
 | -- | -- |
-| [OH_Cursor *](capi-rdb-oh-cursor.md) | If the operation is successful, a pointer to the instance of the @link OH_Cursor} structure is returned.<br>         If Get store failed, NULL is returned.<br> There are two columns, "data_key" and "timestamp". Otherwise NULL is returned. |
+| OH_Cursor * | If the operation is successful, a pointer to the instance of the @link OH_Cursor} structure is returned.<br>         If Get store failed, NULL is returned.<br> There are two columns, "data_key" and "timestamp". Otherwise NULL is returned. |
 
 **Reference**:
 
@@ -2165,7 +2165,7 @@ Queries locked data in the database based on specified conditions.
 
 | Type | Description |
 | -- | -- |
-| [OH_Cursor *](capi-rdb-oh-cursor.md) | If the query is successful, a pointer to the instance of the @link OH_Cursor} structure is returned.<br>         If Get store failed or resultSet is nullptr, nullptr is returned. |
+| OH_Cursor * | If the query is successful, a pointer to the instance of the @link OH_Cursor} structure is returned.<br>         If Get store failed or resultSet is nullptr, nullptr is returned. |
 
 **Reference**:
 
@@ -2450,7 +2450,7 @@ Updates data in the database based on specified conditions and output change inf
 | Parameter | Description |
 | -- | -- |
 | [OH_Rdb_Store](capi-rdb-oh-rdb-store.md) *store | Represents a pointer to an [OH_Rdb_Store](capi-rdb-oh-rdb-store.md) instance. |
-| OH_VBucket *row | Represents the row data to be updated into the table. |
+| [OH_VBucket](capi-rdb-oh-vbucket.md) *row | Represents the row data to be updated into the table. |
 | OH_Predicates *predicates | Represents  a pointer to an {link OH_Predicates} instance. |
 | Rdb_ConflictResolution resolution | Represents the resolution when conflict occurs. |
 | OH_RDB_ReturningContext *context | Represents a pointer to a pointer to an [OH_RDB_ReturningContext](capi-rdb-oh-rdb-returningcontext.md) instance. |

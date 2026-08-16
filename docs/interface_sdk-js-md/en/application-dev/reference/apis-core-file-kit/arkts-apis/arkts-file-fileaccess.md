@@ -8,7 +8,7 @@ The **fileAccess** module provides a framework for accessing and operating user 
 
 **Deprecated since:** 23
 
-**Substitutes:** [fileIo](arkts-corefile-fileio-n.md#fileIo)
+**Substitutes:** [fileIo](../../apis-na/arkts-apis/arkts-na-fileio-n.md#fileIo)
 
 <!--Device-unnamed-declare namespace fileAccess--><!--Device-unnamed-declare namespace fileAccess-End-->
 

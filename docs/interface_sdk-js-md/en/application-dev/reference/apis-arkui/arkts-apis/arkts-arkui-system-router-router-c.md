@@ -8,7 +8,7 @@ The **Router** module provides APIs to access pages through URIs.
 
 **Deprecated since:** 8
 
-**Substitutes:** [router](arkts-router.md#@ohos.router)
+**Substitutes:** [router](../../apis-na/arkts-apis/arkts-router.md#@ohos.router)
 
 <!--Device-unnamed-export default class Router--><!--Device-unnamed-export default class Router-End-->
 

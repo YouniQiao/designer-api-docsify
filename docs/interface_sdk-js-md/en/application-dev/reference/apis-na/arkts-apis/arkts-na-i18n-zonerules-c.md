@@ -42,5 +42,5 @@ Get the next timezone offset transition after date.
 
 | Type | Description |
 | --- | --- |
-| [ZoneOffsetTransition](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-zoneoffsettransition-c.md) | Returns a timezone offset transition after date. |
+| [ZoneOffsetTransition](arkts-na-i18n-zoneoffsettransition-c.md) | Returns a timezone offset transition after date. |
 

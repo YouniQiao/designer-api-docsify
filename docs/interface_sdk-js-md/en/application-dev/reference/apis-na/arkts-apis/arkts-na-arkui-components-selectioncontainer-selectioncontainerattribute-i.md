@@ -33,7 +33,7 @@ attributeModifier(modifier: AttributeModifier<SelectionContainerAttribute> | Att
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | AttributeModifier&lt;[SelectionContainerAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes |  |
+| modifier | AttributeModifier&lt;[SelectionContainerAttribute](arkts-na-arkui-components-selectioncontainer-selectioncontainerattribute-i.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | Yes |  |
 
 **Return value:**
 
@@ -63,7 +63,7 @@ bindSelectionMenu(spanType: TextSpanType | undefined, content: CustomBuilder | u
 | spanType | TextSpanType \| undefined | Yes |  |
 | content | CustomBuilder \| undefined | Yes |  |
 | responseType | TextResponseType \| undefined | Yes |  |
-| options | [SelectionContainerMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-selectioncontainer-selectioncontainermenuoptions-i.md) \| undefined | No |  |
+| options | [SelectionContainerMenuOptions](arkts-na-arkui-components-selectioncontainer-selectioncontainermenuoptions-i.md) \| undefined | No |  |
 
 **Return value:**
 
@@ -141,7 +141,7 @@ editMenuOptions(editMenu: SelectionContainerEditMenuOptions | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| editMenu | [SelectionContainerEditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-selectioncontainer-selectioncontainereditmenuoptions-i.md) \| undefined | Yes |  |
+| editMenu | [SelectionContainerEditMenuOptions](arkts-na-arkui-components-selectioncontainer-selectioncontainereditmenuoptions-i.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -317,7 +317,7 @@ textJoinStyle(style: SelectionContainerTextJoinStyle | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | [SelectionContainerTextJoinStyle](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-selectioncontainer-selectioncontainertextjoinstyle-e.md) \| undefined | Yes |  |
+| style | [SelectionContainerTextJoinStyle](arkts-na-arkui-components-selectioncontainer-selectioncontainertextjoinstyle-e.md) \| undefined | Yes |  |
 
 **Return value:**
 

@@ -114,7 +114,7 @@ Post a message to other port.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| message | [WebMessage](arkts-na-webview-webmessage-t.md) | Yes | Message to send. |
+| message | [WebMessage](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webmessage-t.md) | Yes | Message to send. |
 
 **Error codes:**
 
@@ -145,7 +145,7 @@ Post a message to other port.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| message | [WebMessageExt](arkts-na-webview-webmessageext-c.md) | Yes | Message to send. |
+| message | [WebMessageExt](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webmessageext-c.md) | Yes | Message to send. |
 
 **Error codes:**
 

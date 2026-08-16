@@ -30,5 +30,5 @@ Obtains a BreakIterator object. The BreakIterator object maintains an internal b
 
 | Type | Description |
 | --- | --- |
-| [BreakIterator](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-breakiterator-c.md) | BreakIterator object. |
+| [BreakIterator](arkts-na-i18n-breakiterator-c.md) | BreakIterator object. |
 

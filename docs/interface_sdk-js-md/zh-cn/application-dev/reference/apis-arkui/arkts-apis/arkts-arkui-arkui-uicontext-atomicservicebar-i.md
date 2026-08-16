@@ -38,7 +38,7 @@ Get size and position of the bar.
 
 | 类型 | 说明 |
 | --- | --- |
-| [Frame](../../apis-na/arkts-apis/arkts-na-graphics-frame-i.md) | The size and position of bar in vp relative to window. |
+| [Frame](arkts-arkui-graphics-frame-i.md) | The size and position of bar in vp relative to window. |
 
 ## onBarRectChange
 
@@ -66,7 +66,7 @@ onBarRectChange(callback: Callback<Frame>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[Frame](../../apis-na/arkts-apis/arkts-na-graphics-frame-i.md)&gt; | 是 | 回调函数的参数为Frame。当传入的callback为undefined时表示取消监听appbar组件的大小变化。 回调函数触发时，回调函数的参数不可能为undefined或者null。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[Frame](arkts-arkui-graphics-frame-i.md)&gt; | 是 | 回调函数的参数为Frame。当传入的callback为undefined时表示取消监听appbar组件的大小变化。 回调函数触发时，回调函数的参数不可能为undefined或者null。 |
 
 ## setBackgroundColor
 

@@ -100,7 +100,7 @@ static create(encoding?: string): TextEncoder
 
 | 类型 | 说明 |
 | --- | --- |
-| [TextEncoder](../../apis-na/arkts-apis/arkts-na-util-textencoder-c.md) | TextEncoder** 对象。 |
+| [TextEncoder](arkts-arkts-util-textencoder-c.md) | TextEncoder** 对象。 |
 
 ## 示例
 
@@ -122,7 +122,7 @@ encode(input?: string): Uint8Array
 
 **废弃版本：** 9
 
-**替代接口：** [encodeInto](../../apis-na/arkts-apis/arkts-na-util-textencoder-c.md#encodeInto)
+**替代接口：** [encodeInto](#encodeInto)
 
 <!--Device-TextEncoder-encode(input?: string): Uint8Array--><!--Device-TextEncoder-encode(input?: string): Uint8Array-End-->
 
@@ -204,7 +204,7 @@ encodeInto(input: string, dest: Uint8Array): { read: number; written: number }
 
 **废弃版本：** 9
 
-**替代接口：** [encodeIntoUint8Array](../../apis-na/arkts-apis/arkts-na-util-textencoder-c.md#encodeIntoUint8Array)
+**替代接口：** [encodeIntoUint8Array](#encodeIntoUint8Array)
 
 <!--Device-TextEncoder-encodeInto(input: string, dest: Uint8Array): { read: number; written: number }--><!--Device-TextEncoder-encodeInto(input: string, dest: Uint8Array): { read: number; written: number }-End-->
 
@@ -266,7 +266,7 @@ encodeIntoUint8Array(input: string, dest: Uint8Array): EncodeIntoUint8ArrayInfo
 | 类型 | 说明 |
 | --- | --- |
 | object | 返回该对象，其中 read 表示已编码的字符数，written 表示已编码字符所占用的字节数。<br>**适用版本：** 9 - 10 |
-| [EncodeIntoUint8ArrayInfo](../../apis-na/arkts-apis/arkts-na-util-encodeintouint8arrayinfo-i.md) | 获取到的对象。**read** 表示已编码的字符数，**written** 表示已编码字符所占用的 字节数。<br>**适用版本：** 11+ |
+| [EncodeIntoUint8ArrayInfo](arkts-arkts-util-encodeintouint8arrayinfo-i.md) | 获取到的对象。**read** 表示已编码的字符数，**written** 表示已编码字符所占用的 字节数。<br>**适用版本：** 11+ |
 
 ## 示例
 

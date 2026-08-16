@@ -330,7 +330,7 @@ windowCreateParams?: window.WindowCreateParams
 windowHeight?: int
 ```
 
-窗口的高度，单位为px。 取值范围为[minWindowHeight, maxWindowHeight]，取值范围单位为vp，可参考[vp2px](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px)换算为对应的px值 。 **约束：** 该功能仅在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下生效。
+窗口的高度，单位为px。 取值范围为[minWindowHeight, maxWindowHeight]，取值范围单位为vp，可参考[vp2px](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#vp2px)换算为对应的px值 。 **约束：** 该功能仅在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下生效。
 
 **类型：** int
 
@@ -418,7 +418,7 @@ windowTop?: int
 windowWidth?: int
 ```
 
-窗口的宽度，单位为px。 取值范围为[minWindowWidth, maxWindowWidth]，取值范围单位为vp，可参考[vp2px](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#vp2px)换算为对应的px值。 **约束：** 该功能仅在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下生效。
+窗口的宽度，单位为px。 取值范围为[minWindowWidth, maxWindowWidth]，取值范围单位为vp，可参考[vp2px](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#vp2px)换算为对应的px值。 **约束：** 该功能仅在[自由窗口](../../../windowmanager/window-terminology.md#自由窗口)状态下生效。
 
 **类型：** int
 

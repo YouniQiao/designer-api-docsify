@@ -8,7 +8,7 @@ Defines the Web cookie.
 
 **Deprecated since:** 23
 
-**Substitutes:** [WebCookieManager](../../apis-na/arkts-apis/arkts-na-webview-webcookiemanager-c.md#WebCookieManager)
+**Substitutes:** [WebCookieManager](../arkts-apis/arkts-arkweb-webview-webcookiemanager-c.md#WebCookieManager)
 
 <!--Device-unnamed-declare class WebCookie--><!--Device-unnamed-declare class WebCookie-End-->
 
@@ -28,7 +28,7 @@ Constructor.
 
 **Deprecated since:** 23
 
-**Substitutes:** [WebCookieManager](../../apis-na/arkts-apis/arkts-na-webview-webcookiemanager-c.md#WebCookieManager)
+**Substitutes:** [WebCookieManager](../arkts-apis/arkts-arkweb-webview-webcookiemanager-c.md#WebCookieManager)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -50,7 +50,7 @@ Saves the cookies.
 
 **Deprecated since:** 9
 
-**Substitutes:** [saveCookieAsync](../../apis-na/arkts-apis/arkts-na-webview-webcookiemanager-c.md#saveCookieAsync)
+**Substitutes:** [saveCookieAsync](../arkts-apis/arkts-arkweb-webview-webcookiemanager-c.md#saveCookieAsync)
 
 <!--Device-WebCookie-saveCookie()--><!--Device-WebCookie-saveCookie()-End-->
 

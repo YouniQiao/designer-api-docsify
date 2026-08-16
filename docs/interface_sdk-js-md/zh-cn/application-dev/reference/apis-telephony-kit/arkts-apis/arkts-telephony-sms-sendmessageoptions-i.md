@@ -40,7 +40,7 @@ deliveryCallback?: AsyncCallback<IDeliveryShortMessageCallback>
 
 短信送达结果回调，返回短信递送报告，参考[IDeliveryShortMessageCallback](arkts-telephony-sms-ideliveryshortmessagecallback-i.md#IDeliveryShortMessageCallback)。发送数据短信时，此项必填。
 
-**类型：** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[IDeliveryShortMessageCallback](arkts-telephony-sms-ideliveryshortmessagecallback-i.md)&gt;
+**类型：** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[IDeliveryShortMessageCallback](arkts-telephony-sms-ideliveryshortmessagecallback-i.md)&gt;
 
 **起始版本：** 23
 
@@ -100,7 +100,7 @@ sendCallback?: AsyncCallback<ISendShortMessageCallback>
 
 短信发送结果回调，返回短信发送的结果，参考[ISendShortMessageCallback](arkts-telephony-sms-isendshortmessagecallback-i.md#ISendShortMessageCallback)。发送数据短信时，此项必填。
 
-**类型：** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[ISendShortMessageCallback](arkts-telephony-sms-isendshortmessagecallback-i.md)&gt;
+**类型：** [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ISendShortMessageCallback](arkts-telephony-sms-isendshortmessagecallback-i.md)&gt;
 
 **起始版本：** 23
 

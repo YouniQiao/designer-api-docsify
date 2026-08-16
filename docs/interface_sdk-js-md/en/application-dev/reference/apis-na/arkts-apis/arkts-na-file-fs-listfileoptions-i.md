@@ -20,7 +20,7 @@ filter?: Filter
 
 File filtering configuration. This parameter is optional. It specifies the file filtering conditions.
 
-**Type:** [Filter](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-filter-i.md)
+**Type:** [Filter](arkts-na-file-fs-filter-i.md)
 
 **Since:** 23
 

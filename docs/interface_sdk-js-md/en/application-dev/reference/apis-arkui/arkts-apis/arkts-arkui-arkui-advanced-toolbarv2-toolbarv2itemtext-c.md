@@ -67,7 +67,7 @@ The constructor used to create a ToolBarV2ItemText object.
 
 Text fontColor when the item is activated.
 
-**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
+**Type:** [ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md)
 
 **Since:** 18
 
@@ -92,7 +92,7 @@ Text fontColor when the item is activated.
 
 Define text fontColor.
 
-**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
+**Type:** [ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md)
 
 **Since:** 18
 

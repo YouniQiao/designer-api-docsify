@@ -38,7 +38,7 @@ import { OperateItemV2Options } from 'OperateItemV2Options';
 
 The ContentItem.
 
-**Type:** [ContentItemV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-composelistitemv2-contentitemv2-c.md)
+**Type:** [ContentItemV2](arkts-arkui-arkui-advanced-composelistitemv2-contentitemv2-c.md)
 
 **Since:** 26.0.0
 
@@ -63,7 +63,7 @@ The ContentItem.
 
 The OperateItem.
 
-**Type:** [OperateItemV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-composelistitemv2-operateitemv2-c.md)
+**Type:** [OperateItemV2](arkts-arkui-arkui-advanced-composelistitemv2-operateitemv2-c.md)
 
 **Since:** 26.0.0
 

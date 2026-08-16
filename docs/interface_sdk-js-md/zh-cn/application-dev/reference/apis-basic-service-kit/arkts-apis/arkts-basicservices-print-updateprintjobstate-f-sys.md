@@ -32,7 +32,7 @@ function updatePrintJobState(jobId: string, state: PrintJobState, subState: Prin
 | jobId | string | 是 | 表示打印任务ID。 |
 | state | [PrintJobState](arkts-basicservices-print-printjobstate-e.md) | 是 | 表示打印任务状态。 |
 | subState | [PrintJobSubState](arkts-basicservices-print-printjobsubstate-e.md) | 是 | 表示打印任务子状态。 |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 异步更新打印任务状态之后的回调。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 异步更新打印任务状态之后的回调。 |
 
 **错误码：**
 

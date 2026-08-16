@@ -40,7 +40,7 @@ function publishAsBundle(
 | request | NotificationRequest | 是 | 用于设置要发布通知的内容和相关配置信息。 |
 | representativeBundle | string | 是 | 被代理应用的包名。 |
 | userId | int | 是 | 用户ID。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 发布代理通知的回调方法。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 发布代理通知的回调方法。 |
 
 **错误码：**
 

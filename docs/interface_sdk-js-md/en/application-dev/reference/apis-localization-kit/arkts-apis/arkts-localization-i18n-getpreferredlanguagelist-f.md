@@ -20,7 +20,7 @@ Obtains the list of preferred languages.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getPreferredLanguageList](arkts-localization-i18n-system-c.md#getPreferredLanguageList)
+**Substitutes:** [getPreferredLanguageList](../../apis-na/arkts-apis/arkts-na-i18n-system-c.md#getPreferredLanguageList)
 
 <!--Device-i18n-export function getPreferredLanguageList(): Array<string>--><!--Device-i18n-export function getPreferredLanguageList(): Array<string>-End-->
 

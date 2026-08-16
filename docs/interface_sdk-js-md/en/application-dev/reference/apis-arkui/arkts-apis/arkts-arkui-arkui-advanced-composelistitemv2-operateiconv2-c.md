@@ -55,7 +55,7 @@ The constructor of OperateIconV2.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [OperateIconV2Options](../../apis-na/arkts-apis/arkts-na-arkui-advanced-composelistitemv2-operateiconv2options-i.md) | No | The options of OperateIconV2 |
+| options | [OperateIconV2Options](arkts-arkui-arkui-advanced-composelistitemv2-operateiconv2options-i.md) | No | The options of OperateIconV2 |
 
 ## accessibilityDescription
 
@@ -143,7 +143,7 @@ The accessibilityText of the icon.
 
 Callback function when operate the icon.
 
-**Type:** [OnActionCallback](../../apis-na/arkts-apis/arkts-na-onactioncallback-t.md)
+**Type:** [OnActionCallback](arkts-arkui-onactioncallback-t.md)
 
 **Since:** 26.0.0
 

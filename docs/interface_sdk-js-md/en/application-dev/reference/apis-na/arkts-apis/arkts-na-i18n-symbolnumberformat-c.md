@@ -41,7 +41,7 @@ A constructor used to create a SymbolNumberFormat object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | locale | Intl.Locale | No | Locale object used for formatting the date time value. The default value is the current system locale. |
-| options | [SymbolNumberFormatOptions](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-symbolnumberformatoptions-i.md) | No | Indicates the symbols used to replace. Such as zero, nan, positiveInfinity, etc. |
+| options | [SymbolNumberFormatOptions](arkts-na-i18n-symbolnumberformatoptions-i.md) | No | Indicates the symbols used to replace. Such as zero, nan, positiveInfinity, etc. |
 
 ## parse
 
@@ -110,5 +110,5 @@ Represents optional element for the ResolvedSymbolDateTimeFormatOptions object. 
 
 | Type | Description |
 | --- | --- |
-| [ResolvedSymbolNumberFormatOptions](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-resolvedsymbolnumberformatoptions-i.md) | Symbol options for SymbolNumberFormat. |
+| [ResolvedSymbolNumberFormatOptions](arkts-na-i18n-resolvedsymbolnumberformatoptions-i.md) | Symbol options for SymbolNumberFormat. |
 

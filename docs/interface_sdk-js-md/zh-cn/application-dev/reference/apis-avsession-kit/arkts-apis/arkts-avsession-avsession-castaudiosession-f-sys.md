@@ -28,7 +28,7 @@ Cast Audio to the remote devices or cast back local device
 | --- | --- | --- | --- |
 | session | [SessionToken](arkts-avsession-avsession-sessiontoken-i-sys.md) | 是 | Specifies the sessionId which to send to remote. |
 | audioDevices | Array&lt;audio.AudioDeviceDescriptor&gt; | 是 | Specifies the audio devices to cast. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | The asyncCallback triggered when the command is executed successfully |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | The asyncCallback triggered when the command is executed successfully |
 
 **错误码：**
 

@@ -55,7 +55,7 @@ The constructor of OperateItemV2.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [OperateItemV2Options](../../apis-na/arkts-apis/arkts-na-arkui-advanced-composelistitemv2-operateitemv2options-i.md) | No | The options of OperateItemV2 |
+| options | [OperateItemV2Options](arkts-arkui-arkui-advanced-composelistitemv2-operateitemv2options-i.md) | No | The options of OperateItemV2 |
 
 ## arrow
 
@@ -66,7 +66,7 @@ The constructor of OperateItemV2.
 
 Sets the arrow.
 
-**Type:** [OperateIconV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-composelistitemv2-operateiconv2-c.md)
+**Type:** [OperateIconV2](arkts-arkui-arkui-advanced-composelistitemv2-operateiconv2-c.md)
 
 **Since:** 26.0.0
 
@@ -91,7 +91,7 @@ Sets the arrow.
 
 Sets the button.
 
-**Type:** [OperateButtonV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-composelistitemv2-operatebuttonv2-c.md)
+**Type:** [OperateButtonV2](arkts-arkui-arkui-advanced-composelistitemv2-operatebuttonv2-c.md)
 
 **Since:** 26.0.0
 
@@ -116,7 +116,7 @@ Sets the button.
 
 Sets the checkBox.
 
-**Type:** [OperateCheckV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
+**Type:** [OperateCheckV2](arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
 
 **Since:** 26.0.0
 
@@ -141,7 +141,7 @@ Sets the checkBox.
 
 Sets the icon.
 
-**Type:** [OperateIconV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-composelistitemv2-operateiconv2-c.md)
+**Type:** [OperateIconV2](arkts-arkui-arkui-advanced-composelistitemv2-operateiconv2-c.md)
 
 **Since:** 26.0.0
 
@@ -191,7 +191,7 @@ Sets the image.
 
 Sets the radio.
 
-**Type:** [OperateCheckV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
+**Type:** [OperateCheckV2](arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
 
 **Since:** 26.0.0
 
@@ -216,7 +216,7 @@ Sets the radio.
 
 Sets the subIcon.
 
-**Type:** [OperateIconV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-composelistitemv2-operateiconv2-c.md)
+**Type:** [OperateIconV2](arkts-arkui-arkui-advanced-composelistitemv2-operateiconv2-c.md)
 
 **Since:** 26.0.0
 
@@ -291,7 +291,7 @@ Sets the text.
 
 Sets the toggle.
 
-**Type:** [OperateCheckV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
+**Type:** [OperateCheckV2](arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
 
 **Since:** 26.0.0
 

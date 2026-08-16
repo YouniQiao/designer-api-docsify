@@ -128,7 +128,7 @@ Post a message to other port.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| message | [WebMessage](../../apis-na/arkts-apis/arkts-na-webview-webmessage-t.md) | Yes | Message to send. |
+| message | [WebMessage](arkts-arkweb-webview-webmessage-t.md) | Yes | Message to send. |
 
 **Error codes:**
 
@@ -161,7 +161,7 @@ Post a message to other port.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| message | [WebMessageExt](../../apis-na/arkts-apis/arkts-na-webview-webmessageext-c.md) | Yes | Message to send. |
+| message | [WebMessageExt](arkts-arkweb-webview-webmessageext-c.md) | Yes | Message to send. |
 
 **Error codes:**
 

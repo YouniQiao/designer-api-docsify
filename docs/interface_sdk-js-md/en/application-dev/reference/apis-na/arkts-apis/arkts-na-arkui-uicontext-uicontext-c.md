@@ -238,13 +238,13 @@ Create an animator object for custom animation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [AnimatorOptions](arkts-na-animator-animatoroptions-i.md) \| [SimpleAnimatorOptions](arkts-na-animator-simpleanimatoroptions-c.md) | Yes | Options. |
+| options | [AnimatorOptions](../../apis-arkui/arkts-apis/arkts-arkui-animator-animatoroptions-i.md) \| [SimpleAnimatorOptions](../../apis-arkui/arkts-apis/arkts-arkui-animator-simpleanimatoroptions-c.md) | Yes | Options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [AnimatorResult](arkts-na-animator-animatorresult-i.md) |  |
+| [AnimatorResult](../../apis-arkui/arkts-apis/arkts-arkui-animator-animatorresult-i.md) |  |
 
 **Error codes:**
 

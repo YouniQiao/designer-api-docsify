@@ -30,5 +30,5 @@ Creates an IndexUtil object.
 
 | Type | Description |
 | --- | --- |
-| [IndexUtil](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-indexutil-c.md) | IndexUtil object created based on the specified locale ID. |
+| [IndexUtil](arkts-na-i18n-indexutil-c.md) | IndexUtil object created based on the specified locale ID. |
 

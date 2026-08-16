@@ -40,7 +40,7 @@ copySignal?: TaskSignal
 
 Signal used to cancel a copy task.
 
-**Type:** [TaskSignal](arkts-corefile-file-fs-tasksignal-c.md)
+**Type:** [TaskSignal](../../apis-na/arkts-apis/arkts-na-tasksignal-t.md)
 
 **Since:** 12
 

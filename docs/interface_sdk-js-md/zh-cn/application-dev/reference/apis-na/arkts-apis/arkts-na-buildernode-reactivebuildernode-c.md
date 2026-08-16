@@ -1,6 +1,6 @@
 # ReactiveBuilderNode
 
-ReactiveBuilderNode支持通过无状态的UI方法[@Builder](../../../ui/state-management/arkts-builder.md)生成组件树，并持有该组件树的根节点，不支持定义为状态变 量。ReactiveBuilderNode中持有的FrameNode仅用于将此ReactiveBuilderNode作为子节点挂载到其他FrameNode上。对 ReactiveBuilderNode持有的FrameNode进行属性设置与子节点操作可能会导致未定义行为，因此不建议通过ReactiveBuilderNode的 [getFrameNode](arkts-na-buildernode-c.md#getFrameNode)方法和FrameNode节点的 [getRenderNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md#getRenderNode)方法获取RenderNode，并通过[RenderNode](../../apis-arkui/arkts-apis/arkts-arkui-rendernode-c.md#RenderNode)的接 口对其进行属性设置与子节点操作。
+ReactiveBuilderNode支持通过无状态的UI方法[@Builder](../../../ui/state-management/arkts-builder.md)生成组件树，并持有该组件树的根节点，不支持定义为状态变 量。ReactiveBuilderNode中持有的FrameNode仅用于将此ReactiveBuilderNode作为子节点挂载到其他FrameNode上。对 ReactiveBuilderNode持有的FrameNode进行属性设置与子节点操作可能会导致未定义行为，因此不建议通过ReactiveBuilderNode的 [getFrameNode](arkts-na-buildernode-c.md#getFrameNode)方法和FrameNode节点的 [getRenderNode](arkts-na-framenode-c.md#getRenderNode)方法获取RenderNode，并通过[RenderNode](arkts-na-rendernode-c.md#RenderNode)的接 口对其进行属性设置与子节点操作。
 
 **起始版本：** 26.0.0
 
@@ -45,7 +45,7 @@ build(builder: CustomBuilder, options?: BuildOptions): void
 constructor(uiContext: UIContext, options?: RenderOptions)
 ```
 
-用于构造ReactiveBuilderNode类。当将ReactiveBuilderNode生成的内容嵌入到其它[RenderNode](../../apis-arkui/arkts-apis/arkts-arkui-rendernode-c.md#RenderNode)中显示时，需要显式指定 [RenderOptions](arkts-na-buildernode-renderoptions-i.md#RenderOptions)中的[selfIdealSize](arkts-na-buildernode-renderoptions-i.md#RenderOptions)，否则 ReactiveBuilderNode内的节点默认父组件布局约束为[0, 0]。调用此接口，若不设置selfIdealSize则认为ReactiveBuilderNode中子树的根节点大小为[0, 0]。
+用于构造ReactiveBuilderNode类。当将ReactiveBuilderNode生成的内容嵌入到其它[RenderNode](arkts-na-rendernode-c.md#RenderNode)中显示时，需要显式指定 [RenderOptions](arkts-na-buildernode-renderoptions-i.md#RenderOptions)中的[selfIdealSize](arkts-na-buildernode-renderoptions-i.md#RenderOptions)，否则 ReactiveBuilderNode内的节点默认父组件布局约束为[0, 0]。调用此接口，若不设置selfIdealSize则认为ReactiveBuilderNode中子树的根节点大小为[0, 0]。
 
 **起始版本：** 26.0.0
 
@@ -63,7 +63,7 @@ constructor(uiContext: UIContext, options?: RenderOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | UI上下文，获取方式可参考 UIContext获取方法。uiContext需要为一个有效的值，即UI上下文正 确，如果传入非法值或者未设置，会导致创建失败。 |
+| uiContext | [UIContext](arkts-na-arkui-uicontext-uicontext-c.md) | 是 | UI上下文，获取方式可参考 UIContext获取方法。uiContext需要为一个有效的值，即UI上下文正 确，如果传入非法值或者未设置，会导致创建失败。 |
 | options | [RenderOptions](arkts-na-buildernode-renderoptions-i.md) | 否 | ReactiveBuilderNode的构造可选参数，参数用于构造节点的理想大小和节点的渲染类型。<br/>默认值：undefined |
 
 ## dispose
@@ -130,7 +130,7 @@ getFrameNode(): FrameNode | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) | Returns a FrameNode inside the ReactiveBuilderNode, or null if not contained. |
+| [FrameNode](arkts-na-framenode-c.md) | Returns a FrameNode inside the ReactiveBuilderNode, or null if not contained. |
 
 ## isDisposed
 
@@ -229,7 +229,7 @@ postInputEventWithStrategy(event: InputEventType, competitionStrategy?: Competit
 postTouchEvent(event: TouchEvent): boolean
 ```
 
-将原始事件派发到某个ReactiveBuilderNode创建的FrameNode上。 postTouchEvent是从组件树的中间节点往下分发，需要变换到父组件坐标系才能分发成功，参考下图。 OffsetA为buildNode相对于父组件的偏移量，可以通过FrameNode中的[getPositionToParent](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md#getPositionToParent)获取。 OffsetB为point点相对于buildNode的偏移量，可以通过 [TouchEvent](../../../reference/apis-arkui/arkui-ts/ts-universal-events-touch.md#touchevent对象说明)获取。OffsetC为OffsetA 与OffsetB的和，是传给postTouchEvent的最终结果。  > **说明：** > > 传入的坐标值需要转换为px，如果builderNode有仿射变换，则需要再叠加仿射变换。 > > 在[webview](arkts-web-webview.md#@ohos.web.webview)中，内部已经处理过坐标系变换，可以将TouchEvent事件直接下发。 > > 同一时间戳，postTouchEvent只能调用一次。&lt;!--Del--&gt; > > postTouchEvent的参数不支持UIExtensionComponent。 &lt;!--DelEnd--&gt;
+将原始事件派发到某个ReactiveBuilderNode创建的FrameNode上。 postTouchEvent是从组件树的中间节点往下分发，需要变换到父组件坐标系才能分发成功，参考下图。 OffsetA为buildNode相对于父组件的偏移量，可以通过FrameNode中的[getPositionToParent](arkts-na-framenode-c.md#getPositionToParent)获取。 OffsetB为point点相对于buildNode的偏移量，可以通过 [TouchEvent](../../../reference/apis-arkui/arkui-ts/ts-universal-events-touch.md#touchevent对象说明)获取。OffsetC为OffsetA 与OffsetB的和，是传给postTouchEvent的最终结果。  > **说明：** > > 传入的坐标值需要转换为px，如果builderNode有仿射变换，则需要再叠加仿射变换。 > > 在[webview](arkts-web-webview.md#@ohos.web.webview)中，内部已经处理过坐标系变换，可以将TouchEvent事件直接下发。 > > 同一时间戳，postTouchEvent只能调用一次。&lt;!--Del--&gt; > > postTouchEvent的参数不支持UIExtensionComponent。 &lt;!--DelEnd--&gt;
 
 **起始版本：** 26.0.0
 

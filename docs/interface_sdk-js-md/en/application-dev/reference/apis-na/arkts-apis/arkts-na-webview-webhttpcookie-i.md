@@ -160,7 +160,7 @@ samesitePolicy: WebHttpCookieSameSitePolicy
 
 Gets the cookie's samesite policy.
 
-**Type:** [WebHttpCookieSameSitePolicy](arkts-na-webview-webhttpcookiesamesitepolicy-e.md)
+**Type:** [WebHttpCookieSameSitePolicy](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webhttpcookiesamesitepolicy-e.md)
 
 **Since:** 23
 

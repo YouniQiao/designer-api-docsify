@@ -32,7 +32,7 @@ attributeModifier(modifier: AttributeModifier<ContainerReaderAttribute> | Attrib
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| modifier | AttributeModifier&lt;[ContainerReaderAttribute](arkts-na-arkui-components-containerreader-containerreaderattribute-i.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | 是 |  |
+| modifier | AttributeModifier&lt;[ContainerReaderAttribute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-containerreader-containerreaderattribute-c.md)&gt; \| AttributeModifier&lt;CommonMethod&gt; \| undefined | 是 |  |
 
 **返回值：**
 
@@ -58,7 +58,7 @@ breakpointConfig(value?: BreakpointOptions): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [BreakpointOptions](arkts-na-arkui-components-containerreader-breakpointoptions-i.md) | 否 |  |
+| value | [BreakpointOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-containerreader-breakpointoptions-i.md) | 否 |  |
 
 **返回值：**
 
@@ -84,7 +84,7 @@ setContainerReaderOptions(value: ContainerReaderInfo): this
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ContainerReaderInfo](arkts-na-arkui-components-containerreader-containerreaderinfo-i.md) | 是 |  |
+| value | [ContainerReaderInfo](../../apis-arkui/arkts-apis/arkts-arkui-arkui-components-containerreader-containerreaderinfo-i.md) | 是 |  |
 
 **返回值：**
 

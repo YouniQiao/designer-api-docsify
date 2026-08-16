@@ -16,7 +16,7 @@
  > **NOTE**
  >
  > - The APIs of this module are no longer maintained since API version 8. You are advised to use
- > [@ohos.router](arkts-router.md#@ohos.router) instead.
+ > [@ohos.router](../../apis-na/arkts-apis/arkts-router.md#@ohos.router) instead.
 
 
 ## Modules to Import

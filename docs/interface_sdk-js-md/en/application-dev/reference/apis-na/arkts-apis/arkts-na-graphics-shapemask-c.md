@@ -56,7 +56,7 @@ Set the circle shape of the ShapeMask.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| circle | [Circle](../../apis-arkui/arkts-apis/arkts-arkui-graphics-circle-i.md) | Yes | The circle shape will be set. |
+| circle | [Circle](arkts-na-graphics-circle-i.md) | Yes | The circle shape will be set. |
 
 ## setCommandPath
 
@@ -82,7 +82,7 @@ Set the command path of the ShapeMask.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | [CommandPath](../../apis-arkui/arkts-apis/arkts-arkui-graphics-commandpath-i.md) | Yes | The command path will be set. |
+| path | [CommandPath](arkts-na-graphics-commandpath-i.md) | Yes | The command path will be set. |
 
 ## setOvalShape
 
@@ -108,7 +108,7 @@ Set the oval shape of the ShapeMask.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| oval | [Rect](../../apis-arkui/arkts-apis/arkts-arkui-rect-t.md) | Yes | The oval shape will be set. |
+| oval | [Rect](arkts-na-rect-t.md) | Yes | The oval shape will be set. |
 
 ## setRectShape
 
@@ -134,7 +134,7 @@ Set the rect shape of the ShapeMask.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rect | [Rect](../../apis-arkui/arkts-apis/arkts-arkui-rect-t.md) | Yes | The rect shape will be set. |
+| rect | [Rect](arkts-na-rect-t.md) | Yes | The rect shape will be set. |
 
 ## setRoundRectShape
 
@@ -160,7 +160,7 @@ Set the round rect shape of the ShapeMask.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| roundRect | [RoundRect](../../apis-arkui/arkts-apis/arkts-arkui-graphics-roundrect-i.md) | Yes | The round rect shape will be set. |
+| roundRect | [RoundRect](arkts-na-graphics-roundrect-i.md) | Yes | The round rect shape will be set. |
 
 ## fillColor
 

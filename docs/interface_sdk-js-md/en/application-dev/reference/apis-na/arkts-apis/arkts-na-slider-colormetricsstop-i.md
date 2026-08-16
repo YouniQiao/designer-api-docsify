@@ -20,7 +20,7 @@ color: ColorMetrics
 
 Color property.
 
-**Type:** [ColorMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-colormetrics-c.md)
+**Type:** [ColorMetrics](arkts-na-graphics-colormetrics-c.md)
 
 **Since:** 23
 

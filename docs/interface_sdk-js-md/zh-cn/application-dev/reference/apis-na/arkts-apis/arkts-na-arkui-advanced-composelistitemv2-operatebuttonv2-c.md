@@ -36,7 +36,7 @@ OperateButtonV2的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [OperateButtonV2Options](arkts-na-arkui-advanced-composelistitemv2-operatebuttonv2options-i.md) | 否 | OperateButtonV2的可选项 |
+| options | [OperateButtonV2Options](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitemv2-operatebuttonv2options-i.md) | 否 | OperateButtonV2的可选项 |
 
 ## accessibilityDescription
 

@@ -120,7 +120,7 @@ photoSource?: PhotoSource
 
 Source of the recent image or video, for example, image or video taken by the camera or screenshot. By default, the source is not restricted.
 
-**Type:** [PhotoSource](arkts-medialibrary-file-recentphotocomponent-photosource-e.md)
+**Type:** [PhotoSource](../../apis-na/arkts-apis/arkts-na-file-recentphotocomponent-photosource-e.md)
 
 **Since:** 12
 

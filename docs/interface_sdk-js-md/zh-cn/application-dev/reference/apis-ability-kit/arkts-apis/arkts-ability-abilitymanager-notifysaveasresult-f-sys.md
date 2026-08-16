@@ -28,7 +28,7 @@ function notifySaveAsResult(parameter: AbilityResult, requestCode: int, callback
 | --- | --- | --- | --- |
 | parameter | [AbilityResult](arkts-ability-abilityresult-abilityresult-i.md) | 是 | 返回给调用startAbilityForResult?接口调用方的相关信息。 |
 | requestCode | int | 是 | DLP管理应用传入的请求代码。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当另存为结果通知成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当另存为结果通知成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

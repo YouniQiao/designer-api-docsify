@@ -48,7 +48,7 @@ import { TaskSignal } from 'TaskSignal';
 | [copy](arkts-corefile-file-fs-copy-f.md#copy) | Copies a file or directory. This API uses an asynchronous callback to return the result. File copy across devices is supported. This API forcibly overwrites the file or directory. The input parameter can be the URI of the file or directory. A maximum of 10 cross-device copy tasks are allowed at the same time, and the number of files to be copied at a time cannot exceed 500. |
 | [copyDir](arkts-corefile-file-fs-copydir-f.md#copyDir) | Copies the source directory to the destination path. This API uses a promise to return the result. |
 | [copyDir](arkts-corefile-file-fs-copydir-f.md#copyDir) | Copies the source directory to the destination directory. This API uses an asynchronous callback to return the result. |
-| [copyDir](arkts-corefile-file-fs-copydir-f.md#copyDir) | Copies the source directory to the destination path. This API uses an asynchronous callback to return the result. An exception will be thrown if the destination directory contains a directory with the same name as the source directory and there are files with the same name in the conflicting directory. All the non-conflicting files in the source directory will be moved to the destination directory, and the non-conflicting files in the destination directory will be retained. The data attribute in the error returned provides information about the conflicting files in the Array\&lt;[ConflictFiles](arkts-corefile-file-fs-conflictfiles-i.md#ConflictFiles)&gt; format. |
+| [copyDir](arkts-corefile-file-fs-copydir-f.md#copyDir) | Copies the source directory to the destination path. This API uses an asynchronous callback to return the result. An exception will be thrown if the destination directory contains a directory with the same name as the source directory and there are files with the same name in the conflicting directory. All the non-conflicting files in the source directory will be moved to the destination directory, and the non-conflicting files in the destination directory will be retained. The data attribute in the error returned provides information about the conflicting files in the Array\&lt;[ConflictFiles](../../apis-na/arkts-apis/arkts-na-file-fs-conflictfiles-i.md#ConflictFiles)&gt; format. |
 | [copyDir](arkts-corefile-file-fs-copydir-f.md#copyDir) | Copies the source directory to the destination directory. You can set the copy mode. This API uses an asynchronous callback to return the result. |
 | [copyDir](arkts-corefile-file-fs-copydir-f.md#copyDir) | Copies the source directory to the destination path. You can set the copy mode. This API uses an asynchronous callback to return the result. |
 | [copyDirSync](arkts-corefile-file-fs-copydirsync-f.md#copyDirSync) | Copies the source directory to the destination path. This API returns the result synchronously. |
@@ -181,7 +181,7 @@ import { TaskSignal } from 'TaskSignal';
 | [RandomAccessFileOptions](arkts-corefile-file-fs-randomaccessfileoptions-i.md) | Defines the options used in **createRandomAccessFile()**. |
 | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | Defines the options used in **read()**. |
 | [ReadStreamOptions](arkts-corefile-file-fs-readstreamoptions-i.md) | Defines the options used in **createReadStream()**. |
-| [ReadTextOptions](arkts-corefile-file-fs-readtextoptions-i.md) | Defines the options used in **readText()**. It inherits from [ReadOptions](arkts-corefile-file-fs-readoptions-i.md#ReadOptions). |
+| [ReadTextOptions](arkts-corefile-file-fs-readtextoptions-i.md) | Defines the options used in **readText()**. It inherits from [ReadOptions](../../apis-na/arkts-apis/arkts-na-file-fs-readoptions-i.md#ReadOptions). |
 | [ReaderIterator](arkts-corefile-file-fs-readeriterator-i.md) | Provides a **ReaderIterator** object. Before calling APIs of **ReaderIterator**, you need to use **readLines()** to create a **ReaderIterator** instance. |
 | [ReaderIteratorResult](arkts-corefile-file-fs-readeriteratorresult-i.md) | Represents the information obtained by the **ReaderIterator** object. |
 | [Stat](arkts-corefile-file-fs-stat-i.md) | Represents detailed file information. Before calling any API of the **Stat()** class, use stat() to create a **Stat** instance. |
@@ -189,7 +189,7 @@ import { TaskSignal } from 'TaskSignal';
 | [WatchEvent](arkts-corefile-file-fs-watchevent-i.md) | Defines the event to observe. |
 | [WatchEventListener](arkts-corefile-file-fs-watcheventlistener-i.md) | (event: WatchEvent): void Provides APIs for observing events. |
 | [Watcher](arkts-corefile-file-fs-watcher-i.md) | Provides APIs for observing the changes of files or directories. Before using the APIs of **Watcher**, call **createWatcher()** to create a **Watcher** object. |
-| [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | Defines the options used in **write()**. It inherits from [Options](arkts-corefile-file-fs-options-i.md#Options). |
+| [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | Defines the options used in **write()**. It inherits from [Options](../../apis-na/arkts-apis/arkts-na-file-fs-options-i.md#Options). |
 | [WriteStreamOptions](arkts-corefile-file-fs-writestreamoptions-i.md) | Defines the options used in **createWriteStream()**. |
 
 ### Enums

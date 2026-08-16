@@ -74,7 +74,7 @@ AdvancedDialogV2Button的构造函数。
 
 按钮的背景。当buttonStyle和role为默认值时生效。 默认值跟随buttonStyle。
 
-**类型：** [ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md)
+**类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **起始版本：** 18
 
@@ -205,7 +205,7 @@ AdvancedDialogV2Button的构造函数。
 
 按钮的字体颜色。当buttonStyle和role为默认值时生效。 默认值跟随buttonStyle。
 
-**类型：** [ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md)
+**类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **起始版本：** 18
 

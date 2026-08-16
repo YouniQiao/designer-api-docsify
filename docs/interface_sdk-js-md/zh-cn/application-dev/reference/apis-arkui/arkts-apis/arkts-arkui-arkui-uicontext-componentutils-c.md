@@ -1,6 +1,6 @@
 # ComponentUtils
 
-提供获取组件绘制区域坐标和大小的能力。 > **说明：** > > - 本Class首批接口从API version 10开始支持。 > > - 以下API需先使用UIContext中的[getComponentUtils()](arkts-arkui-arkui-uicontext-uicontext-c.md#getComponentUtils)方法获取到ComponentUtils对象，再通过该对象调用对应方法。
+提供获取组件绘制区域坐标和大小的能力。 > **说明：** > > - 本Class首批接口从API version 10开始支持。 > > - 以下API需先使用UIContext中的[getComponentUtils()](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getComponentUtils)方法获取到ComponentUtils对象，再通过该对象调用对应方法。
 
 **起始版本：** 10
 

@@ -22,7 +22,7 @@ Subscribe to ambient light sensor data once, {@code SensorId.AMBIENT_LIGHT}.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;LightResponse&gt; | 是 | callback ambient light data. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;LightResponse&gt; | 是 | callback ambient light data. |
 
 **错误码：**
 

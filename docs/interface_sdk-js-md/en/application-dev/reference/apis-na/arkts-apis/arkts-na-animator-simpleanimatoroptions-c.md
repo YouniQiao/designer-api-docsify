@@ -69,7 +69,7 @@ Set delay for the animation start. The default value indicates no delay.
 
 | Type | Description |
 | --- | --- |
-| [SimpleAnimatorOptions](arkts-na-animator-simpleanimatoroptions-c.md) |  |
+| [SimpleAnimatorOptions](../../apis-arkui/arkts-apis/arkts-arkui-animator-simpleanimatoroptions-c.md) |  |
 
 ## direction
 
@@ -101,7 +101,7 @@ Set the animation playback mode.
 
 | Type | Description |
 | --- | --- |
-| [SimpleAnimatorOptions](arkts-na-animator-simpleanimatoroptions-c.md) |  |
+| [SimpleAnimatorOptions](../../apis-arkui/arkts-apis/arkts-arkui-animator-simpleanimatoroptions-c.md) |  |
 
 ## duration
 
@@ -133,7 +133,7 @@ Set duration of the animation, in milliseconds.
 
 | Type | Description |
 | --- | --- |
-| [SimpleAnimatorOptions](arkts-na-animator-simpleanimatoroptions-c.md) |  |
+| [SimpleAnimatorOptions](../../apis-arkui/arkts-apis/arkts-arkui-animator-simpleanimatoroptions-c.md) |  |
 
 ## easing
 
@@ -165,7 +165,7 @@ Set time curve of the animation. For details about the supported types. linear T
 
 | Type | Description |
 | --- | --- |
-| [SimpleAnimatorOptions](arkts-na-animator-simpleanimatoroptions-c.md) |  |
+| [SimpleAnimatorOptions](../../apis-arkui/arkts-apis/arkts-arkui-animator-simpleanimatoroptions-c.md) |  |
 
 ## fill
 
@@ -197,7 +197,7 @@ Set FillMode of animation. FillMode indicates whether to resume to the initial s
 
 | Type | Description |
 | --- | --- |
-| [SimpleAnimatorOptions](arkts-na-animator-simpleanimatoroptions-c.md) |  |
+| [SimpleAnimatorOptions](../../apis-arkui/arkts-apis/arkts-arkui-animator-simpleanimatoroptions-c.md) |  |
 
 ## iterations
 
@@ -229,5 +229,5 @@ Set number of times the animation will be played. Number indicates a fixed numbe
 
 | Type | Description |
 | --- | --- |
-| [SimpleAnimatorOptions](arkts-na-animator-simpleanimatoroptions-c.md) |  |
+| [SimpleAnimatorOptions](../../apis-arkui/arkts-apis/arkts-arkui-animator-simpleanimatoroptions-c.md) |  |
 

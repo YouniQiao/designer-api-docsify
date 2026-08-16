@@ -90,7 +90,7 @@ function isSharedBundleRunning(bundleName: string, versionCode: long, callback: 
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 表示要查询的共享库包名。 |
 | versionCode | long | 是 | 表示要查询的共享库版本号。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示共享库正在使用，返回false表示共享库不在使用。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数。返回true表示共享库正在使用，返回false表示共享库不在使用。 |
 
 **错误码：**
 

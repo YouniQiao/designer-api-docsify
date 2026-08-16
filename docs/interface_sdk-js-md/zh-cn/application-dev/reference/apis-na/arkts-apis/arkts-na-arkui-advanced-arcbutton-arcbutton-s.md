@@ -41,7 +41,7 @@ The method to build component.
 
 定义ArcButton组件的文本、背景色、阴影等参数。
 
-**类型：** [ArcButtonOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-arcbutton-arcbuttonoptions-c.md)
+**类型：** [ArcButtonOptions](arkts-na-arkui-advanced-arcbutton-arcbuttonoptions-c.md)
 
 **起始版本：** 23
 

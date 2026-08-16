@@ -27,7 +27,7 @@ function addSimMessage(options: SimMessageOptions, callback: AsyncCallback<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [SimMessageOptions](arkts-telephony-sms-simmessageoptions-i-sys.md) | 是 | SIM卡消息选项。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 添加SIM卡消息的回调函数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 添加SIM卡消息的回调函数。 |
 
 **错误码：**
 

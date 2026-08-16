@@ -29,7 +29,7 @@ function cancelApplicationAutoStartup(info: AutoStartupInfo, callback: AsyncCall
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | info | [AutoStartupInfo](arkts-ability-autostartupinfo-i-sys.md) | 是 | 要取消的开机自启动应用组件信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。当取消应用组件开机自启动成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当取消应用组件开机自启动成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 

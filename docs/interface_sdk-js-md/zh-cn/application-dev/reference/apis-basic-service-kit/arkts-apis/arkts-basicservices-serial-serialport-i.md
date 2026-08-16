@@ -205,7 +205,7 @@ offDataRead(callback?: Callback<Uint8Array>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Uint8Array&gt; | 否 | 回调函数，返回串口端口接收到的数据 <br>默认值:缺省行为：清除串口端口接收数据事件的所有监听。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Uint8Array&gt; | 否 | 回调函数，返回串口端口接收到的数据 <br>默认值:缺省行为：清除串口端口接收数据事件的所有监听。 |
 
 **错误码：**
 
@@ -238,7 +238,7 @@ offDisconnect(callback?: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | 否 | USB虚拟串口断开的回调函数。 <br>默认值：清除所有USB虚拟串口断开事件的回调函数。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 否 | USB虚拟串口断开的回调函数。 <br>默认值：清除所有USB虚拟串口断开事件的回调函数。 |
 
 **错误码：**
 
@@ -271,7 +271,7 @@ onDataRead(callback: Callback<Uint8Array>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;Uint8Array&gt; | 是 | 回调函数，返回串口端口接收到的数据 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;Uint8Array&gt; | 是 | 回调函数，返回串口端口接收到的数据 |
 
 **错误码：**
 
@@ -305,7 +305,7 @@ onDisconnect(callback: Callback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-basicservices-callback-t.md)&lt;void&gt; | 是 | USB虚拟串口断开事件的回调函数。 |
+| callback | [Callback](arkts-basicservices-base-callback-i.md)&lt;void&gt; | 是 | USB虚拟串口断开事件的回调函数。 |
 
 **错误码：**
 

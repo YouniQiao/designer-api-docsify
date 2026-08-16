@@ -24,7 +24,7 @@ function unsubscribeThermalLevel(callback?: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 否 | 回调函数，无返回值。不填该参数则取消所有回调。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 否 | 回调函数，无返回值。不填该参数则取消所有回调。 |
 
 ## 示例
 

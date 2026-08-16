@@ -98,7 +98,7 @@ function notifyDataChange(accountId: string, bundleName: string, callback: Async
 | --- | --- | --- | --- |
 | accountId | string | 是 | 账号Id。 |
 | bundleName | string | 是 | 应用包名。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。异步通知端云服务应用的云数据变更之后的。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。异步通知端云服务应用的云数据变更之后的。 |
 
 **错误码：**
 
@@ -246,7 +246,7 @@ function notifyDataChange(userId: int, extraData: ExtraData, callback: AsyncCall
 | --- | --- | --- | --- |
 | userId | int | 是 | 用户Id。 |
 | extraData | ExtraData | 是 | 云端数据变更信息。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数。异步通知端云服务应用的云数据变更之后。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。异步通知端云服务应用的云数据变更之后。 |
 
 **错误码：**
 

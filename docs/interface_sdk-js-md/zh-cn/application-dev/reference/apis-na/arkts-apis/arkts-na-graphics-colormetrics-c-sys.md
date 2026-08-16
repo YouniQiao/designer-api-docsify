@@ -48,7 +48,7 @@ static createHDRColor(colorSpace: ColorSpace, red: double, green: double, blue: 
 
 | 类型 | 说明 |
 | --- | --- |
-| [ColorMetrics](arkts-na-graphics-colormetrics-c.md) | 带有HDR颜色的ColorMetrics类实例。 |
+| [ColorMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-colormetrics-c.md) | 带有HDR颜色的ColorMetrics类实例。 |
 
 ## createHDRColorWithLinearExposure
 
@@ -88,7 +88,7 @@ static createHDRColorWithLinearExposure(linearExposure: double, colorSpace: Colo
 
 | 类型 | 说明 |
 | --- | --- |
-| [ColorMetrics](arkts-na-graphics-colormetrics-c.md) | 带有HDR颜色的ColorMetrics类实例。 |
+| [ColorMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-colormetrics-c.md) | 带有HDR颜色的ColorMetrics类实例。 |
 
 ## createHDRColorWithLogExposure
 
@@ -128,7 +128,7 @@ static createHDRColorWithLogExposure(exposure: double, colorSpace: ColorSpace,
 
 | 类型 | 说明 |
 | --- | --- |
-| [ColorMetrics](arkts-na-graphics-colormetrics-c.md) | 带有HDR颜色的ColorMetrics类实例。 |
+| [ColorMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-colormetrics-c.md) | 带有HDR颜色的ColorMetrics类实例。 |
 
 ## getBlueValue
 

@@ -65,7 +65,7 @@ Callback when the request is completed.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[WebSchemeHandlerRequest](arkts-na-webview-webschemehandlerrequest-c.md)&gt; | 是 | Callback of request is completed. |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[WebSchemeHandlerRequest](arkts-na-webview-webschemehandlerrequest-c.md)&gt; | 是 | Callback of request is completed. |
 
 **错误码：**
 

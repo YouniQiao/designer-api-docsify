@@ -38,7 +38,7 @@ OperateCheckV2的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [OperateCheckV2Options](../../apis-na/arkts-apis/arkts-na-arkui-advanced-composelistitemv2-operatecheckv2options-i.md) | 否 | 列表项右侧元素为Switch、CheckBox、Radio属性配置。<br/>默认不设置或设置为undefined时，按各属性的默认效果创建 对象。 |
+| options | [OperateCheckV2Options](arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2options-i.md) | 否 | 列表项右侧元素为Switch、CheckBox、Radio属性配置。<br/>默认不设置或设置为undefined时，按各属性的默认效果创建 对象。 |
 
 ## accessibilityDescription
 
@@ -151,7 +151,7 @@ OperateCheckV2的构造函数。
 
 列表项右侧元素Switch/CheckBox/Radio选中状态改变时触发回调。 value为true时，表示从未选中变为选中。 value为false时，表示从选中变为未选中。 默认不设置或设置为undefined时，状态改变不触发回调。
 
-**类型：** [OnChangeCallback](../../apis-na/arkts-apis/arkts-na-onchangecallback-t.md)
+**类型：** [OnChangeCallback](arkts-arkui-onchangecallback-t.md)
 
 **起始版本：** 26.0.0
 

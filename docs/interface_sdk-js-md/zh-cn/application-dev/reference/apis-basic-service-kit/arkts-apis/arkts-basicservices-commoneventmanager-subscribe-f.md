@@ -25,7 +25,7 @@ function subscribe(subscriber: CommonEventSubscriber, callback: AsyncCallback<Co
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | subscriber | CommonEventSubscriber | 是 | 表示订阅者对象。 |
-| callback | [AsyncCallback](arkts-basicservices-asynccallback-t.md)&lt;CommonEventData&gt; | 是 | 回调函数。当公共事件订阅成功后，事件触发时通过data返回公共 事件数据；订阅失败时，err为错误对象。 |
+| callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;CommonEventData&gt; | 是 | 回调函数。当公共事件订阅成功后，事件触发时通过data返回公共 事件数据；订阅失败时，err为错误对象。 |
 
 **错误码：**
 

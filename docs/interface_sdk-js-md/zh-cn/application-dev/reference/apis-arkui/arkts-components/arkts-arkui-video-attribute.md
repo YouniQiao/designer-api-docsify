@@ -252,7 +252,7 @@ onError(event: VoidCallback | import('../api/@ohos.base').ErrorCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | VoidCallback \| import('../api/@ohos.base').ErrorCallback | 是 | 视频播放失败时的回调函数。其中 [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-errorcallback-t.md#ErrorCallback)类型入参的回调函数用于接收异常信息，回调返回的错误码详细介绍请参见 [Video组件错误码](../errorcode-video.md)和 [Media错误码](../../apis-media-kit/errorcode-media.md)。<br>**起始版本：** 20 |
+| event | VoidCallback \| import('../api/@ohos.base').ErrorCallback | 是 | 视频播放失败时的回调函数。其中 [ErrorCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md#ErrorCallback)类型入参的回调函数用于接收异常信息，回调返回的错误码详细介绍请参见 [Video组件错误码](../errorcode-video.md)和 [Media错误码](../../apis-media-kit/errorcode-media.md)。<br>**起始版本：** 20 |
 
 ## onFinish
 

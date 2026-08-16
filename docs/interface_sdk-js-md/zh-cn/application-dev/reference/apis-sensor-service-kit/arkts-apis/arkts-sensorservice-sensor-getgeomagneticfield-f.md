@@ -26,7 +26,7 @@ function getGeomagneticField(locationOptions: LocationOptions, timeMillis: numbe
 | --- | --- | --- | --- |
 | locationOptions | [LocationOptions](arkts-sensorservice-sensor-locationoptions-i.md) | 是 | 地理位置。 |
 | timeMillis | number | 是 | 表示获取磁偏角的时间，单位：ms（毫秒）。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[GeomagneticResponse](arkts-sensorservice-sensor-geomagneticresponse-i.md)&gt; | 是 | 异步返回磁场信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[GeomagneticResponse](arkts-sensorservice-sensor-geomagneticresponse-i.md)&gt; | 是 | 异步返回磁场信息。 |
 
 ## 示例
 

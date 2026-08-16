@@ -48,7 +48,7 @@ constructor(options: ProgressButtonV2ColorOptions)
 
 按钮背景颜色。<br/>默认值：\\$r('sys.color.ohos_id_color_foreground_contrary')<br/>装饰器类型：@Trace
 
-**类型：** [ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md)
+**类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **起始版本：** 18
 
@@ -72,7 +72,7 @@ constructor(options: ProgressButtonV2ColorOptions)
 
 按钮描边颜色。<br/>默认值：#330A59F7<br/>装饰器类型：@Trace
 
-**类型：** [ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md)
+**类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **起始版本：** 18
 
@@ -96,7 +96,7 @@ constructor(options: ProgressButtonV2ColorOptions)
 
 进度条颜色。<br/>默认值：#330A59F7<br/>装饰器类型：@Trace
 
-**类型：** [ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md)
+**类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **起始版本：** 18
 
@@ -120,7 +120,7 @@ constructor(options: ProgressButtonV2ColorOptions)
 
 按钮文本颜色。<br/>默认值：系统默认值，#CE000000<br/>装饰器类型：@Trace
 
-**类型：** [ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md)
+**类型：** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **起始版本：** 18
 

@@ -37,7 +37,7 @@ Creates a PhoneNumberFormat object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | country | string | Yes | Country/region to which the phone number to be formatted belongs. |
-| options | [PhoneNumberFormatOptions](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-phonenumberformatoptions-i.md) | No | Options for PhoneNumberFormat object initialization. The default value is "NATIONAL". |
+| options | [PhoneNumberFormatOptions](arkts-na-i18n-phonenumberformatoptions-i.md) | No | Options for PhoneNumberFormat object initialization. The default value is "NATIONAL". |
 
 ## format
 

@@ -3096,7 +3096,7 @@ Sets whether to clip this component based on the given shape.
 clipShape(value: CircleShape | EllipseShape | PathShape | RectShape): T
 ```
 
-Clips this component according to the specified shape (which may include position information). > **NOTE：**> > Different shapes support different ranges of attributes. A path is one type of shape, along with others like > ellipses and rectangles. > > Path shapes do not support setting width and height attributes. For details about the supported attributes, see > the specific shape documentation. > > The [fill](../arkts-apis/arkts-arkui-arkui-shape-commonshapemethod-c.md#fill) attribute of shapes has no effect on the **clipShape** > API.
+Clips this component according to the specified shape (which may include position information). > **NOTE：**> > Different shapes support different ranges of attributes. A path is one type of shape, along with others like > ellipses and rectangles. > > Path shapes do not support setting width and height attributes. For details about the supported attributes, see > the specific shape documentation. > > The [fill](../../apis-na/arkts-apis/arkts-na-arkui-shape-commonshapemethod-c.md#fill) attribute of shapes has no effect on the **clipShape** > API.
 
 **Since:** 12
 
@@ -3132,7 +3132,7 @@ Clips this component according to the specified shape (which may include positio
 clipShape(shape: Optional<CircleShape | EllipseShape | PathShape | RectShape>): T
 ```
 
-Clips this component according to the specified shape (which may include position information). Compared with [clipShape&lt;sup&gt;12+&lt;/sup&gt;](#clipShape), this API supports the **undefined** type. > **NOTE：**> > Different shapes support different ranges of attributes. A path is one type of shape, along with others like > ellipses and rectangles. > > Path shapes do not support setting width and height attributes. For details about the supported attributes, see > the specific shape documentation. > > The [fill](../arkts-apis/arkts-arkui-arkui-shape-commonshapemethod-c.md#fill) attribute of shapes has no effect on the **clipShape** > API.
+Clips this component according to the specified shape (which may include position information). Compared with [clipShape&lt;sup&gt;12+&lt;/sup&gt;](#clipShape), this API supports the **undefined** type. > **NOTE：**> > Different shapes support different ranges of attributes. A path is one type of shape, along with others like > ellipses and rectangles. > > Path shapes do not support setting width and height attributes. For details about the supported attributes, see > the specific shape documentation. > > The [fill](../../apis-na/arkts-apis/arkts-na-arkui-shape-commonshapemethod-c.md#fill) attribute of shapes has no effect on the **clipShape** > API.
 
 **Since:** 18
 

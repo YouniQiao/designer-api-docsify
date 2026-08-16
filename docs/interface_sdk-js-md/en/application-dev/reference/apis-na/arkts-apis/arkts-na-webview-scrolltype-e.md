@@ -1,6 +1,6 @@
 # ScrollType
 
-Enum type supplied to [setScrollable](arkts-na-webview-webviewcontroller-c.md#setScrollable) for indicating the type of scroll.
+Enum type supplied to [setScrollable](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#setScrollable) for indicating the type of scroll.
 
 **Since:** 23
 

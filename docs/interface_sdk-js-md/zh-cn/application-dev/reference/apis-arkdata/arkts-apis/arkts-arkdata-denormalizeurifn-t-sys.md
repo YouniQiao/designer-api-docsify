@@ -25,5 +25,5 @@ type DenormalizeUriFn = (uri: string, callback: AsyncCallback<string>) => void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uri | string | 是 | Indicates the uri to denormalize. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string&gt; | 是 | Returns the denormalized {@code uri} object if the denormalization is successful; returns the original {@code uri} passed to this method if there is nothing to do; returns {@code null} if the data identified by the original {@code uri} cannot be found in the current environment. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | Returns the denormalized {@code uri} object if the denormalization is successful; returns the original {@code uri} passed to this method if there is nothing to do; returns {@code null} if the data identified by the original {@code uri} cannot be found in the current environment. |
 

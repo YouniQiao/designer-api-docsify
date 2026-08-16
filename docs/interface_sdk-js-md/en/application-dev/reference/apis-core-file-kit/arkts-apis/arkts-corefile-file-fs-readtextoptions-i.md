@@ -1,8 +1,8 @@
 # ReadTextOptions
 
-Defines the options used in **readText()**. It inherits from [ReadOptions](arkts-corefile-file-fs-readoptions-i.md#ReadOptions).
+Defines the options used in **readText()**. It inherits from [ReadOptions](../../apis-na/arkts-apis/arkts-na-file-fs-readoptions-i.md#ReadOptions).
 
-**Inheritance/Implementation:** ReadTextOptions extends [ReadOptions](arkts-corefile-file-fs-readoptions-i.md#ReadOptions)
+**Inheritance/Implementation:** ReadTextOptions extends [ReadOptions](../../apis-na/arkts-apis/arkts-na-file-fs-readoptions-i.md#ReadOptions)
 
 **Since:** 11
 

@@ -86,7 +86,7 @@ radius?: LengthMetrics
 
 背景圆环的半径。 默认值：circleRadius的1.833（即11/6）倍。
 
-**类型：** [LengthMetrics](arkts-na-graphics-lengthmetrics-c.md)
+**类型：** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
 **起始版本：** 23
 

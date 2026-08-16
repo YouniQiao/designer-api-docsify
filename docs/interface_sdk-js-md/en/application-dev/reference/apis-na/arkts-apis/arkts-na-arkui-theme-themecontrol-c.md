@@ -36,5 +36,5 @@ Sets the default Theme: - for whole Ability when invoked from the Ability level 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| theme | [CustomTheme](arkts-na-arkui-theme-customtheme-i.md) \| undefined | Yes |  |
+| theme | [CustomTheme](../../apis-arkui/arkts-apis/arkts-arkui-arkui-theme-customtheme-i.md) \| undefined | Yes |  |
 

@@ -90,7 +90,7 @@ ERR_CONTROLLER_NOT_INITED = -3
 ERR_KEY_NOT_MATCH = -4
 ```
 
-No key value is matched. [setBlanklessLoadingWithKey](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#setBlanklessLoadingWithKey) must be used with [getBlanklessInfoWithKey](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#getBlanklessInfoWithKey) and their key values must be the same. Otherwise, this error code is returned.
+No key value is matched. [setBlanklessLoadingWithKey](arkts-arkweb-webview-webviewcontroller-c.md#setBlanklessLoadingWithKey) must be used with [getBlanklessInfoWithKey](arkts-arkweb-webview-webviewcontroller-c.md#getBlanklessInfoWithKey) and their key values must be the same. Otherwise, this error code is returned.
 
 **Since:** 20
 
@@ -108,7 +108,7 @@ No key value is matched. [setBlanklessLoadingWithKey](../../apis-na/arkts-apis/a
 ERR_SIGNIFICANT_CHANGE = -5
 ```
 
-The similarity is low, and the system determines that the scene change is too large. As a result, the [setBlanklessLoadingWithKey](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#setBlanklessLoadingWithKey) API does not enable frame interpolation.
+The similarity is low, and the system determines that the scene change is too large. As a result, the [setBlanklessLoadingWithKey](arkts-arkweb-webview-webviewcontroller-c.md#setBlanklessLoadingWithKey) API does not enable frame interpolation.
 
 **Since:** 20
 
@@ -126,7 +126,7 @@ The similarity is low, and the system determines that the scene change is too la
 ERR_DURATION_OUT_OF_RANGE = -6
 ```
 
-The frame interpolation duration set in [BlanklessLoadingParam](../../apis-na/arkts-apis/arkts-na-webview-blanklessloadingparam-i.md#BlanklessLoadingParam) is out of range.
+The frame interpolation duration set in [BlanklessLoadingParam](arkts-arkweb-webview-blanklessloadingparam-i.md#BlanklessLoadingParam) is out of range.
 
 **Since:** 23
 
@@ -146,7 +146,7 @@ The frame interpolation duration set in [BlanklessLoadingParam](../../apis-na/ar
 ERR_EXPIRATION_TIME_OUT_OF_RANGE = -7
 ```
 
-The historical frame expiration time set in [BlanklessLoadingParam](../../apis-na/arkts-apis/arkts-na-webview-blanklessloadingparam-i.md#BlanklessLoadingParam) is out of range.
+The historical frame expiration time set in [BlanklessLoadingParam](arkts-arkweb-webview-blanklessloadingparam-i.md#BlanklessLoadingParam) is out of range.
 
 **Since:** 23
 

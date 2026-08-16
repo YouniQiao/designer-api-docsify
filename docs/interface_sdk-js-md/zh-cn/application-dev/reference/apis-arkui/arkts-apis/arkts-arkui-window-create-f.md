@@ -28,7 +28,7 @@ function create(id: string, type: WindowType, callback: AsyncCallback<Window>): 
 | --- | --- | --- | --- |
 | id | string | 是 | 窗口名字，即[Configuration](arkts-arkui-window-configuration-i.md#Configuration)中的name。 |
 | type | WindowType | 是 | 窗口类型。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | 是 | 回调函数。返回当前创建的子窗口对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | 是 | 回调函数。返回当前创建的子窗口对象。 |
 
 ## 示例
 
@@ -176,7 +176,7 @@ function create(ctx: BaseContext, id: string, type: WindowType, callback: AsyncC
 | ctx | [BaseContext](../../apis-ability-kit/arkts-apis/arkts-ability-basecontext-c.md) | 是 | 当前应用上下文信息。 |
 | id | string | 是 | 窗口名字，即[Configuration](arkts-arkui-window-configuration-i.md#Configuration)中的name。 |
 | type | WindowType | 是 | 窗口类型。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | 是 | 回调函数。返回当前创建的子窗口对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Window](arkts-arkui-window-window-i.md)&gt; | 是 | 回调函数。返回当前创建的子窗口对象。 |
 
 ## 示例
 

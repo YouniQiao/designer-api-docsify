@@ -100,7 +100,7 @@ Called to notify the ArkWeb engine that an error occurs with the player.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| error | [MediaError](arkts-na-webview-mediaerror-e.md) | Yes | Error object type. |
+| error | [MediaError](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-mediaerror-e.md) | Yes | Error object type. |
 | errorMessage | string | Yes | Error message. |
 
 ## handleFullscreenChanged
@@ -221,7 +221,7 @@ Called to notify the ArkWeb engine of the cache status of the player when the ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | [ReadyState](arkts-na-webview-readystate-e.md) | Yes | Cache status of the player. |
+| state | [ReadyState](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-readystate-e.md) | Yes | Cache status of the player. |
 
 ## handleSeekFinished
 
@@ -281,7 +281,7 @@ Called to notify the ArkWeb engine of the playback status of the player when the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| status | [PlaybackStatus](arkts-na-webview-playbackstatus-e.md) | Yes | Player status. |
+| status | [PlaybackStatus](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-playbackstatus-e.md) | Yes | Player status. |
 
 ## handleTimeUpdate
 

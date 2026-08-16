@@ -62,7 +62,7 @@ background?: ColorMetrics
 
 Sets the background color of a button.
 
-**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
+**Type:** [ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md)
 
 **Since:** 18
 
@@ -188,7 +188,7 @@ fontColor?: ColorMetrics
 
 Sets the Button Text Color.
 
-**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
+**Type:** [ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md)
 
 **Since:** 18
 

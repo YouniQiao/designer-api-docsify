@@ -26,5 +26,5 @@ type InsertFn = (uri: string, valueBucket: ValuesBucket, callback: AsyncCallback
 | --- | --- | --- | --- |
 | uri | string | 是 | Indicates the position where the data is to insert. |
 | valueBucket | [ValuesBucket](arkts-arkdata-valuesbucket-t.md) | 是 | Indicates the data to insert. |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;int&gt; | 是 | Returns the index of the newly inserted data record. |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;int&gt; | 是 | Returns the index of the newly inserted data record. |
 

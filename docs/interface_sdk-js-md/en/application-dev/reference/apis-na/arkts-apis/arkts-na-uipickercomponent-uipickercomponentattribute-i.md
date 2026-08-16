@@ -136,7 +136,7 @@ itemHeight(height: LengthMetrics | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| height | [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | Yes |  |
+| height | [LengthMetrics](arkts-na-graphics-lengthmetrics-c.md) \| undefined | Yes |  |
 
 **Return value:**
 

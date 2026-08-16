@@ -178,7 +178,7 @@ paddingEnd?: LengthMetrics
 
 Set title bar end padding. Default value: LengthMetrics.resource(`\$r('sys.float.margin_right')`).
 
-**Type:** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](arkts-na-graphics-lengthmetrics-c.md)
 
 **Default:** LengthMetrics.resource($r('sys.float.margin_right'))
 
@@ -202,7 +202,7 @@ paddingStart?: LengthMetrics
 
 Set title bar start padding. Default value: LengthMetrics.resource(\$r('sys.float.margin_left')).
 
-**Type:** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](arkts-na-graphics-lengthmetrics-c.md)
 
 **Default:** LengthMetrics.resource($r('sys.float.margin_left'))
 

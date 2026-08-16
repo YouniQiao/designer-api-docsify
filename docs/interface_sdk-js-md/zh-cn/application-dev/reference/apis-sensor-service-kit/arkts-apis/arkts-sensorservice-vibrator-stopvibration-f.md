@@ -143,7 +143,7 @@ function stopVibration(stopMode: VibratorStopMode, callback: AsyncCallback<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | stopMode | [VibratorStopMode](arkts-sensorservice-vibrator-vibratorstopmode-e.md) | 是 | 指定的停止振动模式，用于停止对应模式的马达振动，支持两种：<br>VIBRATOR_STOP_MODE_TIME：停止 [VibrateTime](arkts-sensorservice-vibrator-vibratetime-i.md#VibrateTime)类型的固定时长振动；<br>VIBRATOR_STOP_MODE_PRESET：停止 [VibratePreset](arkts-sensorservice-vibrator-vibratepreset-i.md#VibratePreset)类型的预置振动。<br>此接口无法停止自定义振动（ [VibrateFromFile](arkts-sensorservice-vibrator-vibratefromfile-i.md#VibrateFromFile)和[VibrateFromPattern](arkts-sensorservice-vibrator-vibratefrompattern-i.md#VibrateFromPattern)），请使用 [vibrator.stopVibration&lt;sup&gt;10+&lt;/sup&gt;](#stopVibration)。stopMode需与启动振动时的 VibrateEffect类型对应，否则停止操作可能无效。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，当马达停止振动成功，err为undefined，否则为错误对象。回调结果可用于确认振动是否成功停止。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当马达停止振动成功，err为undefined，否则为错误对象。回调结果可用于确认振动是否成功停止。 |
 
 **错误码：**
 
@@ -265,7 +265,7 @@ function stopVibration(callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 回调函数，当马达停止振动成功，err为undefined，否则为错误对象，包含错误码和错误信息。回调结果可用于确认所有振动是否成功停止。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当马达停止振动成功，err为undefined，否则为错误对象，包含错误码和错误信息。回调结果可用于确认所有振动是否成功停止。 |
 
 **错误码：**
 

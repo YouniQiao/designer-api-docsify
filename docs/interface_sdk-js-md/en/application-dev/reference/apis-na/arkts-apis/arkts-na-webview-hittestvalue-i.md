@@ -1,6 +1,6 @@
 # HitTestValue
 
-Provides element information of the click area. related to [getLastHitTest](arkts-na-webview-webviewcontroller-c.md#getLastHitTest) method.
+Provides element information of the click area. related to [getLastHitTest](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#getLastHitTest) method.
 
 **Since:** 23
 
@@ -40,7 +40,7 @@ type: WebHitTestType
 
 Get the hit test type.
 
-**Type:** [WebHitTestType](arkts-na-webview-webhittesttype-e.md)
+**Type:** [WebHitTestType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webhittesttype-e.md)
 
 **Since:** 23
 

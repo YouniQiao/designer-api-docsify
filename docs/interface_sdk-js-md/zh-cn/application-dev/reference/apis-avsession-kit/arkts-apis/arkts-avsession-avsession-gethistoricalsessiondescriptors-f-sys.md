@@ -27,7 +27,7 @@ function getHistoricalSessionDescriptors(maxSize: int, callback: AsyncCallback<A
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | maxSize | int | 是 | 指定获取描述符数量的最大值，可选范围是0-10。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;Readonly&lt;[AVSessionDescriptor](arkts-avsession-avsession-avsessiondescriptor-i-sys.md)&gt;&gt;&gt; | 是 | 回调函数。返回所有会话描述的只读对象。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;Readonly&lt;[AVSessionDescriptor](arkts-avsession-avsession-avsessiondescriptor-i-sys.md)&gt;&gt;&gt; | 是 | 回调函数。返回所有会话描述的只读对象。 |
 
 **错误码：**
 

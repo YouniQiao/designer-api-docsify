@@ -1,6 +1,6 @@
 # NativeMediaPlayerHandler
 
-Implements a **NativeMediaPlayerHandler** object used as a parameter of the [CreateNativeMediaPlayerCallback](../../apis-na/arkts-apis/arkts-na-webview-createnativemediaplayercallback-t.md#CreateNativeMediaPlayerCallback) callback. The application uses this object to report the player status to the ArkWeb engine. > **NOTE：**> > - The sample effect is subject to the actual device.
+Implements a **NativeMediaPlayerHandler** object used as a parameter of the [CreateNativeMediaPlayerCallback](arkts-arkweb-webview-createnativemediaplayercallback-t.md#CreateNativeMediaPlayerCallback) callback. The application uses this object to report the player status to the ArkWeb engine. > **NOTE：**> > - The sample effect is subject to the actual device.
 
 **Since:** 12
 
@@ -114,7 +114,7 @@ Called to notify the ArkWeb engine that an error occurs with the player.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| error | [MediaError](../../apis-na/arkts-apis/arkts-na-webview-mediaerror-e.md) | Yes | Error object type. |
+| error | [MediaError](arkts-arkweb-webview-mediaerror-e.md) | Yes | Error object type. |
 | errorMessage | string | Yes | Error message. |
 
 ## handleFullscreenChanged
@@ -245,7 +245,7 @@ Called to notify the ArkWeb engine of the cache status of the player when the ca
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| state | [ReadyState](../../apis-na/arkts-apis/arkts-na-webview-readystate-e.md) | Yes | Cache status of the player. |
+| state | [ReadyState](arkts-arkweb-webview-readystate-e.md) | Yes | Cache status of the player. |
 
 ## handleSeekFinished
 
@@ -311,7 +311,7 @@ Called to notify the ArkWeb engine of the playback status of the player when the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| status | [PlaybackStatus](../../apis-na/arkts-apis/arkts-na-webview-playbackstatus-e.md) | Yes | Player status. |
+| status | [PlaybackStatus](arkts-arkweb-webview-playbackstatus-e.md) | Yes | Player status. |
 
 ## handleTimeUpdate
 

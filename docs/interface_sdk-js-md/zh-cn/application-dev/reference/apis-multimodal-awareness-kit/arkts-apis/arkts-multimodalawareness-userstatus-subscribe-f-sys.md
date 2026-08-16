@@ -28,7 +28,7 @@ function subscribe(featureId: UserStatusFeature, callback: Callback<UserStatusDa
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | featureId | [UserStatusFeature](arkts-multimodalawareness-userstatus-userstatusfeature-e-sys.md) | 是 | 表示用户状态检测功能类型。 |
-| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-callback-t.md)&lt;[UserStatusData](arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md)&gt; | 是 | 回调函数，用于接收用户状态数据。当订阅的用户状态数据更新时会被调用。 |
+| callback | [Callback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[UserStatusData](arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md)&gt; | 是 | 回调函数，用于接收用户状态数据。当订阅的用户状态数据更新时会被调用。 |
 | deviceInfo | DeviceInfo[] | 否 | 表示要开启用户状态监控的设备列表。当featureId为HAND_GAZE_COORDINATION时需要输入有效且非空的deviceInfo信息， <br>否则影响功能使用；其他featureId可省略此参数。如果输入空、undefined或null，则认为没有传入实际值。 |
 
 **返回值：**

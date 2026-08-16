@@ -64,7 +64,7 @@ onLayout(self: FrameNode, position: NodePosition): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| self | [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) | 是 | DynamicLayout组件的FrameNode。 |
+| self | [FrameNode](arkts-na-framenode-c.md) | 是 | DynamicLayout组件的FrameNode。 |
 | position | [NodePosition](arkts-na-nodeposition-t.md) | 是 | 节点的位置，将在执行布局方法时使用。 |
 
 ## onMeasure
@@ -91,7 +91,7 @@ onMeasure(self: FrameNode, constraint: LayoutConstraint, helper?: LazyLayoutHelp
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| self | [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) | 是 | DynamicLayout组件的FrameNode。 |
-| constraint | [LayoutConstraint](../../apis-arkui/arkts-apis/arkts-arkui-framenode-layoutconstraint-i.md) | 是 | 节点的布局约束，将在测量过程中使用。 |
+| self | [FrameNode](arkts-na-framenode-c.md) | 是 | DynamicLayout组件的FrameNode。 |
+| constraint | [LayoutConstraint](arkts-na-framenode-layoutconstraint-i.md) | 是 | 节点的布局约束，将在测量过程中使用。 |
 | helper | [LazyLayoutHelper](arkts-na-lazylayoutalgorithm-lazylayouthelper-c.md) | 否 | 懒布局算法的助手对象，提供布局方向和视图位置信息。 如果未定义，则表示当前组件未在可滚动组件下使用，不支持懒布局。 |
 

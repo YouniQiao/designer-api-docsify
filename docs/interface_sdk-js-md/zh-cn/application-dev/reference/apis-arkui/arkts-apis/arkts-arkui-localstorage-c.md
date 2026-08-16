@@ -213,7 +213,7 @@ let value: number = storage.get('PropA') as number; // 47
 static getShared(): LocalStorage
 ```
 
-获取当前Stage共享的[LocalStorage](../../../ui/state-management/arkts-localstorage.md)实例。 > **说明：** > > 从API version 12开始，可使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext)中的 > [getSharedLocalStorage](arkts-arkui-arkui-uicontext-uicontext-c.md#getSharedLocalStorage)明确UI执行上下文中的LocalStorage实例。
+获取当前Stage共享的[LocalStorage](../../../ui/state-management/arkts-localstorage.md)实例。 > **说明：** > > 从API version 12开始，可使用[UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#UIContext)中的 > [getSharedLocalStorage](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getSharedLocalStorage)明确UI执行上下文中的LocalStorage实例。
 
 **起始版本：** 10
 
@@ -221,7 +221,7 @@ static getShared(): LocalStorage
 
 **废弃版本：** 18
 
-**替代接口：** [getSharedLocalStorage](arkts-arkui-arkui-uicontext-uicontext-c.md#getSharedLocalStorage)
+**替代接口：** [getSharedLocalStorage](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getSharedLocalStorage)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

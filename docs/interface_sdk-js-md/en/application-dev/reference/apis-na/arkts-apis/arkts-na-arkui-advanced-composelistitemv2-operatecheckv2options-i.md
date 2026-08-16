@@ -110,7 +110,7 @@ onChange?: OnChangeCallback
 
 Callback function when operate the checkbox/switch/radio.
 
-**Type:** [OnChangeCallback](arkts-na-onchangecallback-t.md)
+**Type:** [OnChangeCallback](../../apis-arkui/arkts-apis/arkts-arkui-onchangecallback-t.md)
 
 **Since:** 26.0.0
 

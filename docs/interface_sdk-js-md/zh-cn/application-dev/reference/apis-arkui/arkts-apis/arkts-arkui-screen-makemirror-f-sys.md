@@ -26,7 +26,7 @@ function makeMirror(mainScreen:long, mirrorScreen:Array<long>, callback: AsyncCa
 | --- | --- | --- | --- |
 | mainScreen | long | 是 | 主屏幕ID，该参数仅支持整数输入。 |
 | mirrorScreen | Array&lt;long&gt; | 是 | 镜像屏幕ID集合，其中ID应为整数。 |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;long&gt; | 是 | 回调函数。返回镜像屏幕的群组id，其中id为整数。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;long&gt; | 是 | 回调函数。返回镜像屏幕的群组id，其中id为整数。 |
 
 **错误码：**
 

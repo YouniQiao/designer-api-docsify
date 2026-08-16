@@ -2,7 +2,7 @@
 
 类PageSwitchActionProposal。默认的页面切换方向为前进。
 
-**继承/实现关系：** PageSwitchActionProposal extends [TargetedGestureProposal](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-targetedgestureproposal-c.md#TargetedGestureProposal)
+**继承/实现关系：** PageSwitchActionProposal extends [TargetedGestureProposal](arkts-na-arkui-uicontext-targetedgestureproposal-c.md#TargetedGestureProposal)
 
 **起始版本：** 26.0.0
 

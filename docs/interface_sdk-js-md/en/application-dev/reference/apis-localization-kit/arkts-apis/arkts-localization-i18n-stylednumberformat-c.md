@@ -42,8 +42,8 @@ Creates a **NumberFormat** object for rich text display.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| numberFormat | Intl.NumberFormat \| [SimpleNumberFormat](arkts-localization-i18n-simplenumberformat-c.md) | Yes | NumberFormat** object. |
-| options | [StyledNumberFormatOptions](arkts-localization-i18n-stylednumberformatoptions-i.md) | No |  |
+| numberFormat | Intl.NumberFormat \| [SimpleNumberFormat](../../apis-na/arkts-apis/arkts-na-i18n-simplenumberformat-c.md) | Yes | NumberFormat** object. |
+| options | [StyledNumberFormatOptions](../../apis-na/arkts-apis/arkts-na-i18n-stylednumberformatoptions-i.md) | No |  |
 
 ## Examples
 
@@ -95,7 +95,7 @@ Creates a **NumberFormat** object for rich text display.
 
 **Deprecated since:** 20
 
-**Substitutes:** [constructor](#constructor)(numberFormat: Intl.NumberFormat | SimpleNumberFormat, options?: StyledNumberFormatOptions)
+**Substitutes:** [constructor](../../apis-na/arkts-apis/arkts-na-i18n-stylednumberformat-c.md#constructor)(numberFormat: Intl.NumberFormat | SimpleNumberFormat, options?: StyledNumberFormatOptions)
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
@@ -107,8 +107,8 @@ Creates a **NumberFormat** object for rich text display.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| numberFormat | intl.NumberFormat \| [SimpleNumberFormat](arkts-localization-i18n-simplenumberformat-c.md) | Yes | NumberFormat** object. |
-| options | [StyledNumberFormatOptions](arkts-localization-i18n-stylednumberformatoptions-i.md) | No |  |
+| numberFormat | intl.NumberFormat \| [SimpleNumberFormat](../../apis-na/arkts-apis/arkts-na-i18n-simplenumberformat-c.md) | Yes | NumberFormat** object. |
+| options | [StyledNumberFormatOptions](../../apis-na/arkts-apis/arkts-na-i18n-stylednumberformatoptions-i.md) | No |  |
 
 ## Examples
 

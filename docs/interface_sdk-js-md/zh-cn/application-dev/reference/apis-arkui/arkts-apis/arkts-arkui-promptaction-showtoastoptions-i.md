@@ -258,7 +258,7 @@ showMode?: ToastShowMode
 
 设置Toast层级。 <br>默认值：ToastShowMode.DEFAULT，默认显示在应用内。
 
-**类型：** [ToastShowMode](arkts-arkui-promptaction-toastshowmode-e.md)
+**类型：** [ToastShowMode](../../apis-na/arkts-apis/arkts-na-promptaction-toastshowmode-e.md)
 
 **默认值：** ToastShowMode.DEFAULT
 
