@@ -160,7 +160,7 @@ samesitePolicy: WebHttpCookieSameSitePolicy
 
 获取当前cookie的samesite策略
 
-**类型：** [WebHttpCookieSameSitePolicy](arkts-arkweb-webview-webhttpcookiesamesitepolicy-e.md)
+**类型：** [WebHttpCookieSameSitePolicy](../../apis-na/arkts-apis/arkts-na-webview-webhttpcookiesamesitepolicy-e.md)
 
 **起始版本：** 23
 

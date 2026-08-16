@@ -26,7 +26,7 @@ Reads the text content of a file synchronously. This API returns the result sync
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filePath | string | Yes | Application sandbox path of the file. |
-| options | [ReadTextOptions](arkts-na-file-fs-readtextoptions-i.md) | No | The options are as follows: <br>- **offset** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position. <br>- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the file length. <br>- **encoding** (string): format of the data to be encoded. <br>It is valid only when the data is of the string type. The default value is **'utf-8'**, which is the only value supported. |
+| options | [ReadTextOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-readtextoptions-i.md) | No | The options are as follows: <br>- **offset** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position. <br>- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the file length. <br>- **encoding** (string): format of the data to be encoded. <br>It is valid only when the data is of the string type. The default value is **'utf-8'**, which is the only value supported. |
 
 **Return value:**
 
@@ -125,7 +125,7 @@ Reads the text of a file. Read options can be configured. This API uses an async
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filePath | string | Yes | Application sandbox path of the file. |
-| options | [ReadTextOptions](arkts-na-file-fs-readtextoptions-i.md) | Yes | The options are as follows: <br>- **offset** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position. <br>- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the file length. <br>- **encoding** (string): format of the data to be encoded. The default value is **'utf-8'**, which is the only value supported. |
+| options | [ReadTextOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-readtextoptions-i.md) | Yes | The options are as follows: <br>- **offset** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position. <br>- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the file length. <br>- **encoding** (string): format of the data to be encoded. The default value is **'utf-8'**, which is the only value supported. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the content read. |
 
 **Error codes:**

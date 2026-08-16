@@ -70,7 +70,7 @@ localNames?: Array<HolidayLocalName>
 
 Local names of the holiday.
 
-**Type:** Array&lt;[HolidayLocalName](../../apis-na/arkts-apis/arkts-na-i18n-holidaylocalname-i.md)&gt;
+**Type:** Array&lt;[HolidayLocalName](arkts-localization-i18n-holidaylocalname-i.md)&gt;
 
 **Since:** 23
 

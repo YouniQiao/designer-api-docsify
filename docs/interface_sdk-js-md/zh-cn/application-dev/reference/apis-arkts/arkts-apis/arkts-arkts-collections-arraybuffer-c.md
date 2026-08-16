@@ -1,6 +1,6 @@
 # ArrayBuffer
 
-ArkTS TypedArray（Int8Array、 Uint8Array、 Int16Array、 Uint16Array、 Int32Array、 Uint32Array、 Uint8ClampedArray、 Float32Array）的底层数据结构。 > **说明：**> > - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。 > **装饰器类型**：\@Sendable
+ArkTS TypedArray（[Int8Array](arkts-collections.md#@arkts.collections)、 [Uint8Array](arkts-collections.md#@arkts.collections)、 [Int16Array](arkts-collections.md#@arkts.collections)、 [Uint16Array](arkts-collections.md#@arkts.collections)、 [Int32Array](arkts-collections.md#@arkts.collections)、 [Uint32Array](arkts-collections.md#@arkts.collections)、 [Uint8ClampedArray](arkts-collections.md#@arkts.collections)、 [Float32Array](arkts-collections.md#@arkts.collections)）的底层数据结构。 > **说明：**> > - 此模块仅支持在ArkTS文件（文件后缀为.ets）中导入使用。 > **装饰器类型**：\@Sendable
 
 **起始版本：** 12
 

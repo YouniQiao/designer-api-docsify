@@ -20,7 +20,7 @@ errCode: WebBlanklessErrorCode
 
 Defines the error codes of blankless.
 
-**Type:** [WebBlanklessErrorCode](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webblanklesserrorcode-e.md)
+**Type:** [WebBlanklessErrorCode](arkts-na-webview-webblanklesserrorcode-e.md)
 
 **Since:** 23
 

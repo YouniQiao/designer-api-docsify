@@ -1,8 +1,8 @@
 # DateOptions
 
-DateOptions defines options for the date picker. Inherits from [CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md#CommonOptions).
+DateOptions defines options for the date picker. Inherits from [CommonOptions](../../apis-na/arkts-apis/arkts-na-arkui-advanced-datepickercomponent-commonoptions-c.md#CommonOptions).
 
-**Inheritance/Implementation:** DateOptions extends [CommonOptions](arkts-arkui-arkui-advanced-datepickercomponent-commonoptions-c.md#CommonOptions)
+**Inheritance/Implementation:** DateOptions extends [CommonOptions](../../apis-na/arkts-apis/arkts-na-arkui-advanced-datepickercomponent-commonoptions-c.md#CommonOptions)
 
 **Since:** 26.0.0
 
@@ -59,7 +59,7 @@ mode?: DateMode
 
 Defines the mode of the date picker. Default value: DateMode.DATE
 
-**Type:** [DateMode](arkts-arkui-arkui-advanced-datepickercomponent-datemode-e.md)
+**Type:** [DateMode](../../apis-na/arkts-apis/arkts-na-arkui-advanced-datepickercomponent-datemode-e.md)
 
 **Default:** DateMode.DATE
 

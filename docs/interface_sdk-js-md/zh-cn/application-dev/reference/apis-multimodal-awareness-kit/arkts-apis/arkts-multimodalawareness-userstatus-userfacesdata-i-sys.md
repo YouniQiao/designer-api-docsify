@@ -1,6 +1,6 @@
 # UserFacesData（系统接口）
 
-用户面部数据。
+表示用户朝向屏幕相关的数据。
 
 **继承/实现关系：** UserFacesData extends [UserStatusData](arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md#UserStatusData（系统接口）)
 
@@ -22,7 +22,7 @@
 angularVelocity?: double[]
 ```
 
-用户运动状态的角速度，单位：rad/s。
+表示当前状态下设备的角速度。数组长度为3，分别表示绕x、y、z三个轴旋转的角速度分量，单位：rad/s。
 
 **类型：** double[]
 
@@ -46,7 +46,7 @@ angularVelocity?: double[]
 azimuth?: double[]
 ```
 
-用户运动状态的方位角。取值范围为0到360，单位：度。
+表示当前状态下设备的方位角。数组长度为3，分别表示偏航角（绕y轴）、俯仰角（绕x轴）和翻滚角（绕z轴），取值范围[0,360]。单位：deg。
 
 **类型：** double[]
 
@@ -70,7 +70,7 @@ azimuth?: double[]
 faceNum?: int
 ```
 
-检测到的面部数量。取值范围为[0,3]的整数。
+表示检测到的人脸数量。取值范围[0,3]。
 
 **类型：** int
 
@@ -94,7 +94,7 @@ faceNum?: int
 gravityAcceleration?: double[]
 ```
 
-用户运动状态的重力加速度，单位：m/s²。
+表示当前状态下设备的重力加速度。数组长度为3，分别表示x、y、z三个方向的加速度分量，单位：m/s²。
 
 **类型：** double[]
 
@@ -118,7 +118,7 @@ gravityAcceleration?: double[]
 linearAcceleration?: double[][]
 ```
 
-用户运动状态的线性加速度，单位：m/s²。
+表示当前状态下设备的线性加速度。二维数组，外层表示多个点位的采样，内层为长度3的数组，分别表示x、y、z三个方向的加速度分量，单位：m/s²。
 
 **类型：** double[][]
 
@@ -142,7 +142,7 @@ linearAcceleration?: double[][]
 visualAngle?: double[]
 ```
 
-用户视角。取值范围为0到90，单位：度。
+表示用户看屏幕的视角。取值范围[0,90]。单位：deg。
 
 **类型：** double[]
 

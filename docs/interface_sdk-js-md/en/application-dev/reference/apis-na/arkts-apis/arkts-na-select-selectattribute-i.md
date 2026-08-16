@@ -554,7 +554,7 @@ minKeyboardAvoidDistance(distance: LengthMetrics | undefined): this
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| distance | [LengthMetrics](arkts-na-graphics-lengthmetrics-c.md) \| undefined | Yes |  |
+| distance | [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | Yes |  |
 
 **Return value:**
 

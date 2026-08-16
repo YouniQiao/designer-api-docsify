@@ -1,8 +1,8 @@
 # CustomDialogOptions
 
-自定义弹窗的内容，继承自[BaseDialogOptions](../../apis-na/arkts-apis/arkts-na-promptaction-basedialogoptions-i.md#BaseDialogOptions)。
+自定义弹窗的内容，继承自[BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i.md#BaseDialogOptions)。
 
-**继承/实现关系：** CustomDialogOptions extends [BaseDialogOptions](../../apis-na/arkts-apis/arkts-na-promptaction-basedialogoptions-i.md#BaseDialogOptions)
+**继承/实现关系：** CustomDialogOptions extends [BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i.md#BaseDialogOptions)
 
 **起始版本：** 11
 

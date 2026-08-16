@@ -37,8 +37,8 @@ A constructor used to create a StyledDateTimeFormat object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| dateTimeFormat | Intl.DateTimeFormat \| [SimpleDateTimeFormat](arkts-na-i18n-simpledatetimeformat-c.md) | Yes | Indicates the date and time format object that used to format date. |
-| options | [StyledDateTimeFormatOptions](arkts-na-i18n-styleddatetimeformatoptions-i.md) | No | Indicates the options used to format the date. |
+| dateTimeFormat | Intl.DateTimeFormat \| [SimpleDateTimeFormat](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-simpledatetimeformat-c.md) | Yes | Indicates the date and time format object that used to format date. |
+| options | [StyledDateTimeFormatOptions](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-styleddatetimeformatoptions-i.md) | No | Indicates the options used to format the date. |
 
 ## format
 

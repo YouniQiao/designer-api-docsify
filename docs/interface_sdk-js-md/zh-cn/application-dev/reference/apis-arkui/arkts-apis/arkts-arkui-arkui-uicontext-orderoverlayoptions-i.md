@@ -20,7 +20,7 @@ levelMode?: LevelMode
 
 浮层的显示模式。
 
-**类型：** [LevelMode](../../apis-na/arkts-apis/arkts-na-promptaction-levelmode-e.md)
+**类型：** [LevelMode](arkts-arkui-promptaction-levelmode-e.md)
 
 **起始版本：** 26.0.0
 
@@ -44,7 +44,7 @@ levelOrder?: LevelOrder
 
 浮层的显示顺序。
 
-**类型：** [LevelOrder](../../apis-na/arkts-apis/arkts-na-promptaction-levelorder-c.md)
+**类型：** [LevelOrder](arkts-arkui-promptaction-levelorder-c.md)
 
 **起始版本：** 26.0.0
 

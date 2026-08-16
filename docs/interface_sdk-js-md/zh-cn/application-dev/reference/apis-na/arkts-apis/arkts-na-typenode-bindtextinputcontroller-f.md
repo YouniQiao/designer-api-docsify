@@ -24,7 +24,7 @@ export function bindTextInputController(node: FrameNode, controller: TextInputCo
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](arkts-na-framenode-c.md) | 是 | 目标节点。 |
+| node | [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) | 是 | 目标节点。 |
 | controller | TextInputController | 是 | the controller which is bind to 目标节点。 |
 
 **错误码：**

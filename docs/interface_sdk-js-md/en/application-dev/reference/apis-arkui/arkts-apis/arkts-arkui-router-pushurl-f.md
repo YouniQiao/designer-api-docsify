@@ -184,7 +184,7 @@ Navigates to a specified page in the application. > **NOTE：**> > - Since API v
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | RouterOptions | Yes | Page routing parameters. |
-| mode | [RouterMode](../../apis-na/arkts-apis/arkts-na-router-routermode-e.md) | Yes | Routing mode. |
+| mode | [RouterMode](arkts-arkui-router-routermode-e.md) | Yes | Routing mode. |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
 **Error codes:**
@@ -257,7 +257,7 @@ Navigates to a specified page in the application. > **NOTE：**> > - Since API v
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | RouterOptions | Yes | Page routing parameters. |
-| mode | [RouterMode](../../apis-na/arkts-apis/arkts-na-router-routermode-e.md) | Yes | Routing mode. |
+| mode | [RouterMode](arkts-arkui-router-routermode-e.md) | Yes | Routing mode. |
 
 **Return value:**
 

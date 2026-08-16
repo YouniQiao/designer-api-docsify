@@ -20,7 +20,7 @@
 readingCode?: int
 ```
 
-如果屏幕无法读取，将返回相应的状态码。
+如果屏幕无法读取，将返回相应的状态码，参考[CollectStrategy](arkts-multimodalawareness-onscreen-collectstrategy-e-sys.md#CollectStrategy（系统接口）)。
 
 **类型：** int
 

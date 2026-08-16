@@ -901,7 +901,7 @@ Get the size of the FrameNode after measure, with unit PX.
 
 | Type | Description |
 | --- | --- |
-| [Size](arkts-na-graphics-size-i.md) | Returns the size of the FrameNode after measure, with unit PX. |
+| [Size](../../apis-arkui/arkts-apis/arkts-arkui-graphics-size-i.md) | Returns the size of the FrameNode after measure, with unit PX. |
 
 ## getNextSibling
 
@@ -1245,7 +1245,7 @@ Get the RenderNode in FrameNode.
 
 | Type | Description |
 | --- | --- |
-| [RenderNode](arkts-na-rendernode-c.md) | Returns a RenderNode inside the FrameNode, or null if not contained. |
+| [RenderNode](../../apis-arkui/arkts-apis/arkts-arkui-rendernode-c.md) | Returns a RenderNode inside the FrameNode, or null if not contained. |
 
 ## getUniqueId
 
@@ -1297,7 +1297,7 @@ Get the user config border width of the FrameNode.
 
 | Type | Description |
 | --- | --- |
-| [NodeEdges](arkts-na-graphics-nodeedges-i.md)&lt;[LengthMetrics](arkts-na-graphics-lengthmetrics-c.md)&gt; | Returns the user config border width of the FrameNode. |
+| [NodeEdges](arkts-na-graphics-nodeedges-i.md)&lt;[LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)&gt; | Returns the user config border width of the FrameNode. |
 
 ## getUserConfigMargin
 
@@ -1323,7 +1323,7 @@ Get the user config margin of the FrameNode.
 
 | Type | Description |
 | --- | --- |
-| [NodeEdges](arkts-na-graphics-nodeedges-i.md)&lt;[LengthMetrics](arkts-na-graphics-lengthmetrics-c.md)&gt; | Returns the user config margin of the FrameNode. |
+| [NodeEdges](arkts-na-graphics-nodeedges-i.md)&lt;[LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)&gt; | Returns the user config margin of the FrameNode. |
 
 ## getUserConfigPadding
 
@@ -1349,7 +1349,7 @@ Get the user config padding of the FrameNode.
 
 | Type | Description |
 | --- | --- |
-| [NodeEdges](arkts-na-graphics-nodeedges-i.md)&lt;[LengthMetrics](arkts-na-graphics-lengthmetrics-c.md)&gt; | Returns the user config padding of the FrameNode. |
+| [NodeEdges](arkts-na-graphics-nodeedges-i.md)&lt;[LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)&gt; | Returns the user config padding of the FrameNode. |
 
 ## getUserConfigSize
 
@@ -1375,7 +1375,7 @@ Get the user config size of the FrameNode.
 
 | Type | Description |
 | --- | --- |
-| [SizeT](arkts-na-graphics-sizet-i.md)&lt;[LengthMetrics](arkts-na-graphics-lengthmetrics-c.md)&gt; | Returns the user config size of the FrameNode. |
+| [SizeT](../../apis-arkui/arkts-apis/arkts-arkui-graphics-sizet-i.md)&lt;[LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)&gt; | Returns the user config size of the FrameNode. |
 
 ## insertChildAfter
 
@@ -1801,7 +1801,7 @@ Draw Method. Executed when the current FrameNode is rendering its content.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [DrawContext](arkts-na-graphics-drawcontext-c.md) | Yes | The DrawContext will be used when executed draw method. |
+| context | [DrawContext](../../apis-arkui/arkts-apis/arkts-arkui-graphics-drawcontext-c.md) | Yes | The DrawContext will be used when executed draw method. |
 
 ## onLayout
 
@@ -2069,7 +2069,7 @@ Set the size of the FrameNode after measure, with unit PX.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | [Size](arkts-na-graphics-size-i.md) | Yes | The size of the FrameNode after measure. |
+| size | [Size](../../apis-arkui/arkts-apis/arkts-arkui-graphics-size-i.md) | Yes | The size of the FrameNode after measure. |
 
 ## setNeedsLayout
 

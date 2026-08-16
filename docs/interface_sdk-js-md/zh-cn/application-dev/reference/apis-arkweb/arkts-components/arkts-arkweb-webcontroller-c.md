@@ -218,7 +218,7 @@ Gets network cookie manager
 
 **废弃版本：** 9
 
-**替代接口：** [WebCookieManager](../arkts-apis/arkts-arkweb-webview-webcookiemanager-c.md#WebCookieManager)
+**替代接口：** [WebCookieManager](../../apis-na/arkts-apis/arkts-na-webview-webcookiemanager-c.md#WebCookieManager)
 
 <!--Device-WebController-getCookieManager(): WebCookie--><!--Device-WebController-getCookieManager(): WebCookie-End-->
 

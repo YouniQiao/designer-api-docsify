@@ -20,7 +20,7 @@ fileFilter?: FileFilter
 
 自定义文件名过滤的规则，默认为空，表示不进行过滤。
 
-**类型：** [FileFilter](arkts-na-file-fs-filefilter-i.md)
+**类型：** [FileFilter](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-filefilter-i.md)
 
 **起始版本：** 26.0.0
 

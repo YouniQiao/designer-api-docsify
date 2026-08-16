@@ -1,6 +1,6 @@
 # DeviceInfo（系统接口）
 
-设备信息。
+表示设备信息。
 
 **起始版本：** 26.0.0
 
@@ -20,7 +20,7 @@
 deviceId: string
 ```
 
-设备ID。
+表示设备ID。设备唯一标识符，用于标识和区分不同设备，字符串长度范围[0,64]。
 
 **类型：** string
 
@@ -44,7 +44,7 @@ deviceId: string
 deviceName: string
 ```
 
-设备名称。
+表示设备名称。用户可自定义的设备显示名称，用于在界面中展示设备信息，字符串长度范围[0,64]。
 
 **类型：** string
 
@@ -68,7 +68,7 @@ deviceName: string
 deviceType: DeviceType
 ```
 
-设备类型。
+表示设备类型。
 
 **类型：** DeviceType
 
@@ -92,7 +92,7 @@ deviceType: DeviceType
 networkId: string
 ```
 
-设备网络ID。
+表示设备网络ID。用于设备组网和跨设备通信的唯一网络标识，字符串长度范围[0,64]。
 
 **类型：** string
 

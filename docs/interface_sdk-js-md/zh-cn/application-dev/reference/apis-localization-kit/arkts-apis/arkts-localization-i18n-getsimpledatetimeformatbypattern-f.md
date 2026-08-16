@@ -6,7 +6,7 @@
 export function getSimpleDateTimeFormatByPattern(pattern: string, locale?: Intl.Locale): SimpleDateTimeFormat
 ```
 
-通过模式字符串获取SimpleDateTimeFormat对象。与[getSimpleDateTimeFormatBySkeleton](../../apis-na/arkts-apis/arkts-na-i18n-getsimpledatetimeformatbyskeleton-f.md#getSimpleDateTimeFormatBySkeleton)接 口获取的对象在格式化后显示差异请参考[SimpleDateTimeFormat.format](../../apis-na/arkts-apis/arkts-na-i18n-simpledatetimeformat-c.md#format)的示例。
+通过模式字符串获取SimpleDateTimeFormat对象。与[getSimpleDateTimeFormatBySkeleton](arkts-localization-i18n-getsimpledatetimeformatbyskeleton-f.md#getSimpleDateTimeFormatBySkeleton)接 口获取的对象在格式化后显示差异请参考[SimpleDateTimeFormat.format](arkts-localization-i18n-simpledatetimeformat-c.md#format)的示例。
 
 **起始版本：** 23
 
@@ -31,7 +31,7 @@ export function getSimpleDateTimeFormatByPattern(pattern: string, locale?: Intl.
 
 | 类型 | 说明 |
 | --- | --- |
-| [SimpleDateTimeFormat](../../apis-na/arkts-apis/arkts-na-i18n-simpledatetimeformat-c.md) | SimpleDateTimeFormat对象。 |
+| [SimpleDateTimeFormat](arkts-localization-i18n-simpledatetimeformat-c.md) | SimpleDateTimeFormat对象。 |
 
 **错误码：**
 
@@ -61,7 +61,7 @@ try {
 export function getSimpleDateTimeFormatByPattern(pattern: string, locale?: intl.Locale): SimpleDateTimeFormat
 ```
 
-通过模式字符串获取SimpleDateTimeFormat对象。与[getSimpleDateTimeFormatBySkeleton](../../apis-na/arkts-apis/arkts-na-i18n-getsimpledatetimeformatbyskeleton-f.md#getSimpleDateTimeFormatBySkeleton)接 口获取的对象在格式化后显示差异请参考[SimpleDateTimeFormat.format](../../apis-na/arkts-apis/arkts-na-i18n-simpledatetimeformat-c.md#format)的示例。
+通过模式字符串获取SimpleDateTimeFormat对象。与[getSimpleDateTimeFormatBySkeleton](arkts-localization-i18n-getsimpledatetimeformatbyskeleton-f.md#getSimpleDateTimeFormatBySkeleton)接 口获取的对象在格式化后显示差异请参考[SimpleDateTimeFormat.format](arkts-localization-i18n-simpledatetimeformat-c.md#format)的示例。
 
 **起始版本：** 18
 
@@ -69,7 +69,7 @@ export function getSimpleDateTimeFormatByPattern(pattern: string, locale?: intl.
 
 **废弃版本：** 20
 
-**替代接口：** [getSimpleDateTimeFormatByPattern](../../apis-na/arkts-apis/arkts-na-i18n-getsimpledatetimeformatbypattern-f.md#getSimpleDateTimeFormatByPattern)(pattern: string, locale?: Intl.Locale)
+**替代接口：** [getSimpleDateTimeFormatByPattern](#getSimpleDateTimeFormatByPattern)(pattern: string, locale?: Intl.Locale)
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务API中使用。
 
@@ -88,7 +88,7 @@ export function getSimpleDateTimeFormatByPattern(pattern: string, locale?: intl.
 
 | 类型 | 说明 |
 | --- | --- |
-| [SimpleDateTimeFormat](../../apis-na/arkts-apis/arkts-na-i18n-simpledatetimeformat-c.md) | SimpleDateTimeFormat对象。 |
+| [SimpleDateTimeFormat](arkts-localization-i18n-simpledatetimeformat-c.md) | SimpleDateTimeFormat对象。 |
 
 **错误码：**
 

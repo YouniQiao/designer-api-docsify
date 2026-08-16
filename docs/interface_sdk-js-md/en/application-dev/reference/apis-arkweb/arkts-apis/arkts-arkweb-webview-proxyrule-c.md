@@ -42,7 +42,7 @@ Returns the scheme filter used for this rule.
 
 | Type | Description |
 | --- | --- |
-| [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) | The scheme filter used for this rule. |
+| [ProxySchemeFilter](../../apis-na/arkts-apis/arkts-na-webview-proxyschemefilter-e.md) | The scheme filter used for this rule. |
 
 ## getUrl
 

@@ -55,7 +55,7 @@ constructor(encoding?: string, options?: { fatal?: boolean; ignoreBOM?: boolean 
 
 **废弃版本：** 9
 
-**替代接口：** [create](#create)
+**替代接口：** [create](../../apis-na/arkts-apis/arkts-na-util-textdecoder-c.md#create)
 
 <!--Device-TextDecoder-constructor(encoding?: string, options?: { fatal?: boolean; ignoreBOM?: boolean })--><!--Device-TextDecoder-constructor(encoding?: string, options?: { fatal?: boolean; ignoreBOM?: boolean })-End-->
 
@@ -99,13 +99,13 @@ static create(encoding?: string, options?: TextDecoderOptions): TextDecoder
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | encoding | string | 否 | 编码格式。默认格式为 **'utf-8'**。<br>**起始版本：** 11 |
-| options | [TextDecoderOptions](arkts-arkts-util-textdecoderoptions-i.md) | 否 | 解码相关的选项，包含 **fatal** 和 **ignoreBOM**。<br>**起始版本：** 11 |
+| options | [TextDecoderOptions](../../apis-na/arkts-apis/arkts-na-util-textdecoderoptions-i.md) | 否 | 解码相关的选项，包含 **fatal** 和 **ignoreBOM**。<br>**起始版本：** 11 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [TextDecoder](arkts-arkts-util-textdecoder-c.md) | 创建的 **TextDecoder** 对象。 |
+| [TextDecoder](../../apis-na/arkts-apis/arkts-na-util-textdecoder-c.md) | 创建的 **TextDecoder** 对象。 |
 
 ## 示例
 
@@ -134,7 +134,7 @@ decode(input: Uint8Array, options?: { stream?: false }): string
 
 **废弃版本：** 9
 
-**替代接口：** [decodeToString](#decodeToString)
+**替代接口：** [decodeToString](../../apis-na/arkts-apis/arkts-na-util-textdecoder-c.md#decodeToString)
 
 <!--Device-TextDecoder-decode(input: Uint8Array, options?: { stream?: false }): string--><!--Device-TextDecoder-decode(input: Uint8Array, options?: { stream?: false }): string-End-->
 
@@ -195,7 +195,7 @@ decodeToString(input: Uint8Array, options?: DecodeToStringOptions): string
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | input | Uint8Array | 是 | 要解码的 Uint8Array 对象。 |
-| options | [DecodeToStringOptions](arkts-arkts-util-decodetostringoptions-i.md) | 否 | 解码相关的选项。默认值为 **undefined**。 |
+| options | [DecodeToStringOptions](../../apis-na/arkts-apis/arkts-na-util-decodetostringoptions-i.md) | 否 | 解码相关的选项。默认值为 **undefined**。 |
 
 **返回值：**
 
@@ -254,7 +254,7 @@ decodeWithStream(input: Uint8Array, options?: DecodeWithStreamOptions): string
 
 **废弃版本：** 12
 
-**替代接口：** [decodeToString](#decodeToString)
+**替代接口：** [decodeToString](../../apis-na/arkts-apis/arkts-na-util-textdecoder-c.md#decodeToString)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 

@@ -92,7 +92,7 @@ space?: LengthMetrics
 
 Horizontal layout element spacing.
 
-**Type:** [LengthMetrics](arkts-na-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Default:** LengthMetrics.vp(0)
 

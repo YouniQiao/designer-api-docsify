@@ -23,6 +23,6 @@ type OnAtomicServiceRequestFailureFn = (appId: string, failureCode: FailureCode,
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | appId | string | 是 | 被拉起原子化服务的appId。 |
-| failureCode | [FailureCode](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-completionhandlerforatomicservice-failurecode-e.md) | 是 | 失败原因的错误码。 |
+| failureCode | [FailureCode](arkts-na-app-ability-completionhandlerforatomicservice-failurecode-e.md) | 是 | 失败原因的错误码。 |
 | failureMessage | string | 是 | 失败原因的描述。 |
 

@@ -1,6 +1,6 @@
 # FrameNode
 
-**FrameNode** represents an entity node in the component tree. It can be used by a [NodeController](arkts-arkui-nodecontroller-c.md#NodeController) to mount a BuilderNode (that holds the FrameNode) to a NodeContainer or mount a [RenderNode](../../apis-na/arkts-apis/arkts-na-rendernode-c.md#RenderNode) to another FrameNode.&lt;!--RP2--&gt;&lt;!--RP2End--&gt; > **NOTE：**> > - **FrameNode** is not available in DevEco Studio Previewer. > > - FrameNodes cannot be dragged. > > - FrameNode objects do not support JSON serialization. > > - When the API of the [FrameNode](#FrameNode) object is invoked in the scenario of > [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context), you are advised to use the > [runScopedTask](arkts-arkui-arkui-uicontext-uicontext-c.md#runScopedTask) API of > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) to specify the UI context. For details, see > [Executing the Closure Bound to a UI Instance](../../../ui/arkts-global-interface.md#executing-the-closure-bound-to-a-ui-instance). > > - In the FrameNode APIs, only the mandatory parameters of the Optional type can be set to null or > undefined.
+**FrameNode** represents an entity node in the component tree. It can be used by a [NodeController](../../apis-na/arkts-apis/arkts-na-nodecontroller-c.md#NodeController) to mount a BuilderNode (that holds the FrameNode) to a NodeContainer or mount a [RenderNode](arkts-arkui-rendernode-c.md#RenderNode) to another FrameNode.&lt;!--RP2--&gt;&lt;!--RP2End--&gt; > **NOTE：**> > - **FrameNode** is not available in DevEco Studio Previewer. > > - FrameNodes cannot be dragged. > > - FrameNode objects do not support JSON serialization. > > - When the API of the [FrameNode](#FrameNode) object is invoked in the scenario of > [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context), you are advised to use the > [runScopedTask](arkts-arkui-arkui-uicontext-uicontext-c.md#runScopedTask) API of > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext) to specify the UI context. For details, see > [Executing the Closure Bound to a UI Instance](../../../ui/arkts-global-interface.md#executing-the-closure-bound-to-a-ui-instance). > > - In the FrameNode APIs, only the mandatory parameters of the Optional type can be set to null or > undefined.
 
 **Since:** 11
 
@@ -1414,7 +1414,7 @@ Obtains the measured size of this FrameNode, in px.
 
 | Type | Description |
 | --- | --- |
-| [Size](../../apis-na/arkts-apis/arkts-na-graphics-size-i.md) | Measured size of the node, in px. |
+| [Size](arkts-arkui-graphics-size-i.md) | Measured size of the node, in px. |
 
 ## Examples
 
@@ -2180,7 +2180,7 @@ See Example of Node Operations.
 getRenderNode(): RenderNode | null
 ```
 
-Obtains the [RenderNode](../../apis-na/arkts-apis/arkts-na-rendernode-c.md#RenderNode) held by the FrameNode.
+Obtains the [RenderNode](arkts-arkui-rendernode-c.md#RenderNode) held by the FrameNode.
 
 **Since:** 11
 
@@ -2200,7 +2200,7 @@ Obtains the [RenderNode](../../apis-na/arkts-apis/arkts-na-rendernode-c.md#Rende
 
 | Type | Description |
 | --- | --- |
-| [RenderNode](../../apis-na/arkts-apis/arkts-na-rendernode-c.md) | RenderNode** instance. If the current FrameNode does not hold any RenderNode, **null** is returned. If the current FrameNode is a node created by a declarative component, **null** is returned. |
+| [RenderNode](arkts-arkui-rendernode-c.md) | RenderNode** instance. If the current FrameNode does not hold any RenderNode, **null** is returned. If the current FrameNode is a node created by a declarative component, **null** is returned. |
 
 ## Examples
 
@@ -2296,7 +2296,7 @@ Obtains the border width set by the user.
 
 | Type | Description |
 | --- | --- |
-| [Edges](arkts-arkui-graphics-edges-i.md)&lt;[LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)&gt; | Border width set by the user. |
+| [Edges](arkts-arkui-graphics-edges-i.md)&lt;[LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)&gt; | Border width set by the user. |
 
 ## Examples
 
@@ -2328,7 +2328,7 @@ Obtains the margin set by the user.
 
 | Type | Description |
 | --- | --- |
-| [Edges](arkts-arkui-graphics-edges-i.md)&lt;[LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)&gt; | Margin set by the user. |
+| [Edges](arkts-arkui-graphics-edges-i.md)&lt;[LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)&gt; | Margin set by the user. |
 
 ## Examples
 
@@ -2360,7 +2360,7 @@ Obtains the padding set by the user.
 
 | Type | Description |
 | --- | --- |
-| [Edges](arkts-arkui-graphics-edges-i.md)&lt;[LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)&gt; | Padding set by the user. |
+| [Edges](arkts-arkui-graphics-edges-i.md)&lt;[LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)&gt; | Padding set by the user. |
 
 ## Examples
 
@@ -2392,7 +2392,7 @@ Obtains the width and height set by the user.
 
 | Type | Description |
 | --- | --- |
-| [SizeT](../../apis-na/arkts-apis/arkts-na-graphics-sizet-i.md)&lt;[LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)&gt; | Width and height set by the user. |
+| [SizeT](arkts-arkui-graphics-sizet-i.md)&lt;[LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)&gt; | Width and height set by the user. |
 
 ## Examples
 
@@ -3494,7 +3494,7 @@ See Example of Customizing a Node.
 moveTo(targetParent: FrameNode, index?: number): void
 ```
 
-Moves this FrameNode to a specified position within the target FrameNode. If this FrameNode is not modifiable, an exception is thrown. When **targetParent** is a [typeNode](#typeNode), the API validates the type or number of child nodes. If the validation fails, an exception is thrown. For specific limitations, see [typeNode](#typeNode). > **NOTE：**> > Currently, only the following types of [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md#TypedFrameNode) are supported for the movement > operations: [Stack](arkts-arkui-typenode-stack-t.md#Stack), [XComponent](arkts-arkui-typenode-xcomponent-t.md#XComponent). This API does not work for > other node types. > > This API only supports [BuilderNode](../../apis-na/arkts-apis/arkts-na-buildernode-c.md#BuilderNode) with root components of these types: > Stack, XComponent, > EmbeddedComponent. This API does not work for other > component types.
+Moves this FrameNode to a specified position within the target FrameNode. If this FrameNode is not modifiable, an exception is thrown. When **targetParent** is a [typeNode](#typeNode), the API validates the type or number of child nodes. If the validation fails, an exception is thrown. For specific limitations, see [typeNode](#typeNode). > **NOTE：**> > Currently, only the following types of [TypedFrameNode](arkts-arkui-framenode-typedframenode-i.md#TypedFrameNode) are supported for the movement > operations: [Stack](arkts-arkui-typenode-stack-t.md#Stack), [XComponent](arkts-arkui-typenode-xcomponent-t.md#XComponent). This API does not work for > other node types. > > This API only supports [BuilderNode](arkts-arkui-buildernode-c.md#BuilderNode) with root components of these types: > Stack, XComponent, > EmbeddedComponent. This API does not work for other > component types.
 
 **Since:** 18
 
@@ -3534,7 +3534,7 @@ See Example of Node Operations.
 onDraw?(context: DrawContext): void
 ```
 
-Implements custom drawing for the FrameNode. This API overrides the default drawing behavior and is invoked during FrameNode content rendering. Note: The Canvas provided in the [DrawContext](../../apis-na/arkts-apis/arkts-na-graphics-drawcontext-c.md#DrawContext) parameter is a temporary command- recording canvas, not the actual rendering canvas of the node. For usage instructions, see [Adjusting the Transformation Matrix of the Custom Drawing Canvas](../../../ui/arkts-user-defined-arktsNode-frameNode.md#adjusting-the-transformation-matrix-of-the-custom-drawing-canvas).
+Implements custom drawing for the FrameNode. This API overrides the default drawing behavior and is invoked during FrameNode content rendering. Note: The Canvas provided in the [DrawContext](arkts-arkui-graphics-drawcontext-c.md#DrawContext) parameter is a temporary command- recording canvas, not the actual rendering canvas of the node. For usage instructions, see [Adjusting the Transformation Matrix of the Custom Drawing Canvas](../../../ui/arkts-user-defined-arktsNode-frameNode.md#adjusting-the-transformation-matrix-of-the-custom-drawing-canvas).
 
 **Since:** 12
 
@@ -3554,7 +3554,7 @@ Implements custom drawing for the FrameNode. This API overrides the default draw
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [DrawContext](../../apis-na/arkts-apis/arkts-na-graphics-drawcontext-c.md) | Yes | Graphics drawing context. The self-drawing area cannot exceed the component's own size. |
+| context | [DrawContext](arkts-arkui-graphics-drawcontext-c.md) | Yes | Graphics drawing context. The self-drawing area cannot exceed the component's own size. |
 
 ## Examples
 
@@ -3880,7 +3880,7 @@ Sets the measured size of this FrameNode. The default unit is PX. If the configu
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | [Size](../../apis-na/arkts-apis/arkts-na-graphics-size-i.md) | Yes | Measured size of the FrameNode. |
+| size | [Size](arkts-arkui-graphics-size-i.md) | Yes | Measured size of the FrameNode. |
 
 ## Examples
 

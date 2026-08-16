@@ -54,7 +54,7 @@ size: Size
 
 The target container size for layout analysis. Defines the reference dimensions used for breakpoint calculation and layout adaptation.
 
-**Type:** [Size](../../apis-na/arkts-apis/arkts-na-graphics-size-i.md)
+**Type:** [Size](arkts-arkui-graphics-size-i.md)
 
 **Since:** 26.0.0
 

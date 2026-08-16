@@ -42,7 +42,7 @@ Resume the canceled or failed download.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| webDownloadItem | [WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md) | Yes | Download that need to be resume. |
+| webDownloadItem | [WebDownloadItem](../../apis-na/arkts-apis/arkts-na-webview-webdownloaditem-c.md) | Yes | Download that need to be resume. |
 
 **Error codes:**
 
@@ -74,5 +74,5 @@ Set a delegate used to receive the progress of the download triggered from WebDo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| delegate | [WebDownloadDelegate](arkts-arkweb-webview-webdownloaddelegate-c.md) | Yes | Delegate used for download triggered from WebDownloadManager. |
+| delegate | [WebDownloadDelegate](../../apis-na/arkts-apis/arkts-na-webview-webdownloaddelegate-c.md) | Yes | Delegate used for download triggered from WebDownloadManager. |
 

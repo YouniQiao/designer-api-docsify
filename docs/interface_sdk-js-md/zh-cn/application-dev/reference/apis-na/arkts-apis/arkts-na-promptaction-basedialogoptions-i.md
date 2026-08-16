@@ -228,7 +228,7 @@ immersiveMode?: ImmersiveMode
 
 设置页面内弹窗蒙层效果。&lt;br /&gt;**说明：**&lt;br /&gt;- 默认值：ImmersiveMode.DEFAULT &lt;br /&gt;- 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
 
-**类型：** [ImmersiveMode](arkts-na-promptaction-immersivemode-e.md)
+**类型：** [ImmersiveMode](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-immersivemode-e.md)
 
 **默认值：** ImmersiveMode.DEFAULT
 
@@ -322,7 +322,7 @@ levelMode?: LevelMode
 
 设置弹窗显示层级。&lt;br /&gt;**说明：**&lt;br /&gt;- 默认值：LevelMode.OVERLAY &lt;br /&gt;- 当且仅当showInSubWindow属性设置为false时生效。
 
-**类型：** [LevelMode](arkts-na-promptaction-levelmode-e.md)
+**类型：** [LevelMode](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-levelmode-e.md)
 
 **默认值：** LevelMode.OVERLAY
 
@@ -346,7 +346,7 @@ levelOrder?: LevelOrder
 
 设置弹窗显示的顺序。&lt;br /&gt;**说明：**&lt;br /&gt;- 默认值：LevelOrder.clamp(0) &lt;br /&gt;- 不支持动态刷新顺序。
 
-**类型：** [LevelOrder](arkts-na-promptaction-levelorder-c.md)
+**类型：** [LevelOrder](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-levelorder-c.md)
 
 **默认值：** The value returned by LevelOrder.clamp(0)
 
@@ -368,7 +368,7 @@ levelOrder?: LevelOrder
 levelUniqueId?: int
 ```
 
-设置页面级弹窗需要显示的层级下的节点UniqueID，该ID可以通过[getUniqueId](arkts-na-framenode-c.md#getUniqueId)获取。 <br/>取值范围：大于等于0的数字。&lt;br /&gt;**说明：** &lt;br /&gt;- 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
+设置页面级弹窗需要显示的层级下的节点UniqueID，该ID可以通过[getUniqueId](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md#getUniqueId)获取。 <br/>取值范围：大于等于0的数字。&lt;br /&gt;**说明：** &lt;br /&gt;- 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
 
 **类型：** int
 

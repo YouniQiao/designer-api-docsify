@@ -1,6 +1,6 @@
 # promptAction
 
-创建并显示即时反馈、对话框和操作菜单，适用于系统通知、交互确认、菜单选择等场景。 > **说明：** > - 本模块不支持在[UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#UIAbility)的文件声明处使用，即不能在UIAbility的生命周期中调用，需要在 创建组件实例后使用。 > > - 本模块功能依赖UI的执行上下文，不可在[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的地方使用，参见 > [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#UIContext)说明。建议&lt;!--Del--&gt;在除 > [ServiceExtensionAbility](../../../application-models/serviceextensionability-sys.md)等无UI界面的场景外，均&lt;!--DelEnd--&gt;使用 > UIContext中的弹窗方法。
+创建并显示即时反馈、对话框和操作菜单，适用于系统通知、交互确认、菜单选择等场景。 > **说明：** > - 本模块不支持在[UIAbility](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiability-uiability-c.md#UIAbility)的文件声明处使用，即不能在UIAbility的生命周期中调用，需要在 创建组件实例后使用。 > > - 本模块功能依赖UI的执行上下文，不可在[UI上下文不明确](../../../ui/arkts-global-interface.md#ui上下文不明确)的地方使用，参见 > [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext)说明。建议&lt;!--Del--&gt;在除 > [ServiceExtensionAbility](../../../application-models/serviceextensionability-sys.md)等无UI界面的场景外，均&lt;!--DelEnd--&gt;使用 > UIContext中的弹窗方法。
 
 **起始版本：** 9
 
@@ -33,7 +33,7 @@
 | 名称 | 说明 |
 | --- | --- |
 | [CommonController](arkts-arkui-promptaction-commoncontroller-c.md) | 公共控制器，可以控制promptAction相关组件。 |
-| [DialogController](arkts-arkui-promptaction-dialogcontroller-c.md) | 自定义弹窗控制器，继承自[CommonController](../../apis-na/arkts-apis/arkts-na-promptaction-commoncontroller-c.md#CommonController)。 DialogController可作为UIContext弹出自定义弹窗的成员变量，具体用法可看 [openCustomDialogWithController](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-promptaction-c.md#openCustomDialogWithController)和 [presentCustomDialog](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-promptaction-c.md#presentCustomDialog)示例。 |
+| [DialogController](arkts-arkui-promptaction-dialogcontroller-c.md) | 自定义弹窗控制器，继承自[CommonController](arkts-arkui-promptaction-commoncontroller-c.md#CommonController)。 DialogController可作为UIContext弹出自定义弹窗的成员变量，具体用法可看 [openCustomDialogWithController](arkts-arkui-arkui-uicontext-promptaction-c.md#openCustomDialogWithController)和 [presentCustomDialog](arkts-arkui-arkui-uicontext-promptaction-c.md#presentCustomDialog)示例。 |
 
 ### 接口
 
@@ -44,8 +44,8 @@
 | [ShowDialogSuccessResponse](arkts-arkui-promptaction-showdialogsuccessresponse-i.md) | 对话框的响应结果。 |
 | [ShowDialogOptions](arkts-arkui-promptaction-showdialogoptions-i.md) | 对话框的选项。 |
 | [BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i.md) | 弹窗的选项。 |
-| [CustomDialogOptions](arkts-arkui-promptaction-customdialogoptions-i.md) | 自定义弹窗的内容，继承自[BaseDialogOptions](../../apis-na/arkts-apis/arkts-na-promptaction-basedialogoptions-i.md#BaseDialogOptions)。 |
-| [DialogOptions](arkts-arkui-promptaction-dialogoptions-i.md) | 自定义弹窗的内容，继承自[BaseDialogOptions](../../apis-na/arkts-apis/arkts-na-promptaction-basedialogoptions-i.md#BaseDialogOptions)，用于配置自定义弹窗的显示参数和行为。 |
+| [CustomDialogOptions](arkts-arkui-promptaction-customdialogoptions-i.md) | 自定义弹窗的内容，继承自[BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i.md#BaseDialogOptions)。 |
+| [DialogOptions](arkts-arkui-promptaction-dialogoptions-i.md) | 自定义弹窗的内容，继承自[BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i.md#BaseDialogOptions)，用于配置自定义弹窗的显示参数和行为。 |
 | [ActionMenuSuccessResponse](arkts-arkui-promptaction-actionmenusuccessresponse-i.md) | 操作菜单的响应结果。 |
 | [ActionMenuOptions](arkts-arkui-promptaction-actionmenuoptions-i.md) | 操作菜单的选项。 |
 

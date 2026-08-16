@@ -28,7 +28,7 @@ Defines the Image component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | [PixelMap](../../apis-arkui/arkts-components/arkts-arkui-pixelmap-t.md) \| [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) \| [ImageContent](arkts-na-image-imagecontent-e.md) \| undefined | Yes | image resource type. |
+| src | [PixelMap](../../apis-arkui/arkts-components/arkts-arkui-pixelmap-t.md) \| [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md) \| [ImageContent](arkts-na-image-imagecontent-e.md) \| undefined | Yes | image resource type. |
 | imageAIOptions | [ImageAIOptions](arkts-na-imagecommon-imageaioptions-i.md) | No | Options for AI analyzer. |
 
 **Return value:**
@@ -67,7 +67,7 @@ Defines the Image component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | [PixelMap](../../apis-arkui/arkts-components/arkts-arkui-pixelmap-t.md) \| [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) \| [ImageContent](arkts-na-image-imagecontent-e.md) \| undefined | Yes | image resource type. |
+| src | [PixelMap](../../apis-arkui/arkts-components/arkts-arkui-pixelmap-t.md) \| [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md) \| [ImageContent](arkts-na-image-imagecontent-e.md) \| undefined | Yes | image resource type. |
 | imageAIOptions | [ImageAIOptions](arkts-na-imagecommon-imageaioptions-i.md) | No | Options for AI analyzer. |
 | reloadKey | string | No | Options for image reload. |
 
@@ -106,7 +106,7 @@ Defines the Image component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | [PixelMap](../../apis-arkui/arkts-components/arkts-arkui-pixelmap-t.md) \| [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) \| [ImageContent](arkts-na-image-imagecontent-e.md) \| undefined | Yes | image resource type. |
+| src | [PixelMap](../../apis-arkui/arkts-components/arkts-arkui-pixelmap-t.md) \| [ResourceStr](../../apis-arkui/arkts-apis/arkts-arkui-resourcestr-t.md) \| [DrawableDescriptor](arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md) \| [ImageContent](arkts-na-image-imagecontent-e.md) \| undefined | Yes | image resource type. |
 | reloadKey | string | No | Options for image reload. |
 
 **Return value:**

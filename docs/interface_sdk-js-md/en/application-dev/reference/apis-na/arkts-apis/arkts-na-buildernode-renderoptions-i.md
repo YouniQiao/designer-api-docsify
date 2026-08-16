@@ -42,7 +42,7 @@ selfIdealSize?: Size
 
 The ideal size of the node.
 
-**Type:** [Size](arkts-na-graphics-size-i.md)
+**Type:** [Size](../../apis-arkui/arkts-apis/arkts-arkui-graphics-size-i.md)
 
 **Since:** 23
 
@@ -86,7 +86,7 @@ type?: NodeRenderType
 
 Render type of the node.
 
-**Type:** [NodeRenderType](arkts-na-buildernode-noderendertype-e.md)
+**Type:** [NodeRenderType](../../apis-arkui/arkts-apis/arkts-arkui-buildernode-noderendertype-e.md)
 
 **Since:** 23
 

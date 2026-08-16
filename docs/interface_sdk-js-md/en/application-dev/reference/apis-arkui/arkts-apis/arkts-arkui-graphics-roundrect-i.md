@@ -20,7 +20,7 @@ corners: CornerRadius
 
 Attributes of rounded corners.
 
-**Type:** [CornerRadius](../../apis-na/arkts-apis/arkts-na-cornerradius-t.md)
+**Type:** [CornerRadius](arkts-arkui-cornerradius-t.md)
 
 **Since:** 12
 
@@ -44,7 +44,7 @@ rect: Rect
 
 Attributes of the rectangle.
 
-**Type:** [Rect](../../apis-na/arkts-apis/arkts-na-rect-t.md)
+**Type:** [Rect](arkts-arkui-rect-t.md)
 
 **Since:** 12
 

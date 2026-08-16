@@ -60,7 +60,7 @@ type: OfflineResourceType
 
 Resource type
 
-**类型：** [OfflineResourceType](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-offlineresourcetype-e.md)
+**类型：** [OfflineResourceType](arkts-na-webview-offlineresourcetype-e.md)
 
 **起始版本：** 23
 

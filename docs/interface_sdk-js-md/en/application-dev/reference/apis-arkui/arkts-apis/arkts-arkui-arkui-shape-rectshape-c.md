@@ -1,6 +1,6 @@
 # RectShape
 
-Represents a rectangle shape used in the **clipShape** and **maskShape** APIs. This API inherits from [BaseShape](../../apis-na/arkts-apis/arkts-na-arkui-shape-baseshape-c.md#BaseShape).
+Represents a rectangle shape used in the **clipShape** and **maskShape** APIs. This API inherits from [BaseShape](arkts-arkui-arkui-shape-baseshape-c.md#BaseShape).
 
 **Inheritance/Implementation:** RectShape extends BaseShape<RectShape>
 
@@ -51,7 +51,7 @@ A constructor used to create a **RectShape** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RectShapeOptions](../../apis-na/arkts-apis/arkts-na-arkui-shape-rectshapeoptions-i.md) \| [RoundRectShapeOptions](../../apis-na/arkts-apis/arkts-na-arkui-shape-roundrectshapeoptions-i.md) | No | Rectangle parameters. |
+| options | [RectShapeOptions](arkts-arkui-arkui-shape-rectshapeoptions-i.md) \| [RoundRectShapeOptions](arkts-arkui-arkui-shape-roundrectshapeoptions-i.md) | No | Rectangle parameters. |
 
 ## radius
 
@@ -87,7 +87,7 @@ Sets the radius of the rectangle border corners.
 
 | Type | Description |
 | --- | --- |
-| [RectShape](../../apis-na/arkts-apis/arkts-na-arkui-shape-rectshape-c.md) | RectShape** object. |
+| [RectShape](arkts-arkui-arkui-shape-rectshape-c.md) | RectShape** object. |
 
 ## radiusHeight
 
@@ -123,7 +123,7 @@ Sets the radius height of the rectangle border corners.
 
 | Type | Description |
 | --- | --- |
-| [RectShape](../../apis-na/arkts-apis/arkts-na-arkui-shape-rectshape-c.md) | RectShape** object. |
+| [RectShape](arkts-arkui-arkui-shape-rectshape-c.md) | RectShape** object. |
 
 ## radiusWidth
 
@@ -159,5 +159,5 @@ Sets the radius width of the rectangle border corners.
 
 | Type | Description |
 | --- | --- |
-| [RectShape](../../apis-na/arkts-apis/arkts-na-arkui-shape-rectshape-c.md) | RectShape** object. |
+| [RectShape](arkts-arkui-arkui-shape-rectshape-c.md) | RectShape** object. |
 

@@ -50,7 +50,7 @@ Obtains a **FileIterator** object that lists the next-level files or directories
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | [Filter](../../apis-na/arkts-apis/arkts-na-file-fs-filter-i.md) | No | Indicates the filter of file. |
+| filter | [Filter](arkts-corefile-file-fs-filter-i.md) | No | Indicates the filter of file. |
 
 **Return value:**
 
@@ -157,7 +157,7 @@ Obtains a **FileIterator** object that recursively retrieves the files matching 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | [Filter](../../apis-na/arkts-apis/arkts-na-file-fs-filter-i.md) | No | Indicates the filter of file. |
+| filter | [Filter](arkts-corefile-file-fs-filter-i.md) | No | Indicates the filter of file. |
 
 **Return value:**
 

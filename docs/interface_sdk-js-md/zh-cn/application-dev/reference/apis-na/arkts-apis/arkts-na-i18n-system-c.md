@@ -144,7 +144,7 @@ static getFirstDayOfWeek(): WeekDay
 
 | 类型 | 说明 |
 | --- | --- |
-| [WeekDay](arkts-na-i18n-weekday-e.md) | 周起始日。 |
+| [WeekDay](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-weekday-e.md) | 周起始日。 |
 
 ## getFirstPreferredLanguage
 
@@ -406,7 +406,7 @@ static getTemperatureName(type: TemperatureType): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | [TemperatureType](arkts-na-i18n-temperaturetype-e.md) | 是 | 温度单位。 |
+| type | [TemperatureType](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-temperaturetype-e.md) | 是 | 温度单位。 |
 
 **返回值：**
 
@@ -444,7 +444,7 @@ static getTemperatureType(): TemperatureType
 
 | 类型 | 说明 |
 | --- | --- |
-| [TemperatureType](arkts-na-i18n-temperaturetype-e.md) | 温度单位。 |
+| [TemperatureType](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-temperaturetype-e.md) | 温度单位。 |
 
 ## getUsingLocalDigit
 

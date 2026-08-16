@@ -96,7 +96,7 @@ Obtains the holiday information list of the specified year.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[HolidayInfoItem](../../apis-na/arkts-apis/arkts-na-i18n-holidayinfoitem-i.md)&gt; | Holiday information list. |
+| Array&lt;[HolidayInfoItem](arkts-localization-i18n-holidayinfoitem-i.md)&gt; | Holiday information list. |
 
 **Error codes:**
 

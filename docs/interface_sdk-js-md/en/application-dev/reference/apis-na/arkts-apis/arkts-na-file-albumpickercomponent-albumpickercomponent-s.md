@@ -41,11 +41,11 @@ albumPickerController?: AlbumPickerController
 
 AlbumPickerController
 
-**Type:** [AlbumPickerController](arkts-na-file-albumpickercomponent-albumpickercontroller-c.md)
+**Type:** [AlbumPickerController](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-albumpickercomponent-albumpickercontroller-c.md)
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Deprecated since:** -1
 
@@ -63,7 +63,7 @@ albumPickerOptions?: AlbumPickerOptions
 
 AlbumPickerOptions
 
-**Type:** [AlbumPickerOptions](arkts-na-file-albumpickercomponent-albumpickeroptions-c.md)
+**Type:** [AlbumPickerOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-albumpickercomponent-albumpickeroptions-c.md)
 
 **Since:** 26.0.0
 
@@ -107,7 +107,7 @@ onEmptyAreaClick?: EmptyAreaClickCallback
 
 Callback when click the empty area of the album component
 
-**Type:** [EmptyAreaClickCallback](arkts-na-emptyareaclickcallback-t.md)
+**Type:** [EmptyAreaClickCallback](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-emptyareaclickcallback-t.md)
 
 **Since:** 26.0.0
 

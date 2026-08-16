@@ -20,7 +20,7 @@ unitUsage?: UnitUsage
 
 单位格式化使用场景的枚举。
 
-**类型：** [UnitUsage](../../apis-na/arkts-apis/arkts-na-i18n-unitusage-e.md)
+**类型：** [UnitUsage](arkts-localization-i18n-unitusage-e.md)
 
 **起始版本：** 23
 

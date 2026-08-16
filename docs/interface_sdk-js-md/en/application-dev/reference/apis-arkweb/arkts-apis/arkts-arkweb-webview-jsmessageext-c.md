@@ -226,5 +226,5 @@ Get the type of the JavaScript code execution result.
 
 | Type | Description |
 | --- | --- |
-| [JsMessageType](arkts-arkweb-webview-jsmessagetype-e.md) | Returns data of JsMessageType type |
+| [JsMessageType](../../apis-na/arkts-apis/arkts-na-webview-jsmessagetype-e.md) | Returns data of JsMessageType type |
 

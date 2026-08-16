@@ -20,7 +20,7 @@
 deviceId: string
 ```
 
-表示设备Id号。
+表示设备Id号，字符串长度：[1,128]。
 
 **类型：** string
 
@@ -44,7 +44,7 @@ deviceId: string
 doorLockCode: int
 ```
 
-表示门锁校验码。
+表示门锁校验码，结果≥0。
 
 **类型：** int
 

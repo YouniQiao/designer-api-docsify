@@ -91,7 +91,7 @@ clear(): void
 getLength(): string
 ```
 
-获取当前在页面栈内的页面数量。 > **说明：** > 从API version 10开始支持，从 API version 23开始废弃，建议使用[getStackSize](#getStackSize)替代。
+获取当前在页面栈内的页面数量。 > **说明：** > 从API version 10开始支持，从 API version 23开始废弃，建议使用[getStackSize](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-router-c.md#getStackSize)替代。
 
 **起始版本：** 23
 
@@ -356,7 +356,7 @@ pushNamedRoute(options: router.NamedRouterOptions): Promise<void>
 pushNamedRoute(options: router.NamedRouterOptions, mode: router.RouterMode, callback: AsyncCallback<void>): void
 ```
 
-跳转到指定的命名路由页面。使用callback异步回调。与 [pushNamedRoute](#pushNamedRoute)相比， 新增了mode参数，即支持设置跳转页面使用的模式。
+跳转到指定的命名路由页面。使用callback异步回调。与 [pushNamedRoute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-router-c.md#pushNamedRoute)相比， 新增了mode参数，即支持设置跳转页面使用的模式。
 
 **起始版本：** 23
 
@@ -393,7 +393,7 @@ pushNamedRoute(options: router.NamedRouterOptions, mode: router.RouterMode, call
 pushNamedRoute(options: router.NamedRouterOptions, mode: router.RouterMode): Promise<void>
 ```
 
-跳转到指定的命名路由页面，使用Promise异步回调。与[pushNamedRoute](#pushNamedRoute)相比，新增了mode参数，即支持设置跳转页面使用的模式。
+跳转到指定的命名路由页面，使用Promise异步回调。与[pushNamedRoute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-router-c.md#pushNamedRoute)相比，新增了mode参数，即支持设置跳转页面使用的模式。
 
 **起始版本：** 23
 
@@ -512,7 +512,7 @@ pushUrl(options: router.RouterOptions): Promise<void>
 pushUrl(options: router.RouterOptions, mode: router.RouterMode, callback: AsyncCallback<void>): void
 ```
 
-跳转到应用内的指定页面。使用callback异步回调。与 [pushUrl](#pushUrl)相比，新增了mode参数，即支持设置跳转页面使用的模式。
+跳转到应用内的指定页面。使用callback异步回调。与 [pushUrl](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-router-c.md#pushUrl)相比，新增了mode参数，即支持设置跳转页面使用的模式。
 
 **起始版本：** 23
 
@@ -549,7 +549,7 @@ pushUrl(options: router.RouterOptions, mode: router.RouterMode, callback: AsyncC
 pushUrl(options: router.RouterOptions, mode: router.RouterMode): Promise<void>
 ```
 
-跳转到应用内的指定页面，使用Promise异步回调。与[pushUrl](#pushUrl)相比，新增了mode参数，即支持设置跳转页面使用的模式。
+跳转到应用内的指定页面，使用Promise异步回调。与[pushUrl](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-router-c.md#pushUrl)相比，新增了mode参数，即支持设置跳转页面使用的模式。
 
 **起始版本：** 23
 
@@ -666,7 +666,7 @@ replaceNamedRoute(options: router.NamedRouterOptions): Promise<void>
 replaceNamedRoute(options: router.NamedRouterOptions, mode: router.RouterMode, callback: AsyncCallback<void>): void
 ```
 
-用指定的命名路由页面替换当前页面，并销毁被替换的页面。使用callback异步回调。与[replaceNamedRoute](#replaceNamedRoute)相比，新增了mode参数，即支持设置跳转页面使用的模式。
+用指定的命名路由页面替换当前页面，并销毁被替换的页面。使用callback异步回调。与[replaceNamedRoute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-router-c.md#replaceNamedRoute)相比，新增了mode参数，即支持设置跳转页面使用的模式。
 
 **起始版本：** 23
 
@@ -702,7 +702,7 @@ replaceNamedRoute(options: router.NamedRouterOptions, mode: router.RouterMode, c
 replaceNamedRoute(options: router.NamedRouterOptions, mode: router.RouterMode): Promise<void>
 ```
 
-用指定的命名路由页面替换当前页面，并销毁被替换的页面，使用Promise异步回调。与[replaceNamedRoute](#replaceNamedRoute)相比，新增了mode参数，即支持设置跳转页面使用的模式。
+用指定的命名路由页面替换当前页面，并销毁被替换的页面，使用Promise异步回调。与[replaceNamedRoute](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-router-c.md#replaceNamedRoute)相比，新增了mode参数，即支持设置跳转页面使用的模式。
 
 **起始版本：** 23
 
@@ -818,7 +818,7 @@ replaceUrl(options: router.RouterOptions): Promise<void>
 replaceUrl(options: router.RouterOptions, mode: router.RouterMode, callback: AsyncCallback<void>): void
 ```
 
-用应用内的某个页面替换当前页面，并销毁被替换的页面。使用callback异步回调。与[replaceUrl](#replaceUrl)相比，新增了mode参数，即支持设置跳转页面使用的模式。
+用应用内的某个页面替换当前页面，并销毁被替换的页面。使用callback异步回调。与[replaceUrl](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-router-c.md#replaceUrl)相比，新增了mode参数，即支持设置跳转页面使用的模式。
 
 **起始版本：** 23
 
@@ -854,7 +854,7 @@ replaceUrl(options: router.RouterOptions, mode: router.RouterMode, callback: Asy
 replaceUrl(options: router.RouterOptions, mode: router.RouterMode): Promise<void>
 ```
 
-用应用内的某个页面替换当前页面，并销毁被替换的页面，使用Promise异步回调。与[replaceUrl](#replaceUrl)相比，新增了mode参数，即支持设置跳转页面使用的模式。
+用应用内的某个页面替换当前页面，并销毁被替换的页面，使用Promise异步回调。与[replaceUrl](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-router-c.md#replaceUrl)相比，新增了mode参数，即支持设置跳转页面使用的模式。
 
 **起始版本：** 23
 

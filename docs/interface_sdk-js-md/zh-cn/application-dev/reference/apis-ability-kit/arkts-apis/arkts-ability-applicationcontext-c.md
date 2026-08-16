@@ -2369,7 +2369,7 @@ setLanguage(language: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| language | string | 是 | 设置语言，当前支持的语言列表可以通过 [getSystemLanguages()](../../apis-na/arkts-apis/arkts-na-i18n-system-c.md#getSystemLanguages)获取。 |
+| language | string | 是 | 设置语言，当前支持的语言列表可以通过 [getSystemLanguages()](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-system-c.md#getSystemLanguages)获取。 |
 
 **错误码：**
 

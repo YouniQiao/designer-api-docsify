@@ -36,7 +36,7 @@ onLayout(self: FrameNode, position: NodePosition): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| self | [FrameNode](arkts-na-framenode-c.md) | 是 | 动态布局组件在组件树上的实体节点。 |
+| self | [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) | 是 | 动态布局组件在组件树上的实体节点。 |
 | position | [NodePosition](arkts-na-nodeposition-t.md) | 是 | 动态布局组件进行布局时使用的位置信息。 |
 
 ## onMeasure
@@ -61,6 +61,6 @@ onMeasure(self: FrameNode, constraint: LayoutConstraint): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| self | [FrameNode](arkts-na-framenode-c.md) | 是 | 动态布局组件在组件树上的实体节点。 |
-| constraint | [LayoutConstraint](arkts-na-framenode-layoutconstraint-i.md) | 是 | 动态布局组件进行测量时使用的布局约束。 |
+| self | [FrameNode](../../apis-arkui/arkts-apis/arkts-arkui-framenode-c.md) | 是 | 动态布局组件在组件树上的实体节点。 |
+| constraint | [LayoutConstraint](../../apis-arkui/arkts-apis/arkts-arkui-framenode-layoutconstraint-i.md) | 是 | 动态布局组件进行测量时使用的布局约束。 |
 

@@ -1,8 +1,8 @@
 # DialogOptions
 
-自定义弹窗的内容，继承自[BaseDialogOptions](../../apis-na/arkts-apis/arkts-na-promptaction-basedialogoptions-i.md#BaseDialogOptions)，用于配置自定义弹窗的显示参数和行为。
+自定义弹窗的内容，继承自[BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i.md#BaseDialogOptions)，用于配置自定义弹窗的显示参数和行为。
 
-**继承/实现关系：** DialogOptions extends [BaseDialogOptions](../../apis-na/arkts-apis/arkts-na-promptaction-basedialogoptions-i.md#BaseDialogOptions)
+**继承/实现关系：** DialogOptions extends [BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i.md#BaseDialogOptions)
 
 **起始版本：** 18
 
@@ -72,7 +72,7 @@ borderColor?: DialogOptionsBorderColor
 
 设置弹窗背板的边框颜色。 <br/>默认值：Color.Black <br/> 如果使用borderColor属性，需要和borderWidth属性一起使用。
 
-**类型：** [DialogOptionsBorderColor](../../apis-na/arkts-apis/arkts-na-promptaction-dialogoptionsbordercolor-t.md)
+**类型：** [DialogOptionsBorderColor](arkts-arkui-promptaction-dialogoptionsbordercolor-t.md)
 
 **起始版本：** 18
 
@@ -96,7 +96,7 @@ borderStyle?: DialogOptionsBorderStyle
 
 设置弹窗背板的边框样式。 <br/>默认值：BorderStyle.Solid。 <br/> 如果使用borderStyle属性，需要和borderWidth属性一起使用。
 
-**类型：** [DialogOptionsBorderStyle](../../apis-na/arkts-apis/arkts-na-promptaction-dialogoptionsborderstyle-t.md)
+**类型：** [DialogOptionsBorderStyle](arkts-arkui-promptaction-dialogoptionsborderstyle-t.md)
 
 **起始版本：** 18
 
@@ -120,7 +120,7 @@ borderWidth?: DialogOptionsBorderWidth
 
 设置弹窗背板的边框宽度。 &lt;br /&gt;可分别设置4个边框宽度。 &lt;br /&gt;默认值：0 &lt;br /&gt;单位：vp &lt;br /&gt; 百分比参数方式：以父元素弹窗宽的百分比来设置弹窗的边框宽度。 &lt;br /&gt;当弹窗左边框和右边框大于弹窗宽度，弹窗上边框和下边框大于弹窗高度，显示可能不符合预期。
 
-**类型：** [DialogOptionsBorderWidth](../../apis-na/arkts-apis/arkts-na-promptaction-dialogoptionsborderwidth-t.md)
+**类型：** [DialogOptionsBorderWidth](arkts-arkui-promptaction-dialogoptionsborderwidth-t.md)
 
 **起始版本：** 18
 
@@ -144,7 +144,7 @@ cornerRadius?: DialogOptionsCornerRadius
 
 设置弹窗背板的圆角半径。 &lt;br /&gt;可分别设置4个圆角的半径。 &lt;br /&gt;默认值：{ topLeft: '32vp', topRight: '32vp', bottomLeft: '32vp', bottomRight: '32vp' } &lt;br /&gt; 圆角大小受组件尺寸限制，最大值为组件宽或高的一半，若值为负，则按照默认值处理。 &lt;br /&gt; 百分比参数方式：以父元素弹窗宽和高的百分比来设置弹窗的圆角。
 
-**类型：** [DialogOptionsCornerRadius](../../apis-na/arkts-apis/arkts-na-promptaction-dialogoptionscornerradius-t.md)
+**类型：** [DialogOptionsCornerRadius](arkts-arkui-promptaction-dialogoptionscornerradius-t.md)
 
 **起始版本：** 18
 
@@ -192,7 +192,7 @@ shadow?: DialogOptionsShadow
 
 设置弹窗背板的阴影。 &lt;br /&gt;当设备为2in1时，默认场景下获焦阴影值为ShadowStyle.OUTER_FLOATING_MD，失焦为ShadowStyle.OUTER_FLOATING_SM。其他设备默认无阴影。
 
-**类型：** [DialogOptionsShadow](../../apis-na/arkts-apis/arkts-na-promptaction-dialogoptionsshadow-t.md)
+**类型：** [DialogOptionsShadow](arkts-arkui-promptaction-dialogoptionsshadow-t.md)
 
 **起始版本：** 18
 

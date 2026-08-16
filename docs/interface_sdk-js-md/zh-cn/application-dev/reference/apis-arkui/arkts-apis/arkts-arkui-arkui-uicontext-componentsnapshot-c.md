@@ -1,6 +1,6 @@
 # ComponentSnapshot
 
-提供获取组件截图的能力，包括已加载的组件的截图和没有加载的组件的截图。 > **说明：** > > - 本Class首批接口从API version 12开始支持。 > > - 以下API需先使用UIContext中的[getComponentSnapshot()](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getComponentSnapshot)方法获取ComponentSnapshot对象，再通过此实例调用对应方法。 > > - 缩放、平移、旋转等图形变换属性只对被截图组件的子组件生效；对目标组件本身应用图形变换属性不生效，显示的还是图形变换前的效果。
+提供获取组件截图的能力，包括已加载的组件的截图和没有加载的组件的截图。 > **说明：** > > - 本Class首批接口从API version 12开始支持。 > > - 以下API需先使用UIContext中的[getComponentSnapshot()](arkts-arkui-arkui-uicontext-uicontext-c.md#getComponentSnapshot)方法获取ComponentSnapshot对象，再通过此实例调用对应方法。 > > - 缩放、平移、旋转等图形变换属性只对被截图组件的子组件生效；对目标组件本身应用图形变换属性不生效，显示的还是图形变换前的效果。
 
 **起始版本：** 12
 
@@ -330,7 +330,7 @@ getSyncWithUniqueId(uniqueId: number, options?: componentSnapshot.SnapshotOption
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uniqueId | number | 是 | 目标组件的uniqueId。FrameNode节点的uniqueId可通过 [getUniqueId](../../apis-na/arkts-apis/arkts-na-framenode-c.md#getUniqueId)接口获取。<br/>**说明：** 不支持未挂树组件，当传入的组件标识是离屏或缓存未挂树的节点时，系统不会对其进行截 图。 |
+| uniqueId | number | 是 | 目标组件的uniqueId。FrameNode节点的uniqueId可通过 [getUniqueId](arkts-arkui-framenode-c.md#getUniqueId)接口获取。<br/>**说明：** 不支持未挂树组件，当传入的组件标识是离屏或缓存未挂树的节点时，系统不会对其进行截 图。 |
 | options | componentSnapshot.SnapshotOptions | 否 | 截图相关的自定义参数。 |
 
 **返回值：**
@@ -374,7 +374,7 @@ getWithUniqueId(uniqueId: number, options?: componentSnapshot.SnapshotOptions): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uniqueId | number | 是 | 目标组件的uniqueId。FrameNode节点的uniqueId可通过 [getUniqueId](../../apis-na/arkts-apis/arkts-na-framenode-c.md#getUniqueId)接口获取。 <br/>**说明：** 不支持未挂树组件，当传入的组件标识是离屏或缓存未挂树的节点时，系统不会对其进行截 图。 |
+| uniqueId | number | 是 | 目标组件的uniqueId。FrameNode节点的uniqueId可通过 [getUniqueId](arkts-arkui-framenode-c.md#getUniqueId)接口获取。 <br/>**说明：** 不支持未挂树组件，当传入的组件标识是离屏或缓存未挂树的节点时，系统不会对其进行截 图。 |
 | options | componentSnapshot.SnapshotOptions | 否 | 截图相关的自定义参数。 |
 
 **返回值：**

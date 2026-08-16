@@ -8,7 +8,7 @@ Decodes a string or Uint8Array containing Base64 data into a newly allocated Uin
 
 **Deprecated since:** 9
 
-**Substitutes:** [Base64Helper](arkts-arkts-util-base64helper-c.md#Base64Helper)
+**Substitutes:** [Base64Helper](../../apis-na/arkts-apis/arkts-na-util-base64helper-c.md#Base64Helper)
 
 <!--Device-util-class Base64--><!--Device-util-class Base64-End-->
 
@@ -34,7 +34,7 @@ A constructor used to create a **Base64** object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [constructor](arkts-arkts-util-base64helper-c.md#constructor)
+**Substitutes:** [constructor](../../apis-na/arkts-apis/arkts-na-util-base64helper-c.md#constructor)
 
 <!--Device-Base64-constructor()--><!--Device-Base64-constructor()-End-->
 
@@ -60,7 +60,7 @@ Decodes the input content into a Uint8Array object. This API uses a promise to r
 
 **Deprecated since:** 9
 
-**Substitutes:** [decode](arkts-arkts-util-base64helper-c.md#decode)
+**Substitutes:** [decode](../../apis-na/arkts-apis/arkts-na-util-base64helper-c.md#decode)
 
 <!--Device-Base64-decode(src: Uint8Array | string): Promise<Uint8Array>--><!--Device-Base64-decode(src: Uint8Array | string): Promise<Uint8Array>-End-->
 
@@ -103,7 +103,7 @@ Decodes the input content into a Uint8Array object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [decodeSync](arkts-arkts-util-base64helper-c.md#decodeSync)
+**Substitutes:** [decodeSync](../../apis-na/arkts-apis/arkts-na-util-base64helper-c.md#decodeSync)
 
 <!--Device-Base64-decodeSync(src: Uint8Array | string): Uint8Array--><!--Device-Base64-decodeSync(src: Uint8Array | string): Uint8Array-End-->
 
@@ -145,7 +145,7 @@ Encodes the input content into a Uint8Array object. This API uses a promise to r
 
 **Deprecated since:** 9
 
-**Substitutes:** [encode](arkts-arkts-util-base64helper-c.md#encode)
+**Substitutes:** [encode](../../apis-na/arkts-apis/arkts-na-util-base64helper-c.md#encode)
 
 <!--Device-Base64-encode(src: Uint8Array): Promise<Uint8Array>--><!--Device-Base64-encode(src: Uint8Array): Promise<Uint8Array>-End-->
 
@@ -188,7 +188,7 @@ Performs Base64 encoding on the input Uint8Array byte array and returns the enco
 
 **Deprecated since:** 9
 
-**Substitutes:** [encodeSync](arkts-arkts-util-base64helper-c.md#encodeSync)
+**Substitutes:** [encodeSync](../../apis-na/arkts-apis/arkts-na-util-base64helper-c.md#encodeSync)
 
 <!--Device-Base64-encodeSync(src: Uint8Array): Uint8Array--><!--Device-Base64-encodeSync(src: Uint8Array): Uint8Array-End-->
 
@@ -230,7 +230,7 @@ Encodes the input content into a string. This API uses a promise to return the r
 
 **Deprecated since:** 9
 
-**Substitutes:** [encodeToString](arkts-arkts-util-base64helper-c.md#encodeToString)
+**Substitutes:** [encodeToString](../../apis-na/arkts-apis/arkts-na-util-base64helper-c.md#encodeToString)
 
 <!--Device-Base64-encodeToString(src: Uint8Array): Promise<string>--><!--Device-Base64-encodeToString(src: Uint8Array): Promise<string>-End-->
 
@@ -273,7 +273,7 @@ Performs Base64 encoding on the input Uint8Array byte array and returns the enco
 
 **Deprecated since:** 9
 
-**Substitutes:** [encodeToStringSync](arkts-arkts-util-base64helper-c.md#encodeToStringSync)
+**Substitutes:** [encodeToStringSync](../../apis-na/arkts-apis/arkts-na-util-base64helper-c.md#encodeToStringSync)
 
 <!--Device-Base64-encodeToStringSync(src: Uint8Array): string--><!--Device-Base64-encodeToStringSync(src: Uint8Array): string-End-->
 

@@ -2,7 +2,7 @@
 
 提供自定义数字符号的能力。继承自 [Intl.NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat)， 支持 [Intl.NumberFormat](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat) 的方法。
 
-**继承/实现关系：** SymbolNumberFormat implements [Intl.NumberFormat](arkts-localization-intl-numberformat-c.md#NumberFormat)
+**继承/实现关系：** SymbolNumberFormat implements [Intl.NumberFormat](../../apis-na/arkts-apis/arkts-na-intl-numberformat-c.md#NumberFormat)
 
 **起始版本：** 26.0.0
 
@@ -41,7 +41,7 @@ public constructor(locale?: Intl.Locale, options?: SymbolNumberFormatOptions)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | locale | Intl.Locale | 否 | 区域对象。默认值：系统区域对象。 |
-| options | [SymbolNumberFormatOptions](../../apis-na/arkts-apis/arkts-na-i18n-symbolnumberformatoptions-i.md) | 否 | 自定义数字格式化符号的配置项。默认值：区域默认的符号。 |
+| options | [SymbolNumberFormatOptions](arkts-localization-i18n-symbolnumberformatoptions-i.md) | 否 | 自定义数字格式化符号的配置项。默认值：区域默认的符号。 |
 
 ## format
 
@@ -248,5 +248,5 @@ public resolvedOptions(): ResolvedSymbolNumberFormatOptions
 
 | 类型 | 说明 |
 | --- | --- |
-| [ResolvedSymbolNumberFormatOptions](../../apis-na/arkts-apis/arkts-na-i18n-resolvedsymbolnumberformatoptions-i.md) | 自定义符号数字格式化对象配置项的解析结果。 |
+| [ResolvedSymbolNumberFormatOptions](arkts-localization-i18n-resolvedsymbolnumberformatoptions-i.md) | 自定义符号数字格式化对象配置项的解析结果。 |
 

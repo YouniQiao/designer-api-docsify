@@ -2,7 +2,7 @@
 
 带目标节点的智慧手势处理基类。
 
-**继承/实现关系：** TargetedGestureProposal extends [BaseGestureHandlingProposal](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-basegesturehandlingproposal-c.md#BaseGestureHandlingProposal)
+**继承/实现关系：** TargetedGestureProposal extends [BaseGestureHandlingProposal](arkts-arkui-arkui-uicontext-basegesturehandlingproposal-c.md#BaseGestureHandlingProposal)
 
 **起始版本：** 26.0.0
 

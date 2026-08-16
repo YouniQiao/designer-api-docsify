@@ -38,5 +38,5 @@ Obtains the ChineseCalendar object for the specified locale.
 
 | Type | Description |
 | --- | --- |
-| [ChineseCalendar](../../apis-na/arkts-apis/arkts-na-i18n-chinesecalendar-c.md) | ChineseCalendar object. |
+| [ChineseCalendar](arkts-localization-i18n-chinesecalendar-c.md) | ChineseCalendar object. |
 

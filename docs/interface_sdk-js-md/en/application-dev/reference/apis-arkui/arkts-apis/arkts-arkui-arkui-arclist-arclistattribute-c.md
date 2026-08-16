@@ -559,7 +559,7 @@ Sets the color of the scrollbar.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | Optional&lt;[ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md)&gt; | Yes | Color of the scrollbar.<br/> Default value: **ColorMetrics.numeric(0xA9FFFFFF) |
+| color | Optional&lt;[ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)&gt; | Yes | Color of the scrollbar.<br/> Default value: **ColorMetrics.numeric(0xA9FFFFFF) |
 
 **Return value:**
 
@@ -591,7 +591,7 @@ Sets the width of the scrollbar. Once the width is set, the scrollbar will use t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| width | Optional&lt;[LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)&gt; | Yes | Width of the scrollbar.<br/> Default value: **LengthMetrics.vp(24)**.<br/>Minimum value: **LengthMetrics.vp(4)**<br>Unit: vp |
+| width | Optional&lt;[LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)&gt; | Yes | Width of the scrollbar.<br/> Default value: **LengthMetrics.vp(24)**.<br/>Minimum value: **LengthMetrics.vp(4)**<br>Unit: vp |
 
 **Return value:**
 
@@ -623,7 +623,7 @@ Sets the spacing between list items.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| space | Optional&lt;[LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)&gt; | Yes | Spacing between list items.<br/> Default value: **LengthMetrics.vp(0)**.<br/>Child components of **ArcList** whose visibility attribute is set to **None** are not displayed, but the spacing above and below them still takes effect. |
+| space | Optional&lt;[LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)&gt; | Yes | Spacing between list items.<br/> Default value: **LengthMetrics.vp(0)**.<br/>Child components of **ArcList** whose visibility attribute is set to **None** are not displayed, but the spacing above and below them still takes effect. |
 
 **Return value:**
 

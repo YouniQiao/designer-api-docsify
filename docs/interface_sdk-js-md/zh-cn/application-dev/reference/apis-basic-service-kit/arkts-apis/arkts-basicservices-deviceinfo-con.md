@@ -6,7 +6,7 @@
 const ODID: string
 ```
 
-开发者匿名设备标识符。 **ODID值会在以下场景重新生成：** 手机恢复出厂设置。 同一设备上同一个开发者(developerId相同)的应用全部卸载后重新安装时。 **ODID生成规则：** 根据签名信息里developerId解析出的groupId生成，developerId规则为groupId.developerId，若无groupId则取整个developerId作为groupId。 同一设备上运行的同一个开发者(developerId相同)的应用，ODID相同。 同一个设备上不同开发者(developerId不同)的应用，ODID不同。 不同设备上同一个开发者(developerId相同)的应用，ODID不同。 不同设备上不同开发者(developerId不同)的应用，ODID不同。 **说明：**数据长度为37字节(包含结束符)。 示例：1234a567-XXXX-XXXX-XXXX-XXXXXXXXXXXX
+ODID（Open Developer Identifier，开发者匿名设备标识符）。 **ODID值会在以下场景重新生成：** 手机恢复出厂设置。 同一设备上同一个开发者(developerId相同)的应用全部卸载后重新安装时。 **ODID生成规则：** 根据签名信息里developerId解析出的groupId生成，developerId规则为groupId.developerId，若无groupId则取整个developerId作为groupId。 同一设备上运行的同一个开发者(developerId相同)的应用，ODID相同。 同一个设备上不同开发者(developerId不同)的应用，ODID不同。 不同设备上同一个开发者(developerId相同)的应用，ODID不同。 不同设备上不同开发者(developerId不同)的应用，ODID不同。 **说明：**数据长度为37字节(包含结束符)。 示例：1234a567-XXXX-XXXX-XXXX-XXXXXXXXXXXX
 
 **起始版本：** 12
 
@@ -264,7 +264,7 @@ const deviceType: string
 const diskSN: string
 ```
 
-硬盘序列号，该接口在执行期间会拉起临时进程，当系统负载较高时，可能引发阻塞风险。为确保应用主线程的响应性能，建议避免在主线程中调用。设备信息因设备而异且固定不变，可在首次获取后缓存在本地，避免每次使用时重复获取，以提升性能。 **说明：**该字段只能在2in1设备进行查询，其他设备查询结果为空。 ohos.permission.ACCESS_DISK_PHY_INFO 示例：2502EM400567
+硬盘序列号，该接口在执行期间会拉起临时进程，当系统负载较高时，可能引发阻塞风险。为确保应用主线程的响应性能，建议避免在主线程中调用。设备信息因设备而异且固定不变，可在首次获取后缓存在本地，避免每次使用时重复获取，以提升性能。 **说明：**该字段只能在部分2in1设备上进行查询，其他设备查询结果为空。 ohos.permission.ACCESS_DISK_PHY_INFO 示例：2502EM400567
 
 **起始版本：** 15
 
@@ -302,7 +302,7 @@ const displayVersion: string
 const distributionOSApiName: string
 ```
 
-发行版系统api版本名称&lt;!--Del--&gt;，由发行方定义&lt;!--DelEnd--&gt;。 &lt;!--RP16--&gt; **说明：**不建议用于版本号判断。 示例：5.0.1&lt;!--RP16End--&gt;
+发行版系统API版本名称&lt;!--Del--&gt;，由发行方定义&lt;!--DelEnd--&gt;。 &lt;!--RP16--&gt; **说明：**不建议用于版本号判断。 示例：5.0.1&lt;!--RP16End--&gt;
 
 **起始版本：** 13
 
@@ -692,7 +692,7 @@ const sdkMinorApiVersion: number
 const sdkPatchApiVersion: number
 ```
 
-系统软件Patch API版本。从API 26 版本开始，系统API版本格式：sdkApiVersion.sdkMinorApiVersion.sdkPatchApiVersion。 26.0.0 示例：0
+系统软件Patch API版本。从API 26.0.0 版本开始，系统API版本格式：sdkApiVersion.sdkMinorApiVersion.sdkPatchApiVersion。 26.0.0 示例：0
 
 **起始版本：** 26.0.0
 
@@ -750,7 +750,7 @@ Senior版本号，随局部架构、重大特性增加，值为osFullName中的�
 const serial: string
 ```
 
-设备序列号SN(Serial Number)，该接口在执行期间会拉起临时进程，当系统负载较高时，可能引发阻塞风险。为确保应用主线程的响应性能，建议避免在主线程中调用。设备信息因设备而异且固定不变，可在首次获取后缓存在本地，避免每次使用时重复获取，以提升性能。 **说明：**可作为设备唯一识别码。 ohos.permission.sec.ACCESS_UDID(该权限只允许系统应用及企业定制应用申请) 示例：序列号随设备差异
+设备序列号SN(Serial Number)，该接口在执行期间会拉起临时进程，当系统负载较高时，可能引发阻塞风险。为确保应用主线程的响应性能，建议避免在主线程中调用。设备信息因设备而异且固定不变，可在首次获取后缓存在本地，避免每次使用时重复获取，以提升性能。 **说明：**可作为设备唯一识别码。 ohos.permission.sec.ACCESS_UDID(该权限只允许系统应用及企业类应用申请) 示例：序列号随设备差异
 
 **起始版本：** 6
 

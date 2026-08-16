@@ -1,6 +1,6 @@
 # Font
 
-Font用于管理自定义字体和系统字体信息，支持注册自定义字体、获取系统字体列表、查询字体详细信息等功能，适用于需要在应用中使用自定义字体或查询系统字体资源的场景。 > **说明：**> > - 以下API需先使用UIContext中的[getFont()](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getFont)方法获取到Font对象，再通过该对象调用对应方法。 > > - 推荐使用字体引擎的[loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadFontSync)接口注册自定义字体。
+Font用于管理自定义字体和系统字体信息，支持注册自定义字体、获取系统字体列表、查询字体详细信息等功能，适用于需要在应用中使用自定义字体或查询系统字体资源的场景。 > **说明：**> > - 以下API需先使用UIContext中的[getFont()](arkts-arkui-arkui-uicontext-uicontext-c.md#getFont)方法获取到Font对象，再通过该对象调用对应方法。 > > - 推荐使用字体引擎的[loadFontSync](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-text-fontcollection-c.md#loadFontSync)接口注册自定义字体。
 
 **起始版本：** 10
 

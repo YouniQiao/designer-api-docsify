@@ -218,7 +218,7 @@ immersiveMode?: ImmersiveMode
 
 设置页面内对话框蒙层效果。 &lt;br /&gt;**说明：** &lt;br /&gt;- 默认值：ImmersiveMode.DEFAULT &lt;br /&gt;- 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
 
-**类型：** [ImmersiveMode](../../apis-na/arkts-apis/arkts-na-promptaction-immersivemode-e.md)
+**类型：** [ImmersiveMode](arkts-arkui-promptaction-immersivemode-e.md)
 
 **默认值：** ImmersiveMode.DEFAULT
 
@@ -270,7 +270,7 @@ levelMode?: LevelMode
 
 设置对话框显示层级。 &lt;br /&gt;**说明：** &lt;br /&gt;- 默认值：LevelMode.OVERLAY &lt;br /&gt;- 当且仅当showInSubWindow属性设置为false时生效。
 
-**类型：** [LevelMode](../../apis-na/arkts-apis/arkts-na-promptaction-levelmode-e.md)
+**类型：** [LevelMode](arkts-arkui-promptaction-levelmode-e.md)
 
 **默认值：** LevelMode.OVERLAY
 
@@ -296,7 +296,7 @@ levelOrder?: LevelOrder
 
 设置对话框显示的顺序。 &lt;br /&gt;**说明：** &lt;br /&gt;- 默认值：LevelOrder.clamp(0) &lt;br /&gt;- 不支持动态刷新顺序。
 
-**类型：** [LevelOrder](../../apis-na/arkts-apis/arkts-na-promptaction-levelorder-c.md)
+**类型：** [LevelOrder](arkts-arkui-promptaction-levelorder-c.md)
 
 **默认值：** The value returned by LevelOrder.clamp(0)
 
@@ -560,7 +560,7 @@ showInSubWindow?: boolean
 systemMaterial?: SystemUiMaterial
 ```
 
-设置弹窗的系统材质。 &lt;br /&gt;**说明：** <br/>- 默认值：[ImmersiveOptions](../../apis-na/arkts-apis/arkts-na-uimaterial-immersiveoptions-i.md#ImmersiveOptions)的style为ImmersiveStyle.ULTRA_THICK的 [ImmersiveMaterial](../../apis-na/arkts-apis/arkts-na-uimaterial-immersivematerial-c.md#ImmersiveMaterial)对象。设置undefined时与默认值保持一致。 <br/>- 不同的材质具有不同的效果，该接口影响 背景色[backgroundColor](../arkui-ts/ts-universal-attributes-background.md#backgroundcolor)、 背景模糊[backgroundBlurStyle](../arkui-ts/ts-universal-attributes-background.md#backgroundblurstyle9)、 背景效果[backgroundEffect](../arkui-ts/ts-universal-attributes-background.md#backgroundeffect11)、 阴影[shadow](../arkui-ts/ts-universal-attributes-image-effect.md#shadow)，不建议与上述接口一起使用。
+设置弹窗的系统材质。 &lt;br /&gt;**说明：** <br/>- 默认值：[ImmersiveOptions](arkts-arkui-uimaterial-immersiveoptions-i.md#ImmersiveOptions)的style为ImmersiveStyle.ULTRA_THICK的 [ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md#ImmersiveMaterial)对象。设置undefined时与默认值保持一致。 <br/>- 不同的材质具有不同的效果，该接口影响 背景色[backgroundColor](../arkui-ts/ts-universal-attributes-background.md#backgroundcolor)、 背景模糊[backgroundBlurStyle](../arkui-ts/ts-universal-attributes-background.md#backgroundblurstyle9)、 背景效果[backgroundEffect](../arkui-ts/ts-universal-attributes-background.md#backgroundeffect11)、 阴影[shadow](../arkui-ts/ts-universal-attributes-image-effect.md#shadow)，不建议与上述接口一起使用。
 
 **类型：** SystemUiMaterial
 

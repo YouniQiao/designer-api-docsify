@@ -8,7 +8,7 @@ Provides util functions.
 
 **Deprecated since:** 9
 
-**Substitutes:** [I18NUtil](../../apis-na/arkts-apis/arkts-na-i18n-i18nutil-c.md#I18NUtil)
+**Substitutes:** [I18NUtil](arkts-localization-i18n-i18nutil-c.md#I18NUtil)
 
 <!--Device-i18n-export interface Util--><!--Device-i18n-export interface Util-End-->
 
@@ -34,7 +34,7 @@ Converts one measurement unit into another and formats the unit based on the spe
 
 **Deprecated since:** 9
 
-**Substitutes:** [unitConvert](../../apis-na/arkts-apis/arkts-na-i18n-i18nutil-c.md#unitConvert)
+**Substitutes:** [unitConvert](arkts-localization-i18n-i18nutil-c.md#unitConvert)
 
 <!--Device-Util-unitConvert(fromUnit: UnitInfo, toUnit: UnitInfo, value: double, locale: string, style?: string): string--><!--Device-Util-unitConvert(fromUnit: UnitInfo, toUnit: UnitInfo, value: double, locale: string, style?: string): string-End-->
 
@@ -44,8 +44,8 @@ Converts one measurement unit into another and formats the unit based on the spe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| fromUnit | [UnitInfo](../../apis-na/arkts-apis/arkts-na-i18n-unitinfo-i.md) | Yes | Measurement unit to be converted. |
-| toUnit | [UnitInfo](../../apis-na/arkts-apis/arkts-na-i18n-unitinfo-i.md) | Yes | Measurement unit to be converted to. |
+| fromUnit | [UnitInfo](arkts-localization-i18n-unitinfo-i.md) | Yes | Measurement unit to be converted. |
+| toUnit | [UnitInfo](arkts-localization-i18n-unitinfo-i.md) | Yes | Measurement unit to be converted to. |
 | value | double | Yes | Value of the measurement unit to be converted. |
 | locale | string | Yes | Locale ID used for formatting, for example, **zh-Hans-CN**. |
 | style | string | No | Style used for formatting. The value can be **long**, **short**, or **narrow**. The default value is **short**. |

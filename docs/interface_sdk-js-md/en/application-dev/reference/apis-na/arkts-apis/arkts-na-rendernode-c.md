@@ -36,7 +36,7 @@ Add child to the end of the RenderNode's children.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [RenderNode](arkts-na-rendernode-c.md) | Yes | The node will be added. |
+| node | [RenderNode](../../apis-arkui/arkts-apis/arkts-arkui-rendernode-c.md) | Yes | The node will be added. |
 
 **Error codes:**
 
@@ -128,7 +128,7 @@ Draw Method. Executed when the associated RenderNode is onDraw.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [DrawContext](arkts-na-graphics-drawcontext-c.md) | Yes | The DrawContext will be used when executed draw method. |
+| context | [DrawContext](../../apis-arkui/arkts-apis/arkts-arkui-graphics-drawcontext-c.md) | Yes | The DrawContext will be used when executed draw method. |
 
 ## getChild
 
@@ -160,7 +160,7 @@ Get a child of the current RenderNode by index.
 
 | Type | Description |
 | --- | --- |
-| [RenderNode](arkts-na-rendernode-c.md) | Returns a RenderNode. When the required node does not exist, returns null. |
+| [RenderNode](../../apis-arkui/arkts-apis/arkts-arkui-rendernode-c.md) | Returns a RenderNode. When the required node does not exist, returns null. |
 
 ## getFirstChild
 
@@ -186,7 +186,7 @@ Get the first child of the current RenderNode.
 
 | Type | Description |
 | --- | --- |
-| [RenderNode](arkts-na-rendernode-c.md) | Returns a RenderNode, which is first child of the current RenderNode. If current RenderNode does not have child node, returns null. |
+| [RenderNode](../../apis-arkui/arkts-apis/arkts-arkui-rendernode-c.md) | Returns a RenderNode, which is first child of the current RenderNode. If current RenderNode does not have child node, returns null. |
 
 ## getNextSibling
 
@@ -212,7 +212,7 @@ Get the next sibling node of the current RenderNode.
 
 | Type | Description |
 | --- | --- |
-| [RenderNode](arkts-na-rendernode-c.md) | Returns a RenderNode. If current RenderNode does not have next sibling node, returns null. |
+| [RenderNode](../../apis-arkui/arkts-apis/arkts-arkui-rendernode-c.md) | Returns a RenderNode. If current RenderNode does not have next sibling node, returns null. |
 
 ## getPreviousSibling
 
@@ -238,7 +238,7 @@ Get the previous sibling node of the current RenderNode.
 
 | Type | Description |
 | --- | --- |
-| [RenderNode](arkts-na-rendernode-c.md) | Returns a RenderNode. |
+| [RenderNode](../../apis-arkui/arkts-apis/arkts-arkui-rendernode-c.md) | Returns a RenderNode. |
 
 ## insertChildAfter
 
@@ -264,8 +264,8 @@ Add child to the current RenderNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| child | [RenderNode](arkts-na-rendernode-c.md) | Yes | The node will be added. |
-| sibling | [RenderNode](arkts-na-rendernode-c.md) \| null | Yes | The new node is added after this node. When sibling is null, insert node as the first children of the node. |
+| child | [RenderNode](../../apis-arkui/arkts-apis/arkts-arkui-rendernode-c.md) | Yes | The node will be added. |
+| sibling | [RenderNode](../../apis-arkui/arkts-apis/arkts-arkui-rendernode-c.md) \| null | Yes | The new node is added after this node. When sibling is null, insert node as the first children of the node. |
 
 **Error codes:**
 
@@ -343,5 +343,5 @@ Remove child from the current RenderNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [RenderNode](arkts-na-rendernode-c.md) | Yes | The node will be removed. |
+| node | [RenderNode](../../apis-arkui/arkts-apis/arkts-arkui-rendernode-c.md) | Yes | The node will be removed. |
 

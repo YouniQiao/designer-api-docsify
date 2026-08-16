@@ -1,6 +1,6 @@
 # @ohos.multimodalAwareness.spatialAwareness
 
-本模块提供对测距的感知能力。
+本模块提供对测距的感知能力，支持超声信号测试。
 
 **起始版本：** 23
 

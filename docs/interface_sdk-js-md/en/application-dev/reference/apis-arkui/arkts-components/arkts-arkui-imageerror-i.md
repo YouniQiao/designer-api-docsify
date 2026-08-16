@@ -1,6 +1,6 @@
 # ImageError
 
-Describes the object returned by the image loading error callback. This event is not triggered if the parameter type of the component is [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md#AnimatedDrawableDescriptor).
+Describes the object returned by the image loading error callback. This event is not triggered if the parameter type of the component is [AnimatedDrawableDescriptor](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-animateddrawabledescriptor-c.md#AnimatedDrawableDescriptor).
 
 **Since:** 9
 

@@ -1,8 +1,8 @@
 # ResolvedUIContext
 
-ResolvedUIContext实例对象。 > **说明：** > > - 示例效果请以真机运行为准，当前DevEco Studio预览器不支持。 > > - ResolvedUIContext继承自[UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#UIContext)，并新增strategy属性用于记录该UIContext实例的解析策略。
+ResolvedUIContext实例对象。 > **说明：** > > - 示例效果请以真机运行为准，当前DevEco Studio预览器不支持。 > > - ResolvedUIContext继承自[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext)，并新增strategy属性用于记录该UIContext实例的解析策略。
 
-**继承/实现关系：** ResolvedUIContext extends [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#UIContext)
+**继承/实现关系：** ResolvedUIContext extends [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext)
 
 **起始版本：** 22
 
@@ -20,9 +20,9 @@ ResolvedUIContext实例对象。 > **说明：** > > - 示例效果请以真机�
 strategy: ResolveStrategy
 ```
 
-[UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#UIContext)的解析策略。
+[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext)的解析策略。
 
-**类型：** [ResolveStrategy](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-resolvestrategy-e.md)
+**类型：** [ResolveStrategy](arkts-arkui-arkui-uicontext-resolvestrategy-e.md)
 
 **起始版本：** 22
 

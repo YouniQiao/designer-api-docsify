@@ -88,7 +88,7 @@ action?: OnActionCallback
 
 Callback function when operate the icon.
 
-**Type:** [OnActionCallback](../../apis-arkui/arkts-apis/arkts-arkui-onactioncallback-t.md)
+**Type:** [OnActionCallback](arkts-na-onactioncallback-t.md)
 
 **Since:** 26.0.0
 

@@ -20,7 +20,7 @@ maxSize: Size
 
 MaxSize
 
-**Type:** [Size](arkts-na-graphics-size-i.md)
+**Type:** [Size](../../apis-arkui/arkts-apis/arkts-arkui-graphics-size-i.md)
 
 **Since:** 23
 
@@ -42,7 +42,7 @@ minSize: Size
 
 MinSize
 
-**Type:** [Size](arkts-na-graphics-size-i.md)
+**Type:** [Size](../../apis-arkui/arkts-apis/arkts-arkui-graphics-size-i.md)
 
 **Since:** 23
 
@@ -64,7 +64,7 @@ percentReference: Size
 
 PercentReference, if the size unit of the child nodes is percentage, then they use PercentReference to calculate the px size.
 
-**Type:** [Size](arkts-na-graphics-size-i.md)
+**Type:** [Size](../../apis-arkui/arkts-apis/arkts-arkui-graphics-size-i.md)
 
 **Since:** 23
 

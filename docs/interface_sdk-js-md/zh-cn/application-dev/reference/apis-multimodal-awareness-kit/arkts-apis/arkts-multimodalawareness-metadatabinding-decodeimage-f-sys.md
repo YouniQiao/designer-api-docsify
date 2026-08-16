@@ -6,7 +6,7 @@
 function decodeImage(encodedImage: image.PixelMap): Promise<string>
 ```
 
-解析图片中携带的信息。通过对应的解码算法从图片中提取嵌入的metadata信息。使用promise异步回调。
+解析图片中携带的信息。通过对应的解码算法从图片中提取嵌入的metadata信息。使用Promise异步回调。
 
 **起始版本：** 23
 

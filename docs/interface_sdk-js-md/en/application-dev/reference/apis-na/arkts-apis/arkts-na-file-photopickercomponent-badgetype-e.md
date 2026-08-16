@@ -2,9 +2,9 @@
 
 BadgeType.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Deprecated since:** -1
 
@@ -20,9 +20,9 @@ BADGE_UPLOADED = 0
 
 BADGE_UPLOADED. Asset uploaded.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Deprecated since:** -1
 

@@ -31,7 +31,7 @@ Obtains a SimpleNumberFormat object based on the specified skeleton.
 
 | Type | Description |
 | --- | --- |
-| [SimpleNumberFormat](arkts-na-i18n-simplenumberformat-c.md) | SimpleNumberFormat object. |
+| [SimpleNumberFormat](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-simplenumberformat-c.md) | SimpleNumberFormat object. |
 
 **Error codes:**
 

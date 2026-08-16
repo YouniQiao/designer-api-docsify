@@ -38,7 +38,7 @@ Appends a child node to this RenderNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [RenderNode](../../apis-na/arkts-apis/arkts-na-rendernode-c.md) | Yes | Child node to append. |
+| node | [RenderNode](arkts-arkui-rendernode-c.md) | Yes | Child node to append. |
 
 **Error codes:**
 
@@ -319,7 +319,7 @@ struct Index {
 draw(context: DrawContext): void
 ```
 
-Performs drawing. You need to implement this API. It is called when the RenderNode performs drawing. Note: The Canvas provided in the [DrawContext](../../apis-na/arkts-apis/arkts-na-graphics-drawcontext-c.md#DrawContext) parameter is a temporary command- recording canvas, not the actual rendering canvas of the node. For usage instructions, see [Adjusting the Transformation Matrix of the Custom Drawing Canvas](../../../ui/arkts-user-defined-arktsNode-renderNode.md#adjusting-the-transformation-matrix-of-the-custom-drawing-canvas). > **NOTE：**> > During RenderNode initialization, the **draw** method is invoked twice. The first call occurs when the FrameNode > is initially created, triggering the rendering process. The second call occurs when the modifier is initially > set, which triggers drawing. All subsequent drawing processes are triggered by the modifier.
+Performs drawing. You need to implement this API. It is called when the RenderNode performs drawing. Note: The Canvas provided in the [DrawContext](arkts-arkui-graphics-drawcontext-c.md#DrawContext) parameter is a temporary command- recording canvas, not the actual rendering canvas of the node. For usage instructions, see [Adjusting the Transformation Matrix of the Custom Drawing Canvas](../../../ui/arkts-user-defined-arktsNode-renderNode.md#adjusting-the-transformation-matrix-of-the-custom-drawing-canvas). > **NOTE：**> > During RenderNode initialization, the **draw** method is invoked twice. The first call occurs when the FrameNode > is initially created, triggering the rendering process. The second call occurs when the modifier is initially > set, which triggers drawing. All subsequent drawing processes are triggered by the modifier.
 
 **Since:** 11
 
@@ -339,7 +339,7 @@ Performs drawing. You need to implement this API. It is called when the RenderNo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [DrawContext](../../apis-na/arkts-apis/arkts-na-graphics-drawcontext-c.md) | Yes | Graphics drawing context. |
+| context | [DrawContext](arkts-arkui-graphics-drawcontext-c.md) | Yes | Graphics drawing context. |
 
 ## Examples
 
@@ -516,7 +516,7 @@ Obtains the child node in the specified position of this RenderNode.
 
 | Type | Description |
 | --- | --- |
-| [RenderNode](../../apis-na/arkts-apis/arkts-na-rendernode-c.md) | Child node obtained. If the RenderNode does not contain the specified child node, null is returned. |
+| [RenderNode](arkts-arkui-rendernode-c.md) | Child node obtained. If the RenderNode does not contain the specified child node, null is returned. |
 
 ## Examples
 
@@ -605,7 +605,7 @@ Obtains the first child node of this RenderNode.
 
 | Type | Description |
 | --- | --- |
-| [RenderNode](../../apis-na/arkts-apis/arkts-na-rendernode-c.md) | First child node. If the RenderNode does not contain any child node, null is returned. |
+| [RenderNode](arkts-arkui-rendernode-c.md) | First child node. If the RenderNode does not contain any child node, null is returned. |
 
 ## Examples
 
@@ -699,7 +699,7 @@ Obtains the next sibling node of this RenderNode.
 
 | Type | Description |
 | --- | --- |
-| [RenderNode](../../apis-na/arkts-apis/arkts-na-rendernode-c.md) | Next sibling node of the current RenderNode. If the RenderNode does not have the next sibling node, null is returned. |
+| [RenderNode](arkts-arkui-rendernode-c.md) | Next sibling node of the current RenderNode. If the RenderNode does not have the next sibling node, null is returned. |
 
 ## Examples
 
@@ -794,7 +794,7 @@ Obtains the previous sibling node of this RenderNode.
 
 | Type | Description |
 | --- | --- |
-| [RenderNode](../../apis-na/arkts-apis/arkts-na-rendernode-c.md) | Previous sibling node of the current RenderNode. If the RenderNode does not have the previous sibling node, null is returned. |
+| [RenderNode](arkts-arkui-rendernode-c.md) | Previous sibling node of the current RenderNode. If the RenderNode does not have the previous sibling node, null is returned. |
 
 ## Examples
 
@@ -889,8 +889,8 @@ Inserts a child node after the specified child node of this RenderNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| child | [RenderNode](../../apis-na/arkts-apis/arkts-na-rendernode-c.md) | Yes | Child node to add. |
-| sibling | [RenderNode](../../apis-na/arkts-apis/arkts-na-rendernode-c.md) \| null | Yes | Node after which the new child node will be inserted. If this parameter is left empty, the new node is inserted before the first subnode. |
+| child | [RenderNode](arkts-arkui-rendernode-c.md) | Yes | Child node to add. |
+| sibling | [RenderNode](arkts-arkui-rendernode-c.md) \| null | Yes | Node after which the new child node will be inserted. If this parameter is left empty, the new node is inserted before the first subnode. |
 
 **Error codes:**
 
@@ -1182,7 +1182,7 @@ Deletes the specified child node from this RenderNode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| node | [RenderNode](../../apis-na/arkts-apis/arkts-na-rendernode-c.md) | Yes | Child node to delete. |
+| node | [RenderNode](arkts-arkui-rendernode-c.md) | Yes | Child node to delete. |
 
 ## Examples
 

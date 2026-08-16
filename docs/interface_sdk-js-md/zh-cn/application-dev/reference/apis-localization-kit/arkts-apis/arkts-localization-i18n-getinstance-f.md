@@ -30,7 +30,7 @@ export function getInstance(locale?:string): IndexUtil
 
 | 类型 | 说明 |
 | --- | --- |
-| [IndexUtil](../../apis-na/arkts-apis/arkts-na-i18n-indexutil-c.md) | 根据区域ID创建的IndexUtil对象。 |
+| [IndexUtil](arkts-localization-i18n-indexutil-c.md) | 根据区域ID创建的IndexUtil对象。 |
 
 ## 示例
 

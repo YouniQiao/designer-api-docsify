@@ -20,7 +20,7 @@
 RANK_ULTRA_SHORT_RANGE = 'rankUltraShort'
 ```
 
-表示超短距。单位:cm，范围:[0:5]
+表示超短距。单位：cm，范围：[0:5]。
 
 **起始版本：** 23
 
@@ -42,7 +42,7 @@ RANK_ULTRA_SHORT_RANGE = 'rankUltraShort'
 RANK_SHORT_RANGE = 'rankShort'
 ```
 
-表示短距。单位:cm，范围:(5:100]
+表示短距。单位：cm，范围：(5:100]。
 
 **起始版本：** 23
 
@@ -64,7 +64,7 @@ RANK_SHORT_RANGE = 'rankShort'
 RANK_SHORT_MEDIUM_RANGE = 'rankMediumShort'
 ```
 
-表示中短距。单位:cm，范围:(100:500]
+表示中短距。单位：cm，范围：(100:500]。
 
 **起始版本：** 23
 
@@ -86,7 +86,7 @@ RANK_SHORT_MEDIUM_RANGE = 'rankMediumShort'
 RANK_MEDIUM_RANGE = 'rankMedium'
 ```
 
-表示中距。单位:cm，范围:(500:1000]
+表示中距。单位：cm，范围：(500:1000]。
 
 **起始版本：** 23
 

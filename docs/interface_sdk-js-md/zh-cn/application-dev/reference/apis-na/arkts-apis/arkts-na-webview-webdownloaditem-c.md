@@ -58,7 +58,7 @@ Deserialize web download from typed array.
 
 | 类型 | 说明 |
 | --- | --- |
-| [WebDownloadItem](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webdownloaditem-c.md) | Deserialize the serialized data into a WebDownloadItem. |
+| [WebDownloadItem](arkts-na-webview-webdownloaditem-c.md) | Deserialize the serialized data into a WebDownloadItem. |
 
 **错误码：**
 
@@ -160,7 +160,7 @@ Get last error code of the web download.
 
 | 类型 | 说明 |
 | --- | --- |
-| [WebDownloadErrorCode](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webdownloaderrorcode-e.md) | Returns the last error code. |
+| [WebDownloadErrorCode](arkts-na-webview-webdownloaderrorcode-e.md) | Returns the last error code. |
 
 ## getMethod
 
@@ -332,7 +332,7 @@ Get state of the web download.
 
 | 类型 | 说明 |
 | --- | --- |
-| [WebDownloadState](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webdownloadstate-e.md) | Returns the current download state. |
+| [WebDownloadState](arkts-na-webview-webdownloadstate-e.md) | Returns the current download state. |
 
 ## getSuggestedFileName
 

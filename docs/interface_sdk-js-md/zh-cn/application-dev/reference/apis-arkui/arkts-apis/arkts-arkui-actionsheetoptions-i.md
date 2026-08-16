@@ -492,7 +492,7 @@ levelOrder?: LevelOrder
 levelUniqueId?: number
 ```
 
-设置页面级弹窗需要显示的层级下的[getUniqueId](../../apis-na/arkts-apis/arkts-na-framenode-c.md#getUniqueId)。 取值范围：大于等于0的数字。 **说明：** - 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
+设置页面级弹窗需要显示的层级下的[getUniqueId](arkts-arkui-framenode-c.md#getUniqueId)。 取值范围：大于等于0的数字。 **说明：** - 当且仅当levelMode属性设置为LevelMode.EMBEDDED时生效。
 
 **类型：** number
 

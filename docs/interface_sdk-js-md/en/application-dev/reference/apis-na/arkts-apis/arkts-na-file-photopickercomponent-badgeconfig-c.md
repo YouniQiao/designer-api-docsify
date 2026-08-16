@@ -2,9 +2,9 @@
 
 BadgeConfig
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Deprecated since:** -1
 
@@ -22,9 +22,9 @@ The type of the special badge.
 
 **Type:** [BadgeType](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-badgetype-e.md)
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Deprecated since:** -1
 
@@ -44,9 +44,9 @@ The uri data of the asset that displays the badge.
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Deprecated since:** -1
 

@@ -39,8 +39,8 @@ getWithRange(start: NodeIdentity, end: NodeIdentity, isStartRect: boolean,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| start | [NodeIdentity](arkts-na-nodeidentity-t.md) | 是 | the start component ID, set by developer through .id attribute or the unique ID get from FrameNode. |
-| end | [NodeIdentity](arkts-na-nodeidentity-t.md) | 是 | the end component ID, set by developer through.id attribute or the unique ID get from FrameNode. |
+| start | [NodeIdentity](../../apis-arkui/arkts-apis/arkts-arkui-nodeidentity-t.md) | 是 | the start component ID, set by developer through .id attribute or the unique ID get from FrameNode. |
+| end | [NodeIdentity](../../apis-arkui/arkts-apis/arkts-arkui-nodeidentity-t.md) | 是 | the end component ID, set by developer through.id attribute or the unique ID get from FrameNode. |
 | isStartRect | boolean | 是 | indicating the snapshot rect to use, true for using the rect of the start component, false for using the rect of the end component. |
 | options | componentSnapshot.SnapshotOptions | 否 | Define the snapshot options. |
 

@@ -6,7 +6,7 @@
 function encodeImage(srcImage: image.PixelMap, metadata: string): Promise<image.PixelMap>
 ```
 
-在图片中加入信息。通过特定的编码算法将metadata信息嵌入到图片中。可用于防伪、版权保护等场景。使用promise异步回调。
+在图片中加入信息。通过特定的编码算法将metadata信息嵌入到图片中，编码过程对图片的视觉呈现影响极小，嵌入的信息可通过decodeImage接口解析。可用于防伪、版权保护等场景。 <br>使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -24,7 +24,7 @@ function encodeImage(srcImage: image.PixelMap, metadata: string): Promise<image.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| srcImage | image.PixelMap | 是 | 待编码的原始图片，用于嵌入metadata信息的图片。 |
+| srcImage | image.PixelMap | 是 | 待编码的原始图片，用于嵌入metadata信息。 |
 | metadata | string | 是 | 嵌入的信息。字符串编码格式建议使用UTF-8，长度不应超过128Bytes，且避免包含不可打印字符。 |
 
 **返回值：**

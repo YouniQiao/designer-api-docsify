@@ -20,7 +20,7 @@
 contentUnderstand?: boolean
 ```
 
-是否需要进行内容理解，默认为否。
+是否需要进行内容理解，true表示需要，false表示不需要，默认为false。
 
 **类型：** boolean
 
@@ -42,7 +42,7 @@ contentUnderstand?: boolean
 pageLink?: boolean
 ```
 
-是否获取复访链接，默认为否。
+是否获取复访链接，true表示获取，false表示不获取，默认为false。
 
 **类型：** boolean
 
@@ -64,7 +64,7 @@ pageLink?: boolean
 textOnly?: boolean
 ```
 
-是否只获取文本并划分段落，默认为否。
+是否只获取文本并划分段落，true表示是，false表示否，默认为false。
 
 **类型：** boolean
 

@@ -1,6 +1,6 @@
 # UserStatusFeature（系统接口）
 
-用户状态检测特性枚举。
+表示用户状态检测功能类型。
 
 **起始版本：** 26.0.0
 
@@ -20,7 +20,7 @@
 GESTURES_RECOGNITION = 5
 ```
 
-手势识别特性（100ms上报间隔）。
+表示用户手势识别功能（100ms上报间隔）。
 
 **起始版本：** 26.0.0
 
@@ -42,7 +42,7 @@ GESTURES_RECOGNITION = 5
 ANTI_MISTOUCH = 6
 ```
 
-防误触检测特性。
+表示防误触检测功能。
 
 **起始版本：** 26.0.0
 
@@ -64,7 +64,7 @@ ANTI_MISTOUCH = 6
 QUICK_GESTURES_RECOGNITION = 7
 ```
 
-快捷手势识别特性（20ms上报间隔）。
+表示用户快速手势识别功能（20ms上报间隔）。
 
 **起始版本：** 26.0.0
 
@@ -86,7 +86,7 @@ QUICK_GESTURES_RECOGNITION = 7
 FACE_RELATIVE_POSITION_RECOGNITION = 8
 ```
 
-面部相对位置识别特性（100ms上报间隔）。
+表示人脸位姿识别功能（100ms上报间隔）。
 
 **起始版本：** 26.0.0
 
@@ -108,7 +108,7 @@ FACE_RELATIVE_POSITION_RECOGNITION = 8
 QUICK_FACE_RELATIVE_POSITION_RECOGNITION = 9
 ```
 
-快捷面部相对位置识别特性（20ms上报间隔）。
+表示快速人脸位姿识别功能（20ms上报间隔）。
 
 **起始版本：** 26.0.0
 
@@ -130,7 +130,7 @@ QUICK_FACE_RELATIVE_POSITION_RECOGNITION = 9
 HAND_GAZE_COORDINATION = 11
 ```
 
-手眼协同（注意力）识别特性。
+表示手眼协同检测功能。
 
 **起始版本：** 26.0.0
 
@@ -152,7 +152,7 @@ HAND_GAZE_COORDINATION = 11
 USER_BLOWING_STATUS = 12
 ```
 
-用户吹气状态检测特性。
+表示用户吹气状态检测功能。
 
 **起始版本：** 26.0.0
 
@@ -174,7 +174,7 @@ USER_BLOWING_STATUS = 12
 USER_MOOD = 13
 ```
 
-用户情绪检测特性。
+表示用户情绪检测功能。
 
 **起始版本：** 26.0.0
 
@@ -196,7 +196,7 @@ USER_MOOD = 13
 COMFORT_REMINDER = 15
 ```
 
-舒适提醒检测特性。
+表示铃声舒适检测功能。
 
 **起始版本：** 26.0.0
 
@@ -218,7 +218,7 @@ COMFORT_REMINDER = 15
 ENV_SOUND = 17
 ```
 
-环境声音检测特性。
+表示环境音检测功能。
 
 **起始版本：** 26.0.0
 
@@ -240,7 +240,7 @@ ENV_SOUND = 17
 EXT_SCREEN_ANTI_MISTOUCH = 19
 ```
 
-外屏防误触检测特性。
+表示外屏防误触检测功能。
 
 **起始版本：** 26.0.0
 

@@ -2,9 +2,9 @@
 
 PreselectedInfo
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Deprecated since:** -1
 
@@ -18,13 +18,13 @@ PreselectedInfo
 public preselectablePickerIndex?: int
 ```
 
-PreselectablePickerIndex. Serial number of the picker component that will automatically select this media file.
+PreselectablePickerIndex. Serial number of the picker component that will automatically select this media file. The value should be an integer.
 
 **Type:** int
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Deprecated since:** -1
 
@@ -44,9 +44,9 @@ Uri. Uri of the media file to be automatically selected.
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Deprecated since:** -1
 

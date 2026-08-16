@@ -26,7 +26,7 @@ function listFile(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 目录的应用沙箱路径。 |
-| options | [ListFileOptions](arkts-na-file-fs-listfileoptions-i.md) | 否 | 文件过滤选项。默认不进行过滤。 |
+| options | [ListFileOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-listfileoptions-i.md) | 否 | 文件过滤选项。默认不进行过滤。 |
 
 **返回值：**
 
@@ -108,7 +108,7 @@ function listFile(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | path | string | 是 | 目录的应用沙箱路径。 |
-| options | [ListFileOptions](arkts-na-file-fs-listfileoptions-i.md) | 是 | 文件过滤选项。 |
+| options | [ListFileOptions](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-listfileoptions-i.md) | 是 | 文件过滤选项。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;string[]&gt; | 是 | 回调函数，返回文件名数组，默认以'utf-8'编码。 |
 
 **错误码：**

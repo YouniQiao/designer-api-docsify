@@ -34,7 +34,7 @@ Compares the current RationalNumber object to the given object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| another | [RationalNumber](../../apis-arkts/arkts-apis/arkts-arkts-util-rationalnumber-c.md) | Yes | An object of other rational numbers |
+| another | [RationalNumber](arkts-na-util-rationalnumber-c.md) | Yes | An object of other rational numbers |
 
 **Return value:**
 
@@ -88,7 +88,7 @@ Creates a RationalNumber object based on a given string.
 
 | Type | Description |
 | --- | --- |
-| [RationalNumber](../../apis-arkts/arkts-apis/arkts-arkts-util-rationalnumber-c.md) | Returns a RationalNumber object generated based on the given string. |
+| [RationalNumber](arkts-na-util-rationalnumber-c.md) | Returns a RationalNumber object generated based on the given string. |
 
 ## equals
 
@@ -300,7 +300,7 @@ Used to create a RationalNumber instance with a given numerator and denominator.
 
 | Type | Description |
 | --- | --- |
-| [RationalNumber](../../apis-arkts/arkts-apis/arkts-arkts-util-rationalnumber-c.md) |  |
+| [RationalNumber](arkts-na-util-rationalnumber-c.md) |  |
 
 ## toString
 

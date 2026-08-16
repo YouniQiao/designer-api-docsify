@@ -92,7 +92,7 @@ Get http body stream.
 
 | Type | Description |
 | --- | --- |
-| [WebHttpBodyStream](arkts-arkweb-webview-webhttpbodystream-c.md) | Return http body stream. If request has no http body stream, return null. |
+| [WebHttpBodyStream](../../apis-na/arkts-apis/arkts-na-webview-webhttpbodystream-c.md) | Return http body stream. If request has no http body stream, return null. |
 
 ## getReferrer
 
@@ -168,7 +168,7 @@ Get request's resource type.
 
 | Type | Description |
 | --- | --- |
-| [WebResourceType](arkts-arkweb-webview-webresourcetype-e.md) | Return the request's resource type. |
+| [WebResourceType](../../apis-na/arkts-apis/arkts-na-webview-webresourcetype-e.md) | Return the request's resource type. |
 
 ## getRequestUrl
 

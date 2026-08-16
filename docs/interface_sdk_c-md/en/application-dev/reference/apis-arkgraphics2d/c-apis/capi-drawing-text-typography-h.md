@@ -782,7 +782,7 @@ Obtains a bool-type typography attribute.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Result code.<br>     <br>Returns OH_DRAWING_SUCCESS, indicating that the execution is successful.<br>     <br>Returns OH_DRAWING_ERROR_INCORRECT_PARAMETER, indicating that the typography or value parameter is a null<br>     pointer.<br>     <br>Returns OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH, indicating that the attribute ID passed in does not match<br>     the called function. |
+| OH_Drawing_ErrorCode | Result code.<br>     <br>Returns OH_DRAWING_SUCCESS, indicating that the execution is successful.<br>     <br>Returns OH_DRAWING_ERROR_INCORRECT_PARAMETER, indicating that the typography or value parameter is a null<br>     pointer.<br>     <br>Returns OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH, indicating that the attribute ID passed in does not match<br>     the called function. |
 
 ### OH_Drawing_SetTypographyAttributeBool()
 
@@ -808,7 +808,7 @@ Sets a bool-type typography attribute.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Result code.<br>     <br>Returns OH_DRAWING_SUCCESS, indicating that the execution is successful.<br>     <br>Returns OH_DRAWING_ERROR_INCORRECT_PARAMETER, indicating that the typography parameter is a null pointer.<br>     <br>Returns OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH, indicating that the attribute ID passed in does not match<br>     the called function. |
+| OH_Drawing_ErrorCode | Result code.<br>     <br>Returns OH_DRAWING_SUCCESS, indicating that the execution is successful.<br>     <br>Returns OH_DRAWING_ERROR_INCORRECT_PARAMETER, indicating that the typography parameter is a null pointer.<br>     <br>Returns OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH, indicating that the attribute ID passed in does not match<br>     the called function. |
 
 ### OH_Drawing_SetTextStyleAttributeDouble()
 
@@ -834,7 +834,7 @@ Sets the text style attribute of the **double** type.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.<br>     <br>OH_DRAWING_SUCCESS if the operation is successful.<br>     <br>OH_DRAWING_ERROR_INVALID_PARAMETER if style is NULL.<br>     <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function.<br>     <br>OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE if the value corresponding to the attribute id exceeds the<br>     allowable range. |
+| OH_Drawing_ErrorCode | Returns the execution result.<br>     <br>OH_DRAWING_SUCCESS if the operation is successful.<br>     <br>OH_DRAWING_ERROR_INVALID_PARAMETER if style is NULL.<br>     <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function.<br>     <br>OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE if the value corresponding to the attribute id exceeds the<br>     allowable range. |
 
 ### OH_Drawing_GetTextStyleAttributeDouble()
 
@@ -860,7 +860,7 @@ Obtains the text style attribute of the **double** type.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.<br>     <br>OH_DRAWING_SUCCESS if the operation is successful.<br>     <br>OH_DRAWING_ERROR_INVALID_PARAMETER if style is NULL.<br>     <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function. |
+| OH_Drawing_ErrorCode | Returns the execution result.<br>     <br>OH_DRAWING_SUCCESS if the operation is successful.<br>     <br>OH_DRAWING_ERROR_INVALID_PARAMETER if style is NULL.<br>     <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function. |
 
 ### OH_Drawing_SetTextStyleAttributeInt()
 
@@ -886,7 +886,7 @@ Sets the text style attribute of the **int** type.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.<br>     <br>OH_DRAWING_SUCCESS if the operation is successful.<br>     <br>OH_DRAWING_ERROR_INVALID_PARAMETER if style is NULL.<br>     <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function.<br>     <br>OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE if the input value exceeds the value range of the attribute to<br>     be set. |
+| OH_Drawing_ErrorCode | Returns the execution result.<br>     <br>OH_DRAWING_SUCCESS if the operation is successful.<br>     <br>OH_DRAWING_ERROR_INVALID_PARAMETER if style is NULL.<br>     <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function.<br>     <br>OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE if the input value exceeds the value range of the attribute to<br>     be set. |
 
 ### OH_Drawing_GetTextStyleAttributeInt()
 
@@ -912,7 +912,7 @@ Obtains the text style attribute of the **int** type.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.<br>     <br>OH_DRAWING_SUCCESS if the operation is successful.<br>     <br>OH_DRAWING_ERROR_INVALID_PARAMETER if style is NULL.<br>     <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function. |
+| OH_Drawing_ErrorCode | Returns the execution result.<br>     <br>OH_DRAWING_SUCCESS if the operation is successful.<br>     <br>OH_DRAWING_ERROR_INVALID_PARAMETER if style is NULL.<br>     <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function. |
 
 ### OH_Drawing_SetTypographyStyleAttributeDouble()
 
@@ -938,7 +938,7 @@ Sets the typography style attribute of the **double** type.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.<br>     <br>OH_DRAWING_SUCCESS if the operation is successful.<br>     <br>OH_DRAWING_ERROR_INVALID_PARAMETER if style is NULL.<br>     <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function.<br>     <br>OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE if the value corresponding to the attribute id<br>     exceeds the allowable range. |
+| OH_Drawing_ErrorCode | Returns the execution result.<br>     <br>OH_DRAWING_SUCCESS if the operation is successful.<br>     <br>OH_DRAWING_ERROR_INVALID_PARAMETER if style is NULL.<br>     <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function.<br>     <br>OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE if the value corresponding to the attribute id<br>     exceeds the allowable range. |
 
 ### OH_Drawing_GetTypographyStyleAttributeDouble()
 
@@ -964,7 +964,7 @@ Obtains the typography style attribute of the **double** type.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.<br>     <br>OH_DRAWING_SUCCESS if the operation is successful.<br>     <br>OH_DRAWING_ERROR_INVALID_PARAMETER if style is NULL.<br>     <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function. |
+| OH_Drawing_ErrorCode | Returns the execution result.<br>     <br>OH_DRAWING_SUCCESS if the operation is successful.<br>     <br>OH_DRAWING_ERROR_INVALID_PARAMETER if style is NULL.<br>     <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function. |
 
 ### OH_Drawing_SetTypographyStyleAttributeInt()
 
@@ -990,7 +990,7 @@ Sets the typography style attribute of the **int** type.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.<br>     <br>OH_DRAWING_SUCCESS if the operation is successful.<br>     <br>OH_DRAWING_ERROR_INVALID_PARAMETER if style is NULL.<br>     <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function.<br>     <br>OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE if the input value exceeds the value range of the attribute to<br>     be set. |
+| OH_Drawing_ErrorCode | Returns the execution result.<br>     <br>OH_DRAWING_SUCCESS if the operation is successful.<br>     <br>OH_DRAWING_ERROR_INVALID_PARAMETER if style is NULL.<br>     <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function.<br>     <br>OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE if the input value exceeds the value range of the attribute to<br>     be set. |
 
 ### OH_Drawing_GetTypographyStyleAttributeInt()
 
@@ -1016,7 +1016,7 @@ Obtains the typography style attribute of the **int** type.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.<br>     <br>OH_DRAWING_SUCCESS if the operation is successful.<br>     <br>OH_DRAWING_ERROR_INVALID_PARAMETER if style is NULL.<br>     <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function. |
+| OH_Drawing_ErrorCode | Returns the execution result.<br>     <br>OH_DRAWING_SUCCESS if the operation is successful.<br>     <br>OH_DRAWING_ERROR_INVALID_PARAMETER if style is NULL.<br>     <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function. |
 
 ### OH_Drawing_SetTypographyStyleAttributeBool()
 
@@ -1042,7 +1042,7 @@ Sets the typography style attribute of the **bool** type.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.<br>     <br>OH_DRAWING_SUCCESS if the operation is successful.<br>     <br>OH_DRAWING_ERROR_INCORRECT_PARAMETER if style is NULL.<br>     <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function. |
+| OH_Drawing_ErrorCode | Returns the execution result.<br>     <br>OH_DRAWING_SUCCESS if the operation is successful.<br>     <br>OH_DRAWING_ERROR_INCORRECT_PARAMETER if style is NULL.<br>     <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function. |
 
 ### OH_Drawing_GetTypographyStyleAttributeBool()
 
@@ -1068,7 +1068,7 @@ Obtains the typography style attribute of the **bool** type.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.<br>     <br>OH_DRAWING_SUCCESS if the operation is successful.<br>     <br>OH_DRAWING_ERROR_INCORRECT_PARAMETER if style or value is NULL.<br>     <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function. |
+| OH_Drawing_ErrorCode | Returns the execution result.<br>     <br>OH_DRAWING_SUCCESS if the operation is successful.<br>     <br>OH_DRAWING_ERROR_INCORRECT_PARAMETER if style or value is NULL.<br>     <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function. |
 
 ### OH_Drawing_SetTypographyStyleAttributeDoubleArray()
 
@@ -1095,7 +1095,7 @@ Sets the typography style attribute of the floating-point array type.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.<br>     <br>OH_DRAWING_SUCCESS if the operation is successful.<br>     <br>OH_DRAWING_ERROR_INCORRECT_PARAMETER if the parameter style or arrayValue is a null pointer or<br>     arrayLength is 0.<br>     <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function. |
+| OH_Drawing_ErrorCode | Returns the execution result.<br>     <br>OH_DRAWING_SUCCESS if the operation is successful.<br>     <br>OH_DRAWING_ERROR_INCORRECT_PARAMETER if the parameter style or arrayValue is a null pointer or<br>     arrayLength is 0.<br>     <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function. |
 
 ### OH_Drawing_GetTypographyStyleAttributeDoubleArray()
 
@@ -1122,7 +1122,7 @@ Obtains the typography style attribute of the floating-point array type.
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.<br>     <br>OH_DRAWING_SUCCESS if the operation is successful.<br>     <br>OH_DRAWING_ERROR_INCORRECT_PARAMETER if the parameter style or arrayValue is a null pointer or <br>     arrayLength is 0.<br>     <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function. |
+| OH_Drawing_ErrorCode | Returns the execution result.<br>     <br>OH_DRAWING_SUCCESS if the operation is successful.<br>     <br>OH_DRAWING_ERROR_INCORRECT_PARAMETER if the parameter style or arrayValue is a null pointer or <br>     arrayLength is 0.<br>     <br>OH_DRAWING_ERROR_ATTRIBUTE_ID_MISMATCH if the input attribute ID does not match the called function. |
 
 ### OH_Drawing_CreateTypographyStyle()
 
@@ -1985,7 +1985,7 @@ Releases the memory occupied by the [OH_Drawing_Array](capi-drawing-oh-drawing-a
 
 | Type | Description |
 | -- | -- |
-| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns the execution result.<br>     <br>OH_DRAWING_SUCCESS if the operation is successful.<br>     <br>OH_DRAWING_ERROR_INCORRECT_PARAMETER if array is a null pointer or the type is not supported. |
+| OH_Drawing_ErrorCode | Returns the execution result.<br>     <br>OH_DRAWING_SUCCESS if the operation is successful.<br>     <br>OH_DRAWING_ERROR_INCORRECT_PARAMETER if array is a null pointer or the type is not supported. |
 
 ### OH_Drawing_TypographyGetMaxWidth()
 

@@ -45,7 +45,7 @@ Creates a **NumberFormat** object for the specified locale.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | numberFormat | Intl.NumberFormat | Yes | Indicates the number format object that used to format number. |
-| options | [AdvancedMeasureFormatOptions](../../apis-na/arkts-apis/arkts-na-i18n-advancedmeasureformatoptions-i.md) | No |  |
+| options | [AdvancedMeasureFormatOptions](arkts-localization-i18n-advancedmeasureformatoptions-i.md) | No |  |
 
 ## Examples
 

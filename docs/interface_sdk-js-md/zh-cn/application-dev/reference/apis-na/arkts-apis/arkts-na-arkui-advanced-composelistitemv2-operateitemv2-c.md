@@ -36,7 +36,7 @@ OperateItemV2的构造函数。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [OperateItemV2Options](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitemv2-operateitemv2options-i.md) | 否 | OperateItemV2的可选项 |
+| options | [OperateItemV2Options](arkts-na-arkui-advanced-composelistitemv2-operateitemv2options-i.md) | 否 | OperateItemV2的可选项 |
 
 ## arrow
 
@@ -47,7 +47,7 @@ OperateItemV2的构造函数。
 
 设置箭头。
 
-**类型：** [OperateIconV2](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitemv2-operateiconv2-c.md)
+**类型：** [OperateIconV2](arkts-na-arkui-advanced-composelistitemv2-operateiconv2-c.md)
 
 **起始版本：** 26.0.0
 
@@ -70,7 +70,7 @@ OperateItemV2的构造函数。
 
 设置按钮。
 
-**类型：** [OperateButtonV2](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitemv2-operatebuttonv2-c.md)
+**类型：** [OperateButtonV2](arkts-na-arkui-advanced-composelistitemv2-operatebuttonv2-c.md)
 
 **起始版本：** 26.0.0
 
@@ -93,7 +93,7 @@ OperateItemV2的构造函数。
 
 设置多选框。
 
-**类型：** [OperateCheckV2](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
+**类型：** [OperateCheckV2](arkts-na-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
 
 **起始版本：** 26.0.0
 
@@ -116,7 +116,7 @@ OperateItemV2的构造函数。
 
 设置图标
 
-**类型：** [OperateIconV2](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitemv2-operateiconv2-c.md)
+**类型：** [OperateIconV2](arkts-na-arkui-advanced-composelistitemv2-operateiconv2-c.md)
 
 **起始版本：** 26.0.0
 
@@ -162,7 +162,7 @@ OperateItemV2的构造函数。
 
 设置单选框。
 
-**类型：** [OperateCheckV2](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
+**类型：** [OperateCheckV2](arkts-na-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
 
 **起始版本：** 26.0.0
 
@@ -185,7 +185,7 @@ OperateItemV2的构造函数。
 
 设置子图标。
 
-**类型：** [OperateIconV2](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitemv2-operateiconv2-c.md)
+**类型：** [OperateIconV2](arkts-na-arkui-advanced-composelistitemv2-operateiconv2-c.md)
 
 **起始版本：** 26.0.0
 
@@ -254,7 +254,7 @@ OperateItemV2的构造函数。
 
 设置开关。
 
-**类型：** [OperateCheckV2](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
+**类型：** [OperateCheckV2](arkts-na-arkui-advanced-composelistitemv2-operatecheckv2-c.md)
 
 **起始版本：** 26.0.0
 

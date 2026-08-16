@@ -1,8 +1,8 @@
 # RoundRectShapeOptions
 
-Represents the parameter of the constructor used to create a **RectShape** object with rounded corners. This API inherits from [ShapeSize](../../apis-na/arkts-apis/arkts-na-arkui-shape-shapesize-i.md#ShapeSize).
+Represents the parameter of the constructor used to create a **RectShape** object with rounded corners. This API inherits from [ShapeSize](arkts-arkui-arkui-shape-shapesize-i.md#ShapeSize).
 
-**Inheritance/Implementation:** RoundRectShapeOptions extends [ShapeSize](../../apis-na/arkts-apis/arkts-na-arkui-shape-shapesize-i.md#ShapeSize)
+**Inheritance/Implementation:** RoundRectShapeOptions extends [ShapeSize](arkts-arkui-arkui-shape-shapesize-i.md#ShapeSize)
 
 **Since:** 12
 

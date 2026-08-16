@@ -2,7 +2,7 @@
 
 Use the LayeredDrawableDescriptor class to get the foreground, the background and the mask DrawableDescriptor.
 
-**Inheritance/Implementation:** LayeredDrawableDescriptor extends [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#DrawableDescriptor)
+**Inheritance/Implementation:** LayeredDrawableDescriptor extends [DrawableDescriptor](arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md#DrawableDescriptor)
 
 **Since:** 23
 
@@ -42,9 +42,9 @@ Creates a new LayeredDrawableDescriptor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| foreground | [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | No | Indicates the foreground option to create LayeredDrawableDescriptor. |
-| background | [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | No | Indicates the background option to create LayeredDrawableDescriptor. |
-| mask | [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | No | Indicates the mask option to create LayeredDrawableDescriptor. |
+| foreground | [DrawableDescriptor](arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md) | No | Indicates the foreground option to create LayeredDrawableDescriptor. |
+| background | [DrawableDescriptor](arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md) | No | Indicates the background option to create LayeredDrawableDescriptor. |
+| mask | [DrawableDescriptor](arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md) | No | Indicates the mask option to create LayeredDrawableDescriptor. |
 
 ## getBackground
 
@@ -70,7 +70,7 @@ Get DrawableDescriptor for the background.
 
 | Type | Description |
 | --- | --- |
-| [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | Return the DrawableDescriptor object of background. |
+| [DrawableDescriptor](arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md) | Return the DrawableDescriptor object of background. |
 
 ## getForeground
 
@@ -96,7 +96,7 @@ Get DrawableDescriptor for the foreground.
 
 | Type | Description |
 | --- | --- |
-| [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | Return the DrawableDescriptor object of foreground. |
+| [DrawableDescriptor](arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md) | Return the DrawableDescriptor object of foreground. |
 
 ## getMask
 
@@ -122,7 +122,7 @@ Get DrawableDescriptor for the mask.
 
 | Type | Description |
 | --- | --- |
-| [DrawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | Return the DrawableDescriptor object of mask. |
+| [DrawableDescriptor](arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md) | Return the DrawableDescriptor object of mask. |
 
 ## getMaskClipPath
 

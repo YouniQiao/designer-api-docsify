@@ -64,7 +64,7 @@ state: BlanklessFrameInterpolationState
 
 Current frame interpolation state. Device behavior differences: Only the mobile phone is supported. For other devices, 801 is returned.
 
-**Type:** [BlanklessFrameInterpolationState](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-blanklessframeinterpolationstate-e.md)
+**Type:** [BlanklessFrameInterpolationState](arkts-na-webview-blanklessframeinterpolationstate-e.md)
 
 **Since:** 23
 

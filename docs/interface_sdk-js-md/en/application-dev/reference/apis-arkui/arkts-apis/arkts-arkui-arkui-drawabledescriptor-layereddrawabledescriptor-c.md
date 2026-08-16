@@ -1,8 +1,8 @@
 # LayeredDrawableDescriptor
 
-Creates a **LayeredDrawableDescriptor** object when the passed resource ID or name belongs to a JSON file that contains foreground and background resources. Inherits from [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md#DrawableDescriptorLoadedResult). The **drawable.json** file is located under **entry/src/main/resources/base/media** in the project directory. Below shows the file content:
+Creates a **LayeredDrawableDescriptor** object when the passed resource ID or name belongs to a JSON file that contains foreground and background resources. Inherits from [DrawableDescriptor](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-drawabledescriptorloadedresult-i.md#DrawableDescriptorLoadedResult). The **drawable.json** file is located under **entry/src/main/resources/base/media** in the project directory. Below shows the file content:
 
-**Inheritance/Implementation:** LayeredDrawableDescriptor extends [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md#DrawableDescriptor)
+**Inheritance/Implementation:** LayeredDrawableDescriptor extends [DrawableDescriptor](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md#DrawableDescriptor)
 
 **Since:** 10
 
@@ -59,9 +59,9 @@ A constructor used to create a **LayeredDrawableDescriptor** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| foreground | [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | No | Options for the foreground image of the layered drawable. |
-| background | [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | No | Options for the background image of the layered drawable. |
-| mask | [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | No | Options for the mask of the layered drawable. |
+| foreground | [DrawableDescriptor](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md) | No | Options for the foreground image of the layered drawable. |
+| background | [DrawableDescriptor](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md) | No | Options for the background image of the layered drawable. |
+| mask | [DrawableDescriptor](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md) | No | Options for the mask of the layered drawable. |
 
 ## getBackground
 
@@ -89,7 +89,7 @@ Obtains the **DrawableDescriptor** object of the background.
 
 | Type | Description |
 | --- | --- |
-| [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | DrawableDescriptor** object. |
+| [DrawableDescriptor](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md) | DrawableDescriptor** object. |
 
 **Error codes:**
 
@@ -162,7 +162,7 @@ Obtains the **DrawableDescriptor** object of the foreground.
 
 | Type | Description |
 | --- | --- |
-| [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | DrawableDescriptor** object. |
+| [DrawableDescriptor](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md) | DrawableDescriptor** object. |
 
 **Error codes:**
 
@@ -240,7 +240,7 @@ Obtains the **DrawableDescriptor** object of the mask.
 
 | Type | Description |
 | --- | --- |
-| [DrawableDescriptor](arkts-arkui-arkui-drawabledescriptor-drawabledescriptor-c.md) | DrawableDescriptor** object. |
+| [DrawableDescriptor](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-drawabledescriptor-c.md) | DrawableDescriptor** object. |
 
 **Error codes:**
 

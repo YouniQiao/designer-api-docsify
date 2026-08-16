@@ -470,7 +470,7 @@ Sets the first day of a week.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [WeekDay](arkts-na-i18n-weekday-e.md) | Yes | Start day of a week. |
+| type | [WeekDay](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-weekday-e.md) | Yes | Start day of a week. |
 
 **Error codes:**
 
@@ -760,7 +760,7 @@ Sets the temperature unit of the system.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [TemperatureType](arkts-na-i18n-temperaturetype-e.md) | Yes | Temperature unit. |
+| type | [TemperatureType](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-temperaturetype-e.md) | Yes | Temperature unit. |
 
 **Error codes:**
 

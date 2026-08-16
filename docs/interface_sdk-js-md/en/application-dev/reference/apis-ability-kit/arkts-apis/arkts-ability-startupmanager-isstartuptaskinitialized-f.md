@@ -30,7 +30,7 @@ Checks whether a startup task or .so file preloading task is initialized.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| startupTask | string | Yes | Name of the [StartupTask](arkts-ability-app-appstartup-startuptask-startuptask-c.md#StartupTask) or name of the .so file to be preloaded. |
+| startupTask | string | Yes | Name of the [StartupTask](../../apis-na/arkts-apis/arkts-na-app-appstartup-startuptask-startuptask-c.md#StartupTask) or name of the .so file to be preloaded. |
 
 **Return value:**
 

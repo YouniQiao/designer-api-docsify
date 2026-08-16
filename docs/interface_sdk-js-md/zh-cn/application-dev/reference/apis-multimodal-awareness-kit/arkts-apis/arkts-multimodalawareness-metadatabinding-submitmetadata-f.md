@@ -6,7 +6,7 @@
 function submitMetadata(metadata: string): void
 ```
 
-第三方应用将需要编码的内容传递给接口服务，接口服务将内容传递给调用编码接口的系统应用或服务。
+第三方应用将需要编码的内容传递给接口服务，接口服务将内容传递给调用编码接口的系统应用或服务。本接口由第三方应用调用，供系统应用订阅获取数据。 <br>系统应用需先通过on('operationSubmitMetadata')方法订阅事件，才能接收到编码内容。
 
 **起始版本：** 23
 
@@ -24,7 +24,7 @@ function submitMetadata(metadata: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| metadata | string | 是 | 要嵌入图片中的信息。字符串长度不超过128Bytes。 |
+| metadata | string | 是 | 需要编码的内容。字符串长度不超过128Bytes。 |
 
 **错误码：**
 

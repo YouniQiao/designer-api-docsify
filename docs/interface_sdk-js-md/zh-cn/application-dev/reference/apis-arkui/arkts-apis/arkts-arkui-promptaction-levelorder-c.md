@@ -44,7 +44,7 @@ static clamp(order: number): LevelOrder
 
 | 类型 | 说明 |
 | --- | --- |
-| [LevelOrder](../../apis-na/arkts-apis/arkts-na-promptaction-levelorder-c.md) | 返回当前对象实例，该对象可用于设置弹窗的显示顺序。 |
+| [LevelOrder](arkts-arkui-promptaction-levelorder-c.md) | 返回当前对象实例，该对象可用于设置弹窗的显示顺序。 |
 
 ## getOrder
 

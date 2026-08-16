@@ -234,7 +234,7 @@ Get the type of the web message.
 
 | Type | Description |
 | --- | --- |
-| [WebMessageType](arkts-arkweb-webview-webmessagetype-e.md) | Returns data of WebMessageType type |
+| [WebMessageType](../../apis-na/arkts-apis/arkts-na-webview-webmessagetype-e.md) | Returns data of WebMessageType type |
 
 ## setArray
 
@@ -458,7 +458,7 @@ Set the type of the web message.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [WebMessageType](arkts-arkweb-webview-webmessagetype-e.md) | Yes | set WebMessageType type data |
+| type | [WebMessageType](../../apis-na/arkts-apis/arkts-na-webview-webmessagetype-e.md) | Yes | set WebMessageType type data |
 
 **Error codes:**
 

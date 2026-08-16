@@ -850,7 +850,7 @@ mute(volumeType: AudioVolumeType, mute: boolean, callback: AsyncCallback<void>):
 
 **废弃版本：** 9
 
-**替代接口：** [AVVolumePanel](../../apis-na/arkts-apis/arkts-na-multimedia-avvolumepanel-avvolumepanel-s.md#AVVolumePanel)
+**替代接口：** [AVVolumePanel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md#AVVolumePanel)
 
 <!--Device-AudioManager-mute(volumeType: AudioVolumeType, mute: boolean, callback: AsyncCallback<void>): void--><!--Device-AudioManager-mute(volumeType: AudioVolumeType, mute: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -878,7 +878,7 @@ mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [AVVolumePanel](../../apis-na/arkts-apis/arkts-na-multimedia-avvolumepanel-avvolumepanel-s.md#AVVolumePanel)
+**替代接口：** [AVVolumePanel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md#AVVolumePanel)
 
 <!--Device-AudioManager-mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>--><!--Device-AudioManager-mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>-End-->
 
@@ -1359,7 +1359,7 @@ setVolume(volumeType: AudioVolumeType, volume: number, callback: AsyncCallback<v
 
 **废弃版本：** 9
 
-**替代接口：** [AVVolumePanel](../../apis-na/arkts-apis/arkts-na-multimedia-avvolumepanel-avvolumepanel-s.md#AVVolumePanel)
+**替代接口：** [AVVolumePanel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md#AVVolumePanel)
 
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
 
@@ -1389,7 +1389,7 @@ setVolume(volumeType: AudioVolumeType, volume: number): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [AVVolumePanel](../../apis-na/arkts-apis/arkts-na-multimedia-avvolumepanel-avvolumepanel-s.md#AVVolumePanel)
+**替代接口：** [AVVolumePanel](arkts-audio-multimedia-avvolumepanel-avvolumepanel-s.md#AVVolumePanel)
 
 **需要权限：** ohos.permission.ACCESS_NOTIFICATION_POLICY
 

@@ -14,6 +14,28 @@ PickerOptions Object
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## appAlbumFilters
+
+```TypeScript
+public appAlbumFilters?: Array<string>
+```
+
+Only display album contents corresponding to the specified applications. Use the bundle name to identify the application.
+
+**Type:** Array&lt;string&gt;
+
+**Since:** 26.1.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PickerOptions-public appAlbumFilters?: Array<string>--><!--Device-PickerOptions-public appAlbumFilters?: Array<string>-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
 ## backgroundColor
 
 ```TypeScript
@@ -36,6 +58,28 @@ Support set backgroundColor
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## backgroundOpacity
+
+```TypeScript
+public backgroundOpacity?: double
+```
+
+Support setting background opacity.
+
+**Type:** double
+
+**Since:** 26.1.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PickerOptions-public backgroundOpacity?: double--><!--Device-PickerOptions-public backgroundOpacity?: double-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
 ## badgeConfig
 
 ```TypeScript
@@ -46,9 +90,9 @@ Support to config special badge display. The picker component supports only one 
 
 **Type:** [BadgeConfig](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-badgeconfig-c.md)
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Deprecated since:** -1
 
@@ -112,15 +156,37 @@ Context recovery information for restoring the last selection session.
 
 **Type:** photoAccessHelper.ContextRecoveryInfo
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PickerOptions-public contextRecoveryInfo?: photoAccessHelper.ContextRecoveryInfo--><!--Device-PickerOptions-public contextRecoveryInfo?: photoAccessHelper.ContextRecoveryInfo-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+## edgeEffect
+
+```TypeScript
+public edgeEffect?: EdgeEffect
+```
+
+Grid edge slide effect.
+
+**Type:** EdgeEffect
+
+**Since:** 26.1.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PickerOptions-public edgeEffect?: EdgeEffect--><!--Device-PickerOptions-public edgeEffect?: EdgeEffect-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -231,6 +297,28 @@ Support to set sliding selection
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PickerOptions-public isSlidingSelectionSupported?: boolean--><!--Device-PickerOptions-public isSlidingSelectionSupported?: boolean-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+## isSlidingSupported
+
+```TypeScript
+public isSlidingSupported?: boolean
+```
+
+Support setting grid sliding.
+
+**Type:** boolean
+
+**Since:** 26.1.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PickerOptions-public isSlidingSupported?: boolean--><!--Device-PickerOptions-public isSlidingSupported?: boolean-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
@@ -397,13 +485,13 @@ Support set photoBrowserMargin
 public pickerIndex?: int
 ```
 
-Support to set a serial number to distinguish different picker components. Default value is -1.
+Support to set a serial number to distinguish different picker components. Default value is -1. The value should be an integer.
 
 **Type:** int
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Deprecated since:** -1
 
@@ -423,9 +511,9 @@ Support automatically selecting the user-selected image/video on the PhotoPicker
 
 **Type:** [PreselectedInfo](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-preselectedinfo-c.md)[]
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Deprecated since:** -1
 

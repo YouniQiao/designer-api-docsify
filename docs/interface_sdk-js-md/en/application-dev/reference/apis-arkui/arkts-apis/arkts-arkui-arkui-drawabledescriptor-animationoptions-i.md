@@ -133,7 +133,7 @@ stopMode?: AnimationStopMode
 
 Sets the stop mode for an animation. The default value is **AnimationStopMode.FIRST_FRAME**, indicating that the animation returns to the first frame when it stops.
 
-**Type:** [AnimationStopMode](arkts-arkui-arkui-drawabledescriptor-animationstopmode-e.md)
+**Type:** [AnimationStopMode](../../apis-na/arkts-apis/arkts-na-arkui-drawabledescriptor-animationstopmode-e.md)
 
 **Default:** AnimationStopMode.FIRST_FRAME
 

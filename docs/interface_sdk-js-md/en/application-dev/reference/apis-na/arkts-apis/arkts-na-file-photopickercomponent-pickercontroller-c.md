@@ -20,9 +20,9 @@ public addData(dataType: DataType, data: Object): void
 
 Add data to picker component
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Deprecated since:** -1
 
@@ -47,9 +47,9 @@ public completed(): Promise<CompletedResult>
 
 Call this method to obtain the complete data after a selection operation has finished.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Deprecated since:** -1
 
@@ -71,11 +71,11 @@ Call this method to obtain the complete data after a selection operation has fin
 public deleteData(dataType: DataType, data: Object): void
 ```
 
-Delete data to picker component
+Delete data from picker component
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Deprecated since:** -1
 
@@ -170,6 +170,41 @@ Save the photo assets of uris.
 | configs | photoAccessHelper.PhotoCreationConfig[] | No | Photo asset creation configs |
 | saveMode | [SaveMode](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-savemode-e.md) | No | Mode of save |
 
+## saveTrustedPhotoAssetsEx
+
+```TypeScript
+public saveTrustedPhotoAssetsEx(trustedUris: Array<string>,settings?: Array<photoAccessHelper.CreationSetting>,
+      saveMode?: SaveMode): Promise<Array<string>>
+```
+
+Save the photo assets of uris.
+
+**Since:** 26.1.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PickerController-public saveTrustedPhotoAssetsEx(trustedUris: Array<string>,settings?: Array<photoAccessHelper.CreationSetting>,      saveMode?: SaveMode): Promise<Array<string>>--><!--Device-PickerController-public saveTrustedPhotoAssetsEx(trustedUris: Array<string>,settings?: Array<photoAccessHelper.CreationSetting>,      saveMode?: SaveMode): Promise<Array<string>>-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| trustedUris | Array&lt;string&gt; | Yes | Uris need to be saved |
+| settings | Array&lt;photoAccessHelper.CreationSetting&gt; | No | Photo asset creation settings |
+| saveMode | [SaveMode](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-savemode-e.md) | No | Mode of save |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;Array&lt;string&gt;&gt; | Returns the media library file uri list to application which has been authorized |
+
 ## setData
 
 ```TypeScript
@@ -222,6 +257,45 @@ Set max select count to picker component, include max_total_count, max_photo_cou
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | maxSelected | [MaxSelected](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-maxselected-c.md) | Yes | max select count data |
+
+## setMovingPhotoState
+
+```TypeScript
+public setMovingPhotoState(movingPhotoState: photoAccessHelper.MovingPhotoBadgeStateType): Promise<void>
+```
+
+Sets the moving photo effect in the photo browser view. This configuration only takes effect for moving photo when viewed in the photo browser. Note: Only MOVING_PHOTO_ENABLED and MOVING_PHOTO_DISABLED are supported as values.
+
+**Since:** 26.1.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PickerController-public setMovingPhotoState(movingPhotoState: photoAccessHelper.MovingPhotoBadgeStateType): Promise<void>--><!--Device-PickerController-public setMovingPhotoState(movingPhotoState: photoAccessHelper.MovingPhotoBadgeStateType): Promise<void>-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| movingPhotoState | photoAccessHelper.MovingPhotoBadgeStateType | Yes | State of moving photo. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise&lt;void&gt; |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [23800202](../../apis-media-library-kit/errorcode-medialibrary.md#23800202-invalid-scenario-call) | Invalid call context. Possible causes: 1. The API is called outside the photo browsing scenario. 2. The API is called when isMovingPhotoBadgeShown is already set to true. |
+| [23800151](../../apis-media-library-kit/errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | Scene parameters validate failed, possible causes: 1. An invalid enumeration value was passed. Only MOVING_PHOTO_ENABLED and MOVING_PHOTO_DISABLED are supported for configuration; |
 
 ## setPhotoBrowserItem
 
@@ -276,4 +350,36 @@ Sets whether other elements on the photo browser page are visible.
 | --- | --- | --- | --- |
 | elements | [PhotoBrowserUIElement](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-photobrowseruielement-e.md)[] | Yes | other elements on the photo browser page |
 | isVisible | boolean | Yes | visible or not |
+
+## updatePickerOptions
+
+```TypeScript
+public updatePickerOptions(updateConfig: UpdatablePickerConfigs): Promise<void>
+```
+
+Update options of the PhotoPicker component.
+
+**Since:** 26.1.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PickerController-public updatePickerOptions(updateConfig: UpdatablePickerConfigs): Promise<void>--><!--Device-PickerController-public updatePickerOptions(updateConfig: UpdatablePickerConfigs): Promise<void>-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| updateConfig | [UpdatablePickerConfigs](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-updatablepickerconfigs-c.md) | Yes | Subset of PickerOptions |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise&lt;void&gt; |
 

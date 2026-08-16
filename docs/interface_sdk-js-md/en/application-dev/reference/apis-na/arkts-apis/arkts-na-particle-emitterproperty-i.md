@@ -86,7 +86,7 @@ position?: PositionT<double>
 
 Emitter emission rate. Only support double type.
 
-**Type:** [PositionT](arkts-na-positiont-t.md)&lt;double&gt;
+**Type:** [PositionT](../../apis-arkui/arkts-apis/arkts-arkui-positiont-t.md)&lt;double&gt;
 
 **Since:** 23
 
@@ -108,7 +108,7 @@ size?: SizeT<double>
 
 Emitter emission window size. Only support double type.
 
-**Type:** [SizeT](arkts-na-graphics-sizet-i.md)&lt;double&gt;
+**Type:** [SizeT](../../apis-arkui/arkts-apis/arkts-arkui-graphics-sizet-i.md)&lt;double&gt;
 
 **Since:** 23
 

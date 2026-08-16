@@ -70,7 +70,7 @@ Information about touch points that changed and triggered the event. When using 
 eventHandleId?: number
 ```
 
-Unique identifier for event processing. Value range: [0, +∞) **NOTE：**This field is used when dispatching events using the [postInputEventWithStrategy](../../apis-na/arkts-apis/arkts-na-buildernode-c.md#postInputEventWithStrategy) API. Each time an event is dispatched, this field is increased by 100000. Using the same **eventHandleId** for multiple event dispatches will cause abnormal event responses. This field only needs to be assigned when constructing an event; developers do not need to handle it in other cases.
+Unique identifier for event processing. Value range: [0, +∞) **NOTE：**This field is used when dispatching events using the [postInputEventWithStrategy](../arkts-apis/arkts-arkui-buildernode-c.md#postInputEventWithStrategy) API. Each time an event is dispatched, this field is increased by 100000. Using the same **eventHandleId** for multiple event dispatches will cause abnormal event responses. This field only needs to be assigned when constructing an event; developers do not need to handle it in other cases.
 
 **Type:** number
 

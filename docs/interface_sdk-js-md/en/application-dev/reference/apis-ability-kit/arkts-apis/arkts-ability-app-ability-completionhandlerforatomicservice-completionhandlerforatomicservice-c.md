@@ -1,6 +1,6 @@
 # CompletionHandlerForAtomicService
 
-CompletionHandlerForAtomicService provides two callback functions, [onAtomicServiceRequestSuccess](../../apis-na/arkts-apis/arkts-na-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md#onAtomicServiceRequestSuccess) and [onAtomicServiceRequestFailure](../../apis-na/arkts-apis/arkts-na-app-ability-completionhandlerforatomicservice-completionhandlerforatomicservice-c.md#onAtomicServiceRequestFailure) , to handle the results of successful and failed atomic service launch requests, respectively.
+CompletionHandlerForAtomicService provides two callback functions, [onAtomicServiceRequestSuccess](#onAtomicServiceRequestSuccess) and [onAtomicServiceRequestFailure](#onAtomicServiceRequestFailure) , to handle the results of successful and failed atomic service launch requests, respectively.
 
 **Since:** 20
 
@@ -45,7 +45,7 @@ Called when the atomic service fails to be launched.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | appId | string | Yes | appId of the target atomic service. |
-| failureCode | [FailureCode](../../apis-na/arkts-apis/arkts-na-app-ability-completionhandlerforatomicservice-failurecode-e.md) | Yes | Error code of the failure cause. |
+| failureCode | [FailureCode](arkts-ability-app-ability-completionhandlerforatomicservice-failurecode-e.md) | Yes | Error code of the failure cause. |
 | failureMessage | string | Yes | Description of the failure cause. |
 
 ## Examples

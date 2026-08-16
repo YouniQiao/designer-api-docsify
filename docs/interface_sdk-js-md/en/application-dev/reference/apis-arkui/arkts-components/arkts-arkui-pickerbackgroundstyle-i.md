@@ -18,7 +18,7 @@ Defines the background style configuration for selected picker items.
 borderRadius?: LengthMetrics | BorderRadiuses | LocalizedBorderRadiuses
 ```
 
-Border radius of the selected item. Default value: **{ value:24, unit:LengthUnit.VP }**, meaning 24 vp for all corners. **NOTE：**1. [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md#LengthMetrics): uniform radius with a customizable unit 2. BorderRadiuses: per-corner radius values (vp units only) 3. LocalizedBorderRadiuses: per-corner radius values with individual units
+Border radius of the selected item. Default value: **{ value:24, unit:LengthUnit.VP }**, meaning 24 vp for all corners. **NOTE：**1. [LengthMetrics](../arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md#LengthMetrics): uniform radius with a customizable unit 2. BorderRadiuses: per-corner radius values (vp units only) 3. LocalizedBorderRadiuses: per-corner radius values with individual units
 
 **Type:** LengthMetrics \| BorderRadiuses \| LocalizedBorderRadiuses
 

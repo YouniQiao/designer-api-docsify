@@ -187,7 +187,7 @@ Obtains the first day of a week in the system settings.
 
 | Type | Description |
 | --- | --- |
-| [WeekDay](../../apis-na/arkts-apis/arkts-na-i18n-weekday-e.md) | Start day of a week. |
+| [WeekDay](arkts-localization-i18n-weekday-e.md) | Start day of a week. |
 
 ## Examples
 
@@ -460,7 +460,7 @@ Obtains the current system locale.
 
 **Deprecated since:** 20
 
-**Substitutes:** [getSystemLocaleInstance](../../apis-na/arkts-apis/arkts-na-i18n-system-c.md#getSystemLocaleInstance)
+**Substitutes:** [getSystemLocaleInstance](#getSystemLocaleInstance)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -574,7 +574,7 @@ Obtains the name of a temperature unit.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [TemperatureType](../../apis-na/arkts-apis/arkts-na-i18n-temperaturetype-e.md) | Yes | Temperature unit. |
+| type | [TemperatureType](arkts-localization-i18n-temperaturetype-e.md) | Yes | Temperature unit. |
 
 **Return value:**
 
@@ -627,7 +627,7 @@ Obtains the temperature unit of the system.
 
 | Type | Description |
 | --- | --- |
-| [TemperatureType](../../apis-na/arkts-apis/arkts-na-i18n-temperaturetype-e.md) | Temperature unit. |
+| [TemperatureType](arkts-localization-i18n-temperaturetype-e.md) | Temperature unit. |
 
 ## Examples
 

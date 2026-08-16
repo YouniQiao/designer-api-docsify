@@ -60,9 +60,9 @@ SET_SELECTED_INFO = 3
 
 SET_SELECTED_INFO. Set selected information to picker component.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Deprecated since:** -1
 
@@ -80,15 +80,35 @@ SET_BADGE_CONFIGS = 4
 
 SET_BADGE_CONFIGS. Set badge configs to picker component.
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Deprecated since:** -1
 
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DataType-SET_BADGE_CONFIGS = 4--><!--Device-DataType-SET_BADGE_CONFIGS = 4-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+## SET_ITEM_CLICK_RESULT
+
+```TypeScript
+SET_ITEM_CLICK_RESULT = 5
+```
+
+SET_ITEM_CLICK_RESULT. Set click result to picker component.
+
+**Since:** 26.1.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DataType-SET_ITEM_CLICK_RESULT = 5--><!--Device-DataType-SET_ITEM_CLICK_RESULT = 5-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 

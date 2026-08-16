@@ -46,7 +46,7 @@ Constructor of ComposeTitleBarV2MenuItem.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [ComposeTitleBarV2MenuItemParams](arkts-arkui-arkui-advanced-composetitlebarv2-composetitlebarv2menuitemparams-i.md) | No | Parameters for creating a menu item instance |
+| params | [ComposeTitleBarV2MenuItemParams](../../apis-na/arkts-apis/arkts-na-arkui-advanced-composetitlebarv2-composetitlebarv2menuitemparams-i.md) | No | Parameters for creating a menu item instance |
 
 ## accessibilityDescription
 
@@ -134,7 +134,7 @@ The accessibilityText of this menu item.
 
 Callback function when click on this menu item.
 
-**Type:** [OnActionCallback](arkts-arkui-onactioncallback-t.md)
+**Type:** [OnActionCallback](../../apis-na/arkts-apis/arkts-na-onactioncallback-t.md)
 
 **Since:** 26.0.0
 

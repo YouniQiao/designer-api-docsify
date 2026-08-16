@@ -20,7 +20,7 @@ copySignal?: TaskSignal
 
 取消拷贝信号。
 
-**类型：** [TaskSignal](../../apis-na/arkts-apis/arkts-na-tasksignal-t.md)
+**类型：** [TaskSignal](arkts-corefile-file-fs-tasksignal-c.md)
 
 **起始版本：** 12
 

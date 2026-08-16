@@ -120,7 +120,7 @@ present(content: CustomBuilder | CustomBuilderWithId | ComponentContent<Object>,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| content | CustomBuilder \| [CustomBuilderWithId](../../apis-na/arkts-apis/arkts-na-custombuilderwithid-t.md) \| ComponentContent&lt;Object&gt; | 是 | 自定义对话框内容。 |
+| content | CustomBuilder \| [CustomBuilderWithId](arkts-arkui-custombuilderwithid-t.md) \| ComponentContent&lt;Object&gt; | 是 | 自定义对话框内容。 |
 | options | dialog.DialogCustomOptions | 否 | 自定义对话框选项。 |
 
 **返回值：**

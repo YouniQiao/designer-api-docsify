@@ -4775,7 +4775,7 @@ overlay(value: string | CustomBuilder | ComponentContent<Object> | undefined, op
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string \| CustomBuilder \| [ComponentContent](../../apis-arkui/arkts-apis/arkts-arkui-componentcontent-c.md)&lt;Object&gt; \| undefined | 是 |  |
+| value | string \| CustomBuilder \| [ComponentContent](arkts-na-componentcontent-c.md)&lt;Object&gt; \| undefined | 是 |  |
 | options | [OverlayOptions](arkts-na-common-overlayoptions-i.md) | 否 |  |
 
 **返回值：**

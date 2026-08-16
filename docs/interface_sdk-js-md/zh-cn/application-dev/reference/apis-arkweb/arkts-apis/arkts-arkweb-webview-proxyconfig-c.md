@@ -76,7 +76,7 @@ enableReverseBypass(reverse: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| reverse | boolean | 是 | 参数值默认是false，表示与[insertBypassRule](#insertBypassRule)中的 bypassRule匹配的URL会绕过代理，参数值为true时，表示与[insertBypassRule](#insertBypassRule)中的bypassRule 匹配的URL会使用代理。 |
+| reverse | boolean | 是 | 参数值默认是false，表示与[insertBypassRule](../../apis-na/arkts-apis/arkts-na-webview-proxyconfig-c.md#insertBypassRule)中的 bypassRule匹配的URL会绕过代理，参数值为true时，表示与[insertBypassRule](../../apis-na/arkts-apis/arkts-na-webview-proxyconfig-c.md#insertBypassRule)中的bypassRule 匹配的URL会使用代理。 |
 
 **错误码：**
 
@@ -134,7 +134,7 @@ getProxyRules(): Array<ProxyRule>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[ProxyRule](arkts-arkweb-webview-proxyrule-c.md)&gt; | 代理规则。 |
+| Array&lt;[ProxyRule](../../apis-na/arkts-apis/arkts-na-webview-proxyrule-c.md)&gt; | 代理规则。 |
 
 ## insertBypassRule
 
@@ -192,7 +192,7 @@ insertDirectRule(schemeFilter?: ProxySchemeFilter): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| schemeFilter | [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) | 否 | 与schemeFilter匹配的URL会直接与服务器相连。<br>默认值：MATCH_ALL_SCHEMES。 <br>传入 undefined或null会抛出异常错误码401。 |
+| schemeFilter | [ProxySchemeFilter](../../apis-na/arkts-apis/arkts-na-webview-proxyschemefilter-e.md) | 否 | 与schemeFilter匹配的URL会直接与服务器相连。<br>默认值：MATCH_ALL_SCHEMES。 <br>传入 undefined或null会抛出异常错误码401。 |
 
 **错误码：**
 
@@ -225,7 +225,7 @@ insertProxyRule(proxyRule: string, schemeFilter?: ProxySchemeFilter): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | proxyRule | string | 是 | URL要使用的代理。 |
-| schemeFilter | [ProxySchemeFilter](arkts-arkweb-webview-proxyschemefilter-e.md) | 否 | 与schemeFilter匹配的URL会使用代理。<br>默认值：MATCH_ALL_SCHEMES。<br>传入undefined或 null会抛出异常错误码401。 |
+| schemeFilter | [ProxySchemeFilter](../../apis-na/arkts-apis/arkts-na-webview-proxyschemefilter-e.md) | 否 | 与schemeFilter匹配的URL会使用代理。<br>默认值：MATCH_ALL_SCHEMES。<br>传入undefined或 null会抛出异常错误码401。 |
 
 **错误码：**
 

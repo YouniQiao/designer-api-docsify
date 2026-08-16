@@ -1,6 +1,6 @@
 # CursorController
 
-提供光标样式设置的能力。 > **说明：** > > - 本Class首批接口从API version 12开始支持。 > > - 以下API需先使用UIContext中的[getCursorController()](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getCursorController)方法获取CursorController实例，再通过此实例调用对应方法。
+提供光标样式设置的能力。 > **说明：** > > - 本Class首批接口从API version 12开始支持。 > > - 以下API需先使用UIContext中的[getCursorController()](arkts-arkui-arkui-uicontext-uicontext-c.md#getCursorController)方法获取CursorController实例，再通过此实例调用对应方法。
 
 **起始版本：** 12
 
@@ -60,7 +60,7 @@ setCursor(value: PointerStyle): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [PointerStyle](../../apis-na/arkts-apis/arkts-na-pointerstyle-t.md) | 是 | 光标样式。 |
+| value | [PointerStyle](arkts-arkui-pointerstyle-t.md) | 是 | 光标样式。 |
 
 ## setCustomCursor
 

@@ -102,7 +102,7 @@ lightEffect?: LightEffectOptions | null
 
 Whether to set a light sensing interaction feedback effect for the component with a material set. If this parameter is set to null, the light sensing interaction feedback effect is disabled. Note: This parameter takes effect for the display effect of devices with all levels of computing power. Default value: **undefined**, indicating that the light sensing interaction feedback effect is not set.
 
-**Type:** [LightEffectOptions](arkts-arkui-uimaterial-lighteffectoptions-i.md) \| null
+**Type:** [LightEffectOptions](../../apis-na/arkts-apis/arkts-na-uimaterial-lighteffectoptions-i.md) \| null
 
 **Since:** 26.0.0
 
@@ -152,7 +152,7 @@ style?: ImmersiveStyle
 
 Material style. Different styles correspond to different material parameters, which affect the material thickness. Note: This parameter takes effect only for the display effect of devices with high- and mid-level computing power. Default value: **ImmersiveStyle.REGULAR**
 
-**Type:** [ImmersiveStyle](arkts-arkui-uimaterial-immersivestyle-e.md)
+**Type:** [ImmersiveStyle](../../apis-na/arkts-apis/arkts-na-uimaterial-immersivestyle-e.md)
 
 **Default:** uiMaterial.ImmersiveStyle.REGULAR
 

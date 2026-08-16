@@ -150,7 +150,7 @@ Sets the ProgressButtonV2 progress.
 
 Set border rounded corner radius of progress.
 
-**Type:** [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 18
 
@@ -174,7 +174,7 @@ Set border rounded corner radius of progress.
 
 Sets the ProgressButtonV2 progressButtonWidth.
 
-**Type:** [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Since:** 18
 

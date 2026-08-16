@@ -1748,7 +1748,7 @@ clipShape(value: CircleShape | EllipseShape | PathShape | RectShape | undefined)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [CircleShape](arkts-na-arkui-shape-circleshape-c.md) \| [EllipseShape](arkts-na-arkui-shape-ellipseshape-c.md) \| [PathShape](arkts-na-arkui-shape-pathshape-c.md) \| [RectShape](arkts-na-arkui-shape-rectshape-c.md) \| undefined | Yes |  |
+| value | [CircleShape](../../apis-arkui/arkts-apis/arkts-arkui-arkui-shape-circleshape-c.md) \| [EllipseShape](../../apis-arkui/arkts-apis/arkts-arkui-arkui-shape-ellipseshape-c.md) \| [PathShape](../../apis-arkui/arkts-apis/arkts-arkui-arkui-shape-pathshape-c.md) \| [RectShape](../../apis-arkui/arkts-apis/arkts-arkui-arkui-shape-rectshape-c.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -3220,7 +3220,7 @@ maskShape(value: CircleShape | EllipseShape | PathShape | RectShape | undefined)
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [CircleShape](arkts-na-arkui-shape-circleshape-c.md) \| [EllipseShape](arkts-na-arkui-shape-ellipseshape-c.md) \| [PathShape](arkts-na-arkui-shape-pathshape-c.md) \| [RectShape](arkts-na-arkui-shape-rectshape-c.md) \| undefined | Yes |  |
+| value | [CircleShape](../../apis-arkui/arkts-apis/arkts-arkui-arkui-shape-circleshape-c.md) \| [EllipseShape](../../apis-arkui/arkts-apis/arkts-arkui-arkui-shape-ellipseshape-c.md) \| [PathShape](../../apis-arkui/arkts-apis/arkts-arkui-arkui-shape-pathshape-c.md) \| [RectShape](../../apis-arkui/arkts-apis/arkts-arkui-arkui-shape-rectshape-c.md) \| undefined | Yes |  |
 
 **Return value:**
 
@@ -5208,7 +5208,7 @@ safeAreaPadding(paddingValue: Padding | LengthMetrics | LocalizedPadding | undef
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| paddingValue | [Padding](../../apis-arkui/arkts-apis/arkts-arkui-padding-t.md) \| [LengthMetrics](arkts-na-graphics-lengthmetrics-c.md) \| [LocalizedPadding](../../apis-arkui/arkts-apis/arkts-arkui-localizedpadding-i.md) \| undefined | Yes |  |
+| paddingValue | [Padding](../../apis-arkui/arkts-apis/arkts-arkui-padding-t.md) \| [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md) \| [LocalizedPadding](../../apis-arkui/arkts-apis/arkts-arkui-localizedpadding-i.md) \| undefined | Yes |  |
 
 **Return value:**
 

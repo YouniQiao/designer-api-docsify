@@ -218,7 +218,7 @@ Gets network cookie manager
 
 **Deprecated since:** 9
 
-**Substitutes:** [WebCookieManager](../arkts-apis/arkts-arkweb-webview-webcookiemanager-c.md#WebCookieManager)
+**Substitutes:** [WebCookieManager](../../apis-na/arkts-apis/arkts-na-webview-webcookiemanager-c.md#WebCookieManager)
 
 <!--Device-WebController-getCookieManager(): WebCookie--><!--Device-WebController-getCookieManager(): WebCookie-End-->
 
@@ -314,7 +314,7 @@ Loads the given URL.
 onActive(): void
 ```
 
-Called when the **Web** component enters the active state. This API is supported since API version 8 and deprecated since API version 9. You are advised to use [onActive&lt;sup&gt;9+&lt;/sup&gt;](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#onActive) instead.
+Called when the **Web** component enters the active state. This API is supported since API version 8 and deprecated since API version 9. You are advised to use [onActive&lt;sup&gt;9+&lt;/sup&gt;](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#onActive) instead.
 
 **Since:** 8
 
@@ -334,7 +334,7 @@ Called when the **Web** component enters the active state. This API is supported
 onInactive(): void
 ```
 
-Called when the **Web** component enters the inactive state. This API is supported since API version 8 and deprecated since API version 9. You are advised to use [onInactive&lt;sup&gt;9+&lt;/sup&gt;](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#onInactive) instead.
+Called when the **Web** component enters the inactive state. This API is supported since API version 8 and deprecated since API version 9. You are advised to use [onInactive&lt;sup&gt;9+&lt;/sup&gt;](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#onInactive) instead.
 
 **Since:** 8
 
@@ -474,7 +474,7 @@ Let the Web zoom by.
 
 **Deprecated since:** 9
 
-**Substitutes:** [zoom](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#zoom)
+**Substitutes:** [zoom](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#zoom)
 
 <!--Device-WebController-zoom(factor: number): void--><!--Device-WebController-zoom(factor: number): void-End-->
 

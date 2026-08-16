@@ -18,9 +18,9 @@ LinkIntentParamMapping是@InsightIntentLink装饰器的意图参数和URI信息�
 paramCategory?: LinkParamCategory
 ```
 
-若取值为[LINK](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-insightintentdecorator-linkparamcategory-e.md#LinkParamCategory)，系统获取paramName对应的映射名称，并以键值对形式拼接到URI末尾。若取值为[WANT](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-insightintentdecorator-linkparamcategory-e.md#LinkParamCategory)， 系统获取paramName对应的映射名称及其取值，通过[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md#Want)的parameters字段传递。
+若取值为[LINK](arkts-na-app-ability-insightintentdecorator-linkparamcategory-e.md#LinkParamCategory)，系统获取paramName对应的映射名称，并以键值对形式拼接到URI末尾。若取值为[WANT](arkts-na-app-ability-insightintentdecorator-linkparamcategory-e.md#LinkParamCategory)， 系统获取paramName对应的映射名称及其取值，通过[Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md#Want)的parameters字段传递。
 
-**类型：** [LinkParamCategory](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-insightintentdecorator-linkparamcategory-e.md)
+**类型：** [LinkParamCategory](arkts-na-app-ability-insightintentdecorator-linkparamcategory-e.md)
 
 **起始版本：** 26.0.0
 

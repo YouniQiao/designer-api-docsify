@@ -42,7 +42,7 @@ onMenuItemClick?: OnMenuItemClickWithTextCallback
 
 Invoked upon clicking an item, capable of intercepting the default system menu execution behavior.
 
-**Type:** [OnMenuItemClickWithTextCallback](arkts-na-onmenuitemclickwithtextcallback-t.md)
+**Type:** [OnMenuItemClickWithTextCallback](../../apis-arkui/arkts-apis/arkts-arkui-onmenuitemclickwithtextcallback-t.md)
 
 **Since:** 26.0.0
 

@@ -470,7 +470,7 @@ static setFirstDayOfWeek(type: WeekDay): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | [WeekDay](arkts-na-i18n-weekday-e.md) | 是 | 周期起始日。 |
+| type | [WeekDay](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-weekday-e.md) | 是 | 周期起始日。 |
 
 **错误码：**
 
@@ -760,7 +760,7 @@ static setTemperatureType(type: TemperatureType): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | [TemperatureType](arkts-na-i18n-temperaturetype-e.md) | 是 | 温度单位。 |
+| type | [TemperatureType](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-temperaturetype-e.md) | 是 | 温度单位。 |
 
 **错误码：**
 

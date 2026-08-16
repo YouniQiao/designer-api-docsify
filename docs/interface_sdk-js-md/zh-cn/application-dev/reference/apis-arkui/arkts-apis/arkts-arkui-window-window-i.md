@@ -814,7 +814,7 @@ getUIContext() : UIContext
 
 | 类型 | 说明 |
 | --- | --- |
-| [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 返回UIContext实例对象。 |
+| [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md) | 返回UIContext实例对象。 |
 
 **错误码：**
 

@@ -32,7 +32,7 @@ function apperceive(capability: OnscreenAwarenessCap,
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | capability | [OnscreenAwarenessCap](arkts-multimodalawareness-onscreen-onscreenawarenesscap-i-sys.md) | 是 | 屏上感知能力列表，具体见下面支持的能力列表。 |
-| options | [OnscreenAwarenessOptions](arkts-multimodalawareness-onscreen-onscreenawarenessoptions-i-sys.md) | 否 | 屏上感知参数列表。 |
+| options | [OnscreenAwarenessOptions](arkts-multimodalawareness-onscreen-onscreenawarenessoptions-i-sys.md) | 否 | 屏上感知参数列表，不传此参数时，使用默认参数配置。 |
 
 **返回值：**
 

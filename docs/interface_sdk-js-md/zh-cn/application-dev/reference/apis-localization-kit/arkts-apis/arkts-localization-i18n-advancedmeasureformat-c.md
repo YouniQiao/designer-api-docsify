@@ -39,7 +39,7 @@ constructor(numberFormat: Intl.NumberFormat, options?: AdvancedMeasureFormatOpti
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | numberFormat | Intl.NumberFormat | 是 | 用于格式化数字的对象。 |
-| options | [AdvancedMeasureFormatOptions](../../apis-na/arkts-apis/arkts-na-i18n-advancedmeasureformatoptions-i.md) | 否 |  |
+| options | [AdvancedMeasureFormatOptions](arkts-localization-i18n-advancedmeasureformatoptions-i.md) | 否 |  |
 
 ## 示例
 

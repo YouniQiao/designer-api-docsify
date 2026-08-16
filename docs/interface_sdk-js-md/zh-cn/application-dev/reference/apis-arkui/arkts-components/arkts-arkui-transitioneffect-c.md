@@ -152,7 +152,7 @@ constructor(type: Type, effect: Effect)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | [Type](../../apis-arkts/arkts-apis/arkts-arkts-util-type-e.md) | 是 | 转场类型。 |
+| type | [Type](../../apis-na/arkts-apis/arkts-na-util-type-e.md) | 是 | 转场类型。 |
 | effect | [Effect](../../apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-sceneresources-effect-i.md) | 是 | 转场参数。 |
 
 ## move

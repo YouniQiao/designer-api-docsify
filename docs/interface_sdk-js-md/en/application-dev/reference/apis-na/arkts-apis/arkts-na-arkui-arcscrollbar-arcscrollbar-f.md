@@ -26,7 +26,7 @@ Defines ArcScrollBar Component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ArcScrollBarOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-arcscrollbar-arcscrollbaroptions-i.md) | Yes |  |
+| options | [ArcScrollBarOptions](arkts-na-arkui-arcscrollbar-arcscrollbaroptions-i.md) | Yes |  |
 | content_ | CustomBuilder | No |  |
 
 **Return value:**

@@ -8,7 +8,7 @@ Defines the **EnableAlertBeforeBackPage** parameter.
 
 **Deprecated since:** 8
 
-**Substitutes:** [EnableAlertOptions](../../apis-na/arkts-apis/arkts-na-router-enablealertoptions-i.md#EnableAlertOptions)
+**Substitutes:** [EnableAlertOptions](arkts-arkui-router-enablealertoptions-i.md#EnableAlertOptions)
 
 <!--Device-unnamed-export interface EnableAlertBeforeBackPageOptions--><!--Device-unnamed-export interface EnableAlertBeforeBackPageOptions-End-->
 
@@ -40,7 +40,7 @@ Called when the **Cancel** button in the confirm dialog box is clicked. **errMsg
 
 **Deprecated since:** 8
 
-**Substitutes:** [EnableAlertOptions](../../apis-na/arkts-apis/arkts-na-router-enablealertoptions-i.md#EnableAlertOptions)
+**Substitutes:** [EnableAlertOptions](arkts-arkui-router-enablealertoptions-i.md#EnableAlertOptions)
 
 <!--Device-EnableAlertBeforeBackPageOptions-cancel?: (errMsg: string) => void--><!--Device-EnableAlertBeforeBackPageOptions-cancel?: (errMsg: string) => void-End-->
 
@@ -62,7 +62,7 @@ Called when the dialog box is closed.
 
 **Deprecated since:** 8
 
-**Substitutes:** [EnableAlertOptions](../../apis-na/arkts-apis/arkts-na-router-enablealertoptions-i.md#EnableAlertOptions)
+**Substitutes:** [EnableAlertOptions](arkts-arkui-router-enablealertoptions-i.md#EnableAlertOptions)
 
 <!--Device-EnableAlertBeforeBackPageOptions-complete?: () => void--><!--Device-EnableAlertBeforeBackPageOptions-complete?: () => void-End-->
 
@@ -106,7 +106,7 @@ Called when the **OK** button in the confirm dialog box is clicked. **errMsg** i
 
 **Deprecated since:** 8
 
-**Substitutes:** [EnableAlertOptions](../../apis-na/arkts-apis/arkts-na-router-enablealertoptions-i.md#EnableAlertOptions)
+**Substitutes:** [EnableAlertOptions](arkts-arkui-router-enablealertoptions-i.md#EnableAlertOptions)
 
 <!--Device-EnableAlertBeforeBackPageOptions-success?: (errMsg: string) => void--><!--Device-EnableAlertBeforeBackPageOptions-success?: (errMsg: string) => void-End-->
 

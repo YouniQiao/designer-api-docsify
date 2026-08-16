@@ -24,9 +24,9 @@ import { picker } from 'picker';
 themeColor?: CustomColors
 ```
 
-Theme color parameter. By default, it is left empty and follows the color settings of the **FilePicker**. When it is set to specific theme color properties, such as [brand, fontPrimary, compBackgroundEmphasize, and iconFourth](../../apis-arkui/arkts-apis/arkts-arkui-arkui-theme-colors-i.md#Colors), the launched **FilePicker** will adapt to the theme color accordingly. This API can be called on smartphones but has no effect on other devices.
+Theme color parameter. By default, it is left empty and follows the color settings of the **FilePicker**. When it is set to specific theme color properties, such as [brand, fontPrimary, compBackgroundEmphasize, and iconFourth](../../apis-na/arkts-apis/arkts-na-arkui-theme-colors-i.md#Colors), the launched **FilePicker** will adapt to the theme color accordingly. This API can be called on smartphones but has no effect on other devices.
 
-**Type:** [CustomColors](../../apis-arkui/arkts-apis/arkts-arkui-customcolors-t.md)
+**Type:** [CustomColors](../../apis-na/arkts-apis/arkts-na-customcolors-t.md)
 
 **Since:** 23
 

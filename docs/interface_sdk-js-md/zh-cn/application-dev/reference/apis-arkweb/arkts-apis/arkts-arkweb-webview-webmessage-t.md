@@ -4,7 +4,7 @@
 type WebMessage = ArrayBuffer | string
 ```
 
-用于描述[onMessageEventExt](arkts-arkweb-webview-webmessageport-i.md#onMessageEventExt)所支持的数据类型。
+用于描述[onMessageEventExt](../../apis-na/arkts-apis/arkts-na-webview-webmessageport-i.md#onMessageEventExt)所支持的数据类型。
 
 **起始版本：** 9
 

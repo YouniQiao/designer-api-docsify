@@ -1,6 +1,6 @@
 # UserFaceAngleData（系统接口）
 
-用户面部角度数据。
+表示用户朝向角度数据。
 
 **继承/实现关系：** UserFaceAngleData extends [UserStatusData](arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md#UserStatusData（系统接口）)
 
@@ -22,7 +22,7 @@
 hpeNetworkId: string
 ```
 
-用户头部朝向的设备网络ID。最大长度为128。
+表示用户所面向的设备的网络ID。字符串长度范围[0,128]。
 
 **类型：** string
 

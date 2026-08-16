@@ -14,7 +14,7 @@ export function getSystemRegion(): string
 
 **废弃版本：** 9
 
-**替代接口：** [getSystemRegion](../../apis-na/arkts-apis/arkts-na-i18n-system-c.md#getSystemRegion)
+**替代接口：** [getSystemRegion](arkts-localization-i18n-system-c.md#getSystemRegion)
 
 <!--Device-i18n-export function getSystemRegion(): string--><!--Device-i18n-export function getSystemRegion(): string-End-->
 

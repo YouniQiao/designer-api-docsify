@@ -174,7 +174,7 @@ state: NavDestinationState
 
 NavDestination组件的状态。
 
-**类型：** [NavDestinationState](arkts-na-uiobserver-navdestinationstate-e.md)
+**类型：** [NavDestinationState](../../apis-arkui/arkts-apis/arkts-arkui-uiobserver-navdestinationstate-e.md)
 
 **起始版本：** 23
 

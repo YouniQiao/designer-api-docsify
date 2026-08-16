@@ -50,11 +50,11 @@ Sets the breakpoint configuration for container dimension analysis. Defines a se
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [BreakpointOptions](arkts-arkui-arkui-components-containerreader-breakpointoptions-i.md) | No | An array of breakpoint values in vp |
+| value | [BreakpointOptions](../../apis-na/arkts-apis/arkts-na-arkui-components-containerreader-breakpointoptions-i.md) | No | An array of breakpoint values in vp |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [ContainerReaderAttribute](arkts-arkui-arkui-components-containerreader-containerreaderattribute-c.md) |  |
+| [ContainerReaderAttribute](../../apis-na/arkts-apis/arkts-na-arkui-components-containerreader-containerreaderattribute-i.md) |  |
 

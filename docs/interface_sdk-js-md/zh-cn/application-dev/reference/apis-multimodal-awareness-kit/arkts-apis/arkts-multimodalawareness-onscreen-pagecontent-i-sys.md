@@ -108,7 +108,7 @@ paragraphs?: Paragraph[]
 scenario?: Scenario
 ```
 
-获取到的屏上内容的场景。只有在options.contentUnderstand为true时，才会获取该属性。
+获取到的屏上内容的场景。仅在options.contentUnderstand为true时，才会获取该属性。
 
 **类型：** [Scenario](arkts-multimodalawareness-onscreen-scenario-e-sys.md)
 

@@ -41,7 +41,7 @@ onRecentPhotoCheckInfo?: RecentPhotoCheckInfoCallback
 
 Callback when check whether photos or videos exists and return the recent photo info
 
-**Type:** [RecentPhotoCheckInfoCallback](arkts-na-recentphotocheckinfocallback-t.md)
+**Type:** [RecentPhotoCheckInfoCallback](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-recentphotocheckinfocallback-t.md)
 
 **Since:** 26.0.0
 
@@ -63,7 +63,7 @@ onRecentPhotoCheckResult?: RecentPhotoCheckResultCallback
 
 Callback when check whether photos or videos exists
 
-**Type:** [RecentPhotoCheckResultCallback](arkts-na-recentphotocheckresultcallback-t.md)
+**Type:** [RecentPhotoCheckResultCallback](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-recentphotocheckresultcallback-t.md)
 
 **Since:** 26.0.0
 
@@ -85,7 +85,7 @@ onRecentPhotoClick: RecentPhotoClickCallback
 
 Callback when select photos or videos
 
-**Type:** [RecentPhotoClickCallback](arkts-na-recentphotoclickcallback-t.md)
+**Type:** [RecentPhotoClickCallback](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-recentphotoclickcallback-t.md)
 
 **Since:** 26.0.0
 
@@ -107,7 +107,7 @@ recentPhotoOptions?: RecentPhotoOptions
 
 recentPhotoOptions
 
-**Type:** [RecentPhotoOptions](arkts-na-file-recentphotocomponent-recentphotooptions-c.md)
+**Type:** [RecentPhotoOptions](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-recentphotocomponent-recentphotooptions-c.md)
 
 **Since:** 26.0.0
 

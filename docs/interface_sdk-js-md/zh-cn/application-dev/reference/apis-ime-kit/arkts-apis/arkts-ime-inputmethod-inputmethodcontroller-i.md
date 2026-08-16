@@ -270,7 +270,7 @@ attachWithUIContext(uiContext: UIContext, textConfig: TextConfig, attachOptions?
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| uiContext | [UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md) | 是 | UIContext实例对象。 |
+| uiContext | [UIContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) | 是 | UIContext实例对象。 |
 | textConfig | [TextConfig](arkts-ime-inputmethod-textconfig-i.md) | 是 | 编辑框的配置信息。 |
 | attachOptions | AttachOptions | 否 | 绑定附加选项。 |
 

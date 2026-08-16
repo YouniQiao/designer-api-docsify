@@ -6,7 +6,7 @@
 export function getSystemLocale(): string
 ```
 
-> [System.getSystemLocale](../../apis-na/arkts-apis/arkts-na-i18n-system-c.md#getSystemLocaleInstance)代替。 > 获取系统区域ID。
+> [System.getSystemLocale](arkts-localization-i18n-system-c.md#getSystemLocaleInstance)代替。 > 获取系统区域ID。
 
 **起始版本：** 7
 

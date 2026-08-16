@@ -36,7 +36,7 @@ The constructor of OperateCheckV2.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [OperateCheckV2Options](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-composelistitemv2-operatecheckv2options-i.md) | No | The options of OperateCheckV2 |
+| options | [OperateCheckV2Options](arkts-na-arkui-advanced-composelistitemv2-operatecheckv2options-i.md) | No | The options of OperateCheckV2 |
 
 ## accessibilityDescription
 
@@ -141,7 +141,7 @@ Whether is checked on default.
 
 Callback function when operate the checkbox/switch/radio.
 
-**Type:** [OnChangeCallback](../../apis-arkui/arkts-apis/arkts-arkui-onchangecallback-t.md)
+**Type:** [OnChangeCallback](arkts-na-onchangecallback-t.md)
 
 **Since:** 26.0.0
 

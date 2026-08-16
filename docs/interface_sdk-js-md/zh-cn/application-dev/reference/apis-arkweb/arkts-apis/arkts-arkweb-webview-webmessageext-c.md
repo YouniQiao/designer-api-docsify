@@ -228,7 +228,7 @@ getType(): WebMessageType
 
 | 类型 | 说明 |
 | --- | --- |
-| [WebMessageType](arkts-arkweb-webview-webmessagetype-e.md) | 返回类型为 WebMessageType 的数据。 |
+| [WebMessageType](../../apis-na/arkts-apis/arkts-na-webview-webmessagetype-e.md) | 返回类型为 WebMessageType 的数据。 |
 
 ## setArray
 
@@ -452,7 +452,7 @@ setType(type: WebMessageType): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | [WebMessageType](arkts-arkweb-webview-webmessagetype-e.md) | 是 | 设置 WebMessageType 类型数据。 |
+| type | [WebMessageType](../../apis-na/arkts-apis/arkts-na-webview-webmessagetype-e.md) | 是 | 设置 WebMessageType 类型数据。 |
 
 **错误码：**
 

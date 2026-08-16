@@ -262,13 +262,13 @@ Creates an **Animator** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) | Yes | Animator options. |
+| options | [AnimatorOptions](../../apis-na/arkts-apis/arkts-na-animator-animatoroptions-i.md) | Yes | Animator options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [AnimatorResult](arkts-arkui-animator-animatorresult-i.md) | Animator result. |
+| [AnimatorResult](../../apis-na/arkts-apis/arkts-na-animator-animatorresult-i.md) | Animator result. |
 
 **Error codes:**
 
@@ -282,7 +282,7 @@ Creates an **Animator** object.
 createAnimator(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
 ```
 
-Creates an **AnimatorResult** object for animations. Compared to the previous [createAnimator](#createAnimator) API, this API adds support for the [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md#SimpleAnimatorOptions) type.
+Creates an **AnimatorResult** object for animations. Compared to the previous [createAnimator](#createAnimator) API, this API adds support for the [SimpleAnimatorOptions](../../apis-na/arkts-apis/arkts-na-animator-simpleanimatoroptions-c.md#SimpleAnimatorOptions) type.
 
 **Since:** 18
 
@@ -302,13 +302,13 @@ Creates an **AnimatorResult** object for animations. Compared to the previous [c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) \| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | Yes | Animator options. |
+| options | [AnimatorOptions](../../apis-na/arkts-apis/arkts-na-animator-animatoroptions-i.md) \| [SimpleAnimatorOptions](../../apis-na/arkts-apis/arkts-na-animator-simpleanimatoroptions-c.md) | Yes | Animator options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [AnimatorResult](arkts-arkui-animator-animatorresult-i.md) | Animator result. |
+| [AnimatorResult](../../apis-na/arkts-apis/arkts-na-animator-animatorresult-i.md) | Animator result. |
 
 **Error codes:**
 

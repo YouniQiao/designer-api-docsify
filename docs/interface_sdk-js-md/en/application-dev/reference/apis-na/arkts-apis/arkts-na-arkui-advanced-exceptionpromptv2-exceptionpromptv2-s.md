@@ -42,7 +42,7 @@ The method to build component.
 
 Callback invoked when the icon on the right is clicked.
 
-**Type:** [OnActionTextClickCallback](../../apis-arkui/arkts-apis/arkts-arkui-onactiontextclickcallback-t.md)
+**Type:** [OnActionTextClickCallback](arkts-na-onactiontextclickcallback-t.md)
 
 **Since:** 26.0.0
 
@@ -65,7 +65,7 @@ Callback invoked when the icon on the right is clicked.
 
 Callback invoked when the prompt text on the left is clicked.
 
-**Type:** [OnTipClickCallback](../../apis-arkui/arkts-apis/arkts-arkui-ontipclickcallback-t.md)
+**Type:** [OnTipClickCallback](arkts-na-ontipclickcallback-t.md)
 
 **Since:** 26.0.0
 
@@ -88,7 +88,7 @@ Callback invoked when the prompt text on the left is clicked.
 
 ExceptionPromptV2 configuration.
 
-**Type:** [PromptOptionsV2](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-exceptionpromptv2-promptoptionsv2-c.md)
+**Type:** [PromptOptionsV2](arkts-na-arkui-advanced-exceptionpromptv2-promptoptionsv2-c.md)
 
 **Since:** 26.0.0
 

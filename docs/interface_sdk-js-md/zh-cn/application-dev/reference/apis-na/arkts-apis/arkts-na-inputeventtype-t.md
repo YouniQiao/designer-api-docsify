@@ -4,7 +4,7 @@
 export declare type InputEventType = TouchEvent | MouseEvent | AxisEvent
 ```
 
-[postInputEvent](../../apis-arkui/arkts-apis/arkts-arkui-buildernode-c.md#postInputEvent)的参数，定义要发送的输入事件类型。
+[postInputEvent](arkts-na-buildernode-c.md#postInputEvent)的参数，定义要发送的输入事件类型。
 
 **起始版本：** 24
 

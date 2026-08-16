@@ -94,7 +94,7 @@ suggestionType: SuggestionType
 
 Language or country/region suggestion type.
 
-**Type:** [SuggestionType](../../apis-na/arkts-apis/arkts-na-i18n-suggestiontype-e-sys.md)
+**Type:** [SuggestionType](arkts-localization-i18n-suggestiontype-e-sys.md)
 
 **Since:** 23
 

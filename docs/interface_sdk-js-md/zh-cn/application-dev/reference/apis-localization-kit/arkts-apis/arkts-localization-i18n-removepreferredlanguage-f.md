@@ -14,7 +14,7 @@ export function removePreferredLanguage(index: int): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [removePreferredLanguage](../../apis-na/arkts-apis/arkts-na-i18n-system-c-sys.md#removePreferredLanguage)
+**替代接口：** [removePreferredLanguage](arkts-localization-i18n-system-c-sys.md#removePreferredLanguage)
 
 **需要权限：** ohos.permission.UPDATE_CONFIGURATION
 

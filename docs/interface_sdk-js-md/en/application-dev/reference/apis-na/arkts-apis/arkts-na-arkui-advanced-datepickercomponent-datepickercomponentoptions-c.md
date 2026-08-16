@@ -20,7 +20,7 @@ dateOptions?: DateOptions
 
 Date options.
 
-**Type:** [DateOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-datepickercomponent-dateoptions-c.md)
+**Type:** [DateOptions](arkts-na-arkui-advanced-datepickercomponent-dateoptions-c.md)
 
 **Since:** 26.0.0
 
@@ -42,7 +42,7 @@ displayMode?: DisplayMode
 
 Display mode of the picker. Default value: DisplayMode.DATE
 
-**Type:** [DisplayMode](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-datepickercomponent-displaymode-e.md)
+**Type:** [DisplayMode](arkts-na-arkui-advanced-datepickercomponent-displaymode-e.md)
 
 **Default:** DisplayMode.DATE
 
@@ -66,7 +66,7 @@ timeOptions?: TimeOptions
 
 Time options.
 
-**Type:** [TimeOptions](../../apis-arkui/arkts-apis/arkts-arkui-arkui-advanced-datepickercomponent-timeoptions-c.md)
+**Type:** [TimeOptions](arkts-na-arkui-advanced-datepickercomponent-timeoptions-c.md)
 
 **Since:** 26.0.0
 

@@ -160,7 +160,7 @@ customUIController?: NodeController
 
 Custom UI controller, which is used to implement the custom UI features on the PiP page. If this parameter is left empty, the custom UI features are not used by default.
 
-**Type:** [NodeController](arkts-arkui-nodecontroller-c.md)
+**Type:** [NodeController](../../apis-na/arkts-apis/arkts-na-nodecontroller-c.md)
 
 **Since:** 26.0.0
 
@@ -248,7 +248,7 @@ A page-level UI state storage unit. In multi-instance scenarios, it can be used 
 navigationId?: string
 ```
 
-ID of the **Navigation** component. If no value is passed, the page does not need to be cached. 1. When the UIAbility uses Navigation to manage pages, set the ID of the **Navigation** component for the PiP controller. This ensures that the original page can be restored from the PiP window. 2. When the UIAbility uses [Router](../../apis-na/arkts-apis/arkts-router.md#@ohos.router) to manage pages, you do not need to set the ID of the **Navigation** component for the PiP controller. 3. If the UIAbility has only one page, you do not need to set the navigation ID. The original page can be restored from the PiP window.
+ID of the **Navigation** component. If no value is passed, the page does not need to be cached. 1. When the UIAbility uses Navigation to manage pages, set the ID of the **Navigation** component for the PiP controller. This ensures that the original page can be restored from the PiP window. 2. When the UIAbility uses [Router](arkts-router.md#@ohos.router) to manage pages, you do not need to set the ID of the **Navigation** component for the PiP controller. 3. If the UIAbility has only one page, you do not need to set the navigation ID. The original page can be restored from the PiP window.
 
 **Type:** string
 

@@ -71,7 +71,7 @@ onMessageEvent(callback: (result: WebMessage) => void): void
 onMessageEventExt(callback: (result: WebMessageExt) => void): void
 ```
 
-在应用侧的消息端口上注册回调函数，接收HTML5侧发送过来的[WebMessageType](arkts-arkweb-webview-webmessagetype-e.md#WebMessageType)类型消息。
+在应用侧的消息端口上注册回调函数，接收HTML5侧发送过来的[WebMessageType](../../apis-na/arkts-apis/arkts-na-webview-webmessagetype-e.md#WebMessageType)类型消息。
 
 **起始版本：** 10
 
@@ -122,7 +122,7 @@ postMessageEvent(message: WebMessage): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| message | [WebMessage](arkts-arkweb-webview-webmessage-t.md) | 是 | 要发送的消息。 |
+| message | [WebMessage](../../apis-na/arkts-apis/arkts-na-webview-webmessage-t.md) | 是 | 要发送的消息。 |
 
 **错误码：**
 
@@ -155,7 +155,7 @@ postMessageEventExt(message: WebMessageExt): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| message | [WebMessageExt](arkts-arkweb-webview-webmessageext-c.md) | 是 | 要发送的消息。 |
+| message | [WebMessageExt](../../apis-na/arkts-apis/arkts-na-webview-webmessageext-c.md) | 是 | 要发送的消息。 |
 
 **错误码：**
 

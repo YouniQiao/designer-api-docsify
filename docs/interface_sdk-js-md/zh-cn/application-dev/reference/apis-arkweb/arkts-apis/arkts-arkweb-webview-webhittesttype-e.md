@@ -1,6 +1,6 @@
 # WebHitTestType
 
-[getLastHitTest](arkts-arkweb-webview-webviewcontroller-c.md#getLastHitTest)接口用于指示光标节点。
+[getLastHitTest](../../apis-na/arkts-apis/arkts-na-webview-webviewcontroller-c.md#getLastHitTest)接口用于指示光标节点。
 
 **起始版本：** 9
 

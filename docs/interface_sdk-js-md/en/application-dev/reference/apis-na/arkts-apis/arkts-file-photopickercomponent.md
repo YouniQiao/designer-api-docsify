@@ -9,14 +9,17 @@
 | [AnimatorParams](arkts-na-file-photopickercomponent-animatorparams-c.md) | AnimatorParams |
 | [BadgeConfig](arkts-na-file-photopickercomponent-badgeconfig-c.md) | BadgeConfig |
 | [BaseItemInfo](arkts-na-file-photopickercomponent-baseiteminfo-c.md) | BaseItemInfo |
+| [ClickResult](arkts-na-file-photopickercomponent-clickresult-c.md) | ClickResult |
 | [CompletedResult](arkts-na-file-photopickercomponent-completedresult-c.md) | CompletedResult |
 | [ItemInfo](arkts-na-file-photopickercomponent-iteminfo-c.md) | ItemInfo |
 | [MaxSelected](arkts-na-file-photopickercomponent-maxselected-c.md) | MaxSelected |
 | [PhotoBrowserInfo](arkts-na-file-photopickercomponent-photobrowserinfo-c.md) | PhotoBrowserInfo |
 | [PickerController](arkts-na-file-photopickercomponent-pickercontroller-c.md) | The class for PickerController |
+| [PickerError](arkts-na-file-photopickercomponent-pickererror-c.md) | PickerError |
 | [PickerOptions](arkts-na-file-photopickercomponent-pickeroptions-c.md) | PickerOptions Object |
 | [PreselectedInfo](arkts-na-file-photopickercomponent-preselectedinfo-c.md) | PreselectedInfo |
 | [SingleLineConfig](arkts-na-file-photopickercomponent-singlelineconfig-c.md) | Single-Line display mode. |
+| [UpdatablePickerConfigs](arkts-na-file-photopickercomponent-updatablepickerconfigs-c.md) | UpdatablePickerConfigs |
 
 ### Structs
 
@@ -50,13 +53,20 @@
 | [CurrentAlbumDeletedCallback](arkts-na-currentalbumdeletedcallback-t.md) | The callback of onCurrentAlbumDeleted event |
 | [DeSelectCallback](arkts-na-deselectcallback-t.md) | The callback of onDeSelected event |
 | [EnterPhotoBrowserCallback](arkts-na-enterphotobrowsercallback-t.md) | The callback of enterPhotoBrowser event |
+| [ErrorCallback](arkts-na-errorcallback-t.md) | The callback of onError event |
 | [ExceedMaxSelectedCallback](arkts-na-exceedmaxselectedcallback-t.md) | The callback of onExceedMaxSelected event |
 | [ExitPhotoBrowserCallback](arkts-na-exitphotobrowsercallback-t.md) | The callback of exitPhotoBrowser event |
 | [ItemClickedCallback](arkts-na-itemclickedcallback-t.md) | The callback of itemClicked event |
+| [ItemClickedNotifyCallback](arkts-na-itemclickednotifycallback-t.md) | The callback of onItemClickedNotify event |
 | [ItemsDeletedCallback](arkts-na-itemsdeletedcallback-t.md) | The callback of onSelectedItemsDeleted event |
+| [MovingPhotoBadgeStateChangedCallback](arkts-na-movingphotobadgestatechangedcallback-t.md) | The callback of onMovingPhotoBadgeStateChanged event |
+| [PhotoBrowserChangeStartCallback](arkts-na-photobrowserchangestartcallback-t.md) | The callback of onPhotoBrowserChangeStart event |
 | [PhotoBrowserChangedCallback](arkts-na-photobrowserchangedcallback-t.md) | The callback of onPhotoBrowserChanged event |
 | [PhotoBrowserZoomCallback](arkts-na-photobrowserzoomcallback-t.md) | The callback of onPhotoBrowserZoom event |
 | [PickerControllerReadyCallback](arkts-na-pickercontrollerreadycallback-t.md) | The callback of pickerControllerReady event |
+| [PinchGridSwitchedCallback](arkts-na-pinchgridswitchedcallback-t.md) | The callback of onPinchGridSwitched event |
+| [ScrollStopAtEndCallback](arkts-na-scrollstopatendcallback-t.md) | The callback of onScrollStopAtEnd event |
+| [ScrollStopAtStartCallback](arkts-na-scrollstopatstartcallback-t.md) | The callback of onScrollStopAtStart event |
 | [SelectCallback](arkts-na-selectcallback-t.md) | The callback of onSelected event |
 | [VideoPlayStateChangedCallback](arkts-na-videoplaystatechangedcallback-t.md) | The callback of onVideoPlayStateChanged event |
 

@@ -108,7 +108,7 @@ public photoSource?: PhotoSource
 
 PhotoSource
 
-**Type:** [PhotoSource](arkts-na-file-recentphotocomponent-photosource-e.md)
+**Type:** [PhotoSource](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-recentphotocomponent-photosource-e.md)
 
 **Since:** 26.0.0
 

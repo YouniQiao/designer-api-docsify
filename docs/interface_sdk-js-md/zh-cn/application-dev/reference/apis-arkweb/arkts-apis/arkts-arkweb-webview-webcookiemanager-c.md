@@ -389,7 +389,7 @@ static deleteEntireCookie(): void
 
 **废弃版本：** 11
 
-**替代接口：** [clearAllCookiesSync](#clearAllCookiesSync)
+**替代接口：** [clearAllCookiesSync](../../apis-na/arkts-apis/arkts-na-webview-webcookiemanager-c.md#clearAllCookiesSync)
 
 <!--Device-WebCookieManager-static deleteEntireCookie(): void--><!--Device-WebCookieManager-static deleteEntireCookie(): void-End-->
 
@@ -409,7 +409,7 @@ static deleteSessionCookie(): void
 
 **废弃版本：** 11
 
-**替代接口：** [clearSessionCookieSync](#clearSessionCookieSync)
+**替代接口：** [clearSessionCookieSync](../../apis-na/arkts-apis/arkts-na-webview-webcookiemanager-c.md#clearSessionCookieSync)
 
 <!--Device-WebCookieManager-static deleteSessionCookie(): void--><!--Device-WebCookieManager-static deleteSessionCookie(): void-End-->
 
@@ -475,7 +475,7 @@ static fetchAllCookies(incognito: boolean):  Promise<Array<WebHttpCookie>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[WebHttpCookie](arkts-arkweb-webview-webhttpcookie-i.md)&gt;&gt; | Promise对象，用于获取所有cookie及其对应的字段值。 |
+| Promise&lt;Array&lt;[WebHttpCookie](../../apis-na/arkts-apis/arkts-na-webview-webhttpcookie-i.md)&gt;&gt; | Promise对象，用于获取所有cookie及其对应的字段值。 |
 
 ## fetchCookie
 
@@ -642,7 +642,7 @@ static getCookie(url: string): string
 
 **废弃版本：** 11
 
-**替代接口：** [fetchCookieSync](#fetchCookieSync)
+**替代接口：** [fetchCookieSync](../../apis-na/arkts-apis/arkts-na-webview-webcookiemanager-c.md#fetchCookieSync)
 
 <!--Device-WebCookieManager-static getCookie(url: string): string--><!--Device-WebCookieManager-static getCookie(url: string): string-End-->
 
@@ -879,7 +879,7 @@ static setCookie(url: string, value: string): void
 
 **废弃版本：** 11
 
-**替代接口：** [configCookieSync](#configCookieSync)
+**替代接口：** [configCookieSync](../../apis-na/arkts-apis/arkts-na-webview-webcookiemanager-c.md#configCookieSync)
 
 <!--Device-WebCookieManager-static setCookie(url: string, value: string): void--><!--Device-WebCookieManager-static setCookie(url: string, value: string): void-End-->
 

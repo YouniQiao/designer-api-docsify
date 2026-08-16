@@ -18,7 +18,7 @@
 constructor(context: Context)
 ```
 
-创建AVCastPickerHelper对象，获取context请参考[getHostContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getHostContext)。
+创建AVCastPickerHelper对象，获取context请参考[getHostContext](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#getHostContext)。
 
 **起始版本：** 23
 

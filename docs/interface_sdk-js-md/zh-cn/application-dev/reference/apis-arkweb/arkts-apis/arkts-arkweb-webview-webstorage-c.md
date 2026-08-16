@@ -241,7 +241,7 @@ static getOrigins(): Promise<Array<WebStorageOrigin>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[WebStorageOrigin](arkts-arkweb-webview-webstorageorigin-i.md)&gt;&gt; | Promise used to return the information about the origins. |
+| Promise&lt;Array&lt;[WebStorageOrigin](../../apis-na/arkts-apis/arkts-na-webview-webstorageorigin-i.md)&gt;&gt; | Promise used to return the information about the origins. |
 
 **错误码：**
 
@@ -274,7 +274,7 @@ static getOrigins(callback: AsyncCallback<Array<WebStorageOrigin>>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[WebStorageOrigin](arkts-arkweb-webview-webstorageorigin-i.md)&gt;&gt; | 是 | 以数组方式返回源的信息。 |
+| callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;Array&lt;[WebStorageOrigin](../../apis-na/arkts-apis/arkts-na-webview-webstorageorigin-i.md)&gt;&gt; | 是 | 以数组方式返回源的信息。 |
 
 **错误码：**
 

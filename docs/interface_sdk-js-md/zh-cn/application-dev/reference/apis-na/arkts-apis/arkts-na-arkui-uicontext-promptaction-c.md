@@ -1,6 +1,6 @@
 # PromptAction
 
-创建并显示即时反馈、对话框、操作菜单以及自定义弹窗。 > **说明：** > > - 本Class首批接口从API version 10开始支持。 > > - 以下API需先使用UIContext中的[getPromptAction()](arkts-na-arkui-uicontext-uicontext-c.md#getPromptAction)方法获取到PromptAction对 > 象，再通过该对象调用对应方法。
+创建并显示即时反馈、对话框、操作菜单以及自定义弹窗。 > **说明：** > > - 本Class首批接口从API version 10开始支持。 > > - 以下API需先使用UIContext中的[getPromptAction()](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#getPromptAction)方法获取到PromptAction对 > 象，再通过该对象调用对应方法。
 
 **起始版本：** 23
 
@@ -223,7 +223,7 @@ getBottomOrder(): LevelOrder | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [LevelOrder](arkts-na-promptaction-levelorder-c.md) | 返回弹窗层级信息。 |
+| [LevelOrder](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-levelorder-c.md) | 返回弹窗层级信息。 |
 
 ## getTopOrder
 
@@ -249,7 +249,7 @@ getTopOrder(): LevelOrder | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| [LevelOrder](arkts-na-promptaction-levelorder-c.md) | 返回弹窗层级信息。 |
+| [LevelOrder](../../apis-arkui/arkts-apis/arkts-arkui-promptaction-levelorder-c.md) | 返回弹窗层级信息。 |
 
 ## openCustomDialog
 
@@ -380,7 +380,7 @@ openCustomDialogWithController<T extends Object>(dialogContent: ComponentContent
 openMenu<T extends Object>(content: ComponentContent<T>, target: TargetInfo, options?: MenuOptions): Promise<void>
 ```
 
-创建并弹出以content作为内容的Menu弹窗。使用Promise异步回调。 > **说明：** > > - 使用该接口时，若未传入有效的target，则无法弹出menu弹窗。 > > - 由于[updateMenu](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction copy.md#updateMenu)和 > [closeMenu](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction copy.md#closeMenu)依赖content去更新或者关闭指定 > 的menu弹窗，开发者需自行维护传入的content。 > > - 如果在wrapBuilder中包含其他组件（例如：Popup、[Chip](arkts-na-arkui-advanced-chip-chip-f.md#Chip)组件），则 > [ComponentContent](../../apis-arkui/arkts-apis/arkts-arkui-componentcontent-c.md#ComponentContent)应采用带有四个参数的构造函数constructor，其中options参数应传递{ > nestingBuilderSupported: true }。 > > - 子窗弹窗里不能再弹出子窗弹窗，例如[openMenu](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction copy.md#openMenu)设 > 置了showInSubWindow为true时，则不能再弹出另一个设置了showInSubWindow为true的弹窗。
+创建并弹出以content作为内容的Menu弹窗。使用Promise异步回调。 > **说明：** > > - 使用该接口时，若未传入有效的target，则无法弹出menu弹窗。 > > - 由于[updateMenu](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction copy.md#updateMenu)和 > [closeMenu](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction copy.md#closeMenu)依赖content去更新或者关闭指定 > 的menu弹窗，开发者需自行维护传入的content。 > > - 如果在wrapBuilder中包含其他组件（例如：Popup、[Chip](arkts-na-arkui-advanced-chip-chip-f.md#Chip)组件），则 > [ComponentContent](arkts-na-componentcontent-c.md#ComponentContent)应采用带有四个参数的构造函数constructor，其中options参数应传递{ > nestingBuilderSupported: true }。 > > - 子窗弹窗里不能再弹出子窗弹窗，例如[openMenu](../../../reference/apis-arkui/arkts-apis-uicontext-promptaction copy.md#openMenu)设 > 置了showInSubWindow为true时，则不能再弹出另一个设置了showInSubWindow为true的弹窗。
 
 **起始版本：** 23
 
@@ -399,7 +399,7 @@ openMenu<T extends Object>(content: ComponentContent<T>, target: TargetInfo, opt
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | content | ComponentContent&lt;T&gt; | 是 | menu弹窗中显示的组件内容。 |
-| target | [TargetInfo](arkts-na-arkui-uicontext-targetinfo-i.md) | 是 | 需要绑定组件的信息。 |
+| target | [TargetInfo](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-targetinfo-i.md) | 是 | 需要绑定组件的信息。 |
 | options | [MenuOptions](arkts-na-common-menuoptions-i.md) | 否 | menu弹窗样式。<br/>**说明：**<br/>title属性不生效。<br/>preview参数仅支持设置MenuPreviewMode类型。 |
 
 **返回值：**
@@ -443,7 +443,7 @@ openPopup<T extends Object>(content: ComponentContent<T>, target: TargetInfo, op
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | content | ComponentContent&lt;T&gt; | 是 | popup弹窗中显示的组件内容。 |
-| target | [TargetInfo](arkts-na-arkui-uicontext-targetinfo-i.md) | 是 | 需要绑定组件的信息。 |
+| target | [TargetInfo](../../apis-arkui/arkts-apis/arkts-arkui-arkui-uicontext-targetinfo-i.md) | 是 | 需要绑定组件的信息。 |
 | options | [PopupCommonOptions](arkts-na-common-popupcommonoptions-i.md) | 否 | popup弹窗样式。 |
 
 **返回值：**

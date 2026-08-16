@@ -92,7 +92,7 @@ Sets the Button Callback.
 
 Sets the background color of a button.
 
-**Type:** [ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md)
+**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 18
 
@@ -223,7 +223,7 @@ Set the availability of the button.
 
 Sets the Button Text Color.
 
-**Type:** [ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md)
+**Type:** [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md)
 
 **Since:** 18
 

@@ -14,7 +14,7 @@ export function is24HourClock(): boolean
 
 **废弃版本：** 9
 
-**替代接口：** [is24HourClock](../../apis-na/arkts-apis/arkts-na-i18n-system-c.md#is24HourClock)
+**替代接口：** [is24HourClock](arkts-localization-i18n-system-c.md#is24HourClock)
 
 <!--Device-i18n-export function is24HourClock(): boolean--><!--Device-i18n-export function is24HourClock(): boolean-End-->
 

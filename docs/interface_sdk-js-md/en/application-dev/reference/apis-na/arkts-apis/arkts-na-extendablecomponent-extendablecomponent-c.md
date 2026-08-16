@@ -116,7 +116,7 @@ The onWillApplyTheme function is a custom hook to get active theme object from t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| theme | [Theme](../../apis-arkui/arkts-apis/arkts-arkui-arkui-theme-theme-i.md) | Yes | Custom theme init params. |
+| theme | [Theme](arkts-na-arkui-theme-theme-i.md) | Yes | Custom theme init params. |
 
 ## queryNavDestinationInfo
 

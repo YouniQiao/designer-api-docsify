@@ -125,7 +125,7 @@ marginType: MarginTypeV2
 
 Margin Type of the ExceptionPromptV2. Margin from the content area to the edge of the container
 
-**Type:** [MarginTypeV2](arkts-arkui-arkui-advanced-exceptionpromptv2-margintypev2-e.md)
+**Type:** [MarginTypeV2](../../apis-na/arkts-apis/arkts-na-arkui-advanced-exceptionpromptv2-margintypev2-e.md)
 
 **Since:** 26.0.0
 

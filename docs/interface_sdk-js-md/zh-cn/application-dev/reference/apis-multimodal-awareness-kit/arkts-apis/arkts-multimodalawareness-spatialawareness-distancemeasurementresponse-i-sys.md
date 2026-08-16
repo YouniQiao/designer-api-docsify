@@ -20,7 +20,7 @@
 confidence: float
 ```
 
-表示置信度。
+表示置信度，取值范围：[0,1]。
 
 **类型：** float
 
@@ -44,7 +44,7 @@ confidence: float
 deviceId: string
 ```
 
-表示设备Id号。
+表示设备Id号，字符串长度：[1,128]。
 
 **类型：** string
 
@@ -68,7 +68,7 @@ deviceId: string
 distance: float
 ```
 
-表示距离。
+表示距离，结果≥0。
 
 **类型：** float
 

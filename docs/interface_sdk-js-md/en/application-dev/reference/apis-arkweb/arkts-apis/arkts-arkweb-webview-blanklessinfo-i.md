@@ -24,9 +24,9 @@ import { webview } from 'webview';
 errCode: WebBlanklessErrorCode
 ```
 
-Error code of blankless loading. For details, see [WebBlanklessErrorCode](arkts-arkweb-webview-webblanklesserrorcode-e.md#WebBlanklessErrorCode).
+Error code of blankless loading. For details, see [WebBlanklessErrorCode](../../apis-na/arkts-apis/arkts-na-webview-webblanklesserrorcode-e.md#WebBlanklessErrorCode).
 
-**Type:** [WebBlanklessErrorCode](arkts-arkweb-webview-webblanklesserrorcode-e.md)
+**Type:** [WebBlanklessErrorCode](../../apis-na/arkts-apis/arkts-na-webview-webblanklesserrorcode-e.md)
 
 **Since:** 20
 

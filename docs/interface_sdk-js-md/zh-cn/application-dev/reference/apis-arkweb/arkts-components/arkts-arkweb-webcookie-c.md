@@ -8,7 +8,7 @@ Defines the Web cookie.
 
 **废弃版本：** 23
 
-**替代接口：** [WebCookieManager](../arkts-apis/arkts-arkweb-webview-webcookiemanager-c.md#WebCookieManager)
+**替代接口：** [WebCookieManager](../../apis-na/arkts-apis/arkts-na-webview-webcookiemanager-c.md#WebCookieManager)
 
 <!--Device-unnamed-declare class WebCookie--><!--Device-unnamed-declare class WebCookie-End-->
 
@@ -28,7 +28,7 @@ Constructor.
 
 **废弃版本：** 23
 
-**替代接口：** [WebCookieManager](../arkts-apis/arkts-arkweb-webview-webcookiemanager-c.md#WebCookieManager)
+**替代接口：** [WebCookieManager](../../apis-na/arkts-apis/arkts-na-webview-webcookiemanager-c.md#WebCookieManager)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务API中使用。
 
@@ -50,7 +50,7 @@ saveCookie()
 
 **废弃版本：** 9
 
-**替代接口：** [saveCookieAsync](../arkts-apis/arkts-arkweb-webview-webcookiemanager-c.md#saveCookieAsync)
+**替代接口：** [saveCookieAsync](../../apis-na/arkts-apis/arkts-na-webview-webcookiemanager-c.md#saveCookieAsync)
 
 <!--Device-WebCookie-saveCookie()--><!--Device-WebCookie-saveCookie()-End-->
 

@@ -6,7 +6,7 @@
 function get(id: string, callback: AsyncCallback<image.PixelMap>, options?: SnapshotOptions): void
 ```
 
-获取已加载的组件的截图，传入组件的组件标识，找到对应组件进行截图。通过回调返回结果。 > **说明：** > > - 从API version 12开始，可以通过使用[UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#UIContext)中的 > [getComponentSnapshot](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getComponentSnapshot)方法 > 获取当前UI上下文关联的[ComponentSnapshot](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-componentsnapshot-c.md#ComponentSnapshot)对象。 > > - 截图会获取最近一帧的绘制内容。如果在组件触发更新的同时调用截图，更新的渲染内容不会被截取到，截图会返回上一帧的绘制内容。
+获取已加载的组件的截图，传入组件的组件标识，找到对应组件进行截图。通过回调返回结果。 > **说明：** > > - 从API version 12开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext)中的 > [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getComponentSnapshot)方法 > 获取当前UI上下文关联的[ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md#ComponentSnapshot)对象。 > > - 截图会获取最近一帧的绘制内容。如果在组件触发更新的同时调用截图，更新的渲染内容不会被截取到，截图会返回上一帧的绘制内容。
 
 **起始版本：** 10
 
@@ -89,7 +89,7 @@ struct SnapshotExample {
 function get(id: string, options?: SnapshotOptions): Promise<image.PixelMap>
 ```
 
-获取已加载的组件的截图，传入组件的组件标识，找到对应组件进行截图。通过Promise返回结果。 > **说明：** > > - 从API version 12开始，可以通过使用[UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#UIContext)中的 > [getComponentSnapshot](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#getComponentSnapshot)方法 > 获取当前UI上下文关联的[ComponentSnapshot](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-componentsnapshot-c.md#ComponentSnapshot)对象。 > > - 截图会获取最近一帧的绘制内容。如果在组件触发更新的同时调用截图，更新的渲染内容不会被截取到，截图会返回上一帧的绘制内容。
+获取已加载的组件的截图，传入组件的组件标识，找到对应组件进行截图。通过Promise返回结果。 > **说明：** > > - 从API version 12开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext)中的 > [getComponentSnapshot](arkts-arkui-arkui-uicontext-uicontext-c.md#getComponentSnapshot)方法 > 获取当前UI上下文关联的[ComponentSnapshot](arkts-arkui-arkui-uicontext-componentsnapshot-c.md#ComponentSnapshot)对象。 > > - 截图会获取最近一帧的绘制内容。如果在组件触发更新的同时调用截图，更新的渲染内容不会被截取到，截图会返回上一帧的绘制内容。
 
 **起始版本：** 10
 

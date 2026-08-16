@@ -54,7 +54,7 @@ Obtains the **ReaderIterator** result.
 
 | Type | Description |
 | --- | --- |
-| [ReaderIteratorResult](../../apis-na/arkts-apis/arkts-na-file-fs-readeriteratorresult-i.md) | ReaderIteratorResult** object obtained. |
+| [ReaderIteratorResult](arkts-corefile-file-fs-readeriteratorresult-i.md) | ReaderIteratorResult** object obtained. |
 
 **Error codes:**
 

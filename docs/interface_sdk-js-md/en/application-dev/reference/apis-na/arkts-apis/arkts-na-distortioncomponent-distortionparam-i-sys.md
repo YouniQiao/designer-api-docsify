@@ -22,7 +22,7 @@ barrelDistortion: Vector4
 
 Distortion parameters for spatial distortion effects.
 
-**Type:** [Vector4](arkts-na-graphics-vector4-i.md)
+**Type:** [Vector4](../../apis-arkui/arkts-apis/arkts-arkui-graphics-vector4-i.md)
 
 **Default:** [0, 0, 0, 0]
 
@@ -48,7 +48,7 @@ bottomLeft: Vector2
 
 Coordinate of bottom-left corner.
 
-**Type:** [Vector2](arkts-na-graphics-vector2-i.md)
+**Type:** [Vector2](../../apis-arkui/arkts-apis/arkts-arkui-graphics-vector2-i.md)
 
 **Default:** [0, 0]
 
@@ -74,7 +74,7 @@ bottomRight: Vector2
 
 Coordinate of bottom-right corner.
 
-**Type:** [Vector2](arkts-na-graphics-vector2-i.md)
+**Type:** [Vector2](../../apis-arkui/arkts-apis/arkts-arkui-graphics-vector2-i.md)
 
 **Default:** [0, 0]
 
@@ -100,7 +100,7 @@ topLeft: Vector2
 
 Coordinate of top-left corner.
 
-**Type:** [Vector2](arkts-na-graphics-vector2-i.md)
+**Type:** [Vector2](../../apis-arkui/arkts-apis/arkts-arkui-graphics-vector2-i.md)
 
 **Default:** [0, 0]
 
@@ -126,7 +126,7 @@ topRight: Vector2
 
 Coordinate of top-right corner.
 
-**Type:** [Vector2](arkts-na-graphics-vector2-i.md)
+**Type:** [Vector2](../../apis-arkui/arkts-apis/arkts-arkui-graphics-vector2-i.md)
 
 **Default:** [0, 0]
 

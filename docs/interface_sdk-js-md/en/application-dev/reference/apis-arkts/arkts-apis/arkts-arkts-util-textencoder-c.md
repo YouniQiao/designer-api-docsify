@@ -106,7 +106,7 @@ Creates a **TextEncoder** object.
 
 | Type | Description |
 | --- | --- |
-| [TextEncoder](arkts-arkts-util-textencoder-c.md) | TextEncoder** object. |
+| [TextEncoder](../../apis-na/arkts-apis/arkts-na-util-textencoder-c.md) | TextEncoder** object. |
 
 ## Examples
 
@@ -128,7 +128,7 @@ Encodes the input content in to a Uint8Array object.
 
 **Deprecated since:** 9
 
-**Substitutes:** [encodeInto](#encodeInto)
+**Substitutes:** [encodeInto](../../apis-na/arkts-apis/arkts-na-util-textencoder-c.md#encodeInto)
 
 <!--Device-TextEncoder-encode(input?: string): Uint8Array--><!--Device-TextEncoder-encode(input?: string): Uint8Array-End-->
 
@@ -210,7 +210,7 @@ Writes the generated UTF-8 encoded text to an array.
 
 **Deprecated since:** 9
 
-**Substitutes:** [encodeIntoUint8Array](#encodeIntoUint8Array)
+**Substitutes:** [encodeIntoUint8Array](../../apis-na/arkts-apis/arkts-na-util-textencoder-c.md#encodeIntoUint8Array)
 
 <!--Device-TextEncoder-encodeInto(input: string, dest: Uint8Array): { read: number; written: number }--><!--Device-TextEncoder-encodeInto(input: string, dest: Uint8Array): { read: number; written: number }-End-->
 
@@ -272,7 +272,7 @@ Encodes the input content and stores the result into a Uint8Array object.
 | Type | Description |
 | --- | --- |
 | object | Return the object, where read represents the number of characters that have been encoded, and written represents the number of bytes occupied by the encoded characters.<br>**Applicable version:** 9 - 10 |
-| [EncodeIntoUint8ArrayInfo](arkts-arkts-util-encodeintouint8arrayinfo-i.md) | Object obtained. **read** indicates the number of encoded characters, and **written** indicates the number of bytes in the encoded characters.<br>**Applicable version:** 11 and later |
+| [EncodeIntoUint8ArrayInfo](../../apis-na/arkts-apis/arkts-na-util-encodeintouint8arrayinfo-i.md) | Object obtained. **read** indicates the number of encoded characters, and **written** indicates the number of bytes in the encoded characters.<br>**Applicable version:** 11 and later |
 
 ## Examples
 

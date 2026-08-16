@@ -6,7 +6,7 @@
 function pushNamedRoute(options: NamedRouterOptions, callback: AsyncCallback<void>): void
 ```
 
-跳转到指定的命名路由页面。 > **说明：** > > - 从API version 10开始支持，从API version 18开始废弃，建议使用 > [pushNamedRoute](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-router-c.md#pushNamedRoute) > 替代。pushNamedRoute需先通过[UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#UIContext)中的 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取 > [Router](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#UIContext)实例，然后通过该实例进行调用。 > > - 从API version 10开始，可以通过使用[UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#UIContext)中的 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的 > [Router](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#UIContext)对象。
+跳转到指定的命名路由页面。 > **说明：** > > - 从API version 10开始支持，从API version 18开始废弃，建议使用 > [pushNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#pushNamedRoute) > 替代。pushNamedRoute需先通过[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext)中的 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取 > [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext)实例，然后通过该实例进行调用。 > > - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext)中的 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的 > [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext)对象。
 
 **起始版本：** 10
 
@@ -14,7 +14,7 @@ function pushNamedRoute(options: NamedRouterOptions, callback: AsyncCallback<voi
 
 **废弃版本：** 18
 
-**替代接口：** [pushNamedRoute](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-router-c.md#pushNamedRoute)(options: router.NamedRouterOptions, callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [pushNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#pushNamedRoute)(options: router.NamedRouterOptions, callback: AsyncCallback&lt;void&gt;)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -82,7 +82,7 @@ router.pushNamedRoute({
 function pushNamedRoute(options: NamedRouterOptions): Promise<void>
 ```
 
-跳转到指定的命名路由页面。 > **说明：** > > - 从API version 10开始支持，从API version 18开始废弃，建议使用 > [pushNamedRoute](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-router-c.md#pushNamedRoute)替代。 > pushNamedRoute需先通过[UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#UIContext)中的 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取 > [Router](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#UIContext)实例，然后通过该实例进行调用。 > > - 从API version 10开始，可以通过使用[UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#UIContext)中的 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的 > [Router](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#UIContext)对象。
+跳转到指定的命名路由页面。 > **说明：** > > - 从API version 10开始支持，从API version 18开始废弃，建议使用 > [pushNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#pushNamedRoute)替代。 > pushNamedRoute需先通过[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext)中的 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取 > [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext)实例，然后通过该实例进行调用。 > > - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext)中的 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的 > [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext)对象。
 
 **起始版本：** 10
 
@@ -90,7 +90,7 @@ function pushNamedRoute(options: NamedRouterOptions): Promise<void>
 
 **废弃版本：** 18
 
-**替代接口：** [pushNamedRoute](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-router-c.md#pushNamedRoute)(options: router.NamedRouterOptions)
+**替代接口：** [pushNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#pushNamedRoute)(options: router.NamedRouterOptions)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -165,7 +165,7 @@ router.pushNamedRoute({
 function pushNamedRoute(options: NamedRouterOptions, mode: RouterMode, callback: AsyncCallback<void>): void
 ```
 
-跳转到指定的命名路由页面。 > **说明：** > > - 从API version 10开始支持，从API version 18开始废弃，建议使用 > [pushNamedRoute](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-router-c.md#pushNamedRoute) > 替代。pushNamedRoute需先通过[UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#UIContext)中的 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取 > [Router](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#UIContext)实例，然后通过该实例进行调用。 > > - 从API version 10开始，可以通过使用[UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#UIContext)中的 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的 > [Router](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#UIContext)对象。
+跳转到指定的命名路由页面。 > **说明：** > > - 从API version 10开始支持，从API version 18开始废弃，建议使用 > [pushNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#pushNamedRoute) > 替代。pushNamedRoute需先通过[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext)中的 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取 > [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext)实例，然后通过该实例进行调用。 > > - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext)中的 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的 > [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext)对象。
 
 **起始版本：** 10
 
@@ -173,7 +173,7 @@ function pushNamedRoute(options: NamedRouterOptions, mode: RouterMode, callback:
 
 **废弃版本：** 18
 
-**替代接口：** [pushNamedRoute](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-router-c.md#pushNamedRoute)(options: router.NamedRouterOptions, mode: router.RouterMode, callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [pushNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#pushNamedRoute)(options: router.NamedRouterOptions, mode: router.RouterMode, callback: AsyncCallback&lt;void&gt;)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -188,7 +188,7 @@ function pushNamedRoute(options: NamedRouterOptions, mode: RouterMode, callback:
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [NamedRouterOptions](arkts-arkui-router-namedrouteroptions-i.md) | 是 | 跳转页面描述信息。 |
-| mode | [RouterMode](arkts-arkui-router-routermode-e.md) | 是 | 跳转页面使用的模式。 |
+| mode | [RouterMode](../../apis-na/arkts-apis/arkts-na-router-routermode-e.md) | 是 | 跳转页面使用的模式。 |
 | callback | [AsyncCallback](../../apis-basic-service-kit/arkts-apis/arkts-basicservices-asynccallback-t.md)&lt;void&gt; | 是 | 异常响应回调。 |
 
 **错误码：**
@@ -242,7 +242,7 @@ router.pushNamedRoute({
 function pushNamedRoute(options: NamedRouterOptions, mode: RouterMode): Promise<void>
 ```
 
-跳转到指定的命名路由页面。 > **说明：** > > - 从API version 10开始支持，从API version 18开始废弃，建议使用 > [pushNamedRoute](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-router-c.md#pushNamedRoute) > 替代。pushNamedRoute需先通过[UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#UIContext)中的 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取 > [Router](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#UIContext)实例，然后通过该实例进行调用。 > > - 从API version 10开始，可以通过使用[UIContext](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#UIContext)中的 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的 > [Router](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-uicontext-c.md#UIContext)对象。
+跳转到指定的命名路由页面。 > **说明：** > > - 从API version 10开始支持，从API version 18开始废弃，建议使用 > [pushNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#pushNamedRoute) > 替代。pushNamedRoute需先通过[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext)中的 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)获取 > [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext)实例，然后通过该实例进行调用。 > > - 从API version 10开始，可以通过使用[UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext)中的 > [getRouter](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#getrouter)方法获取当前UI上下文关联的 > [Router](arkts-arkui-arkui-uicontext-uicontext-c.md#UIContext)对象。
 
 **起始版本：** 10
 
@@ -250,7 +250,7 @@ function pushNamedRoute(options: NamedRouterOptions, mode: RouterMode): Promise<
 
 **废弃版本：** 18
 
-**替代接口：** [pushNamedRoute](../../apis-na/arkts-apis/arkts-na-arkui-uicontext-router-c.md#pushNamedRoute)(options: router.NamedRouterOptions, mode: router.RouterMode)
+**替代接口：** [pushNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#pushNamedRoute)(options: router.NamedRouterOptions, mode: router.RouterMode)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -265,7 +265,7 @@ function pushNamedRoute(options: NamedRouterOptions, mode: RouterMode): Promise<
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | options | [NamedRouterOptions](arkts-arkui-router-namedrouteroptions-i.md) | 是 | 跳转页面描述信息。 |
-| mode | [RouterMode](arkts-arkui-router-routermode-e.md) | 是 | 跳转页面使用的模式。 |
+| mode | [RouterMode](../../apis-na/arkts-apis/arkts-na-router-routermode-e.md) | 是 | 跳转页面使用的模式。 |
 
 **返回值：**
 

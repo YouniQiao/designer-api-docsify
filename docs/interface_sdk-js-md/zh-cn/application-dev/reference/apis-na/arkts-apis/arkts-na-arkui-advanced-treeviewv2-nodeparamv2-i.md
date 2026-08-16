@@ -20,7 +20,7 @@ container?: OnContainerCallback
 
 绑定在节点上的右键子组件，子组件由@Builder修饰。 默认值：() => void
 
-**类型：** [OnContainerCallback](../../apis-arkui/arkts-apis/arkts-arkui-oncontainercallback-t.md)
+**类型：** [OnContainerCallback](arkts-na-oncontainercallback-t.md)
 
 **起始版本：** 26.0.0
 

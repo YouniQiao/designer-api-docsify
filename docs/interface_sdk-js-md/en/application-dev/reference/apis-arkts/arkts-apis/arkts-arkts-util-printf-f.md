@@ -20,7 +20,7 @@ Formats a string by replacing the placeholders in it.
 
 **Deprecated since:** 9
 
-**Substitutes:** [format](arkts-arkts-util-format-f.md#format)
+**Substitutes:** [format](../../apis-na/arkts-apis/arkts-na-util-format-f.md#format)
 
 <!--Device-util-function printf(format: string, ...args: Object[]): string--><!--Device-util-function printf(format: string, ...args: Object[]): string-End-->
 

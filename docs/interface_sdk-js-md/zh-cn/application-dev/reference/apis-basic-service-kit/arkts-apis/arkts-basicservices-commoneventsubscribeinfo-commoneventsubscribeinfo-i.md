@@ -84,7 +84,7 @@ publisherBundleName?: string
 publisherDeviceId?: string
 ```
 
-表示设备ID，用于限制订阅者只接收来自指定设备发布的公共事件。 通过[@ohos.deviceInfo](../../apis-na/arkts-apis/arkts-deviceinfo.md#@ohos.deviceInfo)获取udid，作为 发布者的设备ID。预留能力，暂不支持。
+表示设备ID，用于限制订阅者只接收来自指定设备发布的公共事件。 通过[@ohos.deviceInfo](arkts-deviceinfo.md#@ohos.deviceInfo)获取udid，作为 发布者的设备ID。预留能力，暂不支持。
 
 **类型：** string
 

@@ -183,7 +183,7 @@ The spacing between rows.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| space | [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md) \| undefined | Yes | the spacing between rows. <br>Default value: 0. <br>Range: [0, +∞). |
+| space | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) \| undefined | Yes | the spacing between rows. <br>Default value: 0. <br>Range: [0, +∞). |
 
 **Return value:**
 

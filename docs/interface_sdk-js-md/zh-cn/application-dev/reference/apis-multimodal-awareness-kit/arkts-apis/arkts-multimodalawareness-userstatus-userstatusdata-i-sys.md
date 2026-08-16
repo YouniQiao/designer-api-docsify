@@ -1,6 +1,6 @@
 # UserStatusData（系统接口）
 
-用户状态数据。
+表示用户状态数据。
 
 **起始版本：** 26.0.0
 
@@ -20,7 +20,7 @@
 errCode: int
 ```
 
-业务错误码。值为0表示成功，其他值表示失败。
+表示业务错误码。0表示成功，非0表示失败。
 
 **类型：** int
 
@@ -44,7 +44,7 @@ errCode: int
 feature: UserStatusFeature
 ```
 
-用户状态检测特性类型。
+表示用户状态检测功能类型。
 
 **类型：** [UserStatusFeature](arkts-multimodalawareness-userstatus-userstatusfeature-e-sys.md)
 
@@ -68,7 +68,7 @@ feature: UserStatusFeature
 result: int
 ```
 
-用户状态检测结果。值为0表示成功，其他值表示失败。
+表示用户状态检测结果。0表示成功，非0表示失败。
 
 **类型：** int
 
@@ -92,7 +92,7 @@ result: int
 status: string
 ```
 
-单一感知特性下的多阶段检测状态。
+表示特定功能下的多阶段检测状态。该字符串取值已表明相应的检测状态，字符串最大长度是64。
 
 **类型：** string
 

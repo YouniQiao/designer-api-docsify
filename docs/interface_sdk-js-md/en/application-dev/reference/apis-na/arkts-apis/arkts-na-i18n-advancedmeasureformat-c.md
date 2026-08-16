@@ -39,7 +39,7 @@ A constructor used to create an AdvancedMeasureFormat object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | numberFormat | Intl.NumberFormat | Yes | Indicates the number format object that used to format number. |
-| options | [AdvancedMeasureFormatOptions](arkts-na-i18n-advancedmeasureformatoptions-i.md) | No |  |
+| options | [AdvancedMeasureFormatOptions](../../apis-localization-kit/arkts-apis/arkts-localization-i18n-advancedmeasureformatoptions-i.md) | No |  |
 
 ## format
 

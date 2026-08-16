@@ -356,7 +356,7 @@ sampleId?: string
 timestamp: long
 ```
 
-表示进入特定页面的时间戳。
+表示进入特定页面的时间戳，单位：ms。
 
 **类型：** long
 

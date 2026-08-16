@@ -7,7 +7,7 @@ function interact(capability: OnscreenAwarenessCap,
                    options?: OnscreenAwarenessOptions): Promise<OnscreenAwarenessInfo[]>
 ```
 
-主动触发屏幕行为交互，实现对界面行为的识别与行为反馈。例如：当capList能力列表为JumpContext时，点击后通过反馈信息精准跳转至指定段落并实现文字高亮。当capList能力列表为InjectEvent时，点击后执行相应 的点击事件。
+主动触发屏幕行为交互，实现对界面行为的识别与行为反馈。例如：当capList能力列表为JumpContext时，点击后通过反馈信息精准跳转至指定段落并实现文字高亮。 <br>当capList能力列表为InjectEvent时，点击后执行相应的点击事件。
 
 **起始版本：** 23
 
@@ -32,7 +32,7 @@ function interact(capability: OnscreenAwarenessCap,
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | capability | [OnscreenAwarenessCap](arkts-multimodalawareness-onscreen-onscreenawarenesscap-i-sys.md) | 是 | 屏上感知能力列表，具体见下面支持的能力列表。 |
-| options | [OnscreenAwarenessOptions](arkts-multimodalawareness-onscreen-onscreenawarenessoptions-i-sys.md) | 否 | 屏上感知参数列表。 |
+| options | [OnscreenAwarenessOptions](arkts-multimodalawareness-onscreen-onscreenawarenessoptions-i-sys.md) | 否 | 屏上感知参数列表，不传递则使用默认参数配置。 |
 
 **返回值：**
 

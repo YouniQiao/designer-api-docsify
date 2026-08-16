@@ -2,9 +2,9 @@
 
 CompletedResult
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Deprecated since:** -1
 
@@ -22,9 +22,9 @@ Contextual information about the PhotoPicker's exit state.
 
 **Type:** photoAccessHelper.ContextRecoveryInfo
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Deprecated since:** -1
 
@@ -40,13 +40,13 @@ Contextual information about the PhotoPicker's exit state.
 movingPhotoBadgeStates: Array<photoAccessHelper.MovingPhotoBadgeStateType>
 ```
 
-M?oving photo badge states for the selected media files in the gallery. When isMovingPhotoBadgeShown is true, movingPhotoBadgeStates contains the moving photo states; otherwise, it is empty.
+M​oving photo badge states for the selected media files in the gallery. When isMovingPhotoBadgeShown is true, movingPhotoBadgeStates contains the moving photo states; otherwise, it is empty.
 
 **Type:** Array&lt;photoAccessHelper.MovingPhotoBadgeStateType&gt;
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Deprecated since:** -1
 
@@ -66,9 +66,9 @@ URIs of the images or videos selected. The URI array can be used only by calling
 
 **Type:** Array&lt;string&gt;
 
-**Since:** 26.0.0
+**Since:** 26.1.0
 
-**ArkTS mode:** ArkTS-Sta only, since version 26.0.0.
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
 
 **Deprecated since:** -1
 

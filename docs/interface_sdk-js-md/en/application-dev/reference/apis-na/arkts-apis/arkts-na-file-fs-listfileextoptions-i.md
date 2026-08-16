@@ -20,7 +20,7 @@ fileFilter?: FileFilter
 
 File name filtering rule. The default value is empty, indicating that no filtering is performed.
 
-**Type:** [FileFilter](arkts-na-file-fs-filefilter-i.md)
+**Type:** [FileFilter](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-fs-filefilter-i.md)
 
 **Since:** 26.0.0
 

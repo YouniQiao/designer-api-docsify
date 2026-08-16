@@ -35,7 +35,7 @@ paramMappings?: LinkIntentParamMapping[]
 
 Mapping between intent parameters and URI information.
 
-**Type:** [LinkIntentParamMapping](../../apis-na/arkts-apis/arkts-na-app-ability-insightintentdecorator-linkintentparammapping-i.md)[]
+**Type:** [LinkIntentParamMapping](arkts-ability-app-ability-insightintentdecorator-linkintentparammapping-i.md)[]
 
 **Since:** 20
 

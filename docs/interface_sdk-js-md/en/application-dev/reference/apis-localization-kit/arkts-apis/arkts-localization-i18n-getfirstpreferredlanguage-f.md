@@ -20,7 +20,7 @@ Obtains the first language in the preferred language list.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getFirstPreferredLanguage](../../apis-na/arkts-apis/arkts-na-i18n-system-c.md#getFirstPreferredLanguage)
+**Substitutes:** [getFirstPreferredLanguage](arkts-localization-i18n-system-c.md#getFirstPreferredLanguage)
 
 <!--Device-i18n-export function getFirstPreferredLanguage(): string--><!--Device-i18n-export function getFirstPreferredLanguage(): string-End-->
 

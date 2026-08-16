@@ -58,13 +58,13 @@ Bind to the selection menu. &lt;p&gt;&lt;strong&gt;NOTE&lt;/strong&gt;: <br>The 
 | spanType | Optional&lt;TextSpanType&gt; | Yes | Indicates the type of selection menu. Default value is TextSpanType.TEXT. |
 | content | Optional&lt;CustomBuilder&gt; | Yes | Indicates the content of selection menu. |
 | responseType | Optional&lt;TextResponseType&gt; | Yes | Indicates response type of selection menu. Default value is TextResponseType.LONG_PRESS. |
-| options | Optional&lt;[SelectionContainerMenuOptions](../../apis-na/arkts-apis/arkts-na-arkui-components-selectioncontainer-selectioncontainermenuoptions-i.md)&gt; | No | Indicates the options of selection menu. |
+| options | Optional&lt;[SelectionContainerMenuOptions](arkts-arkui-arkui-components-selectioncontainer-selectioncontainermenuoptions-i.md)&gt; | No | Indicates the options of selection menu. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SelectionContainerAttribute](../../apis-na/arkts-apis/arkts-na-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) | returns the instance of the SelectionContainerAttribute. |
+| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) | returns the instance of the SelectionContainerAttribute. |
 
 ## caretColor
 
@@ -98,7 +98,7 @@ Set the caret color for selected text.
 
 | Type | Description |
 | --- | --- |
-| [SelectionContainerAttribute](../../apis-na/arkts-apis/arkts-na-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) | returns the instance of the SelectionContainerAttribute. |
+| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) | returns the instance of the SelectionContainerAttribute. |
 
 ## copyOption
 
@@ -132,7 +132,7 @@ Set whether to allow copy and where data can be copied.
 
 | Type | Description |
 | --- | --- |
-| [SelectionContainerAttribute](../../apis-na/arkts-apis/arkts-na-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) | returns the instance of the SelectionContainerAttribute. |
+| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) | returns the instance of the SelectionContainerAttribute. |
 
 ## editMenuOptions
 
@@ -160,13 +160,13 @@ Set the custom text menu. Sets the extended options of the custom context menu o
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| editMenu | Optional&lt;[SelectionContainerEditMenuOptions](../../apis-na/arkts-apis/arkts-na-arkui-components-selectioncontainer-selectioncontainereditmenuoptions-i.md)&gt; | Yes | Customize text menu options. |
+| editMenu | Optional&lt;[SelectionContainerEditMenuOptions](arkts-arkui-arkui-components-selectioncontainer-selectioncontainereditmenuoptions-i.md)&gt; | Yes | Customize text menu options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SelectionContainerAttribute](../../apis-na/arkts-apis/arkts-na-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) | returns the instance of the SelectionContainerAttribute. |
+| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) | returns the instance of the SelectionContainerAttribute. |
 
 ## enableHapticFeedback
 
@@ -200,7 +200,7 @@ Enable or disable haptic feedback.
 
 | Type | Description |
 | --- | --- |
-| [SelectionContainerAttribute](../../apis-na/arkts-apis/arkts-na-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) | returns the instance of the SelectionContainerAttribute. |
+| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) | returns the instance of the SelectionContainerAttribute. |
 
 ## onCopy
 
@@ -234,7 +234,7 @@ Called when selected text is copied. Currently, only text can be copied.
 
 | Type | Description |
 | --- | --- |
-| [SelectionContainerAttribute](../../apis-na/arkts-apis/arkts-na-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) | returns the instance of the SelectionContainerAttribute. |
+| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) | returns the instance of the SelectionContainerAttribute. |
 
 ## onTextSelectionChange
 
@@ -268,7 +268,7 @@ Called when text selection changes in SelectionContainer.
 
 | Type | Description |
 | --- | --- |
-| [SelectionContainerAttribute](../../apis-na/arkts-apis/arkts-na-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) | returns the instance of the SelectionContainerAttribute. |
+| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) | returns the instance of the SelectionContainerAttribute. |
 
 ## onWillCopy
 
@@ -302,7 +302,7 @@ Called before using the Clipboard copy menu. Currently, only text can be copied.
 
 | Type | Description |
 | --- | --- |
-| [SelectionContainerAttribute](../../apis-na/arkts-apis/arkts-na-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) | returns the instance of the SelectionContainerAttribute. |
+| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) | returns the instance of the SelectionContainerAttribute. |
 
 ## selectedBackgroundColor
 
@@ -336,7 +336,7 @@ Set selected text background color.
 
 | Type | Description |
 | --- | --- |
-| [SelectionContainerAttribute](../../apis-na/arkts-apis/arkts-na-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) | returns the instance of the SelectionContainerAttribute. |
+| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) | returns the instance of the SelectionContainerAttribute. |
 
 ## textJoinStyle
 
@@ -364,11 +364,11 @@ Set text join style for aggregated text in SelectionContainer. &lt;p&gt;&lt;stro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| style | Optional&lt;[SelectionContainerTextJoinStyle](../../apis-na/arkts-apis/arkts-na-arkui-components-selectioncontainer-selectioncontainertextjoinstyle-e.md)&gt; | Yes | text join style for aggregated text. |
+| style | Optional&lt;[SelectionContainerTextJoinStyle](arkts-arkui-arkui-components-selectioncontainer-selectioncontainertextjoinstyle-e.md)&gt; | Yes | text join style for aggregated text. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [SelectionContainerAttribute](../../apis-na/arkts-apis/arkts-na-arkui-components-selectioncontainer-selectioncontainerattribute-i.md) | returns the instance of the SelectionContainerAttribute. |
+| [SelectionContainerAttribute](arkts-arkui-arkui-components-selectioncontainer-selectioncontainerattribute-c.md) | returns the instance of the SelectionContainerAttribute. |
 

@@ -65,7 +65,7 @@ for (let value of pro) {
 afterRemoval(isEvict: boolean, key: K, value: V, newValue: V): void
 ```
 
-Performs subsequent operations after a value is removed. The subsequent operations must be implemented by developers. This API is called during deletion operations, such as [get&lt;sup&gt;9+&lt;/sup&gt;](#get), [put&lt;sup&gt;9+&lt;/sup&gt;](#put), [remove&lt;sup&gt;9+&lt;/sup&gt;](#remove), [clear&lt;sup&gt;9+&lt;/sup&gt;](#clear), and [updateCapacity&lt;sup&gt;9+&lt;/sup&gt;](#updateCapacity). > **NOTE：**> > If the callback method is executed after [clear&lt;sup&gt;9+&lt;/sup&gt;](#clear) and > [updateCapacity&lt;sup&gt;9+&lt;/sup&gt;](#updateCapacity) are called and the input **key** and > **value** parameters are of the MapIterator type, perform subsequent operations by referring to example 2.
+Performs subsequent operations after a value is removed. The subsequent operations must be implemented by developers. This API is called during deletion operations, such as [get&lt;sup&gt;9+&lt;/sup&gt;](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#get), [put&lt;sup&gt;9+&lt;/sup&gt;](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#put), [remove&lt;sup&gt;9+&lt;/sup&gt;](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#remove), [clear&lt;sup&gt;9+&lt;/sup&gt;](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#clear), and [updateCapacity&lt;sup&gt;9+&lt;/sup&gt;](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#updateCapacity). > **NOTE：**> > If the callback method is executed after [clear&lt;sup&gt;9+&lt;/sup&gt;](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#clear) and > [updateCapacity&lt;sup&gt;9+&lt;/sup&gt;](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#updateCapacity) are called and the input **key** and > **value** parameters are of the MapIterator type, perform subsequent operations by referring to example 2.
 
 **Since:** 9
 
@@ -284,7 +284,7 @@ for (let value of pair) {
 get(key: K): V | undefined
 ```
 
-Obtains the value of a key. If the key is not in the cache, [createDefault&lt;sup&gt;9+&lt;/sup&gt;](#createDefault) is called to create the key. If the value specified in **createDefault** is not **undefined**, [afterRemoval&lt;sup&gt;9+&lt;/sup&gt;](#afterRemoval) is called to return the value specified in **createDefault**.
+Obtains the value of a key. If the key is not in the cache, [createDefault&lt;sup&gt;9+&lt;/sup&gt;](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#createDefault) is called to create the key. If the value specified in **createDefault** is not **undefined**, [afterRemoval&lt;sup&gt;9+&lt;/sup&gt;](../../apis-na/arkts-apis/arkts-na-util-lrucache-c.md#afterRemoval) is called to return the value specified in **createDefault**.
 
 **Since:** 9
 

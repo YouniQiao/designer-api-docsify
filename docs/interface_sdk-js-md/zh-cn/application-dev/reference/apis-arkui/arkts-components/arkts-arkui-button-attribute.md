@@ -156,7 +156,7 @@ fontFamily(value: string | Resource)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string \| Resource | 是 | 字体列表。默认字体'HarmonyOS Sans'，当前支持'HarmonyOS Sans'字体和 注册自定义字体。 |
+| value | string \| Resource | 是 | 字体列表。默认字体'HarmonyOS Sans'，当前支持'HarmonyOS Sans'字体和 [注册自定义字体](../arkts-apis/arkts-font.md#@ohos.font(Custom-Font-Registration))。 |
 
 ## fontSize
 

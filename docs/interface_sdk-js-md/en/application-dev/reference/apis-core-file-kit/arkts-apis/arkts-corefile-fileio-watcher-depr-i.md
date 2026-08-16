@@ -8,7 +8,7 @@ Listens for file change. You can call the **Watcher.stop()** method synchronousl
 
 **Deprecated since:** 10
 
-**Substitutes:** [Watcher](../../apis-na/arkts-apis/arkts-na-watcher-t.md#Watcher)
+**Substitutes:** [Watcher](arkts-corefile-file-fs-watcher-i.md#Watcher)
 
 <!--Device-unnamed-declare interface Watcher--><!--Device-unnamed-declare interface Watcher-End-->
 

@@ -1,6 +1,6 @@
 # @ohos.prompt
 
-创建并显示文本提示框、对话框和操作菜单。 > **说明：** > > 从API version 9 开始，该接口不再维护，推荐使用新接口[@ohos.promptAction (弹窗)](../../apis-na/arkts-apis/arkts-na-promptaction-n.md#promptAction)。
+创建并显示文本提示框、对话框和操作菜单。 > **说明：** > > 从API version 9 开始，该接口不再维护，推荐使用新接口[@ohos.promptAction (弹窗)](arkts-arkui-promptaction-n.md#promptAction)。
 
 **起始版本：** 8
 
@@ -8,7 +8,7 @@
 
 **废弃版本：** 9
 
-**替代接口：** [promptAction/promptAction](../../apis-na/arkts-apis/arkts-na-promptaction-n.md#promptAction)
+**替代接口：** [promptAction/promptAction](arkts-arkui-promptaction-n.md#promptAction)
 
 <!--Device-unnamed-declare namespace prompt--><!--Device-unnamed-declare namespace prompt-End-->
 

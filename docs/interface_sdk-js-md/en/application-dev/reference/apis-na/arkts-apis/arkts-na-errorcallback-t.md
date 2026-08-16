@@ -1,0 +1,26 @@
+# ErrorCallback
+
+```TypeScript
+export type ErrorCallback = (pickerError: PickerError) => void
+```
+
+The callback of onError event
+
+**Since:** 26.1.0
+
+**ArkTS mode:** ArkTS-Sta only, since version 26.1.0.
+
+**Deprecated since:** -1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-unnamed-export type ErrorCallback = (pickerError: PickerError) => void--><!--Device-unnamed-export type ErrorCallback = (pickerError: PickerError) => void-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| pickerError | [PickerError](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-file-photopickercomponent-pickererror-c.md) | Yes |  |
+

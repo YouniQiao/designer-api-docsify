@@ -130,7 +130,7 @@ Get net error code.
 
 | 类型 | 说明 |
 | --- | --- |
-| [WebNetErrorList](../../apis-arkweb/arkts-apis/arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) | Return response error code. |
+| [WebNetErrorList](arkts-na-web-neterrorlist-webneterrorlist-e.md) | Return response error code. |
 
 ## getStatus
 
@@ -318,7 +318,7 @@ Set net error code.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| code | [WebNetErrorList](../../apis-arkweb/arkts-apis/arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) | 是 | Set net error code. |
+| code | [WebNetErrorList](arkts-na-web-neterrorlist-webneterrorlist-e.md) | 是 | Set net error code. |
 
 **错误码：**
 

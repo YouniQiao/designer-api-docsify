@@ -42,7 +42,7 @@ bundleNames?: Array<string>
 deviceType?: string
 ```
 
-设备类型。不传递该参数时，默认订阅当前设备的通知。根据[设备信息](../../apis-na/arkts-apis/arkts-deviceinfo.md#@ohos.deviceInfo)获取。
+设备类型。不传递该参数时，默认订阅当前设备的通知。根据[设备信息](../../apis-basic-service-kit/arkts-apis/arkts-deviceinfo.md#@ohos.deviceInfo)获取。
 
 **类型：** string
 

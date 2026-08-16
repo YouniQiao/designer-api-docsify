@@ -56,7 +56,7 @@ Sets the backgroundColor of the toolBarV2.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| backgroundColor | [ColorMetrics](../../apis-na/arkts-apis/arkts-na-graphics-colormetrics-c.md) | Yes | toolBarV2's backgroundColor. |
+| backgroundColor | [ColorMetrics](arkts-arkui-graphics-colormetrics-c.md) | Yes | toolBarV2's backgroundColor. |
 
 **Return value:**
 
@@ -90,7 +90,7 @@ Sets the height of the toolBarV2.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| height | [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md) | Yes | toolBarV2's height. |
+| height | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Yes | toolBarV2's height. |
 
 **Return value:**
 
@@ -124,7 +124,7 @@ Sets the left and right padding of the toolbarV2.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| padding | [LengthMetrics](../../apis-na/arkts-apis/arkts-na-graphics-lengthmetrics-c.md) | Yes | left and right padding. |
+| padding | [LengthMetrics](arkts-arkui-graphics-lengthmetrics-c.md) | Yes | left and right padding. |
 
 **Return value:**
 

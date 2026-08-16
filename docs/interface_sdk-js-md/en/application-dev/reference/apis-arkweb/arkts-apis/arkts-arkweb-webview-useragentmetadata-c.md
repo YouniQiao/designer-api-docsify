@@ -94,7 +94,7 @@ Returns the current list of UserAgentBrandVersion which are used to generate the
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[UserAgentBrandVersion](arkts-arkweb-webview-useragentbrandversion-c.md)&gt; | Returns the current list of UserAgentBrandVersion. |
+| Array&lt;[UserAgentBrandVersion](../../apis-na/arkts-apis/arkts-na-webview-useragentbrandversion-c.md)&gt; | Returns the current list of UserAgentBrandVersion. |
 
 ## getFormFactors
 
@@ -120,7 +120,7 @@ Gets the value for the sec-ch-ua-form-factors.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;[UserAgentFormFactor](arkts-arkweb-webview-useragentformfactor-e.md)&gt; | Returns the form factors. |
+| Array&lt;[UserAgentFormFactor](../../apis-na/arkts-apis/arkts-na-webview-useragentformfactor-e.md)&gt; | Returns the form factors. |
 
 ## getFullVersion
 
@@ -354,7 +354,7 @@ Sets User-Agent metadata brands and their versions. &lt;p&gt;&lt;strong&gt;API N
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| brandVersionList | Array&lt;[UserAgentBrandVersion](arkts-arkweb-webview-useragentbrandversion-c.md)&gt; | Yes | The brandVersionList is used to generate User-Agent client hints sec-ch-ua-full-version-list. |
+| brandVersionList | Array&lt;[UserAgentBrandVersion](../../apis-na/arkts-apis/arkts-na-webview-useragentbrandversion-c.md)&gt; | Yes | The brandVersionList is used to generate User-Agent client hints sec-ch-ua-full-version-list. |
 
 ## setFormFactors
 
@@ -380,7 +380,7 @@ Sets User-Agent metadata form factors. &lt;p&gt;&lt;strong&gt;API Note&lt;/stron
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| formFactors | Array&lt;[UserAgentFormFactor](arkts-arkweb-webview-useragentformfactor-e.md)&gt; | Yes | The formFactors is used to generate User-Agent client hints sec-ch-ua-form-factors. |
+| formFactors | Array&lt;[UserAgentFormFactor](../../apis-na/arkts-apis/arkts-na-webview-useragentformfactor-e.md)&gt; | Yes | The formFactors is used to generate User-Agent client hints sec-ch-ua-form-factors. |
 
 ## setFullVersion
 

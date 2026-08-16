@@ -20,7 +20,7 @@ columnsGap?: LengthMetrics
 
 The spacing between columns.
 
-**Type:** [LengthMetrics](arkts-na-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Default:** LengthMetrics.vp(0)
 
@@ -68,7 +68,7 @@ rowsGap?: LengthMetrics
 
 The spacing between rows.
 
-**Type:** [LengthMetrics](arkts-na-graphics-lengthmetrics-c.md)
+**Type:** [LengthMetrics](../../apis-arkui/arkts-apis/arkts-arkui-graphics-lengthmetrics-c.md)
 
 **Default:** LengthMetrics.vp(0)
 

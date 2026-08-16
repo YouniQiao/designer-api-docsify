@@ -88,7 +88,7 @@ suggestionType: SuggestionType
 
 语言或国家地区推荐类型。
 
-**类型：** [SuggestionType](../../apis-na/arkts-apis/arkts-na-i18n-suggestiontype-e-sys.md)
+**类型：** [SuggestionType](arkts-localization-i18n-suggestiontype-e-sys.md)
 
 **起始版本：** 23
 

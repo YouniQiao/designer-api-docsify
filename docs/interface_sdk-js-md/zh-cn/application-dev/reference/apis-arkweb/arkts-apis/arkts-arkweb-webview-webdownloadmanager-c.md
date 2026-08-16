@@ -36,7 +36,7 @@ static resumeDownload(webDownloadItem: WebDownloadItem): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| webDownloadItem | [WebDownloadItem](arkts-arkweb-webview-webdownloaditem-c.md) | 是 | 待恢复的下载任务。 |
+| webDownloadItem | [WebDownloadItem](../../apis-na/arkts-apis/arkts-na-webview-webdownloaditem-c.md) | 是 | 待恢复的下载任务。 |
 
 **错误码：**
 
@@ -68,5 +68,5 @@ static setDownloadDelegate(delegate: WebDownloadDelegate): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| delegate | [WebDownloadDelegate](arkts-arkweb-webview-webdownloaddelegate-c.md) | 是 | 用来接收下载进度的委托。 |
+| delegate | [WebDownloadDelegate](../../apis-na/arkts-apis/arkts-na-webview-webdownloaddelegate-c.md) | 是 | 用来接收下载进度的委托。 |
 

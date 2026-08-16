@@ -36,7 +36,7 @@ add(field: string, amount: int): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| field | string | 是 | 指定的日历属性，目前支持的属性值有 year, month, week_of_year, week_of_month, date, day_of_year,  day_of_week, day_of_week_in_month, hour, hour_of_day, minute, second, millisecond。 <br>各取值代表的含义请参考[get](../../apis-na/arkts-apis/arkts-na-i18n-calendar-c.md#get)。 |
+| field | string | 是 | 指定的日历属性，目前支持的属性值有 year, month, week_of_year, week_of_month, date, day_of_year,  day_of_week, day_of_week_in_month, hour, hour_of_day, minute, second, millisecond。 <br>各取值代表的含义请参考[get](#get)。 |
 | amount | int | 是 | 进行加减操作的具体数值。 |
 
 **错误码：**

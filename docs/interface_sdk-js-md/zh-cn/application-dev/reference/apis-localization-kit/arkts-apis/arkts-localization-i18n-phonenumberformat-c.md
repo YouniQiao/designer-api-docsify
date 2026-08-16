@@ -37,7 +37,7 @@ constructor(country: string, options?: PhoneNumberFormatOptions)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | country | string | 是 | 表示电话号码所属的国家地区代码，要求是 [合法的国家地区码](../../../internationalization/i18n-locale-culture.md#实现原理)。 |
-| options | [PhoneNumberFormatOptions](../../apis-na/arkts-apis/arkts-na-i18n-phonenumberformatoptions-i.md) | 否 | 电话号码格式化时设置的配置项。默认值：NATIONAL。 |
+| options | [PhoneNumberFormatOptions](arkts-localization-i18n-phonenumberformatoptions-i.md) | 否 | 电话号码格式化时设置的配置项。默认值：NATIONAL。 |
 
 ## 示例
 

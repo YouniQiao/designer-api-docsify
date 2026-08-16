@@ -32,5 +32,5 @@ Obtains the material configuration information of this application. The returned
 
 | Type | Description |
 | --- | --- |
-| [MaterialInfo](arkts-arkui-uimaterial-materialinfo-i.md) | Material configuration information of this application, including the material enabling state and material type. |
+| [MaterialInfo](../../apis-na/arkts-apis/arkts-na-uimaterial-materialinfo-i.md) | Material configuration information of this application, including the material enabling state and material type. |
 

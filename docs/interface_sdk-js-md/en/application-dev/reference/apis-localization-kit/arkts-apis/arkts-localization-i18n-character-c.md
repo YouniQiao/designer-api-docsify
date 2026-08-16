@@ -8,7 +8,7 @@ Provides the API for accessing unicode character properties. For example, determ
 
 **Deprecated since:** 9
 
-**Substitutes:** [Unicode](../../apis-na/arkts-apis/arkts-na-i18n-unicode-c.md#Unicode)
+**Substitutes:** [Unicode](arkts-localization-i18n-unicode-c.md#Unicode)
 
 <!--Device-i18n-export class Character--><!--Device-i18n-export class Character-End-->
 
@@ -34,7 +34,7 @@ Obtains the type of the input character.
 
 **Deprecated since:** 9
 
-**Substitutes:** [getType](../../apis-na/arkts-apis/arkts-na-i18n-unicode-c.md#getType)
+**Substitutes:** [getType](arkts-localization-i18n-unicode-c.md#getType)
 
 <!--Device-Character-getType(ch: string): string--><!--Device-Character-getType(ch: string): string-End-->
 
@@ -66,7 +66,7 @@ Checks whether the input character is a digit.
 
 **Deprecated since:** 9
 
-**Substitutes:** [isDigit](../../apis-na/arkts-apis/arkts-na-i18n-unicode-c.md#isDigit)
+**Substitutes:** [isDigit](arkts-localization-i18n-unicode-c.md#isDigit)
 
 <!--Device-Character-isDigit(ch: string): boolean--><!--Device-Character-isDigit(ch: string): boolean-End-->
 
@@ -98,7 +98,7 @@ Checks whether the input character is an ideographic character.
 
 **Deprecated since:** 9
 
-**Substitutes:** [isIdeograph](../../apis-na/arkts-apis/arkts-na-i18n-unicode-c.md#isIdeograph)
+**Substitutes:** [isIdeograph](arkts-localization-i18n-unicode-c.md#isIdeograph)
 
 <!--Device-Character-isIdeograph(ch: string): boolean--><!--Device-Character-isIdeograph(ch: string): boolean-End-->
 
@@ -130,7 +130,7 @@ Checks whether the input character is a letter.
 
 **Deprecated since:** 9
 
-**Substitutes:** [isLetter](../../apis-na/arkts-apis/arkts-na-i18n-unicode-c.md#isLetter)
+**Substitutes:** [isLetter](arkts-localization-i18n-unicode-c.md#isLetter)
 
 <!--Device-Character-isLetter(ch: string): boolean--><!--Device-Character-isLetter(ch: string): boolean-End-->
 
@@ -162,7 +162,7 @@ Checks whether the input character is a lowercase letter.
 
 **Deprecated since:** 9
 
-**Substitutes:** [isLowerCase](../../apis-na/arkts-apis/arkts-na-i18n-unicode-c.md#isLowerCase)
+**Substitutes:** [isLowerCase](arkts-localization-i18n-unicode-c.md#isLowerCase)
 
 <!--Device-Character-isLowerCase(ch: string): boolean--><!--Device-Character-isLowerCase(ch: string): boolean-End-->
 
@@ -194,7 +194,7 @@ Checks whether the input character is of the right to left (RTL) language.
 
 **Deprecated since:** 9
 
-**Substitutes:** [isRTL](../../apis-na/arkts-apis/arkts-na-i18n-unicode-c.md#isRTL)
+**Substitutes:** [isRTL](arkts-localization-i18n-unicode-c.md#isRTL)
 
 <!--Device-Character-isRTL(ch: string): boolean--><!--Device-Character-isRTL(ch: string): boolean-End-->
 
@@ -226,7 +226,7 @@ Checks whether the input character is a space.
 
 **Deprecated since:** 9
 
-**Substitutes:** [isSpaceChar](../../apis-na/arkts-apis/arkts-na-i18n-unicode-c.md#isSpaceChar)
+**Substitutes:** [isSpaceChar](arkts-localization-i18n-unicode-c.md#isSpaceChar)
 
 <!--Device-Character-isSpaceChar(ch: string): boolean--><!--Device-Character-isSpaceChar(ch: string): boolean-End-->
 
@@ -258,7 +258,7 @@ Checks whether the input character is an uppercase letter.
 
 **Deprecated since:** 9
 
-**Substitutes:** [isUpperCase](../../apis-na/arkts-apis/arkts-na-i18n-unicode-c.md#isUpperCase)
+**Substitutes:** [isUpperCase](arkts-localization-i18n-unicode-c.md#isUpperCase)
 
 <!--Device-Character-isUpperCase(ch: string): boolean--><!--Device-Character-isUpperCase(ch: string): boolean-End-->
 
@@ -290,7 +290,7 @@ Checks whether the input character is a whitespace.
 
 **Deprecated since:** 9
 
-**Substitutes:** [isWhitespace](../../apis-na/arkts-apis/arkts-na-i18n-unicode-c.md#isWhitespace)
+**Substitutes:** [isWhitespace](arkts-localization-i18n-unicode-c.md#isWhitespace)
 
 <!--Device-Character-isWhitespace(ch: string): boolean--><!--Device-Character-isWhitespace(ch: string): boolean-End-->
 

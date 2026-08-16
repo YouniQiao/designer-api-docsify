@@ -34,7 +34,7 @@ Notify that this request should be failed.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| code | [WebNetErrorList](../../apis-arkweb/arkts-apis/arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) | 是 | Set response error code to intercept. |
+| code | [WebNetErrorList](arkts-na-web-neterrorlist-webneterrorlist-e.md) | 是 | Set response error code to intercept. |
 
 **错误码：**
 
@@ -65,7 +65,7 @@ Notify that this request should be failed.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| code | [WebNetErrorList](../../apis-arkweb/arkts-apis/arkts-arkweb-web-neterrorlist-webneterrorlist-e.md) | 是 | Set response error code to intercept. |
+| code | [WebNetErrorList](arkts-na-web-neterrorlist-webneterrorlist-e.md) | 是 | Set response error code to intercept. |
 | completeIfNoResponse | boolean | 是 | If completeIfNoResponse is true, when DidFailWithError is called, if DidReceiveResponse has not been called, a response is automatically constructed and the current request is terminated. |
 
 **错误码：**
@@ -121,7 +121,7 @@ Pass response headers to intercepted requests.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| response | [WebSchemeHandlerResponse](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webschemehandlerresponse-c.md) | 是 | Set response header to intercept. |
+| response | [WebSchemeHandlerResponse](arkts-na-webview-webschemehandlerresponse-c.md) | 是 | Set response header to intercept. |
 
 **错误码：**
 

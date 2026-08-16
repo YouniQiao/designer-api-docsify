@@ -1005,7 +1005,7 @@ static makeV1Observed<T extends object>(source: T): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| source | T | 是 | 数据源。支持普通class、Array、Map、Set、Date类型。 <br>不支持@arkts.collections (ArkTS容器集)和 [@Sendable](../../../arkts-utils/arkts-sendable.md)修饰的class。 <br>不支持undefined和null。不支持状态管理V2的数据和[makeObserved](#makeObserved)的返回值。 |
+| source | T | 是 | 数据源。支持普通class、Array、Map、Set、Date类型。 <br>不支持[@arkts.collections (ArkTS容器集)](../../apis-arkts/arkts-apis/arkts-collections.md#@arkts.collections)和 [@Sendable](../../../arkts-utils/arkts-sendable.md)修饰的class。 <br>不支持undefined和null。不支持状态管理V2的数据和[makeObserved](#makeObserved)的返回值。 |
 
 **返回值：**
 

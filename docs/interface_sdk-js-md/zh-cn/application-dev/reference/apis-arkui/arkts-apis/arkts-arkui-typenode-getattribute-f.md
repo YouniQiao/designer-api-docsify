@@ -26,7 +26,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Text'): TextAttribute |
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
 | nodeType | 'Text' | 是 | 获取Text节点类型的属性。 |
 
 **返回值：**
@@ -62,7 +62,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Column'): ColumnAttribu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
 | nodeType | 'Column' | 是 | 获取Column节点类型的属性。 |
 
 **返回值：**
@@ -98,7 +98,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Row'): RowAttribute | u
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
 | nodeType | 'Row' | 是 | 获取Row节点类型的属性。 |
 
 **返回值：**
@@ -134,7 +134,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Stack'): StackAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
 | nodeType | 'Stack' | 是 | 获取Stack节点类型的属性。 |
 
 **返回值：**
@@ -170,7 +170,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Flex'): FlexAttribute |
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
 | nodeType | 'Flex' | 是 | 获取Flex节点类型的属性。 |
 
 **返回值：**
@@ -206,7 +206,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Swiper'): SwiperAttribu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
 | nodeType | 'Swiper' | 是 | 获取Swiper节点类型的属性。 |
 
 **返回值：**
@@ -242,7 +242,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Progress'): ProgressAtt
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
 | nodeType | 'Progress' | 是 | 获取Progress节点类型的属性。 |
 
 **返回值：**
@@ -278,7 +278,7 @@ function getAttribute(node: FrameNode, nodeType: 'Scroll'): ScrollAttribute | un
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
 | nodeType | 'Scroll' | 是 | 获取Scroll节点类型的属性。 |
 
 **返回值：**
@@ -314,7 +314,7 @@ export function getAttribute(node: FrameNode, nodeType: 'RelativeContainer'): Re
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
 | nodeType | 'RelativeContainer' | 是 | 获取RelativeContainer节点类型的属性。 |
 
 **返回值：**
@@ -350,7 +350,7 @@ export function getAttribute(node: FrameNode, nodeType: 'LoadingProgress'): Load
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
 | nodeType | 'LoadingProgress' | 是 | 获取LoadingProgress节点类型的属性。 |
 
 **返回值：**
@@ -386,7 +386,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Image'): ImageAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
 | nodeType | 'Image' | 是 | 获取Image节点类型的属性。 |
 
 **返回值：**
@@ -422,7 +422,7 @@ export function getAttribute(node: FrameNode, nodeType: 'List'): ListAttribute |
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
 | nodeType | 'List' | 是 | 获取List节点类型的属性。 |
 
 **返回值：**
@@ -458,7 +458,7 @@ export function getAttribute(node: FrameNode, nodeType: 'ListItem'): ListItemAtt
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
 | nodeType | 'ListItem' | 是 | 获取ListItem节点类型的属性。 |
 
 **返回值：**
@@ -494,7 +494,7 @@ export function getAttribute(node: FrameNode, nodeType: 'TextInput'): TextInputA
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
 | nodeType | 'TextInput' | 是 | 获取TextInput节点类型的属性。 |
 
 **返回值：**
@@ -530,7 +530,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Button'): ButtonAttribu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
 | nodeType | 'Button' | 是 | 获取Button节点类型的属性。 |
 
 **返回值：**
@@ -566,7 +566,7 @@ export function getAttribute(node: FrameNode, nodeType: 'ListItemGroup'): ListIt
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
 | nodeType | 'ListItemGroup' | 是 | 获取ListItemGroup节点类型的属性。 |
 
 **返回值：**
@@ -602,7 +602,7 @@ export function getAttribute(node: FrameNode, nodeType: 'WaterFlow'): WaterFlowA
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
 | nodeType | 'WaterFlow' | 是 | 获取WaterFlow节点类型的属性。 |
 
 **返回值：**
@@ -638,7 +638,7 @@ export function getAttribute(node: FrameNode, nodeType: 'FlowItem'): FlowItemAtt
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
 | nodeType | 'FlowItem' | 是 | 获取FlowItem节点类型的属性。 |
 
 **返回值：**
@@ -674,7 +674,7 @@ export function getAttribute(node: FrameNode, nodeType: 'XComponent'): XComponen
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
 | nodeType | 'XComponent' | 是 | 获取XComponent节点类型的属性。 |
 
 **返回值：**
@@ -710,7 +710,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Checkbox'): CheckboxAtt
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
 | nodeType | 'Checkbox' | 是 | 获取Checkbox节点类型的属性。 |
 
 **返回值：**
@@ -746,7 +746,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Radio'): RadioAttribute
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
 | nodeType | 'Radio' | 是 | 获取Radio节点类型的属性。 |
 
 **返回值：**
@@ -782,7 +782,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Slider'): SliderAttribu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
 | nodeType | 'Slider' | 是 | 获取Slider节点类型的属性。 |
 
 **返回值：**
@@ -818,7 +818,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Toggle'): ToggleAttribu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
 | nodeType | 'Toggle' | 是 | 获取Toggle节点类型的属性。 |
 
 **返回值：**
@@ -854,7 +854,7 @@ export function getAttribute(node: FrameNode, nodeType: 'TextArea'): TextAreaAtt
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
 | nodeType | 'TextArea' | 是 | 获取TextArea节点类型的属性。 |
 
 **返回值：**
@@ -890,7 +890,7 @@ export function getAttribute(node: FrameNode, nodeType: 'Grid'): GridAttribute |
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
 | nodeType | 'Grid' | 是 | 获取Grid节点类型的属性。 |
 
 **返回值：**
@@ -926,7 +926,7 @@ export function getAttribute(node: FrameNode, nodeType: 'GridItem'): GridItemAtt
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| node | [FrameNode](../../apis-na/arkts-apis/arkts-na-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
+| node | [FrameNode](arkts-arkui-framenode-c.md) | 是 | 获取属性时所需的目标节点。 |
 | nodeType | 'GridItem' | 是 | 获取GridItem节点类型的属性。 |
 
 **返回值：**

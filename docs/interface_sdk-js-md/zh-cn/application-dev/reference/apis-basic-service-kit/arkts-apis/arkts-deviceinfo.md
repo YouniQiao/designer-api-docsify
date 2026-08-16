@@ -43,7 +43,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [ODID](arkts-basicservices-deviceinfo-con.md#ODID) | 开发者匿名设备标识符。 **ODID值会在以下场景重新生成：** 手机恢复出厂设置。 同一设备上同一个开发者(developerId相同)的应用全部卸载后重新安装时。 **ODID生成规则：** 根据签名信息里developerId解析出的groupId生成，developerId规则为groupId.developerId，若无groupId则取整个developerId作为groupId。 同一设备上运行的同一个开发者(developerId相同)的应用，ODID相同。 同一个设备上不同开发者(developerId不同)的应用，ODID不同。 不同设备上同一个开发者(developerId相同)的应用，ODID不同。 不同设备上不同开发者(developerId不同)的应用，ODID不同。 |
+| [ODID](arkts-basicservices-deviceinfo-con.md#ODID) | ODID（Open Developer Identifier，开发者匿名设备标识符）。 **ODID值会在以下场景重新生成：** 手机恢复出厂设置。 同一设备上同一个开发者(developerId相同)的应用全部卸载后重新安装时。 **ODID生成规则：** 根据签名信息里developerId解析出的groupId生成，developerId规则为groupId.developerId，若无groupId则取整个developerId作为groupId。 同一设备上运行的同一个开发者(developerId相同)的应用，ODID相同。 同一个设备上不同开发者(developerId不同)的应用，ODID不同。 不同设备上同一个开发者(developerId相同)的应用，ODID不同。 不同设备上不同开发者(developerId不同)的应用，ODID不同。 |
 | [abiList](arkts-basicservices-deviceinfo-con.md#abiList) | 应用二进制接口（Abi）。 示例：arm64-v8a |
 | [bootCount](arkts-basicservices-deviceinfo-con.md#bootCount) | 当前设备重启次数，获取失败时返回-1。 示例：100 |
 | [bootloaderVersion](arkts-basicservices-deviceinfo-con.md#bootloaderVersion) | Bootloader版本号，用于标识设备启动引导程序的版本信息。 示例：bootloader |
@@ -59,7 +59,7 @@
 | [deviceType](arkts-basicservices-deviceinfo-con.md#deviceType) | 设备类型。详细请参考[deviceTypes标签](../../../quick-start/module-configuration-file.md#devicetypes标签)。 示例：&lt;!--RP1--&gt;wearable&lt;!--RP1End--&gt; |
 | [diskSN](arkts-basicservices-deviceinfo-con.md#diskSN) | 硬盘序列号，该接口在执行期间会拉起临时进程，当系统负载较高时，可能引发阻塞风险。为确保应用主线程的响应性能，建议避免在主线程中调用。设备信息因设备而异且固定不变，可在首次获取后缓存在本地，避免每次使用时重复获取，以提升性能。 |
 | [displayVersion](arkts-basicservices-deviceinfo-con.md#displayVersion) | 产品版本。 示例：&lt;!--RP8--&gt;XXX X.X.X.X&lt;!--RP8End--&gt; |
-| [distributionOSApiName](arkts-basicservices-deviceinfo-con.md#distributionOSApiName) | 发行版系统api版本名称&lt;!--Del--&gt;，由发行方定义&lt;!--DelEnd--&gt;。 &lt;!--RP16-- |
+| [distributionOSApiName](arkts-basicservices-deviceinfo-con.md#distributionOSApiName) | 发行版系统API版本名称&lt;!--Del--&gt;，由发行方定义&lt;!--DelEnd--&gt;。 &lt;!--RP16-- |
 | [distributionOSApiVersion](arkts-basicservices-deviceinfo-con.md#distributionOSApiVersion) | 发行版系统API版本&lt;!--Del--&gt;，由发行方定义&lt;!--DelEnd--&gt;。&lt;!--RP15--&gt;&lt;!--RP15End--&gt; 示例：50001 |
 | [distributionOSName](arkts-basicservices-deviceinfo-con.md#distributionOSName) | 发行版系统名称&lt;!--Del--&gt;，由发行方定义&lt;!--DelEnd--&gt;。 示例：OpenHarmony |
 | [distributionOSReleaseType](arkts-basicservices-deviceinfo-con.md#distributionOSReleaseType) | 发行版系统类型&lt;!--Del--&gt;，由发行方定义&lt;!--DelEnd--&gt;。 示例：Release |
@@ -80,7 +80,7 @@
 | [productSeries](arkts-basicservices-deviceinfo-con.md#productSeries) | 产品系列。 示例：&lt;!--RP3--&gt;TAS&lt;!--RP3End--&gt; |
 | [sdkApiVersion](arkts-basicservices-deviceinfo-con.md#sdkApiVersion) | 系统软件API版本。 示例：12 |
 | [sdkMinorApiVersion](arkts-basicservices-deviceinfo-con.md#sdkMinorApiVersion) | 系统软件Minor API版本。从API 26.0.0 版本开始，系统API版本格式：sdkApiVersion.sdkMinorApiVersion.sdkPatchApiVersion。 26.0.0 示例：0 |
-| [sdkPatchApiVersion](arkts-basicservices-deviceinfo-con.md#sdkPatchApiVersion) | 系统软件Patch API版本。从API 26 版本开始，系统API版本格式：sdkApiVersion.sdkMinorApiVersion.sdkPatchApiVersion。 26.0.0 示例：0 |
+| [sdkPatchApiVersion](arkts-basicservices-deviceinfo-con.md#sdkPatchApiVersion) | 系统软件Patch API版本。从API 26.0.0 版本开始，系统API版本格式：sdkApiVersion.sdkMinorApiVersion.sdkPatchApiVersion。 26.0.0 示例：0 |
 | [securityPatchTag](arkts-basicservices-deviceinfo-con.md#securityPatchTag) | 安全补丁级别。 示例：&lt;!--RP7--&gt;2021/01/01&lt;!--RP7End--&gt; |
 | [seniorVersion](arkts-basicservices-deviceinfo-con.md#seniorVersion) | Senior版本号，随局部架构、重大特性增加，值为osFullName中的第二位数值，建议直接使用deviceInfo.seniorVersion获取，可提升效率，不建议开发者自主解析osFullName获取。 示例：0 |
 | [serial](arkts-basicservices-deviceinfo-con.md#serial) | 设备序列号SN(Serial Number)，该接口在执行期间会拉起临时进程，当系统负载较高时，可能引发阻塞风险。为确保应用主线程的响应性能，建议避免在主线程中调用。设备信息因设备而异且固定不变，可在首次获取后缓存在本地，避免每次使用时重复获取，以提升性能。 |

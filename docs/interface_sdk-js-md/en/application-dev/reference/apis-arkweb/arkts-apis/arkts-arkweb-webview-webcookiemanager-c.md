@@ -395,7 +395,7 @@ Remove all cookies.
 
 **Deprecated since:** 11
 
-**Substitutes:** [clearAllCookiesSync](#clearAllCookiesSync)
+**Substitutes:** [clearAllCookiesSync](../../apis-na/arkts-apis/arkts-na-webview-webcookiemanager-c.md#clearAllCookiesSync)
 
 <!--Device-WebCookieManager-static deleteEntireCookie(): void--><!--Device-WebCookieManager-static deleteEntireCookie(): void-End-->
 
@@ -415,7 +415,7 @@ Delete the session cookies.
 
 **Deprecated since:** 11
 
-**Substitutes:** [clearSessionCookieSync](#clearSessionCookieSync)
+**Substitutes:** [clearSessionCookieSync](../../apis-na/arkts-apis/arkts-na-webview-webcookiemanager-c.md#clearSessionCookieSync)
 
 <!--Device-WebCookieManager-static deleteSessionCookie(): void--><!--Device-WebCookieManager-static deleteSessionCookie(): void-End-->
 
@@ -481,7 +481,7 @@ Fetches all stored cookies asynchronously.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[WebHttpCookie](arkts-arkweb-webview-webhttpcookie-i.md)&gt;&gt; | A promise resolved after the cookies gotten. |
+| Promise&lt;Array&lt;[WebHttpCookie](../../apis-na/arkts-apis/arkts-na-webview-webhttpcookie-i.md)&gt;&gt; | A promise resolved after the cookies gotten. |
 
 ## fetchCookie
 
@@ -728,7 +728,7 @@ Gets all cookies for the given URL.
 
 **Deprecated since:** 11
 
-**Substitutes:** [fetchCookieSync](#fetchCookieSync)
+**Substitutes:** [fetchCookieSync](../../apis-na/arkts-apis/arkts-na-webview-webcookiemanager-c.md#fetchCookieSync)
 
 <!--Device-WebCookieManager-static getCookie(url: string): string--><!--Device-WebCookieManager-static getCookie(url: string): string-End-->
 
@@ -965,7 +965,7 @@ Set a single cookie (key-value pair) for the given URL.
 
 **Deprecated since:** 11
 
-**Substitutes:** [configCookieSync](#configCookieSync)
+**Substitutes:** [configCookieSync](../../apis-na/arkts-apis/arkts-na-webview-webcookiemanager-c.md#configCookieSync)
 
 <!--Device-WebCookieManager-static setCookie(url: string, value: string): void--><!--Device-WebCookieManager-static setCookie(url: string, value: string): void-End-->
 

@@ -1,6 +1,6 @@
 # BackForwardList
 
-Provides back and forward history list information method. related to [HistoryItem](arkts-arkweb-webview-historyitem-i.md#HistoryItem).
+Provides back and forward history list information method. related to [HistoryItem](../../apis-na/arkts-apis/arkts-na-webview-historyitem-i.md#HistoryItem).
 
 **起始版本：** 9
 
@@ -42,7 +42,7 @@ getItemAtIndex(index: number): HistoryItem
 
 | 类型 | 说明 |
 | --- | --- |
-| [HistoryItem](arkts-arkweb-webview-historyitem-i.md) | 历史记录项。 |
+| [HistoryItem](../../apis-na/arkts-apis/arkts-na-webview-historyitem-i.md) | 历史记录项。 |
 
 **错误码：**
 

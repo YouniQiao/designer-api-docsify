@@ -114,7 +114,7 @@ Post a message to other port.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| message | [WebMessage](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webmessage-t.md) | 是 | Message to send. |
+| message | [WebMessage](arkts-na-webview-webmessage-t.md) | 是 | Message to send. |
 
 **错误码：**
 
@@ -145,7 +145,7 @@ Post a message to other port.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| message | [WebMessageExt](../../apis-arkweb/arkts-apis/arkts-arkweb-webview-webmessageext-c.md) | 是 | Message to send. |
+| message | [WebMessageExt](arkts-na-webview-webmessageext-c.md) | 是 | Message to send. |
 
 **错误码：**
 

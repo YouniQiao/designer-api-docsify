@@ -46,13 +46,13 @@ Creates an **AnimatorResult** object for animations. > **NOTE：**> > - Since AP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) | Yes | Animator options. |
+| options | [AnimatorOptions](../../apis-na/arkts-apis/arkts-na-animator-animatoroptions-i.md) | Yes | Animator options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [AnimatorResult](arkts-arkui-animator-animatorresult-i.md) | Animator result. |
+| [AnimatorResult](../../apis-na/arkts-apis/arkts-na-animator-animatorresult-i.md) | Animator result. |
 
 **Error codes:**
 
@@ -86,7 +86,7 @@ animator.create(options); // You are advised to use UIContext.createAnimator().
 static create(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
 ```
 
-Creates an **AnimatorResult** object for animations. Compared with [create](#create), this API accepts parameters of the [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md#SimpleAnimatorOptions) type.
+Creates an **AnimatorResult** object for animations. Compared with [create](../../apis-na/arkts-apis/arkts-na-animator-animator-c.md#create), this API accepts parameters of the [SimpleAnimatorOptions](../../apis-na/arkts-apis/arkts-na-animator-simpleanimatoroptions-c.md#SimpleAnimatorOptions) type.
 
 **Since:** 18
 
@@ -106,13 +106,13 @@ Creates an **AnimatorResult** object for animations. Compared with [create](#cre
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) \| [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) | Yes | Parameters of the animation. |
+| options | [AnimatorOptions](../../apis-na/arkts-apis/arkts-na-animator-animatoroptions-i.md) \| [SimpleAnimatorOptions](../../apis-na/arkts-apis/arkts-na-animator-simpleanimatoroptions-c.md) | Yes | Parameters of the animation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [AnimatorResult](arkts-arkui-animator-animatorresult-i.md) | Animator result. |
+| [AnimatorResult](../../apis-na/arkts-apis/arkts-na-animator-animatorresult-i.md) | Animator result. |
 
 **Error codes:**
 
@@ -154,13 +154,13 @@ Creates an animation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [AnimatorOptions](arkts-arkui-animator-animatoroptions-i.md) | Yes | Animator options. |
+| options | [AnimatorOptions](../../apis-na/arkts-apis/arkts-na-animator-animatoroptions-i.md) | Yes | Animator options. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [AnimatorResult](arkts-arkui-animator-animatorresult-i.md) | Animator result. |
+| [AnimatorResult](../../apis-na/arkts-apis/arkts-na-animator-animatorresult-i.md) | Animator result. |
 
 ## Examples
 
