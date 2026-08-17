@@ -6,7 +6,7 @@ typedef struct ArkWeb_Response_ ArkWeb_Response
 
 ## Overview
 
-The response of the intercepted request.
+Defines an **ArkWeb_Response** for the intercepted request.
 
 **Since**: 12
 

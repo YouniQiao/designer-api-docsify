@@ -6,7 +6,7 @@ typedef struct ArkWeb_HttpBodyStream_ ArkWeb_HttpBodyStream
 
 ## Overview
 
-The http body of the request.Use OH_ArkWebHttpBodyStream_* interface to read the body.<br>
+Defines the uploaded data of the request. You can use the **OH_ArkWebHttpBodyStream_** API to read theuploaded data.
 
 **Since**: 12
 

@@ -1,12 +1,12 @@
 # ArkWeb_JavaScriptValueAPI
 
 ```c
-typedef struct ArkWeb_JavaScriptValueAPI {...} ArkWeb_JavaScriptValueAPI
+struct ArkWeb_JavaScriptValueAPI {...}
 ```
 
 ## Overview
 
-Defines the native JavaScriptValue API for ArkWeb.Before invoking an API, you are advised to use ARKWEB_MEMBER_MISSING to checkwhether the function structure has a corresponding function pointer to avoid crashcaused by mismatch between the SDK and the device ROM.
+ArkWeb_JavaScriptValueAPI is a JavaScript-related Native API struct. This struct provides functions forcreating JavaScript values, supporting the conversion of Native data into a JavaScript-recognizable format andreturning it to HTML. This conversion mechanism parses and encapsulates the Native data buffer based on thespecified JavaScript value type to generate the corresponding JavaScript value object. It is applicable toscenarios where data needs to be passed from the Native layer to the Web layer, enabling bidirectional datainteraction between Native and Web and improving app development flexibility.<br>Call the OH_ArkWeb_GetNativeAPI method on the UI thread to obtain JavaScript-related APIs. Before calling,you are advised to use [ARKWEB_MEMBER_MISSING](capi-arkweb-type-h.md#arkweb_member_missing) to check the availability of the function pointer,to prevent crashes caused by mismatch between the SDK and device ROM.
 
 **Since**: 18
 
@@ -20,14 +20,14 @@ Defines the native JavaScriptValue API for ArkWeb.Before invoking an API, you ar
 
 | Name | Description |
 | -- | -- |
-| size_t size | The ArkWeb_JavaScriptValueAPI struct size. |
+| size_t size | Size of the struct. |
 
 
 ### Member functions
 
 | Name | Description |
 | -- | -- |
-| [ArkWeb_JavaScriptValuePtr (\*createJavaScriptValue)(ArkWeb_JavaScriptValueType type, void* data, size_t dataLength)](#createjavascriptvalue) | Create the JavaScript value responding to HTML. |
+| [ArkWeb_JavaScriptValuePtr (\*createJavaScriptValue)(ArkWeb_JavaScriptValueType type, void* data, size_t dataLength)](#createjavascriptvalue) | Creates a JavaScript value to be returned to HTML. This function performs type conversion andencapsulation on the data in the data buffer based on the specified type parameter to generate the correspondingJavaScript value object. NULL is returned if the conversion fails. Before using this function, obtain theJavaScript API through OH_ArkWeb_GetNativeAPI and check the availability of the function pointer. |
 
 ## Member function description
 
@@ -39,20 +39,20 @@ ArkWeb_JavaScriptValuePtr (*createJavaScriptValue)(ArkWeb_JavaScriptValueType ty
 
 **Description**
 
-Create the JavaScript value responding to HTML.
+Creates a JavaScript value to be returned to HTML. This function performs type conversion andencapsulation on the data in the data buffer based on the specified type parameter to generate the correspondingJavaScript value object. NULL is returned if the conversion fails. Before using this function, obtain theJavaScript API through OH_ArkWeb_GetNativeAPI and check the availability of the function pointer.
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [ArkWeb_JavaScriptValueType](capi-arkweb-type-h.md#arkweb_javascriptvaluetype) type | The type of ArkWeb_JavaScriptValue. |
-|  void* data | The data buffer of ArkWeb_JavaScriptValue. |
-|  size_t dataLength | The length of data buffer. |
+| [ArkWeb_JavaScriptValueType](capi-arkweb-type-h.md#arkweb_javascriptvaluetype) type | Type of the JavaScript value. |
+|  void* data | Pointer to the data buffer of the JavaScript value. The data must be provided in the typecorresponding to **type**. The memory is managed by the caller and must remain valid until the functionreturns. For types that do not require data, **nullptr** can be passed. |
+|  size_t dataLength | Number of bytes pointed to by the data buffer of the JavaScript value. This value must matchthe length of the buffer pointed to by **data**. When **data** is **nullptr**, this value must be setto **0**. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ArkWeb_JavaScriptValuePtr](capi-web-arkweb-javascriptvalue8h.md) | ArkWeb_JavaScriptValuePtr created by ArkWeb, the memory of ArkWeb_JavaScriptValue<br>     is managed by ArkWeb itself. |
+| [ArkWeb_JavaScriptValuePtr](capi-web-arkweb-javascriptvalue8h.md) | Created JavaScript value. NULL is returned when the input parameter is invalid or memory allocation<br>         fails. |
 
 

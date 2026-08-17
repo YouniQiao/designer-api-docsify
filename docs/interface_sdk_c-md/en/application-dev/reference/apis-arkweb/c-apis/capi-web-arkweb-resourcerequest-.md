@@ -6,7 +6,7 @@ typedef struct ArkWeb_ResourceRequest_ ArkWeb_ResourceRequest
 
 ## Overview
 
-The info of the request.You can obtain the requested URL, method, post data, and other information through OH_ArkWeb_ResourceRequest.<br>
+ArkWeb_ResourceRequest is a struct that contains detailed information about an intercepted scheme request,including the request URL, HTTP method, request headers, and other metadata. This struct is passed as a parameter inthe onRequestStart callback of ArkWeb_SchemeHandler and is applicable to scenarios such as custom protocol handlingand resource interception. It helps developers implement features like cross-origin request control and localresource mapping, thereby enhancing security and performance. Developers can use it to obtain complete informationabout the intercepted request and decide whether to intercept it and how to construct a custom response.
 
 **Since**: 12
 

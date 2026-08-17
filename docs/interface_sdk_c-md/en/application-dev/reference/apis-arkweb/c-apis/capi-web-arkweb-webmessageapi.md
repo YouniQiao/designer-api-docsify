@@ -6,7 +6,7 @@ typedef struct ArkWeb_WebMessageAPI {...} ArkWeb_WebMessageAPI
 
 ## Overview
 
-Defines the web message data API for native ArkWeb.Before invoking an API, you are advised to use ARKWEB_MEMBER_MISSING to checkwhether the function structure has a corresponding function pointer to avoid crashcaused by mismatch between the SDK and the device ROM.Use OH_ArkWeb_GetNativeAPI in the UI thread to obtain the WebMessage-related interface cluster.
+ArkWeb_WebMessageAPI is a native API struct for Web messages. This struct provides functions for creating anddestroying messages, setting and obtaining message types, and managing message data buffers. This API is part of thepostMessage bridge, supporting bidirectional communication between Native code and HTML pages.<br>Web message APIsmust be called on the UI thread by calling the OH_ArkWeb_GetNativeAPI method. Before calling, you are advised to use[ARKWEB_MEMBER_MISSING](capi-arkweb-type-h.md#arkweb_member_missing) to check the availability of function pointers, preventing crashes caused by amismatch between the SDK and device ROM.
 
 **Since**: 12
 
@@ -20,19 +20,19 @@ Defines the web message data API for native ArkWeb.Before invoking an API, you a
 
 | Name | Description |
 | -- | -- |
-| size_t size | The ArkWeb_WebMessageAPI struct size. |
+| size_t size | Size of the struct. |
 
 
 ### Member functions
 
 | Name | Description |
 | -- | -- |
-| [ArkWeb_WebMessagePtr (\*createWebMessage)()](#createwebmessage) | Used to create a ArkWeb_WebMessage.@return The created ArkWeb_WebMessage, destroy it throughdestroyWebMessage after it is no longer used. |
-| [void (\*destroyWebMessage)(ArkWeb_WebMessagePtr* webMessage)](#destroywebmessage) | Used to destroy a ArkWeb_WebMessage.@param webMessage The ArkWeb_WebMessage to destroy. |
-| [void (\*setType)(ArkWeb_WebMessagePtr webMessage, ArkWeb_WebMessageType type)](#settype) | Set the type of ArkWeb_WebMessage.@param webMessage The ArkWeb_WebMessage.@param type The type of ArkWeb_WebMessage. |
-| [ArkWeb_WebMessageType (\*getType)(ArkWeb_WebMessagePtr webMessage)](#gettype) | Get the type of ArkWeb_WebMessage.@param webMessage The ArkWeb_WebMessage.@return The type of ArkWeb_WebMessage. |
-| [void (\*setData)(ArkWeb_WebMessagePtr webMessage, void* data, size_t dataLength)](#setdata) | Set the data of ArkWeb_WebMessage.@param webMessage The ArkWeb_WebMessage.@param data The data of ArkWeb_WebMessage.@param dataLength The length of data. |
-| [void* (\*getData)(ArkWeb_WebMessagePtr webMessage, size_t* dataLength)](#getdata) | Get the data of ArkWeb_WebMessage.@param webMessage The ArkWeb_WebMessage.@param dataLength The length of data.@return The data of ArkWeb_WebMessage. |
+| [ArkWeb_WebMessagePtr (\*createWebMessage)()](#createwebmessage) | Creates a message. Used to create a message object to be sent before postMessage communication betweenNative code and HTML pages. After calling createWebMessage(), you must call destroyWebMessage() to release themessage resources when they are no longer needed. Failure to call destroyWebMessage() will cause a messageresource leak, affecting system memory management. |
+| [void (\*destroyWebMessage)(ArkWeb_WebMessagePtr* webMessage)](#destroywebmessage) | Destroys a message and releases the memory occupied by the message object. Must be used in pair withcreateWebMessage(). Call this method to release resources after the message is no longer needed. After the call,the webMessage pointer becomes invalid and should no longer be used. |
+| [void (\*setType)(ArkWeb_WebMessagePtr webMessage, ArkWeb_WebMessageType type)](#settype) | Sets the message type. @param webMessage Pointer to the message struct. @param type Message type. |
+| [ArkWeb_WebMessageType (\*getType)(ArkWeb_WebMessagePtr webMessage)](#gettype) | Obtains the message type. Used to distinguish different types of communication messages, such as textmessages, JSON messages, and binary messages. |
+| [void (\*setData)(ArkWeb_WebMessagePtr webMessage, void* data, size_t dataLength)](#setdata) | Sets data. Used to set the specific content of the message, supporting the transfer of text, JSON, orbinary data from Native code to HTML pages. |
+| [void* (\*getData)(ArkWeb_WebMessagePtr webMessage, size_t* dataLength)](#getdata) | Obtains data. Used to obtain the specific content of the message, supporting the reception of text, JSON,or binary data from HTML pages and processing them in Native code. setData() must be called first to set thedata before getData() can be called to obtain the data. If getData() is called without calling setData() first,NULL is returned and dataLength is 0. |
 
 ## Member function description
 
@@ -44,13 +44,13 @@ ArkWeb_WebMessagePtr (*createWebMessage)()
 
 **Description**
 
-Used to create a ArkWeb_WebMessage.@return The created ArkWeb_WebMessage, destroy it throughdestroyWebMessage after it is no longer used.
+Creates a message. Used to create a message object to be sent before postMessage communication betweenNative code and HTML pages. After calling createWebMessage(), you must call destroyWebMessage() to release themessage resources when they are no longer needed. Failure to call destroyWebMessage() will cause a messageresource leak, affecting system memory management.
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ArkWeb_WebMessagePtr](capi-web-arkweb-webmessage8h.md) | The created ArkWeb_WebMessage, destroy it through<br>      destroyWebMessage after it is no longer used. |
+| [ArkWeb_WebMessagePtr](capi-web-arkweb-webmessage8h.md) | Pointer to the message struct. |
 
 ### destroyWebMessage()
 
@@ -60,7 +60,7 @@ void (*destroyWebMessage)(ArkWeb_WebMessagePtr* webMessage)
 
 **Description**
 
-Used to destroy a ArkWeb_WebMessage.@param webMessage The ArkWeb_WebMessage to destroy.
+Destroys a message and releases the memory occupied by the message object. Must be used in pair withcreateWebMessage(). Call this method to release resources after the message is no longer needed. After the call,the webMessage pointer becomes invalid and should no longer be used.
 
 ### setType()
 
@@ -70,7 +70,14 @@ void (*setType)(ArkWeb_WebMessagePtr webMessage, ArkWeb_WebMessageType type)
 
 **Description**
 
-Set the type of ArkWeb_WebMessage.@param webMessage The ArkWeb_WebMessage.@param type The type of ArkWeb_WebMessage.
+Sets the message type. @param webMessage Pointer to the message struct. @param type Message type.
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [ArkWeb_WebMessagePtr](capi-web-arkweb-webmessage8h.md) webMessage | Pointer to the message struct. @param type Message type. |
+| [ArkWeb_WebMessagePtr](capi-web-arkweb-webmessage8h.md) webMessage | Pointer to the message struct. |
 
 ### getType()
 
@@ -80,7 +87,13 @@ ArkWeb_WebMessageType (*getType)(ArkWeb_WebMessagePtr webMessage)
 
 **Description**
 
-Get the type of ArkWeb_WebMessage.@param webMessage The ArkWeb_WebMessage.@return The type of ArkWeb_WebMessage.
+Obtains the message type. Used to distinguish different types of communication messages, such as textmessages, JSON messages, and binary messages.
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [ArkWeb_WebMessagePtr](capi-web-arkweb-webmessage8h.md) webMessage | Pointer to the message struct. |
 
 **Returns**:
 
@@ -96,7 +109,14 @@ void (*setData)(ArkWeb_WebMessagePtr webMessage, void* data, size_t dataLength)
 
 **Description**
 
-Set the data of ArkWeb_WebMessage.@param webMessage The ArkWeb_WebMessage.@param data The data of ArkWeb_WebMessage.@param dataLength The length of data.
+Sets data. Used to set the specific content of the message, supporting the transfer of text, JSON, orbinary data from Native code to HTML pages.
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [ArkWeb_WebMessagePtr](capi-web-arkweb-webmessage8h.md) webMessage | Pointer to the message struct. |
+|  void* data | Data pointer. The caller is responsible for memory management. The function does not release thismemory internally, and data ownership is not transferred. |
 
 ### getData()
 
@@ -106,12 +126,19 @@ void* (*getData)(ArkWeb_WebMessagePtr webMessage, size_t* dataLength)
 
 **Description**
 
-Get the data of ArkWeb_WebMessage.@param webMessage The ArkWeb_WebMessage.@param dataLength The length of data.@return The data of ArkWeb_WebMessage.
+Obtains data. Used to obtain the specific content of the message, supporting the reception of text, JSON,or binary data from HTML pages and processing them in Native code. setData() must be called first to set thedata before getData() can be called to obtain the data. If getData() is called without calling setData() first,NULL is returned and dataLength is 0.
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [ArkWeb_WebMessagePtr](capi-web-arkweb-webmessage8h.md) webMessage | Pointer to the message struct. |
+|  size_t* dataLength | Data length, which is an output parameter. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| void* | The data of ArkWeb_WebMessage. |
+| void* | Pointer to the message data. The data length is returned via the dataLength output parameter. The<br>         lifecycle of the returned pointer is bound to the message object. The pointer becomes invalid after the<br>         message is destroyed, and the caller should not free this memory. |
 
 

@@ -6,7 +6,7 @@ typedef struct ArkWeb_WebMessage* ArkWeb_WebMessagePtr
 
 ## Overview
 
-Defines the ArkWeb_WebMessage.
+ArkWeb_WebMessage is a web message struct used for cross-context message communication. It defines the basicformat and data carrying capability of messages. This struct serves as the fundamental data unit for web messagecommunication, supporting the transfer of strings and binary data between native code and web pages.
 
 **Since**: 12
 

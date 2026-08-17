@@ -6,7 +6,7 @@ typedef struct ArkWeb_ProxyObjectWithResult {...} ArkWeb_ProxyObjectWithResult
 
 ## Overview
 
-Defines the JavaScript proxy registered object with methodList that has a return value.
+ArkWeb_ProxyObjectWithResult is a JavaScript proxy object struct with a return value, extending thecapabilities of ArkWeb_ProxyObject. This struct organizes multiple ArkWeb_ProxyMethodWithResult instances into anobject and injects it into a web page, allowing JavaScript to obtain a return value after calling Native methods. Itresolves the issue that ArkWeb_ProxyObject cannot return execution results, simplifying the development process andimproving development efficiency. It is suitable for API scenarios that require returning structured executionresults to the web frontend.
 
 **Since**: 18
 
@@ -20,8 +20,8 @@ Defines the JavaScript proxy registered object with methodList that has a return
 
 | Name | Description |
 | -- | -- |
-| const char* objName | The name of the registered object. |
-| const [ArkWeb_ProxyMethodWithResult*](capi-web-arkweb-proxymethodwithresult.md) methodList | The JavaScript proxy registered method object list with a callback function that has a return value |
-| size_t size | The size of the methodList. |
+| const char* objName | Name of the injected object. The name must follow JavaScript identifier rules and cannot contain specialcharacters. |
+| const [ArkWeb_ProxyMethodWithResult*](capi-web-arkweb-proxymethodwithresult.md) methodList | Array of method structs carried by the injected object. The array length is specified by the **size** parameter.Each method in the array is registered to the web page, and JavaScript can call it in the format of "objectName.methodName". |
+| size_t size | Length of the method struct array. Must be consistent with the actual number of elements in the methodList array. |
 
 

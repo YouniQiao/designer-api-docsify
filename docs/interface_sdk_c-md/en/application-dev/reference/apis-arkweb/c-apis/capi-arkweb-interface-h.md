@@ -2,7 +2,7 @@
 
 ## Overview
 
-Provides a unified entry for the native ArkWeb.
+`arkweb_interface.h` is the core entry header file of ArkWeb on the native side (C/C++): it defines the basicNative API type [ArkWeb_AnyNativeAPI](capi-web-arkweb-anynativeapi.md) and the API type enum [ArkWeb_NativeAPIVariantKind](capi-arkweb-interface-h.md#arkweb_nativeapivariantkind), provides the[OH_ArkWeb_GetNativeAPI](capi-arkweb-interface-h.md#oh_arkweb_getnativeapi) interface for obtaining specific Native API structs such as Controller, Component,and CookieManager on demand, and also provides [OH_ArkWeb_RegisterScrollCallback](capi-arkweb-interface-h.md#oh_arkweb_registerscrollcallback) for registering scroll eventcallbacks of the Web component. When developers need to control Web component behavior in native code (such asexecuting JavaScript, managing cookies, monitoring component lifecycle or scroll events), they should first obtainthe corresponding Native API through this header file, while capabilities such as page rendering and display stillneed to be provided by the Web component on the ArkTS side.
 
 **Library**: libohweb.so
 
@@ -18,20 +18,20 @@ Provides a unified entry for the native ArkWeb.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [ArkWeb_AnyNativeAPI](capi-web-arkweb-anynativeapi.md) | ArkWeb_AnyNativeAPI | Defines the native API type of any size. |
+| [ArkWeb_AnyNativeAPI](capi-web-arkweb-anynativeapi.md) | ArkWeb_AnyNativeAPI | ArkWeb_AnyNativeAPI is the basic struct type of ArkWeb Native API, used to uniformly represent pointers tovarious Native API structs obtained through the [OH_ArkWeb_GetNativeAPI](capi-arkweb-interface-h.md#oh_arkweb_getnativeapi) API. This struct contains a sizemember of the size_t type, which records the size of the current struct. |
 
 ### Enum
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [ArkWeb_NativeAPIVariantKind](#arkweb_nativeapivariantkind) | ArkWeb_NativeAPIVariantKind | Defines the native API set type. |
+| [ArkWeb_NativeAPIVariantKind](#arkweb_nativeapivariantkind) | ArkWeb_NativeAPIVariantKind | Enumerates the native API types. |
 
 ### Function
 
 | Name | Description |
 | -- | -- |
-| [ArkWeb_AnyNativeAPI* OH_ArkWeb_GetNativeAPI(ArkWeb_NativeAPIVariantKind type)](#oh_arkweb_getnativeapi) | Obtains the native API set of a specified type. |
-| [bool OH_ArkWeb_RegisterScrollCallback(const char* webTag, ArkWeb_OnScrollCallback callback, void* userData)](#oh_arkweb_registerscrollcallback) | Register a scrolling event callback. |
+| [ArkWeb_AnyNativeAPI* OH_ArkWeb_GetNativeAPI(ArkWeb_NativeAPIVariantKind type)](#oh_arkweb_getnativeapi) | Obtains the corresponding Native API struct based on the API type passed in. It is used in scenarios such asobtaining a Controller in native code to control Web component behavior, obtaining a CookieManager to manage cookies,obtaining a WebMessagePort for message communication, and obtaining a JavaScriptValue to operate JavaScript objects. |
+| [bool OH_ArkWeb_RegisterScrollCallback(const char* webTag, ArkWeb_OnScrollCallback callback, void* userData)](#oh_arkweb_registerscrollcallback) | Registers a callback for the component scroll event. It is used in scenarios such as monitoring user scrollbehavior for lazy loading, detecting scroll position for back-to-top functionality, recording user browsing behaviorfor data analysis, and implementing visual effects during scrolling. |
 
 ## Enum type description
 
@@ -43,17 +43,17 @@ enum ArkWeb_NativeAPIVariantKind
 
 **Description**
 
-Defines the native API set type.
+Enumerates the native API types.
 
 **Since**: 12
 
 | Enum item | Description |
 | -- | -- |
-| ARKWEB_NATIVE_COMPONENT | API type related to ArkWeb component. |
-| ARKWEB_NATIVE_CONTROLLER | API type related to ArkWeb controller. |
-| ARKWEB_NATIVE_WEB_MESSAGE_PORT | API type related to ArkWeb WebMessagePort. |
-| ARKWEB_NATIVE_WEB_MESSAGE | API type related to ArkWeb WebMessage. |
-| ARKWEB_NATIVE_COOKIE_MANAGER | API type related to ArkWeb cookie manager. |
+| ARKWEB_NATIVE_COMPONENT | API type related to Component. |
+| ARKWEB_NATIVE_CONTROLLER | API type related to Controller. |
+| ARKWEB_NATIVE_WEB_MESSAGE_PORT | API type related to WebMessagePort. |
+| ARKWEB_NATIVE_WEB_MESSAGE | API type related to WebMessage. |
+| ARKWEB_NATIVE_COOKIE_MANAGER | API type related to CookieManager. |
 | ARKWEB_NATIVE_JAVASCRIPT_VALUE | API type related to ArkWeb JavaScript value.<br>**Since**: 18 |
 
 
@@ -67,9 +67,7 @@ ArkWeb_AnyNativeAPI* OH_ArkWeb_GetNativeAPI(ArkWeb_NativeAPIVariantKind type)
 
 **Description**
 
-Obtains the native API set of a specified type.
-
-**System capability**: SystemCapability.Web.Webview.Core
+Obtains the corresponding Native API struct based on the API type passed in. It is used in scenarios such asobtaining a Controller in native code to control Web component behavior, obtaining a CookieManager to manage cookies,obtaining a WebMessagePort for message communication, and obtaining a JavaScriptValue to operate JavaScript objects.
 
 **Since**: 12
 
@@ -77,13 +75,13 @@ Obtains the native API set of a specified type.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkWeb_NativeAPIVariantKind](capi-arkweb-interface-h.md#arkweb_nativeapivariantkind) type | Indicates the type of the native API set provided by ArkWeb. |
+| [ArkWeb_NativeAPIVariantKind](capi-arkweb-interface-h.md#arkweb_nativeapivariantkind) type | Type of Native API supported by ArkWeb. Different API types may require different system versions. Fordetails, see the enum type description.<br>Note: The returned pointer is managed by the system and does not need to be manually released by thedeveloper. Multiple calls with the same parameters may return the same pointer. The returned Native API structis valid within the lifecycle of the Web component. Ensure thread safety when using it. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ArkWeb_AnyNativeAPI*](capi-web-arkweb-anynativeapi.md) | Return the pointer to the native API abstract object that carries the size.<br>         If the type is incorrect, a null pointer is returned. |
+| [ArkWeb_AnyNativeAPI*](capi-web-arkweb-anynativeapi.md) | Returns the pointer to the corresponding Native API struct based on the passed-in API type. The first member<br>     of the struct is the size of the current struct. It can be used to access specific Native API functions such as<br>     Controller, Component, and CookieManager. <br> If the passed-in API type is not supported in the current system<br>     version (for example, ARKWEB_NATIVE_JAVASCRIPT_VALUE is unavailable in versions earlier than 18), NULL is<br>     returned. |
 
 ### OH_ArkWeb_RegisterScrollCallback()
 
@@ -93,7 +91,7 @@ bool OH_ArkWeb_RegisterScrollCallback(const char* webTag, ArkWeb_OnScrollCallbac
 
 **Description**
 
-Register a scrolling event callback.
+Registers a callback for the component scroll event. It is used in scenarios such as monitoring user scrollbehavior for lazy loading, detecting scroll position for back-to-top functionality, recording user browsing behaviorfor data analysis, and implementing visual effects during scrolling.
 
 **Since**: 18
 

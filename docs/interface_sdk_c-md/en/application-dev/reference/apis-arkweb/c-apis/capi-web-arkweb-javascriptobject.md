@@ -6,7 +6,7 @@ typedef struct ArkWeb_JavaScriptObject {...} ArkWeb_JavaScriptObject
 
 ## Overview
 
-Defines the javascript object.
+The **ArkWeb_JavaScriptObject** struct is used to inject JavaScript code into a web page and obtain theexecution result. It is suitable for scenarios where a native app needs to actively call JavaScript functions in aweb page, read the web page state, or call web page APIs, simplifying the data interaction flow between the web andnative app. Developers can use this struct to specify the JavaScript script content and length to be injected,register an execution completion callback, and pass custom context data through userData, thereby enabling datainteraction between the web and native app.
 
 **Since**: 12
 
@@ -20,9 +20,9 @@ Defines the javascript object.
 
 | Name | Description |
 | -- | -- |
-| const uint8_t* buffer | A piece of javascript code. |
-| size_t size | The size of the javascript code. |
-| [ArkWeb_OnJavaScriptCallback](capi-arkweb-type-h.md#arkweb_onjavascriptcallback) callback | Callbacks execute JavaScript script results. |
-| void* userData | The user data to set. |
+| const uint8_t* buffer | JavaScript code to be injected. The buffer length must be consistent with the **size** parameter. |
+| size_t size | Length of the JavaScript code, in bytes. Must be consistent with the actual length of **buffer**; otherwise, out-of-bounds access or truncation may occur. |
+| [ArkWeb_OnJavaScriptCallback](capi-arkweb-type-h.md#arkweb_onjavascriptcallback) callback | Callback invoked when JavaScript execution is complete. This is a callback function pointer. Passing **NULLindicates that no callback is needed. |
+| void* userData | Custom data to be carried in the callback. |
 
 

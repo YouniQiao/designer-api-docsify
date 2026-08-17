@@ -6,7 +6,7 @@ typedef struct ArkWeb_WebMessagePortAPI {...} ArkWeb_WebMessagePortAPI
 
 ## Overview
 
-Defines the web message API for native ArkWeb.Before invoking an API, you are advised to use ARKWEB_MEMBER_MISSING to checkwhether the function structure has a corresponding function pointer to avoid crashcaused by mismatch between the SDK and the device ROM.Use OH_ArkWeb_GetNativeAPI in the UI thread to obtain the WebMessagePort-related interface cluster.
+ArkWeb_WebMessagePortAPI is a native API struct for web message ports. This struct provides functions such asmessage port creation, closing, message sending, and message receiving callback registration. This API is a corecomponent of the postMessage bridge, supporting the establishment of persistent bidirectional communication channelsbetween native code and web pages. It is suitable for scenarios where data interaction between native apps and webpages is required, solving cross-language communication challenges and improving app extensibility and developmentefficiency.<br>Web message port related APIs must be called on the UI thread by using the OH_ArkWeb_GetNativeAPImethod. Before calling, you are advised to use [ARKWEB_MEMBER_MISSING](capi-arkweb-type-h.md#arkweb_member_missing) to check the availability of functionpointers, preventing crashes caused by mismatches between the SDK and the device ROM.
 
 **Since**: 12
 
@@ -20,16 +20,16 @@ Defines the web message API for native ArkWeb.Before invoking an API, you are ad
 
 | Name | Description |
 | -- | -- |
-| size_t size | The ArkWeb_WebMessagePortAPI struct size. |
+| size_t size | Size of the struct, in bytes. |
 
 
 ### Member functions
 
 | Name | Description |
 | -- | -- |
-| [ArkWeb_ErrorCode (\*postMessage)(const ArkWeb_WebMessagePortPtr webMessagePort, const char* webTag, const ArkWeb_WebMessagePtr webMessage)](#postmessage) | Post message to HTML. |
-| [void (\*close)(const ArkWeb_WebMessagePortPtr webMessagePort, const char* webTag)](#close) | Close the message port. |
-| [void (\*setMessageEventHandler)(const ArkWeb_WebMessagePortPtr webMessagePort, const char* webTag,ArkWeb_OnMessageEventHandler messageEventHandler, void* userData)](#setmessageeventhandler) | Set a callback to receive message from HTML. |
+| [ArkWeb_ErrorCode (\*postMessage)(const ArkWeb_WebMessagePortPtr webMessagePort, const char* webTag, const ArkWeb_WebMessagePtr webMessage)](#postmessage) | Sends a message to the HTML page. It is used when native code needs to pass data, instructions, orconfiguration information to a web page, for example, form data synchronization and control command delivery. |
+| [void (\*close)(const ArkWeb_WebMessagePortPtr webMessagePort, const char* webTag)](#close) | Closes a message port. |
+| [void (\*setMessageEventHandler)(const ArkWeb_WebMessagePortPtr webMessagePort, const char* webTag,ArkWeb_OnMessageEventHandler messageEventHandler, void* userData)](#setmessageeventhandler) | Sets a callback for receiving HTML messages. It is used when messages, requests, or event notificationsfrom a web page need to be received and processed, for example, receiving user input and status updatenotifications. |
 
 ## Member function description
 
@@ -41,21 +41,21 @@ ArkWeb_ErrorCode (*postMessage)(const ArkWeb_WebMessagePortPtr webMessagePort, c
 
 **Description**
 
-Post message to HTML.
+Sends a message to the HTML page. It is used when native code needs to pass data, instructions, orconfiguration information to a web page, for example, form data synchronization and control command delivery.
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| const [ArkWeb_WebMessagePortPtr](capi-web-arkweb-webmessageport8h.md) webMessagePort | The ArkWeb_WebMessagePort. |
-|  const char* webTag | The name of the web component. |
-|  const [ArkWeb_WebMessagePtr](capi-web-arkweb-webmessage8h.md) webMessage | The ArkWeb_WebMessage to send. |
+| const [ArkWeb_WebMessagePortPtr](capi-web-arkweb-webmessageport8h.md) webMessagePort | Pointer to the message port. |
+|  const char* webTag | Name of the Web component, used to identify the Web component to operate. It must be a uniqueidentifier bound to the Web component. If no Web component bound to webTag is found, an initializationfailure error is returned. |
+|  const [ArkWeb_WebMessagePtr](capi-web-arkweb-webmessage8h.md) webMessage | Message to send. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkWeb_ErrorCode | Post message result code.<br>             {@link ARKWEB_SUCCESS} post message success.<br>             {@link ARKWEB_INVALID_PARAM} the parameter verification fails.<br>             {@link ARKWEB_INIT_ERROR} no web associated with this webTag. |
+| [ArkWeb_ErrorCode](capi-arkweb-error-code-h.md#arkweb_errorcode) | Result code.<br>         <br>[ARKWEB_SUCCESS](capi-arkweb-error-code-h.md#arkweb_errorcode): execution successful.<br>         <br>[ARKWEB_INVALID_PARAM](capi-arkweb-error-code-h.md#arkweb_errorcode): invalid parameter.<br>    <br>         <br>Possible causes:<br>         <br>- webMessagePort or webMessage is null.<br>         <br>- The parameter type is incorrect.<br>    <br>         <br>Solutions:<br>         <br>- Check whether the parameter is a null pointer.<br>         <br>- Verify that the parameter type meets the API requirements.<br>    <br>         <br>[ARKWEB_INIT_ERROR](capi-arkweb-error-code-h.md#arkweb_errorcode): initialization failed. No Web component bound to webTag is found.<br>    <br>         <br>Possible causes:<br>         <br>- The Web component is not properly initialized.<br>         <br>- The webTag parameter does not match the actual Web component name.<br>    <br>         <br>Solutions:<br>         <br>- Ensure that the Web component has been initialized.<br>         <br>- Check whether the webTag parameter matches the Web component name. |
 
 ### close()
 
@@ -65,13 +65,13 @@ void (*close)(const ArkWeb_WebMessagePortPtr webMessagePort, const char* webTag)
 
 **Description**
 
-Close the message port.
+Closes a message port.
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| const [ArkWeb_WebMessagePortPtr](capi-web-arkweb-webmessageport8h.md) webMessagePort | The ArkWeb_WebMessagePort. |
+| const [ArkWeb_WebMessagePortPtr](capi-web-arkweb-webmessageport8h.md) webMessagePort | Pointer to the message port. |
 
 ### setMessageEventHandler()
 
@@ -81,14 +81,14 @@ void (*setMessageEventHandler)(const ArkWeb_WebMessagePortPtr webMessagePort, co
 
 **Description**
 
-Set a callback to receive message from HTML.
+Sets a callback for receiving HTML messages. It is used when messages, requests, or event notificationsfrom a web page need to be received and processed, for example, receiving user input and status updatenotifications.
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| const [ArkWeb_WebMessagePortPtr](capi-web-arkweb-webmessageport8h.md) webMessagePort | The ArkWeb_WebMessagePort. |
-|  const char* webTag | The name of the web component. |
-| [ArkWeb_OnMessageEventHandler](capi-arkweb-type-h.md#arkweb_onmessageeventhandler) messageEventHandler | The handler to receive message from HTML. |
+| const [ArkWeb_WebMessagePortPtr](capi-web-arkweb-webmessageport8h.md) webMessagePort | Pointer to the message port. |
+|  const char* webTag | Name of the **Web** component. |
+| [ArkWeb_OnMessageEventHandler](capi-arkweb-type-h.md#arkweb_onmessageeventhandler) messageEventHandler | Callback used to handle messages. |
 
 

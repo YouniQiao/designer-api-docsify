@@ -107,7 +107,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Extension_GetContext(ContentEmbed_Extensi
 | 参数项 | 描述 |
 | -- | -- |
 | [ContentEmbed_ExtensionContextHandle](capi-contentembed-contentembed-extensioncontext8h.md) ceContext | OE Extension上下文对象的指针。 |
-| AbilityRuntime_ContextHandle *context | 输出参数。调用成功后，该指针指向[AbilityRuntime_ContextHandle](../AbilityKit/capi-abilityruntime-abilityruntime-context8h.md)上下文对象。 |
+| [AbilityRuntime_ContextHandle](../AbilityKit/capi-abilityruntime-abilityruntime-context8h.md) *context | 输出参数。调用成功后，该指针指向[AbilityRuntime_ContextHandle](../AbilityKit/capi-abilityruntime-abilityruntime-context8h.md)上下文对象。 |
 
 **返回：**
 
@@ -131,7 +131,7 @@ ContentEmbed_ErrorCode OH_ContentEmbed_Extension_GetExtensionInstance(AbilityRun
 
 | 参数项 | 描述 |
 | -- | -- |
-| [AbilityRuntime_ExtensionInstanceHandle](../AbilityKit/capi-abilityruntime-abilityruntime-extensioninstance8h.md) baseInstance | [AbilityRuntime_ExtensionInstanceHandle](../AbilityKit/capi-abilityruntime-abilityruntime-extensioninstance8h.md)实例。 |
+| AbilityRuntime_ExtensionInstanceHandle baseInstance | [AbilityRuntime_ExtensionInstanceHandle](../AbilityKit/capi-abilityruntime-abilityruntime-extensioninstance8h.md)实例。 |
 | [ContentEmbed_ExtensionInstanceHandle](capi-contentembed-contentembed-extensioninstance8h.md) *ceInstance | 输出参数。调用成功后，该指针指向OE Extension实例对象。 |
 
 **返回：**

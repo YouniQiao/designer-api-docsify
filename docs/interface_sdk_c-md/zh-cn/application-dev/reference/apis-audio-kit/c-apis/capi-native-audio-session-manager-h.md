@@ -206,7 +206,7 @@ typedef void (*OH_AudioSession_AvailableDeviceChangedCallback)(OH_AudioDevice_Ch
 | 参数项 | 描述 |
 | -- | -- |
 | (OH_AudioDevice_ChangeType type | 设备连接状态类型，已连接或断开。 |
-| [OH_AudioDeviceDescriptorArray](capi-ohaudio-oh-audiodevicedescriptorarray.md) \*audioDeviceDescriptorArray | 音频设备描述符数组。<br>不再继续使用audioDeviceDescriptorArray指针时，请使用[OH_AudioSessionManager_ReleaseDevices](capi-native-audio-session-manager-h.md#oh_audiosessionmanager_releasedevices)进行释放。 |
+| OH_AudioDeviceDescriptorArray \*audioDeviceDescriptorArray | 音频设备描述符数组。<br>不再继续使用audioDeviceDescriptorArray指针时，请使用[OH_AudioSessionManager_ReleaseDevices](capi-native-audio-session-manager-h.md#oh_audiosessionmanager_releasedevices)进行释放。 |
 
 ### OH_AudioSession_CurrentInputDeviceChangedCallback()
 
@@ -306,7 +306,7 @@ OH_AudioCommon_Result OH_AudioSessionManager_ActivateAudioSession(OH_AudioSessio
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_AudioSessionManager](capi-ohaudio-oh-audiosessionmanager.md) *audioSessionManager | 指向[OH_AudioManager_GetAudioSessionManager](capi-native-audio-session-manager-h.md#oh_audiomanager_getaudiosessionmanager)创建的音频会话管理实例。 |
-| const OH_AudioSession_Strategy *strategy | 指向[OH_AudioSession_Strategy](capi-ohaudio-oh-audiosession-strategy.md)，用于设置音频会话策略。 |
+| [const OH_AudioSession_Strategy](capi-ohaudio-oh-audiosession-strategy.md) *strategy | 指向[OH_AudioSession_Strategy](capi-ohaudio-oh-audiosession-strategy.md)，用于设置音频会话策略。 |
 
 **返回：**
 
@@ -504,7 +504,7 @@ OH_AudioCommon_Result OH_AudioSessionManager_SetDefaultOutputDevice(OH_AudioSess
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_AudioSessionManager](capi-ohaudio-oh-audiosessionmanager.md) *audioSessionManager | 指向[OH_AudioManager_GetAudioSessionManager](capi-native-audio-session-manager-h.md#oh_audiomanager_getaudiosessionmanager)创建的音频会话管理实例。 |
-| [OH_AudioDevice_Type](capi-native-audio-device-base-h.md#oh_audiodevice_type) deviceType | 指向[OH_AudioDevice_Type](capi-native-audio-device-base-h.md#oh_audiodevice_type)用于设置发声设备类型。可设置的设备类型包括：<br>AUDIO_DEVICE_TYPE_EARPIECE：听筒。<br>AUDIO_DEVICE_TYPE_SPEAKER：扬声器。<br>AUDIO_DEVICE_TYPE_DEFAULT：系统默认设备。 |
+| OH_AudioDevice_Type deviceType | 指向[OH_AudioDevice_Type](capi-native-audio-device-base-h.md#oh_audiodevice_type)用于设置发声设备类型。可设置的设备类型包括：<br>AUDIO_DEVICE_TYPE_EARPIECE：听筒。<br>AUDIO_DEVICE_TYPE_SPEAKER：扬声器。<br>AUDIO_DEVICE_TYPE_DEFAULT：系统默认设备。 |
 
 **返回：**
 
@@ -529,7 +529,7 @@ OH_AudioCommon_Result OH_AudioSessionManager_GetDefaultOutputDevice(OH_AudioSess
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_AudioSessionManager](capi-ohaudio-oh-audiosessionmanager.md) *audioSessionManager | 指向[OH_AudioManager_GetAudioSessionManager](capi-native-audio-session-manager-h.md#oh_audiomanager_getaudiosessionmanager)创建的音频会话管理实例。 |
-| [OH_AudioDevice_Type](capi-native-audio-device-base-h.md#oh_audiodevice_type) *deviceType | 指向[OH_AudioDevice_Type](capi-native-audio-device-base-h.md#oh_audiodevice_type)用于获取发声设备类型参数指针。返回的设备类型包括：<br>AUDIO_DEVICE_TYPE_EARPIECE：听筒。<br>AUDIO_DEVICE_TYPE_SPEAKER：扬声器。<br>AUDIO_DEVICE_TYPE_DEFAULT：系统默认设备。 |
+| OH_AudioDevice_Type *deviceType | 指向[OH_AudioDevice_Type](capi-native-audio-device-base-h.md#oh_audiodevice_type)用于获取发声设备类型参数指针。返回的设备类型包括：<br>AUDIO_DEVICE_TYPE_EARPIECE：听筒。<br>AUDIO_DEVICE_TYPE_SPEAKER：扬声器。<br>AUDIO_DEVICE_TYPE_DEFAULT：系统默认设备。 |
 
 **返回：**
 
@@ -554,7 +554,7 @@ OH_AudioCommon_Result OH_AudioSessionManager_ReleaseDevices(OH_AudioSessionManag
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_AudioSessionManager](capi-ohaudio-oh-audiosessionmanager.md) *audioSessionManager | 指向[OH_AudioManager_GetAudioSessionManager](capi-native-audio-session-manager-h.md#oh_audiomanager_getaudiosessionmanager)创建的音频会话管理实例。 |
-| [OH_AudioDeviceDescriptorArray](capi-ohaudio-oh-audiodevicedescriptorarray.md) *audioDeviceDescriptorArray | 需要释放的音频设备描述符数组。 |
+| OH_AudioDeviceDescriptorArray *audioDeviceDescriptorArray | 需要释放的音频设备描述符数组。 |
 
 **返回：**
 
@@ -629,8 +629,8 @@ OH_AudioCommon_Result OH_AudioSessionManager_GetAvailableDevices(OH_AudioSession
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_AudioSessionManager](capi-ohaudio-oh-audiosessionmanager.md) *audioSessionManager | 指向[OH_AudioManager_GetAudioSessionManager](capi-native-audio-session-manager-h.md#oh_audiomanager_getaudiosessionmanager)创建的音频会话管理实例。 |
-| [OH_AudioDevice_Usage](capi-native-audio-device-base-h.md#oh_audiodevice_usage) deviceUsage | 用于设置要获取的设备种类。 |
-| [OH_AudioDeviceDescriptorArray](capi-ohaudio-oh-audiodevicedescriptorarray.md) **audioDeviceDescriptorArray | 音频设备描述符数组。<br>不再继续使用audioDeviceDescriptorArray指针时，请使用[OH_AudioSessionManager_ReleaseDevices](capi-native-audio-session-manager-h.md#oh_audiosessionmanager_releasedevices)进行释放。 |
+| OH_AudioDevice_Usage deviceUsage | 用于设置要获取的设备种类。 |
+| OH_AudioDeviceDescriptorArray **audioDeviceDescriptorArray | 音频设备描述符数组。<br>不再继续使用audioDeviceDescriptorArray指针时，请使用[OH_AudioSessionManager_ReleaseDevices](capi-native-audio-session-manager-h.md#oh_audiosessionmanager_releasedevices)进行释放。 |
 
 **返回：**
 
@@ -655,7 +655,7 @@ OH_AudioCommon_Result OH_AudioSessionManager_RegisterAvailableDevicesChangeCallb
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_AudioSessionManager](capi-ohaudio-oh-audiosessionmanager.md) *audioSessionManager | 指向[OH_AudioManager_GetAudioSessionManager](capi-native-audio-session-manager-h.md#oh_audiomanager_getaudiosessionmanager)创建的音频会话管理实例。 |
-| [OH_AudioDevice_Usage](capi-native-audio-device-base-h.md#oh_audiodevice_usage) deviceUsage | 用于设置要获取的设备种类。 |
+| OH_AudioDevice_Usage deviceUsage | 用于设置要获取的设备种类。 |
 | [OH_AudioSession_AvailableDeviceChangedCallback](capi-native-audio-session-manager-h.md#oh_audiosession_availabledevicechangedcallback) callback | 用于返回可用音频设备变更信息的回调函数。 |
 
 **返回：**
@@ -706,7 +706,7 @@ OH_AudioCommon_Result OH_AudioSessionManager_SelectMediaInputDevice(OH_AudioSess
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_AudioSessionManager](capi-ohaudio-oh-audiosessionmanager.md) *audioSessionManager | 指向[OH_AudioManager_GetAudioSessionManager](capi-native-audio-session-manager-h.md#oh_audiomanager_getaudiosessionmanager)创建的音频会话管理实例。 |
-| [OH_AudioDeviceDescriptor](capi-ohaudio-oh-audiodevicedescriptor.md) *deviceDescriptor | 目标设备。可用设备必须位于由[OH_AudioSessionManager_GetAvailableDevices](capi-native-audio-session-manager-h.md#oh_audiosessionmanager_getavailabledevices)返回的数组中。<br>当传递nullptr时，系统将清除上一次的设置。 |
+| OH_AudioDeviceDescriptor *deviceDescriptor | 目标设备。可用设备必须位于由[OH_AudioSessionManager_GetAvailableDevices](capi-native-audio-session-manager-h.md#oh_audiosessionmanager_getavailabledevices)返回的数组中。<br>当传递nullptr时，系统将清除上一次的设置。 |
 
 **返回：**
 
@@ -731,7 +731,7 @@ OH_AudioCommon_Result OH_AudioSessionManager_GetSelectedMediaInputDevice(OH_Audi
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_AudioSessionManager](capi-ohaudio-oh-audiosessionmanager.md) *audioSessionManager | 指向[OH_AudioManager_GetAudioSessionManager](capi-native-audio-session-manager-h.md#oh_audiomanager_getaudiosessionmanager)创建的音频会话管理实例。 |
-| [OH_AudioDeviceDescriptor](capi-ohaudio-oh-audiodevicedescriptor.md) **audioDeviceDescriptor | 通过[OH_AudioSessionManager_SelectMediaInputDevice](capi-native-audio-session-manager-h.md#oh_audiosessionmanager_selectmediainputdevice)设置的媒体设备，如果没有设置，返回一个类型为AUDIO_DEVICE_TYPE_INVALID的设备。<br>不再继续使用audioDeviceDescriptor指针时，请使用[OH_AudioSessionManager_ReleaseDevice](capi-native-audio-session-manager-h.md#oh_audiosessionmanager_releasedevice)进行释放。 |
+| OH_AudioDeviceDescriptor **audioDeviceDescriptor | 通过[OH_AudioSessionManager_SelectMediaInputDevice](capi-native-audio-session-manager-h.md#oh_audiosessionmanager_selectmediainputdevice)设置的媒体设备，如果没有设置，返回一个类型为AUDIO_DEVICE_TYPE_INVALID的设备。<br>不再继续使用audioDeviceDescriptor指针时，请使用[OH_AudioSessionManager_ReleaseDevice](capi-native-audio-session-manager-h.md#oh_audiosessionmanager_releasedevice)进行释放。 |
 
 **返回：**
 
@@ -856,7 +856,7 @@ OH_AudioCommon_Result OH_AudioSessionManager_ReleaseDevice(OH_AudioSessionManage
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_AudioSessionManager](capi-ohaudio-oh-audiosessionmanager.md) *audioSessionManager | 指向[OH_AudioManager_GetAudioSessionManager](capi-native-audio-session-manager-h.md#oh_audiomanager_getaudiosessionmanager)创建的音频会话管理实例。 |
-| [OH_AudioDeviceDescriptor](capi-ohaudio-oh-audiodevicedescriptor.md) *audioDeviceDescriptor | 需要被释放的音频设备描述符对象。 |
+| OH_AudioDeviceDescriptor *audioDeviceDescriptor | 需要被释放的音频设备描述符对象。 |
 
 **返回：**
 

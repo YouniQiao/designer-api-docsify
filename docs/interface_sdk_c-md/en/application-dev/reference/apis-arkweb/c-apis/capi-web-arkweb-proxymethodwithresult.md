@@ -6,7 +6,7 @@ typedef struct ArkWeb_ProxyMethodWithResult {...} ArkWeb_ProxyMethodWithResult
 
 ## Overview
 
-Defines the JavaScript proxy method with a return value.
+ArkWeb_ProxyMethodWithResult is a JavaScript proxy method struct with a return value. It extends thecapabilities of ArkWeb_ProxyMethod and supports obtaining a return value after JavaScript calls a native method.Based on the method name and callback function, this struct adds the return value processing capability, making itsuitable for scenarios where execution results need to be returned to the web frontend.
 
 **Since**: 18
 
@@ -20,8 +20,8 @@ Defines the JavaScript proxy method with a return value.
 
 | Name | Description |
 | -- | -- |
-| const char* methodName | The method of the application side JavaScript object participating in the registration. |
-| [ArkWeb_OnJavaScriptProxyCallbackWithResult](capi-arkweb-type-h.md#arkweb_onjavascriptproxycallbackwithresult) callback | The callback function with a return value registered by developer is called back when HTML side uses. |
-| void* userData | The user data to set. |
+| const char* methodName | Pointer to the method name to be injected. |
+| [ArkWeb_OnJavaScriptProxyCallbackWithResult](capi-arkweb-type-h.md#arkweb_onjavascriptproxycallbackwithresult) callback | Callback invoked when JavaScript calls the native proxy method, used to process the method call and return theexecution result. This parameter must be a valid function pointer and cannot be NULL. |
+| void* userData | Custom data to be carried in the callback. |
 
 

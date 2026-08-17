@@ -77,7 +77,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjExtensionContext_StartSelfUIAbi
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_AbilityRuntime_ModObjExtensionContextHandle](capi-abilityruntime-oh-abilityruntime-modularobjectextensioncontext8h.md) context | 指向ModularObjectExtensionAbility上下文的指针。 |
-| [const AbilityBase_Want](capi-abilitybase-abilitybase-want.md) *want | 启动当前应用UIAbility时需要的Want信息。详细内容参考[AbilityBase_Want](capi-abilitybase-abilitybase-want.md)。 |
+| const AbilityBase_Want *want | 启动当前应用UIAbility时需要的Want信息。详细内容参考[AbilityBase_Want](capi-abilitybase-abilitybase-want.md)。 |
 
 **返回：**
 
@@ -104,7 +104,7 @@ AbilityRuntime_ErrorCode OH_AbilityRuntime_ModObjExtensionContext_StartSelfUIAbi
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_AbilityRuntime_ModObjExtensionContextHandle](capi-abilityruntime-oh-abilityruntime-modularobjectextensioncontext8h.md) context | 指向ModularObjectExtensionAbility上下文的指针。 |
-| [const AbilityBase_Want](capi-abilitybase-abilitybase-want.md) *want | 启动当前应用UIAbility时需要的Want信息。详细内容参考[AbilityBase_Want](capi-abilitybase-abilitybase-want.md)。 |
+| const AbilityBase_Want *want | 启动当前应用UIAbility时需要的Want信息。详细内容参考[AbilityBase_Want](capi-abilitybase-abilitybase-want.md)。 |
 | const AbilityRuntime_StartOptions *options | 启动当前应用UIAbility时需要的StartOptions信息。详细内容参考{@link AbilityRuntime_StartOptions}。 |
 
 **返回：**
@@ -155,15 +155,15 @@ OHIPCRemoteStub* OH_AbilityRuntime_ModObjExtensionContext_CreateIPCRemoteStub(OH
 | -- | -- |
 | [OH_AbilityRuntime_ModObjExtensionContextHandle](capi-abilityruntime-oh-abilityruntime-modularobjectextensioncontext8h.md) context | 指向ModularObjectExtensionAbility上下文的指针。 |
 | const char *descriptor | 指向待创建的OHIPCRemoteStub对象描述符的指针，不能为NULL。创建过程中会内部拷贝该字符串，调用方可在本函数返回后释放该描述符。 |
-| OH_OnRemoteRequestCallback requestCallback | 处理数据请求的回调函数，不能为NULL。 |
-| OH_OnRemoteDestroyCallback destroyCallback | 对象销毁时调用的回调函数，可以为NULL。 |
+| [OH_OnRemoteRequestCallback](../IPCKit/capi-ipc-cremote-object-h.md#oh_onremoterequestcallback) requestCallback | 处理数据请求的回调函数，不能为NULL。 |
+| [OH_OnRemoteDestroyCallback](../IPCKit/capi-ipc-cremote-object-h.md#oh_onremotedestroycallback) destroyCallback | 对象销毁时调用的回调函数，可以为NULL。 |
 | void *userData | 指向用户数据的指针，可以为NULL，须在对象销毁前保持有效。 |
 
 **返回：**
 
 | 类型 | 说明 |
 | -- | -- |
-| OHIPCRemoteStub* | 操作成功时返回创建的OHIPCRemoteStub对象指针；否则返回NULL。 |
+| [OHIPCRemoteStub*](capi-ohipcparcel-ohipcremotestub.md) | 操作成功时返回创建的OHIPCRemoteStub对象指针；否则返回NULL。 |
 
 ### OH_AbilityRuntime_ModObjExtensionContext_DestroyIPCRemoteStub()
 
@@ -182,6 +182,6 @@ void OH_AbilityRuntime_ModObjExtensionContext_DestroyIPCRemoteStub(OH_AbilityRun
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_AbilityRuntime_ModObjExtensionContextHandle](capi-abilityruntime-oh-abilityruntime-modularobjectextensioncontext8h.md) context | 指向ModularObjectExtensionAbility上下文的指针。 |
-| OHIPCRemoteStub *stub | 指向待销毁的OHIPCRemoteStub对象的指针。 |
+| [OHIPCRemoteStub](capi-ohipcparcel-ohipcremotestub.md) *stub | 指向待销毁的OHIPCRemoteStub对象的指针。 |
 
 

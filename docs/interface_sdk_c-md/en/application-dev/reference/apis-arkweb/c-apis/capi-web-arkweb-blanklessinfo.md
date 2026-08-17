@@ -6,7 +6,7 @@ typedef struct ArkWeb_BlanklessInfo {...} ArkWeb_BlanklessInfo
 
 ## Overview
 
-Describes prediction information about blankless loading, including the first screen similarity, first screenloading duration, and error codes. The application determines whether to enable the blankless loading solution basedon the prediction information.
+Describes the first-screen loading prediction information, including the predicted first-screen similarityvalue, predicted first-screen loading time, and error code. The app uses this information to decide whether toenable the blankless loading frame insertion solution, which reduces the blank screen time by inserting pre-renderedframes during page loading.
 
 **Since**: 20
 
@@ -20,8 +20,8 @@ Describes prediction information about blankless loading, including the first sc
 
 | Name | Description |
 | -- | -- |
-| ArkWeb_BlanklessErrorCode errCode | Error codes of blankless loading. For details, see {@link ArkWeb_BlanklessErrorCode}. |
-| double similarity | First screen similarity, which is calculated based on the historical first screen content. The value ranges from0 to 1.0. 1.0 indicates that the content is the same. A value closer to 1 indicates a higher similarity. Thisvalue is lagging, and the similarity of the local loading is displayed in the next loading. You are advised notto enable the blankless loading frame insertion solution when the similarity is low. |
-| int32_t loadingTime | Loading duration estimated based on the historical first screen loading durations, in milliseconds. The valuemust be greater than 0. |
+| ArkWeb_BlanklessErrorCode errCode | Error code of the blankless loading. The value **0** indicates no error, and a non-zero value indicates theerror type. For details, see {@link ArkWeb_BlanklessErrorCode}. |
+| double similarity | Similarity of the first screen. The similarity is calculated based on the first screen content of historicalloads. The value ranges from [0, 1.0], where **1.0** indicates a complete match. The closer the value is to 1,the higher the similarity. This value has a lagging nature, meaning the similarity of a local load will only bereflected in the next load. It is recommended that the app does not enable the blankless loading frame insertionsolution when the similarity is below a specific threshold (for example, 0.33). |
+| int32_t loadingTime | Predicted loading time of the current load based on the first screen loading time of historical loads, in ms.The value must be greater than 0. |
 
 

@@ -718,13 +718,13 @@ Creates a deep copy of a size constraint.
 
 | Parameter | Description |
 | -- | -- |
-| [const ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
+| const ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_LayoutConstraint*](capi-arkui-nativemodule-arkui-layoutconstraint.md) | Returns the pointer to the new size constraint. |
+| ArkUI_LayoutConstraint* | Returns the pointer to the new size constraint. |
 
 ### OH_ArkUI_LayoutConstraint_Dispose()
 
@@ -742,7 +742,7 @@ Destroys the pointer to a size constraint.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
+| ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
 
 ### OH_ArkUI_LayoutConstraint_GetMaxWidth()
 
@@ -760,7 +760,7 @@ Obtains the maximum width for a size constraint, in px.
 
 | Parameter | Description |
 | -- | -- |
-| [const ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
+| const ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
 
 **Returns**:
 
@@ -784,7 +784,7 @@ Obtains the minimum width for a size constraint, in px.
 
 | Parameter | Description |
 | -- | -- |
-| [const ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
+| const ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
 
 **Returns**:
 
@@ -808,7 +808,7 @@ Obtains the maximum height for a size constraint, in px.
 
 | Parameter | Description |
 | -- | -- |
-| [const ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
+| const ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
 
 **Returns**:
 
@@ -832,7 +832,7 @@ Obtains the minimum height for a size constraint, in px.
 
 | Parameter | Description |
 | -- | -- |
-| [const ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
+| const ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
 
 **Returns**:
 
@@ -856,7 +856,7 @@ Obtains the width percentage reference for a size constraint, in px.
 
 | Parameter | Description |
 | -- | -- |
-| [const ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
+| const ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
 
 **Returns**:
 
@@ -880,7 +880,7 @@ Obtains the height percentage reference for a size constraint, in px.
 
 | Parameter | Description |
 | -- | -- |
-| [const ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
+| const ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
 
 **Returns**:
 
@@ -904,7 +904,7 @@ Sets the maximum width.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
+| ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
 | int32_t value | Indicates the maximum width, in px. |
 
 ### OH_ArkUI_LayoutConstraint_SetMinWidth()
@@ -923,7 +923,7 @@ Sets the minimum width.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
+| ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
 | int32_t value | Indicates the minimum width, in px. |
 
 ### OH_ArkUI_LayoutConstraint_SetMaxHeight()
@@ -942,7 +942,7 @@ Sets the maximum height.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
+| ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
 | int32_t value | Indicates the maximum height, in px. |
 
 ### OH_ArkUI_LayoutConstraint_SetMinHeight()
@@ -961,7 +961,7 @@ Sets the minimum height.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
+| ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
 | int32_t value | Indicates the minimum height, in px. |
 
 ### OH_ArkUI_LayoutConstraint_SetPercentReferenceWidth()
@@ -980,7 +980,7 @@ Sets the width percentage reference.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
+| ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
 | int32_t value | Indicates the width percentage reference, in px. |
 
 ### OH_ArkUI_LayoutConstraint_SetPercentReferenceHeight()
@@ -999,7 +999,7 @@ Sets the height percentage reference.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_LayoutConstraint](capi-arkui-nativemodule-arkui-layoutconstraint.md)* Constraint | Indicates the pointer to the size constraint. |
+| ArkUI_LayoutConstraint* Constraint | Indicates the pointer to the size constraint. |
 | int32_t value | Indicates the height percentage reference, in px. |
 
 ### OH_ArkUI_DrawContext_GetCanvas()
@@ -1018,7 +1018,7 @@ Obtains the pointer to a canvas for drawing, which can be converted into the <b>
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_DrawContext](capi-arkui-nativemodule-arkui-drawcontext.md)* context | Indicates the pointer to the drawing context. |
+| ArkUI_DrawContext* context | Indicates the pointer to the drawing context. |
 
 **Returns**:
 
@@ -1042,13 +1042,13 @@ Obtains the size of a drawing area.
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_DrawContext](capi-arkui-nativemodule-arkui-drawcontext.md)* context | Indicates the pointer to the drawing context. |
+| ArkUI_DrawContext* context | Indicates the pointer to the drawing context. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_IntSize](capi-arkui-nativemodule-arkui-intsize.md) | Returns the size of the drawing area. |
+| ArkUI_IntSize | Returns the size of the drawing area. |
 
 ### OH_ArkUI_SwiperDigitIndicator_SetFontWeight()
 
@@ -1787,7 +1787,7 @@ Obtains the child node at the specified index in an [ArkUI_ActiveChildrenInfo](c
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) | Handle to the child node at the specified index, or nullptr if an error occurs. |
+| ArkUI_NodeHandle | Handle to the child node at the specified index, or nullptr if an error occurs. |
 
 ### OH_ArkUI_ActiveChildrenInfo_GetCount()
 
@@ -2369,7 +2369,7 @@ Set custom text menu node of text.
 | Parameter | Description |
 | -- | -- |
 | ArkUI_TextSelectionMenuOptions* selectionMenuOptions | Pointer to the ArkUI_TextSelectionMenuOptions object. |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | The custom menu node. |
+| ArkUI_NodeHandle node | The custom menu node. |
 
 **Returns**:
 
@@ -2394,7 +2394,7 @@ Get custom text menu node of text.
 | Parameter | Description |
 | -- | -- |
 | ArkUI_TextSelectionMenuOptions* selectionMenuOptions | Pointer to the ArkUI_TextSelectionMenuOptions object. |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md)* node | The custom menu node. |
+| ArkUI_NodeHandle* node | The custom menu node. |
 
 **Returns**:
 
@@ -3591,7 +3591,7 @@ Obtains the caret-selected rectangle using the styled string controller.
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_TextEditorStyledStringController* controller | Pointer to the [OH_ArkUI_TextEditorStyledStringController](capi-arkui-nativemodule-oh-arkui-texteditorstyledstringcontroller.md) object. |
-| [ArkUI_Rect](capi-arkui-nativemodule-arkui-rect.md)* rect | Pointer to the caret-selected rectangle information. The value is an enumerated value of[ArkUI_Rect](capi-arkui-nativemodule-arkui-rect.md). |
+| ArkUI_Rect* rect | Pointer to the caret-selected rectangle information. The value is an enumerated value of[ArkUI_Rect](capi-arkui-nativemodule-arkui-rect.md). |
 
 **Returns**:
 
@@ -4878,7 +4878,7 @@ Sets the content node of the text selection menu in the text editor.
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_TextEditorSelectionMenuOptions* options | Pointer to the [OH_ArkUI_TextEditorSelectionMenuOptions](capi-arkui-nativemodule-oh-arkui-texteditorselectionmenuoptions.md) object. |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md) node | Content node. |
+| ArkUI_NodeHandle node | Content node. |
 
 **Returns**:
 
@@ -4903,7 +4903,7 @@ Obtains the content node of the text selection menu in the text editor.
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_TextEditorSelectionMenuOptions* options | Pointer to the [OH_ArkUI_TextEditorSelectionMenuOptions](capi-arkui-nativemodule-oh-arkui-texteditorselectionmenuoptions.md) object. |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md)* node | Pointer to the content node. |
+| ArkUI_NodeHandle* node | Pointer to the content node. |
 
 **Returns**:
 

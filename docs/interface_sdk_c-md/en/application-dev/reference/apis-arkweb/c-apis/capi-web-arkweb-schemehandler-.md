@@ -6,7 +6,7 @@ typedef struct ArkWeb_SchemeHandler_ ArkWeb_SchemeHandler
 
 ## Overview
 
-This class is used to intercept requests for a specified scheme.
+ArkWeb_SchemeHandler is a struct used to register custom scheme (protocol) interceptors. It defines twofunction pointers: the onRequestStart callback for request start and the onRequestStop callback for request stop.With this struct, network requests of a specified scheme in the Web component can be intercepted, which isapplicable to scenarios such as resource localization, data simulation, request filtering, and protocol extension:in onRequestStart, whether to intercept is determined and custom data is returned; in onRequestStop, resourcecleanup is performed; and onRequestStart and onRequestStop are called sequentially in the order of the requestlifecycle. This struct works with ArkWeb_ResourceHandler and ArkWeb_Response to implement a complete requestinterception and custom response process. The call sequence is: ArkWeb_SchemeHandler intercepts the request →ArkWeb_ResourceHandler processes the resource → ArkWeb_Response returns the response.
 
 **Since**: 12
 
